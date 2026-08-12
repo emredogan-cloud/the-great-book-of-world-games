@@ -1,7 +1,7 @@
 # BRIEF — The Great Book of World Games
 
 > Ürün, kitle, konumlanma ve ticari model. Bütün sayılar
-> [`AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html`](../AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html)
+> `AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html`
 > § 11 · Kitap A ve § 16'dan alınmıştır; hiçbiri bu belgede uydurulmadı.
 > Raporun vermediği her şey `DECISIONS.md`'de **AÇIK** olarak işaretlidir.
 

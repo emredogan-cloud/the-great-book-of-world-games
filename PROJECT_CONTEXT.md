@@ -17,8 +17,15 @@
 | Seri | **"The Great Book of…"** · Cilt 2 |
 | Depo | `emredogan-cloud/the-great-book-of-world-games` |
 | Kitle | Aile (yetişkin + 8 yaş üstü çocuk birlikte) · hediye alıcısı · öğretmen |
-| Kaynak | [`AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html`](../AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html) § 11 · Kitap A |
+| Kaynak | `AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html` § 11 · Kitap A |
 | Portföy yeri | **Kitap A · ilk yazılacak** · yeni kitle motoru |
+
+
+> **Pazar raporu bu depoda DEĞİLDİR.** `AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html`
+> kurucunun çalışma dizininde duran **özel bir strateji belgesidir** ve üç
+> public depoya kopyalanmaz. Bu belgede ona **künyeyle** atıf yapılır, bağ
+> verilmez: bir depoyu klonlayan kişi o dosyaya ulaşamaz ve kırık bir bağ
+> görmemelidir.
 
 ---
 

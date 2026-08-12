@@ -27,7 +27,7 @@ kümenin tamamında büyüme ölçüyor. Rafta ise iki kutup var — akademik oy
 tarihi (otoriter, oynanamaz) ve jenerik aile oyunu listeleri (9,99 $,
 içeriksiz). **Arada hiçbir şey yok.**
 
-Kaynak: [`AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html`](../AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html) § 8 · WS-1 ve § 11 · Kitap A.
+Kaynak: `AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html` § 8 · WS-1 ve § 11 · Kitap A.
 
 | | |
 |---|---|
