@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/emredogan-cloud/the-great-book-of-world-games/01_SOURCE/game.schema.json",
+  "title": "World Games — oyun kaydı",
+  "description": [
+    "Bir oyunun TEK doğruluk kaydı. Manuscript bu kayıttan üretilir, tersi değil.",
+    "Kural metninin sabit blokları: Setup: … / Turn sequence: … / Win condition: …",
+    "Bu üç blok olmadan bir oyun `locked` olamaz — On your turn, oyuncunun ne",
+    "yapabileceği belirsizse oyun oynanamaz ve bu kitabın tek vaadi düşer."
+  ],
+  "type": "object",
+  "required": ["gameId", "name", "culture", "region", "family", "status",
+               "restrictionStatus", "sourceConfidence", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "gameId":   {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,48}$"},
+    "name":     {"type": "string", "minLength": 2},
+    "altNames": {"type": "array", "items": {"type": "string"}},
+
+    "culture":  {"type": "string", "description": "Atfedilen kültür — alt başlıktaki 45 sayısını bu alan üretir"},
+    "region":   {"type": "string"},
+    "period":   {"type": "string", "description": "Serbest metin: 'MÖ 3000 civarı', '19. yüzyıl' vb."},
+    "family":   {"type": "string", "description": "family_index.json'daki bir kimlik"},
+
+    "status": {
+      "type": "string",
+      "enum": ["candidate", "researched", "locked", "written", "dropped"],
+      "description": [
+        "candidate  → envanterde, araştırma sürüyor",
+        "researched → ≥2 bağımsız kaynak var, kısıt taraması yapıldı",
+        "locked     → OYNANABİLİRLİK TESTİ GEÇTİ; yazıma uygun",
+        "written    → proza yazıldı ve kapılardan geçti",
+        "dropped    → düştü; gerekçe droppedReason'da kalır"
+      ]
+    },
+    "droppedReason": {"type": "string"},
+
+    "restrictionStatus": {
+      "type": "string",
+      "enum": ["open", "attributed", "restricted", "excluded"],
+      "description": [
+        "open       → serbest, eğlence bağlamında anlatılabilir",
+        "attributed → anlatılabilir ama kültürel atıf ZORUNLU",
+        "restricted → yaşayan/kutsal gelenek; eğlence çerçevesine ÇEVRİLEMEZ",
+        "excluded   → kitaba giremez; gerekçe kayıtta kalır"
+      ]
+    },
+    "restrictionNote": {"type": "string"},
+
+    "sourceConfidence": {"type": "string", "enum": ["high", "medium", "low", "reconstructed"]},
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["ref", "type"],
+        "properties": {
+          "ref":      {"type": "string"},
+          "type":     {"type": "string", "enum": ["book", "journal", "museum", "ethnography", "archive", "field-record"]},
+          "locator":  {"type": "string"},
+          "note":     {"type": "string"}
+        }
+      }
+    },
+
+    "rules": {
+      "type": "object",
+      "description": "locked için ZORUNLU. qa_rules.py bu bloğu denetler.",
+      "required": ["objective", "playerCountMin", "playerCountMax", "materials",
+                   "setup", "turnSequence", "winCondition", "durationMinutes", "ageMin"],
+      "properties": {
+        "objective":       {"type": "string"},
+        "playerCountMin":  {"type": "integer", "minimum": 1},
+        "playerCountMax":  {"type": "integer", "minimum": 1},
+        "materials":       {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "substitutions":   {"type": "array", "items": {"type": "string"},
+                            "description": "Evde bulunan neyin yerine ne konabilir"},
+        "setup":           {"type": "string"},
+        "turnSequence":    {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "winCondition":    {"type": "string"},
+        "durationMinutes": {"type": "integer", "minimum": 1},
+        "ageMin":          {"type": "integer", "minimum": 3},
+        "edgeCases": {
+          "type": "object",
+          "description": "ÜÇÜ DE ZORUNLU. Cevabı olmayan kural metni EKSİKTİR.",
+          "required": ["tie", "stalemate", "illegalMove"],
+          "properties": {
+            "tie":         {"type": "string"},
+            "stalemate":   {"type": "string"},
+            "illegalMove": {"type": "string"}
+          }
+        },
+        "variants": {"type": "array", "items": {"type": "object"}},
+        "simplifiedFirstGame": {"type": "string",
+          "description": "'İlk oyununuz için' basitleştirilmiş sürüm"}
+      }
+    },
+
+    "playtests": {
+      "type": "array",
+      "description": "locked için ≥1 GEÇMİŞ test ZORUNLU. qa_playable.py denetler.",
+      "items": {
+        "type": "object",
+        "required": ["date", "tester", "usedOnlyBookText", "result"],
+        "properties": {
+          "date":             {"type": "string", "format": "date"},
+          "tester":           {"type": "string"},
+          "playerCount":      {"type": "integer"},
+          "usedOnlyBookText": {"type": "boolean",
+                               "description": "false ise test GEÇERSİZDİR"},
+          "durationActual":   {"type": "integer"},
+          "result":           {"type": "string", "enum": ["playable", "ambiguous", "unplayable"]},
+          "notes":            {"type": "string"}
+        }
+      }
+    },
+
+    "diagramId":     {"type": "string", "description": "07_ASSETS/diagrams içindeki levha kimliği"},
+    "plateId":       {"type": "string", "description": "Kültürel gravür açılış levhası"},
+    "culturalNotes": {"type": "string"},
+    "safety":        {"type": "string", "description": "Fiziksel oyunlarda güvenlik uyarısı"},
+    "childSuitable": {"type": "boolean"},
+    "gamblingReframed": {"type": "boolean",
+      "description": "Bahis mekaniği puanla yeniden yazıldıysa true (karar K5)"}
+  }
+}

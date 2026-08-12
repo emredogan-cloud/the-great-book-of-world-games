@@ -1,0 +1,189 @@
+{
+  "$comment": [
+    "THE GREAT BOOK OF WORLD GAMES — makine okunur proje yapılandırması.",
+    "Bu dosya, faz kapısı sisteminin ve bütün doğrulama betiklerinin TEK",
+    "doğruluk kaynağıdır. Sabit bir sayıyı bir betikte aramayın; burada durur.",
+    "Betiklere gömülü sabit değer YASAKTIR — validate_structure.py tarar.",
+    "",
+    "Kaynak: AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html § 11 · Kitap A",
+    "Bu proje CODEX_BESTIARIUM, THE-GREAT-BOOK-OF-WORLD-MYTHS ve",
+    "CODEX-ENIGMATICA'dan TAMAMEN İZOLEDİR. Ortak dosya, ortak build,",
+    "ortak rapor, ortak .gate YOKTUR."
+  ],
+
+  "project": {
+    "id": "great-book-of-world-games",
+    "workingTitle": "The Great Book of World Games",
+    "title": "The Great Book of World Games",
+    "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
+    "series": "The Great Book of…",
+    "volume": 2,
+    "language": "en",
+    "documentLanguage": "tr",
+    "repository": "emredogan-cloud/the-great-book-of-world-games",
+    "portfolioSlot": "Kitap A · İlk yazılacak · yeni kitle motoru",
+    "sourceOfTruth": "AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html § 11 · Kitap A",
+    "isolatedFrom": ["CODEX_BESTIARIUM", "THE-GREAT-BOOK-OF-WORLD-MYTHS", "CODEX-ENIGMATICA"]
+  },
+
+  "founder": {
+    "$comment": [
+      "KURUCU KARARLARI — TEK DOĞRULUK KAYNAĞI.",
+      "World Myths Faz 6'da yazar adı ÜÇ betikte ayrı ayrı gömülüydü ve",
+      "kapak ile metadata FARKLI yazar taşıyordu (Bestiarium D17 kusuru).",
+      "Bu projede her üretici bu bloktan okur; gömülü değer CI'ı kırmızı yakar."
+    ],
+    "author": "Emre Doğan",
+    "publisher": "Vâliçe Press",
+    "isbn": {
+      "strategy": "kdp-free",
+      "label": "KDP-provided free ISBN",
+      "paperback": null,
+      "hardcover": null,
+      "$comment": "null olduğu sürece her çıktı 'PENDING — KDP-PROVIDED ISBN' basar. Sahte ISBN YASAKTIR."
+    },
+    "aiDisclosure": {
+      "founderConfirmed": false,
+      "$comment": "KDP panelindeki AI beyanı SEÇİMİNİ kurucu yapar. Ajan hukuki bildirim veremez."
+    },
+    "authorBio": null,
+    "authorBio$comment": [
+      "World Myths'te yer tutucu biyografi KDP tarafından 'şablon metni' olarak",
+      "REDDEDİLDİ (12 Ağustos 2026). Bu alan null kaldığı sürece Faz 6 kapısı",
+      "kırmızıdır. Kurucu onaylı metin girmeden üretim tamamlanamaz."
+    ]
+  },
+
+  "audience": {
+    "$comment": "Alıcı çoğu zaman okurun kendisidir — World Myths'in aksine tek kişiyi ikna etmek yeterli.",
+    "readerAgeMin": 8,
+    "readerAgeMax": 99,
+    "primaryReader": "aile (yetişkin + 8 yaş üstü çocuk birlikte)",
+    "buyer": ["parent", "gift-buyer", "game-enthusiast", "teacher", "librarian"],
+    "bisacPrimary": "GAM002000",
+    "bisacSecondary": ["REF000000", "HIS000000"]
+  },
+
+  "scope": {
+    "$comment": [
+      "⚠ BU SAYILAR HİPOTEZDİR, OLGU DEĞİL.",
+      "Pazar raporu 100 oyun · 45 kültür · 7 aile · ~256 sayfa önerdi.",
+      "Faz 1 bunları DOĞRULAR veya DEĞİŞTİRİR. validate_spec.py, faz kapısı",
+      "phase1'e ulaşana kadar bu alanları 'hedef', ondan sonra 'kilit' sayar.",
+      "Kilitlendikten sonra değişiklik kurucu kararı + DECISIONS.md gerektirir."
+    ],
+    "locked": false,
+    "lockedAtPhase": "phase1",
+    "games": 100,
+    "gamesCandidateMin": 140,
+    "cultures": 45,
+    "families": 7,
+    "gameWordTarget": 650,
+    "gameWordBandMin": 480,
+    "gameWordBandMax": 900,
+    "manuscriptWordTarget": 78000,
+    "pageTarget": 256,
+    "pageTolerancePct": 6,
+    "familyTaxonomyHypothesis": [
+      {"id": "sowing",     "en": "The Sowing Games",        "tr": "Ekim oyunları",    "targetGames": 14},
+      {"id": "hunt-siege", "en": "The Hunt and the Siege",  "tr": "Av ve kuşatma",    "targetGames": 14},
+      {"id": "race",       "en": "The Race Home",           "tr": "Eve dönüş yarışı", "targetGames": 15},
+      {"id": "territory",  "en": "The Line and the Territory","tr": "Çizgi ve toprak","targetGames": 14},
+      {"id": "war-board",  "en": "The War Board",           "tr": "Savaş tahtası",    "targetGames": 13},
+      {"id": "chance",     "en": "Chance and Nerve",        "tr": "Şans ve cesaret",  "targetGames": 15},
+      {"id": "boardless",  "en": "Games Without a Board",   "tr": "Tahtasız oyunlar", "targetGames": 15}
+    ]
+  },
+
+  "playability": {
+    "$comment": [
+      "BU KİTABIN BENZERSİZ BAŞARISIZLIK BİÇİMİ: OYUN ÇALIŞMIYOR.",
+      "'Güzel ama oynanamaz' bir madde, kitabın tek vaadini yalanlar.",
+      "Bu blok o riski mekanizmaya bağlar — disipline değil."
+    ],
+    "playtestRequiredForStatus": "locked",
+    "minPlaytestsPerGame": 1,
+    "minPlaytestsPerFamilyExemplar": 2,
+    "playtestMustUseOnlyBookText": true,
+    "requiredRuleFields": [
+      "objective", "playerCountMin", "playerCountMax", "materials",
+      "setup", "turnSequence", "winCondition", "durationMinutes", "ageMin"
+    ],
+    "requiredEdgeCases": ["tie", "stalemate", "illegalMove"],
+    "$comment2": "Berabere / kilit / kural dışı hamle: üç soru. Cevabı olmayan kural metni EKSİKTİR."
+  },
+
+  "sourcing": {
+    "$comment": "Bestiarium SOURCING_STANDARD'ının oyunlara uyarlanmış hâli. Ayrıntı: SOURCING_STANDARD.md",
+    "minIndependentSourcesPerGame": 2,
+    "confidenceLevels": ["high", "medium", "low", "reconstructed"],
+    "reconstructedMustBeLabelledInProse": true,
+    "restrictionScreeningRequired": true,
+    "restrictionStatuses": ["open", "attributed", "restricted", "excluded"],
+    "$comment2": [
+      "restricted = yaşayan/kutsal gelenek. Eğlenceye çevrilemez.",
+      "excluded = kitaba giremez. Gerekçe araştırma künyesinde durur.",
+      "Kumar çerçevesi kullanılmaz: bahis mekaniği puanla yeniden yazılır (K5)."
+    ]
+  },
+
+  "production": {
+    "trimPaperback": {"w": 8.5, "h": 11.0, "trimClass": "large"},
+    "trimHardcover": {"w": 8.25, "h": 11.0, "trimClass": "large"},
+    "ink": "black",
+    "paper": "white",
+    "$comment": [
+      "Renk KDP'de bir strateji değil bir VERGİDİR: 8,5×11 premium renk",
+      "sayfa başına 0,080 $ — 256 sayfa = 21,48 $ baskı. Satılamaz.",
+      "Bu yüzden iç blok siyah-beyaz gravür dilindedir (K3)."
+    ],
+    "kdpPrintCost": {
+      "$comment": "KDP resmî formülleri · 12 Ağustos 2026 · Amazon.com",
+      "paperbackLargeTrimBW": {"fixed": 1.00, "perPage": 0.017, "minPages": 110, "maxPages": 828},
+      "hardcoverLargeTrimBW": {"fixed": 5.65, "perPage": 0.017, "minPages": 110, "maxPages": 550},
+      "royaltyRateAtOrAbove999": 0.60,
+      "royaltyRateBelow999": 0.50,
+      "kindleDeliveryPerMB": 0.15,
+      "kindle70BandMin": 2.99,
+      "kindle70BandMax": 12.99
+    },
+    "editionsHypothesis": [
+      {"id": "hardcover", "list": 34.99, "enabled": true,  "priority": 1},
+      {"id": "paperback", "list": 22.99, "enabled": true,  "priority": 2},
+      {"id": "kindle",    "list": 11.99, "enabled": true,  "priority": 3},
+      {"id": "largeprint","list": null,  "enabled": false, "priority": 9,
+       "$comment": "Büyük punto: 12 ay sonra değerlendirilir. Diyagram ağırlıklı bir kitapta punto büyütmek sayfa sayısını patlatır — A4'te karar verilecek."}
+    ],
+    "kdpSelect": false,
+    "kdpSelect$comment": "KU'ya GİRİLMEZ: 256 sayfalık tam okuma ≈ 1,23 $, ciltsiz telif 8,44 $. 6,9 kat kayıp."
+  },
+
+  "gates": {
+    "$comment": ".gate dosyasındaki seviye burada tanımlı kapıları açar. Sıra kilitlidir.",
+    "levels": ["phase0", "phase1", "phase2", "phase3", "phase4", "phase5", "release"],
+    "requirements": {
+      "phase0": {"gamesCandidate": 0,   "gamesLocked": 0,   "gamesWritten": 0},
+      "phase1": {"gamesCandidate": 140, "gamesLocked": 0,   "gamesWritten": 0},
+      "phase2": {"gamesCandidate": 140, "gamesLocked": 12,  "gamesWritten": 12},
+      "phase3": {"gamesCandidate": 140, "gamesLocked": 55,  "gamesWritten": 55},
+      "phase4": {"gamesCandidate": 140, "gamesLocked": 100, "gamesWritten": 100},
+      "phase5": {"gamesCandidate": 140, "gamesLocked": 100, "gamesWritten": 100},
+      "release": {"gamesCandidate": 140, "gamesLocked": 100, "gamesWritten": 100}
+    }
+  },
+
+  "style": {
+    "$comment": "Ayrıntı: 00_CONTEXT/STYLE.md. Ölçülen değerler qa_* kapılarından gelir.",
+    "ruleTextMaxSentenceWords": 22,
+    "ruleTextRequiresNumberedSteps": true,
+    "narrativeSentenceAvgMin": 12.0,
+    "narrativeSentenceAvgMax": 19.0,
+    "forbiddenPatterns": [
+      "sadece … değil, aynı zamanda",
+      "not only … but also",
+      "in today's world",
+      "dive into",
+      "unlock the secrets"
+    ]
+  }
+}
