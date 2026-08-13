@@ -82,9 +82,14 @@ def measure_game(g: dict, diagrams: dict, geom: dict, styles) -> dict:
     if g.get("reconstructionNotice"):
         total += block("<i>%s</i>" % g["reconstructionNotice"], styles["notice"])
 
+    # ⚠ BU LİSTE TAM OLMAK ZORUNDADIR. Ölçülmeyen bir blok, sayfa
+    # modelini SESSİZCE küçültür — ve sayfa modeli kitabın ekonomisidir.
+    # Faz 3 batch'i üç yeni blok getirdi (stages · legalMoves · firstMove);
+    # listeye eklenmeselerdi üç oyun olduğundan kısa ölçülürdü.
     for label, key in (("Setup", "setup"), ("On your turn", "turnSequence"),
                        ("Capture", "capture"), ("Movement", "movement"),
-                       ("Throw values", "throwValues"),
+                       ("Legal moves", "legalMoves"),
+                       ("Throw values", "throwValues"), ("Levels", "stages"),
                        ("Stacking and sending", "stackingAndSending"),
                        ("The chain", "chain")):
         if not g.get(key):
@@ -135,6 +140,7 @@ def measure_game(g: dict, diagrams: dict, geom: dict, styles) -> dict:
                        g.get("movement"), g.get("throwValues"),
                        g.get("stackingAndSending"), g.get("chain"),
                        g.get("winCondition"), g.get("kingCapture"),
+                       g.get("legalMoves"), g.get("stages"),
                        g.get("firstMove"), g.get("endCondition"),
                        g.get("edgeCases"), g.get("exampleTurn"),
                        g.get("variants"), g.get("firstGame"),

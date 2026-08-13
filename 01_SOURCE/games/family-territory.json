@@ -553,7 +553,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "s. 797, şekil 1099–1100 (Dozier'in Santa Clara tarifi aynı sayfada)"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -1217,7 +1218,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "§ LXXVI 'Ou-moul-ko-no — Well Kono', ss. 100–101"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -1456,7 +1458,8 @@
       "sources": [
         {
           "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'The Indoor Games', ss. 577–580"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",

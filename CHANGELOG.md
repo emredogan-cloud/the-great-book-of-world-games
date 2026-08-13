@@ -5,6 +5,50 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.3.0] — 2026-08-13 · FAZ 3 · Üretim, erişilebilir kaynakla ölçek, sayfa düzeltmesi
+
+> Faz 3 sekiz oyun yazdı ve **Faz 2'nin en önemli sayısının yanlış
+> olduğunu kanıtladı.** İkincisi birincisinden değerlidir.
+
+### SAYFA MODELİ DÜZELTİLDİ — 316 → 268
+- örneklem **3 → 11 oyun**; taşma oranı **%33 → %9**
+- sapma **+%23,4 → +%4,7** · **hedef bandına girdi**
+- Faz 2'nin 316'sı tek bir aykırı değerin (tablut) eseriydi
+- sapma şerhi KAPANDI; önerilen üç müdahalenin hiçbiri gerekmedi
+- kelime hedefi **650'de kaldı**, kapsam 100'de kaldı
+- ciltsiz telif 7,42 $ → **8,24 $**
+- ⚠ Faz 2'nin "metin sabittir (fark 0,01)" iddiası da zayıfladı: 0,41
+
+### ÜRETİM — 8 yeni oyun (manuscript 3 → 11)
+Pong Hau K'i · Gonggi · Olinda Keliya · Nerenchi · Demala Diviyan Keliya ·
+Awithlaknannai · Picaria · Zohn Ahl — hepsi **birinci elden** kaynaktan
+(Culin 1895 · Culin 1907 · Parker 1909). Hiçbiri LOCKED değil.
+
+### KARARLAR
+- **K18** koşullu üretim şeridi: üretim yetkili, `.gate` `phase1` KALIR
+- **K19** 150 mm diyagram bütçesi bağlayıcı, RENDER ölçümünden denetlenir
+- **K20** erişilebilir ≠ güvenilir — Viktorya derlemesi tek başına kural taşıyamaz
+
+### DİYAGRAM
+- Cat's Cradle **182,5 → 111,5 mm** (efsane tekrarı + boş kenar payı)
+- dil **v1.3**: `point` sınıfı düzensiz tahtaları taşır (nodes + edges)
+- 16 diyagram render edildi, **hepsi ≤150 mm**, azami 111,5
+
+### BULGULAR
+- Falkener 1892 Faz 1'in Pachisi uyarısını **doğruladı**
+- Culin, Zuni ve Tewa oyunlarını **İspanyol kökenli** sayıyor — atıf düzeltildi
+- Zohn Ahl bir **kadın oyunudur** ve bu hikâyenin merkezinde
+- totolospi ertelendi: kaynak, kaydın ailesinden başka bir oyun anlatıyor
+- olinda-keliya'nın Faz 2'de "blocked" olan kural kaynağı **bulundu**
+- tahtasız aile açılışı, listesinin taşımadığı bir yayılma iddiasındaydı → düzeltildi
+
+### YAPILMAYANLAR
+- **Dış oynanabilirlik testi: SIFIR.** Değişmedi.
+- **`locked` oyun: 0.** Resmî kapı açılmadı.
+- Yeniden kurgulanmış yeni oyun yazılmadı (erişilebilir kaynaklar geçersiz)
+
+selftest 117 → **126**.
+
 ## [0.2.0] — 2026-08-13 · FAZ 2 · Pilot, sayfa doğrulaması, diyagram dili, dizgi
 
 > Faz 2 bir üretim fazı değil bir **ölçüm** fazıdır. Ürettiği en değerli

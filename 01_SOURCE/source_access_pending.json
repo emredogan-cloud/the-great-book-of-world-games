@@ -1,0 +1,70 @@
+{
+  "$comment": [
+    "KAYNAK ERİŞİMİ BEKLEYEN OYUNLAR (§ 26).",
+    "",
+    "Bu kuyruk bir başarısızlık listesi değil bir İŞ LİSTESİDİR: kurucu",
+    "erişimi çözdükçe bu oyunlar normal hatta geri girer:",
+    "  KAYNAK DOĞRULA → KURAL DOĞRULA → YAZ → QA → OYNANABİLİRLİK → KİLİT",
+    "",
+    "⚠ AYNI ENGELLİ KAYNAĞA TEKRAR TEKRAR ZAMAN HARCANMAZ. Yeni bir erişim",
+    "bilgisi gelmeden aynı deneme tekrarlanmaz — Faz 3'te bu kural sayesinde",
+    "üretim, telifli kaynakları beklemek yerine erişilebilir 8 oyunu yazdı.",
+    "",
+    "Bu kuyruk YALNIZCA denenip erişilemeyen oyunları taşır.",
+    "Henüz denenmemiş oyunlar production_queue.json'da 'not-attempted' olarak",
+    "durur ve bir ENGEL değil bir SIRA meselesidir."
+  ],
+  "generatedAtPhase": "phase3",
+  "count": 4,
+  "blockedSources": [
+    "Murray 1913 · Murray 1952 (ödünç kısıtı)",
+    "Bell 1960–69 (telif)",
+    "Parlett 1999 (telif)",
+    "de Voogt 1995/1997 (telif)",
+    "Zaslavsky 1973 (telif)",
+    "Russ 2000 (telif)",
+    "Finkel 2007 (telif)",
+    "British Museum çevrimiçi nesne kaydı (HTTP 403)",
+    "Pollux, Onomasticon (denetlenebilir açık edisyon yok)"
+  ],
+  "accessRequirement": "Üniversite kütüphanesi erişimi ya da archive.org ödünç hesabı. Kurucu üzerinde çalışıyor (Karar C).",
+  "games": [
+    {
+      "gameId": "mbube-mbube",
+      "family": "boardless",
+      "culture": "Zulu",
+      "reason": "kaynak DENENDİ ve erişilemedi",
+      "blockedSourceCount": 1,
+      "lastAttempted": "2026-08-13",
+      "fallbackStatus": "deferred — üretime alınmadı"
+    },
+    {
+      "gameId": "astragaloi",
+      "family": "chance",
+      "culture": "Ancient Greek",
+      "reason": "kaynak DENENDİ ve erişilemedi",
+      "blockedSourceCount": 1,
+      "lastAttempted": "2026-08-13",
+      "fallbackStatus": "deferred — üretime alınmadı"
+    },
+    {
+      "gameId": "mahjong",
+      "family": "chance",
+      "culture": "Han Chinese",
+      "reason": "kaynak DENENDİ ve erişilemedi",
+      "blockedSourceCount": 1,
+      "lastAttempted": "2026-08-13",
+      "fallbackStatus": "deferred — üretime alınmadı"
+    },
+    {
+      "gameId": "bao-la-kiswahili",
+      "family": "sowing",
+      "culture": "Swahili",
+      "reason": "kaynak DENENDİ ve erişilemedi",
+      "blockedSourceCount": 1,
+      "lastAttempted": "2026-08-13",
+      "fallbackStatus": "deferred — üretime alınmadı"
+    }
+  ],
+  "notYetAttempted": 82
+}

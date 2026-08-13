@@ -24,8 +24,8 @@
     "Denetleyen: 04_BUILD/validate_research.py"
   ],
   "version": "1.0",
-  "phase": "phase2",
-  "scope": "pilot-12",
+  "phase": "phase3",
+  "scope": "pilot-12 + phase3-calibration-8",
   "records": [
     {
       "gameId": "yut-nori",
@@ -230,6 +230,98 @@
       "verifiedOn": "2026-08-13",
       "accessMethod": "telif altında — açık tam metin yok",
       "status": "blocked"
+    },
+    {
+      "gameId": "pong-hau-ki",
+      "sourceRef": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
+      "edition": "1895 first edition, Cornell University Library copy",
+      "locator": "§ LXXVI 'Ou-moul-ko-no — Well Kono', ss. 100–101",
+      "supportingPassage": "Ou-moul-ko-no is played upon a diagram, Fig. 103. Each player has two stones which they may put down alternately or may set at the beginning, as shown on the diagram. The players move one piece at a time, in alternate plays along the sides of the square, except that marked with a circle, which is barred, or from the corners to the centre. The object of the game is to block the opponent's men so that they cannot move. […] In all games of Kono, as in Pa-tok, the black men move first. […] The game of Ou-moul-ko-no is called Pong hau k'i in China (Kwangtung), and is played upon a diagram like Fig. 104.",
+      "supportedClaim": "Beş noktalı diyagram; oyuncu başına İKİ taş; siyah önce oynar; hareket karenin kenarları boyunca ama İŞARETLİ KENAR KAPALIDIR; köşelerden merkeze geçilebilir; hedef rakibin taşlarını KİLİTLEMEKTİR. Culin, Kwangtung (Kanton) biçimini Pong hau k'i olarak adlandırır — kaydın kültürel atfı buradan gelir.",
+      "verifiedOn": "2026-08-13",
+      "accessMethod": "archive.org tam metin (cu31924023272424) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "gonggi",
+      "sourceRef": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
+      "edition": "1895 first edition",
+      "locator": "§ LX 'Kong-keui — Jackstones', ss. 58–59",
+      "supportingPassage": "Jackstones are played by boys. Five or seven stones or pieces of brick are used. The game is played upon the ground. There are a great variety of methods. In one, five stones are used. Four are placed upon the ground and one is tossed into the air. Before it falls another is picked up and the one first thrown, which must be caught as it descends, is then put down. The second stone is then tossed and the third picked up, and so on. This is called al-nat-ki, 'laying the eggs.' […] The fifth stone is then tossed up with the right hand, and before it falls one of the other stones is struck under the left hand. This, called al-hpoum-ki, 'setting the eggs,' is repeated until all the stones are struck under the left hand, or the player misses.",
+      "supportedClaim": "Beş ya da yedi taş; yerde oynanır; at-topla-yakala dizisi; iki adlandırılmış aşama (al-nat-ki · al-hpoum-ki); kaçırınca sıra biter. Culin 'büyük çeşitlilik' der — kitabın TEK bir dizi basması bir seçimdir ve varyant kutusunda söylenir.",
+      "verifiedOn": "2026-08-13",
+      "accessMethod": "archive.org tam metin (cu31924023272424) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "olinda-keliya",
+      "sourceRef": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac & Co., 1909)",
+      "edition": "1909 first edition",
+      "locator": "'The Indoor Games', ss. 588–595 (tahta s. 588–589; oyun ve tur sonu ss. 594–595)",
+      "supportingPassage": "In Ceylon, the board, Olinda-poruwa, on which it is played has fourteen little shallow cup-shaped hollows […] arranged in two rows at the sides, each containing seven hollows. There are two rectangular hollows between them […] The rectangular hollows hold the captured seeds. […] In all four games four seeds are first placed in each of the 14 [holes] […] He then takes the seeds of the next hole, if there be any, and sows them as before, and continues his play round the board; but if the next hole to that at which he effected the capture be empty his turn is ended, and he 'sits down.' […] when a player is left without seeds in his row of holes on his turn's coming to play, the round is ended. Each player then again arranges his seeds in fours in the cup-holes […] If they have equal numbers (termed hari mutu, 'equal pearls'), it is optional to consider the game ended in a 'draw.'",
+      "supportedClaim": "On dört çukur, iki sıra yedi, artı iki ambar; başlangıçta her çukurda DÖRT tohum; ekim ve alma; 'oturma' koşulu (sonraki çukur boşsa tur biter); turun bitişi; dörtlü yeniden dizme; ve BERABERE TANIMI — hari mutu, 'eşit inciler'.",
+      "verifiedOn": "2026-08-13",
+      "accessMethod": "archive.org tam metin (ancientceylonacc00park) — kamusal alan",
+      "status": "verified",
+      "note": "FAZ 2'NİN BOŞLUĞUNU KAPATTI. Faz 2'de bu oyunun KURAL kaynağı 'blocked' idi (Russ 2000, telifli) ve Parker'ın yalnızca tahtayı verdiği sanılıyordu. Parker'ın kendi 'The Indoor Games' bölümü bulununca telifli kaynağa ihtiyaç kalmadı — ve berabere kuralı da kaynaktan geldi, editoryal olmaktan çıktı."
+    },
+    {
+      "gameId": "nerenchi",
+      "sourceRef": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac & Co., 1909)",
+      "edition": "1909 first edition",
+      "locator": "'The Indoor Games', ss. 577–580",
+      "supportingPassage": "The game requires two players who alternately lay down a small counter — usually a stone or fragment of earthenware — at one of the angles, or the points where the arms of the cross meet the sides of the squares. While doing so, on each occasion when a player forms a row of three of his own pieces, which is termed 'Nerenchi,' he lays down an additional piece. When only two places remain unfilled the next player moves one of his pieces into one of the vacant points, and the play is continued by the two players, who move their pieces alternately, each one endeavouring to form a row of three of his own pieces, which the other tries to prevent. Whenever a row is so formed the player who has obtained the Nerenchi removes an opposition piece from the board and has an additional move. The play ends when one player has lost all his pieces.",
+      "supportedClaim": "İki oyuncu; İKİ AŞAMALI yapı (dizme → hareket); nerenchi (üçlü sıra) DİZME aşamasında EK TAŞ, HAREKET aşamasında RAKİP TAŞI ALMA + ek hamle; geçiş koşulu 'yalnızca iki yer boş kalınca'; bitiş: bir oyuncu bütün taşlarını kaybedince.",
+      "verifiedOn": "2026-08-13",
+      "accessMethod": "archive.org tam metin (ancientceylonacc00park) — kamusal alan",
+      "status": "verified",
+      "note": "Aynı bölüm Kurna Tapınağı'nın MÖ 1400 tarihlendirmesini de anar. Faz 1 kaydı bu iddianın tartışmalı olduğunu işaretlemişti; kitap onu AKTARMADI ve yalnızca Mihintale'nin kendi yazıtlarına dayanan tarihi bastı."
+    },
+    {
+      "gameId": "demala-diviyan-keliya",
+      "sourceRef": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac & Co., 1909)",
+      "edition": "1909 first edition",
+      "locator": "'The Indoor Games', ss. 581–582",
+      "supportingPassage": "This game is played by two persons, one of whom has two pieces called 'Leopards,' while the other has twenty-four pieces called 'Cattle,' with which he endeavours to shut up the Leopards, which are then said to be 'imprisoned.' It is played in the same manner as the last games, the Leopards 'eating' the Cattle one at a time, by jumping over them into a vacant place. The stations for the pieces are at all meeting places of lines, and the pieces move along the lines, both at right angles and along the diagonals, going one step each time, excepting when the Leopard is making a capture. […] The owner of the Leopards begins the game by placing one of them at the centre of the board […] One of the Cattle is next put down by the other player at any meeting-point […] and his opponent then deposits the second Leopard at any other place which he prefers.",
+      "supportedClaim": "ASİMETRİ: iki Leopar'a karşı yirmi dört Sığır; farklı hedefler (hapsetmek ↔ yemek); taşlar çizgi kesişimlerinde durur ve tek adım gider (dik ve çapraz); Leopar atlayarak alır; açılış SIRASI kuralın parçasıdır (merkeze bir leopar → bir sığır → ikinci leopar).",
+      "verifiedOn": "2026-08-13",
+      "accessMethod": "archive.org tam metin (ancientceylonacc00park) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "awithlaknannai",
+      "sourceRef": "Culin, Stewart, Games of the North American Indians, Twenty-fourth Annual Report of the Bureau of American Ethnology (Washington: Government Printing Office, 1907)",
+      "edition": "1907, BAE 24th Annual Report",
+      "locator": "s. 801, şekil 1111–1112 (Brooklyn Institute Museum env. no. 5049)",
+      "supportingPassage": "Long stone slab, inscribed with the diagram shown in figure 1111. This was found by the writer on a house top in Zuni, and was explained by the natives as used in a game with white and black pieces, played like the preceding. The positions of the pieces at the beginning of the game are indicated by black and white circles. The name of the game was given as kolowis awithlaknannai, the kolowisi being a mythic serpent. Another form of the same game (figure 1112) was made for the writer by Zuni Nick (Nick Graham), who described it under the name of awithlaknan mosona, the original awithlaknannai. […] FIG. 1111. Kolowis awithlaknannai; length of diagram, 33 inches",
+      "supportedClaim": "Müze envanterli taş tahta (33 inç); beyaz ve siyah taşlar; başlangıç konumları diyagramda işaretli; iki ad biçimi (kolowis awithlaknannai · awithlaknan mosona); alquerque tipi atlayarak alma ('played like the preceding'). KRİTİK: Culin bölümü 'EUROPEAN GAMES: ZUNI' başlığı altına koyar — yani oyunu İSPANYOL KÖKENLİ sayar.",
+      "verifiedOn": "2026-08-13",
+      "accessMethod": "archive.org tam metin (gamesofnorthamer00culirich) — kamusal alan",
+      "status": "verified",
+      "note": "KÜLTÜREL ATIF BULGUSU. Kaynağın kendi tasnifi oyunu Avrupa kökenli sayıyor. Kitap bunu gizlemedi: kültürel hikâye alquerque bağını ve Zuni dönüşümünü birlikte anlatıyor. 'Kadim yerli oyunu' çerçevesi hem yanlış olurdu hem de asıl ilginç olanı silerdi."
+    },
+    {
+      "gameId": "picaria",
+      "sourceRef": "Culin, Stewart, Games of the North American Indians, Twenty-fourth Annual Report of the Bureau of American Ethnology (Washington: Government Printing Office, 1907)",
+      "edition": "1907, BAE 24th Annual Report",
+      "locator": "s. 797, şekil 1099–1100 (T. S. Dozier'in Santa Clara tarifi aynı sayfada)",
+      "supportingPassage": "Mr T. S. Dozier describes a game of pitarilla (pedreria), said to be of Pueblo origin, but doubtless of Spanish introduction: In this game the crosses are marked by each player in turn where the men are placed, the object being to get three men in a row, always in a straight line; then one of the opposing player's pieces, the latter being grains of corn or pebbles, may be moved to the center. When all of the men of any player are moved by this process to the center, the other has won them. There are two figures used, the first being a little more complicated than the other, though the same rule obtains in both.",
+      "supportedClaim": "Üç taş, dokuz nokta; üçlü sıra kurmak; sıra kurunca RAKİP TAŞINI MERKEZE taşımak; bütün taşları merkeze taşınan oyuncu kaybeder; iki farklı diyagram, aynı kural. Ad çeşitleri: picaria · pitarilla · pedreria · bidaria.",
+      "verifiedOn": "2026-08-13",
+      "accessMethod": "archive.org tam metin (gamesofnorthamer00culirich) — kamusal alan",
+      "status": "verified",
+      "note": "KÜLTÜREL ATIF BULGUSU. Kaynağın kendisi 'Pueblo kökenli olduğu söylenir ama şüphesiz İspanyol girişidir' diyor. Kitap bu şüpheyi AKTARDI; silmek kaynağın kendi sözünü çarpıtmak olurdu."
+    },
+    {
+      "gameId": "zohn-ahl",
+      "sourceRef": "Culin, Stewart, Games of the North American Indians, Twenty-fourth Annual Report of the Bureau of American Ethnology (Washington: Government Printing Office, 1907)",
+      "edition": "1907, BAE 24th Annual Report",
+      "locator": "ss. 124–125, şekil 131–132 (Free Museum of Science and Art env. no. 16536)",
+      "supportingPassage": "zohn ahl (zohn, creek; ahl, wood), commonly known as the ahl game: The ahl cloth is divided into points by which the game is counted. […] The space between the parallel lines 1 and 1 and 20 and 20 is called the creek, and the corresponding spaces between the parallel lines at right angles are called the dry branches. The sticks are held by the players in one hand and struck downward, so that their ends come on the ahl stone with considerable force. If all the sticks fall with the sides without grooves uppermost, the play is called white, and counts 10. If all the grooved sides come uppermost, it is called red, and counts 5. Both of these throws entitle the player to another throw. If one grooved side is uppermost, it counts 1; two grooved sides, 2, and three grooved sides, 3. The game is played by any even number of girls or women (never by men or boys), half on one side the line N S and half on the other. […] The two awls are stuck in the creek at 1 1.",
+      "supportedClaim": "Yirmi işaretli ahl bezi; creek ve dry branch; dört çubuk zar taşa vurularak atılır; değerler beyaz=10, kırmızı=5, oluklu yüz sayısına göre 1/2/3; on ve beş EKSTRA ATIŞ verir; iki takım, çift sayıda oyuncu; tığlar creek'e dikilir. KRİTİK KÜLTÜREL OLGU: Culin oyunun KADINLAR ve KIZLAR tarafından oynandığını, erkeklerin ASLA oynamadığını özellikle kaydeder.",
+      "verifiedOn": "2026-08-13",
+      "accessMethod": "archive.org tam metin (gamesofnorthamer00culirich) — kamusal alan",
+      "status": "verified"
     }
   ]
 }

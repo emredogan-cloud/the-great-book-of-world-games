@@ -74,6 +74,9 @@ REQUIRED_FILES = [
     "01_SOURCE/scope_lock.json",
     "01_SOURCE/pilot_lock.json",
     "01_SOURCE/source_verification.json",
+    "01_SOURCE/production_queue.json",
+    "01_SOURCE/source_access_pending.json",
+    "07_ASSETS/diagrams/phase3_diagrams.json",
     "01_SOURCE/playtests/README.md",
     "01_SOURCE/pilot_tr/README.md",
     "07_ASSETS/diagrams/diagram_language.json",
@@ -85,6 +88,7 @@ REQUIRED_FILES = [
     "04_BUILD/calibrate_pages.py",
     "04_BUILD/render_diagrams.py",
     "06_REPORTS/PHASE_1_REPORT.md",
+    "06_REPORTS/PHASE_2_REPORT.md",
     ".github/workflows/validate.yml",
 ]
 
@@ -210,8 +214,13 @@ PILOT_MARKER_DEFINERS = {
     "04_BUILD/qa_language_split.py",
     "DECISIONS.md",
     "06_REPORTS/PHASE_2_REPORT.md",
+    "06_REPORTS/PHASE_3_REPORT.md",
     "01_SOURCE/playtests/README.md",
 }
+# NOT: bu liste her fazda bir satır uzuyor ve bu BEKLENEN bir şeydir —
+# her faz raporu test paketini ANLATIR ve işareti alıntılar. Uzayan şey
+# muafiyet değil, işareti ANAN belge sayısıdır. Dedektör zayıflamıyor:
+# koruma hâlâ 01_SOURCE/pilot_tr/ dışındaki her KULLANIMI yakalıyor.
 
 # ④ Sır taraması ---------------------------------------------------------------
 SECRET_PATTERNS = [

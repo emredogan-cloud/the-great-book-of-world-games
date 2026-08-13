@@ -1,7 +1,7 @@
 {
   "status": "pass",
-  "checks": 80,
+  "checks": 84,
   "errors": [],
   "warnings": [],
-  "trackedFiles": 101
+  "trackedFiles": 106
 }

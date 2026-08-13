@@ -1,21 +1,21 @@
 {
-  "status": "pass-with-documented-deviation",
+  "status": "pass",
   "calibrated": true,
   "hypothesis": false,
   "model": {
     "games": 100,
     "families": 7,
-    "bodyPages": 267,
+    "bodyPages": 218,
     "openerPages": 14,
     "frontMatterPages": 14,
     "backMatterPages": 21,
-    "rawTotal": 316,
-    "total": 316
+    "rawTotal": 267,
+    "total": 268
   },
   "target": 256,
   "tolerancePct": 6,
-  "deviationPct": 23.44,
-  "withinTolerance": false,
+  "deviationPct": 4.69,
+  "withinTolerance": true,
   "wordCrossCheck": {
     "words": 65000,
     "wordsPerPage": 320,
