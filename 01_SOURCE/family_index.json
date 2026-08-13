@@ -1,0 +1,295 @@
+{
+  "$comment": [
+    "YEDİ MEKANİK AİLE — bu kitabın tasnif tezi.",
+    "",
+    "Kitap oyunları BÖLGEYE göre değil MEKANİĞE göre dizer. Okur 'Hindistan",
+    "bölümü'nü değil, aynı fikrin sekiz kültürdeki hâlini görür.",
+    "",
+    "HER AİLENİN DÖRT ZORUNLU ALANI VARDIR:",
+    "  definition    → aile nedir",
+    "  inclusionRule → bir oyun buraya HANGİ ŞARTLA girer",
+    "  exclusionRule → hangi şartla GİREMEZ",
+    "  boundaries    → komşu aileyle sınır NEREDE çizilir ve NEDEN",
+    "",
+    "boundaries alanı bu belgenin varlık sebebidir. 'Tavla ailesi ile yarış",
+    "oyunları nerede ayrılır?' sorusunun cevabı bir ajanın kafasında değil,",
+    "BURADA durur. Tasnif kararı deterministik olmak zorundadır: aynı oyun,",
+    "iki farklı ajan tarafından AYNI aileye konmalıdır.",
+    "",
+    "Sürüm 1.0 · Faz 1 · kurucu onayı: AÇIK KARAR A2"
+  ],
+
+  "version": "1.0",
+  "phase": "phase1",
+
+  "classificationProcedure": [
+    "Bir oyun aileye ŞU SIRAYLA sorularak atanır. İlk 'evet' aileyi belirler.",
+    "Sıra kilitlidir: sıra değişirse tasnif değişir ve determinizm kaybolur.",
+    "① Oyun tahta ve şans aleti olmadan mı oynanır?            → boardless",
+    "② Sonucu bir şans/çekiliş aleti mi belirliyor, iz yok mu?  → chance",
+    "③ Taşlar sahipsiz mi ve tur hâlinde mi ekiliyor?           → sowing",
+    "④ İki tarafın HEDEFİ farklı mı (asimetrik)?                → hunt-siege",
+    "⑤ Sabit bir iz üzerinde şansla mı ilerleniyor?             → race",
+    "⑥ Kazanma bir DİZİLİŞ mi (hiza · kuşatma · bağlantı)?      → territory",
+    "⑦ Alma bir SEÇİLEN HAMLE mi ve hedef düşman gücü mü?       → war-board",
+    "Hiçbiri değilse oyun bu kitabın tezine uymuyordur ve envantere GİRMEZ."
+  ],
+
+  "families": [
+    {
+      "id": "sowing",
+      "order": 1,
+      "en": "The Sowing Games",
+      "tr": "Ekim oyunları",
+      "targetGames": 14,
+      "candidateFloor": 16,
+      "definition": "Oyuncuların sahipsiz taşları bir çukur devresine tek tek 'ektiği', sonucu son taşın düştüğü çukurun belirlediği oyunlar. Mankala kümesi.",
+      "inclusionRule": [
+        "Üç şartın ÜÇÜ birden sağlanmalıdır:",
+        "(a) taşlar birbirinden ayırt edilemez ve tahtadayken kimseye ait değildir;",
+        "(b) temel eylem bir avuç taşı devre boyunca çukur başına bir tane dağıtmaktır;",
+        "(c) hamlenin sonucunu son taşın DÜŞTÜĞÜ YER belirler."
+      ],
+      "exclusionRule": [
+        "Her taşın bir sahibi varsa ve taş birey olarak hareket ediyorsa bu ekim değildir.",
+        "Çukurlar yalnızca depo olarak kullanılıyorsa (ekim turu yoksa) bu ekim değildir.",
+        "Ekim benzeri görünen ama hareketi zar belirleyen oyunlar race ailesine gider."
+      ],
+      "boundaries": [
+        {
+          "vs": "race",
+          "rule": "Yarışta BİR TAŞ yol alır; ekimde BİR AVUÇ dağıtılır ve hiçbir taşın kimliği yoktur.",
+          "testCase": "Congklak ekimdir (avuç dağıtılır); Sungka'nın 'yarış' gibi okunması yanıltıcıdır."
+        },
+        {
+          "vs": "war-board",
+          "rule": "Ekimde alma, sayımın SONUCUDUR; savaş tahtasında alma seçilen bir hamledir.",
+          "testCase": "Bao'da esir alma son taşın dörtlü/ikili çukura düşmesinden doğar — oyuncu 'şu taşı al' diyemez."
+        }
+      ],
+      "rationale": "Ekim, insanlığın en geniş coğrafyaya yayılmış tek soyut oyun fikridir: Batı Afrika'dan Filipinler'e, Etiyopya'dan Karayipler'e. Aynı mekaniğin bu kadar çok kültürde bağımsız veya taşınarak yaşaması, kitabın 'mekaniğe göre tasnif' tezinin en güçlü kanıtıdır.",
+      "examples": ["oware", "bao-la-kiswahili", "omweso", "toguz-kumalak", "congklak", "pallanguzhi"],
+      "openingEssayAngle": "Aynı tahtanın on yedi ada ve üç kıtada nasıl farklı sayma kuralları doğurduğu."
+    },
+
+    {
+      "id": "hunt-siege",
+      "order": 2,
+      "en": "The Hunt and the Siege",
+      "tr": "Av ve kuşatma",
+      "targetGames": 14,
+      "candidateFloor": 16,
+      "definition": "Asimetrik oyunlar: eşit olmayan güçler, eşit olmayan hedefler. Bir taraf az ve güçlüdür (kaplan · tilki · kral); diğeri çok ve zayıftır (keçi · kaz · kuşatan).",
+      "inclusionRule": [
+        "İki şart birden:",
+        "(a) taraflar farklı sayıda taş ve/veya farklı hareket yetkisi taşır;",
+        "(b) tarafların KAZANMA KOŞULLARI birbirinden farklıdır."
+      ],
+      "exclusionRule": [
+        "İki taraf da aynı hedefe koşuyorsa oyun buraya GİREMEZ — taş sayıları farklı olsa bile.",
+        "Simetrik alma oyunları war-board ailesine aittir."
+      ],
+      "boundaries": [
+        {
+          "vs": "war-board",
+          "rule": "Sınır taş sayısında değil HEDEF SİMETRİSİNDEDİR. Hedefler farklıysa av-kuşatma, aynıysa savaş tahtası.",
+          "testCase": "Hnefatafl av-kuşatmadır (kral KAÇAR, kuşatanlar YAKALAR). Satranç savaş tahtasıdır (iki taraf da mat arar) — taş sayısı eşit olmasa da ölçüt budur."
+        },
+        {
+          "vs": "territory",
+          "rule": "Kuşatma bir HEDEFSE av-kuşatmadır; kuşatma bir PUAN BİRİMİYSE territory'dir.",
+          "testCase": "Bagh-Chal'da keçiler kaplanı kilitlemeye çalışır — bu hedefin kendisidir. Go'da kuşatma sayısız kez tekrarlanan bir puan işlemidir."
+        }
+      ],
+      "rationale": "Asimetri, modern oyun tasarımının en zor problemidir ve geleneksel oyunlar onu yüzyıllardır çözmüştür. Bu aile ayrıca kitabın en görsel ailesidir: kaplan-keçi tahtaları, tilki-kaz haçları ve tafl kareleri tek bakışta okunur.",
+      "examples": ["bagh-chal", "hnefatafl", "fox-and-geese", "aadu-puli-attam", "komikan", "rimau-rimau"],
+      "openingEssayAngle": "Neden dünyanın her yerinde 'az ve güçlü' ile 'çok ve zayıf' aynı tahtada karşılaşır."
+    },
+
+    {
+      "id": "race",
+      "order": 3,
+      "en": "The Race Home",
+      "tr": "Eve dönüş yarışı",
+      "targetGames": 15,
+      "candidateFloor": 16,
+      "definition": "Taşların sabit bir iz üzerinde bir hedefe doğru ilerlediği, ilerleme miktarını bir çekiliş aletinin (zar · çubuk · deniz kabuğu · aşık kemiği) belirlediği oyunlar.",
+      "inclusionRule": [
+        "Üç şart birden:",
+        "(a) başı ve sonu olan bir İZ vardır;",
+        "(b) hareket mesafesini bir çekiliş aleti belirler;",
+        "(c) kazanmak, taşları izin sonuna ulaştırmaktır."
+      ],
+      "exclusionRule": [
+        "İz yoksa yarış yoktur.",
+        "Çekiliş sonucun KENDİSİYSE ve iz üzerinde ilerleme yoksa oyun chance ailesine gider.",
+        "Hareket serbest seçiliyorsa ve hedef düşman gücüyse war-board'a gider."
+      ],
+      "boundaries": [
+        {
+          "vs": "chance",
+          "rule": "Şans oyununda çekiliş SONUCU belirler; yarışta çekiliş yalnızca HAREKETİ üretir, sonucu iz üzerindeki konum belirler.",
+          "testCase": "Aşık kemiği atıp puan yazmak chance'tir; aynı aşık kemiğiyle iz üzerinde taş yürütmek race'tir. Yut Nori çubukları atar ama taş yürütür → race."
+        },
+        {
+          "vs": "war-board",
+          "rule": "Tavla ailesinde alma vardır ama alma yarışın ARACIDIR, hedefi değildir. Hedef her zaman eve varmaktır.",
+          "testCase": "Tabula'da taş vurmak rakibi geriye atar; oyun yine de bitirme yarışıdır. Alquerque'de alma hedefin kendisidir → war-board."
+        }
+      ],
+      "rationale": "Yarış oyunları kitabın en eski maddelerini taşır: Ur Kraliyet Oyunu ve Senet, beş bin yıllık vaadi tek başlarına doğrular. Ayrıca aile içinde en kolay öğrenilen ailedir ve kitabın giriş kapısıdır.",
+      "examples": ["royal-game-of-ur", "senet", "pachisi", "yut-nori", "tabula", "li-b-el-merafib"],
+      "openingEssayAngle": "Beş bin yıl boyunca değişmeyen tek fikir: at, say, eve dön."
+    },
+
+    {
+      "id": "territory",
+      "order": 4,
+      "en": "The Line and the Territory",
+      "tr": "Çizgi ve toprak",
+      "targetGames": 14,
+      "candidateFloor": 16,
+      "definition": "Kazanmanın bir DİZİLİŞLE belirlendiği oyunlar: hiza kurmak, alan kuşatmak, bağlantı tamamlamak.",
+      "inclusionRule": [
+        "İki şart birden:",
+        "(a) kazanma koşulu taşların tahtadaki KONUMSAL İLİŞKİSİDİR (hiza · kuşatma · bağlantı);",
+        "(b) alma varsa bile alma SEÇİLEN BİR HAMLE DEĞİL, bir dizilişin SONUCUDUR."
+      ],
+      "exclusionRule": [
+        "Alma bir hamle olarak seçiliyorsa oyun war-board'a gider.",
+        "Diziliş yalnızca yan ürünse ve hedef düşman gücünü tüketmekse buraya giremez."
+      ],
+      "boundaries": [
+        {
+          "vs": "war-board",
+          "rule": "DETERMİNİSTİK ÖLÇÜT: alma bir HAMLE mi, yoksa bir DİZİLİŞİN SONUCU mu? Hamleyse war-board, sonuçsa territory.",
+          "testCase": "Dokuz Taş'ta hiçbir tur 'şu taşı al' hamlesi değildir; değirmen kurulur ve alma ondan DOĞAR → territory (ikincil aile: war-board). Dama'da alma turun kendisidir → war-board."
+        },
+        {
+          "vs": "hunt-siege",
+          "rule": "Kuşatma tek seferlik bir HEDEFSE hunt-siege; tekrarlanan bir PUAN İŞLEMİYSE territory.",
+          "testCase": "Go'da kuşatma yüz kez tekrarlanır ve puan üretir → territory."
+        }
+      ],
+      "rationale": "Bu aile kitabın en soyut ve en 'modern' hissettiren ailesidir. Üç Taş'tan Go'ya uzanan bir ölçek sunar: aynı fikrin en basit ve en derin hâli yan yana durur — bu, kitabın okura verebileceği en iyi editoryal deneyimdir.",
+      "examples": ["go", "nine-mens-morris", "shisima", "mu-torere", "shax", "dara"],
+      "openingEssayAngle": "Üç taşla kurulan hiza ile 361 kesişimle kurulan imparatorluk arasındaki tek fikir."
+    },
+
+    {
+      "id": "war-board",
+      "order": 5,
+      "en": "The War Board",
+      "tr": "Savaş tahtası",
+      "targetGames": 13,
+      "candidateFloor": 16,
+      "definition": "Simetrik alma oyunları: iki taraf da aynı hedefi taşır ve alma oyuncunun SEÇTİĞİ bir hamledir. Zafer düşman gücünü yok etmek, kilitlemek ya da bir taşını etkisiz kılmaktır.",
+      "inclusionRule": [
+        "Üç şart birden:",
+        "(a) iki tarafın kazanma koşulu AYNIDIR;",
+        "(b) alma — yer değiştirerek, atlayarak, kıstırarak ya da yaklaşarak — seçilen bir eylemdir;",
+        "(c) hareketi hiçbir şans aleti belirlemez."
+      ],
+      "exclusionRule": [
+        "Hedefler asimetrikse oyun hunt-siege'e gider.",
+        "Hareketi zar/çubuk belirliyorsa race'e gider.",
+        "Alma bir dizilişin sonucuysa territory'ye gider."
+      ],
+      "boundaries": [
+        {
+          "vs": "territory",
+          "rule": "Bkz. territory § boundaries — ölçüt tek yönlüdür ve iki ailede AYNI cümleyle yazılıdır.",
+          "testCase": "Fanorona'da alma (yaklaşma/çekilme) turun kendisidir → war-board."
+        },
+        {
+          "vs": "race",
+          "rule": "Şans aleti varsa war-board olamaz. Bu ailede belirsizlik yalnızca rakibin aklından gelir.",
+          "testCase": "Şatranç ve Xiangqi'de zar yoktur; Nard'da vardır → Nard race."
+        }
+      ],
+      "rationale": "Kitabın en tanıdık ailesi ve bu yüzden en riskli olanı: okur satrancı zaten bilir. Bu ailenin işi satranç anlatmak değil, satrancın KOMŞULARINI göstermektir — Sittuyin'in kuruluş serbestliği, Fanorona'nın çift yönlü alması, Konane'nin açılış boşluğu.",
+      "examples": ["fanorona", "alquerque", "seega", "konane", "xiangqi", "ludus-latrunculorum"],
+      "openingEssayAngle": "Satrancın akrabaları: aynı fikrin altı kültürde altı farklı çözümü."
+    },
+
+    {
+      "id": "chance",
+      "order": 6,
+      "en": "Chance and Nerve",
+      "tr": "Şans ve cesaret",
+      "targetGames": 15,
+      "candidateFloor": 16,
+      "definition": "Sonucun bir ÇEKİLİŞ ALETİYLE belirlendiği, izi ve gelişen tahta konumu olmayan oyunlar. Her turun kararı 'nereye gideyim' değil, 'riski alayım mı'dır.",
+      "inclusionRule": [
+        "İki şart birden:",
+        "(a) oyunda bir ÇEKİLİŞ ALETİ vardır — zar · aşık kemiği · çubuk · deniz kabuğu · kart · taş · çekirdek;",
+        "(b) iz üzerinde yürüyen taş ve kalıcı tahta konumu YOKTUR."
+      ],
+      "exclusionRule": [
+        "Çekiliş bir izde taş yürütüyorsa oyun race'e gider.",
+        "Çekiliş aleti YOKSA (yalnızca el, ses, beden) oyun boardless'a gider.",
+        "Bahis mekaniği taşıyan hiçbir oyun kumar çerçevesiyle GİREMEZ — puanla yeniden yazılır (karar K5)."
+      ],
+      "boundaries": [
+        {
+          "vs": "boardless",
+          "rule": "AYIRICI NESNEDİR: chance bir çekiliş/çekme ALETİ ister; boardless bedeni, sesi ya da bulunmuş nesneyi BECERİ için kullanır.",
+          "testCase": "Aşık kemiğini atıp yüzüne göre puan yazmak chance'tir; aynı aşık kemiğini havaya atıp yakalamak (beştaş) beceridir → boardless."
+        },
+        {
+          "vs": "race",
+          "rule": "Bkz. race § boundaries.",
+          "testCase": "Zarla puan toplayan Passe-dix chance; zarla taş yürüten Tavla race."
+        }
+      ],
+      "rationale": "Bu aile kitabın en büyük editoryal riskini taşır ve tam bu yüzden gereklidir: geleneksel şans oyunlarının büyük kısmı bahisle oynanmıştır. Kitap bahsi silmez, PUANA ÇEVİRİR ve bunu açıkça söyler. Görünür editoryal karar, insan yazarlığının en ucuz kanıtıdır.",
+      "examples": ["shagai", "astragaloi", "totolospi", "hanafuda-koi-koi", "cho-han-reframed", "zohn-ahl"],
+      "openingEssayAngle": "İnsan neden kendi kararı olmayan bir sonucu heyecanla bekler."
+    },
+
+    {
+      "id": "boardless",
+      "order": 7,
+      "en": "Games Without a Board",
+      "tr": "Tahtasız oyunlar",
+      "targetGames": 15,
+      "candidateFloor": 16,
+      "definition": "Tahta da çekiliş aleti de istemeyen oyunlar: bedenle, sesle, iple, taşla ya da yere çizilen bir işaretle oynanır.",
+      "inclusionRule": [
+        "İki şart birden:",
+        "(a) üretilmiş bir tahta gerekmez — zemin işareti, ip, taş, top ya da hiçbir şey yeterlidir;",
+        "(b) sonucu beceri, hafıza, hız ya da bedensel eylem belirler; çekiliş aleti yoktur."
+      ],
+      "exclusionRule": [
+        "Üretilmiş tahta gerekiyorsa buraya giremez.",
+        "Çekiliş aleti gerekiyorsa chance'e gider.",
+        "Yaralanma riski makul ev/okul ortamında yönetilemeyen oyunlar ENVANTERDEN ELENİR (excluded)."
+      ],
+      "boundaries": [
+        {
+          "vs": "chance",
+          "rule": "Bkz. chance § boundaries — ayırıcı nesnedir.",
+          "testCase": "Taş-kağıt-makas eşzamanlı gizli seçimdir ama ALET YOKTUR → boardless."
+        },
+        {
+          "vs": "territory",
+          "rule": "Yere çizilen bir şekil TAHTA DEĞİLDİR; ama o şekil üzerinde TAŞ diziliyorsa oyun territory'dir.",
+          "testCase": "Seksek yere çizilir ve bedenle oynanır → boardless. Şişima da yere çizilir ama taş dizilir → territory."
+        }
+      ],
+      "rationale": "Kitabın 'bu akşam oynanabilir' vaadini en doğrudan doğrulayan aile budur: sıfır malzeme, sıfır kurulum. Ayrıca kitabın en geniş yaş aralığını ve en yüksek kültürel çeşitliliğini taşır — çünkü tahta pahalıdır, oyun değildir.",
+      "examples": ["hopscotch", "morra", "jan-ken", "gonggi", "ampe", "cats-cradle"],
+      "openingEssayAngle": "Malzemesi olmayan oyun, en çok kültüre yayılmış oyundur — ve bu bir tesadüf değildir."
+    }
+  ],
+
+  "$comment2": [
+    "AİLE DENGESİ — hedefler (targetGames) toplamı 100'dür.",
+    "candidateFloor her ailede 16'dır: Faz 2–4'te düşen oyunların yerine",
+    "koyacak yedek olsun diye. Bir aile 16 adayın altına düşerse tasnif tezi",
+    "zayıftır ve aile ya birleştirilir ya değiştirilir (yol haritası § FAIL).",
+    "",
+    "İKİNCİL AİLE (secondaryFamily) kitapta BASILMAZ. Yalnızca tasnif kararının",
+    "tartışmalı olduğu yerlerde kaydı tutar; okur her oyunu tek yerde bulur."
+  ]
+}

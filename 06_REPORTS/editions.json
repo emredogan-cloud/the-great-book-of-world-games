@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "pages": 250,
+  "editions": [
+    {
+      "id": "hardcover",
+      "list": 34.99,
+      "printCost": 9.9,
+      "royalty": 11.09,
+      "breakEvenAcosPct": 31.7,
+      "royaltyRate": 0.6
+    },
+    {
+      "id": "paperback",
+      "list": 22.99,
+      "printCost": 5.25,
+      "royalty": 8.54,
+      "breakEvenAcosPct": 37.2,
+      "royaltyRate": 0.6
+    },
+    {
+      "id": "kindle",
+      "list": 11.99,
+      "printCost": 1.2,
+      "royalty": 7.19,
+      "breakEvenAcosPct": 60.0,
+      "royaltyRate": 0.7
+    }
+  ],
+  "errors": []
+}

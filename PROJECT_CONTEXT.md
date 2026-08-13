@@ -4,7 +4,7 @@
 > belgedir.** Hafızası olmayan bir ajan buradan başlar ve projenin nerede
 > olduğunu, neyin kilitli neyin açık olduğunu buradan öğrenir.
 >
-> Son güncelleme: **12 Ağustos 2026** · Faz: **0 · Bootstrap** · Kapı: `phase0`
+> Son güncelleme: **13 Ağustos 2026** · Faz: **1 · TAMAM** · Kapı: `phase1`
 
 ---
 
@@ -56,16 +56,25 @@ ayrılmış — akademik oyun tarihi (oynanamaz) ve jenerik aile oyunu listeleri
 
 | | |
 |---|---|
-| Faz | **0 · Bootstrap** — altyapı kuruldu, Faz 1 **başlamadı** |
-| Kapı (`.gate`) | `phase0` |
-| Aday oyun | 0 / ≥140 |
-| Kilitli oyun | 0 / 100 |
-| Yazılmış oyun | 0 / 100 |
-| Görsel | 0 / ~130 |
-| Depo | public · `main` · CI kurulu |
-| **Sonraki adım** | **KURUCU ONAYI** → sonra Faz 1 |
+| Faz | **1 · TAMAM** — envanter, tasnif ve oynanabilirlik mimarisi kuruldu |
+| Kapı (`.gate`) | `phase1` |
+| Aday oyun | **153** / ≥140 ✅ |
+| Bunların uygun olanı | **119** — kitabın seçileceği havuz |
+| Kültür | **89** / ≥45 ✅ |
+| Aile | **7** / 7 ✅ · her biri ≥16 aday taşıyor |
+| Kısıt taraması | **160/160** ✅ muafiyetsiz |
+| Sayfa modeli | **250** (hedef 256, −%2,3) ✅ |
+| Kilitli oyun | 0 / 100 — Faz 2 |
+| Yazılmış oyun | 0 / 100 — **Faz 1'de proza yazılmadı** |
+| Görsel | 0 / ~130 — Faz 5 |
+| Depo | public · `faz/1-envanter` · CI kurulu |
+| **Sonraki adım** | **KURUCU ONAYI (A1 · A2 · A3 · A7)** → sonra Faz 2 |
 
-⚠ **Faz 1 BAŞLAMADI ve kurucu onayı olmadan başlamaz.**
+Faz raporu: [`06_REPORTS/PHASE_1_REPORT.md`](06_REPORTS/PHASE_1_REPORT.md)
+
+⚠ **Faz 2 BAŞLAMADI ve kurucu onayı olmadan başlamaz.**
+A7 (oyun testçileri) **sert bir bloklayıcıdır**: ajan oynanabilirlik testi
+yapamaz ve sahte test kaydı üretilmez.
 
 ---
 
@@ -130,6 +139,10 @@ Tam yol haritası: [`THE_GREAT_BOOK_OF_WORLD_GAMES_IMPLEMENTATION_ROADMAP.md`](T
 | [`BRIEF.md`](BRIEF.md) | Ürün, kitle, konumlanma, ticari model | kurucu |
 | [`00_CONTEXT/PLAYABILITY_STANDARD.md`](00_CONTEXT/PLAYABILITY_STANDARD.md) | **Oynanabilirlik sözleşmesi** | kurucu onayıyla |
 | [`00_CONTEXT/SOURCING_STANDARD.md`](00_CONTEXT/SOURCING_STANDARD.md) | Neyin kaynak sayıldığı · kısıt taraması | kurucu onayıyla |
+| [`00_CONTEXT/EDITORIAL_ARCHITECTURE.md`](00_CONTEXT/EDITORIAL_ARCHITECTURE.md) | Kitabın yapısı · sayfa modeli · görsel sistem · **seçim modeli** | Faz 1'de yazıldı |
+| [`01_SOURCE/family_index.json`](01_SOURCE/family_index.json) | **Yedi aile · sınır kuralları · tasnif yordamı** | kurucu onayıyla |
+| `01_SOURCE/games/family-*.json` | Aday kayıtları — **elle yazılır** | her faz |
+| `01_SOURCE/game_index.json` | Birleştirilmiş envanter — **üretilir** | `build_index.py` |
 | [`00_CONTEXT/STYLE.md`](00_CONTEXT/STYLE.md) | Ses, ritim, kural dili, yasak kalıp | Faz 2'de kalibre |
 | [`00_CONTEXT/LESSONS_FROM_CODEX.md`](00_CONTEXT/LESSONS_FROM_CODEX.md) | Taşınan disiplin ve nedenleri | sabit |
 | [`DECISIONS.md`](DECISIONS.md) | Alınmış kararlar + **AÇIK KARARLAR** | her faz |
@@ -181,6 +194,14 @@ kapanmadan sonrakine geçilmez. CI kırmızıyken hiçbir şey ilerlemez.
 
 > **KURUCU ONAYI BEKLENİYOR.**
 >
-> Bootstrap tamamlandı. Faz 1 **başlatılmadı**.
-> İzin verildiğinde ilk iş: `faz/1-envanter` dalını açmak ve
-> yol haritasının Faz 1 bölümünü uygulamak.
+> Faz 1 tamamlandı ve **PASS**. Faz 2 **başlatılmadı**.
+>
+> Kapanması gereken dört karar:
+> 1. **A7 — oyun testçileri.** Sert bloklayıcı. Testçi yoksa Faz 2 durur;
+>    sahte test kaydı üretilmez.
+> 2. **A2 — aile taksonomisi** ve av-kuşatma yeniden dengeleme önerisi.
+> 3. **A3 — 100 oyunun listesi.** 96'lık öneri ve 23 yedek hazır.
+> 4. **A1 — manuscript politikası.** K9 mekanizmayı kurdu; onay gerekli.
+>
+> Onay geldiğinde ilk iş: `faz/2-pilot` dalını açmak ve 12 pilot oyunu
+> **en zorlardan** seçmek.

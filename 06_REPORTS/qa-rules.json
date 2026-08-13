@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "checks": 20,
+  "errors": [],
+  "warnings": [],
+  "facts": {
+    "verdict_complete": 116,
+    "verdict_partial": 35,
+    "verdict_incomplete": 9,
+    "reconstruction_plans": 8,
+    "production_ready": 119,
+    "playability_rules-complete": 109,
+    "playability_reconstructed": 10,
+    "playability_unresolved": 32,
+    "playability_not-production-ready": 0,
+    "playability_excluded": 9,
+    "rule_blocks": 6,
+    "locked": 0
+  }
+}

@@ -1,16 +1,21 @@
 {
   "status": "pass",
-  "gate": "phase0",
-  "checks": 19,
+  "gate": "phase1",
+  "checks": 26,
   "errors": [],
-  "warnings": [
-    "game_index.json yok — phase0'da beklenen (Faz 1 üretir)"
-  ],
+  "warnings": [],
   "facts": {
     "royalty_hardcover": 10.99,
     "printcost_hardcover": 10.0,
     "royalty_paperback": 8.44,
     "printcost_paperback": 5.35,
-    "games_total": 0
+    "schema_errors": 0,
+    "games_total": 160,
+    "cultures_total": 98,
+    "games_candidate": 147,
+    "games_researched": 6,
+    "games_locked": 0,
+    "games_written": 0,
+    "games_dropped": 7
   }
 }

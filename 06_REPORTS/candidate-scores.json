@@ -1,0 +1,747 @@
+{
+  "status": "pass",
+  "weights": {
+    "playability": 0.22,
+    "source": 0.18,
+    "cultural": 0.12,
+    "distinct": 0.12,
+    "access": 0.1,
+    "explain": 0.1,
+    "play": 0.1,
+    "visual": 0.06
+  },
+  "diversityBonus": 0.15,
+  "eligible": 119,
+  "proposed": 96,
+  "proposedCultures": [
+    "Abbasid Arab",
+    "Akan",
+    "Amazigh",
+    "Amhara",
+    "Ancient Egyptian",
+    "Ancient Greek",
+    "Ancient Indian",
+    "Andalusi Arab",
+    "Apache",
+    "Ashkenazi Jewish",
+    "Basque",
+    "Bavarian",
+    "Bengali",
+    "Burmese",
+    "Byzantine",
+    "Cantonese",
+    "Castilian",
+    "Dakarkari",
+    "Egyptian Arab",
+    "English",
+    "French",
+    "Ga",
+    "Ganda",
+    "German",
+    "Han Chinese",
+    "Hawaiian",
+    "Hindustani",
+    "Hopi",
+    "Icelandic",
+    "Italian",
+    "Japanese",
+    "Javanese",
+    "Kazakh",
+    "Kekchi Maya",
+    "Kiowa",
+    "Korean",
+    "Luhya",
+    "Malagasy",
+    "Malay",
+    "Medieval European",
+    "Mongolian",
+    "Māori",
+    "Nahua (Aztec)",
+    "Nama",
+    "Ndyuka Maroon",
+    "Nepali",
+    "Norse",
+    "Persian",
+    "Provençal",
+    "Punjabi",
+    "Roman",
+    "Russian",
+    "Río de la Plata",
+    "Sinhalese",
+    "Somali",
+    "Sotho",
+    "Sudanese Arab",
+    "Sumerian",
+    "Swahili",
+    "Sámi",
+    "Tagalog",
+    "Tamil",
+    "Tewa Pueblo",
+    "Thai",
+    "Turkish",
+    "Venda",
+    "Visayan",
+    "Wolof",
+    "Yoruba",
+    "Zulu",
+    "Zuni"
+  ],
+  "perFamily": {
+    "sowing": {
+      "target": 14,
+      "eligible": 14,
+      "selected": 14,
+      "cultures": 14
+    },
+    "hunt-siege": {
+      "target": 14,
+      "eligible": 10,
+      "selected": 10,
+      "cultures": 10
+    },
+    "race": {
+      "target": 15,
+      "eligible": 19,
+      "selected": 15,
+      "cultures": 15
+    },
+    "territory": {
+      "target": 14,
+      "eligible": 18,
+      "selected": 14,
+      "cultures": 13
+    },
+    "war-board": {
+      "target": 13,
+      "eligible": 20,
+      "selected": 13,
+      "cultures": 13
+    },
+    "chance": {
+      "target": 15,
+      "eligible": 19,
+      "selected": 15,
+      "cultures": 15
+    },
+    "boardless": {
+      "target": 15,
+      "eligible": 19,
+      "selected": 15,
+      "cultures": 11
+    }
+  },
+  "shortfall": 4,
+  "proposedRebalance": {
+    "hunt-siege": {
+      "current": 14,
+      "proposed": 10
+    },
+    "war-board": {
+      "current": 13,
+      "proposed": 17
+    }
+  },
+  "proposal": [
+    {
+      "gameId": "morra",
+      "family": "boardless",
+      "culture": "Italian",
+      "score": 4.84
+    },
+    {
+      "gameId": "hopscotch",
+      "family": "boardless",
+      "culture": "English",
+      "score": 4.66
+    },
+    {
+      "gameId": "jianzi",
+      "family": "boardless",
+      "culture": "Han Chinese",
+      "score": 4.5
+    },
+    {
+      "gameId": "marbles",
+      "family": "boardless",
+      "culture": "English",
+      "score": 4.48
+    },
+    {
+      "gameId": "conkers",
+      "family": "boardless",
+      "culture": "English",
+      "score": 4.4
+    },
+    {
+      "gameId": "gonggi",
+      "family": "boardless",
+      "culture": "Korean",
+      "score": 4.38
+    },
+    {
+      "gameId": "jan-ken",
+      "family": "boardless",
+      "culture": "Japanese",
+      "score": 4.32
+    },
+    {
+      "gameId": "cats-cradle",
+      "family": "boardless",
+      "culture": "English",
+      "score": 4.28
+    },
+    {
+      "gameId": "fivestones",
+      "family": "boardless",
+      "culture": "English",
+      "score": 4.2
+    },
+    {
+      "gameId": "myinda",
+      "family": "boardless",
+      "culture": "Ancient Greek",
+      "score": 4.08
+    },
+    {
+      "gameId": "ampe",
+      "family": "boardless",
+      "culture": "Akan",
+      "score": 4.06
+    },
+    {
+      "gameId": "mbube-mbube",
+      "family": "boardless",
+      "culture": "Zulu",
+      "score": 4.06
+    },
+    {
+      "gameId": "gilli-danda",
+      "family": "boardless",
+      "culture": "Punjabi",
+      "score": 4.02
+    },
+    {
+      "gameId": "pilolo",
+      "family": "boardless",
+      "culture": "Ga",
+      "score": 4.0
+    },
+    {
+      "gameId": "petanque",
+      "family": "boardless",
+      "culture": "Provençal",
+      "score": 3.96
+    },
+    {
+      "gameId": "shagai",
+      "family": "chance",
+      "culture": "Mongolian",
+      "score": 4.4
+    },
+    {
+      "gameId": "hanafuda-koi-koi",
+      "family": "chance",
+      "culture": "Japanese",
+      "score": 4.38
+    },
+    {
+      "gameId": "durak",
+      "family": "chance",
+      "culture": "Russian",
+      "score": 4.36
+    },
+    {
+      "gameId": "karnoffel",
+      "family": "chance",
+      "culture": "German",
+      "score": 4.36
+    },
+    {
+      "gameId": "dreidel",
+      "family": "chance",
+      "culture": "Ashkenazi Jewish",
+      "score": 4.34
+    },
+    {
+      "gameId": "astragaloi",
+      "family": "chance",
+      "culture": "Ancient Greek",
+      "score": 4.26
+    },
+    {
+      "gameId": "mus",
+      "family": "chance",
+      "culture": "Basque",
+      "score": 4.18
+    },
+    {
+      "gameId": "truco",
+      "family": "chance",
+      "culture": "Río de la Plata",
+      "score": 4.16
+    },
+    {
+      "gameId": "briscola",
+      "family": "chance",
+      "culture": "Italian",
+      "score": 4.12
+    },
+    {
+      "gameId": "tali",
+      "family": "chance",
+      "culture": "Roman",
+      "score": 4.0
+    },
+    {
+      "gameId": "tien-gow",
+      "family": "chance",
+      "culture": "Cantonese",
+      "score": 3.98
+    },
+    {
+      "gameId": "set-dilth",
+      "family": "chance",
+      "culture": "Apache",
+      "score": 3.94
+    },
+    {
+      "gameId": "mahjong",
+      "family": "chance",
+      "culture": "Han Chinese",
+      "score": 3.86
+    },
+    {
+      "gameId": "schafkopf",
+      "family": "chance",
+      "culture": "Bavarian",
+      "score": 3.82
+    },
+    {
+      "gameId": "passe-dix",
+      "family": "chance",
+      "culture": "French",
+      "score": 3.8
+    },
+    {
+      "gameId": "bagh-chal",
+      "family": "hunt-siege",
+      "culture": "Nepali",
+      "score": 4.7
+    },
+    {
+      "gameId": "fox-and-geese",
+      "family": "hunt-siege",
+      "culture": "English",
+      "score": 4.48
+    },
+    {
+      "gameId": "catch-the-hare",
+      "family": "hunt-siege",
+      "culture": "Castilian",
+      "score": 4.46
+    },
+    {
+      "gameId": "halatafl",
+      "family": "hunt-siege",
+      "culture": "Icelandic",
+      "score": 4.3
+    },
+    {
+      "gameId": "aadu-puli-attam",
+      "family": "hunt-siege",
+      "culture": "Tamil",
+      "score": 4.26
+    },
+    {
+      "gameId": "tablut",
+      "family": "hunt-siege",
+      "culture": "Sámi",
+      "score": 4.0
+    },
+    {
+      "gameId": "hnefatafl",
+      "family": "hunt-siege",
+      "culture": "Norse",
+      "score": 3.98
+    },
+    {
+      "gameId": "rimau-rimau",
+      "family": "hunt-siege",
+      "culture": "Malay",
+      "score": 3.98
+    },
+    {
+      "gameId": "demala-diviyan-keliya",
+      "family": "hunt-siege",
+      "culture": "Sinhalese",
+      "score": 3.88
+    },
+    {
+      "gameId": "len-choa",
+      "family": "hunt-siege",
+      "culture": "Thai",
+      "score": 3.44
+    },
+    {
+      "gameId": "yut-nori",
+      "family": "race",
+      "culture": "Korean",
+      "score": 5.0
+    },
+    {
+      "gameId": "royal-game-of-ur",
+      "family": "race",
+      "culture": "Sumerian",
+      "score": 4.9
+    },
+    {
+      "gameId": "pachisi",
+      "family": "race",
+      "culture": "Hindustani",
+      "score": 4.78
+    },
+    {
+      "gameId": "tabula",
+      "family": "race",
+      "culture": "Byzantine",
+      "score": 4.62
+    },
+    {
+      "gameId": "bul",
+      "family": "race",
+      "culture": "Kekchi Maya",
+      "score": 4.56
+    },
+    {
+      "gameId": "zohn-ahl",
+      "family": "race",
+      "culture": "Kiowa",
+      "score": 4.52
+    },
+    {
+      "gameId": "nard",
+      "family": "race",
+      "culture": "Persian",
+      "score": 4.5
+    },
+    {
+      "gameId": "li-b-el-merafib",
+      "family": "race",
+      "culture": "Sudanese Arab",
+      "score": 4.4
+    },
+    {
+      "gameId": "game-of-the-goose",
+      "family": "race",
+      "culture": "Italian",
+      "score": 4.34
+    },
+    {
+      "gameId": "totolospi",
+      "family": "race",
+      "culture": "Hopi",
+      "score": 4.34
+    },
+    {
+      "gameId": "ashta-kashte",
+      "family": "race",
+      "culture": "Bengali",
+      "score": 4.3
+    },
+    {
+      "gameId": "senet",
+      "family": "race",
+      "culture": "Ancient Egyptian",
+      "score": 4.26
+    },
+    {
+      "gameId": "tab",
+      "family": "race",
+      "culture": "Egyptian Arab",
+      "score": 4.18
+    },
+    {
+      "gameId": "patolli",
+      "family": "race",
+      "culture": "Nahua (Aztec)",
+      "score": 3.98
+    },
+    {
+      "gameId": "sugoroku",
+      "family": "race",
+      "culture": "Japanese",
+      "score": 3.88
+    },
+    {
+      "gameId": "oware",
+      "family": "sowing",
+      "culture": "Akan",
+      "score": 4.78
+    },
+    {
+      "gameId": "congklak",
+      "family": "sowing",
+      "culture": "Javanese",
+      "score": 4.48
+    },
+    {
+      "gameId": "sungka",
+      "family": "sowing",
+      "culture": "Visayan",
+      "score": 4.48
+    },
+    {
+      "gameId": "bao-la-kiswahili",
+      "family": "sowing",
+      "culture": "Swahili",
+      "score": 4.38
+    },
+    {
+      "gameId": "omweso",
+      "family": "sowing",
+      "culture": "Ganda",
+      "score": 4.3
+    },
+    {
+      "gameId": "bohnenspiel",
+      "family": "sowing",
+      "culture": "German",
+      "score": 4.26
+    },
+    {
+      "gameId": "toguz-kumalak",
+      "family": "sowing",
+      "culture": "Kazakh",
+      "score": 4.24
+    },
+    {
+      "gameId": "adji-boto",
+      "family": "sowing",
+      "culture": "Ndyuka Maroon",
+      "score": 4.22
+    },
+    {
+      "gameId": "gebeta",
+      "family": "sowing",
+      "culture": "Amhara",
+      "score": 4.08
+    },
+    {
+      "gameId": "hus",
+      "family": "sowing",
+      "culture": "Nama",
+      "score": 4.02
+    },
+    {
+      "gameId": "pallanguzhi",
+      "family": "sowing",
+      "culture": "Tamil",
+      "score": 3.88
+    },
+    {
+      "gameId": "ayoayo",
+      "family": "sowing",
+      "culture": "Yoruba",
+      "score": 3.86
+    },
+    {
+      "gameId": "olinda-keliya",
+      "family": "sowing",
+      "culture": "Sinhalese",
+      "score": 3.68
+    },
+    {
+      "gameId": "mefuvha",
+      "family": "sowing",
+      "culture": "Venda",
+      "score": 3.38
+    },
+    {
+      "gameId": "mu-torere",
+      "family": "territory",
+      "culture": "Māori",
+      "score": 4.9
+    },
+    {
+      "gameId": "go",
+      "family": "territory",
+      "culture": "Han Chinese",
+      "score": 4.8
+    },
+    {
+      "gameId": "nine-mens-morris",
+      "family": "territory",
+      "culture": "Medieval European",
+      "score": 4.78
+    },
+    {
+      "gameId": "pong-hau-ki",
+      "family": "territory",
+      "culture": "Cantonese",
+      "score": 4.44
+    },
+    {
+      "gameId": "tapatan",
+      "family": "territory",
+      "culture": "Tagalog",
+      "score": 4.32
+    },
+    {
+      "gameId": "picaria",
+      "family": "territory",
+      "culture": "Tewa Pueblo",
+      "score": 4.22
+    },
+    {
+      "gameId": "dara",
+      "family": "territory",
+      "culture": "Dakarkari",
+      "score": 4.1
+    },
+    {
+      "gameId": "morabaraba",
+      "family": "territory",
+      "culture": "Sotho",
+      "score": 4.1
+    },
+    {
+      "gameId": "shax",
+      "family": "territory",
+      "culture": "Somali",
+      "score": 4.1
+    },
+    {
+      "gameId": "gomoku",
+      "family": "territory",
+      "culture": "Japanese",
+      "score": 3.94
+    },
+    {
+      "gameId": "nerenchi",
+      "family": "territory",
+      "culture": "Sinhalese",
+      "score": 3.8
+    },
+    {
+      "gameId": "twelve-mens-morris",
+      "family": "territory",
+      "culture": "Medieval European",
+      "score": 3.78
+    },
+    {
+      "gameId": "shisima",
+      "family": "territory",
+      "culture": "Luhya",
+      "score": 3.74
+    },
+    {
+      "gameId": "terni-lapilli",
+      "family": "territory",
+      "culture": "Roman",
+      "score": 3.74
+    },
+    {
+      "gameId": "yote",
+      "family": "war-board",
+      "culture": "Wolof",
+      "score": 4.94
+    },
+    {
+      "gameId": "fanorona",
+      "family": "war-board",
+      "culture": "Malagasy",
+      "score": 4.9
+    },
+    {
+      "gameId": "awithlaknannai",
+      "family": "war-board",
+      "culture": "Zuni",
+      "score": 4.84
+    },
+    {
+      "gameId": "konane",
+      "family": "war-board",
+      "culture": "Hawaiian",
+      "score": 4.82
+    },
+    {
+      "gameId": "alquerque",
+      "family": "war-board",
+      "culture": "Andalusi Arab",
+      "score": 4.78
+    },
+    {
+      "gameId": "xiangqi",
+      "family": "war-board",
+      "culture": "Han Chinese",
+      "score": 4.7
+    },
+    {
+      "gameId": "shatranj",
+      "family": "war-board",
+      "culture": "Abbasid Arab",
+      "score": 4.68
+    },
+    {
+      "gameId": "seega",
+      "family": "war-board",
+      "culture": "Egyptian Arab",
+      "score": 4.6
+    },
+    {
+      "gameId": "shogi",
+      "family": "war-board",
+      "culture": "Japanese",
+      "score": 4.38
+    },
+    {
+      "gameId": "turkish-dama",
+      "family": "war-board",
+      "culture": "Turkish",
+      "score": 4.36
+    },
+    {
+      "gameId": "sittuyin",
+      "family": "war-board",
+      "culture": "Burmese",
+      "score": 4.32
+    },
+    {
+      "gameId": "chaturanga",
+      "family": "war-board",
+      "culture": "Ancient Indian",
+      "score": 4.26
+    },
+    {
+      "gameId": "zamma",
+      "family": "war-board",
+      "culture": "Amazigh",
+      "score": 4.18
+    }
+  ],
+  "reserve": [
+    "achi",
+    "chaupar",
+    "cho-han",
+    "crown-and-anchor",
+    "cuarenta",
+    "daldos",
+    "ephedrismos",
+    "hasami-shogi",
+    "janggi",
+    "jeu-de-dames",
+    "kho-kho",
+    "lagori",
+    "ludus-duodecim-scriptorum",
+    "ludus-latrunculorum",
+    "luk-tsut-kei",
+    "makruk",
+    "nine-holes",
+    "puluc",
+    "quoits",
+    "renju",
+    "surakarta",
+    "tarocchini",
+    "tuknanavuhpi"
+  ]
+}

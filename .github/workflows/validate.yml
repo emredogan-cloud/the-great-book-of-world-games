@@ -51,6 +51,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
+      # ÜRETİLEN ENVANTER EN BAŞTA: bayat bir indeksle koşan bütün kapılar
+      # yanlış veriyi denetler ve yeşil yanabilir.
+      - name: envanter parçalarla güncel mi
+        run: |
+          if [ -f 04_BUILD/build_index.py ]; then
+            python3 04_BUILD/build_index.py --check --verbose
+          else
+            echo "::notice::build_index.py henüz yok — Faz 1 teslimatı"
+          fi
       - name: şema, kimlik ve kapsam
         run: |
           python3 04_BUILD/validate_spec.py \
@@ -62,6 +71,13 @@ jobs:
             python3 04_BUILD/validate_research.py --verbose --json 06_REPORTS/research.json
           else
             echo "::notice::validate_research.py henüz yok — Faz 1 teslimatı"
+          fi
+      - name: tasnif bütünlüğü (Faz 1'de doğar)
+        run: |
+          if [ -f 04_BUILD/qa_taxonomy.py ]; then
+            python3 04_BUILD/qa_taxonomy.py --verbose --json 06_REPORTS/qa-taxonomy.json
+          else
+            echo "::notice::qa_taxonomy.py henüz yok — Faz 1 teslimatı"
           fi
       - uses: actions/upload-artifact@v4
         if: always()
@@ -142,13 +158,22 @@ jobs:
       # her satılan kopyada telifi düşürür.
       - name: sürüm, telif ve sayfa bütçesi
         run: |
-          for s in editions page_budget; do
+          for s in editions page_budget score_candidates; do
             if [ -f "04_BUILD/$s.py" ]; then
               python3 "04_BUILD/$s.py" --verbose --json "06_REPORTS/${s//_/-}.json" || exit 1
             else
               echo "::notice::$s.py henüz yok — Faz 1/2 teslimatı"
             fi
           done
+      # Üretilen belge bayatsa, okuyan ajan yanlış karar verir.
+      # Disiplin unutulur, mekanizma unutmaz.
+      - name: üretilen belgeler güncel mi
+        run: |
+          if [ -f 04_BUILD/update_docs.py ]; then
+            python3 04_BUILD/update_docs.py --check --verbose
+          else
+            echo "::notice::update_docs.py henüz yok — Faz 1 teslimatı"
+          fi
 
   summary:
     name: özet

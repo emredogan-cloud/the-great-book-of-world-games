@@ -5,6 +5,76 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.1.0] — 2026-08-13 · Faz 1 · Envanter, tasnif ve oynanabilirlik mimarisi
+
+Kitabın **veri omurgası** kuruldu. **Hiçbir proza yazılmadı.**
+
+### Eklendi
+
+- **`01_SOURCE/games/family-*.json`** — yedi aile parçası, **160 oyun
+  kaydı**. Elle yazılır; indeks bunlardan üretilir
+- **`01_SOURCE/game_index.json`** — birleştirilmiş envanter · **ÜRETİLİR**
+- **`01_SOURCE/family_index.json`** — yedi mekanik aile; her biri tanım,
+  giriş kuralı, dışlama kuralı ve **sınır kuralı** taşır. Ayrıca
+  **deterministik tasnif yordamı**: sabit sıralı yedi soru
+- **`00_CONTEXT/EDITORIAL_ARCHITECTURE.md`** — kitabın yapısı, iki sayfalık
+  madde mimarisi, sayfa modeli, yedi görsel tipi, arka madde ve üç indeks,
+  **sekiz ölçütlü aday seçim modeli**
+- **`04_BUILD/build_index.py`** — parça → indeks; `--check` ile üretilen
+  artefakt tutarlılığı
+- **`04_BUILD/qa_taxonomy.py`** — aile tanımı, sınır, kısıt taraması, denge
+- **`04_BUILD/qa_rules.py`** — kural bütünlüğü, netlik, durum tutarlılığı
+- **`04_BUILD/validate_research.py`** — künye, yasaklı kaynak, bağımsızlık,
+  araştırma → yazım kilidi
+- **`04_BUILD/score_candidates.py`** — seçim modeli + **yeniden dengeleme
+  önerisi**
+- **`04_BUILD/page_budget.py`** · **`editions.py`** — sayfa ve telif modeli
+- **`04_BUILD/update_docs.py`** — `BOOK_STATS.md` ve `ROADMAP_PROGRESS.md`
+  artık **üretilir**; `--check` bayatlığı CI'da kırmızı yakar
+- **JSON Schema doğrulayıcı** — `validate_spec.py` içinde, stdlib ile
+  (karar K7). Desteklenmeyen şema anahtarı da ayrıca taranır
+- **`05_TESTS/selftest.py` § ⑤** — Faz 1'in sekiz kapısının her biri
+  kusurlu kurguyla sınanır. Toplam **83 denetim**
+- **`06_REPORTS/PHASE_1_REPORT.md`** — faz raporu
+
+### Değişti
+
+- **`01_SOURCE/game.schema.json`** — aday seviyesi araştırma alanları:
+  `taxonomyRationale` · `ruleCompleteness` · `clarity` · `playabilityStatus`
+  · `reconstructionPlan` · `sourceVerification` · `sources[].lineage` ·
+  `scores` · `visualNeeds` · güvenlik ve uyarlama alanları
+- **`project_config.json`** — `production.pageModel` bloğu; Kindle telif
+  oranı ve dosya boyutu hipotezi
+- **`04_BUILD/qa_all.sh`** — envanter tazeliği **en başta** koşar
+- **`.gate`** → `phase1`
+
+### Ölçülen
+
+153 aday · **119 uygun** · 89 kültür · 34 bölge · 7 aile ·
+kısıt taraması **160/160** · 300 kaynak künyesi · sayfa modeli **250**
+(hedef 256, −%2,3) · selftest **83 denetim yeşil**
+
+### Bulgular
+
+- **Kapsam bulgusu:** av ve kuşatma ailesinde yalnızca **10 uygun aday**
+  var (hedef 14). Yeniden dengeleme **önerildi**, karar kurucuya bırakıldı
+- **Şema iki kez kırıldı:** `gameId` kalıbı iki harfli "go"yu reddediyordu;
+  `reconstructed` etiketi beyansız kurguya izin veriyordu
+- **Pilot sekiz aşırı uzun kural adımı buldu** ve şablonu düzeltti
+- **Otuz iki oyunun kuralı eksik ve TAMAMLANMADI** — dokuzunda kural hiç yok
+
+### Kararlar
+
+K9 (veri/proza sınırı mekaniktir) · K10 (beyansız yeniden kurgulama yok) ·
+K11 (kaynak doğrulaması iki seviyeli)
+
+### Durum
+
+`.gate` = `phase1` · **Faz 1 PASS** · Faz 2 için A1 · A2 · A3 · **A7**
+kapanmalı
+
+---
+
 ## [0.0.1] — 2026-08-12 · Bootstrap
 
 Proje altyapısı kuruldu. **Hiçbir kitap içeriği üretilmedi.**
