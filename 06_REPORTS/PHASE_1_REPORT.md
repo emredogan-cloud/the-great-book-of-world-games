@@ -434,12 +434,21 @@ Kanıtlanan ısırıklar arasında:
 Ayrıca **negatif test**: envanter değiştiğinde üretilen belgenin bayat
 sayıldığı ayrıca kanıtlanır — yoksa `--check` hiçbir şeyi korumuyor olurdu.
 
-### 8.3 CI
+### 8.3 CI — YEŞİL
 
 `.github/workflows/validate.yml` altı iş koşar: `gate` · `data` ·
 `structure` · `gates-selftest` · `text` · `production-model`.
 `text` işi bu fazda **boş koşar** (manuscript depoda yok) ve körlüğü
 `gates-selftest` kapatır.
+
+**Faz 1'de kapatılan bir CI körlüğü.** Sekiz yeni kapıdan dördü
+`qa_all.sh` içinde koşuyordu ama CI'da **koşmuyordu** — yani yerelde
+ısıran bir kapı uzaktan sessiz kalıyordu. Bu, Codex dersi D5'in
+(*"bir kapının varlığı, koştuğu anlamına gelmez"*) aynısıdır ve
+`validate.yml` dört adımla genişletildi: `build_index --check` ·
+`qa_taxonomy` · `score_candidates` · `update_docs --check`.
+
+Sonuç: **7/7 iş yeşil.**
 
 ---
 
@@ -537,7 +546,7 @@ Bu, A1'i **karara değil mekanizmaya** bağlar. Kurucu onayı hâlâ gereklidir.
 - [x] Sayfa modeli üretildi → `06_REPORTS/page-budget.json`
 - [x] `selftest.py` yeşil — **83 denetim**, her kapı en az bir kusurlu kurguda ısırıyor
 - [x] `06_REPORTS/PHASE_1_REPORT.md` yazıldı
-- [ ] CI **YEŞİL** — push sonrası doğrulanacak
+- [x] CI **YEŞİL** — 7/7 iş
 - [x] `.gate` → `phase1`
 
 ### PASS ölçütleri
