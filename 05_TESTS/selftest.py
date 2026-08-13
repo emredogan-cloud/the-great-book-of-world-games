@@ -865,6 +865,111 @@ def part6_phase2_gates(rep, tmp: str) -> None:
                   "aynı yazarın iki eseri BİR kaynak sayılır")
 
 
+def part7_phase3_gates(rep, tmp: str) -> None:
+    """⑦ FAZ 3 KAPILARI GERÇEKTEN ISIRIYOR MU.
+
+    Faz 3 üç yeni koruma getirdi ve üçü de gerçek veriyle YEŞİL koşuyor —
+    yani ısırdıkları yalnızca burada kanıtlanabilir:
+
+      · 150 mm diyagram bütçesi (K19) — RENDER ölçümünden
+      · graph tahtalarda düğüm sınırı (dil v1.3)
+      · uydurulmuş locator — 'verified' kaydı olmayan sayfa numarası
+    """
+    print("\n⑦ Faz 3 kapıları gerçekten ısırıyor")
+    root = ROOT
+    sys.path.insert(0, os.path.join(root, "04_BUILD"))
+
+    # ── 150 MM BÜTÇESİ ─────────────────────────────────────────────────────
+    print("  ▸ diyagram bütçesi (150 mm)")
+    rpath = os.path.join(root, "06_REPORTS", "diagram-render.json")
+    if os.path.exists(rpath):
+        with open(rpath, encoding="utf-8") as fh:
+            orig = fh.read()
+        try:
+            for label, mut in [
+                ("bütçeyi 1 mm aşan diyagram YAKALANIR",
+                 lambda d: d["diagrams"][0].__setitem__("heightMm", 151.0)),
+                ("RENDER EDİLMEMİŞ diyagram YAKALANIR",
+                 lambda d: d.__setitem__("diagrams", d["diagrams"][1:])),
+            ]:
+                d = json.loads(orig)
+                mut(d)
+                write_json(rpath, d)
+                code, out = run_gate("qa_diagram.py", root)
+                rep.check(code != 0, label, out)
+        finally:
+            with open(rpath, "w", encoding="utf-8") as fh:
+                fh.write(orig)
+        code, out = run_gate("qa_diagram.py", root)
+        rep.check(code == 0, "TEMİZ render ölçümü geçer", out)
+
+    # ── GRAPH TAHTA SINIRI ─────────────────────────────────────────────────
+    print("  ▸ graph tahta sınırı")
+    dpath = os.path.join(root, "07_ASSETS", "diagrams", "phase3_diagrams.json")
+    if os.path.exists(dpath):
+        with open(dpath, encoding="utf-8") as fh:
+            orig = fh.read()
+        try:
+            for label, mut in [
+                ("TANIMSIZ düğümde duran taş YAKALANIR",
+                 lambda d: d["diagrams"][0]["pieces"][0].__setitem__("at", "zz")),
+                ("KOPUK kenar YAKALANIR",
+                 lambda d: d["diagrams"][0]["edges"].append(["a", "yok"])),
+            ]:
+                d = json.loads(orig)
+                mut(d)
+                write_json(dpath, d)
+                code, out = run_gate("qa_diagram.py", root)
+                rep.check(code != 0, label, out)
+        finally:
+            with open(dpath, "w", encoding="utf-8") as fh:
+                fh.write(orig)
+
+    # ── UYDURULMUŞ LOCATOR ─────────────────────────────────────────────────
+    # Bu, Faz 3'ün en önemli dürüstlük kapısıdır: erişilemeyen bir kaynağa
+    # sayfa numarası yazmak, doğrulanmamışı doğrulanmış göstermektir.
+    print("  ▸ uydurulmuş locator")
+    import validate_research as vr  # noqa: E402
+    svp = os.path.join(root, "01_SOURCE", "source_verification.json")
+    recs = json.load(open(svp, encoding="utf-8"))["records"]
+    verified = {(r["gameId"], vr.author_key(r["sourceRef"]))
+                for r in recs if r["status"] == "verified"}
+    blocked = {(r["gameId"], vr.author_key(r["sourceRef"]))
+               for r in recs if r["status"] == "blocked"}
+    rep.check(("bao-la-kiswahili", "de voogt") in blocked
+              or any(g == "bao-la-kiswahili" for g, _ in blocked),
+              "erişilemeyen kaynak 'blocked' olarak kayıtlı")
+    games = {g["gameId"]: g for g in
+             json.load(open(os.path.join(root, "01_SOURCE", "game_index.json"),
+                            encoding="utf-8"))["games"]}
+    orphan = [(gid, vr.author_key(s.get("ref", "")))
+              for gid, g in games.items() for s in (g.get("sources") or [])
+              if (s.get("locator") or "").strip()
+              and (gid, vr.author_key(s.get("ref", ""))) not in verified]
+    rep.check(not orphan,
+              "envanterdeki her locator bir 'verified' kayda dayanıyor "
+              "(%d locator tarandı)" % sum(1 for g in games.values()
+                                           for s in (g.get("sources") or [])
+                                           if (s.get("locator") or "").strip()))
+
+    # ── ÜRETİM KUYRUĞU DÜRÜSTLÜĞÜ ──────────────────────────────────────────
+    print("  ▸ üretim kuyruğu")
+    qp = os.path.join(root, "01_SOURCE", "production_queue.json")
+    if os.path.exists(qp):
+        q = json.load(open(qp, encoding="utf-8"))
+        drafted_unverified = [g["gameId"] for g in q["games"]
+                              if g["manuscriptStatus"] == "draft"
+                              and g["verifiedSources"] == 0]
+        rep.check(not drafted_unverified,
+                  "hiçbir DRAFT oyun sıfır doğrulanmış kaynakla yazılmamış — %s"
+                  % (drafted_unverified or "temiz"))
+        locked_any = [g["gameId"] for g in q["games"]
+                      if g["manuscriptStatus"] == "locked"]
+        rep.check(not locked_any,
+                  "hiçbir oyun LOCKED değil (dış test yok) — %s"
+                  % (locked_any or "temiz"))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -883,6 +988,7 @@ def main() -> int:
         part4_no_dead_exemptions(rep)
         part5_phase1_gates(rep, tmp)
         part6_phase2_gates(rep, tmp)
+        part7_phase3_gates(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:

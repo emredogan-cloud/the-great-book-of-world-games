@@ -1160,7 +1160,7 @@
         {
           "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
           "type": "ethnography",
-          "locator": "s. 93 (Abrus precatorius) ve ss. 225–226 (tahta, ad, bağlam)"
+          "locator": "'The Indoor Games', ss. 588–595 (kural); ayrıca s. 93 ve ss. 225–226 (tohum ve tahta)"
         },
         {
           "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
@@ -2493,7 +2493,8 @@
       "sources": [
         {
           "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'The Indoor Games', ss. 581–582"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -5466,7 +5467,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "ss. 124–125, şekil 131–132"
         },
         {
           "ref": "Mooney, James, Calendar History of the Kiowa Indians, 17th Annual Report of the Bureau of American Ethnology (Washington, 1898)",
@@ -6156,7 +6158,8 @@
       "sources": [
         {
           "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'The Indoor Games', ss. 577–580"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -6410,7 +6413,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "s. 797, şekil 1099–1100 (Dozier'in Santa Clara tarifi aynı sayfada)"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -6493,7 +6497,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "§ LXXVI 'Ou-moul-ko-no — Well Kono', ss. 100–101"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -7312,7 +7317,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "s. 801, şekil 1111–1112 (Brooklyn Institute Museum env. no. 5049)"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -11840,7 +11846,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "§ LX 'Kong-keui — Jackstones', ss. 58–59"
         },
         {
           "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",

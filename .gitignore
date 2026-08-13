@@ -95,3 +95,4 @@ __pycache__/
 # amaçlıdırlar; nihai gravür levhalar Faz 5'te üretilecektir.
 !07_ASSETS/diagrams/diagram_language.json
 !07_ASSETS/diagrams/pilot_diagrams.json
+!07_ASSETS/diagrams/phase3_diagrams.json

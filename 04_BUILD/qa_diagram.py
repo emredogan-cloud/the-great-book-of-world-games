@@ -217,7 +217,9 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
         if gid not in games:
             orphan_game.append("%s → %s" % (did, gid))
 
-        pat = re.compile(patterns[classes[cls]["coordRule"]])
+        graph = bool(d.get("nodes"))
+        pat = re.compile(patterns["graph"] if graph
+                         else patterns[classes[cls]["coordRule"]])
         size = d.get("size", {})
         used: set[str] = set()
 
@@ -225,6 +227,11 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
             at, gl = p.get("at", ""), p.get("glyph")
             if not pat.match(at):
                 bad_coord.append("%s → '%s' (%s kuralı)" % (did, at, cls))
+            elif graph:
+                # Graph tahtada SINIR, tanımlı düğüm kümesidir. Bir taş
+                # tanımsız bir düğümde duramaz — tahtanın dışındadır.
+                if at not in d["nodes"]:
+                    out_of_bounds.append("%s → '%s' tanımlı düğüm değil" % (did, at))
             elif not in_bounds(at, cls, size):
                 out_of_bounds.append("%s → '%s' tahta dışında" % (did, at))
             if gl not in glyphs:
@@ -241,7 +248,10 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
                 c = a.get(key, "")
                 if c and not pat.match(c):
                     bad_coord.append("%s → ok %s '%s'" % (did, key, c))
-                elif c and not in_bounds(c, cls, size):
+                elif c and graph and c not in d["nodes"]:
+                    out_of_bounds.append("%s → ok %s '%s' tanımlı düğüm değil"
+                                         % (did, key, c))
+                elif c and not graph and not in_bounds(c, cls, size):
                     out_of_bounds.append("%s → ok %s '%s' tahta dışında" % (did, key, c))
 
         for m in d.get("markers", []):
@@ -288,6 +298,17 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
             if lvl not in grey_ok:
                 bad_grey.append("%s → %%%s" % (did, lvl))
 
+    dangling = []
+    for d in diagrams:
+        if not d.get("nodes"):
+            continue
+        for a, b in d.get("edges", []):
+            for k in (a, b):
+                if k not in d["nodes"]:
+                    dangling.append("%s → kenar ucu '%s' tanımsız"
+                                    % (d.get("diagramId"), k))
+    rep.check(not dangling,
+              "graph tahtalarda kopuk kenar yok" + brief(dangling))
     rep.check(not bad_class, "her diyagram tanımlı bir tahta sınıfı taşıyor" + brief(bad_class))
     rep.check(not bad_type, "diyagram tipleri geçerli" + brief(bad_type))
     rep.check(not orphan_game, "her diyagram envanterdeki bir oyuna bağlı" + brief(orphan_game))

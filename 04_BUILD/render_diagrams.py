@@ -117,7 +117,43 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
     pad = 6.0
     legend_h = 4.5 * max(1, len(d.get("legend", [])))
 
-    if cls in ("cell", "point"):
+    if cls == "point" and d.get("nodes"):
+        # DÜZENSİZ NOKTA TAHTASI (v1.3). Izgara yok: düğümler ve kenarlar
+        # açıkça verilir. Yaklaşık bir ızgarayla idare etmek YASAKTIR —
+        # yanlış çizilmiş bir tahta oyunu oynanamaz yapar.
+        nodes = d["nodes"]
+        span = size.get("spanMm", 60.0)
+        aspect = size.get("aspect", 1.0)
+        w = pad * 2 + span
+        h = pad * 2 + span * aspect + legend_h
+        c = Canvas(w, h, sw)
+        x0, y0 = pad * MM, pad * MM
+        def nxy(k):
+            x, y = nodes[k]
+            return x0 + x * span * MM, y0 + y * span * aspect * MM
+        for a, b in d.get("edges", []):
+            ax, ay = nxy(a); bx, by = nxy(b)
+            c.line(ax, ay, bx, by)
+        r = min(span * MM * 0.045, 2.6 * MM)
+        placed = {p["at"]: p for p in d.get("pieces", [])}
+        for k in nodes:
+            if k in placed:
+                g = lang["glyphs"][placed[k]["glyph"]]
+                c.circle(*nxy(k), r, g["fill"],
+                         ring=placed[k]["glyph"] in ("king", "lightSpecial",
+                                                     "darkSpecial"))
+                if placed[k].get("captured"):
+                    c.cross(*nxy(k), r * 0.8)
+            else:
+                c.circle(*nxy(k), r * 0.42, 0)
+        for a in d.get("arrows", []):
+            if a.get("from") in nodes and a.get("to") in nodes:
+                spec = lang["arrows"][a["kind"]]
+                fx, fy = nxy(a["from"]); tx, ty = nxy(a["to"])
+                c.arrow(fx, fy, tx, ty, spec["widthPt"] * 96 / 72,
+                        "3,2" if spec["style"] == "dotted" else None)
+
+    elif cls in ("cell", "point"):
         cols, rows = size.get("cols", 1), size.get("rows", 1)
         n = cols if cls == "point" else cols
         w = pad * 2 + (cols - (0 if cls == "cell" else 1)) * step_mm
