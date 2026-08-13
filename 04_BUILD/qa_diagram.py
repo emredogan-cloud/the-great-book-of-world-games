@@ -127,6 +127,63 @@ def check_lexicon(lang: dict, rep: Report) -> None:
               "sözlük rengi yasaklıyor (karar K3)")
 
 
+def check_rendered_budget(cfg: dict, diagrams: list, root: str,
+                          rep: Report) -> None:
+    """⑨ 150 MM DİYAGRAM BÜTÇESİ — RENDER EDİLMİŞ ÖLÇÜMDEN (karar K19).
+
+    ⚠ BU KAPI TANIMLAYICIYA BAKMAZ, ÇIKTIYA BAKAR.
+
+    Gerekçe: bir tanımlayıcı "9×9 tahta" der ve bu bir boyut vermez.
+    Boyutu adım aralığı, efsane satır sayısı, panel dizilimi ve altyazı
+    belirler — yani ancak çizildikten sonra bilinir. "Daha küçük görünüyor"
+    bir kanıt değildir ve bu kapı onu kabul etmez.
+
+    Render edilmemiş bir diyagram DENETLENMEMİŞTİR ve denetlenmemiş bir
+    diyagram geçemez: aksi hâlde bütçe, çizilmeyen her diyagram için
+    sessizce boş koşardı.
+    """
+    limit = cfg["diagram"]["maxDiagramMmPerGame"]
+    print("\n── ⑨ diyagram bütçesi (%d mm · RENDER ÖLÇÜMÜ) ──" % limit)
+    path = os.path.join(root, "06_REPORTS", "diagram-render.json")
+    if not os.path.exists(path):
+        rep.check(not diagrams,
+                  "render ölçümü yok — diyagram varsa DENETLENEMEZ "
+                  "(önce: 04_BUILD/render_diagrams.py)")
+        return
+    measured = {d["diagramId"]: d for d in load(path).get("diagrams", [])}
+
+    unrendered = [d["diagramId"] for d in diagrams
+                  if d["diagramId"] not in measured]
+    rep.check(not unrendered,
+              "her diyagram render edilmiş ve ÖLÇÜLMÜŞ" + brief(unrendered))
+
+    over, wide = [], []
+    for d in diagrams:
+        m = measured.get(d["diagramId"])
+        if not m:
+            continue
+        if m["heightMm"] > limit:
+            over.append("%s → %.1f mm (%+.1f)"
+                        % (d["diagramId"], m["heightMm"], m["heightMm"] - limit))
+        if m["renderedWidthMm"] > lang_width(cfg, root):
+            wide.append("%s → %.1f mm" % (d["diagramId"], m["renderedWidthMm"]))
+    rep.check(not over,
+              "hiçbir diyagram %d mm bütçesini aşmıyor" % limit + brief(over))
+    rep.check(not wide, "hiçbir diyagram genişlik sınırını aşmıyor" + brief(wide))
+
+    if measured:
+        hs = [m["heightMm"] for m in measured.values()]
+        rep.facts["diagramMm"] = {"min": min(hs), "max": max(hs),
+                                  "mean": round(sum(hs) / len(hs), 1),
+                                  "limit": limit}
+        print("  · ölçülen yükseklik: %.1f – %.1f mm (ortalama %.1f · sınır %d)"
+              % (min(hs), max(hs), sum(hs) / len(hs), limit))
+
+
+def lang_width(cfg: dict, root: str) -> float:
+    return load(os.path.join(root, cfg["diagram"]["specData"]))["print"]["maxWidthFullMm"]
+
+
 def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None:
     print("\n── ②–⑧ diyagram tanımlayıcıları (%d) ──" % len(diagrams))
     if not diagrams:
@@ -297,6 +354,7 @@ def main() -> int:
         diagrams.extend(d.get("diagrams", []) if isinstance(d, dict) else d)
 
     check_diagrams(lang, diagrams, games, rep)
+    check_rendered_budget(cfg, diagrams, root, rep)
 
     print("\n" + "=" * 74)
     if rep.warnings:

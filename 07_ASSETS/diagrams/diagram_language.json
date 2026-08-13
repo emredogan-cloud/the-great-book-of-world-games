@@ -9,7 +9,7 @@
     "yükseltmesidir çünkü 60. oyunda notasyon değiştirmek önceki 59",
     "diyagramı geçersiz kılar."
   ],
-  "version": "1.1",
+  "version": "1.2",
   "frozenAtPhase": "phase2",
   "frozenOn": "2026-08-13",
   "boardClasses": {
@@ -197,6 +197,20 @@
       "baskı sınırını aşıyordu. Kusur bir tanımlayıcıda değil DİLDEDİR.",
       "Düzeltme: `bodily/hands` panelleri DİKEY dizilir. Genişlik 71 mm'ye",
       "iner ve sınırın altına girer. Notasyon değişmedi, DİZİLİM değişti."
+    ],
+    "legendCountedOncePerDiagram": true,
+    "$legendComment": [
+      "v1.1 → v1.2: DİKEY panellerde efsane BİR KEZ basılır.",
+      "v1.1'de her panel kendi efsanesini taşıyordu; üç panelli ip figürü aynı",
+      "efsaneyi üç kez basıyor, 27 mm israf ediyor ve okura aynı şeyi üç kez",
+      "okutuyordu. D7 efsaneyi DİYAGRAMIN içinde ister, her PANELİN içinde değil.",
+      "",
+      "Ayrıca `bodily/hands` gövdesi 46 mm'den 30 mm'ye indirildi: ip figürü",
+      "±10 mm'lik bir alanda yaşıyor ve gövdenin yarısı boş kenar payıydı.",
+      "Çizgi kalınlığı (0,75 pt) ve glif boyu (7 pt) DEĞİŞMEDİ — yani bu bir",
+      "sadeleştirmedir, okunmaz hâle gelene kadar küçültme DEĞİLDİR.",
+      "",
+      "ÖLÇÜLEN SONUÇ: Cat's Cradle 182,5 mm → 111,5 mm."
     ]
   },
   "diagramTypes": [
@@ -228,14 +242,14 @@
     ],
     "maxDiagramColumnHeightMm": 150,
     "$diagramBudgetComment": [
-      "DİYAGRAM BÜTÇESİ — Faz 2 gerçek dizgi ölçümünden TÜRETİLMİŞTİR.",
-      "Ölçüm: metin oyun başına 1,37 sayfa (242 mm sütun yüksekliğinde ~332 mm)",
-      "ve oyundan oyuna fark yalnızca 0,01 sayfa. Yani metin SABİTTİR.",
-      "Değişken diyagramdır: 0,24 ile 0,78 sayfa arasında gidiyor.",
-      "Bir madde iki sayfalık çift sayfaya sığacaksa toplam 484 mm'yi aşamaz;",
-      "metin 332 mm aldığında diyagrama kalan 152 mm'dir. 150 mm bütçesi bu",
-      "ölçümün doğrudan sonucudur — bir tasarım tercihi değil, bir ARTIKTIR.",
-      "Bütçeyi aşan madde DÖRT sayfa alır ve sayfa bütçesinden düşülür."
+      "DİYAGRAM BÜTÇESİ 150 MM — kurucu Karar A ile BAĞLAYICI (karar K19).",
+      "Türetimi: çift sayfanın 484 mm metin alanından metin 332 mm alır,",
+      "diyagrama 152 mm kalır. 150 mm o artığın kendisidir, bir tercih değil.",
+      "",
+      "⚠ ÖLÇÜM RENDER EDİLMİŞ ÇIKTIDANDIR (qa_diagram.py § ⑨).",
+      "Tanımlayıcı metadata boyut vermez: boyutu adım aralığı, efsane satır",
+      "sayısı, panel dizilimi ve altyazı belirler. Render edilmemiş bir",
+      "diyagram DENETLENMEMİŞTİR ve geçemez."
     ]
   },
   "reconstructionRule": {

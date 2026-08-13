@@ -377,3 +377,91 @@ kaynağı "doğrulandı" saymak, kitabın tek denetlenebilir iddiasını yıkar.
 `validate_research.py` `locked` bir oyun için ≥2 `verified` kayıt şart
 koşar; `blocked` sayılmaz. Sonuç: **erişilemeyen kaynağa dayanan bir oyun
 kilitlenemez.**
+
+---
+
+### K18 · FAZ 3 KOŞULLU ÜRETİM ŞERİDİ — kapı AÇILMADAN üretim
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 3 · **Karar:** kurucu
+
+Faz 2'nin resmî kapısı **kapanmadı** ve kapanmamış olarak kalıyor. Kurucu
+buna rağmen **üretim işinin başlamasını** açıkça yetkilendirdi.
+
+İki şey birbirinden ayrılır ve ayrı kalır:
+
+| | Durum |
+|---|---|
+| **Faz 3 üretim işi** | **YETKİLİ** |
+| **Resmî faz kapısı** (`.gate`) | **AÇILMADI — `phase1`** |
+| `locked` durumu | **UYDURULAMAZ** |
+
+**`.gate` yalnızca gerçek kanıt yükseltir.** Sistemi tamamlanmış
+göstermek için kapı yükseltilmez. Bu, projenin en pahalı yalanı olurdu:
+kapı seviyesi, kitabın ne kadar hazır olduğunu okuyan tek makine
+okunur sayıdır.
+
+Bu şeridin amacı tek cümledir: **kaynak erişimi ve insan testi ayrı
+ayrı çözülürken, çözülebilir oyunlarda üretim durmasın.**
+
+Yetki şunları KAPSAMAZ: test uydurmak · kaynak uydurmak · doğrulanmamış
+oyunu kilitlemek · erişilemeyen kaynağı doğrulanmış saymak · CI'ı
+atlamak · araştırma standardını gevşetmek.
+
+---
+
+### K19 · DİYAGRAM BÜTÇESİ 150 MM — BAĞLAYICI ve ÖLÇÜLEREK denetlenir
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 3 · **Karar:** kurucu (Karar A)
+
+Faz 2 ölçümünün türettiği 150 mm bütçesi **onaylandı ve bağlayıcıdır**.
+
+Önceki 180 mm genişlik sınırı bir **genişlik** sınırıydı; 150 mm bir
+**yükseklik/alan bütçesidir** ve ondan daha serttir. Geri alınmaz.
+
+**Ölçüm kaynağı metadata DEĞİL, RENDER EDİLMİŞ ÇIKTIDIR.**
+
+Gerekçe: bir tanımlayıcı "9×9 tahta" der ve bu bir boyut vermez. Boyutu
+belirleyen şey adım aralığı, efsane satır sayısı, panel dizilimi ve
+altyazıdır — yani ancak çizildikten sonra bilinir. "Daha küçük
+görünüyor" bir kanıt değildir.
+
+Bütçeyi aşan bir madde için beş yol vardır ve **küçültüp okunmaz hâle
+getirmek bunlardan biri değildir**: diyagramı yeniden tasarla ·
+sadeleştir · kompakt panellere böl · sayfa mimarisi içinde yerleşimi
+değiştir · oyunu dürüstçe temsil edilemiyorsa ertele.
+
+---
+
+### K20 · ERİŞİLEBİLİR KAYNAK ÖNCE — ve erişilebilir ≠ güvenilir
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 3 · **Karar:** kurucu (Karar C)
+
+Telifli kaynaklara erişim kurucunun üzerinde çalıştığı ayrı bir iştir.
+Proje beklemez: **erişilebilir ve doğrulanabilir oyunlarla devam eder.**
+
+Engellenen oyunlar `01_SOURCE/source_access_pending.json` kuyruğunda
+durur ve erişim geldiğinde normal hatta geri girer.
+
+**Faz 3'ün kendi bulgusu buna bir şart ekledi:**
+
+> **Erişilebilir olmak, güvenilir olmak demek değildir.**
+
+Kamusal alan derlemeleri (Falkener 1892 gibi) Murray'den ÖNCEDİR ve
+yeniden kurgulamaları bugün geçersizdir. Faz 3 sayfa doğrulaması bunu
+iki yerde somut olarak gördü: Falkener'ın Pachisi bölümü Akbar'ın
+"canlı taşlar" anlatısını ikincil bir dergiden aktarır ve yazarın kendisi
+*"I applied at the India Office, but could get no information"* der —
+yani Faz 1'in bu anlatı için koyduğu uyarı doğrulanmıştır.
+
+Bu yüzden Faz 3 kaynakları **türüne göre** sıralar:
+
+| Öncelik | Tip | Örnek |
+|---|---|---|
+| 1 | **birinci elden saha kaydı / müze envanteri** | Culin 1895 · Culin 1907 · Parker 1909 |
+| 2 | birinci elden gözlemci günlüğü | Linnaeus 1811 · Montgomery 1887 |
+| 3 | dönemin derlemesi — yalnızca DESTEK olarak | Falkener 1892 |
+
+**Bir Viktorya derlemesi tek başına bir kural metnini taşıyamaz.**
+Özellikle `reconstructed` oyunlarda kullanılamaz: eski bir yeniden
+kurgulama, yeni bir yeniden kurgulama kadar kesin görünür ve okur ikisini
+ayırt edemez.

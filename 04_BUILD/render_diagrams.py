@@ -199,7 +199,11 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
         c.circle(x0 + side / 2, y0 + side / 2, step * 0.30, 0)
 
     else:  # bodily
-        w, h = 70.0, 46.0 + legend_h
+        # `hands` gövdesi KOMPAKT: ip figürü ±10 mm'lik bir alanda yaşar ve
+        # 46 mm'lik gövde bunun iki katıydı. Faz 3 bütçesi (150 mm) bu boş
+        # payı taşımıyor. Kalınlık ve glif boyu korunur; giden şey KENAR PAYI.
+        body_h = 30.0 if d.get("frame") == "hands" else 46.0
+        w, h = 70.0, body_h + legend_h
         c = Canvas(w, h, sw)
         cx, cy = w * MM / 2, 22.0 * MM
         if d.get("frame") == "formation":
@@ -210,13 +214,14 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
             c.circle(cx, cy, 2.6 * MM, 25)
             c.circle(cx - 8 * MM, cy, 2.6 * MM, 25)
         else:
-            for i, x in enumerate((-18, 18)):
-                for j, y in enumerate((-10, 10)):
+            cy = body_h / 2 * MM
+            for x in (-18, 18):
+                for y in (-8, 8):
                     c.circle(cx + x * MM, cy + y * MM, 1.6 * MM, 0)
-            c.line(cx - 18 * MM, cy - 10 * MM, cx + 18 * MM, cy + 10 * MM)
-            c.line(cx - 18 * MM, cy + 10 * MM, cx + 18 * MM, cy - 10 * MM)
-            c.line(cx - 18 * MM, cy - 10 * MM, cx - 18 * MM, cy + 10 * MM)
-            c.line(cx + 18 * MM, cy - 10 * MM, cx + 18 * MM, cy + 10 * MM)
+            c.line(cx - 18 * MM, cy - 8 * MM, cx + 18 * MM, cy + 8 * MM)
+            c.line(cx - 18 * MM, cy + 8 * MM, cx + 18 * MM, cy - 8 * MM)
+            c.line(cx - 18 * MM, cy - 8 * MM, cx - 18 * MM, cy + 8 * MM)
+            c.line(cx + 18 * MM, cy - 8 * MM, cx + 18 * MM, cy + 8 * MM)
 
     # Efsane — her diyagramın kendi içinde (D7)
     ly = c.h - legend_h * MM + 3 * MM
@@ -232,6 +237,7 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
         fh.write(c.svg(d["diagramId"]))
     return {"diagramId": d["diagramId"], "gameId": d["gameId"],
             "widthMm": round(c.w / MM, 2), "heightMm": round(c.h / MM, 2),
+            "legendMm": round(legend_h, 2),
             "boardClass": cls, "panels": d.get("panels", 1),
             "file": os.path.relpath(path, DEFAULT_ROOT)}
 
@@ -267,7 +273,10 @@ def main() -> int:
             gap = 4 if m["panels"] > 1 else 0
             if vertical:
                 m["renderedWidthMm"] = m["widthMm"]
-                m["heightMm"] = round(m["heightMm"] * m["panels"] + gap, 2)
+                body = m["heightMm"] - m["legendMm"]
+                m["heightMm"] = round(body * m["panels"]
+                                      + gap * (m["panels"] - 1)
+                                      + m["legendMm"], 2)
             else:
                 m["renderedWidthMm"] = round(m["widthMm"] * m["panels"] + gap, 2)
             m["panelLayout"] = "vertical" if vertical else "horizontal"

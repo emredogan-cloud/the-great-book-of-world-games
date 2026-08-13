@@ -1,9 +1,12 @@
 # DİYAGRAM DİLİ — The Great Book of World Games
 
-> **Sürüm 1.1 · Faz 2 · DONDURULMUŞTUR.**
+> **Sürüm 1.2 · Faz 3 · DONDURULMUŞTUR.**
 >
 > v1.0 → v1.1: gerçek dizgi ölçümü dilin KENDİ kuralında bir kusur
 > buldu (§ 5.1) ve bir ÖLÇÜLMÜŞ bütçe ekledi (§ 7.1).
+> v1.1 → v1.2: bütçe **150 mm** olarak bağlayıcılaştı (K19) ve dikey
+> panellerde efsane **bir kez** basılır oldu (§ 5.2). Cat's Cradle
+> 182,5 mm → **111,5 mm**.
 >
 > Makine okunur karşılığı: `07_ASSETS/diagrams/diagram_language.json`
 > Denetleyen kapı: `04_BUILD/qa_diagram.py`
@@ -254,9 +257,28 @@ sağlanamıyordu. Bunu bir insan gözü değil, **render ölçümü** buldu.
 | Genişlik | 214 mm ✗ | **70 mm** ✓ |
 | Yükseklik | 59,5 mm | 182,5 mm |
 
-Notasyon değişmedi, **dizilim** değişti. Yeni yükseklik diyagram
-bütçesini (§ 7.1) aşıyor ve bu maddenin **dört sayfa** alacağı anlamına
-geliyor — kaydın kendi öngörüsü doğru çıktı.
+Notasyon değişmedi, **dizilim** değişti.
+
+### 5.2 · v1.2 düzeltmesi — efsane üç kez basılıyordu
+
+v1.1'in dikey dizilimi 182,5 mm üretti ve Faz 3'ün **150 mm** bütçesini
+aştı (K19). İki kusur bulundu ve ikisi de israftı:
+
+1. **Her panel kendi efsanesini taşıyordu.** Aynı efsane üç kez basılıyor,
+   27 mm yiyor ve okura aynı şeyi üç kez okutuyordu. D7 efsaneyi
+   *diyagramın* içinde ister, *her panelin* içinde değil.
+2. **Gövde yarı yarıya boştu.** İp figürü ±10 mm'lik bir alanda yaşıyor;
+   gövde 46 mm ayrılmıştı.
+
+| | v1.0 | v1.1 | **v1.2** |
+|---|---:|---:|---:|
+| Genişlik | 214 mm ✗ | 70 mm ✓ | **70 mm** ✓ |
+| Yükseklik | 59,5 mm | 182,5 mm ✗ | **111,5 mm** ✓ |
+
+**Çizgi kalınlığı (0,75 pt) ve glif boyu (7 pt) değişmedi.** Giden şey
+boş kenar payı ve tekrarlanan efsanedir — yani bu bir **sadeleştirmedir**,
+"okunmaz hâle gelene kadar küçültme" değildir. Aradaki fark § 10'un
+yasakladığı şeydir.
 
 Gerekçe: üç panelli bir hamle diyagramı iki sayfalık maddenin
 diyagram bütçesini aşar ve okur zaten kuralı okumuştur. İstisna ip
@@ -303,7 +325,7 @@ efsane ile diyagram içeriğini karşılaştırır ve fazladan sembolü reddeder
 | Çift sayfanın toplam metin alanı | 2 × 242 mm = **484 mm** |
 | Metnin ölçülen payı | **~332 mm** (1,37 sayfa) |
 | **Diyagrama kalan** | **~152 mm** |
-| **Bütçe** | **150 mm** |
+| **Bütçe** | **150 mm** — kurucu Karar A ile BAĞLAYICI (K19) |
 
 Bu sayı bir tasarım tercihi değil bir **artıktır**. Faz 2 dizgisi üç oyunu
 gerçek fontla dizdi ve şunu ölçtü:
@@ -317,6 +339,19 @@ ya da büyük diyagramdır.
 
 **Bütçeyi aşan madde dört sayfa alır** ve sayfa modelinden düşülür
 (en fazla altı madde — `EDITORIAL_ARCHITECTURE.md § 2`).
+
+### 7.2 · Bütçe RENDER EDİLMİŞ ÇIKTIDAN ölçülür
+
+`qa_diagram.py § ⑨` tanımlayıcıya değil **çizilmiş dosyaya** bakar.
+
+Gerekçe: bir tanımlayıcı *"9×9 tahta"* der ve bu bir **boyut vermez**.
+Boyutu adım aralığı, efsane satır sayısı, panel dizilimi ve altyazı
+belirler — yani ancak çizildikten sonra bilinir.
+
+> **Render edilmemiş bir diyagram denetlenmemiştir ve geçemez.**
+
+Aksi hâlde bütçe, çizilmeyen her diyagram için sessizce boş koşardı —
+ve bir kapının en tehlikeli hâli boş koşarken yeşil yanmasıdır.
 
 **Fotokopi testi neden bir kapı:** kitabın arka maddesi tahta
 şablonlarını **fotokopiye uygun** basmayı vaat ediyor. %71 küçültmede
