@@ -11,12 +11,13 @@ Bu projede özellikle kritiktir çünkü `validate_spec.py` bir kitabın kapsam
 vaadini (100 oyun · 45 kültür · 7 aile) otomatik reddetme yetkisine sahiptir
 ve o yetki, doğru çalıştığı KANITLANMADAN kullanılamaz.
 
-Beş bölüm:
+Altı bölüm:
   ①  temiz kurgu BÜTÜN kapılardan geçer          (yanlış pozitif yok)
   ②  her kusurlu kurgu İLGİLİ kapıda yakalanır   (körlük yok)
   ③  kapı seviyeleri gerçekten kilitliyor        (kapsam kapıları)
   ④  her muafiyet en az bir kez DEVREYE GİRİYOR  (ölü kural yok)
-  ⑤  FAZ 1 KAPILARI ISIRIYOR                     (yeni kapıların testi)
+  ⑤  FAZ 1 KAPILARI ISIRIYOR                     (Faz 1 kapılarının testi)
+  ⑥  FAZ 2 KAPILARI ISIRIYOR                     (Faz 2 kapılarının testi)
 
 ④ doğrudan Bestiarium'un üç ölü kuralına ve World Myths'in K14 kararına
 cevaptır: takip edilmeyen bir dosya için yazılmış muafiyet ÖLÜ MUAFİYETTİR
@@ -25,6 +26,13 @@ ve sessizce yanlış güven verir.
 ⑤ Faz 1'de doğan sekiz kapıyı denetler. Bu kapıların çoğu Faz 1 verisinde
 BOŞ KOŞAR (kilitli oyun yok, oynanabilirlik testi yok) — yani gerçek veriyle
 asla ısırmazlar. Körlükleri yalnızca burada kapanır.
+
+⑥ Faz 2'nin kapıları için aynısı, ama DAHA SERT: Faz 2'nin koruma kapıları
+tasarımı gereği depoda GÖREMEYECEKLERİ şeyleri korur. Manuscript depoda
+yoktur, Türkçe pilot depoda yoktur, test kaydı yoktur, kilitli oyun yoktur.
+Yani DÖRT kapı birden gerçek veriyle boş koşar ve dördü de yeşil yanar.
+Bir korumanın çalıştığını, koruduğu şey ortada yokken kanıtlamanın tek yolu
+budur: kasıtlı fikstürler ve saf fonksiyonlar.
 
 Çıkış kodları:  0 = geçti   1 = KÖRLÜK BULUNDU
 """
@@ -554,10 +562,38 @@ def part5_phase1_gates(rep: Report, tmp: str) -> None:
 
     # ── page_budget.py · editions.py ───────────────────────────────────────
     print("  ▸ page_budget · editions")
-    bite("sayfa modeli hedeften sapınca YAKALANIR", None, "page_budget.py",
-         cfg_mut=lambda c: c["production"]["pageModel"].__setitem__("pagesPerGame", 4))
+    # ⚠ BU FİKSTÜRLER FAZ 2'DE GÜNCELLENDİ VE GÜNCELLENMESİNİ SELFTEST
+    # KENDİSİ İSTEDİ. page_budget artık kalibre edildiğinde `pagesPerGame`
+    # hipotezini DEĞİL `measured.billedPagesPerGame` ölçümünü kullanıyor;
+    # eski fikstür hipotezi bozuyordu ve model onu okumadığı için kapı
+    # ısırmıyordu. Yani bir gerçek körlük doğdu ve selftest onu YAKALADI.
+    # Ders: bir kapının girdisini değiştirmek, o kapının testini de
+    # değiştirmeyi gerektirir — yoksa test başka bir şeyi denetler.
+    def uncalibrated(c):
+        """Kalibrasyonu kapat: model hipoteze döner."""
+        c["production"]["pageModel"]["calibrated"] = False
+        c["production"]["pageModel"].pop("acknowledgedDeviation", None)
+
+    bite("sayfa modeli hedeften sapınca YAKALANIR (hipotez modu)",
+         None, "page_budget.py",
+         cfg_mut=lambda c: (uncalibrated(c),
+                            c["production"]["pageModel"].__setitem__("pagesPerGame", 4)))
+    bite("ÖLÇÜLMÜŞ sapma da YAKALANIR (kalibre mod)", None, "page_budget.py",
+         cfg_mut=lambda c: (c["production"]["pageModel"].pop("acknowledgedDeviation", None),
+                            c["production"]["pageModel"]["measured"].__setitem__(
+                                "billedPagesPerGame", 4)))
+    bite("EKSİK sapma şerhi YAKALANIR", None, "page_budget.py",
+         cfg_mut=lambda c: (c["production"]["pageModel"]["measured"].__setitem__(
+                                "billedPagesPerGame", 4),
+                            c["production"]["pageModel"].__setitem__(
+                                "acknowledgedDeviation",
+                                {"date": "2026-08-13", "cause": "x",
+                                 "measurement": "x", "effect": "x",
+                                 "economicImplication": "x",
+                                 "recommendedResponse": "x"})))
     bite("KDP sayfa sınırının aşılması YAKALANIR", None, "page_budget.py",
-         cfg_mut=lambda c: (c["production"]["pageModel"].__setitem__("pagesPerGame", 9),
+         cfg_mut=lambda c: (uncalibrated(c),
+                            c["production"]["pageModel"].__setitem__("pagesPerGame", 9),
                             c["scope"].__setitem__("pageTarget", 950),
                             c["scope"].__setitem__("pageTolerancePct", 90)))
     bite("negatif telif YAKALANIR", None, "editions.py",
@@ -640,6 +676,195 @@ def part5_phase1_gates(rep: Report, tmp: str) -> None:
     rep.check(code != 0, "envanter değişince belge BAYAT sayılır", out)
 
 
+def part6_phase2_gates(rep, tmp: str) -> None:
+    """⑥ FAZ 2 KAPILARI GERÇEKTEN ISIRIYOR MU.
+
+    Bu bölüm Faz 2'nin varlık sebebidir. Faz 2'nin kapılarının çoğu GERÇEK
+    veriyle BOŞ KOŞAR: manuscript depoda yok, Türkçe pilot depoda yok,
+    kilitli oyun yok, test kaydı yok. Boş koşan bir kapı yeşil yanar ve
+    yeşil yanan bir kapı korunuyormuş gibi görünür.
+
+    Körlük yalnızca burada kapanır.
+    """
+    print("\n⑥ Faz 2 kapıları gerçekten ısırıyor")
+    root = ROOT
+
+    # ── ① SIZINTI DEDEKTÖRÜ · kasıtlı fikstürler ───────────────────────────
+    # Fikstürler depo taramasından muaftır (aksi hâlde CI kalıcı kırmızı
+    # olurdu). Muafiyet burada KANITA çevrilir: fonksiyona DOĞRUDAN verilir.
+    print("  ▸ manuscript sızıntısı")
+    sys.path.insert(0, os.path.join(root, "04_BUILD"))
+    import validate_structure as vs  # noqa: E402
+    fx = os.path.join(root, "05_TESTS", "fixtures", "leak")
+    if not os.path.isdir(fx):
+        rep.check(False, "sızıntı fikstürleri var", "05_TESTS/fixtures/leak yok")
+    else:
+        for fn in sorted(os.listdir(fx)):
+            if not fn.endswith(".md") or fn == "README.md":
+                continue
+            with open(os.path.join(fx, fn), encoding="utf-8") as fh:
+                r = vs.scan_for_leak(fh.read())
+            if fn == "bad-turkish-pilot.md":
+                rep.check(r["pilotMarkers"] > 0,
+                          "FİKSTÜR %s → Türkçe pilot işareti YAKALANIR" % fn)
+            elif fn.startswith("bad-"):
+                rep.check(r["leak"],
+                          "FİKSTÜR %s → sızıntı YAKALANIR (%s)"
+                          % (fn, " · ".join(r["reasons"]) or "-"))
+            else:
+                rep.check(not r["leak"],
+                          "FİKSTÜR %s → TEMİZ sayılır (yanlış alarm yok)" % fn)
+        # Faz 1 dedektörü etiketsiz prozayı KAÇIRIRDI; bunu ayrıca kanıtla.
+        with open(os.path.join(fx, "bad-unlabelled.md"), encoding="utf-8") as fh:
+            r = vs.scan_for_leak(fh.read())
+        rep.check(r["markers"] < vs.LEAK_MIN_HITS and r["leak"],
+                  "ETİKETSİZ proza — Faz 1 hattı kaçırırdı, Faz 2 hattı YAKALAR")
+
+    # ── ② DİL AYRIMI ───────────────────────────────────────────────────────
+    print("  ▸ dil ayrımı")
+    import qa_language_split as qls  # noqa: E402
+    cases = [
+        ("Slide it in a straight line: up, down, left or right.", False,
+         "İngilizce kural cümlesi TEMİZ"),
+        ("Toguz Kumalak and Bagh-Chal use a five by five grid.", False,
+         "İngilizce metindeki Türkçe OYUN ADI yanlış alarm ÜRETMEZ"),
+        ("Kral ortadaki kareye konur ve sekiz savunan taş dizilir.", True,
+         "TEK Türkçe kural cümlesi YAKALANIR"),
+        ("Bu oyun iki kişiyle oynanır ve her oyuncu taşlarını dizer.", True,
+         "Türkçe paragraf YAKALANIR"),
+    ]
+    for text, expect, label in cases:
+        rep.check(qls.turkishness(text)["turkish"] is expect, label)
+
+    # ── ③ KAPSAM KİLİDİ ────────────────────────────────────────────────────
+    print("  ▸ kapsam ve pilot kilidi")
+    import validate_scope as vsc  # noqa: E402
+    lock = json.load(open(os.path.join(root, "01_SOURCE", "scope_lock.json"),
+                          encoding="utf-8"))
+    ids = [e["gameId"] for e in lock["entries"]]
+    rep.check(vsc.digest(ids) == lock["integrity"]["sha256"],
+              "kilit özeti gerçek listeyle uyuşuyor")
+    rep.check(vsc.digest(ids[:-1]) != lock["integrity"]["sha256"],
+              "listeden BİR oyun düşürmek özeti DEĞİŞTİRİR")
+    rep.check(vsc.digest(list(reversed(ids))) == lock["integrity"]["sha256"],
+              "sıra değişikliği özeti değiştirmez (kitap aynı kitaptır)")
+    dropped = {"status": "dropped", "restrictionStatus": "open",
+               "playabilityStatus": "rules-complete"}
+    rep.check(not vsc.eligible(dropped)[0], "düşmüş oyun UYGUN sayılmaz")
+    restricted = {"status": "researched", "restrictionStatus": "restricted",
+                  "playabilityStatus": "rules-complete"}
+    rep.check(not vsc.eligible(restricted)[0], "kısıtlı oyun UYGUN sayılmaz")
+
+    # ── ④ DİYAGRAM KAPISI ──────────────────────────────────────────────────
+    print("  ▸ diyagram dili")
+    dpath = os.path.join(root, "07_ASSETS", "diagrams", "pilot_diagrams.json")
+    if os.path.exists(dpath):
+        with open(dpath, encoding="utf-8") as fh:
+            orig = fh.read()
+        muts = [
+            ("yeniden kurgulama beyanının SİLİNMESİ YAKALANIR",
+             lambda d: d["diagrams"][0].__setitem__("reconstructed", False)),
+            ("tahta DIŞI koordinat YAKALANIR",
+             lambda d: d["diagrams"][0]["pieces"][0].__setitem__("at", "z9")),
+            ("efsanedeki ÖLÜ sembol YAKALANIR",
+             lambda d: d["diagrams"][2]["legend"].append(
+                 {"glyph": "king", "label": "kral"})),
+            ("sözlükte OLMAYAN glif YAKALANIR",
+             lambda d: d["diagrams"][1]["pieces"][0].__setitem__("glyph", "tiger")),
+            ("RENK kullanımı YAKALANIR",
+             lambda d: d["diagrams"][3].__setitem__("colour", "#c00")),
+            ("uyarlama ALTYAZISININ silinmesi YAKALANIR",
+             lambda d: d["diagrams"][3].__setitem__("caption", "")),
+        ]
+        try:
+            for label, mut in muts:
+                d = json.loads(orig)
+                mut(d)
+                with open(dpath, "w", encoding="utf-8") as fh:
+                    json.dump(d, fh, ensure_ascii=False, indent=2)
+                code, out = run_gate("qa_diagram.py", root)
+                rep.check(code != 0, label, out)
+        finally:
+            with open(dpath, "w", encoding="utf-8") as fh:
+                fh.write(orig)
+        code, out = run_gate("qa_diagram.py", root)
+        rep.check(code == 0, "TEMİZ diyagram kümesi geçer", out)
+
+    # ── ⑤ OYNANABİLİRLİK ───────────────────────────────────────────────────
+    # Bu kapı gerçek veriyle TAMAMEN boş koşar: kilitli oyun yok, kayıt yok.
+    # Isırdığı yalnızca burada kanıtlanabilir.
+    print("  ▸ oynanabilirlik")
+    cfg = json.load(open(os.path.join(root, "project_config.json"),
+                        encoding="utf-8"))
+    import qa_playable as qp  # noqa: E402
+
+    def playable_root(sessions, lock_game=True):
+        r = os.path.join(tmp, "pl%d" % len(os.listdir(tmp)))
+        os.makedirs(os.path.join(r, "01_SOURCE", "playtests"))
+        os.makedirs(os.path.join(r, "06_REPORTS"), exist_ok=True)
+        write_json(os.path.join(r, "project_config.json"), cfg)
+        g = {"games": [{"gameId": "tablut", "status":
+                        "locked" if lock_game else "candidate"}]}
+        write_json(os.path.join(r, "01_SOURCE", "game_index.json"), g)
+        write_json(os.path.join(r, "01_SOURCE", "playtests", "tablut.json"),
+                   {"gameId": "tablut", "sessions": sessions})
+        return r
+
+    ok_session = {"gameId": "tablut", "testerId": "T01",
+                  "evidenceType": "external", "testedVersion": "v1",
+                  "language": "tr", "startedAt": "2026-08-20T19:05",
+                  "finishedAt": "2026-08-20T19:47", "playerCount": 2,
+                  "result": "playable", "usedOnlyBookText": True,
+                  "edgeCasesSeen": {"tie": False, "stalemate": False,
+                                    "illegalMove": True}}
+    code, out = run_gate("qa_playable.py", playable_root([ok_session]))
+    rep.check(code == 0, "geçerli DIŞ test kaydı kapıyı açar", out)
+
+    s = dict(ok_session, evidenceType="internal")
+    code, out = run_gate("qa_playable.py", playable_root([s]))
+    rep.check(code != 0,
+              "İÇ kanıt DIŞ kanıtın yerine GEÇMEZ (kilitli oyun testsiz kalır)",
+              out)
+
+    s = dict(ok_session, usedOnlyBookText=False)
+    code, out = run_gate("qa_playable.py", playable_root([s]))
+    rep.check(code != 0, "kitap dışı bilgiyle oynanan test GEÇERSİZDİR", out)
+
+    s = dict(ok_session); s["email"] = "a@b.c"
+    code, out = run_gate("qa_playable.py", playable_root([s]))
+    rep.check(code != 0, "KİŞİSEL VERİ taşıyan kayıt REDDEDİLİR", out)
+
+    s = dict(ok_session, testerId="Ahmet")
+    code, out = run_gate("qa_playable.py", playable_root([s]))
+    rep.check(code != 0, "anonim OLMAYAN testçi kimliği REDDEDİLİR", out)
+
+    s = dict(ok_session); s["edgeCasesSeen"] = {"tie": False}
+    code, out = run_gate("qa_playable.py", playable_root([s]))
+    rep.check(code != 0, "üç edge case cevapsızken 'playable' YAKALANIR", out)
+
+    code, out = run_gate("qa_playable.py", playable_root([]))
+    rep.check(code != 0, "TESTSİZ kilitli oyun YAKALANIR", out)
+
+    # ── ⑥ SAYFA DOĞRULAMA KAYDI ────────────────────────────────────────────
+    print("  ▸ sayfa doğrulama")
+    import validate_research as vr  # noqa: E402
+    svp = os.path.join(root, "01_SOURCE", "source_verification.json")
+    if os.path.exists(svp):
+        recs = json.load(open(svp, encoding="utf-8"))["records"]
+        thin = [r for r in recs if r["status"] == "verified"
+                and len(r.get("supportingPassage", "")) < 40]
+        rep.check(not thin,
+                  "'verified' her kaydın dayanak PASAJI var (%d kayıt)" % len(recs))
+        blocked = [r for r in recs if r["status"] == "blocked"]
+        rep.check(all(not (r.get("locator") or "").strip("—").strip()
+                      for r in blocked),
+                  "'blocked' hiçbir kayıt locator taşımıyor (%d kayıt)"
+                  % len(blocked))
+        rep.check(vr.author_key("Culin, Stewart, Korean Games") ==
+                  vr.author_key("Culin, Stewart, Games of the North American Indians"),
+                  "aynı yazarın iki eseri BİR kaynak sayılır")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -657,6 +882,7 @@ def main() -> int:
         part3_gates_lock(rep, tmp)
         part4_no_dead_exemptions(rep)
         part5_phase1_gates(rep, tmp)
+        part6_phase2_gates(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:

@@ -4,7 +4,7 @@
 > belgedir.** Hafızası olmayan bir ajan buradan başlar ve projenin nerede
 > olduğunu, neyin kilitli neyin açık olduğunu buradan öğrenir.
 >
-> Son güncelleme: **13 Ağustos 2026** · Faz: **1 · TAMAM** · Kapı: `phase1`
+> Son güncelleme: **13 Ağustos 2026** · Faz: **2 · KISMEN TAMAM** · Kapı: `phase1`
 
 ---
 
@@ -56,27 +56,30 @@ ayrılmış — akademik oyun tarihi (oynanamaz) ve jenerik aile oyunu listeleri
 
 | | |
 |---|---|
-| Faz | **1 · TAMAM** — envanter, tasnif ve oynanabilirlik mimarisi kuruldu |
-| Kapı (`.gate`) | `phase1` |
-| Aday oyun | **153** / ≥140 ✅ |
-| Bunların uygun olanı | **119** — kitabın seçileceği havuz |
-| Kültür | **89** / ≥45 ✅ |
-| Aile | **7** / 7 ✅ · her biri ≥16 aday taşıyor |
-| Kısıt taraması | **160/160** ✅ muafiyetsiz |
-| Sayfa modeli | **250** (hedef 256, −%2,3) ✅ |
-| Kilitli oyun | 0 / 100 — Faz 2 |
-| Yazılmış oyun | 0 / 100 — **Faz 1'de proza yazılmadı** |
-| Görsel | 0 / ~130 — Faz 5 |
-| Depo | public · `faz/1-envanter` · CI kurulu |
-| **Sonraki adım** | **KURUCU ONAYI (A1 · A2 · A3 · A7)** → sonra Faz 2 |
+| Faz | **2 · KISMEN TAMAM** — ölçüm ve mimari bitti, KANIT bitmedi |
+| Kapı (`.gate`) | **`phase1`** — yükseltilemedi |
+| **Kilitli kapsam** | **100 oyun · 71 kültür · 19 yedek** ✅ |
+| Aile dengesi | **10 / 17 uygulandı** (A2) ✅ |
+| Pilot oyun | **12 seçildi** · 7/7 aile ✅ |
+| Sayfa doğrulaması | **7/12 kısmi · 2/12 tam** ⛔ |
+| Yazılmış oyun | **3** / 100 |
+| Kilitli oyun | **0** / 100 |
+| **Dış oynanabilirlik testi** | **0** ⛔ **BLOKLAYICI** |
+| Diyagram dili | **v1.1 · DONDURULDU** ✅ |
+| Sayfa modeli | **316** (hedef 256, +%23,4) ⛔ şerhli |
+| Selftest | **117 denetim** ✅ |
+| Depo | public · `faz/2-pilot` · CI **YEŞİL** |
+| **Sonraki adım** | **KURUCU: dış test oturumları + kaynak erişimi** |
 
-Faz raporu: [`06_REPORTS/PHASE_1_REPORT.md`](06_REPORTS/PHASE_1_REPORT.md)
+Faz raporu: [`06_REPORTS/PHASE_2_REPORT.md`](06_REPORTS/PHASE_2_REPORT.md)
 
-⚠ **Faz 2 BAŞLAMADI ve kurucu onayı olmadan başlamaz.**
-A7 (oyun testçileri) **sert bir bloklayıcıdır**: ajan oynanabilirlik testi
-yapamaz ve sahte test kaydı üretilmez.
+⚠ **Faz 3 BAŞLAMADI ve başlayamaz.** İki sert bloklayıcı var:
 
----
+1. **Dış insan testi yapılmadı.** Ajan test yapamaz; sahte kayıt üretilmez.
+   Test paketi hazır (`01_SOURCE/pilot_tr/`), oturum kurucunundur.
+2. **Telifli kaynaklara erişilemiyor.** Pilotun 12 oyunundan yalnızca 2'si
+   ≥2 sayfa-doğrulanmış kaynağa ulaşabildi. Kütüphane erişimi olmadan
+   100 oyun `locked` yapılamaz.
 
 ## 5 · Bu projenin risk profili
 
@@ -192,16 +195,16 @@ kapanmadan sonrakine geçilmez. CI kırmızıyken hiçbir şey ilerlemez.
 
 ## 11 · Sonraki izinli eylem
 
-> **KURUCU ONAYI BEKLENİYOR.**
+> **KURUCU EYLEMİ BEKLENİYOR — onay değil, EYLEM.**
 >
-> Faz 1 tamamlandı ve **PASS**. Faz 2 **başlatılmadı**.
+> A1 · A2 · A3 · A7 kapandı (K12–K15). Faz 2 ölçümlerini üretti ve durdu.
 >
-> Kapanması gereken dört karar:
-> 1. **A7 — oyun testçileri.** Sert bloklayıcı. Testçi yoksa Faz 2 durur;
->    sahte test kaydı üretilmez.
-> 2. **A2 — aile taksonomisi** ve av-kuşatma yeniden dengeleme önerisi.
-> 3. **A3 — 100 oyunun listesi.** 96'lık öneri ve 23 yedek hazır.
-> 4. **A1 — manuscript politikası.** K9 mekanizmayı kurdu; onay gerekli.
+> Bekleyen iki BLOKLAYICI:
+> 1. **Dış oynanabilirlik test oturumları.** Paket `01_SOURCE/pilot_tr/`
+>    içinde hazır: üç oyun, testçi kılavuzu, kayıt formu. Ajan bu adımı
+>    yapamaz.
+> 2. **Telifli kaynaklara erişim.** Murray (1913/1952) · Bell (1960) ·
+>    Parlett (1999) · de Voogt (1997) · Zaslavsky (1973) açık tam metin
+>    değil. Bunlar olmadan `locked` eşiği karşılanamaz.
 >
-> Onay geldiğinde ilk iş: `faz/2-pilot` dalını açmak ve 12 pilot oyunu
-> **en zorlardan** seçmek.
+> Bir karar: **sayfa modeli** (§ 11 · üç seçenek, öneri diyagram bütçesi).

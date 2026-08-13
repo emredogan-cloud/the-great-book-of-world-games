@@ -1,0 +1,84 @@
+{
+  "status": "fail",
+  "measuredOn": "phase2",
+  "sampleSize": 3,
+  "sampleGames": [
+    "tablut",
+    "yut-nori",
+    "fanorona"
+  ],
+  "sampleCaveat": "Örneklem 3 oyundur ve KÜÇÜKTÜR. Sebebi bir tercih değil bir kapıdır: kural metni yalnızca sayfa seviyesinde doğrulanmış kaynağa dayanabilir ve 12 pilot oyunun yalnızca üçü bu şartı sağladı.",
+  "geometry": {
+    "trimWidthMm": 215.9,
+    "trimHeightMm": 279.4,
+    "marginMm": 12.7,
+    "gutterMm": 9.5,
+    "colWidthMm": 181.0,
+    "textHeightMm": 242.0,
+    "bodyPt": 10.5,
+    "leadingPt": 13.5,
+    "font": "Times-Roman"
+  },
+  "perGame": [
+    {
+      "gameId": "tablut",
+      "words": 764,
+      "textHeightMm": 334.1,
+      "diagramHeightMm": 189.5,
+      "diagrams": [
+        "tablut-setup",
+        "tablut-capture"
+      ],
+      "textPages": 1.38,
+      "diagramPages": 0.783,
+      "measuredPages": 2.164,
+      "billedPages": 4,
+      "overflowsSpread": true
+    },
+    {
+      "gameId": "yut-nori",
+      "words": 656,
+      "textHeightMm": 330.6,
+      "diagramHeightMm": 76.0,
+      "diagrams": [
+        "yut-track"
+      ],
+      "textPages": 1.366,
+      "diagramPages": 0.314,
+      "measuredPages": 1.68,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "fanorona",
+      "words": 705,
+      "textHeightMm": 332.5,
+      "diagramHeightMm": 57.5,
+      "diagrams": [
+        "fanorona-withdrawal"
+      ],
+      "textPages": 1.374,
+      "diagramPages": 0.238,
+      "measuredPages": 1.612,
+      "billedPages": 2,
+      "overflowsSpread": false
+    }
+  ],
+  "avgWordsPerGame": 708.3,
+  "measuredWordsPerPage": 389.5,
+  "hypothesisWordsPerPage": 320,
+  "avgMeasuredPagesPerGame": 1.819,
+  "avgBilledPagesPerGame": 2.667,
+  "avgTextPagesPerGame": 1.373,
+  "avgDiagramPagesPerGame": 0.445,
+  "spreadOverflowGames": [
+    "tablut"
+  ],
+  "spreadOverflowRate": 0.333,
+  "finding": "Metin oyundan oyuna neredeyse sabittir (~1.37 sayfa); çift sayfayı aşıran değişken DİYAGRAM ALANIDIR. Sayfa bütçesi bir KELİME bütçesi değil, bir DİYAGRAM bütçesidir.",
+  "projectedBodyPages": 267,
+  "projectedTotalPages": 316,
+  "pageTarget": 256,
+  "deviationPct": 23.44,
+  "withinTolerance": false
+}

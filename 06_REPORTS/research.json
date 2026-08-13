@@ -1,15 +1,21 @@
 {
   "status": "pass",
-  "checks": 7,
+  "checks": 13,
   "errors": [],
   "warnings": [
     "38 oyun tek kaynaklı — locked olabilmeleri için ikinci bağımsız künye gerekir"
   ],
   "facts": {
     "games": 160,
-    "source_records": 300,
+    "source_records": 304,
     "independent_ge2": 122,
     "single_source": 38,
+    "verification": {
+      "verified": 9,
+      "blocked": 9
+    },
+    "pilot_verified_any": 7,
+    "pilot_verified_full": 2,
     "locked": 0
   }
 }

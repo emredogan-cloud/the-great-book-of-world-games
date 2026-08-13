@@ -1,0 +1,258 @@
+{
+  "$comment": [
+    "DİYAGRAM DİLİ — makine okunur sözlük. Faz 2'de DONDURULDU.",
+    "İnsan okunur karşılığı: 00_CONTEXT/DIAGRAM_LANGUAGE.md",
+    "Denetleyen: 04_BUILD/qa_diagram.py",
+    "",
+    "Bu dosya bir SÖZLÜKTÜR: burada olmayan bir glif, bir tahta sınıfı ya",
+    "da bir gri seviyesi kullanılamaz. Sözlüğü genişletmek bir sürüm",
+    "yükseltmesidir çünkü 60. oyunda notasyon değiştirmek önceki 59",
+    "diyagramı geçersiz kılar."
+  ],
+  "version": "1.1",
+  "frozenAtPhase": "phase2",
+  "frozenOn": "2026-08-13",
+  "boardClasses": {
+    "cell": {
+      "coordRule": "file-rank",
+      "note": "taş karenin içinde"
+    },
+    "point": {
+      "coordRule": "file-rank",
+      "note": "taş kesişimin üstünde"
+    },
+    "pit": {
+      "coordRule": "row-pit",
+      "note": "tohum çukurda; sayı RAKAMLA yazılır"
+    },
+    "track": {
+      "coordRule": "station",
+      "note": "durak numarası, hareket yönünde"
+    },
+    "bodily": {
+      "coordRule": "frame",
+      "note": "tahta yok; referans çerçevesi var"
+    }
+  },
+  "coordPatterns": {
+    "file-rank": "^[a-z]([1-9][0-9]?)$",
+    "row-pit": "^[AB]'?([1-9][0-9]?)$|^\\[[AB]\\]$",
+    "station": "^(0|[1-9][0-9]?[ab]?|out)$",
+    "frame": "^(near|far|left|right|centre|[LR][1-5]|ring|role[1-9])$"
+  },
+  "glyphs": {
+    "light": {
+      "symbol": "○",
+      "fill": 0,
+      "stroke": 100,
+      "label": "açık taraf"
+    },
+    "dark": {
+      "symbol": "●",
+      "fill": 100,
+      "stroke": 100,
+      "label": "koyu taraf"
+    },
+    "lightSpecial": {
+      "symbol": "◎",
+      "fill": 0,
+      "stroke": 100,
+      "label": "ayrıcalıklı taş (açık)"
+    },
+    "darkSpecial": {
+      "symbol": "◉",
+      "fill": 100,
+      "stroke": 100,
+      "label": "ayrıcalıklı taş (koyu)"
+    },
+    "lightAlt": {
+      "symbol": "□",
+      "fill": 0,
+      "stroke": 100,
+      "label": "ikinci taş tipi (açık)"
+    },
+    "darkAlt": {
+      "symbol": "■",
+      "fill": 100,
+      "stroke": 100,
+      "label": "ikinci taş tipi (koyu)"
+    },
+    "king": {
+      "symbol": "◎",
+      "fill": 0,
+      "stroke": 100,
+      "label": "kral"
+    },
+    "promoted": {
+      "symbol": "▤",
+      "fill": 25,
+      "stroke": 100,
+      "label": "terfi etmiş taş"
+    },
+    "blindfolded": {
+      "symbol": "◍",
+      "fill": 25,
+      "stroke": 100,
+      "label": "gözü bağlı oyuncu"
+    },
+    "seedCount": {
+      "symbol": "4",
+      "fill": 0,
+      "stroke": 100,
+      "label": "tohum sayısı"
+    },
+    "empty": {
+      "symbol": "·",
+      "fill": 0,
+      "stroke": 100,
+      "label": "boş yer"
+    },
+    "captured": {
+      "symbol": "×",
+      "fill": 0,
+      "stroke": 100,
+      "label": "bu hamlede alındı"
+    },
+    "removed": {
+      "symbol": "⊘",
+      "fill": 55,
+      "stroke": 100,
+      "label": "tahtadan çıktı"
+    },
+    "inHand": {
+      "symbol": "[]",
+      "fill": 0,
+      "stroke": 100,
+      "label": "elde / ambarda"
+    }
+  },
+  "arrows": {
+    "move": {
+      "symbol": "→",
+      "style": "solid",
+      "widthPt": 1.0,
+      "label": "gösterilen hamle"
+    },
+    "alternate": {
+      "symbol": "⇢",
+      "style": "dotted",
+      "widthPt": 0.75,
+      "label": "olası hamle"
+    },
+    "flow": {
+      "symbol": "⤳",
+      "style": "curved",
+      "widthPt": 1.0,
+      "label": "ekim / iz yönü"
+    },
+    "forbidden": {
+      "symbol": "⊣",
+      "style": "barred",
+      "widthPt": 1.0,
+      "label": "yasak hamle"
+    },
+    "mandatory": {
+      "symbol": "→",
+      "style": "solid",
+      "widthPt": 1.5,
+      "label": "zorunlu hamle"
+    },
+    "swap": {
+      "symbol": "↔",
+      "style": "solid",
+      "widthPt": 1.0,
+      "label": "yer değiştirme"
+    }
+  },
+  "markers": {
+    "repeat": {
+      "symbol": "↺",
+      "label": "tekrar eden konum",
+      "requiresCount": true
+    },
+    "score": {
+      "symbol": "⟦⟧",
+      "label": "puan şeridi"
+    },
+    "ring": {
+      "symbol": "⌒",
+      "label": "çember (kişi sayısı değişken)"
+    }
+  },
+  "panelRules": {
+    "maxPanels": 2,
+    "exactPanelsForBoardClass": {
+      "bodily/hands": 3
+    },
+    "panelLabelPosition": "top-left",
+    "$comment": "İki panelden fazlası diyagram bütçesini aşar. Tek istisna ip figürüdür: orada ARA ADIM kuralın kendisidir, örneği değil.",
+    "panelLayout": {
+      "default": "horizontal",
+      "bodily/hands": "vertical"
+    },
+    "$layoutComment": [
+      "FAZ 2 ÖLÇÜMÜ BİR KUSUR BULDU VE DİL DÜZELTİLDİ (v1.0 → v1.1).",
+      "İp figürü üç panel ister (§ 2.5a). Üç panel YAN YANA dizilince 214 mm",
+      "eder ve tam genişlik sınırı 180 mm'dir — yani dilin kendi kuralı, kendi",
+      "baskı sınırını aşıyordu. Kusur bir tanımlayıcıda değil DİLDEDİR.",
+      "Düzeltme: `bodily/hands` panelleri DİKEY dizilir. Genişlik 71 mm'ye",
+      "iner ve sınırın altına girer. Notasyon değişmedi, DİZİLİM değişti."
+    ]
+  },
+  "diagramTypes": [
+    "board-diagram",
+    "setup-illustration",
+    "move-diagram",
+    "piece-diagram",
+    "map",
+    "cultural-plate"
+  ],
+  "print": {
+    "ink": "black",
+    "colourForbidden": true,
+    "greyLevelsAllowed": [
+      0,
+      25,
+      55,
+      100
+    ],
+    "minStrokePt": 0.75,
+    "minGlyphPt": 7.0,
+    "pieceDiameterRatioMin": 0.62,
+    "pieceDiameterRatioMax": 0.72,
+    "maxWidthSingleColumnMm": 88,
+    "maxWidthFullMm": 180,
+    "photocopyScalesTested": [
+      100,
+      71
+    ],
+    "maxDiagramColumnHeightMm": 150,
+    "$diagramBudgetComment": [
+      "DİYAGRAM BÜTÇESİ — Faz 2 gerçek dizgi ölçümünden TÜRETİLMİŞTİR.",
+      "Ölçüm: metin oyun başına 1,37 sayfa (242 mm sütun yüksekliğinde ~332 mm)",
+      "ve oyundan oyuna fark yalnızca 0,01 sayfa. Yani metin SABİTTİR.",
+      "Değişken diyagramdır: 0,24 ile 0,78 sayfa arasında gidiyor.",
+      "Bir madde iki sayfalık çift sayfaya sığacaksa toplam 484 mm'yi aşamaz;",
+      "metin 332 mm aldığında diyagrama kalan 152 mm'dir. 150 mm bütçesi bu",
+      "ölçümün doğrudan sonucudur — bir tasarım tercihi değil, bir ARTIKTIR.",
+      "Bütçeyi aşan madde DÖRT sayfa alır ve sayfa bütçesinden düşülür."
+    ]
+  },
+  "reconstructionRule": {
+    "$comment": [
+      "Bir diyagram tarihsel bir kaydı OLDUĞUNDAN KESİN gösterebilir ve bu,",
+      "prozadaki 'yeniden kurgulanmıştır' etiketini sessizce yalanlar.",
+      "Kaynakta OLMAYAN her öğe noktalı konturla çizilir."
+    ],
+    "requiresFlag": "reconstructed",
+    "mustMatchPlayabilityStatus": "reconstructed",
+    "unsourcedElementStroke": "dotted",
+    "captionRequired": true
+  },
+  "adaptationRule": {
+    "$comment": "Özgün olandan farklı bir tahta basılıyorsa diyagram bunu SÖYLER.",
+    "field": "adaptedFrom",
+    "titleSuffix": "(uyarlama)",
+    "captionRequired": true
+  }
+}

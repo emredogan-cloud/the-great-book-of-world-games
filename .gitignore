@@ -67,3 +67,31 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# ── KORUMALI KURAL PROZASI · karar K12 (A1) ────────────────────────────────
+# Faz 2, Faz 1'in göremediği bir sızıntı buldu: `rules` blokları TAM
+# İngilizce kural metni taşıyor ve public depoda duruyordu. Bu, kitabın
+# ticari çekirdeğidir. Public katman yalnızca METADATA tutar
+# (ruleCompleteness · clarity · playabilityStatus · reconstructionPlan);
+# prozanın kendisi buraya yazılır ve takip EDİLMEZ.
+01_SOURCE/rules/
+02_MANUSCRIPT/*.json
+02_MANUSCRIPT/*.md
+!02_MANUSCRIPT/README.md
+
+# ── TÜRKÇE PİLOT · TEST MALZEMESİ · karar K16 ──────────────────────────────
+# Ticari değildir ama YAYIMLANMAMIŞ PROZADIR: Türkçe pilot da tam oynanabilir
+# kural metni taşır. A1 uyarınca korunur. Public depoda yalnızca paketin
+# YAPISI ve test kaydı şeması durur, metnin kendisi durmaz.
+01_SOURCE/pilot_tr/*.md
+01_SOURCE/pilot_tr/*.json
+!01_SOURCE/pilot_tr/README.md
+
+# ── DİYAGRAM DİLİ SPEC'İ · Faz 2 ───────────────────────────────────────────
+# 07_ASSETS/diagrams/** ham varlıkları dışarıda tutar. Ama diyagram DİLİ
+# bir varlık değil bir SÖZLEŞMEDİR ve public katmana aittir: onu denetleyen
+# kapı (qa_diagram.py) CI'da koşar ve dosya yoksa kör kalır.
+# Render edilmiş SVG'ler ignore'da KALIR — üretilebilirler ve doğrulama
+# amaçlıdırlar; nihai gravür levhalar Faz 5'te üretilecektir.
+!07_ASSETS/diagrams/diagram_language.json
+!07_ASSETS/diagrams/pilot_diagrams.json

@@ -107,6 +107,9 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/score_candidates.py ] && \
   run "aday seçim modeli"       $PY 04_BUILD/score_candidates.py \
                                    --json 06_REPORTS/candidate-scores.json
+[ -f 04_BUILD/validate_scope.py ] && \
+  run "KAPSAM VE PİLOT KİLİDİ"  $PY 04_BUILD/validate_scope.py \
+                                   --json 06_REPORTS/scope-lock.json
 
 # ── FAZ 2'DE DOĞACAK KAPILAR ───────────────────────────────────────────────
 [ -f 04_BUILD/qa_playable.py ] && \
@@ -124,6 +127,13 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/qa_drift.py ] && \
   run "üslup sürüklenmesi"      $PY 04_BUILD/qa_drift.py \
                                    --json 06_REPORTS/qa-drift.json
+[ -f 04_BUILD/qa_language_split.py ] && \
+  run "DİL AYRIMI (TR ↛ EN)"    $PY 04_BUILD/qa_language_split.py \
+                                   --json 06_REPORTS/qa-language-split.json
+# Dizgi ölçümü reportlab ister ve `run_optional` sözleşmesine uyar:
+# çıkış 2 = bağımlılık yok = ATLANDI, kusur DEĞİL (karar K7).
+[ -f 04_BUILD/calibrate_pages.py ] && \
+  run_optional "gerçek dizgi ölçümü" $PY 04_BUILD/calibrate_pages.py --check
 
 # ── FAZ 3+ KAPILARI ────────────────────────────────────────────────────────
 [ -f 04_BUILD/qa_crossref.py ] && \

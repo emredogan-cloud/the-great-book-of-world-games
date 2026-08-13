@@ -1,21 +1,21 @@
 {
   "status": "pass",
-  "pages": 250,
+  "pages": 316,
   "editions": [
     {
       "id": "hardcover",
       "list": 34.99,
-      "printCost": 9.9,
-      "royalty": 11.09,
-      "breakEvenAcosPct": 31.7,
+      "printCost": 11.02,
+      "royalty": 9.97,
+      "breakEvenAcosPct": 28.5,
       "royaltyRate": 0.6
     },
     {
       "id": "paperback",
       "list": 22.99,
-      "printCost": 5.25,
-      "royalty": 8.54,
-      "breakEvenAcosPct": 37.2,
+      "printCost": 6.37,
+      "royalty": 7.42,
+      "breakEvenAcosPct": 32.3,
       "royaltyRate": 0.6
     },
     {

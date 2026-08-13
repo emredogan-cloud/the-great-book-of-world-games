@@ -1159,7 +1159,8 @@
       "sources": [
         {
           "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "s. 93 (Abrus precatorius) ve ss. 225–226 (tahta, ad, bağlam)"
         },
         {
           "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
@@ -1402,58 +1403,6 @@
       },
       "unresolvedQuestions": [],
       "culturalNotes": "Akan oyunu; 'oware' adının halk etimolojisi tartışmalıdır ve kitap tek bir köken hikâyesi anlatmaz.",
-      "rules": {
-        "objective": "Capture more than half of the forty-eight seeds.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A board of twelve pits in two rows of six",
-          "Two stores, one at each end",
-          "48 seeds"
-        ],
-        "substitutions": [
-          "An egg carton with the lid cut off",
-          "Two bowls for the stores",
-          "Dried beans, buttons or pebbles as seeds"
-        ],
-        "setup": "Put four seeds in each of the twelve pits. Sit facing your opponent across the long side of the board. The six pits nearest you are yours, and so is the store to your right. Both stores start empty.",
-        "turnSequence": [
-          "Choose one of your six pits that holds at least one seed.",
-          "Lift out every seed in that pit.",
-          "Drop the seeds one at a time into the following pits, going anticlockwise.",
-          "Skip the pit you emptied if the handful is large enough to come all the way round.",
-          "Look at the pit where the last seed fell.",
-          "If that pit belongs to your opponent and now holds exactly two or three seeds, move those seeds to your store.",
-          "Then look at the pit just before that one, and take from it under the same rule.",
-          "Keep working backwards until a pit fails the rule, and stop there.",
-          "Hand the turn to your opponent."
-        ],
-        "legalMoves": [
-          "Any pit on your own side that holds at least one seed may be sown.",
-          "If your opponent has no seeds at all, you must play a move that puts at least one seed on their side; if no such move exists, play stops.",
-          "A move that would capture every seed on your opponent's side is played, but nothing is taken from it."
-        ],
-        "winCondition": "The player who gathers twenty-five or more seeds in their store wins.",
-        "endCondition": "Play stops as soon as one player reaches twenty-five seeds, or when neither player can capture any longer. In the second case each player adds the seeds still lying on their own side to their store.",
-        "durationMinutes": 30,
-        "ageMin": 7,
-        "edgeCases": {
-          "tie": "Twenty-four seeds each is a draw, and the traditional game leaves it there. If your table wants a decision, play a second game with the loser of the first sowing choosing which side to take.",
-          "stalemate": "When the same cycle of moves repeats and neither player has captured for a full round of turns, stop. Each player takes the seeds remaining on their own side, and you count as usual.",
-          "illegalMove": "Put the seeds back in the pit they came from and let the player choose again. If the seeds have already been mixed in, the opponent chooses which of the legal moves is played instead. Neither player loses a turn."
-        },
-        "variants": [
-          {
-            "name": "Abapa",
-            "note": "The tournament form used in Ghana: the feeding rule above is strict, and a move that would take every enemy seed is played without capture."
-          },
-          {
-            "name": "Nam-nam",
-            "note": "A widespread school-yard form in which a pit filled to exactly four seeds is taken by whoever owns the side it sits on, whenever it happens."
-          }
-        ],
-        "simplifiedFirstGame": "Start with three seeds per pit instead of four, and capture only when the last seed lands in an opponent's pit that then holds exactly two. Nothing else changes. The game runs about ten minutes and teaches the sowing rhythm before the back-capture rule arrives."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },
@@ -2689,57 +2638,6 @@
         "play": 4
       },
       "unresolvedQuestions": [],
-      "rules": {
-        "objective": "One player is the fox and eats geese; the other players share the geese and try to pen the fox so that it cannot move.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A cross-shaped board of thirty-three holes or points",
-          "One fox piece",
-          "Seventeen geese pieces"
-        ],
-        "substitutions": [
-          "A chessboard with the four corner blocks of nine squares covered by paper",
-          "A coin for the fox and seventeen buttons for the geese"
-        ],
-        "setup": "Draw a cross: three columns of three points across the top, three rows of three points across the middle arm and the same below, giving thirty-three points in all. Place the fox on the centre point. Place the seventeen geese filling the top arm and the two rows nearest it. The rest of the board stays empty.",
-        "turnSequence": [
-          "The goose player moves first.",
-          "Move one goose one step along a line, forwards or sideways but never backwards.",
-          "The fox then moves one step along a line in any direction, or jumps.",
-          "To jump, the fox leaps straight over one goose that sits next to it and lands on the empty point directly beyond.",
-          "Remove every goose the fox jumps over.",
-          "If a further jump is available from the landing point, the fox may take it in the same turn.",
-          "Hand the turn back to the goose player."
-        ],
-        "legalMoves": [
-          "A goose moves one step to an adjacent empty point, never diagonally and never backwards.",
-          "A goose never jumps and never captures.",
-          "The fox moves one step to any adjacent empty point, in any direction.",
-          "The fox jumps only over a goose with an empty point directly beyond it, along a line.",
-          "The fox may decline a jump; jumping is not compulsory."
-        ],
-        "winCondition": "The geese win by surrounding the fox so that it has no legal move. The fox wins by reducing the geese below the number needed to trap it.",
-        "endCondition": "Play stops the moment the fox has no move, or the moment fewer than seven geese remain, whichever happens first.",
-        "durationMinutes": 15,
-        "ageMin": 6,
-        "edgeCases": {
-          "tie": "There is no draw in this game: one side always runs out of geese or out of moves. If a session must be cut short, the side that has done better swaps roles with the other and plays again; the traditional pairing is two games, one as each side.",
-          "stalemate": "If the geese shuffle without progress for ten turns in a row while the fox also stands still, count the geese. Seven or more geese means the geese have not yet lost, and the fox player takes the geese for a second game.",
-          "illegalMove": "Put the piece back and let the player try again. A goose moved backwards by mistake goes back to its point. If the fox has already removed geese on an illegal jump, return the geese and the fox to their places, and the fox forfeits its jump for that turn only."
-        },
-        "variants": [
-          {
-            "name": "Thirteen geese",
-            "note": "Fill only the top arm with thirteen geese. The fox has a much better game and the match becomes even for two adults."
-          },
-          {
-            "name": "Geese may move sideways and backwards",
-            "note": "A nineteenth-century English variant that makes the geese far stronger; use it when a child plays the geese against an adult fox."
-          }
-        ],
-        "simplifiedFirstGame": "Play on the cross with thirteen geese and let the fox jump only once per turn, never twice. This gives a shorter game with a clear shape and suits a first sitting with a six-year-old."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },
@@ -3422,7 +3320,8 @@
       "sources": [
         {
           "ref": "Linnaeus, Carl, Iter Lapponicum / Lachesis Lapponica (journal of 1732; published London, 1811)",
-          "type": "archive"
+          "type": "archive",
+          "locator": "1811 İngilizce çeviri, c. II, ss. 55–58 (şekil + on iki LAWS)"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -3450,6 +3349,21 @@
       },
       "playabilityStatus": "reconstructed",
       "reconstructionPlan": "BOŞLUK: Linnaeus'un Latince notu kralın kenara mı köşeye mi kaçtığını kesin söylemez; berabere de tanımsızdır. KAPATMA: kitap kaydın diyagramına sadık kalır, kaçış hedefini KENAR olarak okur (Linnaeus'un çizimindeki işaretli kareler kenardadır) ve tekrar eden konumu berabere sayar. DAYANAK: kaydın kendi diyagramı; başka hiçbir kaynak eklenmez. ETİKET: madde 'yeniden kurgulanmış kural' başlığıyla ve kaydın bir dış gözlemciye ait olduğu notuyla basılır.",
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
+      "ageMinEstimate": 9,
+      "materialsHint": [
+        "9×9 kare tahta",
+        "bir kral",
+        "sekiz savunan",
+        "on altı kuşatan"
+      ],
       "substitutionHint": [
         "kâğıda çizilmiş 9×9 ızgara",
         "düğme"
@@ -3473,59 +3387,6 @@
       "unresolvedQuestions": [
         "Hnefatafl ile aynı kitapta iki madde mi? Tablut, tafl ailesinin tek ayrıntılı tarihsel kaydıdır ve ayrı basılması editoryal olarak savunulabilir."
       ],
-      "rules": {
-        "objective": "One player defends a king who is trying to reach the edge of the board; the other player commands twice as many soldiers and is trying to capture him.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A board of nine squares by nine",
-          "One king piece",
-          "Eight defenders",
-          "Sixteen attackers"
-        ],
-        "substitutions": [
-          "A nine-by-nine grid drawn on paper",
-          "A bottle cap for the king",
-          "Two colours of buttons for the soldiers"
-        ],
-        "setup": "Mark the centre square. Stand the king on it. Place the eight defenders around him in a diamond: one on each square touching the king, and one two squares away in each of the four straight directions. Place the attackers in four groups of four, one group at the middle of each edge — three side by side on the edge itself and one directly in front of the middle of those three.",
-        "turnSequence": [
-          "The attacking player moves first.",
-          "Choose one of your pieces.",
-          "Slide it any number of empty squares in a straight line, up, down, left or right.",
-          "Stop before any piece; nothing jumps over anything.",
-          "After the move, look for enemy pieces trapped between two of yours along a straight line.",
-          "Remove every enemy soldier trapped that way by this move.",
-          "Hand the turn to your opponent."
-        ],
-        "legalMoves": [
-          "Every piece, including the king, moves like a rook in chess: any distance in a straight line, never diagonally, never through another piece.",
-          "Only the king may stand on the centre square. Once he leaves it, the square stays empty for everyone else.",
-          "A soldier is captured when the opponent's move places one of their pieces so that the soldier sits directly between two enemy pieces in a straight line.",
-          "A piece that moves of its own accord into the gap between two enemies is safe; capture only happens to the piece that is closed in.",
-          "The king is captured only when all four squares beside him are occupied by attackers, or when three attackers hold him against the empty centre square."
-        ],
-        "winCondition": "The defending player wins when the king reaches any square on the outer edge of the board. The attacking player wins by capturing the king.",
-        "endCondition": "Play stops the moment the king stands on an edge square or is captured.",
-        "durationMinutes": 30,
-        "ageMin": 9,
-        "edgeCases": {
-          "tie": "If the same position comes round for a third time with both players repeating their moves, the game is a draw. Swap sides and play again; a tafl match is traditionally counted over a pair of games, one as each side.",
-          "stalemate": "A player who cannot make any legal move loses. This almost always falls on the defenders, and it counts as a win for the attackers.",
-          "illegalMove": "Slide the piece back and let the player move again. If a capture was taken on the back of an illegal move, put the captured pieces back on their squares. Nobody loses a turn."
-        },
-        "variants": [
-          {
-            "name": "Corner escape",
-            "note": "The king must reach one of the four corner squares rather than any edge square. This is the modern tournament form and it gives the attackers a much better game."
-          },
-          {
-            "name": "Armed king",
-            "note": "The king helps to capture, acting as one of the two trapping pieces. Without this rule the defenders are purely evasive."
-          }
-        ],
-        "simplifiedFirstGame": "Play on a seven-by-seven grid with a king, four defenders and eight attackers, keeping every rule the same. The game lasts about ten minutes and shows the shape of the chase before the full board is worth trying."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },
@@ -4673,6 +4534,21 @@
       },
       "playabilityStatus": "reconstructed",
       "reconstructionPlan": "BOŞLUK: sömürge dönemi kronikleri oyunu anlatır ama tur kurallarını ve yasal hamle tanımını vermez; berabere ve döngü tanımsızdır. KAPATMA: kitap Durán ve Sahagún'un anlattığı iz ile fasulye zarını korur, hamle seçimini 'her atışta bir taş' kuralına indirger ve taşların tümü izde tıkalıysa turun pas geçildiğini, üç ardışık pasın oyunu berabere bitirdiğini basar. DAYANAK: kroniklerin verdiği malzeme ve iz betimlemesi; eksik olan tur mantığı için hiçbir başka kültürün oyunundan kural ÖDÜNÇ ALINMAZ. ETİKET: madde 'yeniden kurgulanmış kural' başlığıyla, bahsin puanla değiştirildiği notuyla ve sömürge yasağının tarihiyle birlikte basılır.",
+      "players": {
+        "min": 2,
+        "max": 2,
+        "note": "Kronikler karşılıklı oturan İKİ oyuncu anlatır. Dörtlü biçim modern yeniden kurgulamalarda görülür ve 16. yüzyıl kaynaklarında DAYANAĞI YOKTUR; kitap iki oyuncuyu basar."
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
+      "ageMinEstimate": 8,
+      "materialsHint": [
+        "haç biçimli iz",
+        "oyuncu başına altı taş",
+        "bir yüzü işaretli beş fasulye"
+      ],
       "substitutionHint": [
         "kâğıda çizilmiş haç",
         "düğme",
@@ -5501,7 +5377,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "§ LXX 'Nyout-nol-ki — Nyout Playing', ss. 66–69"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -5566,63 +5443,6 @@
       },
       "unresolvedQuestions": [],
       "culturalNotes": "Culin'in 1895 derlemesi oyunu ayrıntısıyla verir ve kitabın en iyi belgelenmiş takım oyunudur; büyük gruplarla oynanabilmesi onu 'aile akşamı' vaadi için birinci sınıf yapar.",
-      "rules": {
-        "objective": "Be the first team to bring all four of your markers right around the circuit and off the board.",
-        "playerCountMin": 2,
-        "playerCountMax": 8,
-        "materials": [
-          "A board of twenty-nine stations: twenty around a square, eight along two diagonals, and one at the centre",
-          "Four throwing sticks, each rounded on one side and flat on the other",
-          "Four markers per team"
-        ],
-        "substitutions": [
-          "The circuit drawn on paper",
-          "Four lolly sticks with one side coloured, or four coins",
-          "Buttons or coins in two colours as markers"
-        ],
-        "setup": "Draw the circuit: five stations along each side of a square, counting the corners, then two diagonals of three stations each crossing at a centre station. Mark the corner where play begins. Divide everyone into two teams and give each team four markers, held off the board to start.",
-        "turnSequence": [
-          "The first team throws all four sticks together onto the floor.",
-          "Count the sticks that land flat side up.",
-          "One flat scores one, two scores two, three scores three, four scores four.",
-          "No stick flat scores five.",
-          "A throw of four, or of none, earns another throw.",
-          "Keep throwing and adding until you score one, two or three.",
-          "Bring a new marker onto the board at the starting corner, or move one already there.",
-          "Count one station for each step of your total, going anticlockwise.",
-          "A marker that stops exactly on a corner or on the centre may take the diagonal.",
-          "The shortcut is used on your next move with that marker.",
-          "If your marker lands on a station holding an enemy marker, send that marker back off the board and throw again.",
-          "If it lands on your own marker, stack the two together and move them from then on as one.",
-          "Pass the sticks to the other team."
-        ],
-        "legalMoves": [
-          "A throw may be used to enter a new marker or to move any one marker already on the board.",
-          "A stack moves as a single marker and is captured as a single marker.",
-          "A marker leaves the board only by a throw that carries it past the finishing corner; an exact count is not needed.",
-          "The shortcut may only be taken from a corner or the centre, and only on the move that follows landing there exactly."
-        ],
-        "winCondition": "The first team to bring all four of its markers off the board wins.",
-        "endCondition": "Play stops as soon as one team's fourth marker leaves the board.",
-        "durationMinutes": 25,
-        "ageMin": 6,
-        "edgeCases": {
-          "tie": "Only one team can finish first, so a drawn game is impossible. If the sitting must stop early, count the markers each team has brought home, then the stations travelled by the markers still on the board; the higher total takes the game.",
-          "stalemate": "There is no position from which a team cannot move: a throw can always enter a new marker or advance one already out. If every one of a team's markers is off the board waiting to enter and the throw is a five, the marker still enters and moves the full five.",
-          "illegalMove": "Put the markers back where they were and replay the move with the same throw. A capture taken by mistake is undone and the captured marker returns to the station it was on. Nobody loses a throw."
-        },
-        "variants": [
-          {
-            "name": "Two markers",
-            "note": "Give each team two markers instead of four. The game runs about ten minutes and suits younger children or a short evening."
-          },
-          {
-            "name": "Free-for-all",
-            "note": "Everyone plays for themselves with one marker each, up to eight players. Captures become sharper and the table gets much louder."
-          }
-        ],
-        "simplifiedFirstGame": "Play with two markers per team and ignore stacking: a marker landing on a friendly marker simply stops one station short. Everything else stays the same, and a first game takes about ten minutes."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },
@@ -5893,7 +5713,7 @@
       "status": "candidate",
       "restrictionStatus": "open",
       "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
+      "sourceVerification": "page-verified",
       "sources": [
         {
           "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
@@ -5906,6 +5726,17 @@
         {
           "ref": "Shotwell, Peter, Go! More Than a Game (Boston: Tuttle, 2003)",
           "type": "book"
+        },
+        {
+          "ref": "Falkener, Edward, Games Ancient and Oriental and How to Play Them (London: Longmans, Green & Co., 1892)",
+          "type": "book",
+          "locator": "Böl. XXIII 'Wei-K'i and Go', ss. 239–240"
+        },
+        {
+          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
+          "type": "ethnography",
+          "locator": "§ LXXV 'Pa-tok — Pebble Game', ss. 91–92",
+          "note": "Faz 2 sayfa doğrulaması: Falkener'dan BAĞIMSIZ ikinci doğrulama. Kore (Pa-tok) · Çin (Wei ch'i) · Japonya (Go) aynı oyundur ve 19×19 = 361 kesişim burada da doğrulanmıştır."
         }
       ],
       "ruleCompleteness": {
@@ -6556,60 +6387,6 @@
         "Kurna Tapınağı'ndaki tahta çiziminin MÖ 1400'e tarihlenmesi yaygın olarak tekrarlanır ama TARİHLENDİRİLEMEZ; kitap bu iddiayı basmamalıdır."
       ],
       "culturalNotes": "Shakespeare'in Bir Yaz Gecesi Rüyası'nda geçen 'the nine men's morris is fill'd up with mud' dizesi, oyunun 16. yüzyıl İngiltere'sinde açık havada oynandığının kanıtıdır.",
-      "rules": {
-        "objective": "Build rows of three, and use each one to take an enemy piece off the board, until your opponent has too few pieces left to play.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A board of three squares one inside another, joined by a short line across the middle of each side",
-          "Nine pieces in one colour",
-          "Nine pieces in another colour"
-        ],
-        "substitutions": [
-          "The board drawn on paper or card",
-          "Coins against buttons, or two kinds of dried bean"
-        ],
-        "setup": "Draw the three squares and the four joining lines. The twenty-four points where lines meet or end are the playing points. Both players hold their nine pieces in hand; the board starts empty.",
-        "turnSequence": [
-          "While you still hold pieces in hand, place one on any empty point.",
-          "Once your hand is empty, instead slide one of your pieces along a line to an empty point next to it.",
-          "After placing or sliding, check whether you have just completed a row of three of your own pieces along one drawn line.",
-          "If you have, take one enemy piece off the board and set it aside.",
-          "Choose a piece that is not itself part of a row of three, unless every enemy piece is in one.",
-          "Hand the turn to your opponent."
-        ],
-        "legalMoves": [
-          "A piece may be placed on any empty point during the first phase.",
-          "A piece may slide only to a point directly joined to it by a drawn line, and only if that point is empty.",
-          "A row counts only along a drawn line; three pieces around a corner do not count.",
-          "A player reduced to exactly three pieces may move any piece to any empty point on the board, ignoring the lines.",
-          "A row broken and rebuilt on a later turn counts again."
-        ],
-        "winCondition": "You win when your opponent is down to two pieces, or when your opponent has pieces left but no legal move.",
-        "endCondition": "Play stops the moment one player falls to two pieces or is unable to move.",
-        "durationMinutes": 15,
-        "ageMin": 6,
-        "edgeCases": {
-          "tie": "If both players are down to three pieces and fifteen turns pass with no piece taken, the game is a draw. Draws are common between careful players and are not a fault in the game.",
-          "stalemate": "A player who has pieces but no legal move loses. This is a real way to win and worth watching for in the sliding phase.",
-          "illegalMove": "Put the piece back where it was and let the player choose again. If a piece was taken on the strength of a row that turns out not to be a row, put that piece back too. Nobody loses a turn."
-        },
-        "variants": [
-          {
-            "name": "Three Men's Morris",
-            "note": "A three-by-three board and three pieces each, no captures: the first to make any straight row of three wins. This is the version to teach a five-year-old."
-          },
-          {
-            "name": "Twelve Men's Morris",
-            "note": "Add the four diagonals from corner to corner and give each player twelve pieces. Rows form far more easily and the opening phase becomes the whole game."
-          },
-          {
-            "name": "No flying",
-            "note": "Drop the rule that lets three pieces move anywhere. The stronger player then wins nearly every time, which is why most tables keep flying."
-          }
-        ],
-        "simplifiedFirstGame": "Play the Three Men's Morris form first: a three-by-three grid, three pieces each, place then slide, and the first straight row of three wins. It takes two minutes, uses the same idea, and makes the full board easy to pick up afterwards."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },
@@ -7719,6 +7496,12 @@
         {
           "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
           "type": "book"
+        },
+        {
+          "ref": "Montgomery, Rev. W., 'The Malagasy Game of Fanorona', The Antananarivo Annual and Madagascar Magazine XI (Antananarivo: LMS Press, 1887), ss. 148–156",
+          "type": "journal",
+          "locator": "The Antananarivo Annual and Madagascar Magazine XI (1887), ss. 151–153",
+          "note": "Faz 2 sayfa doğrulaması sırasında bulundu: Bell ve Murray derlemelerinin ikisinden de eski, birincil saha kaydı. Kaynak zinciri kısaldı."
         }
       ],
       "ruleCompleteness": {
@@ -7776,59 +7559,6 @@
       },
       "unresolvedQuestions": [],
       "culturalNotes": "Bir hamlede bir taş dizisinin tamamı yaklaşılarak ya da çekilerek alınır; bu ikili alma biçimi başka hiçbir oyunda yoktur.",
-      "rules": {
-        "objective": "Take every one of your opponent's pieces.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A board of nine points across and five points down, with diagonals crossing at every second point",
-          "Twenty-two pieces in one colour",
-          "Twenty-two pieces in another colour"
-        ],
-        "substitutions": [
-          "The grid drawn on paper, ruling the diagonals from the corners so they cross at alternate points",
-          "Two colours of dried bean, forty-four in all"
-        ],
-        "setup": "Fill the two rows nearest you with your own pieces, eighteen in all. Your opponent does the same. In the middle row, working from the left, place white, black, white, black, then leave the centre point empty, then white, black, white, black. Every point is now occupied except the centre.",
-        "turnSequence": [
-          "Look for a capture; if one is available you must take it.",
-          "To capture by approach, step one of your pieces along a line into the point beside an enemy piece.",
-          "To capture by withdrawal, step one of your pieces along a line straight away from an adjacent enemy piece.",
-          "Remove the enemy piece you moved toward or away from.",
-          "Remove every further enemy piece standing behind it, in an unbroken line, in that same direction.",
-          "Stop removing at the first empty point or at the first piece of your own colour.",
-          "If the piece that just captured can capture again, you may continue with the same piece.",
-          "Hand the turn to your opponent."
-        ],
-        "legalMoves": [
-          "A piece moves one step along a drawn line to an adjacent empty point.",
-          "Diagonal moves are possible only from points where diagonals are drawn.",
-          "Capturing is compulsory whenever a capture exists.",
-          "A single move may not capture by approach and by withdrawal at once; the player chooses one direction.",
-          "During a chain of captures the piece may not move twice in the same direction, and may not return to a point it has already stood on in that chain.",
-          "A move that captures nothing is legal only when no capture is available anywhere on the board."
-        ],
-        "winCondition": "You win by capturing all of your opponent's pieces.",
-        "endCondition": "Play stops when one player has no pieces left, or when neither player can force a capture and both agree the position is dead.",
-        "durationMinutes": 30,
-        "ageMin": 8,
-        "edgeCases": {
-          "tie": "If both players are left with pieces that can never capture again, the game is a draw. The traditional match answer is to play a second game with the colours swapped and count the pair.",
-          "stalemate": "A player who has pieces but no legal move loses the game. Because a non-capturing move is always allowed when no capture exists, this is rare and usually means the pieces are completely boxed in.",
-          "illegalMove": "Put the piece back and return any pieces taken. If a capture was available and the player moved elsewhere, the move is replayed as a capture. If several captures were available, the player still chooses which one."
-        },
-        "variants": [
-          {
-            "name": "Fanoron-Dimyandimy",
-            "note": "A three by five board, five pieces each side. It teaches approach and withdrawal in about five minutes."
-          },
-          {
-            "name": "Fanoron-Telo",
-            "note": "A three by three board and three pieces each; the aim is a row of three rather than capture. It belongs with the alignment games and is worth showing alongside as a contrast."
-          }
-        ],
-        "simplifiedFirstGame": "Play on the three by five board with five pieces each and drop the chain rule: one capture per turn, then the turn passes. This keeps both capture directions, which are the whole point of the game, and gives a five-minute first sitting."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },
@@ -8847,6 +8577,11 @@
         {
           "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
           "type": "book"
+        },
+        {
+          "ref": "Falkener, Edward, Games Ancient and Oriental and How to Play Them (London: Longmans, Green & Co., 1892)",
+          "type": "book",
+          "locator": "Böl. XII 'Japanese Chess', ss. 155–157"
         }
       ],
       "ruleCompleteness": {
@@ -11514,15 +11249,17 @@
       "status": "candidate",
       "restrictionStatus": "open",
       "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
+      "sourceVerification": "page-verified",
       "sources": [
         {
           "ref": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Real Cat's-Cradle', ss. 324–333"
         },
         {
           "ref": "Haddon, Kathleen, Cat's Cradles from Many Lands (London: Longmans, 1911)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "giriş, s. 1"
         }
       ],
       "ruleCompleteness": {

@@ -356,6 +356,47 @@ def check_locked(games: list, cfg: dict, rep: Report) -> None:
               "(yalnızca kitap metniyle)" % min_tests + brief(untested))
 
 
+def merge_protected_rules(games: list, root: str, rep: Report) -> int:
+    """Korumalı kural bloklarını YEREL olarak envantere bağlar (karar K12).
+
+    `rules` blokları yayımlanmamış İngilizce kural prozası taşır ve public
+    depoda duramaz; `01_SOURCE/rules/` takip EDİLMEZ. Sonuç şudur:
+
+      · YERELDE  → dizin vardır, kural kapıları TAM güçle koşar
+      · CI'DA    → dizin yoktur, kural blokları bölümü BOŞ koşar
+
+    Bu, projenin `text` işiyle aynı sözleşmedir ve körlüğü aynı yerde
+    kapanır: `selftest.py` kusurlu kural bloklarını doğrudan besler ve
+    kapıların ısırdığını her koşuda kanıtlar. Bir kapının boş koşması
+    kabul edilebilir; ISIRMADIĞININ kanıtlanmamış olması değil.
+    """
+    d = os.path.join(root, "01_SOURCE", "rules")
+    if not os.path.isdir(d):
+        print("  · korumalı kural dizini yok — kural blokları boş koşar "
+              "(CI'da beklenen; körlüğü selftest kapatır)")
+        return 0
+    by = {g.get("gameId"): g for g in games}
+    n = 0
+    for fn in sorted(os.listdir(d)):
+        if not fn.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(d, fn), encoding="utf-8") as fh:
+                rec = json.load(fh)
+        except (OSError, json.JSONDecodeError) as exc:
+            rep.check(False, "korumalı kural dosyası bozuk: %s — %s" % (fn, exc))
+            continue
+        gid = rec.get("gameId")
+        if gid not in by:
+            rep.check(False, "korumalı kural dosyası envanterde olmayan bir "
+                             "oyuna ait: %s" % fn)
+            continue
+        by[gid]["rules"] = rec.get("rules")
+        n += 1
+    print("  · %d korumalı kural bloğu yerel olarak bağlandı" % n)
+    return n
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -378,6 +419,7 @@ def main() -> int:
         return 1
 
     games = idx.get("games", []) if isinstance(idx, dict) else idx
+    merged = merge_protected_rules(games, root, rep)
     check_completeness(games, rep)
     check_clarity(games, rep)
     check_status_consistency(games, rep)

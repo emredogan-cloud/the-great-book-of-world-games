@@ -11,6 +11,13 @@ Denetlenen:
   ④ Doğrulama seviyesi — bibliographic ↔ page-verified ayrımı tutarlı mı
   ⑤ ARAŞTIRMA → YAZIM KİLİDİ — locked/written için ≥2 bağımsız + sayfa doğrulaması
   ⑥ Güven seviyesi ile kaynak sayısı çelişiyor mu
+  ⑦ SAYFA DOĞRULAMA KAYDI — her locator bir PASAJLA destekleniyor mu (K17)
+
+⑦ NEDEN VAR: bir sayfa numarası uydurulabilir. Faz 2'ye kadar `"locator":
+"s. 143"` yazmak yeterliydi ve hiçbir şey onu denetlemiyordu. Artık her
+locator `01_SOURCE/source_verification.json` içinde `status: verified` bir
+kayda ve o kaydın taşıdığı KAYNAĞIN KENDİ CÜMLESİNE bağlıdır. Sayfa
+uydurulabilir; o sayfada duran pasaj uydurulamaz.
 
 ② NEDEN MEKANİZMA: "LLM çıktısı hiçbir koşulda kaynak değildir" bir disiplin
 cümlesidir ve disiplin unutulur. Bu tarama onu bir kapıya bağlar.
@@ -161,15 +168,31 @@ def check_independence(games: list, cfg: dict, rep: Report) -> None:
 
     # page-verified iddiası, künyede bir locator ile DESTEKLENMEK zorundadır.
     # Desteksiz bir 'sayfayı gördüm' iddiası, bu kitabın en pahalı yalanıdır.
-    unlocated = []
+    #
+    # ⚠ FAZ 2'DE KURAL DEĞİŞTİ VE SIKILAŞTI. Eski kural şuydu: page-verified
+    # bir oyunun BÜTÜN künyeleri locator taşımalı. Bu kural, doğrulanmamış bir
+    # künyeyi silmeyi ya da ona uydurma bir sayfa yazmayı ÖDÜLLENDİRİYORDU —
+    # yani tam olarak engellemek istediği davranışı teşvik ediyordu.
+    #
+    # Yeni kural iki parçalıdır ve daha serttir:
+    #   (a) LOCATOR = DOĞRULANMIŞ. Locatorsuz künye page-verified sayılmaz ve
+    #       bağımsızlık sayımına giremez. Silinmesi gerekmez; ileri okuma
+    #       olarak kalır ama HİÇBİR ŞEY KANITLAMAZ.
+    #   (b) Bir oyunun page-verified olabilmesi için ≥minIndependent BAĞIMSIZ
+    #       ve LOCATORLU künyesi olmalıdır.
+    # Locatorun kendisi ⑦'de source_verification.json'a bağlanır: pasajsız
+    # bir sayfa numarası yazmak artık mekanik olarak imkânsızdır.
+    thin_pv = []
     for g in games:
         if g.get("sourceVerification") != "page-verified":
             continue
-        for s in g.get("sources") or []:
-            if not (s.get("locator") or "").strip():
-                unlocated.append("%s → %s" % (g.get("gameId"), author_key(s.get("ref", ""))))
-    rep.check(not unlocated,
-              "page-verified sayılan her künyede locator var" + brief(unlocated))
+        located = [s for s in (g.get("sources") or []) if (s.get("locator") or "").strip()]
+        n = independent_count(located)
+        if n < min_ind:
+            thin_pv.append("%s (%d bağımsız locatorlu künye)" % (g.get("gameId"), n))
+    rep.check(not thin_pv,
+              "page-verified her oyunun ≥%d bağımsız LOCATORLU künyesi var" % min_ind
+              + brief(thin_pv))
 
     counts = {g.get("gameId"): independent_count(g.get("sources")) for g in games}
     rep.facts["independent_ge2"] = sum(1 for v in counts.values() if v >= min_ind)
@@ -190,6 +213,122 @@ def check_independence(games: list, cfg: dict, rep: Report) -> None:
     if rep.facts["single_source"]:
         rep.warn("%d oyun tek kaynaklı — locked olabilmeleri için ikinci "
                  "bağımsız künye gerekir" % rep.facts["single_source"])
+
+
+def check_verification_records(games: list, cfg: dict, root: str,
+                               rep: Report) -> None:
+    """⑦ SAYFA DOĞRULAMA KAYDI — karar K17.
+
+    Bu bölüm bir tek soruyu sorar ve cevabı mekanik hâle getirir:
+
+        Bir locator UYDURULABİLİR Mİ?
+
+    Eskiden evet: `"locator": "s. 143"` yazmak yeterliydi ve hiçbir şey onu
+    denetlemiyordu. Artık her locator, `source_verification.json` içinde
+    `status: verified` bir kayıtla — ve o kaydın taşıdığı KAYNAĞIN KENDİ
+    CÜMLESİYLE — desteklenmek zorundadır.
+
+    Bir sayfa numarası uydurulabilir; o sayfada duran pasaj uydurulamaz.
+    Uydurulursa denetlenebilir biçimde yanlıştır: kaynağı açan herkes görür.
+    """
+    svcfg = cfg.get("sourceVerification") or {}
+    path = os.path.join(root, svcfg.get("recordFile",
+                                        "01_SOURCE/source_verification.json"))
+    print("\n── ⑦ sayfa doğrulama kaydı ──")
+    if not os.path.exists(path):
+        rep.warn("doğrulama kaydı yok — sayfa doğrulaması henüz başlamadı")
+        return
+
+    try:
+        data = load(path)
+    except json.JSONDecodeError as exc:
+        rep.check(False, "doğrulama kaydı okunabiliyor — %s" % exc)
+        return
+
+    records = data.get("records", [])
+    required = svcfg.get("requiredFields", [])
+    statuses = svcfg.get("statuses", ["verified", "blocked", "pending"])
+
+    incomplete, bad_status, thin_passage = [], [], []
+    for i, r in enumerate(records):
+        tag = "%s#%d" % (r.get("gameId", "?"), i + 1)
+        if [f for f in required if f not in r]:
+            incomplete.append(tag)
+        if r.get("status") not in statuses:
+            bad_status.append("%s → %s" % (tag, r.get("status")))
+        # `verified` iddiası PASAJ ister. Pasajsız doğrulama, doğrulama değildir.
+        if r.get("status") == "verified":
+            if len((r.get("supportingPassage") or "").strip()) < 40:
+                thin_passage.append(tag)
+            if not (r.get("locator") or "").strip():
+                thin_passage.append("%s (locator yok)" % tag)
+
+    rep.check(not incomplete,
+              "her doğrulama kaydı dokuz alanı taşıyor" + brief(incomplete))
+    rep.check(not bad_status, "doğrulama durumları geçerli" + brief(bad_status))
+    rep.check(not thin_passage,
+              "'verified' her kayıt locator VE dayanak pasaj taşıyor"
+              + brief(thin_passage))
+
+    # ⚠ EN ÖNEMLİ DENETİM: envanterdeki her locator, kayıtta bir `verified`
+    # doğrulamayla eşleşmelidir. Eşleşmeyen locator UYDURMA sayılır.
+    verified_pairs = {(r.get("gameId"), author_key(r.get("sourceRef", "")))
+                      for r in records if r.get("status") == "verified"}
+    orphan = []
+    for g in games:
+        for s in g.get("sources") or []:
+            if not (s.get("locator") or "").strip():
+                continue
+            if (g.get("gameId"), author_key(s.get("ref", ""))) not in verified_pairs:
+                orphan.append("%s → %s" % (g.get("gameId"),
+                                           author_key(s.get("ref", ""))))
+    rep.check(not orphan,
+              "envanterdeki her locator bir 'verified' kayıtla destekleniyor"
+              + brief(orphan))
+
+    # `blocked` bir kaynak, envanterde locator TAŞIYAMAZ: erişilemeyen bir
+    # esere sayfa numarası yazmak, doğrulamanın tam tersidir.
+    blocked_pairs = {(r.get("gameId"), author_key(r.get("sourceRef", "")))
+                     for r in records if r.get("status") == "blocked"}
+    contradiction = []
+    for g in games:
+        for s in g.get("sources") or []:
+            if (s.get("locator") or "").strip() and \
+                    (g.get("gameId"), author_key(s.get("ref", ""))) in blocked_pairs:
+                contradiction.append("%s → %s" % (g.get("gameId"),
+                                                  author_key(s.get("ref", ""))))
+    rep.check(not contradiction,
+              "'blocked' hiçbir kaynak envanterde locator taşımıyor"
+              + brief(contradiction))
+
+    by_status: dict = {}
+    for r in records:
+        by_status[r.get("status")] = by_status.get(r.get("status"), 0) + 1
+    rep.facts["verification"] = by_status
+    print("  · kayıt: %d  ·  %s" % (len(records),
+                                    " · ".join("%s %d" % kv
+                                               for kv in sorted(by_status.items()))))
+
+    # Pilot kapsamı: her pilot oyun için en az bir DENEME kaydı olmalıdır.
+    # Denenmemiş bir oyun 'engellenmiş' sayılamaz — hiç açılmamıştır.
+    plock = os.path.join(root, (cfg.get("pilot") or {}).get(
+        "lockFile", "01_SOURCE/pilot_lock.json"))
+    if os.path.exists(plock):
+        pilot_ids = [e["gameId"] for e in load(plock).get("entries", [])]
+        attempted = {r.get("gameId") for r in records}
+        untried = [i for i in pilot_ids if i not in attempted]
+        rep.check(not untried,
+                  "her pilot oyun için doğrulama DENENDİ (%d oyun)" % len(pilot_ids)
+                  + brief(untried))
+        ok_ids = {r.get("gameId") for r in records if r.get("status") == "verified"}
+        full = [i for i in pilot_ids
+                if sum(1 for r in records
+                       if r.get("gameId") == i and r.get("status") == "verified") >= 2]
+        rep.facts["pilot_verified_any"] = len([i for i in pilot_ids if i in ok_ids])
+        rep.facts["pilot_verified_full"] = len(full)
+        print("  · pilot: %d/%d oyunda ≥1 doğrulama · %d/%d oyunda ≥2 (locked eşiği)"
+              % (rep.facts["pilot_verified_any"], len(pilot_ids),
+                 len(full), len(pilot_ids)))
 
 
 def check_write_lock(games: list, cfg: dict, rep: Report) -> None:
@@ -253,6 +392,7 @@ def main() -> int:
 
     check_sources(games, rep)
     check_independence(games, cfg, rep)
+    check_verification_records(games, cfg, root, rep)
     check_write_lock(games, cfg, rep)
 
     print("\n" + "=" * 74)

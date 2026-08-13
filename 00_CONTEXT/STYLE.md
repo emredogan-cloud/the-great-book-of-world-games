@@ -1,10 +1,36 @@
 # STYLE — The Great Book of World Games
 
-> Sürüm **1.0 · bootstrap**. Bu belge Faz 2'de **ölçümle** kalibre edilir ve
-> v2.0 olur. Buradaki sayılar şu an *hedeftir*, ölçüm değil.
+> Sürüm **2.0 · Faz 2 · ÖLÇÜMLE KALİBRE EDİLDİ.**
 >
-> Değişiklik kurucu onayı gerektirir · `project_config.json § style` ile
+> v1.0'ın sayıları hedefti. Buradakiler **ölçüldü**: üç oyun gerçek trimde
+> (8,5 × 11), gerçek fontla (Times-Roman 10,5/13,5), gerçek sütun
+> genişliğinde (181 mm) dizildi ve satırlar sayıldı.
+> Ölçüm: `06_REPORTS/phase2-typeset-measurement.json`
+>
+> Kurucu onayı bekliyor (AÇIK KARAR A5) · `project_config.json § style` ile
 > senkron kalmalıdır.
+
+---
+
+## 0 · Faz 2 ölçümü — kalibrasyonun tek cümlesi
+
+> **Sayfa bütçesi bir KELİME bütçesi değil, bir DİYAGRAM bütçesidir.**
+
+| Ölçülen | Faz 1 hipotezi | **Faz 2 ölçümü** | Sonuç |
+|---|---:|---:|---|
+| Kelime / dizilmiş sayfa | 320 | **389** | hipotez %18 düşüktü |
+| Kelime / oyun | 650 | **708** | bantta (480–900) |
+| **Metin** sayfa / oyun | — | **1,37** | oyunlar arası fark **0,01** |
+| **Diyagram** sayfa / oyun | — | **0,45** | oyunlar arası fark **0,55** |
+| Toplam sayfa / oyun | 2,00 | **1,82** | bantta (2,0 ± 0,25) |
+
+Üç oyunun metni birbirinden **yüzde bir** farklı çıktı. Diyagram alanı ise
+üç katına kadar değişti. Yani bir maddeyi çift sayfadan taşıran şey uzun
+proza değil, **büyük ya da çok sayıda diyagramdır**.
+
+**Yazım için sonucu:** 650 kelime hedefi doğrudur ve **daraltılmasına gerek
+yoktur**. Kısıt diyagram tarafındadır ve `DIAGRAM_LANGUAGE.md § 7.1`de
+150 mm'lik bir bütçeye bağlanmıştır.
 
 ---
 
@@ -24,14 +50,18 @@ adım ise kusurdur.
 
 ## 2 · Ölçülen bantlar
 
-| Ölçüt | Hedef | Kapı |
-|---|---|---|
-| Oyun başına kelime | 650 (bant 480–900) | `qa_length` |
-| Kültürel hikâye | ~120 kelime | `qa_length` |
-| Anlatı cümle ortalaması | 12,0–19,0 kelime | `qa_drift` |
-| **Kural metni cümle azamisi** | **22 kelime** | `qa_rules` |
-| Kural adımı | numaralı, **tek eylem** | `qa_rules` |
-| Aile portresi | ~600 kelime | `qa_length` |
+| Ölçüt | Hedef | Faz 2'de ÖLÇÜLEN | Kapı |
+|---|---|---|---|
+| Oyun başına kelime | 650 (bant 480–900) | **708** ✓ | `qa_length` |
+| Kültürel hikâye | ~120 kelime | **118–122** ✓ | `qa_length` |
+| Anlatı cümle ortalaması | 12,0–19,0 kelime | — | `qa_drift` |
+| **Kural metni cümle azamisi** | **22 kelime** | **en uzun 21** ✓ | `qa_rules` |
+| Kural adımı | numaralı, **tek eylem** | — | `qa_rules` |
+| Aile portresi | ~600 kelime | Faz 3 | `qa_length` |
+| **Diyagram alanı / madde** | **≤150 mm** | 57,5 – 189,5 mm ⚠ | `qa_diagram` |
+
+Son satır Faz 2'de **eklendi** ve bir maddede (Tablut) aşıldı. Kısıt buradan
+gelir, kelime sayısından değil.
 
 ---
 

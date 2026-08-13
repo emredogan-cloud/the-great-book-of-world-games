@@ -1,0 +1,108 @@
+{
+  "diagrams": [
+    {
+      "diagramId": "tablut-setup",
+      "gameId": "tablut",
+      "widthMm": 75.0,
+      "heightMm": 88.5,
+      "boardClass": "cell",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/tablut-setup.svg",
+      "renderedWidthMm": 75.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "tablut-capture",
+      "gameId": "tablut",
+      "widthMm": 75.0,
+      "heightMm": 93.0,
+      "boardClass": "cell",
+      "panels": 2,
+      "file": "07_ASSETS/diagrams/tablut-capture.svg",
+      "renderedWidthMm": 154.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "bao-setup",
+      "gameId": "bao-la-kiswahili",
+      "widthMm": 90.4,
+      "heightMm": 60.2,
+      "boardClass": "pit",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/bao-setup.svg",
+      "renderedWidthMm": 90.4,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "go-9x9-capture",
+      "gameId": "go",
+      "widthMm": 68.0,
+      "heightMm": 81.5,
+      "boardClass": "point",
+      "panels": 2,
+      "file": "07_ASSETS/diagrams/go-9x9-capture.svg",
+      "renderedWidthMm": 140.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "fanorona-withdrawal",
+      "gameId": "fanorona",
+      "widthMm": 68.0,
+      "heightMm": 53.5,
+      "boardClass": "point",
+      "panels": 2,
+      "file": "07_ASSETS/diagrams/fanorona-withdrawal.svg",
+      "renderedWidthMm": 140.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "yut-track",
+      "gameId": "yut-nori",
+      "widthMm": 54.0,
+      "heightMm": 72.0,
+      "boardClass": "track",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/yut-track.svg",
+      "renderedWidthMm": 54.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "catscradle-cradle",
+      "gameId": "cats-cradle",
+      "widthMm": 70.0,
+      "heightMm": 182.5,
+      "boardClass": "bodily",
+      "panels": 3,
+      "file": "07_ASSETS/diagrams/catscradle-cradle.svg",
+      "renderedWidthMm": 70.0,
+      "panelLayout": "vertical",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": false
+    },
+    {
+      "diagramId": "mbube-formation",
+      "gameId": "mbube-mbube",
+      "widthMm": 70.0,
+      "heightMm": 59.5,
+      "boardClass": "bodily",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/mbube-formation.svg",
+      "renderedWidthMm": 70.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    }
+  ]
+}

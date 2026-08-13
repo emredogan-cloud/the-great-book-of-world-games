@@ -34,9 +34,6 @@
 
 ## 3. Sayfa ve fiyat modeli
 
-> ⚠ Model **HENÜZ KALİBRE EDİLMEDİ**. Aşağıdaki her sayı bir
-> hipotezdir; gerçek dizgi ölçümü **phase2** fazında yapılır.
-
 | | |
 |---|---:|
 | Oyun başına faturalanan sayfa | 2 |
@@ -62,10 +59,10 @@
 | Aile | Aday | Taban | Hedef | |
 |---|---:|---:|---:|---|
 | The Sowing Games | **20** | 16 | 14 | `████████████` |
-| The Hunt and the Siege | **21** | 16 | 14 | `████████████` |
+| The Hunt and the Siege | **21** | 16 | 10 | `████████████` |
 | The Race Home | **24** | 16 | 15 | `████████████` |
 | The Line and the Territory | **20** | 16 | 14 | `████████████` |
-| The War Board | **24** | 16 | 13 | `████████████` |
+| The War Board | **24** | 16 | 17 | `████████████` |
 | Chance and Nerve | **22** | 16 | 15 | `████████████` |
 | Games Without a Board | **22** | 16 | 15 | `████████████` |
 

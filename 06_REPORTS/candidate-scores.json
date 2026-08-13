@@ -12,7 +12,7 @@
   },
   "diversityBonus": 0.15,
   "eligible": 119,
-  "proposed": 96,
+  "proposed": 100,
   "proposedCultures": [
     "Abbasid Arab",
     "Akan",
@@ -94,7 +94,7 @@
       "cultures": 14
     },
     "hunt-siege": {
-      "target": 14,
+      "target": 10,
       "eligible": 10,
       "selected": 10,
       "cultures": 10
@@ -112,10 +112,10 @@
       "cultures": 13
     },
     "war-board": {
-      "target": 13,
+      "target": 17,
       "eligible": 20,
-      "selected": 13,
-      "cultures": 13
+      "selected": 17,
+      "cultures": 16
     },
     "chance": {
       "target": 15,
@@ -130,17 +130,8 @@
       "cultures": 11
     }
   },
-  "shortfall": 4,
-  "proposedRebalance": {
-    "hunt-siege": {
-      "current": 14,
-      "proposed": 10
-    },
-    "war-board": {
-      "current": 13,
-      "proposed": 17
-    }
-  },
+  "shortfall": 0,
+  "proposedRebalance": {},
   "proposal": [
     {
       "gameId": "morra",
@@ -717,6 +708,30 @@
       "family": "war-board",
       "culture": "Amazigh",
       "score": 4.18
+    },
+    {
+      "gameId": "hasami-shogi",
+      "family": "war-board",
+      "culture": "Japanese",
+      "score": 4.12
+    },
+    {
+      "gameId": "surakarta",
+      "family": "war-board",
+      "culture": "Javanese",
+      "score": 4.12
+    },
+    {
+      "gameId": "jeu-de-dames",
+      "family": "war-board",
+      "culture": "French",
+      "score": 4.08
+    },
+    {
+      "gameId": "makruk",
+      "family": "war-board",
+      "culture": "Thai",
+      "score": 3.98
     }
   ],
   "reserve": [
@@ -727,20 +742,16 @@
     "cuarenta",
     "daldos",
     "ephedrismos",
-    "hasami-shogi",
     "janggi",
-    "jeu-de-dames",
     "kho-kho",
     "lagori",
     "ludus-duodecim-scriptorum",
     "ludus-latrunculorum",
     "luk-tsut-kei",
-    "makruk",
     "nine-holes",
     "puluc",
     "quoits",
     "renju",
-    "surakarta",
     "tarocchini",
     "tuknanavuhpi"
   ]

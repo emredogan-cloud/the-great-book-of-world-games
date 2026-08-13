@@ -40,9 +40,19 @@ def load(path: str):
 
 
 def modelled_pages(cfg: dict) -> int:
-    """page_budget.py ile AYNI formül. İki betik tek bir sayfa sayısı kullanır."""
+    """page_budget.py ile AYNI formül. İki betik tek bir sayfa sayısı kullanır.
+
+    ⚠ KALİBRE EDİLMİŞSE ÖLÇÜM KAZANIR. Telif hesabı sayfa sayısına doğrudan
+    bağlıdır: 250 yerine 316 sayfa, birim telifi 1,12 $ düşürür. Ölçümü
+    page_budget'ta kullanıp burada kullanmamak, kitabın EKONOMİSİNİ eski
+    hipotezle hesaplamak demektir — ve bu, iki betiğin iki farklı kitabı
+    anlatması demektir (Bestiarium D17 kusurunun ekonomik biçimi)."""
     scope, pm = cfg["scope"], cfg["production"]["pageModel"]
-    raw = (scope["games"] * pm["pagesPerGame"]
+    meas = pm.get("measured") or {}
+    per_game = pm["pagesPerGame"]
+    if pm.get("calibrated") and meas.get("billedPagesPerGame"):
+        per_game = meas["billedPagesPerGame"]
+    raw = (round(scope["games"] * per_game)
            + scope["families"] * pm["familyOpenerPages"]
            + pm["frontMatterPages"] + pm["backMatterPages"])
     mult = max(1, pm.get("signatureMultiple", 1))
