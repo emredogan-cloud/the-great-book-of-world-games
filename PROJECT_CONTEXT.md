@@ -4,7 +4,7 @@
 > belgedir.** Hafızası olmayan bir ajan buradan başlar ve projenin nerede
 > olduğunu, neyin kilitli neyin açık olduğunu buradan öğrenir.
 >
-> Son güncelleme: **13 Ağustos 2026** · Faz: **2 · KISMEN TAMAM** · Kapı: `phase1`
+> Son güncelleme: **13 Ağustos 2026** · Faz: **3 · ÜRETİM AÇIK** · Kapı: `phase1`
 
 ---
 
@@ -54,32 +54,43 @@ ayrılmış — akademik oyun tarihi (oynanamaz) ve jenerik aile oyunu listeleri
 
 ## 4 · Şu anki durum
 
+> ⚠ **ÜRETİM AÇIK · RESMÎ KAPI KAPALI.** İkisi ayrı şeylerdir ve bu
+> ayrım kasıtlıdır (karar K18). Kurucu Faz 3 üretim işini yetkilendirdi;
+> resmî faz kapısı **yalnızca gerçek kanıtla** açılır.
+
 | | |
 |---|---|
-| Faz | **2 · KISMEN TAMAM** — ölçüm ve mimari bitti, KANIT bitmedi |
-| Kapı (`.gate`) | **`phase1`** — yükseltilemedi |
-| **Kilitli kapsam** | **100 oyun · 71 kültür · 19 yedek** ✅ |
-| Aile dengesi | **10 / 17 uygulandı** (A2) ✅ |
-| Pilot oyun | **12 seçildi** · 7/7 aile ✅ |
-| Sayfa doğrulaması | **7/12 kısmi · 2/12 tam** ⛔ |
-| Yazılmış oyun | **3** / 100 |
+| Faz | **3 · ÜRETİM ŞERİDİ AÇIK** (koşullu · K18) |
+| Kapı (`.gate`) | **`phase1`** — yükseltilmedi ve yükseltilmeyecek |
+| Kilitli kapsam | **100 oyun · 71 kültür · 19 yedek** ✅ |
+| **Yazılmış oyun** | **11** / 100 |
 | Kilitli oyun | **0** / 100 |
+| Doğrulanmış künye | **17** (3 oyunda ≥2) |
+| Kaynak: denendi-erişilemedi | **4** oyun |
+| Kaynak: henüz denenmedi | **82** oyun |
 | **Dış oynanabilirlik testi** | **0** ⛔ **BLOKLAYICI** |
-| Diyagram dili | **v1.1 · DONDURULDU** ✅ |
-| Sayfa modeli | **316** (hedef 256, +%23,4) ⛔ şerhli |
-| Selftest | **117 denetim** ✅ |
-| Depo | public · `faz/2-pilot` · CI **YEŞİL** |
-| **Sonraki adım** | **KURUCU: dış test oturumları + kaynak erişimi** |
+| Diyagram | **16 render · hepsi ≤150 mm** ✅ |
+| Diyagram dili | **v1.3** (düzensiz tahtalar) |
+| **Sayfa modeli** | **268** (hedef 256, **+%4,7**) ✅ **BANTTA** |
+| Selftest | **126 denetim** ✅ |
+| Depo | public · `faz/3-blok-1` · CI **YEŞİL** |
+| **Sonraki adım** | **KURUCU: dış test + kaynak erişimi** |
 
-Faz raporu: [`06_REPORTS/PHASE_2_REPORT.md`](06_REPORTS/PHASE_2_REPORT.md)
+Faz raporları: [`06_REPORTS/PHASE_2_REPORT.md`](06_REPORTS/PHASE_2_REPORT.md) ·
+[`06_REPORTS/PHASE_3_REPORT.md`](06_REPORTS/PHASE_3_REPORT.md)
 
-⚠ **Faz 3 BAŞLAMADI ve başlayamaz.** İki sert bloklayıcı var:
+**Faz 3'ün en önemli çıktısı bir düzeltmedir:** Faz 2'nin 316 sayfalık
+projeksiyonu yanlıştı. Üç oyunluk örneklemde taşma oranı %33 sanılmıştı;
+on bir oyunda %9 çıktı ve kitap **268 sayfayla hedef bandın içine** girdi.
+Faz 2'nin önerdiği üç müdahalenin hiçbiri gerekmedi.
 
-1. **Dış insan testi yapılmadı.** Ajan test yapamaz; sahte kayıt üretilmez.
-   Test paketi hazır (`01_SOURCE/pilot_tr/`), oturum kurucunundur.
-2. **Telifli kaynaklara erişilemiyor.** Pilotun 12 oyunundan yalnızca 2'si
-   ≥2 sayfa-doğrulanmış kaynağa ulaşabildi. Kütüphane erişimi olmadan
-   100 oyun `locked` yapılamaz.
+⚠ **Faz 4 BAŞLAMADI.** İki sert bloklayıcı sürüyor:
+
+1. **Dış insan testi yapılmadı.** Ajan test yapamaz; sahte kayıt
+   üretilmez. Paket hazır (`01_SOURCE/pilot_tr/`), oturum kurucunundur.
+2. **Telifli kaynaklara erişim.** Dört oyun denendi ve erişilemedi;
+   82 oyun henüz sıraya gelmedi. Kütüphane erişimi olmadan `locked`
+   eşiği karşılanamaz.
 
 ## 5 · Bu projenin risk profili
 
@@ -197,7 +208,8 @@ kapanmadan sonrakine geçilmez. CI kırmızıyken hiçbir şey ilerlemez.
 
 > **KURUCU EYLEMİ BEKLENİYOR — onay değil, EYLEM.**
 >
-> A1 · A2 · A3 · A7 kapandı (K12–K15). Faz 2 ölçümlerini üretti ve durdu.
+> A1 · A2 · A3 · A7 kapandı (K12–K15). Faz 3 sekiz oyun yazdı, sayfa
+> modelini düzeltti ve durdu.
 >
 > Bekleyen iki BLOKLAYICI:
 > 1. **Dış oynanabilirlik test oturumları.** Paket `01_SOURCE/pilot_tr/`

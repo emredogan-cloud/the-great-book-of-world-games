@@ -214,8 +214,13 @@ PILOT_MARKER_DEFINERS = {
     "04_BUILD/qa_language_split.py",
     "DECISIONS.md",
     "06_REPORTS/PHASE_2_REPORT.md",
+    "06_REPORTS/PHASE_3_REPORT.md",
     "01_SOURCE/playtests/README.md",
 }
+# NOT: bu liste her fazda bir satır uzuyor ve bu BEKLENEN bir şeydir —
+# her faz raporu test paketini ANLATIR ve işareti alıntılar. Uzayan şey
+# muafiyet değil, işareti ANAN belge sayısıdır. Dedektör zayıflamıyor:
+# koruma hâlâ 01_SOURCE/pilot_tr/ dışındaki her KULLANIMI yakalıyor.
 
 # ④ Sır taraması ---------------------------------------------------------------
 SECRET_PATTERNS = [
