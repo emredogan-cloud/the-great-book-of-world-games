@@ -5,6 +5,48 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.2.0] — 2026-08-13 · FAZ 2 · Pilot, sayfa doğrulaması, diyagram dili, dizgi
+
+> Faz 2 bir üretim fazı değil bir **ölçüm** fazıdır. Ürettiği en değerli
+> şey üç sayı ve üç hayırdır. **Faz KISMEN tamamdır** ve `.gate` `phase1`
+> olarak kaldı: 12 `locked` oyun isteyen kapı, sıfır kilitli oyunla açılamaz.
+
+### Kurucu kararları kapandı
+- **K12 · A1** — manuscript public olmaz, iş durmaz; koruma güçlendirildi
+- **K13 · A2** — av-kuşatma 14→10, savaş tahtası 13→17 (toplam 100)
+- **K14 · A3** — nihai 100 oyun `scope_lock.json` içinde KİLİTLİ
+- **K15 · A7** — dış testçi var; iç kanıt dış kanıtın yerine geçmez
+- **K16** — ticari dil İngilizce, Türkçe yalnızca test malzemesi
+- **K17** — sayfa doğrulaması bir etiket değil bir KAYITTIR
+
+### Ölçülenler
+- **kelime/sayfa 389** (Faz 1 hipotezi 320 · %18 düşüktü)
+- **metin 1,37 sayfa/oyun ve SABİT** (oyunlar arası fark 0,01)
+- **diyagram 0,45 sayfa/oyun ve DEĞİŞKEN** (fark 0,55)
+- → **sayfa bütçesi bir KELİME bütçesi değil, bir DİYAGRAM bütçesidir**
+- sayfa modeli 250 → **316** (+%23,4); hedef DEĞİŞTİRİLMEDİ, şerhle belgelendi
+- birim telif her sürümde **1,12 $ düşüyor**
+
+### Bulunan kusurlar
+- **GERÇEK SIZINTI:** altı oyunun tam İngilizce kural metni public depodaydı.
+  Faz 1 dedektörü göremezdi (etiket taşımıyordu). Korumalı katmana taşındı.
+- Diyagram dili kendi genişlik sınırını aşıyordu → v1.1 (dikey panel)
+- Dil kapısı tek Türkçe cümleyi kaçırıyordu → iki eşikli ölçüt
+- `tablut`/`patolli` üç indeksten sessizce düşerdi → alanlar dolduruldu
+- **selftest kendi regresyonumu yakaladı** (page_budget kalibre modu)
+
+### Yeni kapılar
+`validate_scope.py` · `qa_diagram.py` · `qa_playable.py` ·
+`qa_language_split.py` · `calibrate_pages.py` · `render_diagrams.py`
+Selftest **85 → 117** denetim. CI metin kapılarını artık **tarayarak**
+koşuyor — elle liste tutmak bir körlük kaynağıydı.
+
+### YAPILMAYANLAR — açıkça
+- **Dış oynanabilirlik testi: SIFIR.** Paket hazır, oturum yapılmadı.
+  Sahte kayıt üretilmedi.
+- **Sayfa doğrulaması 2/12 tam.** Telifli monografilere erişilemedi.
+- **Yazılan oyun: 3/12.** Dokuzunda kaynak kural metnini vermiyor; uydurulmadı.
+
 ## [0.1.0] — 2026-08-13 · Faz 1 · Envanter, tasnif ve oynanabilirlik mimarisi
 
 Kitabın **veri omurgası** kuruldu. **Hiçbir proza yazılmadı.**
