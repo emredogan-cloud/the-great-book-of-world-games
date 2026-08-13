@@ -179,13 +179,33 @@ jobs:
       # her satılan kopyada telifi düşürür.
       - name: sürüm, telif ve sayfa bütçesi
         run: |
-          for s in editions page_budget score_candidates calibrate_pages; do
+          for s in editions page_budget score_candidates; do
             if [ -f "04_BUILD/$s.py" ]; then
               python3 "04_BUILD/$s.py" --verbose --json "06_REPORTS/${s//_/-}.json" || exit 1
             else
               echo "::notice::$s.py henüz yok — Faz 1/2 teslimatı"
             fi
           done
+      # DİZGİ ÖLÇÜMÜ AYRI KOŞAR VE `run_optional` SÖZLEŞMESİNE UYAR.
+      # Çıkış kodu 2 = "bağımlılık yok, ATLANDI" ve bu bir KUSUR DEĞİLDİR;
+      # reportlab kalite kapılarına değil dizgi işlerine aittir (karar K7).
+      # CI'da ölçüm TEKRARLANMAZ — işlenmiş ölçümün tutarlılığı denetlenir;
+      # ticari manuscript zaten depoda yoktur (A1).
+      - name: gerçek dizgi ölçümü (--check · bağımlılık isteğe bağlı)
+        run: |
+          if [ ! -f 04_BUILD/calibrate_pages.py ]; then
+            echo "::notice::calibrate_pages.py henüz yok — Faz 2 teslimatı"; exit 0
+          fi
+          set +e
+          python3 04_BUILD/calibrate_pages.py --check \
+            --json 06_REPORTS/phase2-typeset-measurement-check.json
+          rc=$?
+          set -e
+          case $rc in
+            0) echo "::notice::dizgi ölçümü tutarlı" ;;
+            2) echo "::notice::reportlab yok — dizgi ölçümü ATLANDI (beklenen)" ;;
+            *) echo "::error::dizgi ölçümü kapısı kırmızı"; exit 1 ;;
+          esac
       # Üretilen belge bayatsa, okuyan ajan yanlış karar verir.
       # Disiplin unutulur, mekanizma unutmaz.
       - name: üretilen belgeler güncel mi

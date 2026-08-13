@@ -130,9 +130,10 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/qa_language_split.py ] && \
   run "DİL AYRIMI (TR ↛ EN)"    $PY 04_BUILD/qa_language_split.py \
                                    --json 06_REPORTS/qa-language-split.json
+# Dizgi ölçümü reportlab ister ve `run_optional` sözleşmesine uyar:
+# çıkış 2 = bağımlılık yok = ATLANDI, kusur DEĞİL (karar K7).
 [ -f 04_BUILD/calibrate_pages.py ] && \
-  run "gerçek dizgi ölçümü"     $PY 04_BUILD/calibrate_pages.py --check \
-                                   --json 06_REPORTS/phase2-typeset-measurement.json
+  run_optional "gerçek dizgi ölçümü" $PY 04_BUILD/calibrate_pages.py --check
 
 # ── FAZ 3+ KAPILARI ────────────────────────────────────────────────────────
 [ -f 04_BUILD/qa_crossref.py ] && \
