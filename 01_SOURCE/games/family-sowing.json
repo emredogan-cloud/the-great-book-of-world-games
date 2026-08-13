@@ -100,58 +100,6 @@
       },
       "unresolvedQuestions": [],
       "culturalNotes": "Akan oyunu; 'oware' adının halk etimolojisi tartışmalıdır ve kitap tek bir köken hikâyesi anlatmaz.",
-      "rules": {
-        "objective": "Capture more than half of the forty-eight seeds.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A board of twelve pits in two rows of six",
-          "Two stores, one at each end",
-          "48 seeds"
-        ],
-        "substitutions": [
-          "An egg carton with the lid cut off",
-          "Two bowls for the stores",
-          "Dried beans, buttons or pebbles as seeds"
-        ],
-        "setup": "Put four seeds in each of the twelve pits. Sit facing your opponent across the long side of the board. The six pits nearest you are yours, and so is the store to your right. Both stores start empty.",
-        "turnSequence": [
-          "Choose one of your six pits that holds at least one seed.",
-          "Lift out every seed in that pit.",
-          "Drop the seeds one at a time into the following pits, going anticlockwise.",
-          "Skip the pit you emptied if the handful is large enough to come all the way round.",
-          "Look at the pit where the last seed fell.",
-          "If that pit belongs to your opponent and now holds exactly two or three seeds, move those seeds to your store.",
-          "Then look at the pit just before that one, and take from it under the same rule.",
-          "Keep working backwards until a pit fails the rule, and stop there.",
-          "Hand the turn to your opponent."
-        ],
-        "legalMoves": [
-          "Any pit on your own side that holds at least one seed may be sown.",
-          "If your opponent has no seeds at all, you must play a move that puts at least one seed on their side; if no such move exists, play stops.",
-          "A move that would capture every seed on your opponent's side is played, but nothing is taken from it."
-        ],
-        "winCondition": "The player who gathers twenty-five or more seeds in their store wins.",
-        "endCondition": "Play stops as soon as one player reaches twenty-five seeds, or when neither player can capture any longer. In the second case each player adds the seeds still lying on their own side to their store.",
-        "durationMinutes": 30,
-        "ageMin": 7,
-        "edgeCases": {
-          "tie": "Twenty-four seeds each is a draw, and the traditional game leaves it there. If your table wants a decision, play a second game with the loser of the first sowing choosing which side to take.",
-          "stalemate": "When the same cycle of moves repeats and neither player has captured for a full round of turns, stop. Each player takes the seeds remaining on their own side, and you count as usual.",
-          "illegalMove": "Put the seeds back in the pit they came from and let the player choose again. If the seeds have already been mixed in, the opponent chooses which of the legal moves is played instead. Neither player loses a turn."
-        },
-        "variants": [
-          {
-            "name": "Abapa",
-            "note": "The tournament form used in Ghana: the feeding rule above is strict, and a move that would take every enemy seed is played without capture."
-          },
-          {
-            "name": "Nam-nam",
-            "note": "A widespread school-yard form in which a pit filled to exactly four seeds is taken by whoever owns the side it sits on, whenever it happens."
-          }
-        ],
-        "simplifiedFirstGame": "Start with three seeds per pit instead of four, and capture only when the last seed lands in an opponent's pit that then holds exactly two. Nothing else changes. The game runs about ten minutes and teaches the sowing rhythm before the back-capture rule arrives."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },

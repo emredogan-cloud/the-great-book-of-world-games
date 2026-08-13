@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "checks": 13,
+  "errors": [],
+  "warnings": [],
+  "facts": {
+    "commercialFiles": 1,
+    "pilotFiles": 6
+  }
+}

@@ -1033,63 +1033,6 @@
       },
       "unresolvedQuestions": [],
       "culturalNotes": "Culin'in 1895 derlemesi oyunu ayrıntısıyla verir ve kitabın en iyi belgelenmiş takım oyunudur; büyük gruplarla oynanabilmesi onu 'aile akşamı' vaadi için birinci sınıf yapar.",
-      "rules": {
-        "objective": "Be the first team to bring all four of your markers right around the circuit and off the board.",
-        "playerCountMin": 2,
-        "playerCountMax": 8,
-        "materials": [
-          "A board of twenty-nine stations: twenty around a square, eight along two diagonals, and one at the centre",
-          "Four throwing sticks, each rounded on one side and flat on the other",
-          "Four markers per team"
-        ],
-        "substitutions": [
-          "The circuit drawn on paper",
-          "Four lolly sticks with one side coloured, or four coins",
-          "Buttons or coins in two colours as markers"
-        ],
-        "setup": "Draw the circuit: five stations along each side of a square, counting the corners, then two diagonals of three stations each crossing at a centre station. Mark the corner where play begins. Divide everyone into two teams and give each team four markers, held off the board to start.",
-        "turnSequence": [
-          "The first team throws all four sticks together onto the floor.",
-          "Count the sticks that land flat side up.",
-          "One flat scores one, two scores two, three scores three, four scores four.",
-          "No stick flat scores five.",
-          "A throw of four, or of none, earns another throw.",
-          "Keep throwing and adding until you score one, two or three.",
-          "Bring a new marker onto the board at the starting corner, or move one already there.",
-          "Count one station for each step of your total, going anticlockwise.",
-          "A marker that stops exactly on a corner or on the centre may take the diagonal.",
-          "The shortcut is used on your next move with that marker.",
-          "If your marker lands on a station holding an enemy marker, send that marker back off the board and throw again.",
-          "If it lands on your own marker, stack the two together and move them from then on as one.",
-          "Pass the sticks to the other team."
-        ],
-        "legalMoves": [
-          "A throw may be used to enter a new marker or to move any one marker already on the board.",
-          "A stack moves as a single marker and is captured as a single marker.",
-          "A marker leaves the board only by a throw that carries it past the finishing corner; an exact count is not needed.",
-          "The shortcut may only be taken from a corner or the centre, and only on the move that follows landing there exactly."
-        ],
-        "winCondition": "The first team to bring all four of its markers off the board wins.",
-        "endCondition": "Play stops as soon as one team's fourth marker leaves the board.",
-        "durationMinutes": 25,
-        "ageMin": 6,
-        "edgeCases": {
-          "tie": "Only one team can finish first, so a drawn game is impossible. If the sitting must stop early, count the markers each team has brought home, then the stations travelled by the markers still on the board; the higher total takes the game.",
-          "stalemate": "There is no position from which a team cannot move: a throw can always enter a new marker or advance one already out. If every one of a team's markers is off the board waiting to enter and the throw is a five, the marker still enters and moves the full five.",
-          "illegalMove": "Put the markers back where they were and replay the move with the same throw. A capture taken by mistake is undone and the captured marker returns to the station it was on. Nobody loses a throw."
-        },
-        "variants": [
-          {
-            "name": "Two markers",
-            "note": "Give each team two markers instead of four. The game runs about ten minutes and suits younger children or a short evening."
-          },
-          {
-            "name": "Free-for-all",
-            "note": "Everyone plays for themselves with one marker each, up to eight players. Captures become sharper and the table gets much louder."
-          }
-        ],
-        "simplifiedFirstGame": "Play with two markers per team and ignore stacking: a marker landing on a friendly marker simply stops one station short. Everything else stays the same, and a first game takes about ten minutes."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },

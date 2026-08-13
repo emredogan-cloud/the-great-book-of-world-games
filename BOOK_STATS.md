@@ -34,9 +34,6 @@
 
 ## 3. Sayfa ve fiyat modeli
 
-> ⚠ Model **HENÜZ KALİBRE EDİLMEDİ**. Aşağıdaki her sayı bir
-> hipotezdir; gerçek dizgi ölçümü **phase2** fazında yapılır.
-
 | | |
 |---|---:|
 | Oyun başına faturalanan sayfa | 2 |

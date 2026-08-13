@@ -107,6 +107,9 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/score_candidates.py ] && \
   run "aday seçim modeli"       $PY 04_BUILD/score_candidates.py \
                                    --json 06_REPORTS/candidate-scores.json
+[ -f 04_BUILD/validate_scope.py ] && \
+  run "KAPSAM VE PİLOT KİLİDİ"  $PY 04_BUILD/validate_scope.py \
+                                   --json 06_REPORTS/scope-lock.json
 
 # ── FAZ 2'DE DOĞACAK KAPILAR ───────────────────────────────────────────────
 [ -f 04_BUILD/qa_playable.py ] && \
@@ -124,6 +127,12 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/qa_drift.py ] && \
   run "üslup sürüklenmesi"      $PY 04_BUILD/qa_drift.py \
                                    --json 06_REPORTS/qa-drift.json
+[ -f 04_BUILD/qa_language_split.py ] && \
+  run "DİL AYRIMI (TR ↛ EN)"    $PY 04_BUILD/qa_language_split.py \
+                                   --json 06_REPORTS/qa-language-split.json
+[ -f 04_BUILD/calibrate_pages.py ] && \
+  run "gerçek dizgi ölçümü"     $PY 04_BUILD/calibrate_pages.py --check \
+                                   --json 06_REPORTS/phase2-typeset-measurement.json
 
 # ── FAZ 3+ KAPILARI ────────────────────────────────────────────────────────
 [ -f 04_BUILD/qa_crossref.py ] && \

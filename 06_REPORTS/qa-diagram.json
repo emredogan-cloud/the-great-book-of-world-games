@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "checks": 25,
+  "errors": [],
+  "warnings": [],
+  "facts": {
+    "diagrams": 8,
+    "byClass": {
+      "cell": 2,
+      "pit": 1,
+      "point": 2,
+      "track": 1,
+      "bodily": 2
+    }
+  }
+}

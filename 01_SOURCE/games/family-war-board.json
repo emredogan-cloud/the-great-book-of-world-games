@@ -1102,59 +1102,6 @@
       },
       "unresolvedQuestions": [],
       "culturalNotes": "Bir hamlede bir taş dizisinin tamamı yaklaşılarak ya da çekilerek alınır; bu ikili alma biçimi başka hiçbir oyunda yoktur.",
-      "rules": {
-        "objective": "Take every one of your opponent's pieces.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A board of nine points across and five points down, with diagonals crossing at every second point",
-          "Twenty-two pieces in one colour",
-          "Twenty-two pieces in another colour"
-        ],
-        "substitutions": [
-          "The grid drawn on paper, ruling the diagonals from the corners so they cross at alternate points",
-          "Two colours of dried bean, forty-four in all"
-        ],
-        "setup": "Fill the two rows nearest you with your own pieces, eighteen in all. Your opponent does the same. In the middle row, working from the left, place white, black, white, black, then leave the centre point empty, then white, black, white, black. Every point is now occupied except the centre.",
-        "turnSequence": [
-          "Look for a capture; if one is available you must take it.",
-          "To capture by approach, step one of your pieces along a line into the point beside an enemy piece.",
-          "To capture by withdrawal, step one of your pieces along a line straight away from an adjacent enemy piece.",
-          "Remove the enemy piece you moved toward or away from.",
-          "Remove every further enemy piece standing behind it, in an unbroken line, in that same direction.",
-          "Stop removing at the first empty point or at the first piece of your own colour.",
-          "If the piece that just captured can capture again, you may continue with the same piece.",
-          "Hand the turn to your opponent."
-        ],
-        "legalMoves": [
-          "A piece moves one step along a drawn line to an adjacent empty point.",
-          "Diagonal moves are possible only from points where diagonals are drawn.",
-          "Capturing is compulsory whenever a capture exists.",
-          "A single move may not capture by approach and by withdrawal at once; the player chooses one direction.",
-          "During a chain of captures the piece may not move twice in the same direction, and may not return to a point it has already stood on in that chain.",
-          "A move that captures nothing is legal only when no capture is available anywhere on the board."
-        ],
-        "winCondition": "You win by capturing all of your opponent's pieces.",
-        "endCondition": "Play stops when one player has no pieces left, or when neither player can force a capture and both agree the position is dead.",
-        "durationMinutes": 30,
-        "ageMin": 8,
-        "edgeCases": {
-          "tie": "If both players are left with pieces that can never capture again, the game is a draw. The traditional match answer is to play a second game with the colours swapped and count the pair.",
-          "stalemate": "A player who has pieces but no legal move loses the game. Because a non-capturing move is always allowed when no capture exists, this is rare and usually means the pieces are completely boxed in.",
-          "illegalMove": "Put the piece back and return any pieces taken. If a capture was available and the player moved elsewhere, the move is replayed as a capture. If several captures were available, the player still chooses which one."
-        },
-        "variants": [
-          {
-            "name": "Fanoron-Dimyandimy",
-            "note": "A three by five board, five pieces each side. It teaches approach and withdrawal in about five minutes."
-          },
-          {
-            "name": "Fanoron-Telo",
-            "note": "A three by three board and three pieces each; the aim is a row of three rather than capture. It belongs with the alignment games and is worth showing alongside as a contrast."
-          }
-        ],
-        "simplifiedFirstGame": "Play on the three by five board with five pieces each and drop the chain rule: one capture per turn, then the turn passes. This keeps both capture directions, which are the whole point of the game, and gives a five-minute first sitting."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },

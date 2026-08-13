@@ -285,60 +285,6 @@
         "Kurna Tapınağı'ndaki tahta çiziminin MÖ 1400'e tarihlenmesi yaygın olarak tekrarlanır ama TARİHLENDİRİLEMEZ; kitap bu iddiayı basmamalıdır."
       ],
       "culturalNotes": "Shakespeare'in Bir Yaz Gecesi Rüyası'nda geçen 'the nine men's morris is fill'd up with mud' dizesi, oyunun 16. yüzyıl İngiltere'sinde açık havada oynandığının kanıtıdır.",
-      "rules": {
-        "objective": "Build rows of three, and use each one to take an enemy piece off the board, until your opponent has too few pieces left to play.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A board of three squares one inside another, joined by a short line across the middle of each side",
-          "Nine pieces in one colour",
-          "Nine pieces in another colour"
-        ],
-        "substitutions": [
-          "The board drawn on paper or card",
-          "Coins against buttons, or two kinds of dried bean"
-        ],
-        "setup": "Draw the three squares and the four joining lines. The twenty-four points where lines meet or end are the playing points. Both players hold their nine pieces in hand; the board starts empty.",
-        "turnSequence": [
-          "While you still hold pieces in hand, place one on any empty point.",
-          "Once your hand is empty, instead slide one of your pieces along a line to an empty point next to it.",
-          "After placing or sliding, check whether you have just completed a row of three of your own pieces along one drawn line.",
-          "If you have, take one enemy piece off the board and set it aside.",
-          "Choose a piece that is not itself part of a row of three, unless every enemy piece is in one.",
-          "Hand the turn to your opponent."
-        ],
-        "legalMoves": [
-          "A piece may be placed on any empty point during the first phase.",
-          "A piece may slide only to a point directly joined to it by a drawn line, and only if that point is empty.",
-          "A row counts only along a drawn line; three pieces around a corner do not count.",
-          "A player reduced to exactly three pieces may move any piece to any empty point on the board, ignoring the lines.",
-          "A row broken and rebuilt on a later turn counts again."
-        ],
-        "winCondition": "You win when your opponent is down to two pieces, or when your opponent has pieces left but no legal move.",
-        "endCondition": "Play stops the moment one player falls to two pieces or is unable to move.",
-        "durationMinutes": 15,
-        "ageMin": 6,
-        "edgeCases": {
-          "tie": "If both players are down to three pieces and fifteen turns pass with no piece taken, the game is a draw. Draws are common between careful players and are not a fault in the game.",
-          "stalemate": "A player who has pieces but no legal move loses. This is a real way to win and worth watching for in the sliding phase.",
-          "illegalMove": "Put the piece back where it was and let the player choose again. If a piece was taken on the strength of a row that turns out not to be a row, put that piece back too. Nobody loses a turn."
-        },
-        "variants": [
-          {
-            "name": "Three Men's Morris",
-            "note": "A three-by-three board and three pieces each, no captures: the first to make any straight row of three wins. This is the version to teach a five-year-old."
-          },
-          {
-            "name": "Twelve Men's Morris",
-            "note": "Add the four diagonals from corner to corner and give each player twelve pieces. Rows form far more easily and the opening phase becomes the whole game."
-          },
-          {
-            "name": "No flying",
-            "note": "Drop the rule that lets three pieces move anywhere. The stronger player then wins nearly every time, which is why most tables keep flying."
-          }
-        ],
-        "simplifiedFirstGame": "Play the Three Men's Morris form first: a three-by-three grid, three pieces each, place then slide, and the first straight row of three wins. It takes two minutes, uses the same idea, and makes the full board easy to pick up afterwards."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },

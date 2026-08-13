@@ -1,0 +1,223 @@
+{
+  "$comment": [
+    "FAZ 2 PİLOT DİYAGRAM TANIMLAYICILARI — DOĞRULAMA AMAÇLIDIR.",
+    "",
+    "⚠ BUNLAR ÜRETİM VARLIĞI DEĞİLDİR. Nihai gravür levhalar Faz 5'te",
+    "üretilir. Buradaki sekiz tanımlayıcı tek bir soruyu cevaplamak için",
+    "vardır: DİYAGRAM DİLİ BEŞ TAHTA SINIFINI DA TAŞIYOR MU?",
+    "",
+    "Sekizi birden 07_ASSETS/diagrams/*.svg olarak render edilir",
+    "(04_BUILD/render_diagrams.py) ve dizgi ölçümüne gerçek alan verir.",
+    "Diyagramın kapladığı alan bir tahmin değil, bir ÖLÇÜMDÜR."
+  ],
+  "version": "1.0",
+  "phase": "phase2",
+  "purpose": "validation-only",
+  "diagrams": [
+    {
+      "diagramId": "tablut-setup",
+      "gameId": "tablut",
+      "type": "setup-illustration",
+      "boardClass": "cell",
+      "size": {"cols": 9, "rows": 9},
+      "panels": 1,
+      "reconstructed": true,
+      "caption": "Bu diyagram Linnaeus'un 1732 tarihli günlüğüne (1811 çevirisi, c. II, ss. 55–58) dayanarak yeniden kurgulanmıştır; kaydın kendi harflendirmesi (a–m) korunmamış, kitabın koordinat sistemi kullanılmıştır.",
+      "greyLevels": [0, 100],
+      "pieces": [
+        {"at": "e5", "glyph": "king"},
+        {"at": "d5", "glyph": "light"}, {"at": "f5", "glyph": "light"},
+        {"at": "e4", "glyph": "light"}, {"at": "e6", "glyph": "light"},
+        {"at": "c5", "glyph": "light"}, {"at": "g5", "glyph": "light"},
+        {"at": "e3", "glyph": "light"}, {"at": "e7", "glyph": "light"},
+        {"at": "d1", "glyph": "dark"}, {"at": "e1", "glyph": "dark"},
+        {"at": "f1", "glyph": "dark"}, {"at": "e2", "glyph": "dark"},
+        {"at": "d9", "glyph": "dark"}, {"at": "e9", "glyph": "dark"},
+        {"at": "f9", "glyph": "dark"}, {"at": "e8", "glyph": "dark"},
+        {"at": "a4", "glyph": "dark"}, {"at": "a5", "glyph": "dark"},
+        {"at": "a6", "glyph": "dark"}, {"at": "b5", "glyph": "dark"},
+        {"at": "i4", "glyph": "dark"}, {"at": "i5", "glyph": "dark"},
+        {"at": "i6", "glyph": "dark"}, {"at": "h5", "glyph": "dark"}
+      ],
+      "legend": [
+        {"glyph": "king", "label": "kral — yalnız o merkez kareye girebilir"},
+        {"glyph": "light", "label": "savunan (sekiz)"},
+        {"glyph": "dark", "label": "kuşatan (on altı)"}
+      ]
+    },
+    {
+      "diagramId": "tablut-capture",
+      "gameId": "tablut",
+      "type": "move-diagram",
+      "boardClass": "cell",
+      "size": {"cols": 9, "rows": 9},
+      "panels": 2,
+      "reconstructed": true,
+      "caption": "Alma kuralı Linnaeus'un 9. maddesine dayanır: 'iki düşman karesi arasına giren taş öldürülür ve kaldırılır.' Kralın bu kuraldan muaf olduğu da aynı maddededir.",
+      "greyLevels": [0, 55, 100],
+      "pieces": [
+        {"at": "c5", "glyph": "light"},
+        {"at": "d5", "glyph": "dark", "captured": true},
+        {"at": "e5", "glyph": "king"},
+        {"at": "c7", "glyph": "light"}
+      ],
+      "arrows": [
+        {"kind": "move", "from": "c7", "to": "c5"}
+      ],
+      "markers": [],
+      "legend": [
+        {"glyph": "light", "label": "savunan"},
+        {"glyph": "dark", "label": "kuşatan"},
+        {"glyph": "king", "label": "kral — alınmaz"},
+        {"glyph": "move", "label": "gösterilen hamle"}
+      ]
+    },
+    {
+      "diagramId": "bao-setup",
+      "gameId": "bao-la-kiswahili",
+      "type": "board-diagram",
+      "boardClass": "pit",
+      "size": {"pitsPerRow": 8, "rows": 4, "stores": false},
+      "panels": 1,
+      "reconstructed": false,
+      "greyLevels": [0, 100],
+      "pieces": [
+        {"at": "A'5", "glyph": "seedCount", "value": 6},
+        {"at": "A'6", "glyph": "seedCount", "value": 2},
+        {"at": "B'4", "glyph": "seedCount", "value": 2},
+        {"at": "B'3", "glyph": "seedCount", "value": 6}
+      ],
+      "arrows": [
+        {"kind": "flow", "from": "B'3", "to": "B'8"}
+      ],
+      "legend": [
+        {"glyph": "seedCount", "label": "çukurdaki tohum sayısı"},
+        {"glyph": "flow", "label": "ekim yönü"}
+      ]
+    },
+    {
+      "diagramId": "go-9x9-capture",
+      "gameId": "go",
+      "type": "move-diagram",
+      "boardClass": "point",
+      "size": {"cols": 9, "rows": 9},
+      "panels": 2,
+      "reconstructed": false,
+      "adaptedFrom": "19×19",
+      "caption": "Go — 9×9 (uyarlama) · özgün tahta 19×19'dur (Falkener 1892, s. 239; Culin 1895, s. 91). Dokuz kesişimli tahta kitabın editoryal kararıdır: on dokuzluk tahta iki sayfada öğretilemez.",
+      "greyLevels": [0, 55, 100],
+      "pieces": [
+        {"at": "e5", "glyph": "light", "captured": true},
+        {"at": "d5", "glyph": "dark"},
+        {"at": "f5", "glyph": "dark"},
+        {"at": "e4", "glyph": "dark"},
+        {"at": "e6", "glyph": "dark"}
+      ],
+      "arrows": [
+        {"kind": "move", "from": "e7", "to": "e6"}
+      ],
+      "legend": [
+        {"glyph": "light", "label": "beyaz taş"},
+        {"glyph": "dark", "label": "siyah taş"},
+        {"glyph": "move", "label": "gösterilen hamle"}
+      ]
+    },
+    {
+      "diagramId": "fanorona-withdrawal",
+      "gameId": "fanorona",
+      "type": "move-diagram",
+      "boardClass": "point",
+      "size": {"cols": 9, "rows": 5},
+      "panels": 2,
+      "reconstructed": false,
+      "greyLevels": [0, 55, 100],
+      "pieces": [
+        {"at": "e3", "glyph": "light"},
+        {"at": "f3", "glyph": "dark", "captured": true},
+        {"at": "g3", "glyph": "dark", "captured": true},
+        {"at": "h3", "glyph": "dark", "captured": true}
+      ],
+      "arrows": [
+        {"kind": "move", "from": "e3", "to": "d3"}
+      ],
+      "legend": [
+        {"glyph": "light", "label": "hamleyi yapan taş"},
+        {"glyph": "dark", "label": "çekilmeyle alınan taşlar"},
+        {"glyph": "move", "label": "çekilme yönü — alınanlar okun ARKASINDADIR"}
+      ]
+    },
+    {
+      "diagramId": "yut-track",
+      "gameId": "yut-nori",
+      "type": "board-diagram",
+      "boardClass": "track",
+      "size": {"stations": 29},
+      "panels": 1,
+      "reconstructed": false,
+      "greyLevels": [0, 100],
+      "pieces": [
+        {"at": "0", "glyph": "light"},
+        {"at": "5", "glyph": "dark"}
+      ],
+      "arrows": [
+        {"kind": "flow", "from": "0", "to": "20"},
+        {"kind": "alternate", "from": "5", "to": "21a"}
+      ],
+      "legend": [
+        {"glyph": "light", "label": "birinci oyuncunun atı"},
+        {"glyph": "dark", "label": "ikinci oyuncunun atı"},
+        {"kind": "flow", "glyph": "flow", "label": "ana çember, saat yönünün tersine"},
+        {"glyph": "alternate", "label": "kısayol — köşe durağında açılır"}
+      ]
+    },
+    {
+      "diagramId": "catscradle-cradle",
+      "gameId": "cats-cradle",
+      "type": "move-diagram",
+      "boardClass": "bodily",
+      "frame": "hands",
+      "size": {},
+      "panels": 3,
+      "reconstructed": false,
+      "greyLevels": [0, 100],
+      "pieces": [
+        {"at": "L1", "glyph": "light"},
+        {"at": "R1", "glyph": "light"},
+        {"at": "near", "glyph": "empty"},
+        {"at": "far", "glyph": "empty"}
+      ],
+      "arrows": [
+        {"kind": "move", "from": "near", "to": "far"}
+      ],
+      "legend": [
+        {"glyph": "light", "label": "ipin tutulduğu parmak"},
+        {"glyph": "empty", "label": "ip yolu"},
+        {"glyph": "move", "label": "ipin alındığı yön"}
+      ]
+    },
+    {
+      "diagramId": "mbube-formation",
+      "gameId": "mbube-mbube",
+      "type": "setup-illustration",
+      "boardClass": "bodily",
+      "frame": "formation",
+      "size": {},
+      "panels": 1,
+      "reconstructed": false,
+      "greyLevels": [0, 25, 100],
+      "pieces": [
+        {"at": "ring", "glyph": "light"},
+        {"at": "centre", "glyph": "blindfolded"},
+        {"at": "role1", "glyph": "blindfolded"}
+      ],
+      "markers": [
+        {"kind": "ring"}
+      ],
+      "legend": [
+        {"glyph": "light", "label": "çemberi kuran oyuncular — sayı künyede yazar"},
+        {"glyph": "blindfolded", "label": "gözü bağlı iki oyuncu: aslan ve manda"},
+        {"glyph": "ring", "label": "çember — altı ile yirmi kişi arasında"}
+      ]
+    }
+  ]
+}

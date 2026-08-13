@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checks": 2,
+  "errors": [],
+  "warnings": [
+    "hiç test kaydı yok — dış test HENÜZ YAPILMADI. Bu bir kusur değil bir DURUMDUR ve locked'ı bloklar."
+  ],
+  "facts": {
+    "external": 0,
+    "internal": 0,
+    "locked": 0
+  }
+}

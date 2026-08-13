@@ -70,7 +70,16 @@ def main() -> int:
     target = scope.get("pageTarget", 0)
     tol_pct = scope.get("pageTolerancePct", 6)
 
-    body = games * pm["pagesPerGame"]
+    # KALİBRE EDİLMİŞSE MODEL ÖLÇÜMÜ KULLANIR, HİPOTEZİ DEĞİL.
+    # Aksi hâlde `calibrated: true` bir etiketten ibaret kalır ve model
+    # ölçümden habersiz yeşil yanar — Faz 1'in tam olarak kapattığı kusur.
+    meas = pm.get("measured") or {}
+    per_game = pm["pagesPerGame"]
+    basis = "hipotez"
+    if pm.get("calibrated") and meas.get("billedPagesPerGame"):
+        per_game = meas["billedPagesPerGame"]
+        basis = "ÖLÇÜM (%d oyunluk örneklem)" % meas.get("sampleSize", 0)
+    body = int(round(games * per_game))
     openers = families * pm["familyOpenerPages"]
     front = pm["frontMatterPages"]
     back = pm["backMatterPages"]
@@ -89,7 +98,8 @@ def main() -> int:
     implied_body_pages = round(words / wpp, 1) if wpp else 0
 
     print("\n── model ──")
-    print("  gövde        %3d oyun × %d sayfa      = %4d" % (games, pm["pagesPerGame"], body))
+    print("  gövde        %3d oyun × %.2f sayfa   = %4d   [%s]"
+          % (games, per_game, body, basis))
     print("  aile açılışı %3d aile × %d sayfa      = %4d" % (families, pm["familyOpenerPages"], openers))
     print("  ön madde                             = %4d" % front)
     print("  arka madde                           = %4d" % back)
@@ -125,8 +135,30 @@ def main() -> int:
 
     errors = []
     if not within:
-        errors.append("model hedeften %%%d'den fazla sapıyor (%+.1f%%)"
-                      % (tol_pct, deviation))
+        # ÖLÇÜLMÜŞ BİR SAPMA GİZLENEMEZ AMA FAZI DA SONSUZA KADAR BLOKLAMAZ.
+        # Yol haritası § 15: "Modelde anlamlı değişiklik olursa; sebebi,
+        # ölçümü, etkisini, ekonomik sonucunu ve önerilen cevabı YAZ. Sayfa
+        # hedefini SESSİZCE yeniden yazma."
+        #
+        # Bu kapı o cümleyi mekanizmaya çevirir: sapma ancak EKSİKSİZ bir
+        # şerhle kabul edilir. Şerhin bir alanı bile boşsa kapı kırmızıdır.
+        # Yani "sessizce kabul etmek" imkânsız, "belgeleyip ilerlemek"
+        # mümkündür — ve ikisi arasındaki fark tam olarak budur.
+        ack = pm.get("acknowledgedDeviation") or {}
+        need = ["date", "cause", "measurement", "effect", "economicImplication",
+                "recommendedResponse", "decisionOwner", "resolveByPhase"]
+        missing = [f for f in need if not str(ack.get(f, "")).strip()]
+        if missing:
+            errors.append("model hedeften %%%d'den fazla sapıyor (%+.1f%%) ve "
+                          "SAPMA ŞERHİ eksik: %s"
+                          % (tol_pct, deviation, ", ".join(missing)))
+        else:
+            print("\n── SAPMA ŞERHİ (yol haritası § 15) ──")
+            print("  sapma %+.1f%% BELGELENMİŞTİR ve kabul edilmiştir:" % deviation)
+            for f in need:
+                print("    %-20s %s" % (f, ack[f]))
+            print("  ⚠ Sayfa hedefi DEĞİŞTİRİLMEDİ. Karar %s tarafından, %s "
+                  "fazında verilir." % (ack["decisionOwner"], ack["resolveByPhase"]))
 
     # KDP sayfa sınırları: modelin basılabilir olması gerekir.
     pc = prod.get("kdpPrintCost", {})
@@ -148,10 +180,20 @@ def main() -> int:
             print("  ✗ %s" % e)
         print("  ⛔ SAYFA MODELİ KIRMIZI")
         status = "fail"
-    else:
+    elif within:
         print("  ✅ sayfa modeli hedef bandında · %d sayfa (hedef %d, %+.1f%%)"
               % (total, target, deviation))
         status = "pass"
+    else:
+        # Kapı yeşil ama model bantta DEĞİL. İkisi farklı şeylerdir ve
+        # özet cümlesi bunu karıştıramaz: "belgelenmiş sapma" ile
+        # "sapma yok" arasındaki farkı silmek, kapının varlık sebebini siler.
+        print("  ✅ kapı yeşil — ama model hedef bandının DIŞINDA: "
+              "%d sayfa (hedef %d, %+.1f%%)" % (total, target, deviation))
+        print("     Sapma BELGELENMİŞTİR (§ 15 şerhi) ve %s fazında "
+              "karara bağlanacaktır." % (pm.get("acknowledgedDeviation") or {})
+              .get("resolveByPhase", "?"))
+        status = "pass-with-documented-deviation"
     print("=" * 74)
 
     if args.json:

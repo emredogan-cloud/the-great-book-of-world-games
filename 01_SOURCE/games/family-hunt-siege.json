@@ -606,59 +606,6 @@
       "unresolvedQuestions": [
         "Hnefatafl ile aynı kitapta iki madde mi? Tablut, tafl ailesinin tek ayrıntılı tarihsel kaydıdır ve ayrı basılması editoryal olarak savunulabilir."
       ],
-      "rules": {
-        "objective": "One player defends a king who is trying to reach the edge of the board; the other player commands twice as many soldiers and is trying to capture him.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A board of nine squares by nine",
-          "One king piece",
-          "Eight defenders",
-          "Sixteen attackers"
-        ],
-        "substitutions": [
-          "A nine-by-nine grid drawn on paper",
-          "A bottle cap for the king",
-          "Two colours of buttons for the soldiers"
-        ],
-        "setup": "Mark the centre square. Stand the king on it. Place the eight defenders around him in a diamond: one on each square touching the king, and one two squares away in each of the four straight directions. Place the attackers in four groups of four, one group at the middle of each edge — three side by side on the edge itself and one directly in front of the middle of those three.",
-        "turnSequence": [
-          "The attacking player moves first.",
-          "Choose one of your pieces.",
-          "Slide it any number of empty squares in a straight line, up, down, left or right.",
-          "Stop before any piece; nothing jumps over anything.",
-          "After the move, look for enemy pieces trapped between two of yours along a straight line.",
-          "Remove every enemy soldier trapped that way by this move.",
-          "Hand the turn to your opponent."
-        ],
-        "legalMoves": [
-          "Every piece, including the king, moves like a rook in chess: any distance in a straight line, never diagonally, never through another piece.",
-          "Only the king may stand on the centre square. Once he leaves it, the square stays empty for everyone else.",
-          "A soldier is captured when the opponent's move places one of their pieces so that the soldier sits directly between two enemy pieces in a straight line.",
-          "A piece that moves of its own accord into the gap between two enemies is safe; capture only happens to the piece that is closed in.",
-          "The king is captured only when all four squares beside him are occupied by attackers, or when three attackers hold him against the empty centre square."
-        ],
-        "winCondition": "The defending player wins when the king reaches any square on the outer edge of the board. The attacking player wins by capturing the king.",
-        "endCondition": "Play stops the moment the king stands on an edge square or is captured.",
-        "durationMinutes": 30,
-        "ageMin": 9,
-        "edgeCases": {
-          "tie": "If the same position comes round for a third time with both players repeating their moves, the game is a draw. Swap sides and play again; a tafl match is traditionally counted over a pair of games, one as each side.",
-          "stalemate": "A player who cannot make any legal move loses. This almost always falls on the defenders, and it counts as a win for the attackers.",
-          "illegalMove": "Slide the piece back and let the player move again. If a capture was taken on the back of an illegal move, put the captured pieces back on their squares. Nobody loses a turn."
-        },
-        "variants": [
-          {
-            "name": "Corner escape",
-            "note": "The king must reach one of the four corner squares rather than any edge square. This is the modern tournament form and it gives the attackers a much better game."
-          },
-          {
-            "name": "Armed king",
-            "note": "The king helps to capture, acting as one of the two trapping pieces. Without this rule the defenders are purely evasive."
-          }
-        ],
-        "simplifiedFirstGame": "Play on a seven-by-seven grid with a king, four defenders and eight attackers, keeping every rule the same. The game lasts about ten minutes and shows the shape of the chase before the full board is worth trying."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },
@@ -1076,57 +1023,6 @@
         "play": 4
       },
       "unresolvedQuestions": [],
-      "rules": {
-        "objective": "One player is the fox and eats geese; the other players share the geese and try to pen the fox so that it cannot move.",
-        "playerCountMin": 2,
-        "playerCountMax": 2,
-        "materials": [
-          "A cross-shaped board of thirty-three holes or points",
-          "One fox piece",
-          "Seventeen geese pieces"
-        ],
-        "substitutions": [
-          "A chessboard with the four corner blocks of nine squares covered by paper",
-          "A coin for the fox and seventeen buttons for the geese"
-        ],
-        "setup": "Draw a cross: three columns of three points across the top, three rows of three points across the middle arm and the same below, giving thirty-three points in all. Place the fox on the centre point. Place the seventeen geese filling the top arm and the two rows nearest it. The rest of the board stays empty.",
-        "turnSequence": [
-          "The goose player moves first.",
-          "Move one goose one step along a line, forwards or sideways but never backwards.",
-          "The fox then moves one step along a line in any direction, or jumps.",
-          "To jump, the fox leaps straight over one goose that sits next to it and lands on the empty point directly beyond.",
-          "Remove every goose the fox jumps over.",
-          "If a further jump is available from the landing point, the fox may take it in the same turn.",
-          "Hand the turn back to the goose player."
-        ],
-        "legalMoves": [
-          "A goose moves one step to an adjacent empty point, never diagonally and never backwards.",
-          "A goose never jumps and never captures.",
-          "The fox moves one step to any adjacent empty point, in any direction.",
-          "The fox jumps only over a goose with an empty point directly beyond it, along a line.",
-          "The fox may decline a jump; jumping is not compulsory."
-        ],
-        "winCondition": "The geese win by surrounding the fox so that it has no legal move. The fox wins by reducing the geese below the number needed to trap it.",
-        "endCondition": "Play stops the moment the fox has no move, or the moment fewer than seven geese remain, whichever happens first.",
-        "durationMinutes": 15,
-        "ageMin": 6,
-        "edgeCases": {
-          "tie": "There is no draw in this game: one side always runs out of geese or out of moves. If a session must be cut short, the side that has done better swaps roles with the other and plays again; the traditional pairing is two games, one as each side.",
-          "stalemate": "If the geese shuffle without progress for ten turns in a row while the fox also stands still, count the geese. Seven or more geese means the geese have not yet lost, and the fox player takes the geese for a second game.",
-          "illegalMove": "Put the piece back and let the player try again. A goose moved backwards by mistake goes back to its point. If the fox has already removed geese on an illegal jump, return the geese and the fox to their places, and the fox forfeits its jump for that turn only."
-        },
-        "variants": [
-          {
-            "name": "Thirteen geese",
-            "note": "Fill only the top arm with thirteen geese. The fox has a much better game and the match becomes even for two adults."
-          },
-          {
-            "name": "Geese may move sideways and backwards",
-            "note": "A nineteenth-century English variant that makes the geese far stronger; use it when a child plays the geese against an adult fox."
-          }
-        ],
-        "simplifiedFirstGame": "Play on the cross with thirteen geese and let the fox jump only once per turn, never twice. This gives a shorter game with a clear shape and suits a first sitting with a six-year-old."
-      },
       "editorialStatus": "shortlisted",
       "playtestStatus": "scheduled"
     },

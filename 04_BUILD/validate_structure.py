@@ -64,11 +64,32 @@ REQUIRED_FILES = [
     "04_BUILD/editions.py",
     "04_BUILD/update_docs.py",
     "05_TESTS/selftest.py",
+    "05_TESTS/fixtures/leak/README.md",
+    "05_TESTS/fixtures/leak/bad-labelled.md",
+    "05_TESTS/fixtures/leak/bad-unlabelled.md",
+    "05_TESTS/fixtures/leak/bad-turkish-pilot.md",
+    "05_TESTS/fixtures/leak/clean-documentation.md",
+    "05_TESTS/fixtures/leak/clean-data-record.md",
+    "00_CONTEXT/DIAGRAM_LANGUAGE.md",
+    "01_SOURCE/scope_lock.json",
+    "01_SOURCE/pilot_lock.json",
+    "01_SOURCE/source_verification.json",
+    "01_SOURCE/playtests/README.md",
+    "01_SOURCE/pilot_tr/README.md",
+    "07_ASSETS/diagrams/diagram_language.json",
+    "07_ASSETS/diagrams/pilot_diagrams.json",
+    "04_BUILD/validate_scope.py",
+    "04_BUILD/qa_diagram.py",
+    "04_BUILD/qa_playable.py",
+    "04_BUILD/qa_language_split.py",
+    "04_BUILD/calibrate_pages.py",
+    "04_BUILD/render_diagrams.py",
     "06_REPORTS/PHASE_1_REPORT.md",
     ".github/workflows/validate.yml",
 ]
 
 REQUIRED_DIRS = [
+    "05_TESTS/fixtures/leak", "01_SOURCE/pilot_tr",
     "00_CONTEXT", "01_SOURCE", "02_MANUSCRIPT", "03_COVER", "04_BUILD",
     "05_TESTS", "06_REPORTS", "07_ASSETS", "08_OUTPUT", "09_ARCHIVE",
     "01_SOURCE/games", "01_SOURCE/playtests", "01_SOURCE/research",
@@ -86,8 +107,31 @@ EMBED_SCAN_SKIP = {
 }
 
 # ③ Manuscript sızıntısı -------------------------------------------------------
-# Kural prozasının parmak izleri. Bir belge bunlardan BİRDEN ÇOK taşıyorsa
-# ve manuscript dizininde değilse, proza sızmış olabilir.
+#
+# ⚠ FAZ 2'DE GÜÇLENDİRİLDİ (karar K12).
+#
+# Faz 1'in dedektörü yalnızca aşağıdaki BEŞ YAPISAL ETİKETE bakıyordu ve
+# bu yeterli değildi. Gerekçe tek cümledir:
+#
+#       ETİKETLERİ SİLMEK, PROZAYI SİLMEZ.
+#
+# Etiketsiz yazılmış bir kural metni — "Place the board between you. Each
+# player takes twelve seeds. On a turn you lift every seed from one hollow…" —
+# beş etiketin hiçbirini taşımaz ve eski dedektörden TEMİZ GEÇERDİ.
+#
+# Artık dört hat vardır ve üçü içeriğe bakar:
+#
+#   ① structural-marker  → sekiz bloğun etiketleri            (Faz 1'den)
+#   ② content-signature  → ikinci tekil TALİMAT DİLİ           (yeni)
+#   ③ density            → kural cümlesi YOĞUNLUĞU             (yeni)
+#   ④ pilot-marker       → Türkçe test malzemesi işareti       (yeni)
+#
+# ③ NEDEN GEREKLİ: bir belge kural dilini ÖRNEK olarak anabilir; bu
+# sızıntı değildir. Ayrımı YOĞUNLUK yapar. Bu belgenin kendisi ② kalıplarının
+# birçoğunu taşır ve taşımak zorundadır — ama bir manuscript'in aksine,
+# çevresi kural değil AÇIKLAMADIR. Yoğunluk eşiği tam olarak bu farkı ölçer
+# ve muafiyet listesini kısa tutar: muafiyet ne kadar uzarsa koruma o kadar
+# zayıflar.
 LEAK_MARKERS = [
     r"\bSetup:\s",
     r"\bTurn sequence:\s",
@@ -96,6 +140,34 @@ LEAK_MARKERS = [
     r"\bThe game ends when\b",
 ]
 LEAK_MIN_HITS = 2
+
+# ② İçerik imzası — kural prozasının ETİKETSİZ parmak izleri.
+# İkinci tekil şahıs + oyun eylemi + oyun nesnesi.
+LEAK_SIGNATURES = [
+    r"\b(?:Place|Put|Set|Take|Move|Slide|Drop|Sow|Throw|Roll|Deal|Remove|"
+    r"Capture|Jump|Stand|Lift|Scatter|Count) (?:the|your|one|each|a|an|all|"
+    r"any|two|three|four|five|six|twelve) \w+",
+    r"\bOn (?:your|a|each) turn\b",
+    r"\byour opponent(?:'s)?\b",
+    r"\bthe player (?:who|with|to|on)\b",
+    r"\bIf (?:you|a player|neither player|both players) (?:cannot|can|may|has|have)\b",
+    r"\bwins the game\b",
+    r"\bthe game is a draw\b",
+    r"\byou may (?:move|take|capture|place|jump|sow|pass|throw)\b",
+    r"\b(?:clockwise|anticlockwise|anti-clockwise) around the\b",
+    r"\bhand the turn\b",
+    r"\bplay passes to\b",
+    r"\bat the start of the game\b",
+]
+LEAK_SIG_MIN_HITS = 6          # tek bir örnek cümle sızıntı değildir
+LEAK_DENSITY_MIN = 0.10        # kural cümlesi / toplam cümle
+
+# ④ Türkçe pilot işareti — TEST malzemesi ticari metne giremez (K16)
+LEAK_PILOT_MARKERS = [
+    r"TEST-ONLY\s*/\s*TURKISH PILOT",
+    r"SADECE TEST\b",
+]
+
 LEAK_SCAN_EXT = (".md", ".json", ".txt", ".html")
 # Muafiyet = yalnızca bu dosyalar kural dilini ÖRNEK olarak taşıyabilir.
 #
@@ -110,6 +182,24 @@ LEAK_SCAN_SKIP = {
     "00_CONTEXT/PLAYABILITY_STANDARD.md",
     "00_CONTEXT/STYLE.md",
     "01_SOURCE/game.schema.json",
+}
+
+# Fikstürler ayrı bir muafiyettir ve gerekçesi ötekilerden FARKLIDIR:
+# bunlar KASITLI sızıntılardır ve dedektörün onları YAKALAMASI beklenir.
+# Depo taramasından çıkarılırlar çünkü aksi hâlde CI kalıcı kırmızı olurdu;
+# ama selftest § 6 onları doğrudan `scan_for_leak()`e verir ve
+# BAD → sızıntı VAR / CLEAN → sızıntı YOK ispatını her koşuda tekrarlar.
+# Yani muafiyet korumayı zayıflatmaz: korumanın KANITINI üretir.
+LEAK_FIXTURE_PREFIX = "05_TESTS/fixtures/"
+
+# Türkçe pilot malzemesinin yaşadığı TEK yer.
+PILOT_TR_PREFIX = "01_SOURCE/pilot_tr/"
+# İşareti TANIMLAYAN dosyalar — tanımlamak kullanmak değildir.
+PILOT_MARKER_DEFINERS = {
+    "project_config.json",
+    "04_BUILD/validate_structure.py",
+    "04_BUILD/qa_language_split.py",
+    "DECISIONS.md",
 }
 
 # ④ Sır taraması ---------------------------------------------------------------
@@ -201,12 +291,57 @@ def check_embedded(rep: Report, files: list[str]) -> None:
               ("" if not hits else " — GÖMÜLÜ: %s" % hits[:5]))
 
 
+def scan_for_leak(body: str) -> dict:
+    """Bir metnin kural prozası taşıyıp taşımadığını ölçer.
+
+    SAF FONKSİYONDUR ve dosya sistemine bakmaz. Böyle olması kasıtlıdır:
+    `05_TESTS/selftest.py` onu kasıtlı sızıntı fikstürlerine DOĞRUDAN
+    verebilir ve BAD → KIRMIZI / TEMİZ → YEŞİL ispatı, depoyu gerçekten
+    kirletmeden üretilir.
+
+    Döndürdüğü sözlük bir KARAR değil bir ÖLÇÜMDÜR; `leak` alanı kararı
+    taşır, ötekiler kararın NEDEN verildiğini taşır.
+    """
+    markers = sum(1 for pat in LEAK_MARKERS if re.search(pat, body))
+
+    sig_hits = 0
+    for pat in LEAK_SIGNATURES:
+        sig_hits += len(re.findall(pat, body, flags=re.IGNORECASE))
+
+    # Cümle sayımı kabadır ve kaba olması yeterlidir: aradığımız şey bir
+    # ORAN, mutlak bir sayı değil.
+    sentences = max(1, len(re.findall(r"[.!?](?:\s|$)", body)))
+    density = sig_hits / sentences
+
+    pilot = sum(1 for pat in LEAK_PILOT_MARKERS
+                if re.search(pat, body, flags=re.IGNORECASE))
+
+    # KARAR: etiketler tek başına yeter (Faz 1 hattı), YA DA imza sayısı ve
+    # yoğunluk BİRLİKTE eşiği geçer. "Birlikte" şarttır — bir belge kural
+    # dilini örnek olarak anabilir; onu manuscript yapan şey ORANDIR.
+    leak = (markers >= LEAK_MIN_HITS) or \
+           (sig_hits >= LEAK_SIG_MIN_HITS and density >= LEAK_DENSITY_MIN)
+
+    reasons = []
+    if markers >= LEAK_MIN_HITS:
+        reasons.append("%d yapısal etiket" % markers)
+    if sig_hits >= LEAK_SIG_MIN_HITS and density >= LEAK_DENSITY_MIN:
+        reasons.append("%d içerik imzası · yoğunluk %.2f" % (sig_hits, density))
+    return {"leak": leak, "markers": markers, "signatures": sig_hits,
+            "density": round(density, 3), "pilotMarkers": pilot,
+            "reasons": reasons}
+
+
 def check_manuscript_leak(rep: Report, files: list[str]) -> None:
-    print("\n── manuscript sızıntısı ──")
+    print("\n── manuscript sızıntısı (4 hat) ──")
     leaked: list[str] = []
+    pilot_leak: list[str] = []
+    scanned = 0
     for rel in files:
         if rel in LEAK_SCAN_SKIP or not rel.endswith(LEAK_SCAN_EXT):
             continue
+        if rel.startswith(LEAK_FIXTURE_PREFIX):
+            continue  # kasıtlı fikstür — selftest doğrudan sınar
         if rel.startswith("02_MANUSCRIPT/"):
             # Manuscript dizinindeki TAKİP EDİLEN her dosya zaten ihlaldir.
             if os.path.basename(rel) not in (".gitkeep", "README.md"):
@@ -220,12 +355,36 @@ def check_manuscript_leak(rep: Report, files: list[str]) -> None:
                 body = fh.read()
         except (OSError, UnicodeDecodeError):
             continue
-        hits = sum(1 for pat in LEAK_MARKERS if re.search(pat, body))
-        if hits >= LEAK_MIN_HITS:
-            leaked.append("%s (%d kural işareti)" % (rel, hits))
+        scanned += 1
+        r = scan_for_leak(body)
+        if r["leak"]:
+            leaked.append("%s (%s)" % (rel, " · ".join(r["reasons"])))
+        # ④ Türkçe pilot işareti YALNIZCA pilot dizininde durabilir.
+        # İki dosya işareti TANIMLAR ve bu bir sızıntı değildir: onu
+        # tanımlayan yer ile onu KULLANAN yer farklı şeylerdir.
+        if r["pilotMarkers"] and not rel.startswith(PILOT_TR_PREFIX) \
+                and rel not in PILOT_MARKER_DEFINERS:
+            pilot_leak.append(rel)
+
     rep.check(not leaked,
-              "kural prozası depoya sızmamış" +
+              "kural prozası depoya sızmamış (%d dosya tarandı)" % scanned +
               ("" if not leaked else " — SIZINTI: %s" % leaked[:5]))
+    rep.check(not pilot_leak,
+              "Türkçe pilot işareti yalnızca pilot dizininde" +
+              ("" if not pilot_leak else " — SIZINTI: %s" % pilot_leak[:5]))
+
+    # KORUMALI KATMAN TAKİP EDİLİYOR MU (karar K12).
+    # `.gitignore` bir NİYETTİR; bu denetim bir OLGUDUR. Bir dosya bir kez
+    # `git add -f` ile eklenirse .gitignore onu geri çıkarmaz ve kimse
+    # fark etmez.
+    tracked_protected = [rel for rel in files
+                         if rel.startswith("01_SOURCE/rules/")
+                         or (rel.startswith("02_MANUSCRIPT/")
+                             and os.path.basename(rel) not in (".gitkeep", "README.md"))]
+    rep.check(not tracked_protected,
+              "korumalı katman (kural prozası · manuscript) takip EDİLMİYOR" +
+              ("" if not tracked_protected
+               else " — TAKİP EDİLİYOR: %s" % tracked_protected[:5]))
 
 
 def check_secrets(rep: Report, files: list[str]) -> None:
