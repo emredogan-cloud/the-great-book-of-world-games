@@ -1,0 +1,148 @@
+{
+  "$comment": [
+    "FAZ 2 PİLOTU — 12 oyun. TEK pilot kapsamıdır.",
+    "Seçim ölçütü KOLAY değil ZOR oyunlardır: pilot üretim mimarisine",
+    "saldırmak için vardır. Her kaydın 'whyHard' alanı, o oyunun HANGİ",
+    "mimari varsayımı sınadığını yazar — bir pilot oyunun varlık sebebi",
+    "budur ve gerekçesiz seçim yapılamaz."
+  ],
+  "version": "1.0",
+  "count": 12,
+  "integrity": {
+    "sha256": "ea3413d1db60e6013bc686d6c03e5e2d9665fb2ca37a3e79308339aee849c4d3"
+  },
+  "entries": [
+    {
+      "gameId": "bao-la-kiswahili",
+      "name": "Bao la Kiswahili",
+      "family": "sowing",
+      "culture": "Swahili",
+      "reconstructed": false,
+      "playersMax": 2,
+      "asymmetric": false,
+      "batch": 1,
+      "whyHard": "EN KARMAŞIK EKİM OYUNU. İki aşamalı (namua/mtaji), 32 çukurlu, zincirleme almalı. Sınadığı varsayım: 650 kelimelik madde bütçesi ve sekiz bloklu şablon, kitabın en zor kural setini taşıyabiliyor mu? Ayrıca kayıt 'tam Bao mu, bao la kujifunza mı' sorusunu AÇIK bırakıyor — editoryal kararın prozada görünür olması burada sınanır."
+    },
+    {
+      "gameId": "tablut",
+      "name": "Tablut",
+      "family": "hunt-siege",
+      "culture": "Sámi",
+      "reconstructed": true,
+      "playersMax": 2,
+      "asymmetric": true,
+      "batch": 1,
+      "whyHard": "YENİDEN KURGULAMA #1 + ASİMETRİ. Tek kaynak Linnaeus'un 1732 Latince günlüğüdür ve kralın kaçış hedefini kesin söylemez. Sınadığı varsayım: reconstructionPlan alanı, masada oynanan bir oyun üretmeye yetiyor mu; ve 'tarihsel kanıt' ile 'editoryal kurgu' ayrımı okuru yanıltmadan yazılabiliyor mu?"
+    },
+    {
+      "gameId": "yut-nori",
+      "name": "Yut Nori",
+      "family": "race",
+      "culture": "Korean",
+      "reconstructed": false,
+      "playersMax": 8,
+      "asymmetric": false,
+      "batch": 1,
+      "whyHard": "ÖLÇEKLEME. 2–8 oyuncu, takım oyunu, ekstra atış, taş birleştirme. Sınadığı varsayım: kural şablonu iki kişilik masadan sekiz kişilik masaya çıkınca kırılıyor mu; ve 'oyuncu sayısı' künye şeridi grup oyununu doğru anlatabiliyor mu?"
+    },
+    {
+      "gameId": "fanorona",
+      "name": "Fanorona",
+      "family": "war-board",
+      "culture": "Malagasy",
+      "reconstructed": false,
+      "playersMax": 2,
+      "asymmetric": false,
+      "batch": 1,
+      "whyHard": "ALMA MANTIĞI. Çift yönlü alma (yaklaşma/çekilme), zorunlu alma, zincir. Faz 1 pilotu bu oyunda 26 kelimelik bir kural adımı buldu ve kapı reddetti. Sınadığı varsayım: 'tek eylem = tek adım' kuralı, karmaşık bir alma mantığını bölünce anlaşılır kalıyor mu — yoksa adım sayısı patlıyor mu?"
+    },
+    {
+      "gameId": "go",
+      "name": "Go",
+      "family": "territory",
+      "culture": "Han Chinese",
+      "reconstructed": false,
+      "playersMax": 2,
+      "asymmetric": false,
+      "batch": 2,
+      "whyHard": "EDİTORYAL KARAR GÖRÜNÜRLÜĞÜ. 19×19 650 kelimede öğretilemez; 9×9 bir UYARLAMADIR. Sınadığı varsayım: kitap bir uyarlamayı gizlemeden basabiliyor mu, ve ko kuralı ile puanlama iki sayfaya sığıyor mu? Ayrıca dünyanın en derin oyununun 'basitleştirilmiş' hâli okuru aldatmadan sunulabilir mi?"
+    },
+    {
+      "gameId": "shogi",
+      "name": "Shogi",
+      "family": "war-board",
+      "culture": "Japanese",
+      "reconstructed": false,
+      "playersMax": 2,
+      "asymmetric": false,
+      "batch": 2,
+      "whyHard": "SAYFA BÜTÇESİ KRİZİ. Sekiz taş tipi, terfi, ve taş DÜŞÜRME (alınan taş oyuna geri girer). Kayıt açıkça '650 kelimeye sığmaz' diyor. Sınadığı varsayım: iki sayfalık madde mimarisi bir oyunu reddetmek zorunda kalıyor mu; ve dört sayfalık madde ile mini-shogi arasındaki seçim ölçülebilir mi?"
+    },
+    {
+      "gameId": "royal-game-of-ur",
+      "name": "The Royal Game of Ur",
+      "family": "race",
+      "culture": "Sumerian",
+      "reconstructed": true,
+      "playersMax": 2,
+      "asymmetric": false,
+      "batch": 2,
+      "whyHard": "YENİDEN KURGULAMA #2 + EN ESKİ MADDE. Kural, MÖ 177 tarihli bir çivi yazısı tabletten (BM 33333b) okunmuştur; rozet karelerin işlevi yorumlara göre değişir. Sınadığı varsayım: 4.500 yıllık bir oyunun kuralı, kaynak belirsizliği ITIRAF EDİLEREK oynanabilir hâlde basılabilir mi?"
+    },
+    {
+      "gameId": "olinda-keliya",
+      "name": "Olinda Keliya",
+      "family": "sowing",
+      "culture": "Sinhalese",
+      "reconstructed": false,
+      "playersMax": 2,
+      "asymmetric": false,
+      "batch": 2,
+      "whyHard": "GÜVENLİK VE MALZEME İKAMESİ. Oyuna adını veren tohum (Abrus precatorius) ölümcül derecede zehirlidir. Sınadığı varsayım: substitutionHint/safetyNotes alanları, özgün malzemeyi ANLATIP oynatmamayı sağlıyor mu; ve ikame oyunu değiştiriyor mu?"
+    },
+    {
+      "gameId": "mahjong",
+      "name": "Mahjong",
+      "family": "chance",
+      "culture": "Han Chinese",
+      "reconstructed": false,
+      "playersMax": 4,
+      "asymmetric": false,
+      "batch": 3,
+      "whyHard": "MALZEME ERİŞİMİ + PUANLAMA PATLAMASI. 144 taş evde yoktur ve bölgesel puanlama sistemleri birbirinden tamamen farklıdır. Sınadığı varsayım: 'bu akşam oynanabilir' vaadi, malzemesi evde olmayan bir oyunda ne oluyor — madde düşer mi, uyarlanır mı, yoksa vaat mi daralır? Dış testin MADDE YÜZÜNDEN bloklanması da geçerli bir bulgudur."
+    },
+    {
+      "gameId": "astragaloi",
+      "name": "Astragaloi",
+      "family": "chance",
+      "culture": "Ancient Greek",
+      "reconstructed": false,
+      "playersMax": 6,
+      "asymmetric": false,
+      "batch": 3,
+      "whyHard": "BAHSİN PUANA ÇEVRİLMESİ (K5). Oyun tarihsel olarak bahisle oynanmıştır ve puan değerleri kaynaklar arasında değişir. Sınadığı varsayım: kumar çerçevesini puanla değiştirmek oyunu bozuyor mu; ve bu editoryal müdahale prozada açıkça söylenince okur onu bir sansür değil bir karar olarak okuyor mu?"
+    },
+    {
+      "gameId": "cats-cradle",
+      "name": "Cat's Cradle",
+      "family": "boardless",
+      "culture": "English",
+      "reconstructed": false,
+      "playersMax": 2,
+      "asymmetric": false,
+      "batch": 3,
+      "whyHard": "DİYAGRAM DİLİNİN YIKIM TESTİ. İp figürleri bir tahta değildir: hareket üç boyutlu, eller iki tane, adımlar geri alınamaz. Kayıt 'diyagram bütçesini tek başına iki katına çıkarabilir' diyor. Sınadığı varsayım: DIAGRAM_LANGUAGE.md tahtasız ve nesnesiz bir oyunu gösterebiliyor mu — yoksa notasyon yalnızca tahtalar için mi çalışıyor?"
+    },
+    {
+      "gameId": "mbube-mbube",
+      "name": "Mbube Mbube",
+      "family": "boardless",
+      "culture": "Zulu",
+      "reconstructed": false,
+      "playersMax": 20,
+      "asymmetric": false,
+      "batch": 3,
+      "whyHard": "GRUP ÖLÇEĞİ + GÖZETİM + TEK KAYNAK. 6–20 oyuncu, iki oyuncunun gözü bağlı, gözetim ZORUNLU, ve tek bir bağımsız kaynak var (Zaslavsky 1973). Sınadığı varsayım: künye şeridi ve güvenlik alanları bir beden oyununu güvenle basabiliyor mu; ve tek kaynaklı bir oyun 'locked' olabilir mi — olamıyorsa kapı ısırıyor mu?"
+    }
+  ]
+}

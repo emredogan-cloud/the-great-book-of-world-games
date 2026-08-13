@@ -1159,7 +1159,8 @@
       "sources": [
         {
           "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "s. 93 (Abrus precatorius) ve ss. 225–226 (tahta, ad, bağlam)"
         },
         {
           "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
@@ -3422,7 +3423,8 @@
       "sources": [
         {
           "ref": "Linnaeus, Carl, Iter Lapponicum / Lachesis Lapponica (journal of 1732; published London, 1811)",
-          "type": "archive"
+          "type": "archive",
+          "locator": "1811 İngilizce çeviri, c. II, ss. 55–58 (şekil + on iki LAWS)"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -3450,6 +3452,21 @@
       },
       "playabilityStatus": "reconstructed",
       "reconstructionPlan": "BOŞLUK: Linnaeus'un Latince notu kralın kenara mı köşeye mi kaçtığını kesin söylemez; berabere de tanımsızdır. KAPATMA: kitap kaydın diyagramına sadık kalır, kaçış hedefini KENAR olarak okur (Linnaeus'un çizimindeki işaretli kareler kenardadır) ve tekrar eden konumu berabere sayar. DAYANAK: kaydın kendi diyagramı; başka hiçbir kaynak eklenmez. ETİKET: madde 'yeniden kurgulanmış kural' başlığıyla ve kaydın bir dış gözlemciye ait olduğu notuyla basılır.",
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
+      "ageMinEstimate": 9,
+      "materialsHint": [
+        "9×9 kare tahta",
+        "bir kral",
+        "sekiz savunan",
+        "on altı kuşatan"
+      ],
       "substitutionHint": [
         "kâğıda çizilmiş 9×9 ızgara",
         "düğme"
@@ -4673,6 +4690,21 @@
       },
       "playabilityStatus": "reconstructed",
       "reconstructionPlan": "BOŞLUK: sömürge dönemi kronikleri oyunu anlatır ama tur kurallarını ve yasal hamle tanımını vermez; berabere ve döngü tanımsızdır. KAPATMA: kitap Durán ve Sahagún'un anlattığı iz ile fasulye zarını korur, hamle seçimini 'her atışta bir taş' kuralına indirger ve taşların tümü izde tıkalıysa turun pas geçildiğini, üç ardışık pasın oyunu berabere bitirdiğini basar. DAYANAK: kroniklerin verdiği malzeme ve iz betimlemesi; eksik olan tur mantığı için hiçbir başka kültürün oyunundan kural ÖDÜNÇ ALINMAZ. ETİKET: madde 'yeniden kurgulanmış kural' başlığıyla, bahsin puanla değiştirildiği notuyla ve sömürge yasağının tarihiyle birlikte basılır.",
+      "players": {
+        "min": 2,
+        "max": 2,
+        "note": "Kronikler karşılıklı oturan İKİ oyuncu anlatır. Dörtlü biçim modern yeniden kurgulamalarda görülür ve 16. yüzyıl kaynaklarında DAYANAĞI YOKTUR; kitap iki oyuncuyu basar."
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
+      "ageMinEstimate": 8,
+      "materialsHint": [
+        "haç biçimli iz",
+        "oyuncu başına altı taş",
+        "bir yüzü işaretli beş fasulye"
+      ],
       "substitutionHint": [
         "kâğıda çizilmiş haç",
         "düğme",
@@ -5501,7 +5533,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "§ LXX 'Nyout-nol-ki — Nyout Playing', ss. 66–69"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -5893,7 +5926,7 @@
       "status": "candidate",
       "restrictionStatus": "open",
       "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
+      "sourceVerification": "page-verified",
       "sources": [
         {
           "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
@@ -5906,6 +5939,17 @@
         {
           "ref": "Shotwell, Peter, Go! More Than a Game (Boston: Tuttle, 2003)",
           "type": "book"
+        },
+        {
+          "ref": "Falkener, Edward, Games Ancient and Oriental and How to Play Them (London: Longmans, Green & Co., 1892)",
+          "type": "book",
+          "locator": "Böl. XXIII 'Wei-K'i and Go', ss. 239–240"
+        },
+        {
+          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
+          "type": "ethnography",
+          "locator": "§ LXXV 'Pa-tok — Pebble Game', ss. 91–92",
+          "note": "Faz 2 sayfa doğrulaması: Falkener'dan BAĞIMSIZ ikinci doğrulama. Kore (Pa-tok) · Çin (Wei ch'i) · Japonya (Go) aynı oyundur ve 19×19 = 361 kesişim burada da doğrulanmıştır."
         }
       ],
       "ruleCompleteness": {
@@ -7719,6 +7763,12 @@
         {
           "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
           "type": "book"
+        },
+        {
+          "ref": "Montgomery, Rev. W., 'The Malagasy Game of Fanorona', The Antananarivo Annual and Madagascar Magazine XI (Antananarivo: LMS Press, 1887), ss. 148–156",
+          "type": "journal",
+          "locator": "The Antananarivo Annual and Madagascar Magazine XI (1887), ss. 151–153",
+          "note": "Faz 2 sayfa doğrulaması sırasında bulundu: Bell ve Murray derlemelerinin ikisinden de eski, birincil saha kaydı. Kaynak zinciri kısaldı."
         }
       ],
       "ruleCompleteness": {
@@ -8847,6 +8897,11 @@
         {
           "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
           "type": "book"
+        },
+        {
+          "ref": "Falkener, Edward, Games Ancient and Oriental and How to Play Them (London: Longmans, Green & Co., 1892)",
+          "type": "book",
+          "locator": "Böl. XII 'Japanese Chess', ss. 155–157"
         }
       ],
       "ruleCompleteness": {
@@ -11514,15 +11569,17 @@
       "status": "candidate",
       "restrictionStatus": "open",
       "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
+      "sourceVerification": "page-verified",
       "sources": [
         {
           "ref": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Real Cat's-Cradle', ss. 324–333"
         },
         {
           "ref": "Haddon, Kathleen, Cat's Cradles from Many Lands (London: Longmans, 1911)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "giriş, s. 1"
         }
       ],
       "ruleCompleteness": {

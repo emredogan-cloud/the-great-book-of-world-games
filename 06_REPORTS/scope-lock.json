@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "checks": 22,
+  "errors": [],
+  "warnings": [],
+  "facts": {
+    "locked_games": 100,
+    "familyCounts": {
+      "sowing": 14,
+      "hunt-siege": 10,
+      "race": 15,
+      "territory": 14,
+      "war-board": 17,
+      "chance": 15,
+      "boardless": 15
+    },
+    "restrictedTotal": 9,
+    "locked_cultures": 71,
+    "pilot_games": 12
+  }
+}

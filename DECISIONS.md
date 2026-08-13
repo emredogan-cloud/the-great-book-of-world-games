@@ -12,59 +12,20 @@
 
 ## AÇIK KARARLAR — kurucudan yanıt bekleyen
 
-Durum tablosu · 13 Ağustos 2026 (Faz 1 sonu)
+Durum tablosu · 13 Ağustos 2026 (Faz 2 girişi)
 
 | # | Soru | Aciliyet | Ne zaman kapanmalı | Durum |
 |---|---|---|---|---|
-| **A1** | Manuscript public depoda mı duracak? | **YÜKSEK** | **Faz 2 başlamadan** | AÇIK — **K9 ile mekanizmaya bağlandı**; onay bekliyor |
-| **A2** | 7 aile taksonomisi onayı **+ yeniden dengeleme** | **YÜKSEK** | **Faz 2 başlamadan** | AÇIK — taksonomi yazıldı; öneri hazır |
-| **A3** | 100 oyunun nihai listesi | **YÜKSEK** | **Faz 2 başlamadan** | AÇIK — 96 oyunluk **öneri** + 23 yedek üretildi |
+| ~~A1~~ | Manuscript public depoda mı duracak? | — | — | ✅ **KAPANDI · K12** — hayır; koruma güçlendirildi |
+| ~~A2~~ | 7 aile taksonomisi + yeniden dengeleme | — | — | ✅ **KAPANDI · K13** — onaylandı; 10/17 kilitlendi |
+| ~~A3~~ | 100 oyunun nihai listesi | — | — | ✅ **KAPANDI · K14** — `scope_lock.json` |
+| ~~A7~~ | Oyun testçileri kim | — | — | ✅ **KAPANDI · K15** — dış testçi VAR |
 | **A4** | Büyük punto sürümü v1.0'a girecek mi | DÜŞÜK | Faz 4 | AÇIK (bootstrap varsayımı: hayır) |
-| **A5** | Kalibre edilmiş `STYLE.md` onayı | ORTA | Faz 2 | AÇIK |
+| **A5** | Kalibre edilmiş `STYLE.md` onayı | ORTA | **Faz 2 sonu** | AÇIK — v2.0 ölçümle yazıldı, onay bekliyor |
 | **A6** | Yazar biyografisi metni | ORTA | Faz 5 | AÇIK |
-| **A7** | Oyun testçileri kim | **YÜKSEK** | **Faz 2 başlamadan** | AÇIK — **Faz 2 sert bloklayıcısı** |
 
-### A2 · Faz 1 bulgusu — aile hedefleri yeniden dengelensin mi
-
-Av ve kuşatma ailesi 21 aday taşıyor (taban 16 ✅) ama yalnızca **10'u
-uygun** — hedef 14'tü. Sebep veri hatası değil araştırma gerçeğidir: tafl
-kümesinin kuralları yoktur, kaplan-keçi kümesi tek kaynaklıdır.
-
-| Aile | Mevcut hedef | Önerilen |
-|---|---:|---:|
-| Av ve kuşatma | 14 | **10** |
-| Savaş tahtası | 13 | **17** |
-
-Toplam 100 korunur. **Karşı gerekçe:** av-kuşatma kitabın en görsel ve en
-çocuk-dostu ailesidir; küçültmek onu zayıflatır. Alternatif hedefi korumak
-ve Faz 2'de dört kaplan-keçi oyununa ikinci bağımsız kaynak aramaktır.
-
-Ayrıntı: [`06_REPORTS/PHASE_1_REPORT.md`](06_REPORTS/PHASE_1_REPORT.md) § 5.
-
----
-
-### A1 · Manuscript public depoda mı duracak?
-
-Talimat depoyu **public** yapmayı emrediyor. Aynı talimat, yayımlanmamış
-manuscript'in "repository public diye otomatik olarak public olmaması"nı da
-emrediyor. Üç şık:
-
-| Şık | Ne demek | Sonuç |
-|---|---|---|
-| **(a)** | Depo public; **proza depo dışında yaşar** (`.gitignore` + içerik denetimi) | Bestiarium D8/D29 ve World Myths K21 kararı. **Bootstrap bunu varsaydı.** |
-| (b) | Depo public; proza şifreli/ayrı private submodule'de | Karmaşık; iki depo yönetimi |
-| (c) | Depo private; yalnızca yayından sonra public | Talimatın "public repository" emriyle çelişir |
-
-**Bootstrap'ın varsayımı: (a)** — iki önceki projede de bu seçildi ve çalıştı.
-
-### A7 · Oyun testçileri kim
-
-**Bu, Faz 2'nin sert bloklayıcısıdır.** Ajan oynanabilirlik testi yapamaz;
-testçi insandır ve yalnızca kitaptaki metni okur.
-
-Testçi bulunamazsa **Faz 2 bloklanır**. Bu kabul edilen bir bloktur:
-**sahte test kaydı üretilmez.** `qa_playable.py` `usedOnlyBookText: false`
-olan kaydı geçersiz sayar.
+Dört yüksek öncelikli karar Faz 2 girişinde kapandı. Kalan üçünün hiçbiri
+Faz 2'yi bloklamaz.
 
 ---
 
@@ -220,3 +181,199 @@ gibi görünmesi mekanik olarak imkânsızdır.**
 Aynı betik bağımsızlık sayımını da yapar: aynı yazarın iki eseri **bir**
 kaynaktır, ve `lineage` alanı taşıyan türetilmiş bir kaynak bağımsız
 sayılmaz.
+
+---
+
+### K12 · A1 KAPANDI — manuscript public olmaz, iş durmaz
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 2 · **Karar:** kurucu
+
+Kurucu §25'te şıkkı seçti: **DEVAM ET + MANUSCRIPT'İ KORU.** Bu, K9'un
+kurduğu (a) hattının onayıdır: depo public kalır, proza depo dışında yaşar.
+
+**Faz 2'nin eklediği şey bir politika değil, bir mekanizma güçlendirmesidir.**
+K9'un sızıntı dedektörü yalnızca **beş yapısal etikete** bakıyordu
+(`Setup:`, `Turn sequence:`, `Win condition:`, `On your turn,`,
+`The game ends when`). Bu yeterli değildi ve gerekçesi tek cümledir:
+
+> **Etiketleri silmek, prozayı silmez.**
+
+Etiketsiz yazılmış bir kural metni — "Place the board between you. Each
+player takes twelve seeds…" — beş etiketin hiçbirini taşımaz ve eski
+dedektörden **temiz geçerdi**. Faz 2 bu deliği dört hatla kapattı:
+
+| Hat | Ne arar | Neden gerekli |
+|---|---|---|
+| `structural-marker` | sekiz bloğun etiketleri | K9'un mevcut hattı |
+| `content-signature` | ikinci tekil talimat dili + oyun terimleri | etiketler silinse de proza kalır |
+| `density` | bir dosyadaki kural cümlesi **yoğunluğu** | tek örnek cümle ≠ manuscript |
+| `pilot-marker` | Türkçe pilot işareti | test malzemesi ticari metne giremez |
+
+Dedektör **yalnızca dosya adına** güvenmez; `git ls-files` ile takip edilen
+her dosyanın **içeriğini** okur. Kanıt disipline değil fikstüre bağlıdır:
+`05_TESTS/fixtures/` altındaki kasıtlı sızıntı kurguları CI'da
+**KIRMIZI**, temiz durum **YEŞİL** üretir ve bu ispat `selftest.py` § 6'da
+her koşuda tekrarlanır.
+
+Sırlar (`.env`, kimlik bilgileri, API anahtarları) K9'daki gibi taranmaya
+devam eder.
+
+---
+
+### K13 · A2 KAPANDI — aile hedefleri yeniden dengelendi (10 / 17)
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 2 · **Karar:** kurucu
+
+| Aile | Faz 1 hedefi | **Kilitli hedef** |
+|---|---:|---:|
+| Av ve kuşatma | 14 | **10** |
+| Savaş tahtası | 13 | **17** |
+
+Toplam 100 korunur. **Karar kilitlidir ve yeniden açılmaz.**
+
+**Gerekçe tek cümledir: veri hipotezi yendi.** Av-kuşatma ailesi 21 aday
+taşıyor ama yalnızca 10'u uygun; iki kümesi de ayrı bir duvara çarpıyor
+(tafl kümesinin kuralı yok, kaplan-keçi kümesi tek kaynaklı). Hedefi 14'te
+tutmak, kitaba dört zayıf oyun **zorlamak** demekti.
+
+Karşı gerekçe kayda geçmişti (av-kuşatma en görsel ve en çocuk-dostu aile)
+ve kurucu tarafından tartılıp reddedildi. Bu belgede kalmasının sebebi
+şudur: bir kararın hangi itiraza rağmen alındığı, kararın kendisi kadar
+değerlidir.
+
+**Ek talimat:** av-kuşatma ailesi bir daha 14'e çıkarılmaz ve savaş tahtası
+yapay olarak şişirilmez. 17'nin tamamı **mevcut uygun havuzdan** gelir —
+20 uygun aday vardır, yani seçim hâlâ seçimdir, doldurma değil.
+
+---
+
+### K14 · A3 KAPANDI — nihai 100 oyun KİLİTLİ
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 2 · **Karar:** kurucu
+
+Nihai liste `01_SOURCE/scope_lock.json` içinde durur: **100 oyun ·
+71 kültür · 19 yedek**. Türetimi denetlenebilirdir — Faz 1'in 96'lık
+önerisi + 23 yedek havuzu + uygunluk verisi + K13 yeniden dengelemesi
+modele geri verildiğinde model **tam 100** üretir ve yedi ailenin hedefi de
+dolar. Bu, listenin bir tercih değil bir **sonuç** olduğunu gösterir.
+
+Her kayıt on alan taşır: kimlik · aile · kültür · bölge · ülke/alan ·
+dönem · kaynak eşlemesi · kural bütünlüğü · oynanabilirlik · araştırma
+durumu · uygunluk.
+
+**Kilit iki yönlü korunur** (`04_BUILD/validate_scope.py`):
+
+1. **Liste değişirse** — kimlik özeti (sha256) tutmaz, kapı ısırır.
+2. **Envanter kayarsa** — kilit, her kaydın *karar anındaki* aile,
+   kültür, bölge, oynanabilirlik, kısıt ve araştırma değerlerini de saklar
+   ve her koşuda envanterle karşılaştırır.
+
+İkincisi birincisinden **daha önemlidir**: bir oyun sessizce `dropped`
+olsa ya da kısıt taramasından `restricted` çıksa, liste hâlâ o kimliği
+taşıdığı için hiçbir dosyada değişiklik görünmezdi. Artık görünür.
+
+Değişiklik yasak değildir; **sessiz** değişiklik yasaktır. Bir oyunun
+yerine başkası ancak `amendments[]` şerhiyle konur ve şerh altı alanı
+birden yazmak zorundadır: tarih · gerekçe · çıkarılan · yerine konan ·
+aile dengesine etkisi · kültür dengesine etkisi. Eksik şerh CI'ı kırar.
+
+---
+
+### K15 · A7 KAPANDI — dış testçi VAR; iç ve dış kanıt AYRI sayılır
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 2 · **Karar:** kurucu
+
+Faz 2'nin sert bloklayıcısı kalktı: kurucu gerçek insan testçi buldu.
+Testçiler Türkçe konuşuyor, bu yüzden **tester-facing** malzeme Türkçedir
+(K16).
+
+Bu karar bir şeyi **kolaylaştırmaz**: kanıt türleri birbirine karışamaz.
+
+| Kanıt | Kim üretir | `locked` kapısında sayılır mı |
+|---|---|---|
+| `internal` | ana ajan · alt-ajan · doğrulayıcı | **HAYIR** |
+| `external` | gerçek insan testçi | **EVET** |
+
+Ajanın ürettiği her şey `internal`dır ve bu bir aşağılama değil bir
+**tanımdır**: bir kural metnini yazan zihin, o metni okuyup anlamadığını
+keşfedemez. `qa_playable.py` yalnızca `external` kaydı kapı olarak sayar
+ve iki türü aynı toplamda göstermez.
+
+**Sahte kayıt üretmek bu projede iş bitiren bir ihlaldir.** Ajan test
+oturumu düzenleyemez; teslimatı **test paketidir**, test sonucu değil.
+Sonuçlar gerçek oturumlardan gelene kadar oyunlar `locked` **olamaz** ve
+bu, kabul edilmiş ve raporlanan bir bloktur.
+
+Kişisel veri toplanmaz: yalnızca anonim testçi kimliği (`T01`…) tutulur.
+`qa_playable.py` ad, e-posta, telefon gibi alanları taşıyan bir kaydı
+**reddeder** — testçiyi korumak da bir kapıdır.
+
+---
+
+### K16 · TİCARİ DİL İNGİLİZCEDİR — Türkçe yalnızca TEST malzemesidir
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 2 · **Karar:** kurucu
+
+| Katman | Dil | Ticari mi |
+|---|---|---|
+| Ticari ürünün tamamı | **İngilizce** | evet |
+| Mühendislik belgeleri (bu dosya dâhil) | Türkçe | hayır |
+| **Dış test paketi** | **Türkçe** | **hayır** |
+
+Türkçe pilot yalnızca **mevcut testçiler Türkçe konuştuğu için** vardır.
+Geçicidir, ticari değildir, ve ticari manuscript'e giremez.
+
+**En önemli madde budur:**
+
+> Türkçe pilotun BAŞARISI, İngilizce sürümün DOĞRULUĞUNU KANITLAMAZ.
+
+Sebep mekaniktir, kültürel bir incelik değil: bir kuralın belirsizliği
+**dilin içinde yaşar**. Türkçe "taşı al" ile İngilizce "take the piece"
+farklı yerlerde bulanıklaşır; kelime oyunu, terim seçimi, edilgen çatı ve
+gönderim zamiri oyunu **değiştirebilir**. Bu yüzden:
+
+1. Türkçe pilot **çeviri kaynağı değildir**. İngilizce sürüm doğrudan
+   İngilizce yazılır; makine çevirisi ya da birebir aktarım yasaktır.
+2. İngilizce sürüm **bağımsız olarak** yeniden doğrulanır: kaynak · kural ·
+   oynanabilirlik · netlik · terminoloji · kültürel sadakat · diyagram.
+3. Oyunu etkileyen her kelime değişikliği **yeniden doğrulama tetikler**.
+
+Mekanik karşılığı `04_BUILD/qa_language_split.py`: ticari manuscript'te
+Türkçe pilot metni ya da Türkçeye özgü karakter/kalıp yoğunluğu bulursa
+CI kırmızı yanar. Kasıtlı fikstür bu ispatı `selftest.py` içinde tutar.
+
+---
+
+### K17 · SAYFA DOĞRULAMASI BİR KAYITTIR, BİR ETİKET DEĞİL
+
+**Tarih:** 13 Ağustos 2026 · **Faz:** 2
+
+K11 iki seviyeyi ayırmıştı (`bibliographic` ↔ `page-verified`). Faz 2
+ikincisinin **ne anlama geldiğini** kayda bağladı.
+
+`sourceVerification: "page-verified"` yazmak bir iddiadır ve tek başına
+denetlenemez. Bu yüzden her doğrulama `01_SOURCE/source_verification.json`
+içinde dokuz alan taşır:
+
+```
+gameId · sourceRef · edition · locator · supportingPassage ·
+supportedClaim · verifiedOn · accessMethod · status
+```
+
+`supportingPassage` alanı belirleyicidir: **kaynağın kendi cümlesi**
+kayda geçer. Bir sayfa numarası uydurulabilir; o sayfada duran cümle
+uydurulamaz — ve uydurulursa denetlenebilir biçimde yanlıştır.
+
+Üç durum vardır ve üçü de dürüsttür:
+
+| Durum | Anlamı |
+|---|---|
+| `verified` | Kaynak açıldı, pasaj okundu, iddia karşılandı |
+| `blocked` | Kaynağa **erişilemedi** — telif, ödünç kısıtı, dijitalleşmemiş |
+| `pending` | Henüz denenmedi |
+
+**`blocked` bir başarısızlık değil, bir ölçümdür.** Erişilemeyen bir
+kaynağı "doğrulandı" saymak, kitabın tek denetlenebilir iddiasını yıkar.
+`validate_research.py` `locked` bir oyun için ≥2 `verified` kayıt şart
+koşar; `blocked` sayılmaz. Sonuç: **erişilemeyen kaynağa dayanan bir oyun
+kilitlenemez.**

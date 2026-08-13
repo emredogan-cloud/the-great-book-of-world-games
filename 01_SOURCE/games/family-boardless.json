@@ -12,7 +12,12 @@
     {
       "gameId": "hopscotch",
       "name": "Hopscotch",
-      "altNames": ["Scotch-hoppers", "Rayuela", "Marelle", "Seksek"],
+      "altNames": [
+        "Scotch-hoppers",
+        "Rayuela",
+        "Marelle",
+        "Seksek"
+      ],
       "culture": "English",
       "region": "Western Europe",
       "countryOrArea": "England (and, in cognate forms, worldwide)",
@@ -24,23 +29,69 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)", "type": "ethnography"},
-        {"ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)", "type": "ethnography"}
+        {
+          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 1, "max": 8},
-      "durationMinutes": {"min": 10, "max": 30},
+      "players": {
+        "min": 1,
+        "max": 8
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 30
+      },
       "ageMinEstimate": 4,
-      "materialsHint": ["tebeşir", "atılacak bir taş"],
-      "substitutionHint": ["maskeleme bandı (iç mekân)", "yassı bir düğme"],
+      "materialsHint": [
+        "tebeşir",
+        "atılacak bir taş"
+      ],
+      "substitutionHint": [
+        "maskeleme bandı (iç mekân)",
+        "yassı bir düğme"
+      ],
       "safetyNotes": "Sert zeminde düşme riski; kaygan yüzeyde oynanmaz. Ayakkabı gerekir.",
       "childSuitable": true,
       "supervision": "recommended",
       "environment": "outdoor",
-      "visualNeeds": ["board-diagram", "setup-illustration", "cultural-plate"],
-      "scores": {"source": 5, "playability": 5, "cultural": 4, "access": 5, "distinct": 4, "explain": 5, "visual": 5, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "setup-illustration",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 4,
+        "explain": 5,
+        "visual": 5,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "'Roma askerlerinin icadı' iddiası yaygındır ve HİÇBİR KAYNAĞA dayanmaz; kitap bu efsaneyi açıkça düzeltir. Bu, bir oyun kitabının yapabileceği en yararlı düzeltmelerden biridir.",
       "editorialStatus": "inventory",
@@ -49,7 +100,10 @@
     {
       "gameId": "morra",
       "name": "Morra",
-      "altNames": ["Micatio", "Mora"],
+      "altNames": [
+        "Micatio",
+        "Mora"
+      ],
       "culture": "Italian",
       "region": "Mediterranean",
       "countryOrArea": "Italy (Roman antecedent)",
@@ -61,21 +115,62 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Cicero, De Officiis III.77 (the proverb about micatio and honesty in the dark)", "type": "archive"},
-        {"ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)", "type": "book"}
+        {
+          "ref": "Cicero, De Officiis III.77 (the proverb about micatio and honesty in the dark)",
+          "type": "archive"
+        },
+        {
+          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 5, "max": 15},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 5,
+        "max": 15
+      },
       "ageMinEstimate": 5,
-      "materialsHint": ["hiçbir şey"],
+      "materialsHint": [
+        "hiçbir şey"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "indoor-open",
-      "visualNeeds": ["move-diagram", "cultural-plate"],
-      "scores": {"source": 5, "playability": 5, "cultural": 5, "access": 5, "distinct": 5, "explain": 5, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "move-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 5,
+        "explain": 5,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "gamblingReframed": true,
       "culturalNotes": "Cicero'nun 'karanlıkta bile mora oynanabilecek kadar dürüst adam' deyişi, oyunun iki bin yıldır aynı güven sorununu taşıdığını gösterir.",
@@ -85,7 +180,11 @@
     {
       "gameId": "jan-ken",
       "name": "Jan-ken",
-      "altNames": ["Janken", "Rock-paper-scissors", "Sansukumi-ken"],
+      "altNames": [
+        "Janken",
+        "Rock-paper-scissors",
+        "Sansukumi-ken"
+      ],
       "culture": "Japanese",
       "region": "East Asia",
       "countryOrArea": "Japan",
@@ -97,22 +196,66 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Linhart, Sepp, 'Rituality in the Ken Game', in van Bremen & Martinez (eds.), Ceremony and Ritual in Japan (London: Routledge, 1995)", "type": "journal"},
-        {"ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)", "type": "ethnography"}
+        {
+          "ref": "Linhart, Sepp, 'Rituality in the Ken Game', in van Bremen & Martinez (eds.), Ceremony and Ritual in Japan (London: Routledge, 1995)",
+          "type": "journal"
+        },
+        {
+          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Berabere sonsuz tekrar üretir; kitap bir tur sınırı ya da 'üç galibiyet' kuralı basar."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Berabere sonsuz tekrar üretir; kitap bir tur sınırı ya da 'üç galibiyet' kuralı basar."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 1, "max": 5},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 1,
+        "max": 5
+      },
       "ageMinEstimate": 4,
-      "materialsHint": ["hiçbir şey"],
+      "materialsHint": [
+        "hiçbir şey"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "indoor-open",
-      "visualNeeds": ["move-diagram", "cultural-plate"],
-      "scores": {"source": 4, "playability": 5, "cultural": 5, "access": 5, "distinct": 3, "explain": 5, "visual": 4, "play": 3},
-      "unresolvedQuestions": ["Okur oyunu zaten biliyor; kitaba girmesi ancak Japon 'ken' oyunları ailesini (kitsune-ken, mushi-ken) anlatmak içinse anlamlıdır."],
+      "visualNeeds": [
+        "move-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 5,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 3,
+        "explain": 5,
+        "visual": 4,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Okur oyunu zaten biliyor; kitaba girmesi ancak Japon 'ken' oyunları ailesini (kitsune-ken, mushi-ken) anlatmak içinse anlamlıdır."
+      ],
       "culturalNotes": "Japonya'da onlarca farklı 'ken' oyunu vardır ve bugün dünyanın bildiği taş-kâğıt-makas bunlardan yalnızca biridir; kitabın anlatacağı asıl hikâye budur.",
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -120,7 +263,10 @@
     {
       "gameId": "gonggi",
       "name": "Gonggi",
-      "altNames": ["Gonggingi", "Korean jacks"],
+      "altNames": [
+        "Gonggingi",
+        "Korean jacks"
+      ],
       "culture": "Korean",
       "region": "East Asia",
       "countryOrArea": "Korea",
@@ -132,31 +278,80 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)", "type": "ethnography"},
-        {"ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)", "type": "ethnography"}
+        {
+          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 1, "max": 6},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 1,
+        "max": 6
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 5,
-      "materialsHint": ["beş küçük taş"],
-      "substitutionHint": ["beş çakıl veya beş küçük düğme"],
+      "materialsHint": [
+        "beş küçük taş"
+      ],
+      "substitutionHint": [
+        "beş çakıl veya beş küçük düğme"
+      ],
       "safetyNotes": "Küçük parçalar — 3 yaş altı için uygun değil.",
       "childSuitable": true,
       "supervision": "none",
       "environment": "floor",
-      "visualNeeds": ["move-diagram", "setup-illustration"],
-      "scores": {"source": 5, "playability": 5, "cultural": 4, "access": 5, "distinct": 3, "explain": 4, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["Fivestones ve otedama ile üçlü tekrar riski; kitap bu kümede en fazla iki madde tutmalı."],
+      "visualNeeds": [
+        "move-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 3,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Fivestones ve otedama ile üçlü tekrar riski; kitap bu kümede en fazla iki madde tutmalı."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "fivestones",
       "name": "Fivestones",
-      "altNames": ["Jacks", "Dibs", "Knucklebones (skill form)"],
+      "altNames": [
+        "Jacks",
+        "Dibs",
+        "Knucklebones (skill form)"
+      ],
       "culture": "English",
       "region": "Western Europe",
       "countryOrArea": "England",
@@ -168,30 +363,76 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)", "type": "ethnography"},
-        {"ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)", "type": "ethnography"}
+        {
+          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 1, "max": 6},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 1,
+        "max": 6
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 5,
-      "materialsHint": ["beş taş veya aşık kemiği"],
-      "substitutionHint": ["beş çakıl"],
+      "materialsHint": [
+        "beş taş veya aşık kemiği"
+      ],
+      "substitutionHint": [
+        "beş çakıl"
+      ],
       "safetyNotes": "Küçük parçalar — 3 yaş altı için uygun değil.",
       "childSuitable": true,
       "environment": "floor",
-      "visualNeeds": ["move-diagram"],
-      "scores": {"source": 5, "playability": 5, "cultural": 4, "access": 5, "distinct": 2, "explain": 4, "visual": 3, "play": 4},
-      "unresolvedQuestions": ["Gonggi ile aynı mekanik; ikisinden biri elenmelidir."],
+      "visualNeeds": [
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 2,
+        "explain": 4,
+        "visual": 3,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Gonggi ile aynı mekanik; ikisinden biri elenmelidir."
+      ],
       "editorialStatus": "reserve",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "otedama",
       "name": "Otedama",
-      "altNames": ["Ojami"],
+      "altNames": [
+        "Ojami"
+      ],
       "culture": "Japanese",
       "region": "East Asia",
       "countryOrArea": "Japan",
@@ -203,28 +444,74 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)", "type": "ethnography"}
+        {
+          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "partial", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Şarkıya bağlı figür dizisi kaynaklarda tam yazılmamıştır."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": false, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "partial",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Şarkıya bağlı figür dizisi kaynaklarda tam yazılmamıştır."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": false,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 1, "max": 4},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 1,
+        "max": 4
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 5,
-      "materialsHint": ["fasulye dolu küçük kumaş keseler"],
-      "substitutionHint": ["pirinç doldurulmuş çorap düğümü"],
+      "materialsHint": [
+        "fasulye dolu küçük kumaş keseler"
+      ],
+      "substitutionHint": [
+        "pirinç doldurulmuş çorap düğümü"
+      ],
       "childSuitable": true,
       "environment": "floor",
-      "visualNeeds": ["move-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 4, "access": 4, "distinct": 3, "explain": 3, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor.", "Şarkı olmadan oyunun ritmi bozulur; kitap şarkıyı basamıyorsa oyunun bir parçası eksik kalır."],
+      "visualNeeds": [
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 3,
+        "explain": 3,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor.",
+        "Şarkı olmadan oyunun ritmi bozulur; kitap şarkıyı basamıyorsa oyunun bir parçası eksik kalır."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "cats-cradle",
       "name": "Cat's Cradle",
-      "altNames": ["String figures (two-player form)"],
+      "altNames": [
+        "String figures (two-player form)"
+      ],
       "culture": "English",
       "region": "Western Europe",
       "countryOrArea": "England (and cognate forms worldwide)",
@@ -234,33 +521,83 @@
       "status": "candidate",
       "restrictionStatus": "open",
       "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
+      "sourceVerification": "page-verified",
       "sources": [
-        {"ref": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)", "type": "ethnography"},
-        {"ref": "Haddon, Kathleen, Cat's Cradles from Many Lands (London: Longmans, 1911)", "type": "ethnography"}
+        {
+          "ref": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)",
+          "type": "ethnography",
+          "locator": "'Real Cat's-Cradle', ss. 324–333"
+        },
+        {
+          "ref": "Haddon, Kathleen, Cat's Cradles from Many Lands (London: Longmans, 1911)",
+          "type": "ethnography",
+          "locator": "giriş, s. 1"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 5, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 5,
+        "max": 20
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["yaklaşık bir metrelik ip halkası"],
-      "substitutionHint": ["ayakkabı bağı düğümlenerek halka yapılır"],
+      "materialsHint": [
+        "yaklaşık bir metrelik ip halkası"
+      ],
+      "substitutionHint": [
+        "ayakkabı bağı düğümlenerek halka yapılır"
+      ],
       "safetyNotes": "İp boyun çevresine dolanmaz; gözetim önerilir.",
       "childSuitable": true,
       "supervision": "recommended",
       "environment": "indoor-open",
-      "visualNeeds": ["move-diagram", "setup-illustration"],
-      "scores": {"source": 5, "playability": 4, "cultural": 5, "access": 5, "distinct": 5, "explain": 2, "visual": 5, "play": 3},
-      "unresolvedQuestions": ["İp figürlerini metinle anlatmak son derece zordur; bu madde diyagram bütçesini tek başına iki katına çıkarabilir."],
+      "visualNeeds": [
+        "move-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 4,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 5,
+        "explain": 2,
+        "visual": 5,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İp figürlerini metinle anlatmak son derece zordur; bu madde diyagram bütçesini tek başına iki katına çıkarabilir."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "ayaraaq",
       "name": "Ayaraaq",
-      "altNames": ["Inuit string figures", "Ajaraaq"],
+      "altNames": [
+        "Inuit string figures",
+        "Ajaraaq"
+      ],
       "culture": "Inuit",
       "region": "Arctic",
       "countryOrArea": "Greenland · Nunavut · Alaska",
@@ -273,28 +610,72 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Jenness, Diamond, Eskimo String Figures, Report of the Canadian Arctic Expedition 1913–18, vol. XIII (Ottawa, 1924)", "type": "ethnography"},
-        {"ref": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)", "type": "ethnography"}
+        {
+          "ref": "Jenness, Diamond, Eskimo String Figures, Report of the Canadian Arctic Expedition 1913–18, vol. XIII (Ottawa, 1924)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 1, "max": 2},
-      "durationMinutes": {"min": 5, "max": 20},
+      "players": {
+        "min": 1,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 5,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["ip halkası"],
+      "materialsHint": [
+        "ip halkası"
+      ],
       "childSuitable": true,
       "environment": "indoor-open",
-      "visualNeeds": ["cultural-plate"],
-      "scores": {"source": 4, "playability": 4, "cultural": 5, "access": 5, "distinct": 5, "explain": 2, "visual": 5, "play": 3},
-      "unresolvedQuestions": ["Topluluk onayı olmadan figür talimatı basılamaz. Kitap bu maddeyi bir 'oyun' olarak DEĞİL, ip figürleri açılış denemesinde bir kültürel not olarak taşır."],
+      "visualNeeds": [
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 5,
+        "explain": 2,
+        "visual": 5,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Topluluk onayı olmadan figür talimatı basılamaz. Kitap bu maddeyi bir 'oyun' olarak DEĞİL, ip figürleri açılış denemesinde bir kültürel not olarak taşır."
+      ],
       "editorialStatus": "rejected",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "naatlo",
       "name": "Na'atl'o'",
-      "altNames": ["Navajo string games"],
+      "altNames": [
+        "Navajo string games"
+      ],
       "culture": "Navajo (Diné)",
       "region": "North America",
       "countryOrArea": "Arizona · New Mexico · Utah",
@@ -308,20 +689,60 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)", "type": "ethnography"},
-        {"ref": "Haile, Berard, Navaho Games (published ethnographic material on Diné games and their seasonal rules)", "type": "ethnography"}
+        {
+          "ref": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Haile, Berard, Navaho Games (published ethnographic material on Diné games and their seasonal rules)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 1, "max": 2},
-      "durationMinutes": {"min": 5, "max": 20},
+      "players": {
+        "min": 1,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 5,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["ip halkası"],
+      "materialsHint": [
+        "ip halkası"
+      ],
       "childSuitable": true,
       "environment": "indoor-open",
-      "visualNeeds": ["none"],
-      "scores": {"source": 4, "playability": 4, "cultural": 5, "access": 5, "distinct": 5, "explain": 2, "visual": 4, "play": 3},
+      "visualNeeds": [
+        "none"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 5,
+        "explain": 2,
+        "visual": 4,
+        "play": 3
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "Bu madde kitapta OYNANMAK için değil, kısıt taramasının ne olduğunu göstermek için durur: bazı oyunlar oynanabilir olsalar da yayımlanamaz.",
       "editorialStatus": "rejected",
@@ -330,7 +751,9 @@
     {
       "gameId": "ampe",
       "name": "Ampe",
-      "altNames": ["Ampe (Ghana)"],
+      "altNames": [
+        "Ampe (Ghana)"
+      ],
       "culture": "Akan",
       "region": "West Africa",
       "countryOrArea": "Ghana",
@@ -342,29 +765,70 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)", "type": "book"}
+        {
+          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 12},
-      "durationMinutes": {"min": 5, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 12
+      },
+      "durationMinutes": {
+        "min": 5,
+        "max": 20
+      },
       "ageMinEstimate": 5,
-      "materialsHint": ["hiçbir şey"],
+      "materialsHint": [
+        "hiçbir şey"
+      ],
       "safetyNotes": "Zıplama içerir; düz ve kaygan olmayan zemin gerekir.",
       "childSuitable": true,
       "supervision": "recommended",
       "environment": "indoor-open",
-      "visualNeeds": ["move-diagram"],
-      "scores": {"source": 2, "playability": 5, "cultural": 4, "access": 5, "distinct": 4, "explain": 5, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak — tercihen Gana kaynaklı — gerekiyor."],
+      "visualNeeds": [
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 4,
+        "explain": 5,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak — tercihen Gana kaynaklı — gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "kho-kho",
       "name": "Kho Kho",
-      "altNames": ["Kho-Kho"],
+      "altNames": [
+        "Kho-Kho"
+      ],
       "culture": "Marathi",
       "region": "South Asia",
       "countryOrArea": "Maharashtra, India",
@@ -376,29 +840,73 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Government of India, Ministry of Education, reports on indigenous games and their codification (20th century)", "type": "archive"}
+        {
+          "ref": "Government of India, Ministry of Education, reports on indigenous games and their codification (20th century)",
+          "type": "archive"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 8, "max": 18},
-      "durationMinutes": {"min": 20, "max": 40},
+      "players": {
+        "min": 8,
+        "max": 18
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["açık alan", "iki direk"],
+      "materialsHint": [
+        "açık alan",
+        "iki direk"
+      ],
       "safetyNotes": "Hızlı koşu ve ani yön değiştirme; çarpışma riski. Açık, engelsiz alan gerekir.",
       "childSuitable": true,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["board-diagram", "setup-illustration"],
-      "scores": {"source": 2, "playability": 3, "cultural": 4, "access": 3, "distinct": 4, "explain": 3, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["Sekiz kişiden az oynanamaz; kitabın 'aile akşamı' vaadine uymuyor. Kitaba girecekse küçük gruplu bir uyarlama gerekir ve bu uyarlamanın modern olduğu söylenmelidir."],
+      "visualNeeds": [
+        "board-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 3,
+        "cultural": 4,
+        "access": 3,
+        "distinct": 4,
+        "explain": 3,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Sekiz kişiden az oynanamaz; kitabın 'aile akşamı' vaadine uymuyor. Kitaba girecekse küçük gruplu bir uyarlama gerekir ve bu uyarlamanın modern olduğu söylenmelidir."
+      ],
       "editorialStatus": "reserve",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "gilli-danda",
       "name": "Gilli-danda",
-      "altNames": ["Gulli-danda", "Tipcat"],
+      "altNames": [
+        "Gulli-danda",
+        "Tipcat"
+      ],
       "culture": "Punjabi",
       "region": "South Asia",
       "countryOrArea": "Punjab (India · Pakistan)",
@@ -410,24 +918,70 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98) — the English 'tipcat' cognate", "type": "ethnography"},
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98) — the English 'tipcat' cognate",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 10},
-      "durationMinutes": {"min": 15, "max": 40},
+      "players": {
+        "min": 2,
+        "max": 10
+      },
+      "durationMinutes": {
+        "min": 15,
+        "max": 40
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["uzun çubuk", "kısa sivri çubuk"],
-      "substitutionHint": ["yumuşak top ve tahta kaşık (güvenli uyarlama)"],
+      "materialsHint": [
+        "uzun çubuk",
+        "kısa sivri çubuk"
+      ],
+      "substitutionHint": [
+        "yumuşak top ve tahta kaşık (güvenli uyarlama)"
+      ],
       "safetyNotes": "SİVRİ UÇLU KISA ÇUBUK HAVAYA FIRLAR — göz yaralanması riski gerçektir. Özgün biçim bir aile kitabında BASILAMAZ; kitap yalnızca yumuşak nesneyle oynanan uyarlamayı basar ve bunun bir güvenlik kararı olduğunu açıkça söyler.",
       "childSuitable": true,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["move-diagram", "cultural-plate"],
-      "scores": {"source": 4, "playability": 4, "cultural": 5, "access": 4, "distinct": 4, "explain": 4, "visual": 4, "play": 3},
-      "unresolvedQuestions": ["Güvenli uyarlama oyunun özünü koruyor mu? Uçan çubuk oyunun kendisidir; yumuşak nesneyle oynanan sürüm BAŞKA bir oyun olabilir. Bu, kitabın en dürüst tartışmalarından biri olmalıdır."],
+      "visualNeeds": [
+        "move-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 4,
+        "explain": 4,
+        "visual": 4,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Güvenli uyarlama oyunun özünü koruyor mu? Uçan çubuk oyunun kendisidir; yumuşak nesneyle oynanan sürüm BAŞKA bir oyun olabilir. Bu, kitabın en dürüst tartışmalarından biri olmalıdır."
+      ],
       "adaptationNotes": "Kitap iki şey basar: özgün oyunun anlatısı ve GÜVENLİ bir uyarlama. Uyarlamanın özgün oyun olmadığı açıkça söylenir.",
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -435,7 +989,11 @@
     {
       "gameId": "lagori",
       "name": "Lagori",
-      "altNames": ["Pittu", "Seven Stones", "Lingocha"],
+      "altNames": [
+        "Pittu",
+        "Seven Stones",
+        "Lingocha"
+      ],
       "culture": "Kannada",
       "region": "South Asia",
       "countryOrArea": "India (widespread)",
@@ -447,30 +1005,77 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Government of India, Ministry of Education, reports on indigenous games and their codification (20th century)", "type": "archive"}
+        {
+          "ref": "Government of India, Ministry of Education, reports on indigenous games and their codification (20th century)",
+          "type": "archive"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 4, "max": 12},
-      "durationMinutes": {"min": 15, "max": 30},
+      "players": {
+        "min": 4,
+        "max": 12
+      },
+      "durationMinutes": {
+        "min": 15,
+        "max": 30
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["yedi yassı taş", "yumuşak top"],
-      "substitutionHint": ["yedi kitap kapağı büyüklüğünde karton", "çorap topu"],
+      "materialsHint": [
+        "yedi yassı taş",
+        "yumuşak top"
+      ],
+      "substitutionHint": [
+        "yedi kitap kapağı büyüklüğünde karton",
+        "çorap topu"
+      ],
       "safetyNotes": "Top oyunculara atılır — YALNIZCA yumuşak top kullanılır. Bu bir uyarlama değil, ZORUNLU kuraldır.",
       "childSuitable": true,
       "supervision": "recommended",
       "environment": "outdoor",
-      "visualNeeds": ["setup-illustration", "move-diagram"],
-      "scores": {"source": 2, "playability": 4, "cultural": 4, "access": 5, "distinct": 4, "explain": 4, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "setup-illustration",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 4,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 4,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "myinda",
       "name": "Myinda",
-      "altNames": ["Blind man's buff (Greek)", "Muinda"],
+      "altNames": [
+        "Blind man's buff (Greek)",
+        "Muinda"
+      ],
       "culture": "Ancient Greek",
       "region": "Mediterranean",
       "countryOrArea": "Greece",
@@ -482,31 +1087,77 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Pollux, Onomasticon IX (list and description of Greek games)", "type": "archive"},
-        {"ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98) — the English cognate", "type": "ethnography"}
+        {
+          "ref": "Pollux, Onomasticon IX (list and description of Greek games)",
+          "type": "archive"
+        },
+        {
+          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98) — the English cognate",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 4, "max": 12},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 4,
+        "max": 12
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 5,
-      "materialsHint": ["göz bandı"],
-      "substitutionHint": ["atkı veya bandana"],
+      "materialsHint": [
+        "göz bandı"
+      ],
+      "substitutionHint": [
+        "atkı veya bandana"
+      ],
       "safetyNotes": "Gözü bağlı oyuncu çarpma riski taşır — alan mobilyadan ve keskin köşeden arındırılır; gözetim ZORUNLUDUR.",
       "childSuitable": true,
       "supervision": "required",
       "environment": "indoor-open",
-      "visualNeeds": ["cultural-plate"],
-      "scores": {"source": 4, "playability": 5, "cultural": 4, "access": 5, "distinct": 2, "explain": 5, "visual": 4, "play": 3},
-      "unresolvedQuestions": ["Okur oyunu zaten biliyor; kitaba girmesi 2.000 yıllık sürekliliği göstermek içinse anlamlıdır."],
+      "visualNeeds": [
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 2,
+        "explain": 5,
+        "visual": 4,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Okur oyunu zaten biliyor; kitaba girmesi 2.000 yıllık sürekliliği göstermek içinse anlamlıdır."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "ephedrismos",
       "name": "Ephedrismos",
-      "altNames": ["Piggyback game"],
+      "altNames": [
+        "Piggyback game"
+      ],
       "culture": "Ancient Greek",
       "region": "Mediterranean",
       "countryOrArea": "Greece",
@@ -518,31 +1169,81 @@
       "sourceConfidence": "reconstructed",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Pollux, Onomasticon IX (list and description of Greek games)", "type": "archive"},
-        {"ref": "Metropolitan Museum of Art / British Museum — Greek terracotta groups showing ephedrismos", "type": "museum"}
+        {
+          "ref": "Pollux, Onomasticon IX (list and description of Greek games)",
+          "type": "archive"
+        },
+        {
+          "ref": "Metropolitan Museum of Art / British Museum — Greek terracotta groups showing ephedrismos",
+          "type": "museum"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "partial", "turnLogic": "partial", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Kaç atış yapıldığı ve taşıma mesafesi bilinmiyor; bilinenler heykel ve vazolardan çıkarılmıştır."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": false, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "partial",
+        "turnLogic": "partial",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Kaç atış yapıldığı ve taşıma mesafesi bilinmiyor; bilinenler heykel ve vazolardan çıkarılmıştır."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": false,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "reconstructed",
       "reconstructionPlan": "BOŞLUK: kaç atış yapıldığı, taşıma mesafesi ve beraberlik bilinmiyor; bilinen her şey vazo ve pişmiş toprak gruplarından çıkarılmıştır. KAPATMA: kitap Pollux'un adlandırmasını ve heykellerdeki taşıma duruşunu korur, atış sayısını üçe ve mesafeyi on adıma sabitler, kimse taşı deviremezse turu tekrarlatır. DAYANAK: sabitlenen sayılar KAYNAKLI DEĞİLDİR ve kitap bunu açıkça söyler — bunlar oyunu oynanabilir kılan editoryal seçimlerdir, tarihsel bulgu değildir. ETİKET: madde 'yeniden kurgulanmış kural' başlığıyla ve 'sayılar bizim seçimimizdir' notuyla basılır.",
-      "players": {"min": 2, "max": 6},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 6
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["bir taş", "atılacak toplar"],
+      "materialsHint": [
+        "bir taş",
+        "atılacak toplar"
+      ],
       "safetyNotes": "Sırtta taşıma içerir — düşme riski; benzer boy ve kilodaki oyuncular eşleşmeli ve gözetim gereklidir.",
       "childSuitable": true,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["cultural-plate", "move-diagram"],
-      "scores": {"source": 3, "playability": 2, "cultural": 5, "access": 5, "distinct": 5, "explain": 3, "visual": 5, "play": 3},
-      "unresolvedQuestions": ["Kurallar eksik ve taşıma riski var; kitap bu maddeyi kültürel not olarak mı yoksa oynanabilir madde olarak mı basacak?"],
+      "visualNeeds": [
+        "cultural-plate",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 3,
+        "playability": 2,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 5,
+        "explain": 3,
+        "visual": 5,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Kurallar eksik ve taşıma riski var; kitap bu maddeyi kültürel not olarak mı yoksa oynanabilir madde olarak mı basacak?"
+      ],
       "editorialStatus": "reserve",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "jianzi",
       "name": "Jianzi",
-      "altNames": ["Shuttlecock kicking", "Da cau", "Chapteh"],
+      "altNames": [
+        "Shuttlecock kicking",
+        "Da cau",
+        "Chapteh"
+      ],
       "culture": "Han Chinese",
       "region": "East Asia",
       "countryOrArea": "China (and across South-East Asia)",
@@ -554,23 +1255,67 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)", "type": "ethnography"},
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 1, "max": 8},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 1,
+        "max": 8
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["tüylü ağırlık (jianzi)"],
-      "substitutionHint": ["madeni paranın etrafına bağlanmış plastik poşet şeritleri"],
+      "materialsHint": [
+        "tüylü ağırlık (jianzi)"
+      ],
+      "substitutionHint": [
+        "madeni paranın etrafına bağlanmış plastik poşet şeritleri"
+      ],
       "safetyNotes": "Denge gerektirir; kaygan olmayan zemin.",
       "childSuitable": true,
       "supervision": "none",
       "environment": "outdoor",
-      "visualNeeds": ["piece-diagram", "move-diagram", "cultural-plate"],
-      "scores": {"source": 4, "playability": 4, "cultural": 5, "access": 5, "distinct": 5, "explain": 5, "visual": 5, "play": 4},
+      "visualNeeds": [
+        "piece-diagram",
+        "move-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 5,
+        "explain": 5,
+        "visual": 5,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "Kitabın en ucuz malzemeli maddesi: bir madeni para ve bir poşet. Bu, 'oyun nesne değildir' tezinin somut kanıtı.",
       "editorialStatus": "inventory",
@@ -579,7 +1324,10 @@
     {
       "gameId": "petanque",
       "name": "Pétanque",
-      "altNames": ["Boules", "Jeu provençal (related)"],
+      "altNames": [
+        "Boules",
+        "Jeu provençal (related)"
+      ],
       "culture": "Provençal",
       "region": "Western Europe",
       "countryOrArea": "Provence, France",
@@ -591,31 +1339,78 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)", "type": "book"},
-        {"ref": "Fédération Internationale de Pétanque et Jeu Provençal, published rules of play", "type": "archive"}
+        {
+          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+          "type": "book"
+        },
+        {
+          "ref": "Fédération Internationale de Pétanque et Jeu Provençal, published rules of play",
+          "type": "archive"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 12},
-      "durationMinutes": {"min": 20, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 12
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 45
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["metal toplar", "küçük hedef top"],
-      "substitutionHint": ["eşit büyüklükte taşlar veya tenis topları (iç mekân uyarlaması)"],
+      "materialsHint": [
+        "metal toplar",
+        "küçük hedef top"
+      ],
+      "substitutionHint": [
+        "eşit büyüklükte taşlar veya tenis topları (iç mekân uyarlaması)"
+      ],
       "safetyNotes": "Metal toplar ağırdır; ayak üstüne düşme riski. Çocuklarla oynanırken hafif top kullanılır.",
       "childSuitable": true,
       "supervision": "recommended",
       "environment": "outdoor",
-      "visualNeeds": ["setup-illustration"],
-      "scores": {"source": 3, "playability": 5, "cultural": 4, "access": 4, "distinct": 3, "explain": 5, "visual": 3, "play": 4},
-      "unresolvedQuestions": ["Modern kodifikasyon 1907'dir; 'geleneksel' etiketi dikkatle kullanılmalıdır."],
+      "visualNeeds": [
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 3,
+        "playability": 5,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 3,
+        "explain": 5,
+        "visual": 3,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Modern kodifikasyon 1907'dir; 'geleneksel' etiketi dikkatle kullanılmalıdır."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "mbube-mbube",
       "name": "Mbube Mbube",
-      "altNames": ["Lion, lion"],
+      "altNames": [
+        "Lion, lion"
+      ],
       "culture": "Zulu",
       "region": "Southern Africa",
       "countryOrArea": "South Africa",
@@ -627,22 +1422,61 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)", "type": "book"}
+        {
+          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 6, "max": 20},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 6,
+        "max": 20
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 5,
-      "materialsHint": ["iki göz bandı"],
+      "materialsHint": [
+        "iki göz bandı"
+      ],
       "safetyNotes": "İki oyuncunun gözü bağlıdır; çember onları korur ve gözetim zorunludur.",
       "childSuitable": true,
       "supervision": "required",
       "environment": "indoor-open",
-      "visualNeeds": ["setup-illustration"],
-      "scores": {"source": 2, "playability": 5, "cultural": 4, "access": 5, "distinct": 4, "explain": 5, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 4,
+        "explain": 5,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "culturalNotes": "Çemberdeki oyuncular sesin şiddetiyle mesafeyi bildirir — oyunun tamamı bir işitsel geri bildirim düzeneğidir.",
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -650,7 +1484,9 @@
     {
       "gameId": "pilolo",
       "name": "Pilolo",
-      "altNames": ["Time to search for"],
+      "altNames": [
+        "Time to search for"
+      ],
       "culture": "Ga",
       "region": "West Africa",
       "countryOrArea": "Ghana",
@@ -662,30 +1498,73 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)", "type": "book"}
+        {
+          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 4, "max": 15},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 4,
+        "max": 15
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 5,
-      "materialsHint": ["oyuncu sayısı kadar küçük çubuk veya taş"],
-      "substitutionHint": ["kürdan veya bozuk para"],
+      "materialsHint": [
+        "oyuncu sayısı kadar küçük çubuk veya taş"
+      ],
+      "substitutionHint": [
+        "kürdan veya bozuk para"
+      ],
       "safetyNotes": "Koşu içerir; engelsiz alan gerekir.",
       "childSuitable": true,
       "supervision": "recommended",
       "environment": "outdoor",
-      "visualNeeds": ["setup-illustration"],
-      "scores": {"source": 2, "playability": 5, "cultural": 4, "access": 5, "distinct": 4, "explain": 5, "visual": 3, "play": 4},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak — tercihen Gana kaynaklı — gerekiyor."],
+      "visualNeeds": [
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 4,
+        "explain": 5,
+        "visual": 3,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak — tercihen Gana kaynaklı — gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "conkers",
       "name": "Conkers",
-      "altNames": ["Obblyonker"],
+      "altNames": [
+        "Obblyonker"
+      ],
       "culture": "English",
       "region": "Western Europe",
       "countryOrArea": "England",
@@ -697,31 +1576,80 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)", "type": "ethnography"},
-        {"ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)", "type": "ethnography"}
+        {
+          "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 5, "max": 15},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 5,
+        "max": 15
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["delinmiş at kestanesi", "ip"],
-      "substitutionHint": ["delinmiş ceviz veya sert plastik top"],
+      "materialsHint": [
+        "delinmiş at kestanesi",
+        "ip"
+      ],
+      "substitutionHint": [
+        "delinmiş ceviz veya sert plastik top"
+      ],
       "safetyNotes": "Kestane parçalanabilir ve göze sıçrayabilir; koruyucu gözlük önerilir. AT KESTANESİ ZEHİRLİDİR ve ağza götürülmez.",
       "childSuitable": true,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["piece-diagram", "cultural-plate"],
-      "scores": {"source": 5, "playability": 5, "cultural": 4, "access": 4, "distinct": 4, "explain": 5, "visual": 4, "play": 3},
-      "unresolvedQuestions": ["Mevsimliktir — at kestanesi yalnızca sonbaharda bulunur; kitap yerine koyma önerisi vermek zorundadır."],
+      "visualNeeds": [
+        "piece-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 4,
+        "explain": 5,
+        "visual": 4,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Mevsimliktir — at kestanesi yalnızca sonbaharda bulunur; kitap yerine koyma önerisi vermek zorundadır."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "dehontsigwaehs",
       "name": "Dehontsigwa'ehs",
-      "altNames": ["The Creator's Game", "lacrosse (colonial name)"],
+      "altNames": [
+        "The Creator's Game",
+        "lacrosse (colonial name)"
+      ],
       "culture": "Haudenosaunee",
       "region": "North America",
       "countryOrArea": "Haudenosaunee territories (New York · Ontario · Quebec)",
@@ -735,22 +1663,63 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Vennum, Thomas, American Indian Lacrosse: Little Brother of War (Washington: Smithsonian Institution Press, 1994)", "type": "book"},
-        {"ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)", "type": "ethnography"}
+        {
+          "ref": "Vennum, Thomas, American Indian Lacrosse: Little Brother of War (Washington: Smithsonian Institution Press, 1994)",
+          "type": "book"
+        },
+        {
+          "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 10, "max": 100},
-      "durationMinutes": {"min": 60, "max": 240},
+      "players": {
+        "min": 10,
+        "max": 100
+      },
+      "durationMinutes": {
+        "min": 60,
+        "max": 240
+      },
       "ageMinEstimate": 12,
-      "materialsHint": ["ağ başlı sopalar", "top"],
+      "materialsHint": [
+        "ağ başlı sopalar",
+        "top"
+      ],
       "safetyNotes": "Yüksek temaslı bir oyundur; bir aile kitabında uyarlanamaz.",
       "childSuitable": false,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["none"],
-      "scores": {"source": 5, "playability": 5, "cultural": 5, "access": 2, "distinct": 5, "explain": 3, "visual": 5, "play": 5},
+      "visualNeeds": [
+        "none"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 5,
+        "access": 2,
+        "distinct": 5,
+        "explain": 3,
+        "visual": 5,
+        "play": 5
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "Kitabın kısıt taramasının en açık örneği: kaynak mükemmel, kurallar tam, oyun harika — ve kitap onu BASMAZ. Bir oyun kitabının verebileceği en güçlü kültürel sinyal budur.",
       "editorialStatus": "rejected",
@@ -759,7 +1728,10 @@
     {
       "gameId": "toli",
       "name": "Toli",
-      "altNames": ["Choctaw stickball", "Kabocha toli"],
+      "altNames": [
+        "Choctaw stickball",
+        "Kabocha toli"
+      ],
       "culture": "Choctaw",
       "region": "North America",
       "countryOrArea": "Mississippi · Oklahoma",
@@ -773,22 +1745,63 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Vennum, Thomas, American Indian Lacrosse: Little Brother of War (Washington: Smithsonian Institution Press, 1994)", "type": "book"},
-        {"ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)", "type": "ethnography"}
+        {
+          "ref": "Vennum, Thomas, American Indian Lacrosse: Little Brother of War (Washington: Smithsonian Institution Press, 1994)",
+          "type": "book"
+        },
+        {
+          "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 10, "max": 60},
-      "durationMinutes": {"min": 60, "max": 180},
+      "players": {
+        "min": 10,
+        "max": 60
+      },
+      "durationMinutes": {
+        "min": 60,
+        "max": 180
+      },
       "ageMinEstimate": 12,
-      "materialsHint": ["iki kısa sopa", "deri top"],
+      "materialsHint": [
+        "iki kısa sopa",
+        "deri top"
+      ],
       "safetyNotes": "Yüksek temaslı; aile kitabında uyarlanamaz.",
       "childSuitable": false,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["none"],
-      "scores": {"source": 5, "playability": 4, "cultural": 5, "access": 2, "distinct": 4, "explain": 3, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "none"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 4,
+        "cultural": 5,
+        "access": 2,
+        "distinct": 4,
+        "explain": 3,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "rejected",
       "playtestStatus": "not-started"
@@ -796,7 +1809,10 @@
     {
       "gameId": "pitz",
       "name": "Pitz",
-      "altNames": ["Mesoamerican ballgame", "Ōllamaliztli"],
+      "altNames": [
+        "Mesoamerican ballgame",
+        "Ōllamaliztli"
+      ],
       "culture": "Maya (Classic)",
       "region": "Mesoamerica",
       "countryOrArea": "Mexico · Guatemala · Honduras",
@@ -810,22 +1826,65 @@
       "sourceConfidence": "reconstructed",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Whittington, E. Michael (ed.), The Sport of Life and Death: The Mesoamerican Ballgame (New York: Thames & Hudson, 2001)", "type": "book"},
-        {"ref": "Popol Vuh (K'iche' Maya narrative, 16th-century manuscript tradition)", "type": "archive"}
+        {
+          "ref": "Whittington, E. Michael (ed.), The Sport of Life and Death: The Mesoamerican Ballgame (New York: Thames & Hudson, 2001)",
+          "type": "book"
+        },
+        {
+          "ref": "Popol Vuh (K'iche' Maya narrative, 16th-century manuscript tradition)",
+          "type": "archive"
+        }
       ],
-      "ruleCompleteness": {"setup": "partial", "play": "partial", "turnLogic": "unknown", "objective": "partial", "endCondition": "unknown", "verdict": "incomplete", "unknownElements": ["Puanlama, oyuncu sayısı ve süre bilinmiyor; taş halkanın işlevi tartışmalıdır."]},
-      "clarity": {"setupPerformable": false, "firstTurnTakeable": false, "legalMoveDistinguishable": false, "victoryDeterminable": false, "tieDefined": false, "terminationRisk": "unbounded"},
+      "ruleCompleteness": {
+        "setup": "partial",
+        "play": "partial",
+        "turnLogic": "unknown",
+        "objective": "partial",
+        "endCondition": "unknown",
+        "verdict": "incomplete",
+        "unknownElements": [
+          "Puanlama, oyuncu sayısı ve süre bilinmiyor; taş halkanın işlevi tartışmalıdır."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": false,
+        "firstTurnTakeable": false,
+        "legalMoveDistinguishable": false,
+        "victoryDeterminable": false,
+        "tieDefined": false,
+        "terminationRisk": "unbounded"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 2, "max": 14},
-      "durationMinutes": {"min": 30, "max": 120},
+      "players": {
+        "min": 2,
+        "max": 14
+      },
+      "durationMinutes": {
+        "min": 30,
+        "max": 120
+      },
       "ageMinEstimate": 14,
-      "materialsHint": ["ağır kauçuk top", "taş duvarlı saha"],
+      "materialsHint": [
+        "ağır kauçuk top",
+        "taş duvarlı saha"
+      ],
       "safetyNotes": "Özgün top birkaç kilo ağırlığındadır; uyarlanamaz.",
       "childSuitable": false,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["none"],
-      "scores": {"source": 4, "playability": 1, "cultural": 5, "access": 1, "distinct": 5, "explain": 2, "visual": 5, "play": 2},
+      "visualNeeds": [
+        "none"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 1,
+        "cultural": 5,
+        "access": 1,
+        "distinct": 5,
+        "explain": 2,
+        "visual": 5,
+        "play": 2
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "Sinaloa'da yaşayan ulama, pitz'in torunu sayılır ve YAŞAYAN bir gelenektir; kitap ikisini karıştırmaz ve ulama'yı da oynanacak bir oyun olarak basmaz.",
       "editorialStatus": "rejected",
@@ -834,7 +1893,10 @@
     {
       "gameId": "buzkashi",
       "name": "Buzkashi",
-      "altNames": ["Kokpar", "Kok-boru"],
+      "altNames": [
+        "Kokpar",
+        "Kok-boru"
+      ],
       "culture": "Afghan (Turkic and Persianate horse cultures)",
       "region": "Central Asia",
       "countryOrArea": "Afghanistan · Kyrgyzstan · Kazakhstan · Tajikistan",
@@ -848,21 +1910,59 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Azoy, G. Whitney, Buzkashi: Game and Power in Afghanistan (Philadelphia: University of Pennsylvania Press, 1982)", "type": "ethnography"}
+        {
+          "ref": "Azoy, G. Whitney, Buzkashi: Game and Power in Afghanistan (Philadelphia: University of Pennsylvania Press, 1982)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 10, "max": 100},
-      "durationMinutes": {"min": 60, "max": 300},
+      "players": {
+        "min": 10,
+        "max": 100
+      },
+      "durationMinutes": {
+        "min": 60,
+        "max": 300
+      },
       "ageMinEstimate": 18,
-      "materialsHint": ["atlar", "hayvan gövdesi"],
+      "materialsHint": [
+        "atlar",
+        "hayvan gövdesi"
+      ],
       "safetyNotes": "Ciddi yaralanma ve ölüm riski taşıyan bir yarışmadır.",
       "childSuitable": false,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["none"],
-      "scores": {"source": 3, "playability": 3, "cultural": 5, "access": 1, "distinct": 5, "explain": 3, "visual": 5, "play": 3},
+      "visualNeeds": [
+        "none"
+      ],
+      "scores": {
+        "source": 3,
+        "playability": 3,
+        "cultural": 5,
+        "access": 1,
+        "distinct": 5,
+        "explain": 3,
+        "visual": 5,
+        "play": 3
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "rejected",
       "playtestStatus": "not-started"
@@ -870,7 +1970,9 @@
     {
       "gameId": "kubb",
       "name": "Kubb",
-      "altNames": ["'Viking chess' (marketing name)"],
+      "altNames": [
+        "'Viking chess' (marketing name)"
+      ],
       "culture": "Swedish (modern)",
       "region": "Northern Europe",
       "countryOrArea": "Gotland, Sweden",
@@ -884,21 +1986,59 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999) — on invented traditions in game marketing", "type": "book"}
+        {
+          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999) — on invented traditions in game marketing",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 2, "max": 12},
-      "durationMinutes": {"min": 20, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 12
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 45
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["ahşap bloklar", "atma çubukları"],
+      "materialsHint": [
+        "ahşap bloklar",
+        "atma çubukları"
+      ],
       "safetyNotes": "Ağır ahşap parçalar fırlatılır; çarpma riski.",
       "childSuitable": true,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["none"],
-      "scores": {"source": 1, "playability": 5, "cultural": 1, "access": 3, "distinct": 3, "explain": 4, "visual": 3, "play": 4},
+      "visualNeeds": [
+        "none"
+      ],
+      "scores": {
+        "source": 1,
+        "playability": 5,
+        "cultural": 1,
+        "access": 3,
+        "distinct": 3,
+        "explain": 4,
+        "visual": 3,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "'Chinese Checkers' 1892'de Almanya'da icat edilmiştir ve Çin'le ilgisi yoktur; kubb'un 'Viking' iddiası da aynı türdendir. Kitap bu iki örneği yan yana koyar.",
       "editorialStatus": "rejected",
@@ -907,7 +2047,10 @@
     {
       "gameId": "chunkey",
       "name": "Chunkey",
-      "altNames": ["Chungke", "Tchung-kee"],
+      "altNames": [
+        "Chungke",
+        "Tchung-kee"
+      ],
       "culture": "Mississippian",
       "region": "North America",
       "countryOrArea": "south-eastern United States",
@@ -920,22 +2063,65 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)", "type": "ethnography"},
-        {"ref": "Pauketat, Timothy R., Cahokia: Ancient America's Great City on the Mississippi (New York: Viking, 2009)", "type": "book"}
+        {
+          "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Pauketat, Timothy R., Cahokia: Ancient America's Great City on the Mississippi (New York: Viking, 2009)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "partial", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Puanlama ayrıntıları kaynaklar arasında değişir."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "partial",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Puanlama ayrıntıları kaynaklar arasında değişir."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 2, "max": 10},
-      "durationMinutes": {"min": 20, "max": 60},
+      "players": {
+        "min": 2,
+        "max": 10
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 60
+      },
       "ageMinEstimate": 12,
-      "materialsHint": ["yuvarlanan taş disk", "uzun mızraklar"],
+      "materialsHint": [
+        "yuvarlanan taş disk",
+        "uzun mızraklar"
+      ],
       "safetyNotes": "Mızrak atma içerir; bir aile kitabında uyarlanamaz.",
       "childSuitable": false,
       "supervision": "required",
       "environment": "outdoor",
-      "visualNeeds": ["none"],
-      "scores": {"source": 4, "playability": 2, "cultural": 5, "access": 2, "distinct": 5, "explain": 3, "visual": 5, "play": 3},
+      "visualNeeds": [
+        "none"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 2,
+        "cultural": 5,
+        "access": 2,
+        "distinct": 5,
+        "explain": 3,
+        "visual": 5,
+        "play": 3
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "rejected",
       "playtestStatus": "not-started"
@@ -943,7 +2129,9 @@
     {
       "gameId": "quoits",
       "name": "Quoits",
-      "altNames": ["Deck quoits"],
+      "altNames": [
+        "Deck quoits"
+      ],
       "culture": "English",
       "region": "Western Europe",
       "countryOrArea": "England · Wales",
@@ -955,24 +2143,69 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)", "type": "ethnography"},
-        {"ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)", "type": "ethnography"}
+        {
+          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 8},
-      "durationMinutes": {"min": 15, "max": 30},
+      "players": {
+        "min": 2,
+        "max": 8
+      },
+      "durationMinutes": {
+        "min": 15,
+        "max": 30
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["metal veya ip halkalar", "kazık"],
-      "substitutionHint": ["ip halkalar ve bir şişe (iç mekân)"],
+      "materialsHint": [
+        "metal veya ip halkalar",
+        "kazık"
+      ],
+      "substitutionHint": [
+        "ip halkalar ve bir şişe (iç mekân)"
+      ],
       "safetyNotes": "Metal halkalar ağırdır; çocuklarla ip halka kullanılır.",
       "childSuitable": true,
       "supervision": "recommended",
       "environment": "outdoor",
-      "visualNeeds": ["setup-illustration"],
-      "scores": {"source": 4, "playability": 5, "cultural": 4, "access": 5, "distinct": 2, "explain": 5, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["Pétanque ile aynı kitapta iki 'hedefe atma' oyunu tekrar riski taşır."],
+      "visualNeeds": [
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 2,
+        "explain": 5,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Pétanque ile aynı kitapta iki 'hedefe atma' oyunu tekrar riski taşır."
+      ],
       "culturalNotes": "14. yüzyılda okçuluk talimini engellediği gerekçesiyle yasaklanmıştır; yasak kayıtları oyunun yaygınlığının kanıtıdır.",
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -980,7 +2213,10 @@
     {
       "gameId": "marbles",
       "name": "Marbles",
-      "altNames": ["Ring taw", "Misket"],
+      "altNames": [
+        "Ring taw",
+        "Misket"
+      ],
       "culture": "English",
       "region": "Western Europe",
       "countryOrArea": "England (and cognate forms worldwide)",
@@ -992,24 +2228,70 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)", "type": "ethnography"},
-        {"ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)", "type": "ethnography"}
+        {
+          "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
+          "type": "ethnography"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 8},
-      "durationMinutes": {"min": 10, "max": 30},
+      "players": {
+        "min": 2,
+        "max": 8
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 30
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["bilyeler", "yere çizilmiş daire"],
-      "substitutionHint": ["tebeşir veya bant ile daire"],
+      "materialsHint": [
+        "bilyeler",
+        "yere çizilmiş daire"
+      ],
+      "substitutionHint": [
+        "tebeşir veya bant ile daire"
+      ],
       "safetyNotes": "Boğulma riski — 3 yaş altı için kesinlikle uygun değil.",
       "childSuitable": true,
       "supervision": "recommended",
       "environment": "floor",
-      "visualNeeds": ["setup-illustration", "move-diagram"],
-      "scores": {"source": 5, "playability": 5, "cultural": 4, "access": 5, "distinct": 3, "explain": 5, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["Oyunun özü 'kazandığını alıkoymaktır' ve bu bir bahis biçimidir; K5 uyarınca kitap puanla oynanan bir sürüm basar ve farkı söyler."],
+      "visualNeeds": [
+        "setup-illustration",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 3,
+        "explain": 5,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Oyunun özü 'kazandığını alıkoymaktır' ve bu bir bahis biçimidir; K5 uyarınca kitap puanla oynanan bir sürüm basar ve farkı söyler."
+      ],
       "gamblingReframed": true,
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"

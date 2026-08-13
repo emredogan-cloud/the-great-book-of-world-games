@@ -19,8 +19,17 @@
     "Sürüm 1.0 · Faz 1 · kurucu onayı: AÇIK KARAR A2"
   ],
 
-  "version": "1.0",
-  "phase": "phase1",
+  "version": "2.0",
+  "phase": "phase2",
+
+  "$founderApproval": [
+    "A2 · 13 Ağustos 2026 · KURUCU ONAYLADI.",
+    "Yedi aile taksonomisi onaylandı ve aile hedefleri YENİDEN DENGELENDİ:",
+    "  hunt-siege  14 → 10   (Faz 1: 21 aday, yalnızca 10 uygun)",
+    "  war-board   13 → 17   (Faz 1: 24 aday, 20 uygun)",
+    "Toplam 100 korunur. Karar KİLİTLİDİR ve yeniden açılmaz.",
+    "Gerekçe: veri hipotezi yendi. Ayrıntı DECISIONS.md § K12."
+  ],
 
   "classificationProcedure": [
     "Bir oyun aileye ŞU SIRAYLA sorularak atanır. İlk 'evet' aileyi belirler.",
@@ -77,7 +86,9 @@
       "order": 2,
       "en": "The Hunt and the Siege",
       "tr": "Av ve kuşatma",
-      "targetGames": 14,
+      "targetGames": 10,
+      "targetGamesPhase1Hypothesis": 14,
+      "targetChangeNote": "A2 · kurucu onayı · 14 → 10. Ailenin 21 adayından yalnızca 10'u uygun: tafl kümesinin kuralı yok, kaplan-keçi kümesi tek kaynaklı. Hedefi korumak, zayıf oyunu kitaba zorlamak demekti.",
       "candidateFloor": 16,
       "definition": "Asimetrik oyunlar: eşit olmayan güçler, eşit olmayan hedefler. Bir taraf az ve güçlüdür (kaplan · tilki · kral); diğeri çok ve zayıftır (keçi · kaz · kuşatan).",
       "inclusionRule": [
@@ -181,7 +192,9 @@
       "order": 5,
       "en": "The War Board",
       "tr": "Savaş tahtası",
-      "targetGames": 13,
+      "targetGames": 17,
+      "targetGamesPhase1Hypothesis": 13,
+      "targetChangeNote": "A2 · kurucu onayı · 13 → 17. Ailede 20 uygun aday var; av-kuşatmanın dört oyunluk açığı BURAYA taşındı, yapay şişirmeyle değil mevcut uygun havuzdan.",
       "candidateFloor": 16,
       "definition": "Simetrik alma oyunları: iki taraf da aynı hedefi taşır ve alma oyuncunun SEÇTİĞİ bir hamledir. Zafer düşman gücünü yok etmek, kilitlemek ya da bir taşını etkisiz kılmaktır.",
       "inclusionRule": [
@@ -285,6 +298,10 @@
 
   "$comment2": [
     "AİLE DENGESİ — hedefler (targetGames) toplamı 100'dür.",
+    "13 Ağustos 2026 · A2 sonrası dağılım:",
+    "  sowing 14 · hunt-siege 10 · race 15 · territory 14 ·",
+    "  war-board 17 · chance 15 · boardless 15   =   100",
+    "Bu dağılım KİLİTLİDİR (project_config.json § scope.locked = true).",
     "candidateFloor her ailede 16'dır: Faz 2–4'te düşen oyunların yerine",
     "koyacak yedek olsun diye. Bir aile 16 adayın altına düşerse tasnif tezi",
     "zayıftır ve aile ya birleştirilir ya değiştirilir (yol haritası § FAIL).",

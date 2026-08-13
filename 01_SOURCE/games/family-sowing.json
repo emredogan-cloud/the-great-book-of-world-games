@@ -12,7 +12,12 @@
     {
       "gameId": "oware",
       "name": "Oware",
-      "altNames": ["Awale", "Wari", "Ayò", "Awélé"],
+      "altNames": [
+        "Awale",
+        "Wari",
+        "Ayò",
+        "Awélé"
+      ],
       "culture": "Akan",
       "region": "West Africa",
       "countryOrArea": "Ghana · Côte d'Ivoire",
@@ -24,32 +29,91 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)", "type": "book"},
-        {"ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)", "type": "book"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)",
+          "type": "book"
+        },
+        {
+          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Sonsuz döngü gerçek bir risktir: iki oyuncu az tohumla devrede dolaşabilir. Kitap 'tahtadaki tohumlar bir devir boyunca alınmazsa oyun biter ve her oyuncu kendi tarafındakileri alır' kuralını basar ve bunun editoryal bir seçim olduğunu söyler."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Sonsuz döngü gerçek bir risktir: iki oyuncu az tohumla devrede dolaşabilir. Kitap 'tahtadaki tohumlar bir devir boyunca alınmazsa oyun biter ve her oyuncu kendi tarafındakileri alır' kuralını basar ve bunun editoryal bir seçim olduğunu söyler."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 40},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["iki sıra hâlinde 12 çukur", "48 tohum"],
-      "substitutionHint": ["yumurta kolisi", "kuru fasulye veya düğme"],
+      "materialsHint": [
+        "iki sıra hâlinde 12 çukur",
+        "48 tohum"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi",
+        "kuru fasulye veya düğme"
+      ],
       "safetyNotes": "Küçük parçalar — 3 yaş altı için uygun değil.",
       "childSuitable": true,
       "supervision": "none",
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "setup-illustration", "cultural-plate"],
-      "scores": {"source": 5, "playability": 5, "cultural": 5, "access": 5, "distinct": 4, "explain": 4, "visual": 5, "play": 5},
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "setup-illustration",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 4,
+        "explain": 4,
+        "visual": 5,
+        "play": 5
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "Akan oyunu; 'oware' adının halk etimolojisi tartışmalıdır ve kitap tek bir köken hikâyesi anlatmaz.",
       "rules": {
         "objective": "Capture more than half of the forty-eight seeds.",
         "playerCountMin": 2,
         "playerCountMax": 2,
-        "materials": ["A board of twelve pits in two rows of six", "Two stores, one at each end", "48 seeds"],
-        "substitutions": ["An egg carton with the lid cut off", "Two bowls for the stores", "Dried beans, buttons or pebbles as seeds"],
+        "materials": [
+          "A board of twelve pits in two rows of six",
+          "Two stores, one at each end",
+          "48 seeds"
+        ],
+        "substitutions": [
+          "An egg carton with the lid cut off",
+          "Two bowls for the stores",
+          "Dried beans, buttons or pebbles as seeds"
+        ],
         "setup": "Put four seeds in each of the twelve pits. Sit facing your opponent across the long side of the board. The six pits nearest you are yours, and so is the store to your right. Both stores start empty.",
         "turnSequence": [
           "Choose one of your six pits that holds at least one seed.",
@@ -77,8 +141,14 @@
           "illegalMove": "Put the seeds back in the pit they came from and let the player choose again. If the seeds have already been mixed in, the opponent chooses which of the legal moves is played instead. Neither player loses a turn."
         },
         "variants": [
-          {"name": "Abapa", "note": "The tournament form used in Ghana: the feeding rule above is strict, and a move that would take every enemy seed is played without capture."},
-          {"name": "Nam-nam", "note": "A widespread school-yard form in which a pit filled to exactly four seeds is taken by whoever owns the side it sits on, whenever it happens."}
+          {
+            "name": "Abapa",
+            "note": "The tournament form used in Ghana: the feeding rule above is strict, and a move that would take every enemy seed is played without capture."
+          },
+          {
+            "name": "Nam-nam",
+            "note": "A widespread school-yard form in which a pit filled to exactly four seeds is taken by whoever owns the side it sits on, whenever it happens."
+          }
         ],
         "simplifiedFirstGame": "Start with three seeds per pit instead of four, and capture only when the last seed lands in an opponent's pit that then holds exactly two. Nothing else changes. The game runs about ten minutes and teaches the sowing rhythm before the back-capture rule arrives."
       },
@@ -88,7 +158,9 @@
     {
       "gameId": "bao-la-kiswahili",
       "name": "Bao la Kiswahili",
-      "altNames": ["Bao"],
+      "altNames": [
+        "Bao"
+      ],
       "culture": "Swahili",
       "region": "East Africa",
       "countryOrArea": "Zanzibar · Tanzanian coast",
@@ -101,24 +173,76 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)", "type": "book"},
-        {"ref": "de Voogt, Alex, Limits of the Mind: Towards a Characterisation of Bao Mastership (Leiden: CNWS, 1995)", "type": "book"},
-        {"ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)", "type": "journal"}
+        {
+          "ref": "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)",
+          "type": "book"
+        },
+        {
+          "ref": "de Voogt, Alex, Limits of the Mind: Towards a Characterisation of Bao Mastership (Leiden: CNWS, 1995)",
+          "type": "book"
+        },
+        {
+          "ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)",
+          "type": "journal"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 30, "max": 60},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 30,
+        "max": 60
+      },
       "ageMinEstimate": 11,
-      "materialsHint": ["dört sıra hâlinde 32 çukur", "64 tohum"],
-      "substitutionHint": ["iki yumurta kolisi yan yana", "kuru fasulye"],
+      "materialsHint": [
+        "dört sıra hâlinde 32 çukur",
+        "64 tohum"
+      ],
+      "substitutionHint": [
+        "iki yumurta kolisi yan yana",
+        "kuru fasulye"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "setup-illustration", "cultural-plate"],
-      "scores": {"source": 5, "playability": 4, "cultural": 5, "access": 4, "distinct": 5, "explain": 2, "visual": 5, "play": 5},
-      "unresolvedQuestions": ["Tam Bao mu (bao la kiswahili) yoksa basitleştirilmiş bao la kujifunza mı basılacak? İkisi ayrı oyundur ve karıştırılmaları yaygın bir hatadır."],
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "setup-illustration",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 4,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 5,
+        "explain": 2,
+        "visual": 5,
+        "play": 5
+      },
+      "unresolvedQuestions": [
+        "Tam Bao mu (bao la kiswahili) yoksa basitleştirilmiş bao la kujifunza mı basılacak? İkisi ayrı oyundur ve karıştırılmaları yaygın bir hatadır."
+      ],
       "culturalNotes": "Bao, mankala kümesinin en karmaşık üyesi kabul edilir; kitabın 'kolay Afrika oyunu' klişesini kırma noktasıdır.",
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -126,7 +250,9 @@
     {
       "gameId": "omweso",
       "name": "Omweso",
-      "altNames": ["Mweso"],
+      "altNames": [
+        "Mweso"
+      ],
       "culture": "Ganda",
       "region": "East Africa",
       "countryOrArea": "Uganda",
@@ -139,23 +265,72 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Nsimbi, M. B., Omweso: A Game People Play in Uganda (Los Angeles: UCLA African Studies Center, 1968)", "type": "ethnography"},
-        {"ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)", "type": "journal"},
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Nsimbi, M. B., Omweso: A Game People Play in Uganda (Los Angeles: UCLA African Studies Center, 1968)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)",
+          "type": "journal"
+        },
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 25, "max": 50},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 25,
+        "max": 50
+      },
       "ageMinEstimate": 10,
-      "materialsHint": ["dört sıra hâlinde 32 çukur", "64 tohum"],
-      "substitutionHint": ["iki yumurta kolisi", "nohut"],
+      "materialsHint": [
+        "dört sıra hâlinde 32 çukur",
+        "64 tohum"
+      ],
+      "substitutionHint": [
+        "iki yumurta kolisi",
+        "nohut"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "setup-illustration"],
-      "scores": {"source": 5, "playability": 4, "cultural": 5, "access": 4, "distinct": 4, "explain": 3, "visual": 4, "play": 5},
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 4,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 4,
+        "explain": 3,
+        "visual": 4,
+        "play": 5
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -163,7 +338,10 @@
     {
       "gameId": "toguz-kumalak",
       "name": "Toguz Kumalak",
-      "altNames": ["Toguz Korgool", "Togyz Kumalak"],
+      "altNames": [
+        "Toguz Korgool",
+        "Togyz Kumalak"
+      ],
       "culture": "Kazakh",
       "region": "Central Asia",
       "countryOrArea": "Kazakhstan · Kyrgyzstan",
@@ -175,30 +353,81 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"},
-        {"ref": "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)", "type": "book"}
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        },
+        {
+          "ref": "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 25, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 25,
+        "max": 45
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["iki sıra hâlinde 18 çukur ve iki hazine", "162 taş"],
-      "substitutionHint": ["yumurta kolisi ve iki kâse", "kuru fasulye"],
+      "materialsHint": [
+        "iki sıra hâlinde 18 çukur ve iki hazine",
+        "162 taş"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi ve iki kâse",
+        "kuru fasulye"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "setup-illustration"],
-      "scores": {"source": 4, "playability": 5, "cultural": 4, "access": 3, "distinct": 5, "explain": 3, "visual": 4, "play": 5},
-      "unresolvedQuestions": ["Modern spor kurallarıyla 19. yüzyıl derlemeleri arasındaki fark ölçülmedi; kitap hangisini basacak?"],
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 5,
+        "cultural": 4,
+        "access": 3,
+        "distinct": 5,
+        "explain": 3,
+        "visual": 4,
+        "play": 5
+      },
+      "unresolvedQuestions": [
+        "Modern spor kurallarıyla 19. yüzyıl derlemeleri arasındaki fark ölçülmedi; kitap hangisini basacak?"
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "congklak",
       "name": "Congklak",
-      "altNames": ["Congkak", "Dakon"],
+      "altNames": [
+        "Congkak",
+        "Dakon"
+      ],
       "culture": "Javanese",
       "region": "Southeast Asia",
       "countryOrArea": "Indonesia · Malaysia",
@@ -210,22 +439,68 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 15, "max": 30},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 15,
+        "max": 30
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["iki sıra hâlinde 14 çukur ve iki hazine", "98 kabuk veya tohum"],
-      "substitutionHint": ["yumurta kolisi ve iki kâse", "boncuk"],
+      "materialsHint": [
+        "iki sıra hâlinde 14 çukur ve iki hazine",
+        "98 kabuk veya tohum"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi ve iki kâse",
+        "boncuk"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "table",
-      "visualNeeds": ["board-diagram", "setup-illustration", "cultural-plate"],
-      "scores": {"source": 5, "playability": 5, "cultural": 4, "access": 5, "distinct": 3, "explain": 5, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "setup-illustration",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 3,
+        "explain": 5,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -233,7 +508,9 @@
     {
       "gameId": "sungka",
       "name": "Sungka",
-      "altNames": ["Sungkaan"],
+      "altNames": [
+        "Sungkaan"
+      ],
       "culture": "Visayan",
       "region": "Southeast Asia",
       "countryOrArea": "Philippines",
@@ -245,30 +522,79 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)", "type": "journal"},
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)",
+          "type": "journal"
+        },
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 15, "max": 30},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 15,
+        "max": 30
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["16 çukurlu tekne", "98 deniz kabuğu"],
-      "substitutionHint": ["yumurta kolisi", "düğme"],
+      "materialsHint": [
+        "16 çukurlu tekne",
+        "98 deniz kabuğu"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi",
+        "düğme"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "table",
-      "visualNeeds": ["board-diagram", "setup-illustration"],
-      "scores": {"source": 5, "playability": 5, "cultural": 4, "access": 5, "distinct": 3, "explain": 5, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["Congklak ile mekanik farkı kitapta bir varyant kutusuna mı sığar, ayrı madde mi olmalı?"],
+      "visualNeeds": [
+        "board-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 3,
+        "explain": 5,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Congklak ile mekanik farkı kitapta bir varyant kutusuna mı sığar, ayrı madde mi olmalı?"
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "pallanguzhi",
       "name": "Pallanguzhi",
-      "altNames": ["Pallankuzhi"],
+      "altNames": [
+        "Pallankuzhi"
+      ],
       "culture": "Tamil",
       "region": "South Asia",
       "countryOrArea": "Tamil Nadu, India",
@@ -280,30 +606,80 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 40},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["iki sıra hâlinde 14 çukur", "146 tamarind çekirdeği veya kabuk"],
-      "substitutionHint": ["yumurta kolisi", "kuru nohut"],
+      "materialsHint": [
+        "iki sıra hâlinde 14 çukur",
+        "146 tamarind çekirdeği veya kabuk"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi",
+        "kuru nohut"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "table",
-      "visualNeeds": ["board-diagram", "setup-illustration"],
-      "scores": {"source": 4, "playability": 4, "cultural": 4, "access": 4, "distinct": 3, "explain": 4, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["Bölgesel kural çeşitleri çok fazla; hangi varyantın 'ana' sayılacağı kaynakla gerekçelendirilmeli."],
+      "visualNeeds": [
+        "board-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 3,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Bölgesel kural çeşitleri çok fazla; hangi varyantın 'ana' sayılacağı kaynakla gerekçelendirilmeli."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "ali-guli-mane",
       "name": "Ali Guli Mane",
-      "altNames": ["Alagulimane", "Channemane"],
+      "altNames": [
+        "Alagulimane",
+        "Channemane"
+      ],
       "culture": "Kannada",
       "region": "South Asia",
       "countryOrArea": "Karnataka, India",
@@ -315,27 +691,73 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Tur sonu hesabının bölgesel biçimleri arasındaki fark tek kaynaktan çözülmüyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Tur sonu hesabının bölgesel biçimleri arasındaki fark tek kaynaktan çözülmüyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 40},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["iki sıra hâlinde 14 çukurlu ahşap tekne", "tohum"],
+      "materialsHint": [
+        "iki sıra hâlinde 14 çukurlu ahşap tekne",
+        "tohum"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 3, "access": 4, "distinct": 2, "explain": 3, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak bulunmadan locked olamaz.", "Berabere durumu hiçbir kaynakta tanımlı değil."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 3,
+        "access": 4,
+        "distinct": 2,
+        "explain": 3,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak bulunmadan locked olamaz.",
+        "Berabere durumu hiçbir kaynakta tanımlı değil."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "gebeta",
       "name": "Gebeta",
-      "altNames": ["Gabata", "Gebet'a"],
+      "altNames": [
+        "Gabata",
+        "Gebet'a"
+      ],
       "culture": "Amhara",
       "region": "Horn of Africa",
       "countryOrArea": "Ethiopia",
@@ -347,22 +769,71 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971)", "type": "journal"},
-        {"ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)", "type": "journal"}
+        {
+          "ref": "Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971)",
+          "type": "journal"
+        },
+        {
+          "ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)",
+          "type": "journal"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Çoklu tur ekimi uzun zincirler üretir; kitap tur sınırı koyar ve bunu editoryal karar olarak yazar."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Çoklu tur ekimi uzun zincirler üretir; kitap tur sınırı koyar ve bunu editoryal karar olarak yazar."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 45
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["iki veya üç sıra çukur", "tohum"],
-      "substitutionHint": ["yumurta kolisi", "kuru fasulye"],
+      "materialsHint": [
+        "iki veya üç sıra çukur",
+        "tohum"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi",
+        "kuru fasulye"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "cultural-plate"],
-      "scores": {"source": 4, "playability": 4, "cultural": 5, "access": 4, "distinct": 4, "explain": 3, "visual": 5, "play": 4},
-      "unresolvedQuestions": ["Kaya oyulmuş tahtaların tarihlendirilmesi tartışmalıdır; kitap kesin tarih vermemelidir."],
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 4,
+        "explain": 3,
+        "visual": 5,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Kaya oyulmuş tahtaların tarihlendirilmesi tartışmalıdır; kitap kesin tarih vermemelidir."
+      ],
       "culturalNotes": "Etiyopya'da kaya yüzeylerine oyulmuş çukur dizileri; tarihlendirme belirsizdir ve kitap bunu belirsiz bırakır.",
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -370,7 +841,10 @@
     {
       "gameId": "hus",
       "name": "Hus",
-      "altNames": ["ǁHus", "Ohus"],
+      "altNames": [
+        "ǁHus",
+        "Ohus"
+      ],
       "culture": "Nama",
       "region": "Southern Africa",
       "countryOrArea": "Namibia",
@@ -383,21 +857,66 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)", "type": "journal"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)",
+          "type": "journal"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 25, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 25,
+        "max": 45
+      },
       "ageMinEstimate": 10,
-      "materialsHint": ["dört sıra hâlinde çukurlar", "taş veya tohum"],
-      "substitutionHint": ["iki yumurta kolisi", "çakıl"],
+      "materialsHint": [
+        "dört sıra hâlinde çukurlar",
+        "taş veya tohum"
+      ],
+      "substitutionHint": [
+        "iki yumurta kolisi",
+        "çakıl"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram"],
-      "scores": {"source": 4, "playability": 4, "cultural": 5, "access": 4, "distinct": 4, "explain": 3, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 4,
+        "explain": 3,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -405,7 +924,9 @@
     {
       "gameId": "layli-goobalay",
       "name": "Layli Goobalay",
-      "altNames": ["Layli"],
+      "altNames": [
+        "Layli"
+      ],
       "culture": "Somali",
       "region": "Horn of Africa",
       "countryOrArea": "Somalia · Somaliland",
@@ -417,27 +938,71 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Oyun sonu ve kalan tohumların paylaşımı tek kaynaktan kesinleşmiyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Oyun sonu ve kalan tohumların paylaşımı tek kaynaktan kesinleşmiyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 35},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 35
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["iki sıra çukur", "tohum"],
+      "materialsHint": [
+        "iki sıra çukur",
+        "tohum"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 4, "access": 4, "distinct": 2, "explain": 3, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 2,
+        "explain": 3,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "en-gehe",
       "name": "En Gehe",
-      "altNames": ["Engehe"],
+      "altNames": [
+        "Engehe"
+      ],
       "culture": "Maasai",
       "region": "East Africa",
       "countryOrArea": "Tanzania · Kenya",
@@ -450,27 +1015,71 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Tahta uzunluğu ve tohum sayısı kaynaklar arasında değişiyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Tahta uzunluğu ve tohum sayısı kaynaklar arasında değişiyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 25, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 25,
+        "max": 45
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["uzun iki sıralı çukur dizisi", "tohum"],
+      "materialsHint": [
+        "uzun iki sıralı çukur dizisi",
+        "tohum"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 4, "access": 3, "distinct": 3, "explain": 3, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 4,
+        "access": 3,
+        "distinct": 3,
+        "explain": 3,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "mefuvha",
       "name": "Mefuvha",
-      "altNames": ["Muravharavha"],
+      "altNames": [
+        "Muravharavha"
+      ],
       "culture": "Venda",
       "region": "Southern Africa",
       "countryOrArea": "Limpopo, South Africa",
@@ -483,20 +1092,62 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)", "type": "book"},
-        {"ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)", "type": "journal"}
+        {
+          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+          "type": "book"
+        },
+        {
+          "ref": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)",
+          "type": "journal"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 25, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 25,
+        "max": 45
+      },
       "ageMinEstimate": 10,
-      "materialsHint": ["dört sıra çukur", "taş"],
+      "materialsHint": [
+        "dört sıra çukur",
+        "taş"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram"],
-      "scores": {"source": 3, "playability": 3, "cultural": 4, "access": 4, "distinct": 3, "explain": 3, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 3,
+        "playability": 3,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 3,
+        "explain": 3,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -504,7 +1155,9 @@
     {
       "gameId": "ayoayo",
       "name": "Ayòayò",
-      "altNames": ["Ayo"],
+      "altNames": [
+        "Ayo"
+      ],
       "culture": "Yoruba",
       "region": "West Africa",
       "countryOrArea": "Nigeria",
@@ -516,29 +1169,79 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977)", "type": "book"},
-        {"ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)", "type": "book"}
+        {
+          "ref": "Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977)",
+          "type": "book"
+        },
+        {
+          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Oware ile aynı döngü riski; aynı editoryal bitiş kuralı uygulanır."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Oware ile aynı döngü riski; aynı editoryal bitiş kuralı uygulanır."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 40},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["12 çukur", "48 tohum"],
-      "substitutionHint": ["yumurta kolisi", "kuru fasulye"],
+      "materialsHint": [
+        "12 çukur",
+        "48 tohum"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi",
+        "kuru fasulye"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "cultural-plate"],
-      "scores": {"source": 4, "playability": 4, "cultural": 4, "access": 5, "distinct": 2, "explain": 4, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["Oware ile aynı sayfada mı, ayrı madde mi? İkisi mekanik olarak çok yakın ve kitabın tekrar riski var."],
+      "visualNeeds": [
+        "board-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 2,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Oware ile aynı sayfada mı, ayrı madde mi? İkisi mekanik olarak çok yakın ve kitabın tekrar riski var."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "nsolo",
       "name": "Nsolo",
-      "altNames": ["Chisolo"],
+      "altNames": [
+        "Chisolo"
+      ],
       "culture": "Chewa",
       "region": "Southern Africa",
       "countryOrArea": "Zambia · Malawi",
@@ -550,27 +1253,71 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Bitiş koşulunun bölgesel biçimleri tek kaynaktan çözülmüyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Bitiş koşulunun bölgesel biçimleri tek kaynaktan çözülmüyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 25, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 25,
+        "max": 45
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["dört sıra çukur", "taş"],
+      "materialsHint": [
+        "dört sıra çukur",
+        "taş"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 3, "access": 4, "distinct": 2, "explain": 3, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 3,
+        "access": 4,
+        "distinct": 2,
+        "explain": 3,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "olinda-keliya",
       "name": "Olinda Keliya",
-      "altNames": ["Olinda"],
+      "altNames": [
+        "Olinda"
+      ],
       "culture": "Sinhalese",
       "region": "South Asia",
       "countryOrArea": "Sri Lanka",
@@ -582,21 +1329,67 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)", "type": "ethnography"},
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
+          "type": "ethnography",
+          "locator": "s. 93 (Abrus precatorius) ve ss. 225–226 (tahta, ad, bağlam)"
+        },
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 35},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 35
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["iki sıra çukur", "olinda tohumları"],
-      "substitutionHint": ["yumurta kolisi", "kırmızı-siyah boncuk"],
+      "materialsHint": [
+        "iki sıra çukur",
+        "olinda tohumları"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi",
+        "kırmızı-siyah boncuk"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "cultural-plate"],
-      "scores": {"source": 4, "playability": 3, "cultural": 5, "access": 4, "distinct": 3, "explain": 4, "visual": 4, "play": 3},
+      "visualNeeds": [
+        "board-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 3,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 3,
+        "explain": 4,
+        "visual": 4,
+        "play": 3
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "Oyunun adı Abrus precatorius tohumundan gelir; tohum zehirlidir ve kitap malzeme yerine koymayı ZORUNLU kılar.",
       "adaptationNotes": "Özgün tohum (olinda / gunja) zehirlidir. Kitap özgün malzemeyi anlatır ama oynamak için boncuk/fasulye şart koşar — bu bir güvenlik kararıdır ve prozada açıkça söylenir.",
@@ -606,7 +1399,10 @@
     {
       "gameId": "mangala-anatolian",
       "name": "Mangala",
-      "altNames": ["Göçürme", "Dokuz Kumalak (Anadolu)"],
+      "altNames": [
+        "Göçürme",
+        "Dokuz Kumalak (Anadolu)"
+      ],
       "culture": "Turkish",
       "region": "Anatolia",
       "countryOrArea": "Türkiye",
@@ -618,20 +1414,62 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "partial", "unknownElements": ["Modern kodifikasyon ile tarihsel oyun arasındaki fark belgelenmedi."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "partial",
+        "unknownElements": [
+          "Modern kodifikasyon ile tarihsel oyun arasındaki fark belgelenmedi."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 15, "max": 30},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 15,
+        "max": 30
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["12 çukur ve iki hazine", "48 taş"],
+      "materialsHint": [
+        "12 çukur ve iki hazine",
+        "48 taş"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 3, "cultural": 3, "access": 5, "distinct": 2, "explain": 4, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["Kitap 21. yüzyıl kodifikasyonunu mu, tarihsel kaydı mı basacak? Modern bir federasyon kuralını 'geleneksel' diye basmak kaynak iddiasını zedeler."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 3,
+        "cultural": 3,
+        "access": 5,
+        "distinct": 2,
+        "explain": 4,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Kitap 21. yüzyıl kodifikasyonunu mu, tarihsel kaydı mı basacak? Modern bir federasyon kuralını 'geleneksel' diye basmak kaynak iddiasını zedeler."
+      ],
       "culturalNotes": "Türkiye'de 2010'lardan sonra okul programlarıyla yaygınlaşan sürüm modern bir kodifikasyondur; tarihsel oyunla birebir aynı olduğu KANITLANMAMIŞTIR.",
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -639,7 +1477,9 @@
     {
       "gameId": "adji-boto",
       "name": "Adji-boto",
-      "altNames": ["Adji"],
+      "altNames": [
+        "Adji"
+      ],
       "culture": "Ndyuka Maroon",
       "region": "South America",
       "countryOrArea": "Suriname",
@@ -652,21 +1492,68 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932)", "type": "journal"},
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932)",
+          "type": "journal"
+        },
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Oware ailesinin döngü kuralı uygulanır."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Oware ailesinin döngü kuralı uygulanır."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 40},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["12 çukur", "48 tohum"],
-      "substitutionHint": ["yumurta kolisi", "kuru fasulye"],
+      "materialsHint": [
+        "12 çukur",
+        "48 tohum"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi",
+        "kuru fasulye"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "map", "cultural-plate"],
-      "scores": {"source": 4, "playability": 4, "cultural": 5, "access": 5, "distinct": 4, "explain": 4, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "map",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 4,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "Kitabın 'aynı mekanik, farklı kültür' tezinin en güçlü tek maddesi: oyun okyanusu geçmiştir ve kim tarafından geçirildiği bilinmektedir.",
       "editorialStatus": "inventory",
@@ -675,7 +1562,9 @@
     {
       "gameId": "warri-antigua",
       "name": "Warri",
-      "altNames": ["Wari (Antigua)"],
+      "altNames": [
+        "Wari (Antigua)"
+      ],
       "culture": "Antiguan",
       "region": "Caribbean",
       "countryOrArea": "Antigua and Barbuda",
@@ -688,27 +1577,72 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932)", "type": "journal"}
+        {
+          "ref": "Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932)",
+          "type": "journal"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Yerel turnuva kuralları ile derleme kuralları arasındaki fark belgelenmedi."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Yerel turnuva kuralları ile derleme kuralları arasındaki fark belgelenmedi."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 40},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["12 çukur", "48 nikkar tohumu"],
+      "materialsHint": [
+        "12 çukur",
+        "48 nikkar tohumu"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 4, "access": 4, "distinct": 2, "explain": 4, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor.", "Oware ve Adji-boto ile üçlü tekrar riski var; üçünden en fazla ikisi kitaba girmeli."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 2,
+        "explain": 4,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor.",
+        "Oware ve Adji-boto ile üçlü tekrar riski var; üçünden en fazla ikisi kitaba girmeli."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "bohnenspiel",
       "name": "Bohnenspiel",
-      "altNames": ["Das Bohnenspiel"],
+      "altNames": [
+        "Das Bohnenspiel"
+      ],
       "culture": "German",
       "region": "Central Europe",
       "countryOrArea": "Germany",
@@ -720,22 +1654,68 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 15, "max": 30},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 15,
+        "max": 30
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["12 çukur", "72 fasulye"],
-      "substitutionHint": ["yumurta kolisi", "kuru fasulye"],
+      "materialsHint": [
+        "12 çukur",
+        "72 fasulye"
+      ],
+      "substitutionHint": [
+        "yumurta kolisi",
+        "kuru fasulye"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 4, "playability": 4, "cultural": 4, "access": 5, "distinct": 5, "explain": 5, "visual": 3, "play": 4},
-      "unresolvedQuestions": ["Oyunun Avrupa'ya nasıl ulaştığı belgelenemiyor; kitap köken iddiası yapmamalı."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 5,
+        "explain": 5,
+        "visual": 3,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Oyunun Avrupa'ya nasıl ulaştığı belgelenemiyor; kitap köken iddiası yapmamalı."
+      ],
       "culturalNotes": "Ekim ailesinin Avrupa'da da bulunması, ailenin coğrafi tezini güçlendirir; ancak aktarım yolu BİLİNMEZ ve kitap bunu bilinmez bırakır.",
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -743,7 +1723,9 @@
     {
       "gameId": "kalah-commercial",
       "name": "Kalah",
-      "altNames": ["Kalaha"],
+      "altNames": [
+        "Kalaha"
+      ],
       "culture": "United States (commercial invention)",
       "region": "North America",
       "countryOrArea": "United States",
@@ -757,19 +1739,56 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)", "type": "book"}
+        {
+          "ref": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "excluded",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["12 çukur ve iki hazine"],
+      "materialsHint": [
+        "12 çukur ve iki hazine"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["none"],
-      "scores": {"source": 3, "playability": 5, "cultural": 1, "access": 5, "distinct": 1, "explain": 5, "visual": 1, "play": 3},
+      "visualNeeds": [
+        "none"
+      ],
+      "scores": {
+        "source": 3,
+        "playability": 5,
+        "cultural": 1,
+        "access": 5,
+        "distinct": 1,
+        "explain": 5,
+        "visual": 1,
+        "play": 3
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "rejected",
       "playtestStatus": "not-started"

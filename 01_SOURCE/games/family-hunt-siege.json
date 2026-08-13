@@ -9,7 +9,10 @@
     {
       "gameId": "bagh-chal",
       "name": "Bagh-Chal",
-      "altNames": ["Baghchal", "Tigers and Goats"],
+      "altNames": [
+        "Baghchal",
+        "Tigers and Goats"
+      ],
       "culture": "Nepali",
       "region": "South Asia",
       "countryOrArea": "Nepal",
@@ -21,22 +24,71 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"},
-        {"ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        },
+        {
+          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Kaplanlar sıkışıp keçiler bitmemişse tekrar döngüsü olur; kitap üç kez tekrar eden konumu berabere sayar ve bunu editoryal karar olarak yazar."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Kaplanlar sıkışıp keçiler bitmemişse tekrar döngüsü olur; kitap üç kez tekrar eden konumu berabere sayar ve bunu editoryal karar olarak yazar."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["5×5 kesişimli tahta", "4 kaplan", "20 keçi"],
-      "substitutionHint": ["kâğıda çizilmiş ızgara", "iki renk düğme"],
+      "materialsHint": [
+        "5×5 kesişimli tahta",
+        "4 kaplan",
+        "20 keçi"
+      ],
+      "substitutionHint": [
+        "kâğıda çizilmiş ızgara",
+        "iki renk düğme"
+      ],
       "childSuitable": true,
       "supervision": "none",
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "piece-diagram", "setup-illustration"],
-      "scores": {"source": 4, "playability": 5, "cultural": 4, "access": 5, "distinct": 5, "explain": 5, "visual": 5, "play": 5},
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "piece-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 5,
+        "explain": 5,
+        "visual": 5,
+        "play": 5
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -44,7 +96,10 @@
     {
       "gameId": "aadu-puli-attam",
       "name": "Aadu Puli Attam",
-      "altNames": ["Puli Meka", "Goats and Tigers"],
+      "altNames": [
+        "Puli Meka",
+        "Goats and Tigers"
+      ],
       "culture": "Tamil",
       "region": "South Asia",
       "countryOrArea": "Tamil Nadu, India",
@@ -56,29 +111,81 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"},
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        },
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Tekrar eden konum kuralı Bagh-Chal ile aynıdır."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Tekrar eden konum kuralı Bagh-Chal ile aynıdır."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["üçgen ızgara tahta", "3 kaplan", "15 keçi"],
-      "substitutionHint": ["kâğıda çizilmiş üçgen", "iki renk düğme"],
+      "materialsHint": [
+        "üçgen ızgara tahta",
+        "3 kaplan",
+        "15 keçi"
+      ],
+      "substitutionHint": [
+        "kâğıda çizilmiş üçgen",
+        "iki renk düğme"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "setup-illustration"],
-      "scores": {"source": 4, "playability": 4, "cultural": 4, "access": 5, "distinct": 4, "explain": 5, "visual": 5, "play": 4},
-      "unresolvedQuestions": ["Bagh-Chal ile aynı kitapta iki ayrı madde mi olmalı, yoksa biri varyant kutusu mu?"],
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 4,
+        "explain": 5,
+        "visual": 5,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Bagh-Chal ile aynı kitapta iki ayrı madde mi olmalı, yoksa biri varyant kutusu mu?"
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "huli-gatta",
       "name": "Huli-gatta",
-      "altNames": ["Hulikattu"],
+      "altNames": [
+        "Hulikattu"
+      ],
       "culture": "Kannada",
       "region": "South Asia",
       "countryOrArea": "Karnataka, India",
@@ -90,27 +197,72 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "partial", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Kaplanın zorunlu alma kuralı olup olmadığı tek kaynaktan kesinleşmiyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": false, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "partial",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Kaplanın zorunlu alma kuralı olup olmadığı tek kaynaktan kesinleşmiyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": false,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["ızgara tahta", "kaplan ve koyun taşları"],
+      "materialsHint": [
+        "ızgara tahta",
+        "kaplan ve koyun taşları"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 3, "access": 5, "distinct": 2, "explain": 4, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor.", "Zorunlu alma kuralı olmadan yasal hamle yasadışıdan ayrılmıyor — netlik testinden düşüyor."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 3,
+        "access": 5,
+        "distinct": 2,
+        "explain": 4,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor.",
+        "Zorunlu alma kuralı olmadan yasal hamle yasadışıdan ayrılmıyor — netlik testinden düşüyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "rimau-rimau",
       "name": "Rimau-rimau",
-      "altNames": ["Main Rimau"],
+      "altNames": [
+        "Main Rimau"
+      ],
       "culture": "Malay",
       "region": "Southeast Asia",
       "countryOrArea": "Malaysia",
@@ -122,21 +274,68 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Tekrar eden konum berabere sayılır."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Tekrar eden konum berabere sayılır."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["alquerque tipi ızgara", "1–2 kaplan", "22–24 taş"],
-      "substitutionHint": ["kâğıda çizilmiş ızgara", "düğme"],
+      "materialsHint": [
+        "alquerque tipi ızgara",
+        "1–2 kaplan",
+        "22–24 taş"
+      ],
+      "substitutionHint": [
+        "kâğıda çizilmiş ızgara",
+        "düğme"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram"],
-      "scores": {"source": 4, "playability": 4, "cultural": 4, "access": 5, "distinct": 3, "explain": 4, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 3,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -144,7 +343,9 @@
     {
       "gameId": "demala-diviyan-keliya",
       "name": "Demala Diviyan Keliya",
-      "altNames": ["Leopards and Cattle"],
+      "altNames": [
+        "Leopards and Cattle"
+      ],
       "culture": "Sinhalese",
       "region": "South Asia",
       "countryOrArea": "Sri Lanka",
@@ -156,20 +357,64 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)", "type": "ethnography"},
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Tekrar eden konum berabere sayılır."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Tekrar eden konum berabere sayılır."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["ızgara tahta", "2 leopar", "24 sığır"],
+      "materialsHint": [
+        "ızgara tahta",
+        "2 leopar",
+        "24 sığır"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram"],
-      "scores": {"source": 4, "playability": 4, "cultural": 4, "access": 4, "distinct": 3, "explain": 4, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 4,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 3,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
@@ -177,7 +422,10 @@
     {
       "gameId": "hnefatafl",
       "name": "Hnefatafl",
-      "altNames": ["Tafl", "King's Table"],
+      "altNames": [
+        "Tafl",
+        "King's Table"
+      ],
       "culture": "Norse",
       "region": "Northern Europe",
       "countryOrArea": "Scandinavia",
@@ -189,24 +437,83 @@
       "sourceConfidence": "reconstructed",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "Linnaeus, Carl, Iter Lapponicum / Lachesis Lapponica (journal of 1732; published London, 1811) — the tablut description and diagram", "type": "archive"},
-        {"ref": "Helmfrid, Sten, 'Hnefatafl — the Strategic Board Game of the Vikings' (survey of the tafl sources)", "type": "journal"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "Linnaeus, Carl, Iter Lapponicum / Lachesis Lapponica (journal of 1732; published London, 1811) — the tablut description and diagram",
+          "type": "archive"
+        },
+        {
+          "ref": "Helmfrid, Sten, 'Hnefatafl — the Strategic Board Game of the Vikings' (survey of the tafl sources)",
+          "type": "journal"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Kralın köşeye mi kenara mı kaçtığı, kralın alınma biçimi ve kral karesi kuralları KAYNAKLAR ARASINDA ÇELİŞİR.", "Farklı tahta boyutları (7×7, 9×9, 11×11, 13×13, 19×19) için ayrı kural setleri yoktur."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible", "terminationRule": "Kitap tek bir tahta boyutu ve tek bir kaçış kuralı SEÇER, seçimini ve gerekçesini yazar."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Kralın köşeye mi kenara mı kaçtığı, kralın alınma biçimi ve kral karesi kuralları KAYNAKLAR ARASINDA ÇELİŞİR.",
+          "Farklı tahta boyutları (7×7, 9×9, 11×11, 13×13, 19×19) için ayrı kural setleri yoktur."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Kitap tek bir tahta boyutu ve tek bir kaçış kuralı SEÇER, seçimini ve gerekçesini yazar."
+      },
       "playabilityStatus": "reconstructed",
       "reconstructionPlan": "BOŞLUK: berabere durumu hiçbir tafl kaynağında tanımlı değildir. KAPATMA: kitap Linnaeus'un 1732 tablut kaydını temel alır, tahta boyutunu 9×9'da sabitler, kralın köşeye kaçtığı yorumunu seçer ve tekrar eden konumu berabere sayar. DAYANAK: köşe kaçışı, kenar kaçışına göre oyunu dengeler ve modern tafl çözümlemeleriyle uyumludur. ETİKET: madde 'yeniden kurgulanmış kural' başlığıyla basılır ve hangi kararın kaynaklı hangisinin editoryal olduğu satır satır söylenir.",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 45},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 45
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["kare ızgara tahta", "kral ve savunucular", "kuşatanlar"],
-      "substitutionHint": ["dama tahtası", "iki renk düğme ve bir işaretli taş"],
+      "materialsHint": [
+        "kare ızgara tahta",
+        "kral ve savunucular",
+        "kuşatanlar"
+      ],
+      "substitutionHint": [
+        "dama tahtası",
+        "iki renk düğme ve bir işaretli taş"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "piece-diagram", "setup-illustration", "cultural-plate"],
-      "scores": {"source": 4, "playability": 3, "cultural": 5, "access": 4, "distinct": 5, "explain": 3, "visual": 5, "play": 4},
-      "unresolvedQuestions": ["Hangi tahta boyutu basılacak? Bu bir editoryal karardır ve gerekçesi prozada görünür olmalıdır.", "Modern 'Viking' pazarlaması kuralları çarpıtmıştır; kitap yalnızca kaynaklı kuralları basar."],
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "piece-diagram",
+        "setup-illustration",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 3,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 5,
+        "explain": 3,
+        "visual": 5,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Hangi tahta boyutu basılacak? Bu bir editoryal karardır ve gerekçesi prozada görünür olmalıdır.",
+        "Modern 'Viking' pazarlaması kuralları çarpıtmıştır; kitap yalnızca kaynaklı kuralları basar."
+      ],
       "culturalNotes": "Tafl kuralları TAM OLARAK BİLİNMEZ. Kitap bunu gizlemez: madde 'yeniden kurgulanmış kural' etiketiyle basılır. Bu, kitabın kaynak disiplininin en görünür kanıtıdır.",
       "adaptationNotes": "Linnaeus'un 1732 Sami tablut kaydı, kuralların tek ayrıntılı tarihsel tanığıdır ve o bile eksiktir. Kitap onu temel alır ve boşlukları AÇIKÇA işaretler.",
       "editorialStatus": "inventory",
@@ -215,7 +522,9 @@
     {
       "gameId": "tablut",
       "name": "Tablut",
-      "altNames": ["Sámi tafl"],
+      "altNames": [
+        "Sámi tafl"
+      ],
       "culture": "Sámi",
       "region": "Northern Europe",
       "countryOrArea": "Sápmi (northern Fennoscandia)",
@@ -228,25 +537,90 @@
       "sourceConfidence": "reconstructed",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Linnaeus, Carl, Iter Lapponicum / Lachesis Lapponica (journal of 1732; published London, 1811)", "type": "archive"},
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Linnaeus, Carl, Iter Lapponicum / Lachesis Lapponica (journal of 1732; published London, 1811)",
+          "type": "archive",
+          "locator": "1811 İngilizce çeviri, c. II, ss. 55–58 (şekil + on iki LAWS)"
+        },
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "partial", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Kralın kaçış hedefi (kenar mı köşe mi) Linnaeus'un Latince notundan kesin çıkarılamıyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": false, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "partial",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Kralın kaçış hedefi (kenar mı köşe mi) Linnaeus'un Latince notundan kesin çıkarılamıyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": false,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "reconstructed",
       "reconstructionPlan": "BOŞLUK: Linnaeus'un Latince notu kralın kenara mı köşeye mi kaçtığını kesin söylemez; berabere de tanımsızdır. KAPATMA: kitap kaydın diyagramına sadık kalır, kaçış hedefini KENAR olarak okur (Linnaeus'un çizimindeki işaretli kareler kenardadır) ve tekrar eden konumu berabere sayar. DAYANAK: kaydın kendi diyagramı; başka hiçbir kaynak eklenmez. ETİKET: madde 'yeniden kurgulanmış kural' başlığıyla ve kaydın bir dış gözlemciye ait olduğu notuyla basılır.",
-      "substitutionHint": ["kâğıda çizilmiş 9×9 ızgara", "düğme"],
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
+      "ageMinEstimate": 9,
+      "materialsHint": [
+        "9×9 kare tahta",
+        "bir kral",
+        "sekiz savunan",
+        "on altı kuşatan"
+      ],
+      "substitutionHint": [
+        "kâğıda çizilmiş 9×9 ızgara",
+        "düğme"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "setup-illustration"],
-      "scores": {"source": 4, "playability": 3, "cultural": 5, "access": 5, "distinct": 4, "explain": 4, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["Hnefatafl ile aynı kitapta iki madde mi? Tablut, tafl ailesinin tek ayrıntılı tarihsel kaydıdır ve ayrı basılması editoryal olarak savunulabilir."],
+      "visualNeeds": [
+        "board-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 3,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 4,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Hnefatafl ile aynı kitapta iki madde mi? Tablut, tafl ailesinin tek ayrıntılı tarihsel kaydıdır ve ayrı basılması editoryal olarak savunulabilir."
+      ],
       "rules": {
         "objective": "One player defends a king who is trying to reach the edge of the board; the other player commands twice as many soldiers and is trying to capture him.",
         "playerCountMin": 2,
         "playerCountMax": 2,
-        "materials": ["A board of nine squares by nine", "One king piece", "Eight defenders", "Sixteen attackers"],
-        "substitutions": ["A nine-by-nine grid drawn on paper", "A bottle cap for the king", "Two colours of buttons for the soldiers"],
+        "materials": [
+          "A board of nine squares by nine",
+          "One king piece",
+          "Eight defenders",
+          "Sixteen attackers"
+        ],
+        "substitutions": [
+          "A nine-by-nine grid drawn on paper",
+          "A bottle cap for the king",
+          "Two colours of buttons for the soldiers"
+        ],
         "setup": "Mark the centre square. Stand the king on it. Place the eight defenders around him in a diamond: one on each square touching the king, and one two squares away in each of the four straight directions. Place the attackers in four groups of four, one group at the middle of each edge — three side by side on the edge itself and one directly in front of the middle of those three.",
         "turnSequence": [
           "The attacking player moves first.",
@@ -274,8 +648,14 @@
           "illegalMove": "Slide the piece back and let the player move again. If a capture was taken on the back of an illegal move, put the captured pieces back on their squares. Nobody loses a turn."
         },
         "variants": [
-          {"name": "Corner escape", "note": "The king must reach one of the four corner squares rather than any edge square. This is the modern tournament form and it gives the attackers a much better game."},
-          {"name": "Armed king", "note": "The king helps to capture, acting as one of the two trapping pieces. Without this rule the defenders are purely evasive."}
+          {
+            "name": "Corner escape",
+            "note": "The king must reach one of the four corner squares rather than any edge square. This is the modern tournament form and it gives the attackers a much better game."
+          },
+          {
+            "name": "Armed king",
+            "note": "The king helps to capture, acting as one of the two trapping pieces. Without this rule the defenders are purely evasive."
+          }
         ],
         "simplifiedFirstGame": "Play on a seven-by-seven grid with a king, four defenders and eight attackers, keeping every rule the same. The game lasts about ten minutes and shows the shape of the chase before the full board is worth trying."
       },
@@ -285,7 +665,9 @@
     {
       "gameId": "tawlbwrdd",
       "name": "Tawlbwrdd",
-      "altNames": ["Tawl-bwrdd"],
+      "altNames": [
+        "Tawl-bwrdd"
+      ],
       "culture": "Welsh",
       "region": "Northern Europe",
       "countryOrArea": "Wales",
@@ -297,21 +679,67 @@
       "sourceConfidence": "reconstructed",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "Robert ap Ifan, manuscript note and board diagram, 1587 (National Library of Wales)", "type": "archive"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "Robert ap Ifan, manuscript note and board diagram, 1587 (National Library of Wales)",
+          "type": "archive"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "partial", "turnLogic": "partial", "objective": "known", "endCondition": "unknown", "verdict": "incomplete", "unknownElements": ["Hareket ve alma kuralları 1587 notunda YOKTUR; yalnızca tahta ve taş dizilimi vardır."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": false, "legalMoveDistinguishable": false, "victoryDeterminable": false, "tieDefined": false, "terminationRisk": "unbounded"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "partial",
+        "turnLogic": "partial",
+        "objective": "known",
+        "endCondition": "unknown",
+        "verdict": "incomplete",
+        "unknownElements": [
+          "Hareket ve alma kuralları 1587 notunda YOKTUR; yalnızca tahta ve taş dizilimi vardır."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": false,
+        "legalMoveDistinguishable": false,
+        "victoryDeterminable": false,
+        "tieDefined": false,
+        "terminationRisk": "unbounded"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 20, "max": 40},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["11×11 tahta", "kral + 12 savunucu", "24 kuşatan"],
+      "materialsHint": [
+        "11×11 tahta",
+        "kral + 12 savunucu",
+        "24 kuşatan"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 3, "playability": 1, "cultural": 4, "access": 4, "distinct": 2, "explain": 2, "visual": 4, "play": 2},
-      "unresolvedQuestions": ["Kuralları YOKTUR. Kitaba ancak Hnefatafl maddesinin içinde tarihsel bir not olarak girebilir — kendi maddesi olarak GİREMEZ."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 3,
+        "playability": 1,
+        "cultural": 4,
+        "access": 4,
+        "distinct": 2,
+        "explain": 2,
+        "visual": 4,
+        "play": 2
+      },
+      "unresolvedQuestions": [
+        "Kuralları YOKTUR. Kitaba ancak Hnefatafl maddesinin içinde tarihsel bir not olarak girebilir — kendi maddesi olarak GİREMEZ."
+      ],
       "culturalNotes": "Kaynak yalnızca kurulumu verir. Kuralı 'tamamlamak' kurgu olurdu ve bu kitapta yasaktır.",
       "editorialStatus": "reserve",
       "playtestStatus": "not-started"
@@ -319,7 +747,9 @@
     {
       "gameId": "brandubh",
       "name": "Brandubh",
-      "altNames": ["Brandub"],
+      "altNames": [
+        "Brandub"
+      ],
       "culture": "Irish",
       "region": "Northern Europe",
       "countryOrArea": "Ireland",
@@ -331,28 +761,76 @@
       "sourceConfidence": "reconstructed",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "MacWhite, Eóin, 'Early Irish Board Games', Éigse 5 (1945)", "type": "journal"},
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "MacWhite, Eóin, 'Early Irish Board Games', Éigse 5 (1945)",
+          "type": "journal"
+        },
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "unknown", "turnLogic": "unknown", "objective": "partial", "endCondition": "unknown", "verdict": "incomplete", "unknownElements": ["Şiirsel kaynaklar taş sayısını verir, hareket kuralını VERMEZ."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": false, "legalMoveDistinguishable": false, "victoryDeterminable": false, "tieDefined": false, "terminationRisk": "unbounded"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "unknown",
+        "turnLogic": "unknown",
+        "objective": "partial",
+        "endCondition": "unknown",
+        "verdict": "incomplete",
+        "unknownElements": [
+          "Şiirsel kaynaklar taş sayısını verir, hareket kuralını VERMEZ."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": false,
+        "legalMoveDistinguishable": false,
+        "victoryDeterminable": false,
+        "tieDefined": false,
+        "terminationRisk": "unbounded"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["7×7 tahta", "1 + 4 taş", "8 kuşatan"],
+      "materialsHint": [
+        "7×7 tahta",
+        "1 + 4 taş",
+        "8 kuşatan"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 3, "playability": 1, "cultural": 5, "access": 4, "distinct": 2, "explain": 2, "visual": 4, "play": 2},
-      "unresolvedQuestions": ["Kural yok. Kitaba yalnızca tarihsel not olarak girebilir."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 3,
+        "playability": 1,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 2,
+        "explain": 2,
+        "visual": 4,
+        "play": 2
+      },
+      "unresolvedQuestions": [
+        "Kural yok. Kitaba yalnızca tarihsel not olarak girebilir."
+      ],
       "editorialStatus": "reserve",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "alea-evangelii",
       "name": "Alea Evangelii",
-      "altNames": ["Game of the Gospels"],
+      "altNames": [
+        "Game of the Gospels"
+      ],
       "culture": "Anglo-Saxon",
       "region": "Northern Europe",
       "countryOrArea": "England",
@@ -364,21 +842,67 @@
       "sourceConfidence": "reconstructed",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Corpus Christi College Cambridge MS 122, fol. 5v — the Alea Evangelii diagram and text", "type": "archive"},
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Corpus Christi College Cambridge MS 122, fol. 5v — the Alea Evangelii diagram and text",
+          "type": "archive"
+        },
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "unknown", "turnLogic": "unknown", "objective": "partial", "endCondition": "unknown", "verdict": "incomplete", "unknownElements": ["El yazması tahtayı ve dizilimi İncil uyumuna bağlayarak anlatır; OYUN KURALI VERMEZ."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": false, "legalMoveDistinguishable": false, "victoryDeterminable": false, "tieDefined": false, "terminationRisk": "unbounded"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "unknown",
+        "turnLogic": "unknown",
+        "objective": "partial",
+        "endCondition": "unknown",
+        "verdict": "incomplete",
+        "unknownElements": [
+          "El yazması tahtayı ve dizilimi İncil uyumuna bağlayarak anlatır; OYUN KURALI VERMEZ."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": false,
+        "legalMoveDistinguishable": false,
+        "victoryDeterminable": false,
+        "tieDefined": false,
+        "terminationRisk": "unbounded"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 30, "max": 60},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 30,
+        "max": 60
+      },
       "ageMinEstimate": 11,
-      "materialsHint": ["18×18 kesişimli tahta", "çok sayıda taş"],
+      "materialsHint": [
+        "18×18 kesişimli tahta",
+        "çok sayıda taş"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "cultural-plate"],
-      "scores": {"source": 4, "playability": 1, "cultural": 5, "access": 3, "distinct": 4, "explain": 1, "visual": 5, "play": 1},
-      "unresolvedQuestions": ["Kural yok. Kitapta 'kuralı kaybolmuş oyunlar' kutusunun en iyi örneğidir."],
+      "visualNeeds": [
+        "board-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 1,
+        "cultural": 5,
+        "access": 3,
+        "distinct": 4,
+        "explain": 1,
+        "visual": 5,
+        "play": 1
+      },
+      "unresolvedQuestions": [
+        "Kural yok. Kitapta 'kuralı kaybolmuş oyunlar' kutusunun en iyi örneğidir."
+      ],
       "culturalNotes": "El yazması oyunu dört İncil'in uyumuna bağlar; oyun ile teolojinin iç içe geçtiği ender bir belgedir.",
       "editorialStatus": "reserve",
       "playtestStatus": "not-started"
@@ -386,7 +910,9 @@
     {
       "gameId": "halatafl",
       "name": "Halatafl",
-      "altNames": ["Fox game (Icelandic)"],
+      "altNames": [
+        "Fox game (Icelandic)"
+      ],
       "culture": "Icelandic",
       "region": "Northern Europe",
       "countryOrArea": "Iceland",
@@ -398,29 +924,80 @@
       "sourceConfidence": "medium",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Fiske, Willard, Chess in Iceland and in Icelandic Literature (Florence: Florentine Typographical Society, 1905)", "type": "book"},
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Fiske, Willard, Chess in Iceland and in Icelandic Literature (Florence: Florentine Typographical Society, 1905)",
+          "type": "book"
+        },
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["haç biçimli tahta", "1 tilki", "13–20 kaz"],
-      "substitutionHint": ["kâğıda çizilmiş haç", "düğme ve bir madeni para"],
+      "materialsHint": [
+        "haç biçimli tahta",
+        "1 tilki",
+        "13–20 kaz"
+      ],
+      "substitutionHint": [
+        "kâğıda çizilmiş haç",
+        "düğme ve bir madeni para"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram"],
-      "scores": {"source": 4, "playability": 5, "cultural": 4, "access": 5, "distinct": 3, "explain": 5, "visual": 4, "play": 4},
-      "unresolvedQuestions": ["Fox and Geese ile aynı oyun mu? Ad ve kaynak ayrıdır; kitap ikisini tek maddede birleştirebilir."],
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 4,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 3,
+        "explain": 5,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Fox and Geese ile aynı oyun mu? Ad ve kaynak ayrıdır; kitap ikisini tek maddede birleştirebilir."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "fox-and-geese",
       "name": "Fox and Geese",
-      "altNames": ["Fox and Hounds", "Marelle assiégée"],
+      "altNames": [
+        "Fox and Hounds",
+        "Marelle assiégée"
+      ],
       "culture": "English",
       "region": "Western Europe",
       "countryOrArea": "England",
@@ -432,29 +1009,86 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"},
-        {"ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland, 2 vols (London: David Nutt, 1894–98)", "type": "ethnography"},
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        },
+        {
+          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland, 2 vols (London: David Nutt, 1894–98)",
+          "type": "ethnography"
+        },
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["haç biçimli tahta", "1 tilki", "17 kaz"],
-      "substitutionHint": ["dama tahtası köşeleri kapatılarak", "düğme"],
+      "materialsHint": [
+        "haç biçimli tahta",
+        "1 tilki",
+        "17 kaz"
+      ],
+      "substitutionHint": [
+        "dama tahtası köşeleri kapatılarak",
+        "düğme"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "move-diagram", "setup-illustration"],
-      "scores": {"source": 5, "playability": 5, "cultural": 4, "access": 5, "distinct": 3, "explain": 5, "visual": 4, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram",
+        "setup-illustration"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 5,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 3,
+        "explain": 5,
+        "visual": 4,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "rules": {
         "objective": "One player is the fox and eats geese; the other players share the geese and try to pen the fox so that it cannot move.",
         "playerCountMin": 2,
         "playerCountMax": 2,
-        "materials": ["A cross-shaped board of thirty-three holes or points", "One fox piece", "Seventeen geese pieces"],
-        "substitutions": ["A chessboard with the four corner blocks of nine squares covered by paper", "A coin for the fox and seventeen buttons for the geese"],
+        "materials": [
+          "A cross-shaped board of thirty-three holes or points",
+          "One fox piece",
+          "Seventeen geese pieces"
+        ],
+        "substitutions": [
+          "A chessboard with the four corner blocks of nine squares covered by paper",
+          "A coin for the fox and seventeen buttons for the geese"
+        ],
         "setup": "Draw a cross: three columns of three points across the top, three rows of three points across the middle arm and the same below, giving thirty-three points in all. Place the fox on the centre point. Place the seventeen geese filling the top arm and the two rows nearest it. The rest of the board stays empty.",
         "turnSequence": [
           "The goose player moves first.",
@@ -482,8 +1116,14 @@
           "illegalMove": "Put the piece back and let the player try again. A goose moved backwards by mistake goes back to its point. If the fox has already removed geese on an illegal jump, return the geese and the fox to their places, and the fox forfeits its jump for that turn only."
         },
         "variants": [
-          {"name": "Thirteen geese", "note": "Fill only the top arm with thirteen geese. The fox has a much better game and the match becomes even for two adults."},
-          {"name": "Geese may move sideways and backwards", "note": "A nineteenth-century English variant that makes the geese far stronger; use it when a child plays the geese against an adult fox."}
+          {
+            "name": "Thirteen geese",
+            "note": "Fill only the top arm with thirteen geese. The fox has a much better game and the match becomes even for two adults."
+          },
+          {
+            "name": "Geese may move sideways and backwards",
+            "note": "A nineteenth-century English variant that makes the geese far stronger; use it when a child plays the geese against an adult fox."
+          }
         ],
         "simplifiedFirstGame": "Play on the cross with thirteen geese and let the fox jump only once per turn, never twice. This gives a shorter game with a clear shape and suits a first sitting with a six-year-old."
       },
@@ -493,7 +1133,10 @@
     {
       "gameId": "catch-the-hare",
       "name": "Catch the Hare",
-      "altNames": ["Cercar la liebre", "El cercar la liebre"],
+      "altNames": [
+        "Cercar la liebre",
+        "El cercar la liebre"
+      ],
       "culture": "Castilian",
       "region": "Iberia",
       "countryOrArea": "Spain",
@@ -505,21 +1148,68 @@
       "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Alfonso X, Libro de los juegos (Libro de acedrex, dados e tablas), 1283 — El Escorial MS T.I.6", "type": "archive"},
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Alfonso X, Libro de los juegos (Libro de acedrex, dados e tablas), 1283 — El Escorial MS T.I.6",
+          "type": "archive"
+        },
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "loop-possible", "terminationRule": "Tekrar eden konum berabere sayılır."},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Tekrar eden konum berabere sayılır."
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["alquerque ızgarası", "1 tavşan", "12 avcı"],
-      "substitutionHint": ["kâğıda çizilmiş ızgara", "düğme"],
+      "materialsHint": [
+        "alquerque ızgarası",
+        "1 tavşan",
+        "12 avcı"
+      ],
+      "substitutionHint": [
+        "kâğıda çizilmiş ızgara",
+        "düğme"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "cultural-plate"],
-      "scores": {"source": 5, "playability": 4, "cultural": 5, "access": 5, "distinct": 4, "explain": 4, "visual": 5, "play": 4},
+      "visualNeeds": [
+        "board-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 5,
+        "playability": 4,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 4,
+        "explain": 4,
+        "visual": 5,
+        "play": 4
+      },
       "unresolvedQuestions": [],
       "culturalNotes": "Alfonso X'in derlemesi, oyunu resimli bir minyatürle birlikte verir — kitabın gravür dili için birinci sınıf görsel kaynak.",
       "editorialStatus": "inventory",
@@ -528,7 +1218,10 @@
     {
       "gameId": "komikan",
       "name": "Komikan",
-      "altNames": ["Kechukan", "Puma game"],
+      "altNames": [
+        "Kechukan",
+        "Puma game"
+      ],
       "culture": "Mapuche",
       "region": "South America",
       "countryOrArea": "Chile · Argentina",
@@ -541,27 +1234,74 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Zorunlu alma kuralı ve berabere durumu tek kaynaktan kesinleşmiyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Zorunlu alma kuralı ve berabere durumu tek kaynaktan kesinleşmiyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["ızgara tahta", "1 puma", "12 koyun"],
+      "materialsHint": [
+        "ızgara tahta",
+        "1 puma",
+        "12 koyun"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "cultural-plate"],
-      "scores": {"source": 2, "playability": 2, "cultural": 5, "access": 5, "distinct": 4, "explain": 4, "visual": 4, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak — tercihen Mapuche kaynaklı — gerekiyor.", "Oyunun Avrupa temasıyla mı doğduğu yoksa bağımsız mı olduğu bilinmiyor; kitap köken iddiası yapmamalı."],
+      "visualNeeds": [
+        "board-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 4,
+        "explain": 4,
+        "visual": 4,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak — tercihen Mapuche kaynaklı — gerekiyor.",
+        "Oyunun Avrupa temasıyla mı doğduğu yoksa bağımsız mı olduğu bilinmiyor; kitap köken iddiası yapmamalı."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "adugo",
       "name": "Adugo",
-      "altNames": ["Jaguar game"],
+      "altNames": [
+        "Jaguar game"
+      ],
       "culture": "Bororo",
       "region": "South America",
       "countryOrArea": "Mato Grosso, Brazil",
@@ -574,27 +1314,74 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Berabere ve kilit durumu tek kaynaktan çözülmüyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Berabere ve kilit durumu tek kaynaktan çözülmüyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["alquerque ızgarası", "1 jaguar", "14 köpek"],
+      "materialsHint": [
+        "alquerque ızgarası",
+        "1 jaguar",
+        "14 köpek"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "cultural-plate"],
-      "scores": {"source": 2, "playability": 2, "cultural": 5, "access": 5, "distinct": 3, "explain": 4, "visual": 4, "play": 3},
-      "unresolvedQuestions": ["Bororo kaynaklı ikinci bir künye gerekiyor."],
+      "visualNeeds": [
+        "board-diagram",
+        "cultural-plate"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 5,
+        "access": 5,
+        "distinct": 3,
+        "explain": 4,
+        "visual": 4,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Bororo kaynaklı ikinci bir künye gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "bagha-guti",
       "name": "Bagha Guti",
-      "altNames": ["Bagh Guti", "Tiger and men"],
+      "altNames": [
+        "Bagh Guti",
+        "Tiger and men"
+      ],
       "culture": "Bengali",
       "region": "South Asia",
       "countryOrArea": "Bengal (India · Bangladesh)",
@@ -606,27 +1393,74 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)", "type": "book"}
+        {
+          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Berabere durumu tanımlı değil."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Berabere durumu tanımlı değil."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["alquerque ızgarası", "2 kaplan", "20 taş"],
+      "materialsHint": [
+        "alquerque ızgarası",
+        "2 kaplan",
+        "20 taş"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 3, "access": 5, "distinct": 2, "explain": 4, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor.", "Aile içinde kaplan-keçi oyunlarının sayısı fazla; kitap en fazla üç tanesini basmalı."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 3,
+        "access": 5,
+        "distinct": 2,
+        "explain": 4,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor.",
+        "Aile içinde kaplan-keçi oyunlarının sayısı fazla; kitap en fazla üç tanesini basmalı."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "pulijudam",
       "name": "Pulijudam",
-      "altNames": ["Puli Joodam", "Tiger game (Telugu)"],
+      "altNames": [
+        "Puli Joodam",
+        "Tiger game (Telugu)"
+      ],
       "culture": "Telugu",
       "region": "South Asia",
       "countryOrArea": "Andhra Pradesh · Telangana, India",
@@ -638,27 +1472,72 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Berabere durumu tanımlı değil."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Berabere durumu tanımlı değil."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["üçgen ızgara", "3 kaplan", "15 keçi"],
+      "materialsHint": [
+        "üçgen ızgara",
+        "3 kaplan",
+        "15 keçi"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 3, "access": 5, "distinct": 2, "explain": 4, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 3,
+        "access": 5,
+        "distinct": 2,
+        "explain": 4,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "len-choa",
       "name": "Len Choa",
-      "altNames": ["Leopard game (Thai)"],
+      "altNames": [
+        "Leopard game (Thai)"
+      ],
       "culture": "Thai",
       "region": "Southeast Asia",
       "countryOrArea": "Thailand",
@@ -670,28 +1549,75 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "known", "verdict": "complete", "unknownElements": []},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": true, "terminationRisk": "finite"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "complete",
+        "unknownElements": []
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": true,
+        "terminationRisk": "finite"
+      },
       "playabilityStatus": "rules-complete",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 5, "max": 15},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 5,
+        "max": 15
+      },
       "ageMinEstimate": 6,
-      "materialsHint": ["küçük üçgen ızgara", "1 leopar", "6 köpek"],
-      "substitutionHint": ["kâğıt", "bozuk para ve düğme"],
+      "materialsHint": [
+        "küçük üçgen ızgara",
+        "1 leopar",
+        "6 köpek"
+      ],
+      "substitutionHint": [
+        "kâğıt",
+        "bozuk para ve düğme"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 4, "cultural": 3, "access": 5, "distinct": 3, "explain": 5, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 4,
+        "cultural": 3,
+        "access": 5,
+        "distinct": 3,
+        "explain": 5,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "buga-shadara",
       "name": "Buga Shadara",
-      "altNames": ["Bull chess", "Shadar"],
+      "altNames": [
+        "Bull chess",
+        "Shadar"
+      ],
       "culture": "Mongolian",
       "region": "Central Asia",
       "countryOrArea": "Mongolia",
@@ -703,27 +1629,72 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "partial", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Köpeklerin kazanma koşulu (kilitleme mi tüketme mi) kesinleşmiyor."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": false, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "partial",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Köpeklerin kazanma koşulu (kilitleme mi tüketme mi) kesinleşmiyor."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": false,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 25},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 25
+      },
       "ageMinEstimate": 8,
-      "materialsHint": ["ızgara tahta", "2 boğa", "24 köpek"],
+      "materialsHint": [
+        "ızgara tahta",
+        "2 boğa",
+        "24 köpek"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 4, "access": 5, "distinct": 3, "explain": 3, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 4,
+        "access": 5,
+        "distinct": 3,
+        "explain": 3,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "sua-ghin-gnua",
       "name": "Sua Ghin Gnua",
-      "altNames": ["Tiger eats cattle"],
+      "altNames": [
+        "Tiger eats cattle"
+      ],
       "culture": "Lao",
       "region": "Southeast Asia",
       "countryOrArea": "Laos · northern Thailand",
@@ -735,27 +1706,72 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Berabere durumu tanımlı değil."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Berabere durumu tanımlı değil."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 10, "max": 20},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 10,
+        "max": 20
+      },
       "ageMinEstimate": 7,
-      "materialsHint": ["üçgen ızgara", "1 kaplan", "6 sığır"],
+      "materialsHint": [
+        "üçgen ızgara",
+        "1 kaplan",
+        "6 sığır"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 3, "access": 5, "distinct": 2, "explain": 4, "visual": 3, "play": 3},
-      "unresolvedQuestions": ["İkinci bağımsız kaynak gerekiyor."],
+      "visualNeeds": [
+        "board-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 3,
+        "access": 5,
+        "distinct": 2,
+        "explain": 4,
+        "visual": 3,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     },
     {
       "gameId": "dablot-prejjesne",
       "name": "Dablot Prejjesne",
-      "altNames": ["Dablo"],
+      "altNames": [
+        "Dablo"
+      ],
       "culture": "Sámi",
       "region": "Northern Europe",
       "countryOrArea": "Sápmi (Lapland)",
@@ -768,20 +1784,63 @@
       "sourceConfidence": "low",
       "sourceVerification": "bibliographic",
       "sources": [
-        {"ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)", "type": "book"}
+        {
+          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+          "type": "book"
+        }
       ],
-      "ruleCompleteness": {"setup": "known", "play": "known", "turnLogic": "known", "objective": "known", "endCondition": "partial", "verdict": "partial", "unknownElements": ["Beraberlik ve kilit durumu tanımlı değil."]},
-      "clarity": {"setupPerformable": true, "firstTurnTakeable": true, "legalMoveDistinguishable": true, "victoryDeterminable": true, "tieDefined": false, "terminationRisk": "loop-possible"},
+      "ruleCompleteness": {
+        "setup": "known",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "partial",
+        "verdict": "partial",
+        "unknownElements": [
+          "Beraberlik ve kilit durumu tanımlı değil."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible"
+      },
       "playabilityStatus": "unresolved",
-      "players": {"min": 2, "max": 2},
-      "durationMinutes": {"min": 15, "max": 30},
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 15,
+        "max": 30
+      },
       "ageMinEstimate": 9,
-      "materialsHint": ["ızgara tahta", "iki taraf için farklı taş kümeleri"],
+      "materialsHint": [
+        "ızgara tahta",
+        "iki taraf için farklı taş kümeleri"
+      ],
       "childSuitable": true,
       "environment": "table",
-      "visualNeeds": ["board-diagram", "piece-diagram"],
-      "scores": {"source": 2, "playability": 2, "cultural": 5, "access": 4, "distinct": 5, "explain": 3, "visual": 4, "play": 3},
-      "unresolvedQuestions": ["Sámi kaynaklı ikinci bir künye gerekiyor."],
+      "visualNeeds": [
+        "board-diagram",
+        "piece-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 2,
+        "cultural": 5,
+        "access": 4,
+        "distinct": 5,
+        "explain": 3,
+        "visual": 4,
+        "play": 3
+      },
+      "unresolvedQuestions": [
+        "Sámi kaynaklı ikinci bir künye gerekiyor."
+      ],
       "editorialStatus": "inventory",
       "playtestStatus": "not-started"
     }
