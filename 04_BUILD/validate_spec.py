@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -31,6 +32,7 @@ ROOT = os.path.dirname(HERE)
 CONFIG = os.path.join(ROOT, "project_config.json")
 GAME_INDEX = os.path.join(ROOT, "01_SOURCE", "game_index.json")
 FAMILY_INDEX = os.path.join(ROOT, "01_SOURCE", "family_index.json")
+GAME_SCHEMA = os.path.join(ROOT, "01_SOURCE", "game.schema.json")
 
 VALID_GATES = ["phase0", "phase1", "phase2", "phase3", "phase4", "phase5", "release"]
 VALID_STATUS = ["candidate", "researched", "locked", "written", "dropped"]
@@ -87,6 +89,120 @@ def read_gate() -> str:
         return "phase0"
     with open(path, encoding="utf-8") as fh:
         return fh.read().strip()
+
+
+# ---------------------------------------------------------------------------
+# JSON SCHEMA ALT KÜMESİ DOĞRULAYICI
+# ---------------------------------------------------------------------------
+# Karar K7 üçüncü taraf paket yasaklar; `jsonschema` kurulamaz. Bu yüzden
+# şemanın KULLANDIĞIMIZ alt kümesi burada elle uygulanır:
+#   type · required · properties · additionalProperties · enum · pattern
+#   minLength · minItems · minimum · maximum · items
+#
+# Desteklenmeyen bir anahtar şemaya girerse SESSİZCE YOK SAYILIR ve bu,
+# doğrulanmadığı hâlde doğrulanmış sanılan bir alan üretir. Bu riski
+# kapatmak için `unsupported_keywords()` şemayı tarar ve bilinmeyen bir
+# anahtar bulursa kapıyı kırmızı yakar.
+SUPPORTED = {
+    "$schema", "$id", "$comment", "title", "description", "type", "required",
+    "properties", "additionalProperties", "enum", "pattern", "minLength",
+    "minItems", "minimum", "maximum", "items", "format",
+}
+TYPES = {
+    "object": dict, "array": list, "string": str, "boolean": bool,
+    "integer": int, "number": (int, float),
+}
+
+
+def unsupported_keywords(schema, path: str = "#") -> list[str]:
+    found: list[str] = []
+    if isinstance(schema, dict):
+        for k, v in schema.items():
+            if k in ("properties", "items"):
+                if k == "properties" and isinstance(v, dict):
+                    for pk, pv in v.items():
+                        found += unsupported_keywords(pv, "%s/%s" % (path, pk))
+                elif k == "items":
+                    found += unsupported_keywords(v, path + "/items")
+                continue
+            if k not in SUPPORTED:
+                found.append("%s → %s" % (path, k))
+    return found
+
+
+def validate_node(value, schema: dict, path: str) -> list[str]:
+    errs: list[str] = []
+    t = schema.get("type")
+    if t:
+        py = TYPES.get(t)
+        # JSON'da bool int'in alt tipidir; integer beklenen yerde True geçmemeli.
+        if py is None:
+            pass
+        elif t == "integer" and isinstance(value, bool):
+            errs.append("%s: integer bekleniyor, boolean geldi" % path)
+            return errs
+        elif not isinstance(value, py):
+            errs.append("%s: %s bekleniyor, %s geldi"
+                        % (path, t, type(value).__name__))
+            return errs
+
+    if "enum" in schema and value not in schema["enum"]:
+        errs.append("%s: '%s' izinli değerler dışında" % (path, value))
+    if isinstance(value, str):
+        if "minLength" in schema and len(value) < schema["minLength"]:
+            errs.append("%s: en az %d karakter olmalı" % (path, schema["minLength"]))
+        if "pattern" in schema and not re.search(schema["pattern"], value):
+            errs.append("%s: '%s' kalıba uymuyor" % (path, value))
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        if "minimum" in schema and value < schema["minimum"]:
+            errs.append("%s: %s < %s" % (path, value, schema["minimum"]))
+        if "maximum" in schema and value > schema["maximum"]:
+            errs.append("%s: %s > %s" % (path, value, schema["maximum"]))
+    if isinstance(value, list):
+        if "minItems" in schema and len(value) < schema["minItems"]:
+            errs.append("%s: en az %d öğe olmalı" % (path, schema["minItems"]))
+        if isinstance(schema.get("items"), dict):
+            for i, item in enumerate(value):
+                errs += validate_node(item, schema["items"], "%s[%d]" % (path, i))
+    if isinstance(value, dict):
+        props = schema.get("properties", {})
+        for req in schema.get("required", []):
+            if req not in value:
+                errs.append("%s: zorunlu alan eksik → %s" % (path, req))
+        if schema.get("additionalProperties") is False:
+            for k in value:
+                if k not in props:
+                    errs.append("%s: tanımsız alan → %s" % (path, k))
+        for k, v in value.items():
+            if k in props and isinstance(props[k], dict):
+                errs += validate_node(v, props[k], "%s.%s" % (path, k))
+    return errs
+
+
+def check_schema(games, rep: Report) -> None:
+    print("\n── şema uyumu ──")
+    schema = load_json(GAME_SCHEMA, rep, required=False)
+    if schema is None:
+        rep.warn("game.schema.json yok — şema denetimi atlandı")
+        return
+
+    unsupported = unsupported_keywords(schema)
+    rep.check(not unsupported,
+              "şema yalnızca desteklenen anahtarları kullanıyor"
+              + ("" if not unsupported else " — DOĞRULANMAYAN: %s" % unsupported[:5]))
+
+    if games is None:
+        return
+    entries = games.get("games", []) if isinstance(games, dict) else games
+    failures: list[str] = []
+    for g in entries:
+        errs = validate_node(g, schema, g.get("gameId", "?"))
+        if errs:
+            failures.extend(errs)
+    rep.facts["schema_errors"] = len(failures)
+    rep.check(not failures,
+              "her oyun kaydı şemaya uyuyor (%d kayıt)" % len(entries)
+              + ("" if not failures else " — %s" % failures[:5]))
 
 
 # ---------------------------------------------------------------------------
@@ -258,6 +374,7 @@ def main() -> int:
     check_config(cfg, rep)
     games = load_json(GAME_INDEX, rep, required=(gate != "phase0"))
     fams = load_json(FAMILY_INDEX, rep, required=False)
+    check_schema(games, rep)
     check_games(cfg, games, fams, gate, rep)
     check_gate_scope(cfg, gate, rep)
 

@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "checks": 7,
+  "errors": [],
+  "warnings": [
+    "38 oyun tek kaynaklı — locked olabilmeleri için ikinci bağımsız künye gerekir"
+  ],
+  "facts": {
+    "games": 160,
+    "source_records": 300,
+    "independent_ge2": 122,
+    "single_source": 38,
+    "locked": 0
+  }
+}

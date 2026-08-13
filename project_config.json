@@ -143,9 +143,29 @@
       "hardcoverLargeTrimBW": {"fixed": 5.65, "perPage": 0.017, "minPages": 110, "maxPages": 550},
       "royaltyRateAtOrAbove999": 0.60,
       "royaltyRateBelow999": 0.50,
+      "kindleRoyaltyRate70": 0.70,
       "kindleDeliveryPerMB": 0.15,
+      "kindleFileSizeMBHypothesis": 8,
       "kindle70BandMin": 2.99,
       "kindle70BandMax": 12.99
+    },
+
+    "pageModel": {
+      "$comment": [
+        "SAYFA MODELİ — Faz 1 hipotezi. Faz 2 GERÇEK DİZGİYLE ölçer ve düzeltir.",
+        "Sayfa sayısı bir tasarım tercihi değil, FİYAT MODELİNİN KENDİSİDİR:",
+        "256 yerine 300 sayfa, her satılan kopyada telifi 0,75 $ düşürür.",
+        "Bu yüzden model bir betiğe gömülmez; burada durur ve page_budget.py okur.",
+        "calibrated=false olduğu sürece bütün sayfa sayıları HİPOTEZDİR."
+      ],
+      "pagesPerGame": 2,
+      "frontMatterPages": 14,
+      "backMatterPages": 21,
+      "familyOpenerPages": 2,
+      "wordsPerTypesetPageHypothesis": 320,
+      "signatureMultiple": 2,
+      "calibrated": false,
+      "calibratedAtPhase": "phase2"
     },
     "editionsHypothesis": [
       {"id": "hardcover", "list": 34.99, "enabled": true,  "priority": 1},

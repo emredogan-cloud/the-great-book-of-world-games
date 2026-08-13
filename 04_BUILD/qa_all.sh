@@ -77,6 +77,12 @@ if [ "$FIX" = "1" ]; then
   [ -f 04_BUILD/update_docs.py ] && $PY 04_BUILD/update_docs.py >/dev/null || true
 fi
 
+# ── ÜRETİLEN ENVANTER ───────────────────────────────────────────────────────
+# Bu EN BAŞTA koşar: bayat bir indeksle koşan bütün kapılar yanlış veriyi
+# denetler ve yeşil yanabilir. Kaynak parçalardır, indeks türetilmiştir.
+[ -f 04_BUILD/build_index.py ] && \
+  run "envanter güncel"         $PY 04_BUILD/build_index.py --check
+
 # ── YAPILANDIRMA VE VERİ ────────────────────────────────────────────────────
 run "veri bütünlüğü ve kapsam"  $PY 04_BUILD/validate_spec.py --gate "$GATE" \
                                    --json 06_REPORTS/spec-validation.json
@@ -98,6 +104,9 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/qa_rules.py ] && \
   run "KURAL BÜTÜNLÜĞÜ"         $PY 04_BUILD/qa_rules.py \
                                    --json 06_REPORTS/qa-rules.json
+[ -f 04_BUILD/score_candidates.py ] && \
+  run "aday seçim modeli"       $PY 04_BUILD/score_candidates.py \
+                                   --json 06_REPORTS/candidate-scores.json
 
 # ── FAZ 2'DE DOĞACAK KAPILAR ───────────────────────────────────────────────
 [ -f 04_BUILD/qa_playable.py ] && \

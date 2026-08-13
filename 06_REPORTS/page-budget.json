@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "calibrated": false,
+  "hypothesis": true,
+  "model": {
+    "games": 100,
+    "families": 7,
+    "bodyPages": 200,
+    "openerPages": 14,
+    "frontMatterPages": 14,
+    "backMatterPages": 21,
+    "rawTotal": 249,
+    "total": 250
+  },
+  "target": 256,
+  "tolerancePct": 6,
+  "deviationPct": -2.34,
+  "withinTolerance": true,
+  "wordCrossCheck": {
+    "words": 65000,
+    "wordsPerPage": 320,
+    "impliedBodyPages": 203.1
+  },
+  "errors": []
+}

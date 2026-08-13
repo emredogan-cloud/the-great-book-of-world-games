@@ -4,23 +4,43 @@
   "title": "World Games — oyun kaydı",
   "description": [
     "Bir oyunun TEK doğruluk kaydı. Manuscript bu kayıttan üretilir, tersi değil.",
-    "Kural metninin sabit blokları: Setup: … / Turn sequence: … / Win condition: …",
-    "Bu üç blok olmadan bir oyun `locked` olamaz — On your turn, oyuncunun ne",
-    "yapabileceği belirsizse oyun oynanamaz ve bu kitabın tek vaadi düşer."
+    "",
+    "İKİ KATMAN VARDIR ve sınır MEKANİKTİR (karar K9):",
+    "  · VERİ KATMANI  → bu şema. Yapısal, alanlara bölünmüş, PUBLIC.",
+    "  · PROZA KATMANI → 02_MANUSCRIPT. Sekiz sabit blok, sürekli metin, ÖZEL.",
+    "Kural metninin sabit blokları — 'Setup: ' · 'Turn sequence: ' · 'Win condition: ' —",
+    "PROZA katmanına aittir ve bu dosyalarda GEÇMEZ; validate_structure.py bunu tarar.",
+    "",
+    "Faz 1 (aday) ile Faz 2+ (kilitli) farklı alan kümesi ister:",
+    "  candidate  → kimlik · atıf · aile · kaynak · kısıt · KURAL BÜTÜNLÜĞÜ · netlik · puan",
+    "  locked     → yukarıdakiler + rules bloğu + geçmiş oynanabilirlik testi",
+    "Bir alanın 'ZORUNLU (aday)' olması qa_rules.py tarafından denetlenir; JSON Schema",
+    "seviyesinde yalnızca envanterin çekirdeği required'dır ki kısmi kayıt yazılabilsin."
   ],
   "type": "object",
-  "required": ["gameId", "name", "culture", "region", "family", "status",
-               "restrictionStatus", "sourceConfidence", "sources"],
+  "required": ["gameId", "name", "culture", "region", "period", "family", "status",
+               "restrictionStatus", "sourceConfidence", "sources",
+               "ruleCompleteness", "playabilityStatus", "scores"],
   "additionalProperties": false,
   "properties": {
-    "gameId":   {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,48}$"},
+    "gameId":   {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,48}$",
+                 "$comment": "En kısa gerçek oyun adı iki harftir ('go'); alt sınır buna göre kuruldu."},
     "name":     {"type": "string", "minLength": 2},
     "altNames": {"type": "array", "items": {"type": "string"}},
 
-    "culture":  {"type": "string", "description": "Atfedilen kültür — alt başlıktaki 45 sayısını bu alan üretir"},
-    "region":   {"type": "string"},
-    "period":   {"type": "string", "description": "Serbest metin: 'MÖ 3000 civarı', '19. yüzyıl' vb."},
-    "family":   {"type": "string", "description": "family_index.json'daki bir kimlik"},
+    "culture":  {"type": "string", "minLength": 2,
+                 "description": "Atfedilen kültür — alt başlıktaki 45 sayısını bu alan üretir"},
+    "region":   {"type": "string", "minLength": 2},
+    "countryOrArea": {"type": "string",
+                 "description": "Modern devlet/coğrafya karşılığı; kültür ile devlet AYNI ŞEY DEĞİLDİR"},
+    "period":   {"type": "string", "minLength": 3,
+                 "description": "Serbest metin: 'c. 3000 BCE', 'first recorded 1694' vb. Bilinmiyorsa 'undated — first recorded …'"},
+
+    "family":   {"type": "string", "description": "family_index.json'daki bir kimlik — BİRİNCİL tasnif"},
+    "secondaryFamily": {"type": "string",
+                 "description": "Yalnızca gerçekten iki ailede okunabilen oyunlar için. Kitapta oyun BİR kez basılır: family."},
+    "taxonomyRationale": {"type": "string", "minLength": 10,
+                 "description": "Bu oyun neden A ailesinde, komşu B ailesinde DEĞİL. Kafada değil kayıtta durur."},
 
     "status": {
       "type": "string",
@@ -45,29 +65,181 @@
         "excluded   → kitaba giremez; gerekçe kayıtta kalır"
       ]
     },
-    "restrictionNote": {"type": "string"},
+    "restrictionNote": {"type": "string",
+      "description": "attributed / restricted / excluded için ZORUNLU (qa_taxonomy denetler). open için gereksiz."},
 
     "sourceConfidence": {"type": "string", "enum": ["high", "medium", "low", "reconstructed"]},
+    "sourceVerification": {
+      "type": "string",
+      "enum": ["bibliographic", "page-verified"],
+      "description": [
+        "bibliographic → eser ve içerdiği oyun künyelendi; SAYFA doğrulanmadı (Faz 1 seviyesi)",
+        "page-verified → kaynak açılıp sayfa/locator doğrulandı (locked için ZORUNLU)",
+        "Bu ayrım kasıtlıdır: doğrulanmamış künyeyi doğrulanmış gibi göstermek",
+        "bu kitabın kaynak iddiasını çürütür. Ayrımı gizlemek yerine ALANA BAĞLARIZ."
+      ]
+    },
     "sources": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
         "required": ["ref", "type"],
+        "additionalProperties": false,
         "properties": {
-          "ref":      {"type": "string"},
+          "ref":      {"type": "string", "minLength": 8},
           "type":     {"type": "string", "enum": ["book", "journal", "museum", "ethnography", "archive", "field-record"]},
-          "locator":  {"type": "string"},
-          "note":     {"type": "string"}
+          "locator":  {"type": "string", "description": "Sayfa/envanter no — page-verified için ZORUNLU"},
+          "note":     {"type": "string"},
+          "lineage":  {"type": "string",
+                       "description": "Bu kaynak başka bir kaynaktan TÜREDİYSE kimden. Bağımsızlık sayımı bunu kullanır."}
         }
       }
     },
 
+    "ruleCompleteness": {
+      "type": "object",
+      "description": [
+        "OYNANABİLİRLİK KAPISININ ÇEKİRDEĞİ. Beş öğe: SETUP → PLAY → TURN LOGIC →",
+        "OBJECTIVE → END CONDITION. Biri 'unknown' ise verdict 'incomplete' olmak",
+        "ZORUNLUDUR ve oyun kurgusal tamamlamayla 'complete' yapılamaz."
+      ],
+      "required": ["setup", "play", "turnLogic", "objective", "endCondition", "verdict"],
+      "additionalProperties": false,
+      "properties": {
+        "setup":        {"type": "string", "enum": ["known", "partial", "unknown"]},
+        "play":         {"type": "string", "enum": ["known", "partial", "unknown"]},
+        "turnLogic":    {"type": "string", "enum": ["known", "partial", "unknown"]},
+        "objective":    {"type": "string", "enum": ["known", "partial", "unknown"]},
+        "endCondition": {"type": "string", "enum": ["known", "partial", "unknown"]},
+        "verdict":      {"type": "string", "enum": ["complete", "partial", "incomplete"]},
+        "unknownElements": {"type": "array", "items": {"type": "string"},
+          "description": "Ne bilinmiyor — açıkça yazılır. Boş bırakılıp 'complete' denmez."}
+      }
+    },
+
+    "clarity": {
+      "type": "object",
+      "description": [
+        "TAZE OKUR TESTİ: kültür uzmanı yanında olmadan kural anlaşılıyor mu.",
+        "Beş soru, beş boolean. Biri false ise oyun ÜRETİME HAZIR DEĞİLDİR."
+      ],
+      "required": ["setupPerformable", "firstTurnTakeable", "legalMoveDistinguishable",
+                   "victoryDeterminable", "tieDefined"],
+      "additionalProperties": false,
+      "properties": {
+        "setupPerformable":         {"type": "boolean", "description": "Kurulum metinle yapılabiliyor mu"},
+        "firstTurnTakeable":        {"type": "boolean", "description": "İlk hamle atılabiliyor mu"},
+        "legalMoveDistinguishable": {"type": "boolean", "description": "Yasal hamle yasadışıdan ayırt edilebiliyor mu"},
+        "victoryDeterminable":      {"type": "boolean", "description": "Kazanan belirlenebiliyor mu"},
+        "tieDefined":               {"type": "boolean", "description": "Berabere/kilit durumu tanımlı mı"},
+        "terminationRisk":          {"type": "string", "enum": ["finite", "loop-possible", "unbounded"],
+                                     "description": "Oyun teorik olarak sonsuza kadar sürebilir mi"},
+        "terminationRule":          {"type": "string",
+                                     "description": "loop-possible/unbounded ise kitabın koyacağı bitiş kuralı"}
+      }
+    },
+
+    "reconstructionPlan": {
+      "type": "string",
+      "description": [
+        "YALNIZCA playabilityStatus = reconstructed için. Tarihsel kayıt netlik",
+        "testinden düşüyorsa, kitabın o boşluğu NASIL kapatacağı BURADA yazılır:",
+        "hangi boşluk, hangi kaynağa dayanarak, hangi editoryal kararla.",
+        "",
+        "NEDEN ZORUNLU: 'yeniden kurgulandı' etiketi tek başına bir açıklama",
+        "değildir. Boşluğun ne olduğu ve nasıl kapatıldığı yazılmazsa, uydurma",
+        "ile yeniden kurgulama arasında MEKANİK bir fark kalmaz. qa_rules.py",
+        "netlik testinden düşen her reconstructed kaydın bu alanı taşımasını",
+        "şart koşar — böylece kurgu, kayıt tutmadan yapılamaz."
+      ],
+      "minLength": 40
+    },
+
+    "playabilityStatus": {
+      "type": "string",
+      "enum": ["rules-complete", "reconstructed", "unresolved", "not-production-ready", "excluded"],
+      "description": [
+        "rules-complete       → beş öğe bilinir, taze okur oynayabilir → Faz 2 testine aday",
+        "reconstructed        → boşluk KAYNAKLA kapatıldı; prozada AÇIKÇA etiketlenir",
+        "unresolved           → temel bir öğe bilinmiyor; UYDURULMAZ, kayıtta kalır",
+        "not-production-ready → netlik testinden düştü",
+        "excluded             → kısıt/güvenlik gerekçesiyle kitap dışı"
+      ]
+    },
+
+    "players":  {"type": "object", "additionalProperties": false,
+                 "required": ["min", "max"],
+                 "properties": {"min": {"type": "integer", "minimum": 1},
+                                "max": {"type": "integer", "minimum": 1},
+                                "note": {"type": "string"}}},
+    "durationMinutes": {"type": "object", "additionalProperties": false,
+                 "required": ["min", "max"],
+                 "properties": {"min": {"type": "integer", "minimum": 1},
+                                "max": {"type": "integer", "minimum": 1}}},
+    "ageMinEstimate": {"type": "integer", "minimum": 3, "maximum": 18,
+                 "description": "Faz 2 testiyle doğrulanacak TAHMİN. Kitle tabanı 8."},
+
+    "materialsHint":   {"type": "array", "items": {"type": "string"},
+                 "description": "Aday seviyesinde malzeme; locked'da rules.materials kesinleşir"},
+    "substitutionHint": {"type": "array", "items": {"type": "string"},
+                 "description": "GÜVENLİ MODERN MALZEME KARŞILIĞI — oyun mantığını değiştirmeden"},
+    "safetyNotes":     {"type": "string",
+                 "description": "Boğulma · çarpma · fiziksel temas · gözetim · mekân"},
+    "childSuitable":   {"type": "boolean"},
+    "supervision":     {"type": "string", "enum": ["none", "recommended", "required"]},
+    "environment":     {"type": "string", "enum": ["table", "floor", "indoor-open", "outdoor"]},
+
+    "visualNeeds": {
+      "type": "array",
+      "items": {"type": "string",
+                "enum": ["board-diagram", "move-diagram", "piece-diagram",
+                         "setup-illustration", "map", "cultural-plate", "none"]},
+      "description": "Görsel sistemin girdisi. Faz 5 üretim listesi buradan türetilir."
+    },
+
+    "scores": {
+      "type": "object",
+      "description": [
+        "ADAY SEÇİM MODELİ. Sekiz ölçüt, her biri 1–5 ve TANIMLI",
+        "(00_CONTEXT/EDITORIAL_ARCHITECTURE.md § seçim modeli).",
+        "Ağırlıklar ve sıralama score_candidates.py tarafından HESAPLANIR;",
+        "toplam burada TUTULMAZ — türetilmiş değer kaynağa yazılmaz."
+      ],
+      "required": ["source", "playability", "cultural", "access",
+                   "distinct", "explain", "visual", "play"],
+      "additionalProperties": false,
+      "properties": {
+        "source":      {"type": "integer", "minimum": 1, "maximum": 5},
+        "playability": {"type": "integer", "minimum": 1, "maximum": 5},
+        "cultural":    {"type": "integer", "minimum": 1, "maximum": 5},
+        "access":      {"type": "integer", "minimum": 1, "maximum": 5},
+        "distinct":    {"type": "integer", "minimum": 1, "maximum": 5},
+        "explain":     {"type": "integer", "minimum": 1, "maximum": 5},
+        "visual":      {"type": "integer", "minimum": 1, "maximum": 5},
+        "play":        {"type": "integer", "minimum": 1, "maximum": 5}
+      }
+    },
+
+    "unresolvedQuestions": {"type": "array", "items": {"type": "string"},
+      "description": "Cevabı olmayan sorular AÇIKÇA durur. Boş liste 'soru yok' demektir, 'bakmadım' değil."},
+    "adaptationNotes":   {"type": "string"},
+    "culturalNotes":     {"type": "string"},
+    "editorialStatus":   {"type": "string",
+      "enum": ["inventory", "shortlisted", "reserve", "rejected"],
+      "description": "Kitaba giriş durumu — kapsam kararı. status (araştırma durumu) ile KARIŞTIRILMAZ."},
+    "playtestStatus":    {"type": "string",
+      "enum": ["not-started", "scheduled", "passed", "ambiguous", "failed"]},
+
     "rules": {
       "type": "object",
-      "description": "locked için ZORUNLU. qa_rules.py bu bloğu denetler.",
+      "description": [
+        "locked için ZORUNLU. qa_rules.py bu bloğu denetler.",
+        "VERİ katmanıdır: alanlara bölünmüş, etiketsiz. Proza şablonu buradan ÜRETİLİR."
+      ],
       "required": ["objective", "playerCountMin", "playerCountMax", "materials",
                    "setup", "turnSequence", "winCondition", "durationMinutes", "ageMin"],
+      "additionalProperties": false,
       "properties": {
         "objective":       {"type": "string"},
         "playerCountMin":  {"type": "integer", "minimum": 1},
@@ -76,14 +248,19 @@
         "substitutions":   {"type": "array", "items": {"type": "string"},
                             "description": "Evde bulunan neyin yerine ne konabilir"},
         "setup":           {"type": "string"},
-        "turnSequence":    {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "turnSequence":    {"type": "array", "items": {"type": "string"}, "minItems": 1,
+                            "description": "Numaralı, TEK EYLEMLİ adımlar"},
+        "legalMoves":      {"type": "array", "items": {"type": "string"},
+                            "description": "Yasal hamleler; yasadışıdan ayırt edilebilmeli"},
         "winCondition":    {"type": "string"},
+        "endCondition":    {"type": "string", "description": "Oyunun bitiş koşulu (kazanandan ayrı olabilir)"},
         "durationMinutes": {"type": "integer", "minimum": 1},
         "ageMin":          {"type": "integer", "minimum": 3},
         "edgeCases": {
           "type": "object",
           "description": "ÜÇÜ DE ZORUNLU. Cevabı olmayan kural metni EKSİKTİR.",
           "required": ["tie", "stalemate", "illegalMove"],
+          "additionalProperties": false,
           "properties": {
             "tie":         {"type": "string"},
             "stalemate":   {"type": "string"},
@@ -102,6 +279,7 @@
       "items": {
         "type": "object",
         "required": ["date", "tester", "usedOnlyBookText", "result"],
+        "additionalProperties": false,
         "properties": {
           "date":             {"type": "string", "format": "date"},
           "tester":           {"type": "string"},
@@ -117,9 +295,6 @@
 
     "diagramId":     {"type": "string", "description": "07_ASSETS/diagrams içindeki levha kimliği"},
     "plateId":       {"type": "string", "description": "Kültürel gravür açılış levhası"},
-    "culturalNotes": {"type": "string"},
-    "safety":        {"type": "string", "description": "Fiziksel oyunlarda güvenlik uyarısı"},
-    "childSuitable": {"type": "boolean"},
     "gamblingReframed": {"type": "boolean",
       "description": "Bahis mekaniği puanla yeniden yazıldıysa true (karar K5)"}
   }
