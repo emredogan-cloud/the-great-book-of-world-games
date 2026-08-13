@@ -194,12 +194,23 @@ LEAK_FIXTURE_PREFIX = "05_TESTS/fixtures/"
 
 # Türkçe pilot malzemesinin yaşadığı TEK yer.
 PILOT_TR_PREFIX = "01_SOURCE/pilot_tr/"
-# İşareti TANIMLAYAN dosyalar — tanımlamak kullanmak değildir.
+# İşareti TANIMLAYAN ya da ANLATAN dosyalar — anmak kullanmak değildir.
+#
+# ⚠ BU LİSTE BİR CI KIRMIZISIYLA BÜYÜDÜ ve büyümesi doğruydu.
+# Faz 2 raporu Türkçe pilot paketini ANLATIYOR ve işareti alıntılıyor;
+# dedektör onu sızıntı saydı. Kusur dedektörde değil listedeydi.
+#
+# Aynı olay bir ikinci dersi de verdi: `validate_structure` yalnızca
+# TAKİP EDİLEN dosyalara bakar, yani `git add`den ÖNCE koşan bir yerel
+# doğrulama yeni dosyayı hiç görmez. Yerelde yeşil, CI'da kırmızı.
+# Kural: yeni dosya eklendiğinde kapılar `git add`den SONRA koşturulur.
 PILOT_MARKER_DEFINERS = {
     "project_config.json",
     "04_BUILD/validate_structure.py",
     "04_BUILD/qa_language_split.py",
     "DECISIONS.md",
+    "06_REPORTS/PHASE_2_REPORT.md",
+    "01_SOURCE/playtests/README.md",
 }
 
 # ④ Sır taraması ---------------------------------------------------------------
