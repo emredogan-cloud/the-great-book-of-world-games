@@ -25,7 +25,7 @@
   ],
   "version": "1.0",
   "phase": "phase5",
-  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation",
+  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation",
   "records": [
     {
       "gameId": "yut-nori",
@@ -538,6 +538,89 @@
       "accessMethod": "archive.org tam metin — kamusal alan",
       "status": "pending",
       "note": "FAZ 4'ÜN ERTELEME KARARI SAYFA AÇILARAK DOĞRULANDI. Faz 4 bunu ikincil bilgiyle ertelemişti; Faz 5 sayfayı okudu ve karar aynen geçerli."
+    },
+    {
+      "gameId": "shogi",
+      "sourceRef": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+      "edition": "Cornell nüshası (NOT_IN_COPYRIGHT) — archive.org cu31924023272424",
+      "locator": "'Shogi', ss. 90–91",
+      "supportingPassage": "In Japan, the game of chess is called Shogi […] It is played on a board, usually in the form of a small table, like that used for Go, with nine squares on a side. The men are placed on the squares, not on the intersections, as in China. […] Unlike other games of chess, the men are all of one color, and the same pieces serve for the player and his adversary. Another peculiarity is that any piece taken up may be entered by the adversary in any place he chooses and at any time he thinks desirable, such entry constituting his move. […] The Sho, or 'General,' stands in the centre of the first row. He moves one square in any direction, and loses the game when checkmated. […] The three rows nearest each side constitute the opposing camps. […] A detailed account of Shogi will be found in Mr. Falkener's Games, Ancient and Oriental, from which the above account was extracted.",
+      "supportedClaim": "Dokuz kareli tahta; taşlar karenin İÇİNDE; taşların hepsi aynı renk ve sahiplik YÖNLE belirlenir; alınan taş rakip tarafından İSTEDİĞİ YERE ve İSTEDİĞİ ZAMAN sürülebilir ve bu bir hamledir; yirmi taşın adı ve sayısı; her taşın hareketi; üç sıralık kamp; terfi karşılıkları; mat ile kaybetme. Culin hesabın FALKENER'DAN alındığını KENDİSİ söyler.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "pachisi",
+      "sourceRef": "Culin, Stewart, Chess and Playing-Cards (Washington: Government Printing Office, 1898)",
+      "edition": "Report of the U.S. National Museum for 1896 — archive.org chessplayingcard00culi",
+      "locator": "38. 'Pachisi', ss. 851–854",
+      "supportingPassage": "The board consists of four rectangles, with their narrow sides so placed as to form a square in the center. Each rectangle is divided into twenty-four small squares, consisting of three rows of eight squares each. The game is usually played by four persons, each of whom is furnished with four ivory or wooden cones called gote […] They then proceed all around the outside rows of the board […] traveling from right to left (i. e., contrary to the sun) until they get back to the central row from which they started. Any piece is liable, however, to be taken up and thrown back to the beginning, as in backgammon […] except in the case of the twelve privileged squares (called chik, 'forts'), which are marked with a cross; in that case the overtaking piece can not move from its position. […] A throw of twenty-five or thirty gives an additional move of one. At the last step the throw must amount to exactly one more than the number of squares left […] The players throw in turns, and each goes on until he throws a two, three, or four, when he loses the lead. If the same number be thrown thrice successively, it does not count. […] The game continues till three of the players get out. They never play for money.",
+      "supportedClaim": "Haç biçimli tahta (dört dikdörtgen × üç sıra × sekiz kare); dört oyuncu, dörder taş; saat yönünün TERSİNE tur; alınan taş başa döner; on iki 'chik' kalesi güvenlidir ve kaledeki bir taşın üstüne gelen taş KIMILDAYAMAZ; kavuk sayıları (1=10, 2=2, 3=3, 4=4, 5=25, 6=30, 0=6); 25 ve 30 bir fazladan adım verir; bitiş için TAM sayı gerekir; 2-3-4 atınca sıra geçer; aynı sayı üç kez üst üste sayılmaz; iki kişilik sekiz taşlı biçim; üç oyuncu çıkınca oyun biter; para için oynanmaz.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "xiangqi",
+      "sourceRef": "Culin, Stewart, Korean Games (Philadelphia, 1895)",
+      "edition": "Cornell nüshası — archive.org cu31924023272424",
+      "locator": "§ LXXIV 'Tjyang-keui — Chess (by W. H. Wilkinson)', ss. 82–89",
+      "supportingPassage": "LXXIV. TJYANG-KEUI — CHESS. […] In Chinese chess the P'áu moves like a Rook, but takes only when a piece intervenes […] though they seldom are, omitted from a Chinese chess-board",
+      "supportedClaim": "YOK — bölüm KORE satrancının kurallarıdır (Wilkinson yazmıştır). Çin satrancı yalnızca KARŞILAŞTIRMA notlarında geçer; tam bir Çin kural seti verilmez.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin",
+      "status": "pending",
+      "note": "FAZ 4'ÜN ERTELEME KARARI SAYFA AÇILARAK DOĞRULANDI. Çin kaydı için Culin'in kendi künyesindeki W. H. Wilkinson, A Manual of Chinese Chess (Shanghai, 1893) gerekir; archive.org'da bulunamadı."
+    },
+    {
+      "gameId": "tien-gow",
+      "sourceRef": "Culin, Stewart, Chinese Games with Dice and Dominoes (Washington, 1895)",
+      "edition": "archive.org chinesegameswith01culi",
+      "locator": "ARANDI — 'tien kow' başlığı bulunamadı",
+      "supportingPassage": "",
+      "supportedClaim": "YOK. Culin 1895 Korean Games § LXXXI 'Kol-hpai' KORE dominolarıdır; Çin dominoları karşılaştırma notudur. Ayrı basılan Chinese Games with Dice and Dominoes indirildi ve tien-gow başlığı bulunamadı.",
+      "verifiedOn": null,
+      "attemptedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin × 2 eser",
+      "status": "pending",
+      "note": "KİMLİK TUZAĞI riski: Kanton oyununu Kore bölümünden yazmak Totolospi hatasıdır."
+    },
+    {
+      "gameId": "patolli",
+      "sourceRef": "Culin, Stewart, Chess and Playing-Cards (Washington, 1898)",
+      "edition": "archive.org chessplayingcard00culi",
+      "locator": "39. 'Patolli', ss. 854–856",
+      "supportingPassage": "This is a game that the Indians had and named patole. It is like a game of dice, and (played) upon a painted mat. […] all who were masters of their games, invocated a demon which they name Macuilsucitl, which means Five Roses (flowers). They invocate him, so that he should give them luck in winning.",
+      "supportedClaim": "OYUNUN VARLIĞI, adı, zar benzeri araç, boyalı hasır ve oyun öncesi çağrı doğrulandı. HAREKET, ALMA, İZ ve KAZANMA KOŞULU YOKTUR: Durán'ın resmi ve Nuttall'ın çevirisi bir kural metni değildir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin",
+      "status": "pending",
+      "note": "Kuyrukta P3 (reconstructed). Kural seti YOK; yeniden kurgulama planı olmadan yazılamaz (§25)."
+    },
+    {
+      "gameId": "gomoku",
+      "sourceRef": "Smith, Arthur, The Game of Go, the National Game of Japan (New York: Moffat, Yard and Company, 1908)",
+      "edition": "archive.org gameofgonational00smitrich",
+      "locator": "ss. 24–25",
+      "supportingPassage": "The game which we call \"Go Bang\" also originated in Japan, and is well known and still played there. They call it \"Go Moku Narabe,\" which means to arrange five \"Me,\" the word \"Go\" in this case meaning \"five\" […] it is a vastly simpler game than Go, and can be finished much more rapidly.",
+      "supportedClaim": "Oyunun adı, Japon kimliği, go tahtasında oynandığı ve AMACI (beş taşı sıraya dizmek) doğrulandı. Sıra kuralı, başlangıç, berabere ve fazla-sıra kuralı YOKTUR.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin",
+      "status": "pending",
+      "note": "Amaç var, KURAL SETİ yok — jianzi ile aynı sınıf. Tam bir gomoku kaydı gerekir."
+    },
+    {
+      "gameId": "go",
+      "sourceRef": "Smith, Arthur, The Game of Go, the National Game of Japan (New York, 1908)",
+      "edition": "archive.org gameofgonational00smitrich",
+      "locator": "'Rules of Play', ss. 24–26",
+      "supportingPassage": "The players play alternately, and the weaker player has the black stones and plays first […] They place the stones on the vacant points of intersection on the board, or \"Me,\" and they may place them wherever they please, with the single exception of the case called \"Ko\" […] When the stones are once played they are never moved again. The object of the game of Go is to secure territory.",
+      "supportedClaim": "TAM kural seti — ama JAPON kodifikasyonunun. Sıra, yerleştirme, ko, taşların bir daha oynanmaması, toprak amacı ve Japon sayım yöntemi (alınan taşlarla toprağı doldurma) verilir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin",
+      "status": "pending",
+      "note": "KÜLTÜR UYUŞMAZLIĞI: kapsam kaydı HAN ÇİNLİSİ, kaynak JAPON kodifikasyonudur ve sayım yöntemi Japondur (Çin alan sayımı değil). §9 'kaynak iddia edilen kültürü desteklemeli' şartı KARŞILANMIYOR. Çin biçimi için Smith'in kendi künyesindeki Z. Volpicelli, Journal of the China Branch of the Royal Asiatic Society XXVI gerekir."
     }
   ]
 }

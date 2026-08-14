@@ -2,12 +2,13 @@
   "status": "pass",
   "checks": 16,
   "errors": [],
-  "games": 20,
+  "games": 23,
   "outOfScope": [],
   "scopeLocked": 100,
   "blocksUsed": [
     "capture",
     "chain",
+    "figures",
     "legalMoves",
     "movement",
     "placement",
@@ -36,8 +37,8 @@
     "unknown",
     "winCondition"
   ],
-  "withDiagrams": 18,
-  "withoutDiagrams": 2,
+  "withDiagrams": 20,
+  "withoutDiagrams": 3,
   "reconstructed": 1,
   "externalPlaytests": 0
 }

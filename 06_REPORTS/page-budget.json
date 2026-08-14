@@ -5,16 +5,16 @@
   "model": {
     "games": 100,
     "families": 7,
-    "bodyPages": 210,
+    "bodyPages": 209,
     "openerPages": 14,
     "frontMatterPages": 14,
     "backMatterPages": 21,
-    "rawTotal": 259,
-    "total": 260
+    "rawTotal": 258,
+    "total": 258
   },
   "target": 256,
   "tolerancePct": 6,
-  "deviationPct": 1.56,
+  "deviationPct": 0.78,
   "withinTolerance": true,
   "wordCrossCheck": {
     "words": 65000,

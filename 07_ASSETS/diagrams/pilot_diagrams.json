@@ -477,14 +477,6 @@
         {
           "at": "R1",
           "glyph": "light"
-        },
-        {
-          "at": "near",
-          "glyph": "empty"
-        },
-        {
-          "at": "far",
-          "glyph": "empty"
         }
       ],
       "arrows": [
@@ -500,14 +492,11 @@
           "label": "ipin tutulduğu parmak"
         },
         {
-          "glyph": "empty",
-          "label": "ip yolu"
-        },
-        {
           "glyph": "move",
           "label": "ipin alındığı yön"
         }
-      ]
+      ],
+      "caption": "Beşik: iki düz ip ve ortadaki çapraz ilmek. Kalan yedi figür metinde SIRAYLA verilmiştir; bu diyagram dili ip figürlerinin kendisini çizemez."
     },
     {
       "diagramId": "mbube-formation",

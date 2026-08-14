@@ -1,21 +1,21 @@
 {
   "status": "pass",
-  "checks": 31,
+  "checks": 34,
   "errors": [],
   "warnings": [],
   "facts": {
-    "diagrams": 25,
+    "diagrams": 26,
     "byClass": {
       "point": 14,
       "pit": 2,
       "track": 2,
       "bodily": 4,
-      "cell": 3
+      "cell": 4
     },
     "diagramMm": {
       "min": 36.1,
-      "max": 111.5,
-      "mean": 67.1,
+      "max": 107.0,
+      "mean": 67.7,
       "limit": 150
     }
   }

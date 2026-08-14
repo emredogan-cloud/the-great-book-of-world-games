@@ -68,24 +68,24 @@ ayrılmış — akademik oyun tarihi (oynanamaz) ve jenerik aile oyunu listeleri
 | Faz | **5 · ÜRETİM ŞERİDİ AÇIK** (koşullu · K21 · A10) |
 | Kapı (`.gate`) | **`phase1`** — yükseltilmedi ve yükseltilmeyecek |
 | Kilitli kapsam | **100 oyun · 73 kültür · 19 yedek** ✅ (K23 şerhli) |
-| **Yazılmış oyun** | **20** / 100 ⛔ |
+| **Yazılmış oyun** | **23** / 100 ⛔ |
 | Kilitli oyun | **0** / 100 |
-| Doğrulanmış künye | **29** · doğrulama kaydı **44** |
+| Doğrulanmış künye | **31** · doğrulama kaydı **51** |
 | Kaynak: denendi-erişilemedi | **5** oyun (P4) |
 | Kaynak: arandı-kayıt yok | **2** oyun (P6 · K23 terfileri) |
-| Kaynak: henüz denenmedi | **70** oyun |
+| Kaynak: henüz denenmedi | **69** oyun |
 | **Erişilebilir · yazılmamış** | **72** oyun — kuyrukta sıralı |
-| **Editoryal askı** | **1** (cats-cradle · 150 mm) |
+| **K24 istisnası** | cats-cradle · kayıtlı + dört testle kilitli |
 | **Dış oynanabilirlik testi** | **0** ⛔ **BLOKLAYICI** |
-| Diyagram | **25 render · hepsi ≤150 mm** ✅ |
+| Diyagram | **26 render · hepsi tavan içinde** ✅ |
 | **Oyun başına diyagram** | **azami 144,0 mm** ✅ |
 | Diyagram dili | **v1.4** |
 | **Arka madde** | **ALTI BÖLÜM TAM** ✅ · üç indeks üretildi |
-| **Sayfa modeli** | **260** (hedef 256, **+%1,6**) ✅ **BANTTA** |
-| Birim telif | ciltsiz **8,37 $** · ciltli **10,92 $** |
-| Selftest | **172 denetim** ✅ |
-| Depo | public · `faz/5-yakinsama` · CI **YEŞİL** |
-| **Sonraki adım** | **KURUCU: dış test · cats-cradle kararı · kaynak erişimi** |
+| **Sayfa modeli** | **258** (hedef 256, **+%0,8**) ✅ **BANTTA** |
+| Birim telif | ciltsiz **8,41 $** · ciltli **10,96 $** |
+| Selftest | **177 denetim** ✅ |
+| Depo | public · `main` · CI **YEŞİL** |
+| **Sonraki adım** | **KURUCU: kaynak erişimi · dış test · diyagram dili v1.5** |
 
 Faz raporları: [`06_REPORTS/PHASE_2_REPORT.md`](06_REPORTS/PHASE_2_REPORT.md) ·
 [`06_REPORTS/PHASE_3_REPORT.md`](06_REPORTS/PHASE_3_REPORT.md) ·
@@ -93,35 +93,28 @@ Faz raporları: [`06_REPORTS/PHASE_2_REPORT.md`](06_REPORTS/PHASE_2_REPORT.md) �
 [`06_REPORTS/PHASE_5_REPORT.md`](06_REPORTS/PHASE_5_REPORT.md)
 
 **Faz 5 kendi ana hedefini tutturamadı ve bunu gizlemiyor.** Hedef 100
-oyundu; yazılan **20**'dir — Faz 4'ün 22'sinden **iki eksik**, çünkü K23
-kapsam değişikliği iki *yazılmış* maddeyi (fivestones · marbles) kapsamdan
-çıkardı. Faz 5 üç işi tamamladı (kapsam değişikliği · arka madde · altı
-kapı kusuru) ve bir işi tamamlayamadı: **oyun yazımı**.
+oyundu; yazılan **23**'tür. Faz iki koşuda çalıştı: birincisi kapsam
+değişikliğini, arka maddeyi ve altı kapı kusurunu tamamladı ama **hiç oyun
+yazmadı**; ikincisi K24 istisnasını kurdu ve **üç oyun yazdı**
+(cats-cradle · shogi · pachisi).
 
-**Faz 5'in en değerli çıktısı yine bir düzeltmedir** — altı kapı kusuru,
-altısı da gerçek veriyle **yeşil koşuyordu**. En sertleri:
+**Faz 5'in en değerli çıktısı yine bir düzeltmedir** — yedi kapı kusuru,
+yedisi de gerçek veriyle **yeşil koşuyordu**. En sertleri:
 
 - `scope_lock.json`'ın başlığı *"model ayrışırsa bu KAPI ISIRIR"* diye
   **vaat ediyordu**; öyle bir denetim **hiç yazılmamıştı**.
-- **Bir tane** değişiklik şerhi düşülmesi, kilit özetinin denetimini
-  **ömür boyu** kapatıyordu.
-- Kapsamdan **çıkarılmış** bir oyun manuscript'te **basılmaya devam
-  edebiliyordu**.
+- **Bir tane** şerh, kilit özetinin denetimini **ömür boyu** kapatıyordu.
+- Kapsamdan **çıkarılmış** bir oyun **basılmaya devam edebiliyordu**.
 - Kalibre config ölçümden kayınca **ekonomi eski sayıyla** hesaplanıyordu.
+- Efsanedeki iki sembol **birebir aynı** çizilebiliyordu — beş diyagramda
+  bulundu, biri **Faz 3'ten beri basılıydı**.
 
-Ve en rahatsız edici olan: `validate_scope.py`'nin **`--root` sözleşmesi
-yoktu**, yani kapsam kilidine yazılmış kasıtlı kusur testleri kapı ısırdığı
-için değil **argparse hatası verdiği için** geçiyordu. *Yeşil yanan ama
-hiçbir şey sınamayan bir test, testsizlikten daha kötüdür.*
-
-⚠ **FAZ 5 KAPSAMI TAMAMLANMADI.** Yazılan 20, hedef 100. Bloklayıcılar:
-
-1. **80 oyun yazılmadı.** Faz 5 beş oyunun kaynağını sayfa seviyesinde
-   açtı ve **beşi de yazılamaz** çıktı (kural taşımayan kaynak · kimlik
-   tuzağı · diyagram bütçesi çatışması).
-2. **Dış insan testi yapılmadı.** Paket hazır; oturum kurucunundur.
-3. **cats-cradle · 150 mm çatışması** — kaynak tam, engel editoryal,
-   karar kurucunun.
+⚠ **KALAN 77 OYUN BİR YAZIM İŞİ DEĞİL, ÖNCE BİR KAYNAK İŞİDİR.** Faz 5 on
+kaynak açtı ve **yedisi kural taşımıyordu**: Culin'in *Korean Games* cildi
+Çin ve Japon oyunlarına yalnızca **karşılaştırma notu** verir (xiangqi ·
+tien-gow · jianzi · sugoroku), Fiske filolojidir (hnefatafl · halatafl),
+Culin'in mancala'sı Şam ve Vei kayıtlarıdır (oware), ve Smith'in go
+kitabı **Japon** kodifikasyonudur — kapsam ise **Han Çinlisi** der.
 
 ## 5 · Bu projenin risk profili
 

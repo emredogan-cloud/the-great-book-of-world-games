@@ -290,7 +290,31 @@
       25,
       55,
       100
-    ]
+    ],
+    "diagramBudgetOverrides": {
+      "$comment": [
+        "KURUCU ONAYLI TEKİL İSTİSNA — K24. GENEL BİR MUAFİYET DEĞİLDİR.",
+        "",
+        "Bu sözlük SADECE burada adı geçen oyunlar için 150 mm tavanını",
+        "değiştirir. Başka HİÇBİR oyun etkilenmez ve `maxDiagramMmPerGame`",
+        "değeri DEĞİŞMEDİ: 150 mm hâlâ kitabın kuralıdır.",
+        "",
+        "⚠ BURAYA İKİNCİ BİR SATIR EKLEMEK BİR KURUCU KARARIDIR.",
+        "Bir istisna listesi, bir kez 'liste' hâline geldiği anda tavanın",
+        "kendisi bir öneriye dönüşür. selftest bu sözlüğün YALNIZCA",
+        "cats-cradle taşıdığını her koşuda sınar; ikinci bir kimlik",
+        "eklenirse kapı KIRMIZI yanar ve yeni bir karar kaydı ister."
+      ],
+      "cats-cradle": {
+        "maxMm": 340,
+        "decision": "K24",
+        "approvedBy": "kurucu",
+        "approvedOn": "2026-08-14",
+        "reason": "Kaynak (Jayne 1906, ss. 324–338) SEKİZ adlandırılmış figür verir ve oyunun kendisi o figürlerin sırayla alınmasıdır. Sekiz figür 150 mm'ye sıkıştırılırsa figür başına ~18 mm düşer; o boyutta parmak ve ip yolu okunmaz ve diyagram doğruluğu (öncelik 4) çöker. İstisna BOYUT için değil OKUNABİLİRLİK için verilmiştir.",
+        "scope": "YALNIZCA cats-cradle. Başka hiçbir oyuna genişletilemez.",
+        "supersedesHold": "source_access_pending.json § editorialHolds[cats-cradle]"
+      }
+    }
   },
   "playability": {
     "$comment": [
@@ -407,26 +431,26 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 444,
-        "wordsPerGame": 682,
-        "textPagesPerGame": 1.238,
-        "diagramPagesPerGame": 0.298,
-        "measuredPagesPerGame": 1.536,
-        "billedPagesPerGame": 2.1,
-        "spreadOverflowRate": 0.05,
+        "wordsPerTypesetPage": 451,
+        "wordsPerGame": 706,
+        "textPagesPerGame": 1.27,
+        "diagramPagesPerGame": 0.296,
+        "measuredPagesPerGame": 1.566,
+        "billedPagesPerGame": 2.087,
+        "spreadOverflowRate": 0.043,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 20,
-        "projectedTotalPages": 260,
-        "deviationPct": 1.56,
+        "sampleSize": 23,
+        "projectedTotalPages": 258,
+        "deviationPct": 0.78,
         "withinTolerance": true,
         "measuredAtPhase": "phase5",
         "measuredAtGate": "phase1",
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-batch1-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -478,7 +502,22 @@
           "sayfaya çıktı. Sayfa hedefi DEĞİŞTİRİLMEDİ (yol haritası § 15).",
           "",
           "Sürücü yine BOTH: metin farkı 0,686 · diyagram farkı 0,628.",
-          "Faz 4'ün bulgusu iki örneklemde üst üste doğrulandı."
+          "Faz 4'ün bulgusu iki örneklemde üst üste doğrulandı.",
+          "",
+          "FAZ 5 · ÜRETİM BATCH 1'DEN SONRA (23 oyun).",
+          "",
+          "                     Faz 5 (20)   batch 1 (23)",
+          "  kelime/sayfa           444          451",
+          "  kelime/oyun            682          706",
+          "  olculen sayfa/oyun    1,54         1.57",
+          "  faturalanan           2,10         2.09",
+          "  TASMA ORANI          1/20         1/23",
+          "  toplam sayfa           260          258",
+          "  sapma                 +1,6%       +0.8%",
+          "",
+          "cats-cradle K24 istisnasi yuzunden DORT sayfalik bir maddedir ve tasma",
+          "oranini tek basina yukari cekiyor. Bu, istisnanin BILINEN ve KABUL",
+          "EDILEN maliyetidir; gizlenmiyor."
         ]
       },
       "$comment": [
@@ -516,7 +555,7 @@
       "calibrated": true,
       "calibratedAtPhase": "phase2",
       "calibratedOn": "2026-08-13",
-      "recalibratedAtPhase": "phase5"
+      "recalibratedAtPhase": "phase5-batch1"
     },
     "editionsHypothesis": [
       {

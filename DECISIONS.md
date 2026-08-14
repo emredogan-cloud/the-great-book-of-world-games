@@ -633,3 +633,60 @@ değildir.*
 
 Çıkan iki madde kısa metinli ve küçük diyagramlıydı; gitmeleri ortalamayı
 yukarı itti. Sayfa **hedefi** değiştirilmedi (yol haritası § 15).
+
+---
+
+### K24 · CATS-CRADLE DİYAGRAM İSTİSNASI — tekil, kurucu onaylı
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 14 Ağustos 2026
+**Uygulayan kayıt:** `project_config.json § diagram.diagramBudgetOverrides`
+
+Faz 5, cats-cradle maddesini yazamamıştı ve sebebi kaynak değil **bütçeydi**:
+kaynak (Jayne 1906, ss. 324–338) tam ve sayfa-doğrulanmış; ama oyunun kendisi
+**sekiz adlandırılmış figürün sırayla alınmasıdır** ve sekiz figür 150 mm'ye
+sıkıştırılırsa figür başına **~18 mm** düşer. O boyutta parmak ve ip yolu
+okunmaz — yani madde "sığar" ama **oynanamaz**.
+
+Kurucu istisnayı onayladı:
+
+> **CATS-CRADLE 150 mm tavanını AŞABİLİR.**
+
+#### İstisna DAR ve MEKANİKTİR
+
+| | |
+|---|---|
+| Genel tavan | **150 mm — DEĞİŞMEDİ** |
+| İstisna kapsamı | **yalnızca `cats-cradle`** |
+| İstisna tavanı | 340 mm |
+| Biçim | genel bir "muafiyet bayrağı" **DEĞİL**, bir **kimlik eşlemesi** |
+
+Mantık bilerek şöyledir:
+
+```
+limit = overrides.get(gameId, 150)
+```
+
+`allowOverBudget: true` gibi bir **bayrak asla eklenmedi**. Bir bayrak her
+maddeye yazılabilir; bir kimlik eşlemesi her yeni satır için bir **karar**
+ister.
+
+#### Dört kasıtlı kusur testi istisnayı kilitliyor
+
+| kurgu | beklenen |
+|---|---|
+| cats-cradle > 150 mm | **GEÇER** — istisna gerçekten uygulanıyor |
+| başka bir oyun > 150 mm | **KIRMIZI** — istisna genelleşmiyor |
+| sözlüğe **ikinci** oyun eklenir | **KIRMIZI** — tavan bir "listeye" dönüşemez |
+| istisna silinir, cats-cradle aşar | **KIRMIZI** — istisna bir varsayım değil bir **kayıt** |
+
+Üçüncü satır bu kararın asıl koruyucusudur. Bir istisna listesi, bir kez
+*liste* hâline geldiği anda tavanın kendisi bir **öneriye** dönüşür ve bu,
+hiçbir şey kırmızı yanmadan olur.
+
+#### İstisna BOYUT için değil OKUNABİLİRLİK için
+
+> Amaç **azami boyut** değil **azami okunabilirliktir**. Ölçülen gerçek
+> footprint raporda, normal 150 mm karşılığıyla birlikte yazılıdır.
+
+`source_access_pending.json § editorialHolds[cats-cradle]` bu kararla
+**kapandı**.
