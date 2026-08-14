@@ -745,12 +745,34 @@ Bu bir kusur değil bir **takas**tır (A1) ve körlüğü `selftest` kapatır.
 | | |
 |---|---|
 | Dal | `faz/5-yakinsama` |
-| Commit | 4 |
-| CI | ✅ **YEŞİL** (her push'ta beklendi) |
+| Commit | 5 |
+| CI | ✅ **YEŞİL** — ama bir kez KIRMIZI yandı (§ 24.2) |
 | Açık gereksiz PR | **yok** |
 | `.gate` | **`phase1`** — yükseltilmedi |
 
-### 24.1 Bir düzeltme: `v0.4.0` etiketi YOKTU
+### 24.1 CI BİR KEZ KIRMIZI YANDI — ve sebebi bu fazın kendi kusuruydu
+
+Dördüncü push'ta CI kırmızı yandı. Sebep, § 14.6'da eklediğim **bayatlık
+denetiminin kendisiydi**: `07_ASSETS/diagrams/**` korumalı katmandadır ve
+CI'da yalnızca `pilot` ile `phase3` kayıtları görünür. Denetim, görünmeyen
+her tanımı **hayalet** sayıp **doğru** bir ölçümü kırmızı yaktı.
+
+> Kapının öğrettiği ders kapının kendisine uygulandı: **eksik veriyle koşan
+> bir denetim, denetlediğini sanıp başka bir şeyi denetler.**
+
+Daha kötüsü, aynı koşuda benim yeni kasıtlı kusur testim **yanlış sebeple
+geçiyordu** — kapı zaten kırmızıydı, yani mutasyon sınanmamıştı. § 14.7'nin
+`--root` kusuruyla **aynı sınıf**, aynı fazda **ikinci kez**.
+
+**Düzeltme:** denetim manuscript yereldeyse **tam**, CI'da **açıkça boş**
+koşuyor (`qa_manuscript` ile aynı sözleşme) ve selftest testi de aynı
+koşula bağlandı. Temiz bir klonda CI koşulları **yeniden üretilerek**
+doğrulandı: `qa_diagram` 30 · `qa_index` 5 · `selftest` 157 — hepsi yeşil.
+
+Kurucu § 33 *"CI RED → STOP. Fix. Test. Push. Wait."* diyordu ve aynen
+uygulandı: merge **CI yeşile dönene kadar yapılmadı**.
+
+### 24.2 Bir düzeltme: `v0.4.0` etiketi YOKTU
 
 Faz 4 raporu kilometre taşı olarak `v0.4.0` etiketini yazıyordu. Faz 5
 denetledi: **ne yerelde ne uzakta böyle bir etiket var**
