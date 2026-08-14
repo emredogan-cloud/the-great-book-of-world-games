@@ -2,7 +2,7 @@
   "status": "pass",
   "measuredOn": "phase4",
   "measuredAtGate": "phase1",
-  "sampleSize": 19,
+  "sampleSize": 22,
   "sampleGames": [
     "tablut",
     "yut-nori",
@@ -22,9 +22,12 @@
     "fivestones",
     "hopscotch",
     "totolospi",
-    "set-dilth"
+    "set-dilth",
+    "jan-ken",
+    "conkers",
+    "marbles"
   ],
-  "sampleCaveat": "Örneklem 19 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
+  "sampleCaveat": "Örneklem 22 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
   "geometry": {
     "trimWidthMm": 215.9,
     "trimHeightMm": 279.4,
@@ -305,26 +308,64 @@
       "measuredPages": 1.652,
       "billedPages": 2,
       "overflowsSpread": false
+    },
+    {
+      "gameId": "jan-ken",
+      "words": 608,
+      "textHeightMm": 265.8,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 1.098,
+      "diagramPages": 0.0,
+      "measuredPages": 1.098,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "conkers",
+      "words": 709,
+      "textHeightMm": 294.6,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 1.217,
+      "diagramPages": 0.0,
+      "measuredPages": 1.217,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "marbles",
+      "words": 705,
+      "textHeightMm": 312.2,
+      "diagramHeightMm": 62.4,
+      "diagrams": [
+        "marbles-ring"
+      ],
+      "textPages": 1.29,
+      "diagramPages": 0.258,
+      "measuredPages": 1.548,
+      "billedPages": 2,
+      "overflowsSpread": false
     }
   ],
-  "avgWordsPerGame": 687.9,
-  "measuredWordsPerPage": 437.5,
+  "avgWordsPerGame": 686.0,
+  "measuredWordsPerPage": 447.3,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.572,
-  "avgBilledPagesPerGame": 2.105,
-  "avgTextPagesPerGame": 1.247,
-  "avgDiagramPagesPerGame": 0.326,
+  "avgMeasuredPagesPerGame": 1.534,
+  "avgBilledPagesPerGame": 2.091,
+  "avgTextPagesPerGame": 1.24,
+  "avgDiagramPagesPerGame": 0.293,
   "spreadOverflowGames": [
     "tablut"
   ],
-  "spreadOverflowRate": 0.053,
-  "finding": "Çift sayfayı aşıran DEĞİŞKEN METİN UZUNLUĞUDUR: metin farkı (0.69 sayfa) diyagram farkının (0.46) üstünde. Faz 2'nin üç oyunluk örneklemde bulduğu 'metin sabittir' sonucu bu örneklemde GEÇERSİZDİR.",
-  "overflowDriver": "text",
+  "spreadOverflowRate": 0.045,
+  "finding": "Metin farkı (0.69 sayfa) ve diyagram farkı (0.63) AYNI büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden denetlemek zorundadır.",
+  "overflowDriver": "both",
   "textSpreadPages": 0.686,
-  "diagramSpreadPages": 0.462,
-  "projectedBodyPages": 211,
-  "projectedTotalPages": 260,
+  "diagramSpreadPages": 0.628,
+  "projectedBodyPages": 209,
+  "projectedTotalPages": 258,
   "pageTarget": 256,
-  "deviationPct": 1.56,
+  "deviationPct": 0.78,
   "withinTolerance": true
 }
