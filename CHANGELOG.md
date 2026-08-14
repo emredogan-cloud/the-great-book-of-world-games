@@ -5,6 +5,59 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.5.1] — 2026-08-14 · FAZ 5 · ÜRETİM — K24 istisnası ve üç oyun
+
+**Yazılan: 3 oyun** (manuscript **20 → 23**).
+
+| oyun | aile | kültür | kaynak |
+|---|---|---|---|
+| **Cat's Cradle** | tahtasız | İngiliz | Jayne 1906, ss. 324–338 |
+| **Shogi** | savaş tahtası | Japon | Culin 1895, ss. 90–91 |
+| **Pachisi** | eve dönüş | Hindustani | Culin 1898, ss. 851–854 |
+
+**Karar K24 — CATS-CRADLE DİYAGRAM İSTİSNASI.** Kurucu 150 mm tavanının
+**yalnızca** cats-cradle için aşılmasını onayladı. Genel tavan
+**değişmedi**. Biçim bir *muafiyet bayrağı* değil bir **kimlik
+eşlemesidir** (`overrides.get(gameId, 150)`) ve dört kasıtlı kusur testiyle
+kilitlidir — özellikle *"sözlüğe ikinci bir oyun eklemek"* kırmızı yanar,
+çünkü bir istisna listesi tavanı bir **öneriye** dönüştürür.
+
+⚠ **İSTİSNA ŞU AN KULLANILMIYOR** (cats-cradle 107 mm < 150 mm). Bağlayıcı
+kısıt milimetre değil **notasyon** çıktı: v1.4 `bodily/hands` çerçevesi ip
+figürlerini **çizemiyor** ve üç özdeş şema basmak istisnayı tüketirdi ama
+okunabilirliği artırmazdı. **Açık karar:** diyagram dili v1.5.
+
+**GÖRSEL DENETİM ÜÇ GERÇEK KUSUR BULDU** (ölçüm sayıları temizdi):
+pachisi tahtası **haç değil ızgara** çiziliyordu (§17 ihlali — diyagram
+kaldırıldı); shogi'de yirmi taşın hepsi **aynı** çiziliyordu ve okur
+kurulumu yapamazdı; cats-cradle efsanesinde iki sembol **birebir aynı**
+daireydi.
+
+**YENİ KAPI: efsanede ayırt edilemeyen sembol.** Faz 4 sembolün
+*çizilmesini* sağlamıştı; **farklı** olduğunu kimse denetlemiyordu.
+`light`/`empty`/`lightAlt` ve `king`/`lightSpecial` efsanede aynıdır. Kapı
+beş diyagramda kusur buldu — biri (`gonggi-toss`) **Faz 3'ten beri
+basılıydı**.
+
+**YEDİ OYUN AÇILDI VE YAZILAMADI** — hepsi sayfa seviyesinde gerekçeli:
+hnefatafl · halatafl (Fiske: kural yok) · oware (Şam/Vei kaydı) · jianzi
+(nesne, kural değil) · **xiangqi** ve **tien-gow** (Culin'in cildi KORE
+oyunlarıdır) · patolli (Durán'ın resmi) · gomoku (amaç var, kural yok) ·
+**go** (kaynak TAM ama **Japon** kodifikasyonu; kapsam **Han Çinlisi** der
+— §9 kültür şartı karşılanmıyor).
+
+**KENDİ YAZIMIMDA İKİ KUSUR:** shogi **1045 kelimeyle** 480–900 bandını
+aştı ve üç madde birden çift sayfayı aşınca model **284 sayfaya (+%10,9)**
+fırladı — bandın ve roadmap'in 272 tavanının dışında. Trim + görsel
+düzeltme sonrası **258 sayfa · +%0,8 · taşma 1/23**. Shogi 926'da bırakıldı
+(§14: kelime sayısı için kural budanmaz) ve çift sayfasına sığıyor.
+
+Arka madde **yeniden üretildi** (19 şablon · 23 ölçülmüş sayfa göndermesi).
+Doğrulama kaydı **44 → 51**. Selftest **172 → 177**. CI **yeşil**.
+`.gate` = `phase1` — **yükseltilmedi**. **Dış insan testi: 0.**
+
+---
+
 ## [0.5.0] — 2026-08-14 · FAZ 5 · Kapsam değişikliği, arka madde, altı kapı kusuru
 
 **Yazılan oyun: 0.** Manuscript **22 → 20**, çünkü K23 iki *yazılmış*

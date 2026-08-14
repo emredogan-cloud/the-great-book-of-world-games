@@ -25,7 +25,7 @@
   ],
   "version": "1.0",
   "phase": "phase5",
-  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1",
+  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation",
   "records": [
     {
       "gameId": "yut-nori",
@@ -560,6 +560,67 @@
       "verifiedOn": "2026-08-14",
       "accessMethod": "archive.org tam metin — kamusal alan",
       "status": "verified"
+    },
+    {
+      "gameId": "xiangqi",
+      "sourceRef": "Culin, Stewart, Korean Games (Philadelphia, 1895)",
+      "edition": "Cornell nüshası — archive.org cu31924023272424",
+      "locator": "§ LXXIV 'Tjyang-keui — Chess (by W. H. Wilkinson)', ss. 82–89",
+      "supportingPassage": "LXXIV. TJYANG-KEUI — CHESS. […] In Chinese chess the P'áu moves like a Rook, but takes only when a piece intervenes […] though they seldom are, omitted from a Chinese chess-board",
+      "supportedClaim": "YOK — bölüm KORE satrancının kurallarıdır (Wilkinson yazmıştır). Çin satrancı yalnızca KARŞILAŞTIRMA notlarında geçer; tam bir Çin kural seti verilmez.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin",
+      "status": "pending",
+      "note": "FAZ 4'ÜN ERTELEME KARARI SAYFA AÇILARAK DOĞRULANDI. Çin kaydı için Culin'in kendi künyesindeki W. H. Wilkinson, A Manual of Chinese Chess (Shanghai, 1893) gerekir; archive.org'da bulunamadı."
+    },
+    {
+      "gameId": "tien-gow",
+      "sourceRef": "Culin, Stewart, Chinese Games with Dice and Dominoes (Washington, 1895)",
+      "edition": "archive.org chinesegameswith01culi",
+      "locator": "ARANDI — 'tien kow' başlığı bulunamadı",
+      "supportingPassage": "",
+      "supportedClaim": "YOK. Culin 1895 Korean Games § LXXXI 'Kol-hpai' KORE dominolarıdır; Çin dominoları karşılaştırma notudur. Ayrı basılan Chinese Games with Dice and Dominoes indirildi ve tien-gow başlığı bulunamadı.",
+      "verifiedOn": null,
+      "attemptedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin × 2 eser",
+      "status": "pending",
+      "note": "KİMLİK TUZAĞI riski: Kanton oyununu Kore bölümünden yazmak Totolospi hatasıdır."
+    },
+    {
+      "gameId": "patolli",
+      "sourceRef": "Culin, Stewart, Chess and Playing-Cards (Washington, 1898)",
+      "edition": "archive.org chessplayingcard00culi",
+      "locator": "39. 'Patolli', ss. 854–856",
+      "supportingPassage": "This is a game that the Indians had and named patole. It is like a game of dice, and (played) upon a painted mat. […] all who were masters of their games, invocated a demon which they name Macuilsucitl, which means Five Roses (flowers). They invocate him, so that he should give them luck in winning.",
+      "supportedClaim": "OYUNUN VARLIĞI, adı, zar benzeri araç, boyalı hasır ve oyun öncesi çağrı doğrulandı. HAREKET, ALMA, İZ ve KAZANMA KOŞULU YOKTUR: Durán'ın resmi ve Nuttall'ın çevirisi bir kural metni değildir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin",
+      "status": "pending",
+      "note": "Kuyrukta P3 (reconstructed). Kural seti YOK; yeniden kurgulama planı olmadan yazılamaz (§25)."
+    },
+    {
+      "gameId": "gomoku",
+      "sourceRef": "Smith, Arthur, The Game of Go, the National Game of Japan (New York: Moffat, Yard and Company, 1908)",
+      "edition": "archive.org gameofgonational00smitrich",
+      "locator": "ss. 24–25",
+      "supportingPassage": "The game which we call \"Go Bang\" also originated in Japan, and is well known and still played there. They call it \"Go Moku Narabe,\" which means to arrange five \"Me,\" the word \"Go\" in this case meaning \"five\" […] it is a vastly simpler game than Go, and can be finished much more rapidly.",
+      "supportedClaim": "Oyunun adı, Japon kimliği, go tahtasında oynandığı ve AMACI (beş taşı sıraya dizmek) doğrulandı. Sıra kuralı, başlangıç, berabere ve fazla-sıra kuralı YOKTUR.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin",
+      "status": "pending",
+      "note": "Amaç var, KURAL SETİ yok — jianzi ile aynı sınıf. Tam bir gomoku kaydı gerekir."
+    },
+    {
+      "gameId": "go",
+      "sourceRef": "Smith, Arthur, The Game of Go, the National Game of Japan (New York, 1908)",
+      "edition": "archive.org gameofgonational00smitrich",
+      "locator": "'Rules of Play', ss. 24–26",
+      "supportingPassage": "The players play alternately, and the weaker player has the black stones and plays first […] They place the stones on the vacant points of intersection on the board, or \"Me,\" and they may place them wherever they please, with the single exception of the case called \"Ko\" […] When the stones are once played they are never moved again. The object of the game of Go is to secure territory.",
+      "supportedClaim": "TAM kural seti — ama JAPON kodifikasyonunun. Sıra, yerleştirme, ko, taşların bir daha oynanmaması, toprak amacı ve Japon sayım yöntemi (alınan taşlarla toprağı doldurma) verilir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin",
+      "status": "pending",
+      "note": "KÜLTÜR UYUŞMAZLIĞI: kapsam kaydı HAN ÇİNLİSİ, kaynak JAPON kodifikasyonudur ve sayım yöntemi Japondur (Çin alan sayımı değil). §9 'kaynak iddia edilen kültürü desteklemeli' şartı KARŞILANMIYOR. Çin biçimi için Smith'in kendi künyesindeki Z. Volpicelli, Journal of the China Branch of the Royal Asiatic Society XXVI gerekir."
     }
   ]
 }
