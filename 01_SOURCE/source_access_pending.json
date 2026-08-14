@@ -8,14 +8,21 @@
     "",
     "⚠ AYNI ENGELLİ KAYNAĞA TEKRAR TEKRAR ZAMAN HARCANMAZ. Yeni bir erişim",
     "bilgisi gelmeden aynı deneme tekrarlanmaz — Faz 3'te bu kural sayesinde",
-    "üretim, telifli kaynakları beklemek yerine erişilebilir 8 oyunu yazdı.",
+    "üretim, telifli kaynakları beklemek yerine erişilebilir 8 oyunu yazdı;",
+    "Faz 4'te aynı kural erişilebilir havuzu yeniden açtı.",
     "",
     "Bu kuyruk YALNIZCA denenip erişilemeyen oyunları taşır.",
     "Henüz denenmemiş oyunlar production_queue.json'da 'not-attempted' olarak",
-    "durur ve bir ENGEL değil bir SIRA meselesidir."
+    "durur ve bir ENGEL değil bir SIRA meselesidir.",
+    "",
+    "FAZ 4 DÜZELTMESİ: royal-game-of-ur bu kuyruğa EKLENDİ. Faz 3'te iki",
+    "kaynağı da denenmiş ve erişilememişti (Finkel 2007 telifli; British",
+    "Museum nesne kaydı HTTP 403) ama kayıt yalnızca source_verification",
+    "içinde duruyordu, kuyrukta değil. Denenip erişilemeyen bir oyunun",
+    "engelli kuyruğunda GÖRÜNMEMESİ, engeli küçümsemenin bir biçimidir."
   ],
-  "generatedAtPhase": "phase3",
-  "count": 4,
+  "generatedAtPhase": "phase4",
+  "count": 5,
   "blockedSources": [
     "Murray 1913 · Murray 1952 (ödünç kısıtı)",
     "Bell 1960–69 (telif)",
@@ -36,6 +43,9 @@
       "reason": "kaynak DENENDİ ve erişilemedi",
       "blockedSourceCount": 1,
       "lastAttempted": "2026-08-13",
+      "accessNeeded": "Zaslavsky 1973 · Africa Counts — kütüphane nüshası",
+      "fallback": "yedek havuzdan temsil edilmemiş bir kültür (kurucu kararı gerekir)",
+      "nextAction": "erişim gelince kural doğrula → yaz",
       "fallbackStatus": "deferred — üretime alınmadı"
     },
     {
@@ -45,6 +55,9 @@
       "reason": "kaynak DENENDİ ve erişilemedi",
       "blockedSourceCount": 1,
       "lastAttempted": "2026-08-13",
+      "accessNeeded": "Pollux, Onomasticon IX — denetlenebilir açık edisyon",
+      "fallback": "tali (Roma) aynı mekaniği taşıyor ve kapsamda ayrıca duruyor",
+      "nextAction": "açık edisyon bulunursa doğrula; bulunmazsa kurucu kararı",
       "fallbackStatus": "deferred — üretime alınmadı"
     },
     {
@@ -54,6 +67,9 @@
       "reason": "kaynak DENENDİ ve erişilemedi",
       "blockedSourceCount": 1,
       "lastAttempted": "2026-08-13",
+      "accessNeeded": "Parlett 1999 ya da 1920'lerin bir birinci elden kural kitabı",
+      "fallback": "yok — oyun tanınırlığı yüksek, yerine koyma kültür dengesini bozar",
+      "nextAction": "kütüphane erişimi",
       "fallbackStatus": "deferred — üretime alınmadı"
     },
     {
@@ -63,7 +79,33 @@
       "reason": "kaynak DENENDİ ve erişilemedi",
       "blockedSourceCount": 1,
       "lastAttempted": "2026-08-13",
+      "accessNeeded": "de Voogt 1995/1997 — kütüphane nüshası",
+      "fallback": "ekim ailesinde erişilebilir aday var; yerine koyma kurucu kararıdır",
+      "nextAction": "kütüphane erişimi",
       "fallbackStatus": "deferred — üretime alınmadı"
+    },
+    {
+      "gameId": "royal-game-of-ur",
+      "family": "race",
+      "culture": "Sumerian",
+      "reason": "kaynak DENENDİ ve erişilemedi",
+      "blockedSourceCount": 1,
+      "lastAttempted": "2026-08-13",
+      "accessNeeded": "Finkel 2007 (telifli) · British Museum nesne kaydı (HTTP 403)",
+      "fallback": "yok — oyunun kuralı yalnızca tek bir çivi yazısı tabletten okunur ve o okuma teliflidir",
+      "nextAction": "kütüphane erişimi; erişim gelmezse yeniden kurgulama BEYANIYLA yazılır",
+      "fallbackStatus": "deferred — üretime alınmadı",
+      "phase4Note": "Faz 4'te kuyruğa EKLENDİ; Faz 3'te engelli kaydı vardı ama bu kuyrukta görünmüyordu."
+    }
+  ],
+  "unresolvedIdentity": [],
+  "resolvedInPhase4": [
+    {
+      "gameId": "totolospi",
+      "wasBlockedBy": "kural kimliği: envanter kaydı 'race' ailesinde, Faz 3'te bulunan sayfa ise atlamalı bir dama anlatıyordu",
+      "resolution": "Culin 1907 AYNI ADI İKİ FARKLI OYUN için kullanıyor ve bunu kendisi söylüyor. ss. 160–162 Hopi totolospi'sini bir ZAR YARIŞI olarak verir (Voth 1899 ve Culin 1901 derlemeleri); s. 796 dipnotu ise 'The same name, totolospi, is applied by the Tewa at Hano to the foreign Mexican (Spanish) game like Fox and Geese' der. Envanter kaydı Hopi ve 'race'tir; Faz 3'te bakılan sayfa Tewa kaydıydı. Çelişki bir hata değil, iki ayrı oyundu.",
+      "resolvedOn": "2026-08-14",
+      "newPriority": 1
     }
   ],
   "notYetAttempted": 82

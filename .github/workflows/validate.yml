@@ -89,6 +89,17 @@ jobs:
           else
             echo "::notice::validate_scope.py henüz yok — Faz 2 teslimatı"
           fi
+      # ÜRETİM KUYRUĞU SIRASI (Faz 4 · kurucu § 4). Kapsam kilidi listenin
+      # NE olduğunu korur; bu kapı listenin HANGİ SIRAYLA işlendiğini korur.
+      # Engelli bir oyun erişilebilir bir oyunun önüne geçerse üretim, açık
+      # bir kaynak dururken kapalı bir kaynağı bekler.
+      - name: üretim kuyruğu sırası (Faz 4'te doğar)
+        run: |
+          if [ -f 04_BUILD/build_queue.py ]; then
+            python3 04_BUILD/build_queue.py --check
+          else
+            echo "::notice::build_queue.py henüz yok — Faz 4 teslimatı"
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
