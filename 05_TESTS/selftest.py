@@ -1383,9 +1383,13 @@ def part9_phase5_gates(rep, tmp: str) -> None:
     # denetler. Denetim tek yönlüydü ("her tanımın ölçümü var mı"); tersi
     # sorulmuyordu ve K23 iki diyagramı emekliye ayırdığında tam olarak
     # o koptu.
+    # Bu denetim yalnızca TAM tanım kümesi görünürken koşar (qa_diagram ile
+    # aynı sözleşme): CI'da `phase4_diagrams.json` korumalı katmandadır ve
+    # kısmi bir küme her tanımı "hayalet" gösterirdi.
     print("  ▸ bayat render raporu")
     rr = os.path.join(root, "06_REPORTS", "diagram-render.json")
-    if os.path.exists(rr):
+    if os.path.exists(rr) and os.path.exists(
+            os.path.join(root, "02_MANUSCRIPT", "book.json")):
         with open(rr, encoding="utf-8") as fh:
             orig_r = fh.read()
         try:
