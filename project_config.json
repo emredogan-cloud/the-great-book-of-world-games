@@ -198,11 +198,16 @@
       "eser · baskı · locator · dayanak pasaj · desteklenen iddia · tarih.",
       "Erişim sağlanamazsa durum 'blocked'tur ve bu DÜRÜST bir sonuçtur.",
       "Sayfa numarası UYDURULMAZ; uydurulan bir locator, doğrulanmamış bir",
-      "künyeyi doğrulanmış gösterir ve kitabın tek denetlenebilir iddiasını yıkar."
+      "künyeyi doğrulanmış gösterir ve kitabın tek denetlenebilir iddiasını yıkar.",
+      "",
+      "FAZ 5: üçüncü seviye eklendi — 'attempted-not-found'. K23 kapsam",
+      "değişikliğiyle gelen iki oyunun kaynağı ARANDI ve bulunamadı; onları",
+      "'bibliographic' saymak, olmayan bir künyeyi varmış gibi göstermekti."
     ],
     "levels": [
       "bibliographic",
-      "page-verified"
+      "page-verified",
+      "attempted-not-found"
     ],
     "recordFile": "01_SOURCE/source_verification.json",
     "requiredFields": [
@@ -402,26 +407,26 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 447,
-        "wordsPerGame": 686,
-        "textPagesPerGame": 1.24,
-        "diagramPagesPerGame": 0.293,
-        "measuredPagesPerGame": 1.534,
-        "billedPagesPerGame": 2.091,
-        "spreadOverflowRate": 0.045,
+        "wordsPerTypesetPage": 444,
+        "wordsPerGame": 682,
+        "textPagesPerGame": 1.238,
+        "diagramPagesPerGame": 0.298,
+        "measuredPagesPerGame": 1.536,
+        "billedPagesPerGame": 2.1,
+        "spreadOverflowRate": 0.05,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 22,
-        "projectedTotalPages": 258,
-        "deviationPct": 0.78,
+        "sampleSize": 20,
+        "projectedTotalPages": 260,
+        "deviationPct": 1.56,
         "withinTolerance": true,
-        "measuredAtPhase": "phase4",
+        "measuredAtPhase": "phase5",
         "measuredAtGate": "phase1",
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase4-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -454,7 +459,26 @@
           "zaten `maxDiagramMmPerGame`ti ama denetim diyagram başınaydı.",
           "",
           "Gömülü sonuç kaldırıldı: calibrate_pages.py artık sürücüyü",
-          "ölçümden TÜRETİYOR ve hangi örneklemde ne bulduğunu yazıyor."
+          "ölçümden TÜRETİYOR ve hangi örneklemde ne bulduğunu yazıyor.",
+          "",
+          "FAZ 5 · KAPSAM DEĞİŞİKLİĞİNDEN SONRA YENİDEN ÖLÇÜLDÜ (§20).",
+          "",
+          "                     Faz 4 (22)   Faz 5 (20)",
+          "  kelime/sayfa           447          444",
+          "  kelime/oyun            686          682",
+          "  ölçülen sayfa/oyun    1,53         1,54",
+          "  faturalanan           2,09         2,10",
+          "  TAŞMA ORANI        1/22 = %4,5  1/20 = %5,0",
+          "  toplam sayfa           258          260",
+          "  sapma               +%0,8        +%1,6 ✓",
+          "",
+          "Örneklem KÜÇÜLDÜ çünkü K23 iki yazılmış maddeyi (fivestones ·",
+          "marbles) kapsamdan çıkardı. İkisi de diyagramı küçük, metni kısa",
+          "maddelerdi; çıkmaları ortalamayı yukarı itti ve model 258 → 260",
+          "sayfaya çıktı. Sayfa hedefi DEĞİŞTİRİLMEDİ (yol haritası § 15).",
+          "",
+          "Sürücü yine BOTH: metin farkı 0,686 · diyagram farkı 0,628.",
+          "Faz 4'ün bulgusu iki örneklemde üst üste doğrulandı."
         ]
       },
       "$comment": [
@@ -492,7 +516,7 @@
       "calibrated": true,
       "calibratedAtPhase": "phase2",
       "calibratedOn": "2026-08-13",
-      "recalibratedAtPhase": "phase4"
+      "recalibratedAtPhase": "phase5"
     },
     "editionsHypothesis": [
       {

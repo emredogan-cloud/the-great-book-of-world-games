@@ -13,8 +13,20 @@ Beş öncelik seviyesi vardır ve bunlar bir tercih değil bir TÜRETMEDİR:
   P3  yeniden kurgulanmış ama YETERİNCE BELGELİ (reconstructionPlan var)
   P4  kaynak erişimi bekliyor / telif engelli   ← DENENDİ ve ERİŞİLEMEDİ
   P5  çözülmemiş kural kimliği / kaynak uyuşmazlığı
+  P6  kaynak ARANDI ve KAYIT BULUNAMADI          ← FAZ 5'te eklendi
 
 ⚠ EN ÖNEMLİ AYRIM (§ 5):  "denenmedi" ≠ "engellendi".
+
+⚠ FAZ 5'İN EKLEDİĞİ İKİNCİ AYRIM:  "engellendi" ≠ "kaydı yok".
+
+P4 bir ERİŞİM engelidir: kayıt VARDIR, nüshası kapalıdır ve kurucunun bir
+kütüphane kartı onu açar. P6 bir VARLIK sorunudur: denetlenebilir bir kayıt
+henüz bulunamamıştır ve hiçbir erişim izni onu var etmez.
+
+İkisini aynı kovaya atmak, Faz 3'ün "denenmedi = engelli" hatasının aynısı
+olurdu — yalnızca bir seviye daha derinde. K23 kapsam değişikliğiyle gelen
+iki oyun (lagori · kho-kho) tam olarak buradadır: kaynakları ARANDI,
+bulunamadı, ve ikisi de zayıf kanıtla YAZILAMAZ (§13).
 
 Bir oyun P4'e YALNIZCA `source_access_pending.json` içinde, yani gerçekten
 denenip erişilememişse girer. Henüz sıraya gelmemiş bir oyun bir ENGEL değil
@@ -47,9 +59,12 @@ PRIORITY_MEANING = {
     3: "yeniden kurgulanmış · reconstructionPlan belgeli",
     4: "kaynak DENENDİ ve erişilemedi — telif / ödünç kısıtı",
     5: "çözülmemiş kural kimliği ya da kaynak uyuşmazlığı",
+    6: "kaynak ARANDI · denetlenebilir KAYIT BULUNAMADI",
 }
 ACCESSIBLE = (1, 2, 3)
-DEFERRED = (4, 5)
+# P6 en sondadır ve bu bir sıralama tercihi değil bir türetmedir: P4'ün
+# kaydı vardır ve bir kütüphane kartı onu açar; P6'nın kaydı henüz yoktur.
+DEFERRED = (4, 5, 6)
 
 
 def load(path: str):
@@ -90,7 +105,7 @@ def page_weight(entry: dict, inv: dict) -> float:
 
 
 def classify(entry: dict, inv: dict, verified: int, blocked_ids: set,
-             unresolved: dict) -> tuple:
+             unresolved: dict, gap_ids: set) -> tuple:
     """(priority, reason, blocker) — sıralamanın TEK karar noktası."""
     gid = entry["gameId"]
 
@@ -98,6 +113,11 @@ def classify(entry: dict, inv: dict, verified: int, blocked_ids: set,
         return 5, unresolved[gid], "kural kimliği çözülmedi"
     if gid in blocked_ids:
         return 4, "kaynak DENENDİ ve erişilemedi", "kaynak erişimi"
+    # P6, doğrulanmış künyesi olmadığı SÜRECE geçerlidir: kayıt bulunursa
+    # oyun kendiliğinden normal hatta döner ve bu satır susar.
+    if gid in gap_ids and verified == 0:
+        return 6, "kaynak ARANDI · denetlenebilir kayıt bulunamadı", \
+            "kaynak kaydı yok"
 
     reconstructed = bool(entry.get("reconstructed")) or \
         inv.get("sourceConfidence") == "reconstructed"
@@ -126,6 +146,10 @@ def build(root: str, args) -> int:
     blocked_ids = {g["gameId"] for g in pending["games"]}
     unresolved = {u["gameId"]: u["reason"]
                   for u in pending.get("unresolvedIdentity", [])}
+    gap_ids = {g["gameId"] for g in pending.get("amendmentSourceGaps", [])}
+    holds = {h["gameId"]: h["conflict"]
+             for h in pending.get("editorialHolds", [])
+             if h.get("status") == "open"}
 
     ver, blk = {}, {}
     for r in sv["records"]:
@@ -151,10 +175,12 @@ def build(root: str, args) -> int:
         gid = e["gameId"]
         iv = inv.get(gid, {})
         v, b = ver.get(gid, 0), blk.get(gid, 0)
-        pr, reason, blocker = classify(e, iv, v, blocked_ids, unresolved)
+        pr, reason, blocker = classify(e, iv, v, blocked_ids, unresolved,
+                                       gap_ids)
         status = ("verified" if v >= 2 else
                   "partially-verified" if v == 1 else
-                  "access-blocked" if gid in blocked_ids else "not-attempted")
+                  "access-blocked" if gid in blocked_ids else
+                  "record-not-found" if gid in gap_ids else "not-attempted")
         rows.append({
             "gameId": gid,
             "title": e.get("name", gid),
@@ -178,6 +204,11 @@ def build(root: str, args) -> int:
             "manuscriptStatus": written.get(gid, "not-started"),
             "blocker": blocker,
             "deferralReason": reason if pr in DEFERRED else None,
+            # EDİTORYAL ASKI önceliği DEĞİŞTİRMEZ ve `blocker` DEĞİLDİR:
+            # kaynak tamdır, oyun erişilebilirdir. Engel kitabın kendi
+            # üretim kuralındadır. Kuyruğu bozmadan GÖRÜNÜR kalmalı, yoksa
+            # bir sonraki üretici onu P1'de görüp duvara çarpar.
+            "editorialHold": holds.get(gid),
         })
 
     rows.sort(key=lambda r: (r["priority"], -r["verifiedSources"],
@@ -205,8 +236,13 @@ def build(root: str, args) -> int:
             "",
             "`expectedPageWeight` bir KESTİRİMDİR, bir bütçe denetimi değil.",
             "150 mm bütçesi yalnızca RENDER edilmiş çıktıdan ölçülür (K19).",
+            "",
+            "FAZ 5: P6 eklendi — 'kaynak ARANDI, KAYIT BULUNAMADI'. P4'ten",
+            "ayrıdır: P4'ün kaydı vardır ve erişim izni onu açar; P6'nın",
+            "kaydı henüz yoktur ve hiçbir izin onu var etmez. K23 kapsam",
+            "değişikliğiyle gelen iki oyun buradadır.",
         ],
-        "generatedAtPhase": "phase4",
+        "generatedAtPhase": "phase5",
         "priorityMeaning": {str(k): v for k, v in PRIORITY_MEANING.items()},
         "orderingRule": "priority ASC → verifiedSources DESC → family → gameId",
         "total": len(rows),
@@ -285,6 +321,43 @@ def check(root: str, args) -> int:
     if ghost:
         errs.append("doğrulanmamış kaynakla YAZILMIŞ oyun: %s"
                     % ", ".join(ghost[:5]))
+
+    # ⑥ P6 — FAZ 5. Üç yönlü denetim, çünkü bu seviye üç farklı yalanı
+    #    mümkün kılar: kaydı olmayan bir oyunu ERİŞİLEBİLİR göstermek,
+    #    kaydı olan bir oyunu P6'ya sürgün etmek, ve P6'daki bir oyunu
+    #    yine de YAZMAK.
+    gaps = {g["gameId"] for g in pending.get("amendmentSourceGaps", [])}
+    p6 = {r["gameId"] for r in rows if r["priority"] == 6}
+    stray = sorted(p6 - gaps)
+    if stray:
+        errs.append("P6'da KAYIT BOŞLUĞU BELGELENMEMİŞ oyun var: %s"
+                    % ", ".join(stray[:5]))
+    hidden = sorted(g for g in gaps
+                    if not any(r["gameId"] == g and
+                               (r["priority"] == 6 or r["verifiedSources"] > 0)
+                               for r in rows))
+    if hidden:
+        errs.append("kaynak kaydı bulunamayan oyun P6'da DEĞİL "
+                    "(boşluk gizlenmiş): %s" % ", ".join(hidden[:5]))
+    written_gap = [r["gameId"] for r in rows
+                   if r["priority"] == 6
+                   and r["manuscriptStatus"] != "not-started"]
+    if written_gap:
+        errs.append("KAYNAKSIZ oyun YAZILMIŞ (§13 ihlali): %s"
+                    % ", ".join(written_gap[:5]))
+
+    # ⑦ EDİTORYAL ASKI — FAZ 5. Askı bir gerekçedir, bir etiket değil.
+    documented = {h["gameId"] for h in pending.get("editorialHolds", [])}
+    undoc = [r["gameId"] for r in rows
+             if r.get("editorialHold") and r["gameId"] not in documented]
+    if undoc:
+        errs.append("BELGELENMEMİŞ editoryal askı: %s" % ", ".join(undoc[:5]))
+    held_written = [r["gameId"] for r in rows
+                    if r.get("editorialHold")
+                    and r["manuscriptStatus"] != "not-started"]
+    if held_written:
+        errs.append("EDİTORYAL ASKIDAKİ oyun yazılmış: %s"
+                    % ", ".join(held_written[:5]))
 
     for e in errs:
         print("  ✗ %s" % e)

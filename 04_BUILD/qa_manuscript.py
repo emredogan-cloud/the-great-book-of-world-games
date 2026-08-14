@@ -19,6 +19,14 @@ Denetlenen:
   ⑤ DIŞ TEST      — hiçbir madde kaydı olmayan bir dış test iddia etmiyor
   ⑥ ÖLÇÜLEN BLOK  — manuscript'teki her kural bloğu sayfa ölçümünde SAYILIYOR
   ⑦ DİL           — ticari katmanda `translatedFrom` boş (K16)
+  ⑧ KAPSAM        — yazılmış her madde KİLİTLİ 100'ün içinde (Faz 5 · K23)
+
+⑧ NEDEN VAR: Faz 5'in kapsam değişikliği iki maddeyi (fivestones · marbles)
+kapsamdan ÇIKARDI. İkisi de yazılmıştı ve manuscript'te duruyordu; bu kapı
+onları GÖRMEDİ ve yeşil koştu. Yani kitap, kapsamda olmayan bir oyunu
+basmaya devam edebiliyordu ve hiçbir mekanizma itiraz etmiyordu. Kurucunun
+§ 32 listesindeki *"removed game remains in final scope"* kusuru tam olarak
+budur ve artık mekanik olarak yakalanıyor.
 
 ⑥ NEDEN VAR: `calibrate_pages.py` ölçtüğü blokların listesini elle taşır.
 Yeni bir blok yazılır ve listeye eklenmezse madde OLDUĞUNDAN KISA ölçülür,
@@ -121,6 +129,13 @@ def run(root: str, args) -> int:
         verified = {r["gameId"] for r in load(vp)["records"]
                     if r["status"] == "verified"}
 
+    # ⑧ KİLİTLİ KAPSAM. Boşsa denetim boş koşar (kilit henüz yazılmamış
+    # olabilir); doluysa manuscript ondan TAŞAMAZ.
+    scoped: set = set()
+    sp = os.path.join(root, "01_SOURCE", "scope_lock.json")
+    if os.path.exists(sp):
+        scoped = {e["gameId"] for e in load(sp).get("entries", [])}
+
     playtested = set()
     pdir = os.path.join(root, "01_SOURCE", "playtests")
     if os.path.isdir(pdir):
@@ -138,6 +153,7 @@ def run(root: str, args) -> int:
     no_setup, no_move, no_obj, no_end = [], [], [], []
     no_edge, no_recon, recon_mismatch = [], [], []
     no_source, ghost_source, fake_test, translated, no_valid = [], [], [], [], []
+    out_of_scope: list = []
     used_blocks = set()
 
     for g in games:
@@ -187,6 +203,10 @@ def run(root: str, args) -> int:
         if not all((v.get(k) or "").strip() for k in VALIDATION_KEYS):
             no_valid.append(gid)
 
+        # ⑧ KAPSAM — kapsamdan çıkarılmış bir oyun basılmaya devam edemez.
+        if scoped and gid not in scoped:
+            out_of_scope.append(gid)
+
         for k in MOVE_BLOCKS:
             if g.get(k):
                 used_blocks.add(k)
@@ -230,8 +250,20 @@ def run(root: str, args) -> int:
     rep.check(not no_valid,
               "her madde yedi başlıkta doğrulama kaydı taşıyor" + brief(no_valid))
 
+    print("\n── ⑧ kapsam ──")
+    if scoped:
+        rep.check(not out_of_scope,
+                  "yazılmış her madde KİLİTLİ 100'ün içinde (%d kilitli)"
+                  % len(scoped) +
+                  ("" if not out_of_scope
+                   else " — KAPSAM DIŞI BASILIYOR:" + brief(out_of_scope)))
+    else:
+        print("  · kapsam kilidi yok — bu bölüm boş koşar")
+
     rep.facts = {
         "games": len(games),
+        "outOfScope": sorted(out_of_scope),
+        "scopeLocked": len(scoped),
         "blocksUsed": sorted(used_blocks),
         "blocksMeasured": sorted(measured),
         "withDiagrams": sum(1 for g in games if g.get("diagrams")),

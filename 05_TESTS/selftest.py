@@ -41,6 +41,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import hashlib
 import json
 import os
 import re
@@ -1196,6 +1197,312 @@ def part8_phase4_gates(rep, tmp: str) -> None:
               "envanter 'reconstructed' derken madde DEMİYORSA YAKALANIR", out)
 
 
+def part9_phase5_gates(rep, tmp: str) -> None:
+    """⑨ FAZ 5 KAPILARI GERÇEKTEN ISIRIYOR MU.
+
+    Faz 5 bir KAPSAM DEĞİŞİKLİĞİ yaptı (K23) ve değişikliğin kendisi yeni
+    bir yalan sınıfı açtı: liste artık "kilitli" değil "şerhli" olduğu için,
+    üstünde yapılan her yeni oynama şerhin arkasına saklanabilirdi.
+
+    Beş kusur bulundu ve beşi de GERÇEK VERİYLE YEŞİL koşuyordu:
+
+      · şerh varken kilit ÖZETİ hiç denetlenmiyordu
+      · seçim modeli ile kilit AYRIŞABİLİYORDU (başlık ısırdığını iddia
+        ediyordu; öyle bir denetim hiç yazılmamıştı)
+      · kapsamdan ÇIKARILMIŞ bir oyun manuscript'te basılmaya devam
+        edebiliyordu
+      · dizgi ölçümü, manuscript altından değişince BAYAT kalıyordu
+      · kalibre config, ölçümden KAYINCA ekonomi eski sayıyla hesaplanıyordu
+    """
+    print("\n⑨ Faz 5 kapıları gerçekten ısırıyor")
+    root = ROOT
+
+    # ── ① KAPSAM KİLİDİ: ŞERH BİR MUAFİYET DEĞİLDİR ───────────────────────
+    print("  ▸ kapsam değişikliği (K23)")
+    sp = os.path.join(root, "01_SOURCE", "scope_lock.json")
+    if os.path.exists(sp):
+        with open(sp, encoding="utf-8") as fh:
+            orig = fh.read()
+
+        def tamper_digest(d):
+            """Şerh DURUYOR ama özet yanlış — eski kapı buna GÖZ YUMUYORDU."""
+            d["integrity"]["sha256"] = "0" * 64
+
+        def drop_amendment(d):
+            """Liste değişik, şerh SİLİNMİŞ — sessiz değişim."""
+            d["amendments"] = []
+            ids = sorted(e["gameId"] for e in d["entries"])
+            d["integrity"]["sha256"] = hashlib.sha256(
+                "\n".join(ids).encode("utf-8")).hexdigest()
+
+        def readd_removed_game(d):
+            """Çıkarılan oyun kapsama GERİ SIZAR (§32)."""
+            e = dict(d["entries"][0])
+            e["gameId"], e["name"] = "fivestones", "Fivestones"
+            d["entries"].append(e)
+            ids = sorted(x["gameId"] for x in d["entries"])
+            d["integrity"]["sha256"] = hashlib.sha256(
+                "\n".join(ids).encode("utf-8")).hexdigest()
+
+        def duplicate_promotion(d):
+            """Aynı yedek oyun İKİ KEZ terfi eder (§32)."""
+            e = next(x for x in d["entries"] if x["gameId"] == "lagori")
+            d["entries"].append(dict(e))
+
+        def strip_amendment_field(d):
+            """Şerhten kültür dengesi ölçümü SİLİNİR — ölçülmemiş iddia."""
+            d["amendments"][0]["cultureBalanceEffect"] = ""
+
+        try:
+            for label, mut in [
+                ("ŞERH VARKEN bozulan kilit özeti YAKALANIR", tamper_digest),
+                ("liste değişikken ŞERHİN SİLİNMESİ YAKALANIR", drop_amendment),
+                ("ÇIKARILAN oyunun kapsama geri sızması YAKALANIR",
+                 readd_removed_game),
+                ("aynı yedek oyunun İKİ KEZ terfisi YAKALANIR",
+                 duplicate_promotion),
+                ("şerhte ÖLÇÜLMEMİŞ kültür dengesi iddiası YAKALANIR",
+                 strip_amendment_field),
+            ]:
+                d = json.loads(orig)
+                mut(d)
+                write_json(sp, d)
+                code, out = run_gate("validate_scope.py", root)
+                rep.check(code != 0, label, out)
+        finally:
+            with open(sp, "w", encoding="utf-8") as fh:
+                fh.write(orig)
+        code, out = run_gate("validate_scope.py", root)
+        rep.check(code == 0, "ŞERHLİ ve TUTARLI kilit geçer", out)
+
+    # ── ② KUYRUK: P6 — "kaydı yok" ≠ "engelli" ────────────────────────────
+    print("  ▸ P6 · kaynak kaydı bulunamayan oyun")
+    qp = os.path.join(root, "01_SOURCE", "production_queue.json")
+    if os.path.exists(qp):
+        with open(qp, encoding="utf-8") as fh:
+            orig = fh.read()
+
+        def hide_gap(d):
+            """Kaydı olmayan oyunu ERİŞİLEBİLİR gösterir — boşluğu gizler."""
+            g = next(g for g in d["games"] if g["priority"] == 6)
+            g["priority"] = 2
+            g["accessibility"] = "accessible"
+            g["blocker"] = None
+            d["games"].sort(key=lambda r: r["priority"])
+
+        def exile_documented_game(d):
+            """Belgelenmemiş bir oyunu P6'ya sürer — boşluğu ABARTIR."""
+            g = next(g for g in d["games"] if g["priority"] == 1)
+            g["priority"] = 6
+            g["accessibility"] = "deferred"
+            d["games"].sort(key=lambda r: r["priority"])
+
+        def write_sourceless_game(d):
+            """P6'daki oyun YİNE DE yazılmış (§13 ihlali)."""
+            g = next(g for g in d["games"] if g["priority"] == 6)
+            g["manuscriptStatus"] = "draft"
+
+        try:
+            for label, mut in [
+                ("kaynak kaydı olmayan oyunu ERİŞİLEBİLİR göstermek YAKALANIR",
+                 hide_gap),
+                ("belgelenmemiş bir oyunu P6'ya SÜRMEK YAKALANIR",
+                 exile_documented_game),
+                ("KAYNAKSIZ oyunun YAZILMASI YAKALANIR", write_sourceless_game),
+            ]:
+                d = json.loads(orig)
+                mut(d)
+                write_json(qp, d)
+                code, out = run_gate("build_queue.py", root, "--check")
+                rep.check(code != 0, label, out)
+        finally:
+            with open(qp, "w", encoding="utf-8") as fh:
+                fh.write(orig)
+
+    # ── ③ MANUSCRIPT KAPSAM DIŞINA TAŞAMAZ ────────────────────────────────
+    print("  ▸ manuscript ↔ kapsam")
+    mp = os.path.join(root, "02_MANUSCRIPT", "book.json")
+    if os.path.exists(mp) and os.path.exists(sp):
+        with open(mp, encoding="utf-8") as fh:
+            orig_m = fh.read()
+        try:
+            d = json.loads(orig_m)
+            ghost = dict(d["games"][0])
+            ghost["gameId"] = "not-in-the-hundred"
+            d["games"].append(ghost)
+            write_json(mp, d)
+            code, out = run_gate("qa_manuscript.py", root)
+            rep.check(code != 0,
+                      "KAPSAM DIŞI bir oyunun manuscript'te basılması YAKALANIR",
+                      out)
+        finally:
+            with open(mp, "w", encoding="utf-8") as fh:
+                fh.write(orig_m)
+
+    # ── ④ BAYAT DİZGİ ÖLÇÜMÜ ──────────────────────────────────────────────
+    # Sayfa modeli bu kitabın FİYAT modelidir. Manuscript altından değişip
+    # ölçüm eski kalırsa, sırt genişliği ve birim telif yanlış hesaplanır.
+    print("  ▸ bayat dizgi ölçümü ve kaymış config")
+    tp = os.path.join(root, "06_REPORTS", "phase2-typeset-measurement.json")
+    cp = os.path.join(root, "project_config.json")
+    if os.path.exists(tp) and os.path.exists(mp):
+        with open(tp, encoding="utf-8") as fh:
+            orig_t = fh.read()
+        try:
+            d = json.loads(orig_t)
+            d["perGame"].append({"gameId": "a-game-nobody-wrote",
+                                 "words": 600, "measuredPages": 1.4})
+            write_json(tp, d)
+            code, out = run_gate("calibrate_pages.py", root, "--check")
+            rep.check(code != 0,
+                      "manuscript'te OLMAYAN maddeyi ölçen BAYAT rapor "
+                      "YAKALANIR", out)
+        finally:
+            with open(tp, "w", encoding="utf-8") as fh:
+                fh.write(orig_t)
+
+    if os.path.exists(cp) and os.path.exists(tp):
+        with open(cp, encoding="utf-8") as fh:
+            orig_c = fh.read()
+        try:
+            d = json.loads(orig_c)
+            meas = d["production"]["pageModel"]["measured"]
+            meas["projectedTotalPages"] = meas["projectedTotalPages"] + 8
+            write_json(cp, d)
+            code, out = run_gate("calibrate_pages.py", root, "--check")
+            rep.check(code != 0,
+                      "kalibre config ÖLÇÜMDEN KAYARSA YAKALANIR "
+                      "(ekonomi eski sayıyla hesaplanamaz)", out)
+        finally:
+            with open(cp, "w", encoding="utf-8") as fh:
+                fh.write(orig_c)
+
+    # ── ⑤ BAYAT RENDER RAPORU ─────────────────────────────────────────────
+    # 150 mm bütçesi ölçüm dosyasından hesaplanır. Artık var olmayan bir
+    # diyagram o dosyada kalırsa bütçe, gerçek kitabı değil ESKİ kitabı
+    # denetler. Denetim tek yönlüydü ("her tanımın ölçümü var mı"); tersi
+    # sorulmuyordu ve K23 iki diyagramı emekliye ayırdığında tam olarak
+    # o koptu.
+    # Bu denetim yalnızca TAM tanım kümesi görünürken koşar (qa_diagram ile
+    # aynı sözleşme): CI'da `phase4_diagrams.json` korumalı katmandadır ve
+    # kısmi bir küme her tanımı "hayalet" gösterirdi.
+    print("  ▸ bayat render raporu")
+    rr = os.path.join(root, "06_REPORTS", "diagram-render.json")
+    if os.path.exists(rr) and os.path.exists(
+            os.path.join(root, "02_MANUSCRIPT", "book.json")):
+        with open(rr, encoding="utf-8") as fh:
+            orig_r = fh.read()
+        try:
+            d = json.loads(orig_r)
+            d["diagrams"].append(dict(d["diagrams"][0],
+                                      diagramId="a-retired-diagram"))
+            write_json(rr, d)
+            code, out = run_gate("qa_diagram.py", root)
+            rep.check(code != 0,
+                      "ölçümde durup TANIMI OLMAYAN diyagram YAKALANIR", out)
+        finally:
+            with open(rr, "w", encoding="utf-8") as fh:
+                fh.write(orig_r)
+
+    # ── ⑥ ARKA MADDE VE ÜÇ İNDEKS ─────────────────────────────────────────
+    # Arka madde ÜRETİLİR. Üretilmiş olması onu doğru yapmaz: üreteç yanlış
+    # kova hesaplarsa indeks de özet de AYNI yanlışı taşır ve dosya kendi
+    # içinde tutarlı görünür. Kapı kovaları envanterden YENİDEN hesaplar;
+    # aşağıdaki kusurlar tam olarak o yeniden hesabı sınar.
+    print("  ▸ arka madde ve üç indeks")
+    bmp = os.path.join(root, "02_MANUSCRIPT", "backmatter.json")
+    if os.path.exists(bmp):
+        with open(bmp, encoding="utf-8") as fh:
+            orig_b = fh.read()
+
+        def drop_from_one_index(d):
+            """Oyun ÜÇ indeksin BİRİNDEN düşer — ötekilerde durur."""
+            b = d["indexes"]["byPlayerCount"]["buckets"]
+            k = next(k for k, v in b.items() if v)
+            b[k].pop()
+
+        def move_to_wrong_bucket(d):
+            """İki kişilik bir oyun '5+' kovasına taşınır."""
+            b = d["indexes"]["byPlayerCount"]["buckets"]
+            row = b["2"].pop()
+            b["5+"].append(row)
+
+        def wrong_culture_bucket(d):
+            b = d["indexes"]["byCulture"]["buckets"]
+            k = next(k for k, v in b.items() if v)
+            other = next(x for x in b if x != k)
+            b[other].append(b[k].pop())
+
+        def invent_page_number(d):
+            """Dizilmemiş bir oyuna SAYFA NUMARASI verilir (§27 ihlali)."""
+            for rows in d["indexes"]["byCulture"]["buckets"].values():
+                for r in rows:
+                    if r["page"] is None:
+                        r["page"] = 137
+                        r["pageStatus"] = "measured"
+                        return
+
+        def shift_real_page(d):
+            """Gerçek bir sayfa numarası ölçümden KAYDIRILIR."""
+            for rows in d["indexes"]["byCulture"]["buckets"].values():
+                for r in rows:
+                    if r["page"] is not None:
+                        r["page"] += 4
+                        return
+
+        def false_glossary_claim(d):
+            """Sözlük, prozada geçmeyen bir terimi 'geçiyor' gösterir."""
+            d["glossary"][0]["attestedIn"] = ["tablut"]
+            d["glossary"][0]["term"] = "zzz-not-a-real-word"
+
+        def shrink_glossary(d):
+            d["glossary"] = d["glossary"][:20]
+
+        def overclaim_verification(d):
+            """Kaynakça, olmayan bir sayfa doğrulaması iddia eder."""
+            d["bibliography"][0]["pageVerifiedCount"] = 9
+
+        def stale_after_scope_change(d):
+            """Kapsam değişti, arka madde YENİDEN ÜRETİLMEDİ."""
+            d["bibliography"] = d["bibliography"][:-1]
+
+        def ghost_template(d):
+            d["boardTemplates"].append({
+                "gameId": "tablut", "title": "Tablut",
+                "diagramId": "a-diagram-that-does-not-exist",
+                "boardClass": "cell", "size": {"cols": 9, "rows": 9},
+                "reconstructed": False, "photocopyNote": "x"})
+
+        try:
+            for label, mut in [
+                ("oyun ÜÇ indeksin BİRİNDEN düşerse YAKALANIR",
+                 drop_from_one_index),
+                ("YANLIŞ oyuncu-sayısı kovası YAKALANIR", move_to_wrong_bucket),
+                ("YANLIŞ kültür kovası YAKALANIR", wrong_culture_bucket),
+                ("DİZİLMEMİŞ oyuna sayfa numarası UYDURULMASI YAKALANIR",
+                 invent_page_number),
+                ("ölçümden KAYMIŞ sayfa numarası YAKALANIR", shift_real_page),
+                ("sözlüğün YANLIŞ 'prozada geçiyor' iddiası YAKALANIR",
+                 false_glossary_claim),
+                ("60 terimin ALTINA düşen sözlük YAKALANIR", shrink_glossary),
+                ("OLMAYAN sayfa doğrulaması iddiası YAKALANIR",
+                 overclaim_verification),
+                ("kapsam değişince BAYAT kalan arka madde YAKALANIR",
+                 stale_after_scope_change),
+                ("OLMAYAN diyagrama bağlı şablon YAKALANIR", ghost_template),
+            ]:
+                d = json.loads(orig_b)
+                mut(d)
+                write_json(bmp, d)
+                code, out = run_gate("qa_index.py", root)
+                rep.check(code != 0, label, out)
+        finally:
+            with open(bmp, "w", encoding="utf-8") as fh:
+                fh.write(orig_b)
+        code, out = run_gate("qa_index.py", root)
+        rep.check(code == 0, "TEMİZ arka madde geçer", out)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1216,6 +1523,7 @@ def main() -> int:
         part6_phase2_gates(rep, tmp)
         part7_phase3_gates(rep, tmp)
         part8_phase4_gates(rep, tmp)
+        part9_phase5_gates(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:

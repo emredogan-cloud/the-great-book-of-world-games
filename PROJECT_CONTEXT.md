@@ -4,7 +4,7 @@
 > belgedir.** Hafızası olmayan bir ajan buradan başlar ve projenin nerede
 > olduğunu, neyin kilitli neyin açık olduğunu buradan öğrenir.
 >
-> Son güncelleme: **14 Ağustos 2026** · Faz: **4 · ÜRETİM AÇIK** · Kapı: `phase1`
+> Son güncelleme: **14 Ağustos 2026** · Faz: **5 · ÜRETİM AÇIK** · Kapı: `phase1`
 
 ---
 
@@ -65,50 +65,63 @@ ayrılmış — akademik oyun tarihi (oynanamaz) ve jenerik aile oyunu listeleri
 
 | | |
 |---|---|
-| Faz | **4 · ÜRETİM ŞERİDİ AÇIK** (koşullu · K21) |
+| Faz | **5 · ÜRETİM ŞERİDİ AÇIK** (koşullu · K21 · A10) |
 | Kapı (`.gate`) | **`phase1`** — yükseltilmedi ve yükseltilmeyecek |
-| Kilitli kapsam | **100 oyun · 71 kültür · 19 yedek** ✅ |
-| **Yazılmış oyun** | **22** / 100 |
+| Kilitli kapsam | **100 oyun · 73 kültür · 19 yedek** ✅ (K23 şerhli) |
+| **Yazılmış oyun** | **20** / 100 ⛔ |
 | Kilitli oyun | **0** / 100 |
-| Doğrulanmış künye | **28** (25 oyunda ≥1, 3 oyunda ≥2) |
-| Kaynak: denendi-erişilemedi | **5** oyun |
+| Doğrulanmış künye | **29** · doğrulama kaydı **44** |
+| Kaynak: denendi-erişilemedi | **5** oyun (P4) |
+| Kaynak: arandı-kayıt yok | **2** oyun (P6 · K23 terfileri) |
 | Kaynak: henüz denenmedi | **70** oyun |
 | **Erişilebilir · yazılmamış** | **72** oyun — kuyrukta sıralı |
+| **Editoryal askı** | **1** (cats-cradle · 150 mm) |
 | **Dış oynanabilirlik testi** | **0** ⛔ **BLOKLAYICI** |
-| Diyagram | **27 render · hepsi ≤150 mm** ✅ |
-| **Oyun başına diyagram** | **azami 144,0 mm** ✅ (Faz 4'te kapıya bağlandı) |
-| Diyagram dili | **v1.4** (`bodily/bed` — zemine çizilen bölmeler) |
-| **Sayfa modeli** | **258** (hedef 256, **+%0,8**) ✅ **BANTTA** |
-| Selftest | **148 denetim** ✅ |
-| Depo | public · `faz/4-blok-2` · CI **YEŞİL** |
-| **Sonraki adım** | **KURUCU: dış test + kaynak erişimi + § 20.1 kapsam kararı** |
+| Diyagram | **25 render · hepsi ≤150 mm** ✅ |
+| **Oyun başına diyagram** | **azami 144,0 mm** ✅ |
+| Diyagram dili | **v1.4** |
+| **Arka madde** | **ALTI BÖLÜM TAM** ✅ · üç indeks üretildi |
+| **Sayfa modeli** | **260** (hedef 256, **+%1,6**) ✅ **BANTTA** |
+| Birim telif | ciltsiz **8,37 $** · ciltli **10,92 $** |
+| Selftest | **172 denetim** ✅ |
+| Depo | public · `faz/5-yakinsama` · CI **YEŞİL** |
+| **Sonraki adım** | **KURUCU: dış test · cats-cradle kararı · kaynak erişimi** |
 
 Faz raporları: [`06_REPORTS/PHASE_2_REPORT.md`](06_REPORTS/PHASE_2_REPORT.md) ·
 [`06_REPORTS/PHASE_3_REPORT.md`](06_REPORTS/PHASE_3_REPORT.md) ·
-[`06_REPORTS/PHASE_4_REPORT.md`](06_REPORTS/PHASE_4_REPORT.md)
+[`06_REPORTS/PHASE_4_REPORT.md`](06_REPORTS/PHASE_4_REPORT.md) ·
+[`06_REPORTS/PHASE_5_REPORT.md`](06_REPORTS/PHASE_5_REPORT.md)
 
-**Faz 4'ün en önemli çıktısı yine bir düzeltmedir:** Faz 2'nin
-*"sayfa bütçesi bir diyagram bütçesidir"* cümlesi **yanlışlandı**. Üç
-oyunda metin farkı 0,01'di ve metin sabit sanıldı; yirmi iki oyunda 0,69
-oldu ve diyagram farkını (0,63) **geçti**. Cümle bir bulgu değil bir
-**örneklem eseriydi** ve `calibrate_pages.py` içine gömülü olduğu için
-verisini yalanlarken bile basılmaya devam ediyordu. Artık ölçümden
-türetiliyor.
+**Faz 5 kendi ana hedefini tutturamadı ve bunu gizlemiyor.** Hedef 100
+oyundu; yazılan **20**'dir — Faz 4'ün 22'sinden **iki eksik**, çünkü K23
+kapsam değişikliği iki *yazılmış* maddeyi (fivestones · marbles) kapsamdan
+çıkardı. Faz 5 üç işi tamamladı (kapsam değişikliği · arka madde · altı
+kapı kusuru) ve bir işi tamamlayamadı: **oyun yazımı**.
 
-Faz 4 ayrıca **beş kapı kusuru** buldu — beşi de gerçek veriyle yeşil
-koşan kapılardaydı. En sertleri: 150 mm bütçesi **oyun başına** tanımlı
-olduğu hâlde **diyagram başına** denetleniyordu (tablut 181,5 mm ile
-geçiyordu), ve `fivestones` maddesinin **kurulum bloğu yoktu**.
+**Faz 5'in en değerli çıktısı yine bir düzeltmedir** — altı kapı kusuru,
+altısı da gerçek veriyle **yeşil koşuyordu**. En sertleri:
 
-⚠ **FAZ 4 KAPSAMI TAMAMLANMADI.** Yazılan 22, hedef 100. Üç sert
-bloklayıcı sürüyor:
+- `scope_lock.json`'ın başlığı *"model ayrışırsa bu KAPI ISIRIR"* diye
+  **vaat ediyordu**; öyle bir denetim **hiç yazılmamıştı**.
+- **Bir tane** değişiklik şerhi düşülmesi, kilit özetinin denetimini
+  **ömür boyu** kapatıyordu.
+- Kapsamdan **çıkarılmış** bir oyun manuscript'te **basılmaya devam
+  edebiliyordu**.
+- Kalibre config ölçümden kayınca **ekonomi eski sayıyla** hesaplanıyordu.
 
-1. **Dış insan testi yapılmadı.** Ajan test yapamaz; sahte kayıt
-   üretilmez. Paket hazır (`01_SOURCE/pilot_tr/`), oturum kurucunundur.
-2. **Telifli kaynaklara erişim.** Beş oyun denendi ve erişilemedi.
-   Ama **72 oyun erişilebilir** ve yalnızca sıra bekliyor — bu sayı
-   Faz 3'te 20 görünüyordu ve düzeltildi (K22).
-3. **Arka madde yazılmadı** — üç indeks, sözlük, tahta şablonları.
+Ve en rahatsız edici olan: `validate_scope.py`'nin **`--root` sözleşmesi
+yoktu**, yani kapsam kilidine yazılmış kasıtlı kusur testleri kapı ısırdığı
+için değil **argparse hatası verdiği için** geçiyordu. *Yeşil yanan ama
+hiçbir şey sınamayan bir test, testsizlikten daha kötüdür.*
+
+⚠ **FAZ 5 KAPSAMI TAMAMLANMADI.** Yazılan 20, hedef 100. Bloklayıcılar:
+
+1. **80 oyun yazılmadı.** Faz 5 beş oyunun kaynağını sayfa seviyesinde
+   açtı ve **beşi de yazılamaz** çıktı (kural taşımayan kaynak · kimlik
+   tuzağı · diyagram bütçesi çatışması).
+2. **Dış insan testi yapılmadı.** Paket hazır; oturum kurucunundur.
+3. **cats-cradle · 150 mm çatışması** — kaynak tam, engel editoryal,
+   karar kurucunun.
 
 ## 5 · Bu projenin risk profili
 
@@ -226,23 +239,26 @@ kapanmadan sonrakine geçilmez. CI kırmızıyken hiçbir şey ilerlemez.
 
 > **KURUCU EYLEMİ BEKLENİYOR — onay değil, EYLEM.**
 >
-> A1 · A2 · A3 · A7 kapandı (K12–K15). Faz 4 on bir oyun yazdı, beş kapı
-> kusuru buldu, sayfa modelini 258'e indirdi ve durdu.
+> Faz 5 kapsam değişikliğini (K23), arka maddeyi ve altı kapı kusurunu
+> tamamladı; **oyun yazımını tamamlayamadı: 20/100.**
 >
-> **Üretim ilerleyebilir: 72 erişilebilir oyun kuyrukta sıralı bekliyor.**
-> Kaynak erişimi bir tıkanma değil bir hız sınırıdır — engelli olan
-> yalnızca **5** oyundur.
+> Bekleyen dört BLOKLAYICI:
 >
-> Bekleyen üç BLOKLAYICI:
-> 1. **Dış oynanabilirlik test oturumları.** Paket `01_SOURCE/pilot_tr/`
->    içinde hazır: üç oyun, testçi kılavuzu, kayıt formu. Ajan bu adımı
->    yapamaz ve sahte kayıt üretmez. **Bu blok Faz 2'den beri aynı yerde.**
-> 2. **Telifli kaynaklara erişim.** Murray (1913/1952) · Bell (1960) ·
->    Parlett (1999) · de Voogt (1997) · Zaslavsky (1973) · Finkel (2007)
->    açık tam metin değil. Beş oyun bunlara bağlı.
-> 3. **Arka madde** — üç indeks, sözlük, tahta şablonları — yazılmadı.
+> 1. **80 oyun yazılmadı.** Faz 5 beş oyunun kaynağını sayfa seviyesinde
+>    açtı ve beşi de yazılamaz çıktı. Bu küçük bir örneklemdir ama
+>    "erişilebilir" sayılan 92 oyunun bir bölümünün **kural taşımayan**
+>    kaynaklara bağlı olabileceğini gösteriyor.
+> 2. **Dış oynanabilirlik test oturumları.** Paket `01_SOURCE/pilot_tr/`
+>    içinde hazır. Ajan bu adımı yapamaz ve sahte kayıt üretmez.
+>    **Bu blok Faz 2'den beri aynı yerde.**
+> 3. **cats-cradle · 150 mm çatışması.** Kaynak (Jayne 1906, ss. 324–338)
+>    **tam ve sayfa-doğrulanmış**; sekiz figür oyun başına 150 mm tavanına
+>    sığmıyor. Üç seçenek `source_access_pending.json § editorialHolds`
+>    içinde. **Kurucu kararı gerekir.**
+> 4. **Telifli kaynaklara erişim.** Beş oyun engelli (P4). Ayrıca iki
+>    oyun (lagori · kho-kho) **P6**'dadır: kaynakları arandı ve
+>    denetlenebilir bir kayıt **bulunamadı** — bu bir erişim engeli
+>    değildir ve kütüphane kartıyla açılmaz.
 >
-> Bir KARAR bekliyor: **tahtasız ailenin kültür dengesi ve
-> gonggi/fivestones mekanik çakışması** (PHASE_4_REPORT § 20.1). Yedek
-> havuzdan iki değişiklik ikisini birden çözer; bir **scope amendment**
-> gerektirir ve ajan yapamaz.
+> Açık kurucu kararları: **A4** (büyük punto) · **A5** (`STYLE.md` onayı) ·
+> **A6** (yazar biyografisi).

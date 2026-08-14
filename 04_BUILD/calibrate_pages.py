@@ -403,7 +403,17 @@ def run_check(root: str, args) -> int:
     """--check: ölçüm raporu var ve tutarlı mı.
 
     Ticari manuscript depoda YOKTUR; CI bu yüzden ölçümü tekrar edemez.
-    Denetlenebilen şey, işlenmiş ölçümün kendi içinde tutarlı olmasıdır."""
+    Denetlenebilen şey, işlenmiş ölçümün kendi içinde tutarlı olmasıdır.
+
+    FAZ 5 EKLEMESİ — BAYAT ÖLÇÜM.
+    Manuscript YERELDE varsa, ölçümün hangi maddeleri kapsadığı da
+    denetlenir. Faz 5'in kapsam değişikliği iki maddeyi manuscript'ten
+    çıkardı; bu kapı hiçbir şey söylemedi ve 22 oyunluk ESKİ ölçümü
+    "tutarlı" ilan etti. Sayfa modeli bu kitabın FİYAT modelidir: iki
+    madde eksilirken 258 sayfa demeye devam eden bir ölçüm, kapak
+    sırtından birim telife kadar her şeyi yanlış hesaplatır.
+
+    CI'da manuscript yoktur ve bölüm eskisi gibi boş koşar."""
     p = os.path.join(root, "06_REPORTS", "phase2-typeset-measurement.json")
     if not os.path.exists(p):
         print("  · dizgi ölçümü henüz yapılmamış — kapı boş koşar")
@@ -413,6 +423,23 @@ def run_check(root: str, args) -> int:
     errs = []
     if not d.get("perGame"):
         errs.append("ölçüm boş")
+
+    bp = os.path.join(root, cfg["language"]["commercialManuscriptDir"],
+                      "book.json")
+    if os.path.exists(bp):
+        live = {g["gameId"] for g in load(bp).get("games", [])}
+        meas = {r["gameId"] for r in d.get("perGame", [])}
+        gone = sorted(meas - live)
+        fresh = sorted(live - meas)
+        if gone:
+            errs.append("ÖLÇÜM BAYAT — manuscript'te OLMAYAN madde ölçülmüş: "
+                        "%s (yeniden ölçün)" % ", ".join(gone[:5]))
+        if fresh:
+            errs.append("ÖLÇÜM BAYAT — manuscript'teki madde ÖLÇÜLMEMİŞ: "
+                        "%s (yeniden ölçün)" % ", ".join(fresh[:5]))
+    else:
+        print("  · manuscript depoda yok — kapsam karşılaştırması atlandı "
+              "(CI'da beklenen)")
     if d.get("pageTarget") != cfg["scope"]["pageTarget"]:
         errs.append("ölçüm başka bir sayfa hedefine göre yapılmış")
     for r in d.get("perGame", []):
@@ -421,6 +448,34 @@ def run_check(root: str, args) -> int:
     if abs(d.get("deviationPct", 0)) > cfg["scope"]["pageTolerancePct"] \
             and d.get("withinTolerance"):
         errs.append("sapma bandı aşıyor ama 'withinTolerance' true")
+
+    # FAZ 5 EKLEMESİ — KALİBRE EDİLMİŞ CONFIG ÖLÇÜMDEN KAYMIŞ MI.
+    #
+    # Ölçüm raporunu `calibrate_pages.py` yazar; ekonomiyi hesaplayan
+    # `page_budget.py` ve `editions.py` ise sayıyı RAPORDAN DEĞİL
+    # `project_config.json § production.pageModel.measured` içinden okur.
+    # İkisini birbirine bağlayan tek şey, ölçümden sonra config'i
+    # güncellemeyi HATIRLAMAKTI.
+    #
+    # Faz 5'te tam olarak bu koptu: yeni ölçüm 260 sayfa dedi, config 258
+    # demeye devam etti ve iki betik eski sayıyla telif hesapladı. Hiçbir
+    # kapı itiraz etmedi. Sayfa sayısı kapak sırtını ve birim telifi
+    # belirler; sessizce eski kalması, kitabın ekonomisini eski kitaptan
+    # hesaplamaktır. (Faz 4'ün "gömülü değer" dersinin ekonomik biçimi.)
+    # `p` CANLI ölçümdür; `measured.report` yalnızca arşiv nüshasına bir
+    # işarettir. Karşılaştırma canlı ölçümle yapılır.
+    meas = (cfg.get("production", {}).get("pageModel", {}).get("measured")
+            or {})
+    for key in ("projectedTotalPages", "sampleSize", "deviationPct",
+                "overflowDriver"):
+        if meas and meas.get(key) != d.get(key):
+            errs.append(
+                "config KAYMIŞ — pageModel.measured.%s = %r ama CANLI ölçüm "
+                "%r diyor (ekonomi eski sayıyla hesaplanıyor)"
+                % (key, meas.get(key), d.get(key)))
+    rp = meas.get("report")
+    if rp and not os.path.exists(os.path.join(root, rp)):
+        errs.append("config'in işaret ettiği ölçüm raporu yok: %r" % rp)
     for e in errs:
         print("  ✗ %s" % e)
     if errs:

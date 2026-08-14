@@ -157,6 +157,36 @@ def check_rendered_budget(cfg: dict, diagrams: list, root: str,
     rep.check(not unrendered,
               "her diyagram render edilmiş ve ÖLÇÜLMÜŞ" + brief(unrendered))
 
+    # FAZ 5 EKLEMESİ — TERS YÖN: ölçümde olup TANIMI OLMAYAN diyagram.
+    #
+    # Denetim tek yönlüydü: "her tanımın ölçümü var mı". Tersi sorulmuyordu
+    # ve Faz 5'te tam olarak o koptu — K23 iki oyunu kapsamdan çıkardı,
+    # tanımları silindi, ama ölçüm dosyası ikisini de SAYMAYA devam etti ve
+    # kapı yeşil yandı.
+    #
+    # Bu bir muhasebe hatası değil bir BÜTÇE hatasıdır: ölçüm dosyası, oyun
+    # başına 150 mm toplamının hesaplandığı yerdir. Artık var olmayan bir
+    # diyagram o toplama girerse bütçe gerçek kitabı değil eski kitabı
+    # denetler.
+    # ⚠ AMA YALNIZCA TANIM KÜMESİ TAMSA. `07_ASSETS/diagrams/**` korumalı
+    # katmandadır: CI'da yalnızca `pilot` ve `phase3` kayıtları görünür,
+    # `phase4_diagrams.json` görünmez. Orada bu denetim, GÖRÜNMEYEN her
+    # tanımı "hayalet" sayar ve doğru bir ölçümü kırmızı yakar.
+    #
+    # Bu, kapının kendisinin de öğrendiği ders: eksik veriyle koşan bir
+    # denetim, denetlediğini sanıp başka bir şeyi denetler. Manuscript
+    # yereldeyse tam koşar, CI'da açıkça boş koşar (körlüğü selftest
+    # kapatır — qa_manuscript ile aynı sözleşme).
+    full_view = os.path.exists(os.path.join(root, "02_MANUSCRIPT", "book.json"))
+    if full_view:
+        ghost = sorted(set(measured) - {d["diagramId"] for d in diagrams})
+        rep.check(not ghost,
+                  "ölçümde TANIMI OLMAYAN diyagram yok (bayat render raporu)"
+                  + brief(ghost))
+    else:
+        print("  · tanım kümesi kısmi (korumalı katman yok) — bayatlık "
+              "denetimi ATLANDI; selftest kapsar")
+
     over, wide = [], []
     for d in diagrams:
         m = measured.get(d["diagramId"])

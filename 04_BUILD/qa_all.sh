@@ -154,6 +154,16 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
   run "MANUSCRIPT BÜTÜNLÜĞÜ"    $PY 04_BUILD/qa_manuscript.py \
                                    --json 06_REPORTS/qa-manuscript.json
 
+# ── FAZ 5 KAPILARI ─────────────────────────────────────────────────────────
+# Arka madde ÜRETİLİR (build_backmatter.py) ve burada DENETLENİR. Üretilmiş
+# bir dosya, denetlenmedikçe elle yazılmış bir dosyadan güvenli değildir:
+# üreteç yanlış kova hesaplarsa çıktı kendi içinde TUTARLI görünür.
+[ -f 04_BUILD/build_backmatter.py ] && \
+  run "arka madde üretimi"      $PY 04_BUILD/build_backmatter.py
+[ -f 04_BUILD/qa_index.py ] && \
+  run "ARKA MADDE VE ÜÇ İNDEKS" $PY 04_BUILD/qa_index.py \
+                                   --json 06_REPORTS/qa-index.json
+
 # ── ÜRETİM MODELİ ──────────────────────────────────────────────────────────
 [ -f 04_BUILD/page_budget.py ] && \
   run "sayfa bütçesi"           $PY 04_BUILD/page_budget.py \

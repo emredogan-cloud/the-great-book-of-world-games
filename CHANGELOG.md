@@ -5,6 +5,83 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.5.0] — 2026-08-14 · FAZ 5 · Kapsam değişikliği, arka madde, altı kapı kusuru
+
+**Yazılan oyun: 0.** Manuscript **22 → 20**, çünkü K23 iki *yazılmış*
+maddeyi kapsamdan çıkardı. **Faz 5 kendi ana hedefini (100 oyun)
+tutturamadı** ve rapor bunu ilk satırında söylüyor.
+
+**KAPSAM DEĞİŞİKLİĞİ — K23** (`scope_lock.json § amendments[0]`)
+
+| çıkarılan | eklenen |
+|---|---|
+| **Fivestones** · İngiliz · `distinct 2` | **Lagori** · Kannada |
+| **Marbles** · İngiliz · `distinct 3` | **Kho-Kho** · Marathi |
+
+Ölçülen etki: kitap kültürü **71 → 73** · tahtasız aile kültürü
+**11 → 13** · tahtasız İngiliz madde **5 → 3** · aile hedefleri
+**değişmedi** · yedek havuz **19** (çıkanlar geri döndü). Gonggi/Fivestones
+mekanik çakışması **çözüldü**. Geri alınan prozalar silinmedi
+(`02_MANUSCRIPT/retired_phase5.json`).
+
+**ARKA MADDE — Faz 4'ün yazmadığı iş tamamlandı.** Altı bölüm, hepsi
+canonical veriden **üretiliyor**: 18 tahta şablonu · 85 malzeme satırı ·
+**61 terimlik sözlük** · 100 maddelik kaynakça · **üç indeks**
+(73 kültür / oyuncu sayısı / süre-yaş) · 5 uydurulmuş gelenek düzeltmesi.
+Yeni kapı `qa_index.py` (31 denetim). **Sayfa numarası uydurulmuyor:**
+20/100 oyun ölçüldü, 80'i `awaiting-typesetting` taşıyor.
+
+**ALTI KAPI KUSURU — altısı da gerçek veriyle YEŞİL koşuyordu:**
+
+1. **Şerh, kilit özetini ömür boyu devre dışı bırakıyordu** — bir tane
+   `amendments[]` girdisi sha256 denetimini sonsuza kadar kapatıyordu.
+2. **"Model ayrışırsa kapı ısırır" vaadinin kapısı YOKTU** — dosyanın
+   kendi başlığı iddia ediyordu, öyle bir denetim hiç yazılmamıştı.
+3. **Kapsamdan çıkarılan oyun basılmaya devam edebiliyordu** —
+   `qa_manuscript.py` manuscript'i kapsam kilidiyle hiç karşılaştırmıyordu.
+4. **Dizgi ölçümü manuscript altından değişince bayat kalıyordu** —
+   22 oyunluk eski ölçüm "tutarlı" ilan ediliyordu.
+5. **Kalibre config ölçümden kayınca ekonomi eski sayıyla hesaplanıyordu**
+   — ölçüm 260 dedi, config 258 dedi, telif eski sayıdan çıktı.
+6. **Emekliye ayrılan diyagram 150 mm bütçesinde sayılmaya devam
+   ediyordu** — denetim tek yönlüydü.
+
+Ayrıca: `validate_research.py`'nin gömülü doğrulama-seviyesi listesi
+config'le birleştirildi; **`validate_scope.py`'nin `--root` sözleşmesi
+yoktu** ve kapsam kilidine yazılmış kasıtlı kusur testleri kapı ısırdığı
+için değil *argparse hatası verdiği için* geçiyordu.
+
+**BEŞ OYUNUN KAYNAĞI SAYFA SEVİYESİNDE AÇILDI — beşi de yazılamaz:**
+hnefatafl · halatafl (Fiske 1905: kaynak erişilebilir, **kural yok**) ·
+cats-cradle (Jayne 1906: **kural tam**, engel **editoryal** — 150 mm) ·
+oware (Culin 1896: **kimlik tuzağı** — Şam ve Vei kayıtları, Akan değil) ·
+jianzi (Culin 1895: nesne anlatılıyor, kural yok — Faz 4'ün kararı
+**doğrulandı**).
+
+**YENİ KUYRUK SEVİYESİ P6** — *"kaynak ARANDI, KAYIT BULUNAMADI"*.
+P4'ten ayrıdır: P4 bir **erişim** engelidir (kayıt var, nüsha kapalı,
+kütüphane kartı açar); P6 bir **varlık** sorunudur (kayıt henüz yok).
+**Üçüncü tür: `editorialHolds`** — kaynağı tam olduğu hâlde kitabın kendi
+üretim kuralı yüzünden yazılamayan madde (cats-cradle).
+
+**DİL AYRIMI KAPISI İKİ GERÇEK SIZINTI YAKALADI** — arka madde üreteci
+envanterin Türkçe `substitutionHint` ve `locator` alanlarını ticari
+katmana taşıyordu. Kapı zayıflatılmadı; üreteç düzeltildi (86 terimlik
+ticari İngilizce eşleme; eşlenmemiş ipucunda üreteç **çöküyor**).
+
+**Sayfa modeli:** 258 → **260** (+%1,6 · bantta). Ciltsiz telif
+8,41 → **8,37 $**, ciltli 10,96 → **10,92 $**. Sürücü yine **`both`** —
+Faz 4'ün bulgusu ikinci örneklemde doğrulandı.
+
+**Düzeltme:** `v0.4.0` ve `v0.3.0` etiketleri **hiç var olmamış**
+(`git ls-remote --tags origin` boş). Faz raporları kilometre taşını
+yazmıştı; etiket yazmakla oluşmaz.
+
+**Selftest:** 148 → **172** denetim. **CI yeşil.** `.gate` = `phase1`
+(yükseltilmedi). **Dış insan testi: 0 — değişmedi.**
+
+---
+
 ## [0.4.0] — 2026-08-14 · FAZ 4 · Erişilebilir havuz, beş kapı kusuru, 258 sayfa
 
 **Yazılan:** 11 oyun (manuscript 11 → **22**). Doğrulanmış künye 17 → **28**.

@@ -197,20 +197,6 @@
       "withinDiagramBudget": true
     },
     {
-      "diagramId": "fivestones-ring",
-      "gameId": "fivestones",
-      "widthMm": 46.0,
-      "heightMm": 50.5,
-      "legendMm": 4.5,
-      "boardClass": "point",
-      "panels": 1,
-      "file": "07_ASSETS/diagrams/fivestones-ring.svg",
-      "renderedWidthMm": 46.0,
-      "panelLayout": "horizontal",
-      "fitsFullWidth": true,
-      "withinDiagramBudget": true
-    },
-    {
       "diagramId": "hopscotch-bed",
       "gameId": "hopscotch",
       "widthMm": 52.0,
@@ -248,20 +234,6 @@
       "panels": 1,
       "file": "07_ASSETS/diagrams/setdilth-circle.svg",
       "renderedWidthMm": 52.0,
-      "panelLayout": "horizontal",
-      "fitsFullWidth": true,
-      "withinDiagramBudget": true
-    },
-    {
-      "diagramId": "marbles-ring",
-      "gameId": "marbles",
-      "widthMm": 56.0,
-      "heightMm": 58.4,
-      "legendMm": 9.0,
-      "boardClass": "point",
-      "panels": 1,
-      "file": "07_ASSETS/diagrams/marbles-ring.svg",
-      "renderedWidthMm": 56.0,
       "panelLayout": "horizontal",
       "fitsFullWidth": true,
       "withinDiagramBudget": true
