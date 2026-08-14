@@ -1490,7 +1490,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Dice games: Hopi', ss. 160–162, şekil 190–196"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -1660,7 +1661,8 @@
       "sources": [
         {
           "ref": "Lane, Edward William, An Account of the Manners and Customs of the Modern Egyptians (London, 1836)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Games' bölümü, ss. 185–188"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",

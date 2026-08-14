@@ -2578,7 +2578,8 @@
         },
         {
           "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland, 2 vols (London: David Nutt, 1894–98)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Fox and Geese (2)', cilt I, ss. 141–142"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -5039,7 +5040,8 @@
       "sources": [
         {
           "ref": "Lane, Edward William, An Account of the Manners and Customs of the Modern Egyptians (London, 1836)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Games' bölümü, ss. 185–188"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -5293,7 +5295,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Dice games: Hopi', ss. 160–162, şekil 190–196"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -6325,7 +6328,8 @@
         },
         {
           "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Nine Men's Morris', cilt I, ss. 414–417"
         },
         {
           "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
@@ -8330,7 +8334,8 @@
       "sources": [
         {
           "ref": "Lane, Edward William, An Account of the Manners and Customs of the Modern Egyptians (London, 1836)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Games' bölümü, ss. 188–189"
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -10463,7 +10468,8 @@
       "sources": [
         {
           "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Dice games: White Mountain Apache', ss. 88–89, şekil 86–87"
         }
       ],
       "ruleCompleteness": {
@@ -11678,7 +11684,8 @@
       "sources": [
         {
           "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Fivestones', cilt I, ss. 122–126"
         },
         {
           "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
@@ -11933,7 +11940,8 @@
       "sources": [
         {
           "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Hop-Scotch', cilt I, ss. 223–227"
         },
         {
           "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
