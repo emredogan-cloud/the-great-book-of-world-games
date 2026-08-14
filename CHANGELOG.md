@@ -5,6 +5,51 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.4.0] — 2026-08-14 · FAZ 4 · Erişilebilir havuz, beş kapı kusuru, 258 sayfa
+
+**Yazılan:** 11 oyun (manuscript 11 → **22**). Doğrulanmış künye 17 → **28**.
+
+| Batch | Oyunlar |
+|---|---|
+| 1 · kalibrasyon | seega · tab · nine-mens-morris · fox-and-geese · fivestones · hopscotch · totolospi · set-dilth |
+| 2 · tahtasız | jan-ken · conkers · marbles |
+
+**Kararlar:** K21 (Faz 4 üretim istisnası — üretim ilerler, kapı ilerlemez)
+· K22 (kuyruk bir SIRA kapısıdır: erişilebilir önce, engelli sona).
+
+**Beş kapı kusuru bulundu ve düzeltildi:**
+
+1. **150 mm bütçesi oyun başına tanımlı, diyagram başına denetleniyordu.**
+   Tablut iki diyagramla 181,5 mm ediyor ve geçiyordu. Kapı düzeltildi;
+   `tablut-capture` bir ayrıntıya daraltıldı (144,0 mm).
+2. **Efsane sembolü bir font karakteriydi** ve font taşımayınca boş
+   basılıyordu — tilki efsanede sembolsüzdü. Efsane artık çiziliyor.
+3. **Alma çarpısı (×) hiçbir efsanede açıklanmıyordu** ve koyu taşta
+   siyah üstüne siyah çiziliyordu. Üçü birden düzeltildi.
+4. **`calibrate_pages.py` sonucu koda gömülü basıyordu.** Faz 2'nin
+   cümlesi 22 oyunda yanlışlandı ama yine de basılıyordu. Artık türetiliyor.
+5. **`fivestones` maddesinin kurulum bloğu yoktu** — yeni `qa_manuscript.py`
+   kapısı ilk koşusunda buldu.
+
+**Ölçüm:** sayfa modeli 268 → **258** (sapma +%4,7 → **+%0,8**). Taşma
+%9 → **%4,5**. Kelime/sayfa 405 → **447**. Ciltsiz telif 8,24 → **8,41 $**.
+
+**Kuyruk:** "engelli" gösterilen oyun **80 → 5**; erişilebilir **20 → 94**.
+`royal-game-of-ur` engelli kuyruğa eklendi (Faz 3 verisinde eksikti).
+
+**Çözülen:** Totolospi kural kimliği çelişkisi — Culin aynı adı iki farklı
+oyun için kullanıyor ve bunu s. 796 dipnotunda kendisi söylüyor.
+
+**Yeni kapı:** `04_BUILD/qa_manuscript.py` (7 denetim) ·
+`04_BUILD/build_queue.py --check`. Diyagram dili **v1.4** (`bodily/bed`).
+Selftest **126 → 148** denetim.
+
+**Değişmeyen:** `.gate` = `phase1` · `locked` oyun 0 · dış test 0 ·
+kapsam 100 oyun.
+
+---
+
+
 ## [0.3.0] — 2026-08-13 · FAZ 3 · Üretim, erişilebilir kaynakla ölçek, sayfa düzeltmesi
 
 > Faz 3 sekiz oyun yazdı ve **Faz 2'nin en önemli sayısının yanlış
@@ -212,3 +257,4 @@ A6 (yazar biyografisi) · A7 (**oyun testçileri · Faz 2 bloklayıcısı**)
 ### Durum
 
 `.gate` = `phase0` · **Faz 1 BAŞLAMADI** · kurucu onayı bekleniyor
+

@@ -4,7 +4,7 @@
 > belgedir.** Hafızası olmayan bir ajan buradan başlar ve projenin nerede
 > olduğunu, neyin kilitli neyin açık olduğunu buradan öğrenir.
 >
-> Son güncelleme: **13 Ağustos 2026** · Faz: **3 · ÜRETİM AÇIK** · Kapı: `phase1`
+> Son güncelleme: **14 Ağustos 2026** · Faz: **4 · ÜRETİM AÇIK** · Kapı: `phase1`
 
 ---
 
@@ -55,42 +55,60 @@ ayrılmış — akademik oyun tarihi (oynanamaz) ve jenerik aile oyunu listeleri
 ## 4 · Şu anki durum
 
 > ⚠ **ÜRETİM AÇIK · RESMÎ KAPI KAPALI.** İkisi ayrı şeylerdir ve bu
-> ayrım kasıtlıdır (karar K18). Kurucu Faz 3 üretim işini yetkilendirdi;
-> resmî faz kapısı **yalnızca gerçek kanıtla** açılır.
+> ayrım kasıtlıdır (kararlar K18 · K21). Kurucu Faz 4 üretim işini de
+> yetkilendirdi; resmî faz kapısı **yalnızca gerçek kanıtla** açılır.
+>
+> ```
+> PRODUCTION       : AUTHORIZED
+> FORMAL VALIDATION: PENDING
+> ```
 
 | | |
 |---|---|
-| Faz | **3 · ÜRETİM ŞERİDİ AÇIK** (koşullu · K18) |
+| Faz | **4 · ÜRETİM ŞERİDİ AÇIK** (koşullu · K21) |
 | Kapı (`.gate`) | **`phase1`** — yükseltilmedi ve yükseltilmeyecek |
 | Kilitli kapsam | **100 oyun · 71 kültür · 19 yedek** ✅ |
-| **Yazılmış oyun** | **11** / 100 |
+| **Yazılmış oyun** | **22** / 100 |
 | Kilitli oyun | **0** / 100 |
-| Doğrulanmış künye | **17** (3 oyunda ≥2) |
-| Kaynak: denendi-erişilemedi | **4** oyun |
-| Kaynak: henüz denenmedi | **82** oyun |
+| Doğrulanmış künye | **28** (25 oyunda ≥1, 3 oyunda ≥2) |
+| Kaynak: denendi-erişilemedi | **5** oyun |
+| Kaynak: henüz denenmedi | **70** oyun |
+| **Erişilebilir · yazılmamış** | **72** oyun — kuyrukta sıralı |
 | **Dış oynanabilirlik testi** | **0** ⛔ **BLOKLAYICI** |
-| Diyagram | **16 render · hepsi ≤150 mm** ✅ |
-| Diyagram dili | **v1.3** (düzensiz tahtalar) |
-| **Sayfa modeli** | **268** (hedef 256, **+%4,7**) ✅ **BANTTA** |
-| Selftest | **126 denetim** ✅ |
-| Depo | public · `faz/3-blok-1` · CI **YEŞİL** |
-| **Sonraki adım** | **KURUCU: dış test + kaynak erişimi** |
+| Diyagram | **27 render · hepsi ≤150 mm** ✅ |
+| **Oyun başına diyagram** | **azami 144,0 mm** ✅ (Faz 4'te kapıya bağlandı) |
+| Diyagram dili | **v1.4** (`bodily/bed` — zemine çizilen bölmeler) |
+| **Sayfa modeli** | **258** (hedef 256, **+%0,8**) ✅ **BANTTA** |
+| Selftest | **148 denetim** ✅ |
+| Depo | public · `faz/4-blok-2` · CI **YEŞİL** |
+| **Sonraki adım** | **KURUCU: dış test + kaynak erişimi + § 20.1 kapsam kararı** |
 
 Faz raporları: [`06_REPORTS/PHASE_2_REPORT.md`](06_REPORTS/PHASE_2_REPORT.md) ·
-[`06_REPORTS/PHASE_3_REPORT.md`](06_REPORTS/PHASE_3_REPORT.md)
+[`06_REPORTS/PHASE_3_REPORT.md`](06_REPORTS/PHASE_3_REPORT.md) ·
+[`06_REPORTS/PHASE_4_REPORT.md`](06_REPORTS/PHASE_4_REPORT.md)
 
-**Faz 3'ün en önemli çıktısı bir düzeltmedir:** Faz 2'nin 316 sayfalık
-projeksiyonu yanlıştı. Üç oyunluk örneklemde taşma oranı %33 sanılmıştı;
-on bir oyunda %9 çıktı ve kitap **268 sayfayla hedef bandın içine** girdi.
-Faz 2'nin önerdiği üç müdahalenin hiçbiri gerekmedi.
+**Faz 4'ün en önemli çıktısı yine bir düzeltmedir:** Faz 2'nin
+*"sayfa bütçesi bir diyagram bütçesidir"* cümlesi **yanlışlandı**. Üç
+oyunda metin farkı 0,01'di ve metin sabit sanıldı; yirmi iki oyunda 0,69
+oldu ve diyagram farkını (0,63) **geçti**. Cümle bir bulgu değil bir
+**örneklem eseriydi** ve `calibrate_pages.py` içine gömülü olduğu için
+verisini yalanlarken bile basılmaya devam ediyordu. Artık ölçümden
+türetiliyor.
 
-⚠ **Faz 4 BAŞLAMADI.** İki sert bloklayıcı sürüyor:
+Faz 4 ayrıca **beş kapı kusuru** buldu — beşi de gerçek veriyle yeşil
+koşan kapılardaydı. En sertleri: 150 mm bütçesi **oyun başına** tanımlı
+olduğu hâlde **diyagram başına** denetleniyordu (tablut 181,5 mm ile
+geçiyordu), ve `fivestones` maddesinin **kurulum bloğu yoktu**.
+
+⚠ **FAZ 4 KAPSAMI TAMAMLANMADI.** Yazılan 22, hedef 100. Üç sert
+bloklayıcı sürüyor:
 
 1. **Dış insan testi yapılmadı.** Ajan test yapamaz; sahte kayıt
    üretilmez. Paket hazır (`01_SOURCE/pilot_tr/`), oturum kurucunundur.
-2. **Telifli kaynaklara erişim.** Dört oyun denendi ve erişilemedi;
-   82 oyun henüz sıraya gelmedi. Kütüphane erişimi olmadan `locked`
-   eşiği karşılanamaz.
+2. **Telifli kaynaklara erişim.** Beş oyun denendi ve erişilemedi.
+   Ama **72 oyun erişilebilir** ve yalnızca sıra bekliyor — bu sayı
+   Faz 3'te 20 görünüyordu ve düzeltildi (K22).
+3. **Arka madde yazılmadı** — üç indeks, sözlük, tahta şablonları.
 
 ## 5 · Bu projenin risk profili
 
@@ -208,15 +226,23 @@ kapanmadan sonrakine geçilmez. CI kırmızıyken hiçbir şey ilerlemez.
 
 > **KURUCU EYLEMİ BEKLENİYOR — onay değil, EYLEM.**
 >
-> A1 · A2 · A3 · A7 kapandı (K12–K15). Faz 3 sekiz oyun yazdı, sayfa
-> modelini düzeltti ve durdu.
+> A1 · A2 · A3 · A7 kapandı (K12–K15). Faz 4 on bir oyun yazdı, beş kapı
+> kusuru buldu, sayfa modelini 258'e indirdi ve durdu.
 >
-> Bekleyen iki BLOKLAYICI:
+> **Üretim ilerleyebilir: 72 erişilebilir oyun kuyrukta sıralı bekliyor.**
+> Kaynak erişimi bir tıkanma değil bir hız sınırıdır — engelli olan
+> yalnızca **5** oyundur.
+>
+> Bekleyen üç BLOKLAYICI:
 > 1. **Dış oynanabilirlik test oturumları.** Paket `01_SOURCE/pilot_tr/`
 >    içinde hazır: üç oyun, testçi kılavuzu, kayıt formu. Ajan bu adımı
->    yapamaz.
+>    yapamaz ve sahte kayıt üretmez. **Bu blok Faz 2'den beri aynı yerde.**
 > 2. **Telifli kaynaklara erişim.** Murray (1913/1952) · Bell (1960) ·
->    Parlett (1999) · de Voogt (1997) · Zaslavsky (1973) açık tam metin
->    değil. Bunlar olmadan `locked` eşiği karşılanamaz.
+>    Parlett (1999) · de Voogt (1997) · Zaslavsky (1973) · Finkel (2007)
+>    açık tam metin değil. Beş oyun bunlara bağlı.
+> 3. **Arka madde** — üç indeks, sözlük, tahta şablonları — yazılmadı.
 >
-> Bir karar: **sayfa modeli** (§ 11 · üç seçenek, öneri diyagram bütçesi).
+> Bir KARAR bekliyor: **tahtasız ailenin kültür dengesi ve
+> gonggi/fivestones mekanik çakışması** (PHASE_4_REPORT § 20.1). Yedek
+> havuzdan iki değişiklik ikisini birden çözer; bir **scope amendment**
+> gerektirir ve ajan yapamaz.

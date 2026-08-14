@@ -171,6 +171,31 @@ Konum değil **ROL** gösterilir.
 > der ve bu **yanlıştır**. Çember bir yay olarak çizilir, sayı künye
 > şeridinde durur.
 
+**(c) `bed` — ZEMİNE ÇİZİLEN BÖLMELER** · *v1.4, Faz 4*
+
+Örnek: Hopscotch
+
+Seksek yatağı bir **ızgara değildir**: sekiz bölme, kimi tek kimi yan yana
+çift. İki sütunlu bir ızgarayla çizmek **on iki** bölme üretir ve okur o
+yatağı zemine çizip oynayamaz — yani v1.3'ün düzensiz tahtalar için
+yasakladığı "uygun bir ızgarayla idare etme"nin tam kendisi.
+
+Tanımlayıcı bölmeleri **açıkça listeler**:
+
+```json
+"boardClass": "bodily", "frame": "bed",
+"divisions": [
+  {"id": "d1", "x": 0.25, "y": 0.875, "w": 0.5, "h": 0.125, "label": "1"}
+]
+```
+
+Koordinat kuralı **bölme kimliğidir** (`d1`…`d99`) ve sınır denetimi
+tanımlı bölme kümesidir — `point` sınıfının graph kipiyle aynı disiplin.
+
+> **Ekleme geriye dönük DEĞİLDİR.** Mevcut hiçbir tanımlayıcı değişmedi.
+> v1.2 → v1.3 geçişi de böyleydi. Dondurma, dilin **büyümesini** değil
+> mevcut notasyonun **değişmesini** yasaklar.
+
 ---
 
 ## 3 · Taş notasyonu
