@@ -1,36 +1,49 @@
 # STYLE — The Great Book of World Games
 
-> Sürüm **2.0 · Faz 2 · ÖLÇÜMLE KALİBRE EDİLDİ.**
+> Sürüm **2.1 · Faz 4 · ÖLÇÜM 22 OYUNA ÇIKARILDI.**
 >
-> v1.0'ın sayıları hedefti. Buradakiler **ölçüldü**: üç oyun gerçek trimde
-> (8,5 × 11), gerçek fontla (Times-Roman 10,5/13,5), gerçek sütun
-> genişliğinde (181 mm) dizildi ve satırlar sayıldı.
-> Ölçüm: `06_REPORTS/phase2-typeset-measurement.json`
+> v1.0'ın sayıları hedefti. Buradakiler **ölçüldü**: yirmi iki madde gerçek
+> trimde (8,5 × 11), gerçek fontla (Times-Roman 10,5/13,5), gerçek sütun
+> genişliğinde (181 mm) dizildi ve satırlar sayıldı. Örneklem üç fazda
+> 3 → 11 → 22 oyuna çıktı ve her seferinde bir sayıyı düzeltti.
+> Ölçüm: `06_REPORTS/phase4-typeset-measurement.json` (22 oyun)
 >
 > Kurucu onayı bekliyor (AÇIK KARAR A5) · `project_config.json § style` ile
 > senkron kalmalıdır.
 
 ---
 
-## 0 · Faz 2 ölçümü — kalibrasyonun tek cümlesi
+## 0 · Ölçüm — ve Faz 2'nin cümlesinin nasıl düzeldiği
 
-> **Sayfa bütçesi bir KELİME bütçesi değil, bir DİYAGRAM bütçesidir.**
+> **Faz 2 (3 oyun) şunu yazdı:** *"Sayfa bütçesi bir KELİME bütçesi değil,
+> bir DİYAGRAM bütçesidir."*
+>
+> **Faz 4 (22 oyun) bunu ölçtü ve YANLIŞLADI.** Cümle bir bulgu değil, bir
+> **örneklem eseriydi**.
 
-| Ölçülen | Faz 1 hipotezi | **Faz 2 ölçümü** | Sonuç |
-|---|---:|---:|---|
-| Kelime / dizilmiş sayfa | 320 | **389** | hipotez %18 düşüktü |
-| Kelime / oyun | 650 | **708** | bantta (480–900) |
-| **Metin** sayfa / oyun | — | **1,37** | oyunlar arası fark **0,01** |
-| **Diyagram** sayfa / oyun | — | **0,45** | oyunlar arası fark **0,55** |
-| Toplam sayfa / oyun | 2,00 | **1,82** | bantta (2,0 ± 0,25) |
+| Ölçülen | Faz 1 hipotezi | Faz 2 (3) | Faz 3 (11) | **Faz 4 (22)** |
+|---|---:|---:|---:|---:|
+| Kelime / dizilmiş sayfa | 320 | 389 | 405 | **447** |
+| Kelime / oyun | 650 | 708 | 616 | **686** |
+| **Metin** sayfa / oyun | — | 1,37 | 1,18 | **1,25** |
+| **Metin** farkı (oyunlar arası) | — | **0,01** | 0,41 | **0,69** |
+| **Diyagram** farkı (oyunlar arası) | — | **0,55** | 0,62 | **0,63** |
+| Toplam sayfa / oyun | 2,00 | 1,82 | 1,52 | **1,53** |
+| Taşma oranı | — | %33 | %9 | **%4,5** |
 
-Üç oyunun metni birbirinden **yüzde bir** farklı çıktı. Diyagram alanı ise
-üç katına kadar değişti. Yani bir maddeyi çift sayfadan taşıran şey uzun
-proza değil, **büyük ya da çok sayıda diyagramdır**.
+Faz 2'de üç oyunun metni birbirinden yüzde bir farklıydı ve bu, metnin
+**sabit** olduğu anlamına geliyor sanıldı. Yirmi iki oyunda metin farkı
+**0,69 sayfaya** çıktı ve diyagram farkını (0,63) **geçti**.
 
-**Yazım için sonucu:** 650 kelime hedefi doğrudur ve **daraltılmasına gerek
-yoktur**. Kısıt diyagram tarafındadır ve `DIAGRAM_LANGUAGE.md § 7.1`de
-150 mm'lik bir bütçeye bağlanmıştır.
+**Tek bir sürücü yoktur.** Sayfa bütçesi hem kelimeyi hem diyagramı
+denetlemek zorundadır ve `calibrate_pages.py` sürücüyü artık **ölçümden
+türetir**; koda gömülü bir cümleden okumaz.
+
+**Yazım için sonucu değişmedi:** 650 kelime hedefi doğrudur ve
+daraltılmasına gerek yoktur (ölçülen 686, bant 480–900). 150 mm diyagram
+bütçesi de **yürürlükte kalır** — ama gerekçesi değişti: artık "tek sürücü
+diyagramdır" diye değil, **iki sürücüden birinin sert bir tavanı olmadığı**
+için. Faz 4 o tavanı ayrıca **oyun başına** bağladı.
 
 ---
 
@@ -50,18 +63,20 @@ adım ise kusurdur.
 
 ## 2 · Ölçülen bantlar
 
-| Ölçüt | Hedef | Faz 2'de ÖLÇÜLEN | Kapı |
+| Ölçüt | Hedef | **Faz 4'te ÖLÇÜLEN (22 oyun)** | Kapı |
 |---|---|---|---|
-| Oyun başına kelime | 650 (bant 480–900) | **708** ✓ | `qa_length` |
-| Kültürel hikâye | ~120 kelime | **118–122** ✓ | `qa_length` |
+| Oyun başına kelime | 650 (bant 480–900) | **686** ✓ | `qa_length` |
+| Kültürel hikâye | ~120 kelime | **118–130** ✓ | `qa_length` |
 | Anlatı cümle ortalaması | 12,0–19,0 kelime | — | `qa_drift` |
 | **Kural metni cümle azamisi** | **22 kelime** | **en uzun 21** ✓ | `qa_rules` |
 | Kural adımı | numaralı, **tek eylem** | — | `qa_rules` |
 | Aile portresi | ~600 kelime | Faz 3 | `qa_length` |
-| **Diyagram alanı / madde** | **≤150 mm** | 57,5 – 189,5 mm ⚠ | `qa_diagram` |
+| **Diyagram alanı / madde** | **≤150 mm** | 36,1 – 144,0 mm ✓ | `qa_diagram` |
 
-Son satır Faz 2'de **eklendi** ve bir maddede (Tablut) aşıldı. Kısıt buradan
-gelir, kelime sayısından değil.
+Son satır Faz 2'de eklendi, bir maddede (Tablut) aşıldı ve **Faz 4'te
+kapatıldı**. Bütçe artık **oyun başına** denetlenir: Faz 4 ölçümü, adı
+`maxDiagramMmPerGame` olan bütçenin diyagram başına denetlendiğini buldu —
+iki diyagramlı bir madde onu ikiye katlayabiliyordu.
 
 ---
 

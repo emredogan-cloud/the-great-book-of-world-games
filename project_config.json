@@ -10,7 +10,6 @@
     "CODEX-ENIGMATICA'dan TAMAMEN İZOLEDİR. Ortak dosya, ortak build,",
     "ortak rapor, ortak .gate YOKTUR."
   ],
-
   "project": {
     "id": "great-book-of-world-games",
     "workingTitle": "The Great Book of World Games",
@@ -23,9 +22,12 @@
     "repository": "emredogan-cloud/the-great-book-of-world-games",
     "portfolioSlot": "Kitap A · İlk yazılacak · yeni kitle motoru",
     "sourceOfTruth": "AMAZON-KDP-2026-MARKET-OPPORTUNITY-REPORT.html § 11 · Kitap A",
-    "isolatedFrom": ["CODEX_BESTIARIUM", "THE-GREAT-BOOK-OF-WORLD-MYTHS", "CODEX-ENIGMATICA"]
+    "isolatedFrom": [
+      "CODEX_BESTIARIUM",
+      "THE-GREAT-BOOK-OF-WORLD-MYTHS",
+      "CODEX-ENIGMATICA"
+    ]
   },
-
   "founder": {
     "$comment": [
       "KURUCU KARARLARI — TEK DOĞRULUK KAYNAĞI.",
@@ -53,17 +55,24 @@
       "kırmızıdır. Kurucu onaylı metin girmeden üretim tamamlanamaz."
     ]
   },
-
   "audience": {
     "$comment": "Alıcı çoğu zaman okurun kendisidir — World Myths'in aksine tek kişiyi ikna etmek yeterli.",
     "readerAgeMin": 8,
     "readerAgeMax": 99,
     "primaryReader": "aile (yetişkin + 8 yaş üstü çocuk birlikte)",
-    "buyer": ["parent", "gift-buyer", "game-enthusiast", "teacher", "librarian"],
+    "buyer": [
+      "parent",
+      "gift-buyer",
+      "game-enthusiast",
+      "teacher",
+      "librarian"
+    ],
     "bisacPrimary": "GAM002000",
-    "bisacSecondary": ["REF000000", "HIS000000"]
+    "bisacSecondary": [
+      "REF000000",
+      "HIS000000"
+    ]
   },
-
   "scope": {
     "$comment": [
       "KAPSAM KİLİTLİ · 13 Ağustos 2026 · kurucu kararı A2 + A3.",
@@ -97,16 +106,50 @@
       "qa_taxonomy.py iki dosyanın AYNI hedefi taşıdığını denetler."
     ],
     "familyTaxonomyHypothesis": [
-      {"id": "sowing",     "en": "The Sowing Games",        "tr": "Ekim oyunları",    "targetGames": 14},
-      {"id": "hunt-siege", "en": "The Hunt and the Siege",  "tr": "Av ve kuşatma",    "targetGames": 10},
-      {"id": "race",       "en": "The Race Home",           "tr": "Eve dönüş yarışı", "targetGames": 15},
-      {"id": "territory",  "en": "The Line and the Territory","tr": "Çizgi ve toprak","targetGames": 14},
-      {"id": "war-board",  "en": "The War Board",           "tr": "Savaş tahtası",    "targetGames": 17},
-      {"id": "chance",     "en": "Chance and Nerve",        "tr": "Şans ve cesaret",  "targetGames": 15},
-      {"id": "boardless",  "en": "Games Without a Board",   "tr": "Tahtasız oyunlar", "targetGames": 15}
+      {
+        "id": "sowing",
+        "en": "The Sowing Games",
+        "tr": "Ekim oyunları",
+        "targetGames": 14
+      },
+      {
+        "id": "hunt-siege",
+        "en": "The Hunt and the Siege",
+        "tr": "Av ve kuşatma",
+        "targetGames": 10
+      },
+      {
+        "id": "race",
+        "en": "The Race Home",
+        "tr": "Eve dönüş yarışı",
+        "targetGames": 15
+      },
+      {
+        "id": "territory",
+        "en": "The Line and the Territory",
+        "tr": "Çizgi ve toprak",
+        "targetGames": 14
+      },
+      {
+        "id": "war-board",
+        "en": "The War Board",
+        "tr": "Savaş tahtası",
+        "targetGames": 17
+      },
+      {
+        "id": "chance",
+        "en": "Chance and Nerve",
+        "tr": "Şans ve cesaret",
+        "targetGames": 15
+      },
+      {
+        "id": "boardless",
+        "en": "Games Without a Board",
+        "tr": "Tahtasız oyunlar",
+        "targetGames": 15
+      }
     ]
   },
-
   "pilot": {
     "$comment": [
       "FAZ 2 PİLOTU — 12 oyun. TEK pilot kapsamı vardır; ikinci gizli kapsam",
@@ -122,10 +165,13 @@
     "minBoardless": 1,
     "minFivePlayer": 1,
     "minAsymmetric": 1,
-    "batches": [4, 4, 4],
+    "batches": [
+      4,
+      4,
+      4
+    ],
     "batchRule": "Bir batch'te sistemik kusur çıkarsa BATCH DURUR; şablon düzeltilir; kusur kalan pilot oyunlara kopyalanmaz."
   },
-
   "language": {
     "$comment": [
       "DİL AYRIMI — kurucu kararı, Faz 2 · 13 Ağustos 2026.",
@@ -146,7 +192,6 @@
     "machineTranslationForbidden": true,
     "englishRequiresIndependentValidation": true
   },
-
   "sourceVerification": {
     "$comment": [
       "K11'in Faz 2 karşılığı. 'page-verified' bir etiket değil, bir KAYITTIR:",
@@ -155,16 +200,30 @@
       "Sayfa numarası UYDURULMAZ; uydurulan bir locator, doğrulanmamış bir",
       "künyeyi doğrulanmış gösterir ve kitabın tek denetlenebilir iddiasını yıkar."
     ],
-    "levels": ["bibliographic", "page-verified"],
+    "levels": [
+      "bibliographic",
+      "page-verified"
+    ],
     "recordFile": "01_SOURCE/source_verification.json",
-    "requiredFields": ["gameId", "sourceRef", "edition", "locator",
-                       "supportingPassage", "supportedClaim",
-                       "verifiedOn", "status", "accessMethod"],
-    "statuses": ["verified", "blocked", "pending"],
+    "requiredFields": [
+      "gameId",
+      "sourceRef",
+      "edition",
+      "locator",
+      "supportingPassage",
+      "supportedClaim",
+      "verifiedOn",
+      "status",
+      "accessMethod"
+    ],
+    "statuses": [
+      "verified",
+      "blocked",
+      "pending"
+    ],
     "requiredForStatus": "locked",
     "minPageVerifiedSourcesPerLockedGame": 2
   },
-
   "playtest": {
     "$comment": [
       "DIŞ İNSAN TESTİ — A7. Kurucu testçi bulundu; testler GERÇEK insanlarla",
@@ -174,16 +233,26 @@
       "karıştırılamaz. qa_playable.py yalnızca external kaydı kapı olarak sayar.",
       "Kişisel veri toplanmaz: yalnızca anonim testçi kimliği tutulur."
     ],
-    "evidenceTypes": ["external", "internal"],
+    "evidenceTypes": [
+      "external",
+      "internal"
+    ],
     "externalRequiredForStatus": "locked",
     "minExternalPlaytestsPerGame": 1,
     "recordDir": "01_SOURCE/playtests",
     "testerIdPattern": "^T[0-9]{2}$",
-    "forbiddenTesterFields": ["name", "surname", "email", "phone", "address",
-                              "birthDate", "photo", "socialHandle"],
+    "forbiddenTesterFields": [
+      "name",
+      "surname",
+      "email",
+      "phone",
+      "address",
+      "birthDate",
+      "photo",
+      "socialHandle"
+    ],
     "fabricationIsProjectEndingOffence": true
   },
-
   "diagram": {
     "$comment": [
       "DİYAGRAM DİLİ FAZ 2'DE DONAR. 60. oyunda notasyon değiştirmek önceki",
@@ -211,9 +280,13 @@
     "minStrokePt": 0.75,
     "minGlyphPt": 7.0,
     "colourForbidden": true,
-    "greyLevelsAllowed": [0, 25, 55, 100]
+    "greyLevelsAllowed": [
+      0,
+      25,
+      55,
+      100
+    ]
   },
-
   "playability": {
     "$comment": [
       "BU KİTABIN BENZERSİZ BAŞARISIZLIK BİÇİMİ: OYUN ÇALIŞMIYOR.",
@@ -225,30 +298,57 @@
     "minPlaytestsPerFamilyExemplar": 2,
     "playtestMustUseOnlyBookText": true,
     "requiredRuleFields": [
-      "objective", "playerCountMin", "playerCountMax", "materials",
-      "setup", "turnSequence", "winCondition", "durationMinutes", "ageMin"
+      "objective",
+      "playerCountMin",
+      "playerCountMax",
+      "materials",
+      "setup",
+      "turnSequence",
+      "winCondition",
+      "durationMinutes",
+      "ageMin"
     ],
-    "requiredEdgeCases": ["tie", "stalemate", "illegalMove"],
+    "requiredEdgeCases": [
+      "tie",
+      "stalemate",
+      "illegalMove"
+    ],
     "$comment2": "Berabere / kilit / kural dışı hamle: üç soru. Cevabı olmayan kural metni EKSİKTİR."
   },
-
   "sourcing": {
     "$comment": "Bestiarium SOURCING_STANDARD'ının oyunlara uyarlanmış hâli. Ayrıntı: SOURCING_STANDARD.md",
     "minIndependentSourcesPerGame": 2,
-    "confidenceLevels": ["high", "medium", "low", "reconstructed"],
+    "confidenceLevels": [
+      "high",
+      "medium",
+      "low",
+      "reconstructed"
+    ],
     "reconstructedMustBeLabelledInProse": true,
     "restrictionScreeningRequired": true,
-    "restrictionStatuses": ["open", "attributed", "restricted", "excluded"],
+    "restrictionStatuses": [
+      "open",
+      "attributed",
+      "restricted",
+      "excluded"
+    ],
     "$comment2": [
       "restricted = yaşayan/kutsal gelenek. Eğlenceye çevrilemez.",
       "excluded = kitaba giremez. Gerekçe araştırma künyesinde durur.",
       "Kumar çerçevesi kullanılmaz: bahis mekaniği puanla yeniden yazılır (K5)."
     ]
   },
-
   "production": {
-    "trimPaperback": {"w": 8.5, "h": 11.0, "trimClass": "large"},
-    "trimHardcover": {"w": 8.25, "h": 11.0, "trimClass": "large"},
+    "trimPaperback": {
+      "w": 8.5,
+      "h": 11.0,
+      "trimClass": "large"
+    },
+    "trimHardcover": {
+      "w": 8.25,
+      "h": 11.0,
+      "trimClass": "large"
+    },
     "ink": "black",
     "paper": "white",
     "$comment": [
@@ -258,17 +358,26 @@
     ],
     "kdpPrintCost": {
       "$comment": "KDP resmî formülleri · 12 Ağustos 2026 · Amazon.com",
-      "paperbackLargeTrimBW": {"fixed": 1.00, "perPage": 0.017, "minPages": 110, "maxPages": 828},
-      "hardcoverLargeTrimBW": {"fixed": 5.65, "perPage": 0.017, "minPages": 110, "maxPages": 550},
-      "royaltyRateAtOrAbove999": 0.60,
-      "royaltyRateBelow999": 0.50,
-      "kindleRoyaltyRate70": 0.70,
+      "paperbackLargeTrimBW": {
+        "fixed": 1.0,
+        "perPage": 0.017,
+        "minPages": 110,
+        "maxPages": 828
+      },
+      "hardcoverLargeTrimBW": {
+        "fixed": 5.65,
+        "perPage": 0.017,
+        "minPages": 110,
+        "maxPages": 550
+      },
+      "royaltyRateAtOrAbove999": 0.6,
+      "royaltyRateBelow999": 0.5,
+      "kindleRoyaltyRate70": 0.7,
       "kindleDeliveryPerMB": 0.15,
       "kindleFileSizeMBHypothesis": 8,
       "kindle70BandMin": 2.99,
       "kindle70BandMax": 12.99
     },
-
     "pageModel": {
       "$calibration": [
         "FAZ 2 GERÇEK DİZGİ ÖLÇÜMÜ · 13 Ağustos 2026 · calibrate_pages.py",
@@ -293,43 +402,59 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 405,
-        "wordsPerGame": 616,
-        "textPagesPerGame": 1.18,
-        "diagramPagesPerGame": 0.34,
-        "measuredPagesPerGame": 1.52,
-        "billedPagesPerGame": 2.18,
-        "spreadOverflowRate": 0.091,
-        "spreadOverflowGames": ["tablut"],
-        "sampleSize": 11,
-        "projectedTotalPages": 268,
-        "deviationPct": 4.7,
+        "wordsPerTypesetPage": 447,
+        "wordsPerGame": 686,
+        "textPagesPerGame": 1.24,
+        "diagramPagesPerGame": 0.293,
+        "measuredPagesPerGame": 1.534,
+        "billedPagesPerGame": 2.091,
+        "spreadOverflowRate": 0.045,
+        "spreadOverflowGames": [
+          "tablut"
+        ],
+        "sampleSize": 22,
+        "projectedTotalPages": 258,
+        "deviationPct": 0.78,
         "withinTolerance": true,
-        "measuredAtPhase": "phase3",
-        "report": "06_REPORTS/phase3-typeset-measurement.json",
+        "measuredAtPhase": "phase4",
+        "measuredAtGate": "phase1",
+        "overflowDriver": "both",
+        "textSpreadPages": 0.686,
+        "diagramSpreadPages": 0.628,
+        "report": "06_REPORTS/phase4-typeset-measurement.json",
         "$supersedes": [
-          "FAZ 2 ÖLÇÜMÜ (3 oyun) DÜZELTİLDİ — bir örneklem hatasıydı.",
+          "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
-          "                       Faz 2 (3 oyun)   Faz 3 (11 oyun)",
-          "  kelime/sayfa               389              405",
-          "  kelime/oyun                708              616",
-          "  ölçülen sayfa/oyun        1,82             1,52",
-          "  faturalanan               2,67             2,18",
-          "  TAŞMA ORANI            1/3 = %33        1/11 = %9",
-          "  toplam sayfa               316              268",
-          "  sapma                   +%23,4           +%4,7  ✓ BANTTA",
+          "                     Faz 2 (3)   Faz 3 (11)   Faz 4 (22)",
+          "  kelime/sayfa           389         405          447",
+          "  kelime/oyun            708         616          686",
+          "  ölçülen sayfa/oyun    1,82        1,52         1,53",
+          "  faturalanan           2,67        2,18         2,09",
+          "  TAŞMA ORANI        1/3 = %33  1/11 = %9   1/22 = %4,5",
+          "  toplam sayfa           316         268          258",
+          "  sapma               +%23,4      +%4,7        +%0,8 ✓",
           "",
-          "Faz 2'nin 316 sayfalık projeksiyonu YANLIŞTI ve sebebi tek bir",
-          "aykırı değerdi: üç oyunluk örneklemde tablut taşıyordu ve taşma",
-          "oranı %33 sanıldı. On bir oyunda gerçek oran %9 çıktı ve kitap",
-          "hedef bandın İÇİNE düştü.",
+          "⚠ FAZ 2'NİN ASIL İDDİASI FAZ 4'TE TERSİNE DÖNDÜ.",
           "",
-          "⚠ FAZ 2'NİN İKİNCİ İDDİASI DA ZAYIFLADI. Faz 2 'metin sabittir",
-          "(fark 0,01)' demişti. On bir oyunda metin farkı 0,41 sayfaya çıktı",
-          "(500–764 kelime). Diyagram farkı (0,62) hâlâ daha büyük, yani",
-          "'sayfa bütçesi bir diyagram bütçesidir' sonucu YÖNÜ İTİBARIYLA",
-          "doğru — ama Faz 2'nin ifade ettiği kadar mutlak DEĞİL.",
-          "Üç oyun bir eğilimi gösterir, bir sabiti kanıtlamaz."
+          "Faz 2 üç oyunda 'metin sabittir (fark 0,01), değişken diyagramdır",
+          "(fark 0,55)' demişti ve bu cümle calibrate_pages.py içine SABİT",
+          "METİN olarak gömülmüştü. Faz 3 (11 oyun) metin farkını 0,41'e",
+          "çıkardı ve iddiayı zayıflattı. Faz 4 (22 oyun) ölçtü:",
+          "",
+          "  metin farkı     0,69 sayfa",
+          "  diyagram farkı  0,63 sayfa",
+          "",
+          "İki fark EŞİTLENDİ; tek bir sürücü yoktur. Yani 'sayfa bütçesi bir",
+          "diyagram bütçesidir' cümlesi ÜÇ OYUNLUK BİR ÖRNEKLEMİN ESERİYDİ.",
+          "",
+          "150 mm bütçesi YİNE DE KALIR ve gerekçesi değişti: artık 'tek",
+          "sürücü diyagramdır' diye değil, iki sürücüden BİRİ olduğu ve",
+          "ötekinden (kelime hedefi) farklı olarak sert bir tavanı olmadığı",
+          "için. Faz 4 o tavanı ayrıca OYUN BAŞINA bağladı — bütçenin adı",
+          "zaten `maxDiagramMmPerGame`ti ama denetim diyagram başınaydı.",
+          "",
+          "Gömülü sonuç kaldırıldı: calibrate_pages.py artık sürücüyü",
+          "ölçümden TÜRETİYOR ve hangi örneklemde ne bulduğunu yazıyor."
         ]
       },
       "$comment": [
@@ -366,19 +491,39 @@
       },
       "calibrated": true,
       "calibratedAtPhase": "phase2",
-      "calibratedOn": "2026-08-13", "recalibratedAtPhase": "phase3"
+      "calibratedOn": "2026-08-13",
+      "recalibratedAtPhase": "phase4"
     },
     "editionsHypothesis": [
-      {"id": "hardcover", "list": 34.99, "enabled": true,  "priority": 1},
-      {"id": "paperback", "list": 22.99, "enabled": true,  "priority": 2},
-      {"id": "kindle",    "list": 11.99, "enabled": true,  "priority": 3},
-      {"id": "largeprint","list": null,  "enabled": false, "priority": 9,
-       "$comment": "Büyük punto: 12 ay sonra değerlendirilir. Diyagram ağırlıklı bir kitapta punto büyütmek sayfa sayısını patlatır — A4'te karar verilecek."}
+      {
+        "id": "hardcover",
+        "list": 34.99,
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "id": "paperback",
+        "list": 22.99,
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "id": "kindle",
+        "list": 11.99,
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "id": "largeprint",
+        "list": null,
+        "enabled": false,
+        "priority": 9,
+        "$comment": "Büyük punto: 12 ay sonra değerlendirilir. Diyagram ağırlıklı bir kitapta punto büyütmek sayfa sayısını patlatır — A4'te karar verilecek."
+      }
     ],
     "kdpSelect": false,
     "kdpSelect$comment": "KU'ya GİRİLMEZ: 256 sayfalık tam okuma ≈ 1,23 $, ciltsiz telif 8,44 $. 6,9 kat kayıp."
   },
-
   "privacy": {
     "$comment": [
       "A1 · KURUCU KARARI · 13 Ağustos 2026: MANUSCRIPT PUBLIC OLARAK",
@@ -391,33 +536,89 @@
       "fikstürleri BAD→KIRMIZI / TEMİZ→YEŞİL ispatını selftest'te tutar."
     ],
     "manuscriptPublic": false,
-    "publicLayers": ["kod", "test", "şema", "doğrulayıcı", "hassas olmayan belge",
-                     "araştırma künyesi", "taksonomi", "ölçüm raporu"],
-    "protectedLayers": ["tamamlanmamış manuscript", "yayımlanmamış İngilizce proza",
-                        "hassas editoryal not", "cevap içeren üretim içeriği",
-                        "ham görsel", "kurucu notu"],
+    "publicLayers": [
+      "kod",
+      "test",
+      "şema",
+      "doğrulayıcı",
+      "hassas olmayan belge",
+      "araştırma künyesi",
+      "taksonomi",
+      "ölçüm raporu"
+    ],
+    "protectedLayers": [
+      "tamamlanmamış manuscript",
+      "yayımlanmamış İngilizce proza",
+      "hassas editoryal not",
+      "cevap içeren üretim içeriği",
+      "ham görsel",
+      "kurucu notu"
+    ],
     "leakDetection": {
-      "modes": ["structural-marker", "content-signature", "density", "pilot-marker"],
+      "modes": [
+        "structural-marker",
+        "content-signature",
+        "density",
+        "pilot-marker"
+      ],
       "minMarkerHits": 2,
       "fixtureProofRequired": true
     },
-    "secretsNeverCommitted": [".env", "credentials", "API keys"]
+    "secretsNeverCommitted": [
+      ".env",
+      "credentials",
+      "API keys"
+    ]
   },
-
   "gates": {
     "$comment": ".gate dosyasındaki seviye burada tanımlı kapıları açar. Sıra kilitlidir.",
-    "levels": ["phase0", "phase1", "phase2", "phase3", "phase4", "phase5", "release"],
+    "levels": [
+      "phase0",
+      "phase1",
+      "phase2",
+      "phase3",
+      "phase4",
+      "phase5",
+      "release"
+    ],
     "requirements": {
-      "phase0": {"gamesCandidate": 0,   "gamesLocked": 0,   "gamesWritten": 0},
-      "phase1": {"gamesCandidate": 140, "gamesLocked": 0,   "gamesWritten": 0},
-      "phase2": {"gamesCandidate": 140, "gamesLocked": 12,  "gamesWritten": 12},
-      "phase3": {"gamesCandidate": 140, "gamesLocked": 55,  "gamesWritten": 55},
-      "phase4": {"gamesCandidate": 140, "gamesLocked": 100, "gamesWritten": 100},
-      "phase5": {"gamesCandidate": 140, "gamesLocked": 100, "gamesWritten": 100},
-      "release": {"gamesCandidate": 140, "gamesLocked": 100, "gamesWritten": 100}
+      "phase0": {
+        "gamesCandidate": 0,
+        "gamesLocked": 0,
+        "gamesWritten": 0
+      },
+      "phase1": {
+        "gamesCandidate": 140,
+        "gamesLocked": 0,
+        "gamesWritten": 0
+      },
+      "phase2": {
+        "gamesCandidate": 140,
+        "gamesLocked": 12,
+        "gamesWritten": 12
+      },
+      "phase3": {
+        "gamesCandidate": 140,
+        "gamesLocked": 55,
+        "gamesWritten": 55
+      },
+      "phase4": {
+        "gamesCandidate": 140,
+        "gamesLocked": 100,
+        "gamesWritten": 100
+      },
+      "phase5": {
+        "gamesCandidate": 140,
+        "gamesLocked": 100,
+        "gamesWritten": 100
+      },
+      "release": {
+        "gamesCandidate": 140,
+        "gamesLocked": 100,
+        "gamesWritten": 100
+      }
     }
   },
-
   "style": {
     "$comment": "Ayrıntı: 00_CONTEXT/STYLE.md. Ölçülen değerler qa_* kapılarından gelir.",
     "ruleTextMaxSentenceWords": 22,

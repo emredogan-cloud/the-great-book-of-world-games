@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "checks": 15,
+  "errors": [],
+  "games": 22,
+  "blocksUsed": [
+    "capture",
+    "chain",
+    "figures",
+    "legalMoves",
+    "movement",
+    "placement",
+    "scoring",
+    "stackingAndSending",
+    "stages",
+    "throwValues",
+    "turnSequence"
+  ],
+  "blocksMeasured": [
+    "capture",
+    "chain",
+    "endCondition",
+    "figures",
+    "firstMove",
+    "kingCapture",
+    "legalMoves",
+    "movement",
+    "placement",
+    "scoring",
+    "setup",
+    "stackingAndSending",
+    "stages",
+    "throwValues",
+    "turnSequence",
+    "unknown",
+    "winCondition"
+  ],
+  "withDiagrams": 20,
+  "withoutDiagrams": 2,
+  "reconstructed": 1,
+  "externalPlaytests": 0
+}

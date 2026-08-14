@@ -465,3 +465,84 @@ Bu yüzden Faz 3 kaynakları **türüne göre** sıralar:
 Özellikle `reconstructed` oyunlarda kullanılamaz: eski bir yeniden
 kurgulama, yeni bir yeniden kurgulama kadar kesin görünür ve okur ikisini
 ayırt edemez.
+
+---
+
+### K21 · FAZ 4 ÜRETİM İSTİSNASI — üretim ilerler, RESMÎ KAPI ilerlemez
+
+**Tarih:** 14 Ağustos 2026 · **Faz:** 4 · **Karar:** kurucu
+
+Kurucu talimatı iki cümledir:
+
+> *"Testlerin halledildiğini varsay ve Faz 4 üretimine devam et —
+> kalan oyunları yaz. Engelli oyunları sona bırak."*
+
+Bu, K18'in Faz 4'e uzatılmasıdır ve **aynı sınırı taşır**:
+
+| | Durum |
+|---|---|
+| **Faz 4 üretim işi** | ✅ **YETKİLİ** |
+| **Resmî faz kapısı** (`.gate`) | ⛔ **`phase1` — yükseltilmez** |
+| **Dış oynanabilirlik testi** | ⛔ **`pending` kalır** |
+| `locked` oyun | **0 — uydurulamaz** |
+
+**"Testleri halledilmiş say" ne demektir ve ne demek DEĞİLDİR.**
+
+Demektir: *dış test oturumunun yürütülmesini bekleyerek üretimi durdurma.*
+
+Demek DEĞİLDİR: *test kaydı uydur.* `externalPlaytest = pending` alanı
+`passed` yapılmaz, testçi adı yazılmaz, süre uydurulmaz. Bir üretim
+yetkisi bir kanıt üretmez; ikisini karıştırmak bu projede iş bitiren
+ihlaldir (K15).
+
+Sonuç, projenin baştan beri sürdürdüğü ayrımın Faz 4'teki hâlidir:
+
+```
+PRODUCTION      : AUTHORIZED
+FORMAL VALIDATION: PENDING
+```
+
+Bu iki satır `PROJECT_CONTEXT.md`, `ROADMAP_PROGRESS.md` ve
+`06_REPORTS/PHASE_4_REPORT.md` içinde **açıkça** durur.
+
+---
+
+### K22 · FAZ 4 KUYRUĞU BİR SIRA KAPISIDIR — erişilebilir önce, engelli sona
+
+**Tarih:** 14 Ağustos 2026 · **Faz:** 4 · **Karar:** kurucu (§ 4 · § 8)
+
+Kapsam kilidi (K14) listenin **ne** olduğunu korur. Faz 4 buna ikinci bir
+koruma ekler: listenin **hangi sırayla işlendiği**.
+
+`04_BUILD/build_queue.py` beş öncelik türetir ve `--check` sırayı CI'da
+denetler. Engelli bir oyun erişilebilir bir oyunun önüne geçerse kapı
+kırmızı yanar — çünkü o durumda üretim, **açık bir kaynak dururken kapalı
+bir kaynağı bekler**.
+
+| P | Anlamı |
+|---|---|
+| 1 | erişilebilir · sayfa-doğrulanmış künye · kural tam |
+| 2 | erişilebilir · doğrulama Faz 4 içinde tamamlanabilir |
+| 3 | yeniden kurgulanmış · `reconstructionPlan` belgeli |
+| 4 | **DENENDİ ve erişilemedi** — telif / ödünç kısıtı |
+| 5 | çözülmemiş kural kimliği ya da kaynak uyuşmazlığı |
+
+**P4'ün tanımı dardır ve bilerek dardır.** Bir oyun P4'e yalnızca
+`source_access_pending.json` içindeyse — yani gerçekten denenip
+erişilememişse — girer. Henüz sıraya gelmemiş bir oyun P2'de durur.
+
+Faz 3 bu ayrımı kurmuştu; Faz 4 onu bir **kapıya** bağladı ve ölçtü:
+
+| | Faz 3 kuyruğu | **Faz 4 kuyruğu** |
+|---|---:|---:|
+| "öncelik 4" gösterilen | **80** | **5** |
+| gerçekten engelli | 4 | **5** |
+| erişilebilir | 20 | **94** |
+
+Faz 3'ün kuyruğu 80 oyunu en alt önceliğe koyuyordu çünkü
+"denenmedi" ile "engellendi" aynı kovaya düşüyordu. Sayı yanlış değildi,
+**anlamı** yanlıştı: bir üretim planlayıcısı ona bakıp kitabın dörtte
+üçünün kaynak beklediğini okurdu.
+
+> Bir engeli abartmak, onu küçümsemek kadar yanlıştır.
+> İkisi de aynı şeyi yapar: kararı yanlış veriye dayandırır.

@@ -66,6 +66,12 @@ class Canvas:
                 'stroke-width="%.2f"/>'
                 % (cx, cy, r * 0.55, grey(0) if fill == 100 else "#000", self.sw))
 
+    def rect(self, x, y, w, h):
+        """Dolgusuz dikdörtgen — `bodily/bed` bölmeleri (v1.4)."""
+        self.parts.append(
+            '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" fill="none" '
+            'stroke="#000" stroke-width="%.2f"/>' % (x, y, w, h, self.sw))
+
     def text(self, x, y, s, pt, anchor="middle"):
         self.parts.append(
             '<text x="%.2f" y="%.2f" font-family="serif" font-size="%.2f" '
@@ -82,9 +88,12 @@ class Canvas:
                 'stroke-width="%.2f"/>'
                 % (x2, y2, x2 - h * math.cos(ang - s), y2 - h * math.sin(ang - s), w))
 
-    def cross(self, cx, cy, r):
-        self.line(cx - r, cy - r, cx + r, cy + r)
-        self.line(cx - r, cy + r, cx + r, cy - r)
+    def cross(self, cx, cy, r, ink="#000"):
+        for x1, y1, x2, y2 in ((cx - r, cy - r, cx + r, cy + r),
+                               (cx - r, cy + r, cx + r, cy - r)):
+            self.parts.append(
+                '<line x1="%.2f" y1="%.2f" x2="%.2f" y2="%.2f" stroke="%s" '
+                'stroke-width="%.2f"/>' % (x1, y1, x2, y2, ink, self.sw * 1.4))
 
     def svg(self, title: str) -> str:
         return ('<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -143,7 +152,8 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
                          ring=placed[k]["glyph"] in ("king", "lightSpecial",
                                                      "darkSpecial"))
                 if placed[k].get("captured"):
-                    c.cross(*nxy(k), r * 0.8)
+                    c.cross(*nxy(k), r * 0.8,
+                            "#fff" if g["fill"] >= 55 else "#000")
             else:
                 c.circle(*nxy(k), r * 0.42, 0)
         for a in d.get("arrows", []):
@@ -180,7 +190,8 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
             c.circle(xy[0], xy[1], r, g["fill"],
                      ring=p["glyph"] in ("king", "lightSpecial", "darkSpecial"))
             if p.get("captured"):
-                c.cross(xy[0], xy[1], r * 0.8)
+                c.cross(xy[0], xy[1], r * 0.8,
+                        "#fff" if g["fill"] >= 55 else "#000")
         for a in d.get("arrows", []):
             f = coord_xy(a.get("from", ""), cls, size, x0, y0, step)
             t = coord_xy(a.get("to", ""), cls, size, x0, y0, step)
@@ -234,7 +245,37 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
         c.line(x0 + side, y0, x0, y0 + side, sw * 96 / 72, "4,3")
         c.circle(x0 + side / 2, y0 + side / 2, step * 0.30, 0)
 
-    else:  # bodily
+    elif cls == "bodily" and d.get("frame") == "bed":
+        # `bed` (v1.4) — ZEMİNE ÇİZİLEN BÖLMELER. Bölmeler AÇIKÇA verilir;
+        # bir ızgara varsayılmaz, çünkü seksek yatağı ızgara değildir.
+        # Ölçüler 0–1 normalize; en/boy oranı `size.aspect` ile verilir.
+        divs = d.get("divisions", [])
+        span = size.get("spanMm", 46.0)
+        aspect = size.get("aspect", 1.6)
+        w = pad * 2 + span
+        h = pad * 2 + span * aspect + legend_h
+        c = Canvas(w, h, sw)
+        x0, y0 = pad * MM, pad * MM
+        for r in divs:
+            rx, ry = x0 + r["x"] * span * MM, y0 + r["y"] * span * aspect * MM
+            rw, rh = r["w"] * span * MM, r["h"] * span * aspect * MM
+            c.rect(rx, ry, rw, rh)
+            c.text(rx + rw / 2, ry + rh / 2 + pr["minGlyphPt"] * 0.35,
+                   str(r.get("label", "")), pr["minGlyphPt"])
+        ids = {r["id"] for r in divs}
+        for p in d.get("pieces", []):
+            r = next((x for x in divs if x["id"] == p["at"]), None)
+            if not r:
+                continue
+            g = lang["glyphs"][p["glyph"]]
+            # Taş bölmenin SOL yarısına konur: ortaya konursa bölme
+            # numarasının üstüne biner ve ikisi birden okunmaz olur.
+            c.circle(x0 + (r["x"] + r["w"] * 0.22) * span * MM,
+                     y0 + (r["y"] + r["h"] * 0.5) * span * aspect * MM,
+                     1.7 * MM, g["fill"])
+        del ids
+
+    else:  # bodily · hands | formation
         # `hands` gövdesi KOMPAKT: ip figürü ±10 mm'lik bir alanda yaşar ve
         # 46 mm'lik gövde bunun iki katıydı. Faz 3 bütçesi (150 mm) bu boş
         # payı taşımıyor. Kalınlık ve glif boyu korunur; giden şey KENAR PAYI.
@@ -260,11 +301,34 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
             c.line(cx + 18 * MM, cy - 8 * MM, cx + 18 * MM, cy + 8 * MM)
 
     # Efsane — her diyagramın kendi içinde (D7)
+    #
+    # ⚠ SEMBOL YAZILMAZ, ÇİZİLİR. v1.3'e kadar efsane sembolü bir METİN
+    # karakteriydi (◉, ◎, ⤳ …) ve font o karakteri taşımıyorsa YER BOŞ
+    # KALIYORDU. Faz 4 render denetimi bunu üç diyagramda gördü: tilki
+    # efsanede sembolsüz duruyordu ve okur hangi taşın tilki olduğunu
+    # efsaneden ÖĞRENEMİYORDU. Artık efsane, tahtadaki gliflerin AYNI
+    # çizim yoluyla üretilir; font bağımlılığı yoktur.
     ly = c.h - legend_h * MM + 3 * MM
+    sym_x = pad * MM + 1.6 * MM
     for e in d.get("legend", []):
-        g = lang["glyphs"].get(e.get("glyph")) or lang["arrows"].get(e.get("glyph")) \
-            or lang["markers"].get(e.get("glyph")) or {}
-        c.text(pad * MM, ly, "%s  %s" % (g.get("symbol", "·"), e.get("label", "")),
+        key = e.get("glyph")
+        gl, ar = lang["glyphs"].get(key), lang["arrows"].get(key)
+        if gl:
+            c.circle(sym_x, ly - 0.9 * MM, 1.5 * MM, gl["fill"],
+                     ring=key in ("king", "lightSpecial", "darkSpecial"))
+            # `captured` bir TAŞ DEĞİL, taşın üstündeki işarettir. Efsanede
+            # düz bir çember olarak çizilirse "savunan"dan ayırt edilemez ve
+            # okur ×'i yine öğrenemez.
+            if key == "captured":
+                c.cross(sym_x, ly - 0.9 * MM, 1.2 * MM)
+        elif ar:
+            c.arrow(sym_x - 1.5 * MM, ly - 0.9 * MM, sym_x + 1.6 * MM,
+                    ly - 0.9 * MM, ar["widthPt"] * 96 / 72,
+                    "3,2" if ar["style"] == "dotted" else None)
+        else:
+            mk = lang["markers"].get(key) or {}
+            c.text(sym_x, ly, mk.get("symbol", "·"), pr["minGlyphPt"])
+        c.text(pad * MM + 4.6 * MM, ly, e.get("label", ""),
                pr["minGlyphPt"], anchor="start")
         ly += 4.5 * MM
 

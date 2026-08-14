@@ -143,6 +143,17 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
   run "diyagram ↔ kural uyumu"  $PY 04_BUILD/qa_diagram.py \
                                    --json 06_REPORTS/qa-diagram.json
 
+# ── FAZ 4 KAPILARI ─────────────────────────────────────────────────────────
+# Kuyruk SIRASI bir kapıdır: engelli bir oyun erişilebilir bir oyunun önüne
+# geçemez (kurucu § 4). Manuscript depoda yok, kuyruğun kendisi var.
+[ -f 04_BUILD/build_queue.py ] && \
+  run "ÜRETİM KUYRUĞU SIRASI"   $PY 04_BUILD/build_queue.py --check
+# Manuscript depoda YOKTUR; bu kapı orada BOŞ KOŞAR ve 0 döner. Yerelde ise
+# prozanın kendisini denetler — beş öğe, üç soru, beyan, kaynak, dış test.
+[ -f 04_BUILD/qa_manuscript.py ] && \
+  run "MANUSCRIPT BÜTÜNLÜĞÜ"    $PY 04_BUILD/qa_manuscript.py \
+                                   --json 06_REPORTS/qa-manuscript.json
+
 # ── ÜRETİM MODELİ ──────────────────────────────────────────────────────────
 [ -f 04_BUILD/page_budget.py ] && \
   run "sayfa bütçesi"           $PY 04_BUILD/page_budget.py \

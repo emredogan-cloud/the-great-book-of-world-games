@@ -171,6 +171,27 @@ def check_rendered_budget(cfg: dict, diagrams: list, root: str,
               "hiçbir diyagram %d mm bütçesini aşmıyor" % limit + brief(over))
     rep.check(not wide, "hiçbir diyagram genişlik sınırını aşmıyor" + brief(wide))
 
+    # ⚠ BÜTÇE OYUN BAŞINADIR, DİYAGRAM BAŞINA DEĞİL.
+    #
+    # Faz 4 ölçümü bu kapıda bir KÖRLÜK buldu. Ayarın adı zaten
+    # `maxDiagramMmPerGame` ve türetimi de oyun başınadır (çift sayfanın
+    # metinden artan 152 mm'si). Kapı ise her diyagramı TEK TEK ölçüyordu.
+    # Sonuç: iki diyagramı olan bir madde bütçeyi ikiye katlayabiliyor ve
+    # kapı yeşil yanıyordu. Tablut tam olarak bunu yapıyordu — 88,5 + 93,0
+    # = 181,5 mm — ve on dokuz maddelik örneklemde çift sayfayı aşan TEK
+    # madde oydu. Yani bütçe, tutması gereken şeyi tutmuyordu.
+    per_game: dict = {}
+    for d in diagrams:
+        m = measured.get(d["diagramId"])
+        if m:
+            per_game.setdefault(d["gameId"], []).append(m["heightMm"])
+    over_game = ["%s → %.1f mm (%d diyagram, %+.1f)"
+                 % (g, sum(hs), len(hs), sum(hs) - limit)
+                 for g, hs in sorted(per_game.items()) if sum(hs) > limit]
+    rep.check(not over_game,
+              "hiçbir OYUN toplam %d mm bütçesini aşmıyor" % limit
+              + brief(over_game))
+
     if measured:
         hs = [m["heightMm"] for m in measured.values()]
         rep.facts["diagramMm"] = {"min": min(hs), "max": max(hs),
@@ -238,6 +259,11 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
                 bad_glyph.append("%s → %s" % (did, gl))
             else:
                 used.add(gl)
+            # `captured` bir BAYRAKTIR ama okur için bir SEMBOLDÜR: taşın
+            # üstüne bir çarpı basar. Kullanılanlar kümesine girmezse efsane
+            # onu açıklayamaz (ölü sembol hatası verir) ve × açıklamasız kalır.
+            if p.get("captured"):
+                used.add("captured")
 
         for a in d.get("arrows", []):
             if a.get("kind") not in arrows:

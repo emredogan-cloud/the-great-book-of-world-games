@@ -31,7 +31,8 @@
       "sources": [
         {
           "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Hop-Scotch', cilt I, ss. 223–227"
         },
         {
           "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
@@ -202,7 +203,8 @@
         },
         {
           "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "§ XXXVII 'Syou-pyek-tchi-ki — Hand-clapping', ss. 44–46"
         }
       ],
       "ruleCompleteness": {
@@ -366,7 +368,8 @@
       "sources": [
         {
           "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Fivestones', cilt I, ss. 122–126"
         },
         {
           "ref": "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
@@ -1583,7 +1586,8 @@
         },
         {
           "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Conquerors or Conkers', cilt I, ss. 77–78; kural açıklaması cilt II, s. 471"
         }
       ],
       "ruleCompleteness": {
@@ -2235,7 +2239,8 @@
         },
         {
           "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography"
+          "type": "ethnography",
+          "locator": "'Ring-taw', cilt II, ss. 113–114"
         }
       ],
       "ruleCompleteness": {

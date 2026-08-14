@@ -970,6 +970,232 @@ def part7_phase3_gates(rep, tmp: str) -> None:
                   % (locked_any or "temiz"))
 
 
+def part8_phase4_gates(rep, tmp: str) -> None:
+    """⑧ FAZ 4 KAPILARI GERÇEKTEN ISIRIYOR MU.
+
+    Faz 4 dört yeni koruma getirdi ve dördü de gerçek veriyle YEŞİL koşuyor.
+    Bir kapının ısırdığı yalnızca KUSURLU bir kurguda görülebilir:
+
+      · kuyruk SIRASI — engelli oyun erişilebilirin önüne geçemez (K22)
+      · 150 mm bütçesi OYUN BAŞINA — iki diyagram toplamı da denetlenir
+      · efsane, alma çarpısını (×) AÇIKLAMAK zorunda
+      · manuscript kapısı — beş öğe · üç soru · beyan · kaynak · dış test
+    """
+    print("\n⑧ Faz 4 kapıları gerçekten ısırıyor")
+    root = ROOT
+
+    # ── ① KUYRUK SIRASI ────────────────────────────────────────────────────
+    print("  ▸ üretim kuyruğu sırası")
+    qp = os.path.join(root, "01_SOURCE", "production_queue.json")
+    if os.path.exists(qp):
+        with open(qp, encoding="utf-8") as fh:
+            orig = fh.read()
+
+        def swap_blocked_to_front(d):
+            """Engelli bir oyunu kuyruğun BAŞINA taşır."""
+            i = next(i for i, g in enumerate(d["games"]) if g["priority"] >= 4)
+            d["games"].insert(0, d["games"].pop(i))
+
+        def mark_unattempted_as_blocked(d):
+            """Denenmemiş bir oyunu 'engelli' gösterir — engeli ABARTIR."""
+            g = next(g for g in d["games"]
+                     if g["priority"] == 2 and g["sourceStatus"] == "not-attempted")
+            g["priority"] = 4
+            g["accessibility"] = "deferred"
+
+        def duplicate_game(d):
+            d["games"].append(dict(d["games"][0]))
+
+        def write_without_source(d):
+            g = next(g for g in d["games"] if g["verifiedSources"] == 0)
+            g["manuscriptStatus"] = "draft"
+
+        try:
+            for label, mut in [
+                ("ENGELLİ oyun erişilebilirin ÖNÜNE geçerse YAKALANIR",
+                 swap_blocked_to_front),
+                ("DENENMEMİŞ oyunu 'engelli' göstermek YAKALANIR",
+                 mark_unattempted_as_blocked),
+                ("kuyrukta YİNELENEN oyun YAKALANIR", duplicate_game),
+                ("doğrulanmamış kaynakla YAZILMIŞ oyun YAKALANIR",
+                 write_without_source),
+            ]:
+                d = json.loads(orig)
+                mut(d)
+                write_json(qp, d)
+                code, out = run_gate("build_queue.py", root, "--check")
+                rep.check(code != 0, label, out)
+        finally:
+            with open(qp, "w", encoding="utf-8") as fh:
+                fh.write(orig)
+        code, out = run_gate("build_queue.py", root, "--check")
+        rep.check(code == 0, "TEMİZ kuyruk erişilebilir-önce sırayla geçer", out)
+
+    # ── ② OYUN BAŞINA DİYAGRAM BÜTÇESİ ─────────────────────────────────────
+    # Faz 4'ün bulduğu KÖRLÜK: bütçenin adı `maxDiagramMmPerGame` ama denetim
+    # diyagram başınaydı. İki diyagramı olan bir madde bütçeyi ikiye
+    # katlayabiliyordu ve kapı yeşil yanıyordu.
+    print("  ▸ oyun başına diyagram bütçesi")
+    rpath = os.path.join(root, "06_REPORTS", "diagram-render.json")
+    if os.path.exists(rpath):
+        with open(rpath, encoding="utf-8") as fh:
+            orig = fh.read()
+
+        def split_over_budget(d):
+            """Tek tek GEÇEN ama TOPLAMDA aşan iki diyagram."""
+            same = [m for m in d["diagrams"] if m["gameId"] == "tablut"]
+            for m in same:
+                m["heightMm"] = 80.0        # 80 < 150 ✓ ama 80+80 = 160 ⛔
+
+        try:
+            d = json.loads(orig)
+            split_over_budget(d)
+            write_json(rpath, d)
+            code, out = run_gate("qa_diagram.py", root)
+            rep.check(code != 0,
+                      "tek tek geçen ama TOPLAMDA bütçeyi aşan iki diyagram "
+                      "YAKALANIR", out)
+        finally:
+            with open(rpath, "w", encoding="utf-8") as fh:
+                fh.write(orig)
+
+    # ── ③ EFSANE ALMA ÇARPISINI AÇIKLAMALI ─────────────────────────────────
+    print("  ▸ efsane × sembolünü açıklıyor mu")
+    dpath = os.path.join(root, "07_ASSETS", "diagrams", "phase4_diagrams.json")
+    if os.path.exists(dpath):
+        with open(dpath, encoding="utf-8") as fh:
+            orig = fh.read()
+
+        def drop_captured_legend(d):
+            x = next(x for x in d["diagrams"]
+                     if any(p.get("captured") for p in x.get("pieces", [])))
+            x["legend"] = [e for e in x["legend"] if e["glyph"] != "captured"]
+
+        try:
+            d = json.loads(orig)
+            drop_captured_legend(d)
+            write_json(dpath, d)
+            code, out = run_gate("qa_diagram.py", root)
+            rep.check(code != 0,
+                      "efsanesi × işaretini AÇIKLAMAYAN diyagram YAKALANIR",
+                      out)
+        finally:
+            with open(dpath, "w", encoding="utf-8") as fh:
+                fh.write(orig)
+
+    # ── ④ MANUSCRIPT KAPISI ────────────────────────────────────────────────
+    # Manuscript depoda YOKTUR; kapı orada boş koşar. Isırdığı yalnızca
+    # burada, kurgu bir manuscript'le kanıtlanabilir.
+    print("  ▸ manuscript kapısı")
+    cfg = json.load(open(os.path.join(root, "project_config.json"),
+                         encoding="utf-8"))
+
+    def clean_entry():
+        return {
+            "gameId": "fixture-game", "title": "Fixture", "culture": "Nowhere",
+            "place": "Nowhere", "period": "never", "family": "territory",
+            "authoring": "written-directly-in-english", "translatedFrom": None,
+            "status": "researched", "reconstructed": False,
+            "spec": {"players": "2", "time": "10 minutes", "age": "6 and up",
+                     "materials": "A board", "difficulty": "Easy"},
+            "culturalStory": "A story.",
+            "materialsAndSubstitution": "Some things.",
+            "setup": ["Draw the board."],
+            "turnSequence": ["Move a piece."],
+            "winCondition": "Take everything.",
+            "endCondition": "Play stops when nothing is left.",
+            "edgeCases": {"tie": "A draw.", "stalemate": "A loss.",
+                          "illegalMove": "Put it back."},
+            "exampleTurn": "A turn.", "firstGame": "A short game.",
+            "sources": ["Someone, A Book (Somewhere, 1900)."],
+            "englishValidation": {k: "checked" for k in
+                                  ("source", "rules", "playability", "clarity",
+                                   "terminology", "cultural", "diagram")},
+            "diagrams": [],
+        }
+
+    def ms_root(entry, *, index=None, playtests=None):
+        r = os.path.join(tmp, "ms-%03d" % _RUN_SEQ[0])
+        _RUN_SEQ[0] += 1
+        os.makedirs(os.path.join(r, "02_MANUSCRIPT"), exist_ok=True)
+        os.makedirs(os.path.join(r, "01_SOURCE"), exist_ok=True)
+        os.makedirs(os.path.join(r, "04_BUILD"), exist_ok=True)
+        os.makedirs(os.path.join(r, "06_REPORTS"), exist_ok=True)
+        write_json(os.path.join(r, "project_config.json"), cfg)
+        write_json(os.path.join(r, "02_MANUSCRIPT", "book.json"),
+                   {"games": [entry]})
+        if index is not None:
+            write_json(os.path.join(r, "01_SOURCE", "game_index.json"),
+                       {"games": index})
+        if playtests:
+            os.makedirs(os.path.join(r, "01_SOURCE", "playtests"), exist_ok=True)
+            for i, pt in enumerate(playtests):
+                write_json(os.path.join(r, "01_SOURCE", "playtests",
+                                        "t%d.json" % i), pt)
+        shutil.copy2(os.path.join(BUILD, "calibrate_pages.py"),
+                     os.path.join(r, "04_BUILD", "calibrate_pages.py"))
+        return r
+
+    code, out = run_gate("qa_manuscript.py", ms_root(clean_entry()))
+    rep.check(code == 0, "TEMİZ manuscript maddesi geçer", out)
+
+    for label, mut in [
+        ("BİTİŞ KOŞULU olmayan madde YAKALANIR",
+         lambda e: e.__setitem__("endCondition", "")),
+        ("KURULUMU olmayan madde YAKALANIR",
+         lambda e: e.__setitem__("setup", [])),
+        ("HEDEFİ olmayan madde YAKALANIR",
+         lambda e: e.__setitem__("winCondition", "")),
+        ("hamle bloğu olmayan madde YAKALANIR",
+         lambda e: e.__setitem__("turnSequence", [])),
+        ("üç sorudan biri cevapsızsa YAKALANIR",
+         lambda e: e["edgeCases"].__setitem__("tie", "")),
+        ("KAYNAKSIZ madde YAKALANIR", lambda e: e.__setitem__("sources", [])),
+        ("BEYANSIZ yeniden kurgulama YAKALANIR",
+         lambda e: e.__setitem__("reconstructed", True)),
+        ("ÇEVİRİ BEYANI taşıyan ticari madde YAKALANIR",
+         lambda e: e.__setitem__("translatedFrom", "tr")),
+        ("doğrulama kaydı eksik madde YAKALANIR",
+         lambda e: e["englishValidation"].__setitem__("cultural", "")),
+        ("DOĞRULANMAMIŞ sayfa numarası veren madde YAKALANIR",
+         lambda e: e.__setitem__("sources", ["Someone, A Book, pp. 12–14."])),
+        ("ÖLÇÜLMEYEN kural bloğu YAKALANIR",
+         lambda e: e.__setitem__("newBlockNobodyMeasures", ["A step."])),
+    ]:
+        e = clean_entry()
+        mut(e)
+        # `MOVE_BLOCKS` dışındaki bir blok ölçüm listesinde aranmaz; kusuru
+        # gerçekçi kılmak için bilinen bir bloğu ölçüm listesinden SİLİYORUZ.
+        r = ms_root(e)
+        if "ÖLÇÜLMEYEN" in label:
+            cp = os.path.join(r, "04_BUILD", "calibrate_pages.py")
+            src = open(cp, encoding="utf-8").read()
+            src = src.replace('("On your turn", "turnSequence"),', "")
+            with open(cp, "w", encoding="utf-8") as fh:
+                fh.write(src)
+        code, out = run_gate("qa_manuscript.py", r)
+        rep.check(code != 0, label, out)
+
+    e = clean_entry()
+    e["status"] = "locked"
+    code, out = run_gate("qa_manuscript.py", ms_root(e))
+    rep.check(code != 0, "DIŞ TEST KAYDI OLMADAN 'locked' madde YAKALANIR", out)
+
+    e = clean_entry()
+    e["reconstructed"] = True
+    e["reconstructionNotice"] = "The rules below are reconstructed."
+    idx = [{"gameId": "fixture-game", "playabilityStatus": "rules-complete"}]
+    code, out = run_gate("qa_manuscript.py", ms_root(e, index=idx))
+    rep.check(code != 0,
+              "madde 'reconstructed' derken envanter DEMİYORSA YAKALANIR", out)
+
+    e = clean_entry()
+    idx = [{"gameId": "fixture-game", "playabilityStatus": "reconstructed"}]
+    code, out = run_gate("qa_manuscript.py", ms_root(e, index=idx))
+    rep.check(code != 0,
+              "envanter 'reconstructed' derken madde DEMİYORSA YAKALANIR", out)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -989,6 +1215,7 @@ def main() -> int:
         part5_phase1_gates(rep, tmp)
         part6_phase2_gates(rep, tmp)
         part7_phase3_gates(rep, tmp)
+        part8_phase4_gates(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:

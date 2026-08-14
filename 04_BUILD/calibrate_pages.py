@@ -86,10 +86,16 @@ def measure_game(g: dict, diagrams: dict, geom: dict, styles) -> dict:
     # modelini SESSİZCE küçültür — ve sayfa modeli kitabın ekonomisidir.
     # Faz 3 batch'i üç yeni blok getirdi (stages · legalMoves · firstMove);
     # listeye eklenmeselerdi üç oyun olduğundan kısa ölçülürdü.
-    for label, key in (("Setup", "setup"), ("On your turn", "turnSequence"),
+    # Faz 4 batch 1 üç blok daha getirdi (placement · figures · scoring) —
+    # aynı sebeple aynı anda eklendiler. `qa_manuscript.py --check-blocks`
+    # bu listenin manuscript'teki blok kümesini KAPSADIĞINI denetler, yani
+    # bir sonraki unutuş sessiz kalmaz.
+    for label, key in (("Setup", "setup"), ("Placing", "placement"),
+                       ("On your turn", "turnSequence"),
                        ("Capture", "capture"), ("Movement", "movement"),
                        ("Legal moves", "legalMoves"),
                        ("Throw values", "throwValues"), ("Levels", "stages"),
+                       ("The figures", "figures"), ("Scoring", "scoring"),
                        ("Stacking and sending", "stackingAndSending"),
                        ("The chain", "chain")):
         if not g.get(key):
@@ -136,8 +142,10 @@ def measure_game(g: dict, diagrams: dict, geom: dict, styles) -> dict:
     return {
         "gameId": g["gameId"],
         "words": words(g["culturalStory"], g["materialsAndSubstitution"],
-                       g.get("setup"), g.get("turnSequence"), g.get("capture"),
+                       g.get("setup"), g.get("placement"),
+                       g.get("turnSequence"), g.get("capture"),
                        g.get("movement"), g.get("throwValues"),
+                       g.get("figures"), g.get("scoring"),
                        g.get("stackingAndSending"), g.get("chain"),
                        g.get("winCondition"), g.get("kingCapture"),
                        g.get("legalMoves"), g.get("stages"),
@@ -159,6 +167,15 @@ def measure_game(g: dict, diagrams: dict, geom: dict, styles) -> dict:
         "billedPages": 2 if pages <= 2.0 else 4,
         "overflowsSpread": pages > 2.0,
     }
+
+
+def read_gate_phase(root: str) -> str:
+    """Ölçümün fazı `.gate`ten OKUNUR, koda gömülmez (karar K2)."""
+    p = os.path.join(root, ".gate")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as fh:
+            return fh.read().strip() or "unknown"
+    return "unknown"
 
 
 def run_measure(root: str, args) -> int:
@@ -258,14 +275,43 @@ def run_measure(root: str, args) -> int:
     avg_dia = sum(r["diagramPages"] for r in rows) / n
     overflow = [r["gameId"] for r in rows if r["overflowsSpread"]]
 
+    # ⚠ BULGU YAZILMAZ, ÖLÇÜMDEN TÜRETİLİR.
+    #
+    # Faz 2 (3 oyun) "metin sabittir, değişken diyagramdır" dedi ve bu cümle
+    # buraya SABİT METİN olarak gömüldü. Faz 3 (11 oyun) metin farkını 0,41'e
+    # çıkardı ve cümle zayıfladı; Faz 4 (19 oyun) metin farkını diyagram
+    # farkının ÜSTÜNE çıkardı — yani gömülü cümle artık kendi verisini
+    # yalanlıyordu ve yine de her koşuda basılıyordu.
+    # Gömülü bir sonuç, ölçümü olmayan bir iddiadır. Artık türetiliyor.
+    text_spread = (max(r["textPages"] for r in rows)
+                   - min(r["textPages"] for r in rows))
+    dia_spread = (max(r["diagramPages"] for r in rows)
+                  - min(r["diagramPages"] for r in rows))
+    if dia_spread > text_spread * 1.25:
+        driver, finding = "diagram", (
+            "Çift sayfayı aşıran DEĞİŞKEN DİYAGRAM ALANIDIR: diyagram farkı "
+            "(%.2f sayfa) metin farkının (%.2f) belirgin biçimde üstünde. "
+            "Sayfa bütçesi bir KELİME bütçesi değil, bir DİYAGRAM bütçesidir."
+            % (dia_spread, text_spread))
+    elif text_spread > dia_spread * 1.25:
+        driver, finding = "text", (
+            "Çift sayfayı aşıran DEĞİŞKEN METİN UZUNLUĞUDUR: metin farkı "
+            "(%.2f sayfa) diyagram farkının (%.2f) üstünde. Faz 2'nin üç "
+            "oyunluk örneklemde bulduğu 'metin sabittir' sonucu bu örneklemde "
+            "GEÇERSİZDİR." % (text_spread, dia_spread))
+    else:
+        driver, finding = "both", (
+            "Metin farkı (%.2f sayfa) ve diyagram farkı (%.2f) AYNI "
+            "büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden "
+            "denetlemek zorundadır." % (text_spread, dia_spread))
+
     print("\n── BULGU: ÇİFT SAYFAYI NE AŞIRIYOR ──")
     print("  · metin  : %.2f sayfa (oyunlar arası fark %.2f)"
-          % (avg_text, max(r["textPages"] for r in rows)
-             - min(r["textPages"] for r in rows)))
+          % (avg_text, text_spread))
     print("  · diyagram: %.2f sayfa (oyunlar arası fark %.2f)"
-          % (avg_dia, max(r["diagramPages"] for r in rows)
-             - min(r["diagramPages"] for r in rows)))
-    print("  → Metin OYUNDAN OYUNA NEREDEYSE SABİTTİR; değişken DİYAGRAMDIR.")
+          % (avg_dia, dia_spread))
+    print("  → sürücü: %s" % driver.upper())
+    print("    %s" % finding)
     print("    Çift sayfayı aşan madde sayısı: %d/%d %s"
           % (len(overflow), n, overflow or ""))
 
@@ -300,13 +346,27 @@ def run_measure(root: str, args) -> int:
 
     payload = {
         "status": "pass" if ok else "fail",
-        "measuredOn": "phase2",
+        # ÖLÇÜMÜN FAZI DA ÖLÇÜMDEN GELİR. "phase2" burada sabit yazılıydı ve
+        # Faz 3 ile Faz 4 ölçümleri de "Faz 2'de ölçüldü" diye kaydediliyordu.
+        #
+        # İKİ FAZ AYRI KAYDEDİLİR ve bu ayrım projenin tamamında geçerlidir:
+        # `measuredOn` ÜRETİM fazıdır (manuscript kendi fazını taşır),
+        # `measuredAtGate` RESMÎ kapı seviyesidir (.gate). İkisi Faz 3'ten
+        # beri kasıtlı olarak birbirinden farklıdır (K18 · K21).
+        "measuredOn": book.get("phase", "unknown"),
+        "measuredAtGate": read_gate_phase(root),
         "sampleSize": n,
         "sampleGames": [r["gameId"] for r in rows],
-        "sampleCaveat": ("Örneklem 3 oyundur ve KÜÇÜKTÜR. Sebebi bir tercih "
-                         "değil bir kapıdır: kural metni yalnızca sayfa "
-                         "seviyesinde doğrulanmış kaynağa dayanabilir ve "
-                         "12 pilot oyunun yalnızca üçü bu şartı sağladı."),
+        "sampleCaveat": (
+            "Örneklem %d oyundur. Sınırı bir tercih değil bir KAPI belirler: "
+            "bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir "
+            "kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen "
+            "kaynak sayısıdır. %s" % (
+                n,
+                "Bu örneklem bir sabiti kanıtlayacak kadar büyük DEĞİLDİR."
+                if n < 12 else
+                "Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen "
+                "aykırı değerler için hâlâ küçüktür.")),
         "geometry": geom,
         "perGame": rows,
         "avgWordsPerGame": round(avg_words, 1),
@@ -318,10 +378,10 @@ def run_measure(root: str, args) -> int:
         "avgDiagramPagesPerGame": round(avg_dia, 3),
         "spreadOverflowGames": overflow,
         "spreadOverflowRate": round(len(overflow) / n, 3),
-        "finding": ("Metin oyundan oyuna neredeyse sabittir (~%.2f sayfa); "
-                    "çift sayfayı aşıran değişken DİYAGRAM ALANIDIR. "
-                    "Sayfa bütçesi bir KELİME bütçesi değil, bir DİYAGRAM "
-                    "bütçesidir." % avg_text),
+        "finding": finding,
+        "overflowDriver": driver,
+        "textSpreadPages": round(text_spread, 3),
+        "diagramSpreadPages": round(dia_spread, 3),
         "projectedBodyPages": body_pages,
         "projectedTotalPages": total_pages,
         "pageTarget": scope["pageTarget"],
@@ -331,9 +391,11 @@ def run_measure(root: str, args) -> int:
     out = args.json or os.path.join(root, "06_REPORTS",
                                     "phase2-typeset-measurement.json")
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    with open(out, "w", encoding="utf-8") as fh:
-        json.dump(payload, fh, ensure_ascii=False, indent=2)
-        fh.write("\n")
+    for path in {out, os.path.join(root, "06_REPORTS", "%s-typeset-measurement.json"
+                                   % payload["measuredOn"])}:
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(payload, fh, ensure_ascii=False, indent=2)
+            fh.write("\n")
     return 0 if ok else 1
 
 

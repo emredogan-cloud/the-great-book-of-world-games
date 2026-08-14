@@ -24,8 +24,8 @@
     "Denetleyen: 04_BUILD/validate_research.py"
   ],
   "version": "1.0",
-  "phase": "phase3",
-  "scope": "pilot-12 + phase3-calibration-8",
+  "phase": "phase4",
+  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2",
   "records": [
     {
       "gameId": "yut-nori",
@@ -321,6 +321,127 @@
       "supportedClaim": "Yirmi işaretli ahl bezi; creek ve dry branch; dört çubuk zar taşa vurularak atılır; değerler beyaz=10, kırmızı=5, oluklu yüz sayısına göre 1/2/3; on ve beş EKSTRA ATIŞ verir; iki takım, çift sayıda oyuncu; tığlar creek'e dikilir. KRİTİK KÜLTÜREL OLGU: Culin oyunun KADINLAR ve KIZLAR tarafından oynandığını, erkeklerin ASLA oynamadığını özellikle kaydeder.",
       "verifiedOn": "2026-08-13",
       "accessMethod": "archive.org tam metin (gamesofnorthamer00culirich) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "seega",
+      "sourceRef": "Lane, Edward William, An Account of the Manners and Customs of the Modern Egyptians, Written in Egypt during the Years 1833, -34, and -35 (London: Charles Knight & Co., 1846)",
+      "edition": "1846 baskısı, cilt II; University of California Santa Barbara nüshası (NOT_IN_COPYRIGHT)",
+      "locator": "'Games' bölümü, ss. 188–189",
+      "supportingPassage": "Many of the fellaheen of Egypt also frequently amuse themselves with a game called that of the 'seega' […] it consists of a number of holes, generally made in the ground; most commonly, of five rows of five holes in each, or seven rows of seven in each, or nine rows of nine in each […] The holes are called ''oyoon' (or eyes, in the singular ''eyn'). In this seega, they are twenty-five in number. The players have each twelve 'kelbs' […] they then alternately place two kelbs in any of the 'eyns that they may choose, excepting the central 'eyn of the seega. […] The party who begins moves one of his kelbs from a contiguous 'eyn into the central. The other part[y], if the 'eyn now made vacant be not next to any one of those occupied by his kelbs, desires his adversary to give him, or open to him, a way; and the latter must do so, by removing, and thus losing, one of his own kelbs. […] The aim of each party, after the first disposal of the kelbs, is to place any one of his kelbs in such a situation that there shall be, between it and another of his, one of his adversary's kelbs. This, by so doing, he takes; and as long as he can immediately make another capture by such means, he does so, without allowing his adversary to move. — These are the only rules of the game.",
+      "supportedClaim": "Tahta 5×5 = 25 çukurdur (7×7 ve 9×9 biçimleri de vardır); her oyuncunun 12 taşı vardır; taşlar ikişer ikişer ve serbestçe yerleştirilir, MERKEZ boş bırakılır; ilk hamle bir taşı komşu çukurdan merkeze kaydırmaktır; hamle edecek taşı kalmayan oyuncu rakibinden 'yol açmasını' ister ve rakip kendi taşından birini KAYBEDEREK bunu yapmak zorundadır; alma kıstırmadır ve zincir alma rakip beklerken sürer. Kaynak KURAL SAYISINI kendisi kapatır ('These are the only rules of the game') — yani hareket kuralı ve bitiş koşulu kaynakta YOKTUR ve prozada editoryal olarak beyan edilir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (accountofmanners02lane) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "tab",
+      "sourceRef": "Lane, Edward William, An Account of the Manners and Customs of the Modern Egyptians, Written in Egypt during the Years 1833, -34, and -35 (London: Charles Knight & Co., 1846)",
+      "edition": "1846 baskısı, cilt II; University of California Santa Barbara nüshası (NOT_IN_COPYRIGHT)",
+      "locator": "'Games' bölümü, ss. 185–188",
+      "supportingPassage": "Another game very general among the lower classes in Egypt is called 'tab.' […] Four small pieces of stick, of a flat form, about a span (or eight inches) in length […] one side of which, being cut flat and smooth, is white; the other, green […] These are called the 'tab.' Next, it is necessary to be provided with a 'seega.' This is a board, divided into four rows of squares, called 'beyts' […] the beyts are usually seven, nine, eleven, thirteen, or fifteen, in each row. […] If they fall so that one only has its white side upwards, the player is said to have thrown, or brought, 'tab' […] and counts one: if there be two white, and the other two black, he counts two […] if there be three white, and one black, he counts three […] if all four be white, four […] if all four black, six […] When one throws tab, or four, or six, he throws again; but when he has thrown two, or three, it is then the turn of the other. […] Neither party can remove a kelb from its original place but by throwing tab before each such removal. […] Whenever a throw […] enables him to move his kelb into a beyt occupied by one of his opponent's kelbs, he takes the latter. […] thus he may unite any number of his own kelbs, and circulate them together, as if they were but one; but he cannot divide them again […] unless he throw tab. […] Two or more kelbs thus united are called an ''eggeh.'",
+      "supportedClaim": "Tahta dört sıra × 7–15 kare/çukurdur; dört yassı atma çubuğu zar yerine geçer; atış değerleri tab=1, iki beyaz=2, üç beyaz=3, dört beyaz=4, dört siyah=6; tab, 4 ve 6 tekrar atış verir, 2 ve 3 turu devreder; bir taş yalnızca 'tab' atışıyla başlangıç sırasından çıkabilir; rakip taşının bulunduğu göze girmek onu alır; aynı oyuncunun taşları birleşip tek taş gibi dolaşabilir ('eggeh) ve ancak tab atışıyla ayrılabilir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (accountofmanners02lane) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "nine-mens-morris",
+      "sourceRef": "Gomme, Alice Bertha, The Traditional Games of England, Scotland and Ireland (London: David Nutt, 1894–1898)",
+      "edition": "cilt I (1894), University of Toronto nüshası (NOT_IN_COPYRIGHT)",
+      "locator": "'Nine Men's Morris', cilt I, ss. 414–417",
+      "supportingPassage": "A flat piece of wood about eight inches square is taken, and on it twenty-four holes are bored […] Each of the two players has nine wooden pegs […] and the object of each player is to get three of his own pegs in a straight line. It is called 'Merrils.' — Sheffield (S. O. Addy). […] Two persons, having each of them nine pieces or men, lay them down alternately, one by one, upon the spots […] If a row be formed, he that made it is at liberty to take up one of his competitor's pieces from any part he thinks most to his own advantage, excepting he has made a row, which must not be touched, if he have another piece upon the board that is not a component part of that row. When all the pieces are laid down they are played backwards and forwards in any direction that the lines run, but can only move from one spot to another at one time. He that takes off all his antagonist's pieces is the conqueror. […] The game is continued until one or other of the players has only two pegs left, when the game is won.",
+      "supportedClaim": "Tahta 24 noktadır; her oyuncunun dokuz taşı vardır; oyun iki aşamalıdır — önce sırayla YERLEŞTİRME, sonra çizgi boyunca birer adım KAYDIRMA; üç taşlık sıra (değirmen) kurulunca rakipten bir taş alınır; bir değirmendeki taş, rakibin başka taşı varken alınamaz; taşı ikiye düşen oyuncu kaybeder.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (traditionalgames01gommuoft) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "fox-and-geese",
+      "sourceRef": "Gomme, Alice Bertha, The Traditional Games of England, Scotland and Ireland (London: David Nutt, 1894–1898)",
+      "edition": "cilt I (1894), University of Toronto nüshası (NOT_IN_COPYRIGHT)",
+      "locator": "'Fox and Geese (2)', cilt I, ss. 141–142",
+      "supportingPassage": "A game known by this name is played with marbles or pegs on a board on which are thirty-three holes […] To play this game there are seventeen pieces called Geese, and another one either larger or distinguished from the Geese by its colour, which is called the Fox. The Fox occupies the centre hole, and the Geese occupy nine holes in front, and four on each side of him. The vacant holes behind are for the Geese and Fox to move in. The game is for the Geese to shut up the Fox so that he cannot move. All the pieces can be moved from one spot to another in the direction of the lines, but cannot pass over two holes at once. The Geese are not permitted to take the Fox. The Fox's business is to take all, or as many of the Geese as will prevent him from being blockaded. The Fox can take the Geese whenever there is a vacant space behind them, which he passes to, then occupies.",
+      "supportedClaim": "Tahta 33 çukurlu haç biçimlidir; 17 kaz ve 1 tilki vardır; tilki merkezdedir, kazlar önünde dokuz ve her yanında dört çukuru tutar; bütün taşlar çizgi yönünde BİR adım gider; kazlar tilkiyi ALAMAZ; tilki, arkasında boş yer varsa kazı atlayarak alır; kazlar tilkiyi hareketsiz bırakarak kazanır. ASİMETRİ kaynağın kendi metnindedir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (traditionalgames01gommuoft) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "fivestones",
+      "sourceRef": "Gomme, Alice Bertha, The Traditional Games of England, Scotland and Ireland (London: David Nutt, 1894–1898)",
+      "edition": "cilt I (1894), University of Toronto nüshası (NOT_IN_COPYRIGHT)",
+      "locator": "'Fivestones', cilt I, ss. 122–126",
+      "supportingPassage": "This game was played by a newspaper boy at Richmond Station for me as follows: — He had five square pieces of tile or stone about the size of dice. He took all five pieces in the palm of the hand first, then threw them up and caught them on the back of the hand, and then from the back of the hand into the palm. Four of the stones were then thrown on the ground; the fifth was thrown up, one stone being picked up from the ground, and the descending fifth stone caught in the same hand […] When he dropped one, he picked it up between his outstretched fingers while the other stones remained on the back of the hand […] This completed one game. If mistakes were made another player took the stones. Marks were taken for successful play. This boy called the game 'Dabs.' — A. B. Gomme. […] In Wakefield the set of pot checks, which represents five hucklebones, now consists of four checks and a ball […] The table played on is generally a doorstep, and it is made ready by drawing a ring upon it […] If any check fall outside the ring the player is 'down.'",
+      "supportedClaim": "Oyun beş taşla oynanır; sıra bir figürler dizisidir ve her figür bir öncekinden zordur; hata SIRAYI DEVREDER; başarılı oyun puanlanır. Gomme figürleri KENDİSİ İZLEYEREK kaydetmiştir (Richmond istasyonu) — yani birinci elden saha kaydıdır. Wakefield biçimi dört pul + bir top ve ÇİZİLMİŞ BİR HALKA kullanır; halkanın dışına düşen pul turu bitirir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (traditionalgames01gommuoft) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "hopscotch",
+      "sourceRef": "Gomme, Alice Bertha, The Traditional Games of England, Scotland and Ireland (London: David Nutt, 1894–1898)",
+      "edition": "cilt I (1894), University of Toronto nüshası (NOT_IN_COPYRIGHT)",
+      "locator": "'Hop-Scotch', cilt I, ss. 223–227",
+      "supportingPassage": "A game, the object of which is to eject a stone, slate, or 'dump' out of a form linearly marked on the ground in different directions, by hopping without touching any of the lines. — Halliwell's Dictionary. […] Another way, done on the same plan, is for the player to place the stone in No. 1, leave it there, and hop into each division and back, then place it in No. 2, and repeat the hopping, and so on through all the figures. There is no kicking of the stone, as is usual in London. — Roxton, St. Neots (Miss Lumley). […] Throw stone into No. 1. Hop from No. 1 to No. 5 and back. Then pick it up. So on successively.",
+      "supportedClaim": "Şekil yere ÇİZİLİR ve numaralanmış bölmelerden oluşur; taş sırayla bir numaradan başlayarak bölmelere atılır; oyuncu çizgilere basmadan zıplar; hata sırayı devreder. Gomme aynı oyunun ÇOK SAYIDA bölgesel biçimini yan yana kaydeder — yani tek bir 'doğru' seksek yoktur ve kitap hangi biçimi bastığını SÖYLEMEK zorundadır.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (traditionalgames01gommuoft) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "totolospi",
+      "sourceRef": "Culin, Stewart, Games of the North American Indians, Twenty-fourth Annual Report of the Bureau of American Ethnology (Washington: Government Printing Office, 1907)",
+      "edition": "1907 birinci baskı (NOT_IN_COPYRIGHT)",
+      "locator": "'Dice games: Hopi', ss. 160–162, şekil 190–196",
+      "supportingPassage": "These were collected in 1899 by Rev. H. R. Voth, and are described by him as implements for the game of totolospi: 'In this game either two or four participate. Each player has one piece, which is placed in the ring seen in the four semicircles. The sticks are then thrown by one party, and as long as either the plain or the figured sides of all the sticks lie upward he moves his piece forward over the cross lines toward the center. As soon as the sticks present different surfaces another player throws.' […] 'The number of sticks used varies; generally, however, either two or three are used. These are dropped upon the floor on end. All white or all figured sides up count. The players throw until the sticks do not all present the same side. […] Under certain conditions, which have not yet been fully studied, they are put forward over more than one point or are returned to the place of starting.' […] Three white up counts 2; three red up, 1. The players start with their man on the circle nearest to them, advancing line by line across the board. The one who gets first to the opposite side wins. The circles are called hwalmai, and the spaces tuwoila.",
+      "supportedClaim": "HOPİ totolospi'si bir ZAR YARIŞIDIR: iki ya da dört oyuncu, her birinin TEK taşı, iki ya da üç yassı çubuk zar; yalnızca bütün çubuklar aynı yüzü gösterirse sayılır ve oyuncu tekrar atar; üç beyaz = 2, üç kırmızı = 1; taşlar en yakın çemberden başlar ve çizgi çizgi karşı tarafa ilerler; karşı tarafa ilk varan kazanır. Culin s. 796 dipnotunda AYNI ADIN Tewa'da BAŞKA bir oyuna (Fox and Geese benzeri) verildiğini kendisi söyler — Faz 3'ün kural kimliği çelişkisi budur ve ÇÖZÜLMÜŞTÜR.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (gamesofnorthamer00culirich) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "set-dilth",
+      "sourceRef": "Culin, Stewart, Games of the North American Indians, Twenty-fourth Annual Report of the Bureau of American Ethnology (Washington: Government Printing Office, 1907)",
+      "edition": "1907 birinci baskı (NOT_IN_COPYRIGHT)",
+      "locator": "'Dice games: White Mountain Apache', ss. 88–89, şekil 86–87",
+      "supportingPassage": "This game is usually played by women only, occupying with it their leisure hours. They bet on it such things as beads, dress materials, and other objects of small value […] In preparing the field a spot of ground is leveled and a small flat stone placed in the center. Other stones are then piled around this stone to form a circle […] with four openings, 10 stones being placed in each quarter of the circle, the openings corresponding with the northeast, southeast, southwest, and northwest. […] The counts are as follows: One marked face up counts 2; two marked faces up, 3; three marked faces up, 5; three marked faces down, 10. If the player scores 10, she throws again; otherwise she passes the sticks to the next player. […] The number of players may be two, three, or four […] When more than two play, the two that face each other play as partners. […] If a player's count terminates at, or moves past, a place occupied by an antagonist, she takes her opponent's counting-stick and throws it back, and the latter must start again, losing all her counts. A game consists of three circuits, or 120 points.",
+      "supportedClaim": "Alan bir taş çemberidir: merkezde yassı bir taş, çevrede dört açıklıkla ayrılmış dört çeyrek ve her çeyrekte 10 taş (toplam 40); üç yarım çubuk zar olarak atılır; sayım 2 / 3 / 5 / 10'dur ve 10 tekrar atış verir; 2–4 oyuncu, dörtte karşılıklı oturanlar ORTAKTIR; rakibin durduğu yere varmak ya da onu geçmek onu başa döndürür; oyun üç turdur = 120 puan. Culin oyunun yalnızca kadınlar tarafından oynandığını ve bahis konduğunu kaydeder (K5 yeniden çerçeveleme gerekir).",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (gamesofnorthamer00culirich) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "jan-ken",
+      "sourceRef": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
+      "edition": "1895 birinci baskı, Cornell University Library nüshası (NOT_IN_COPYRIGHT)",
+      "locator": "§ XXXVII 'Syou-pyek-tchi-ki — Hand-clapping', ss. 44–46",
+      "supportingPassage": "The same name, Ken, is applied in Japan to a large number of games played by two persons with the hands and fingers. One of the commonest of these games is Ishi Ken, or 'Stone ken', usually called Janken. In Ishi Ken the fist is called ishi, 'stone;' the open hand, kami, 'paper,' and the extended index finger and thumb, hasami, 'scissors.' The players extend their hands simultaneously. Stone beats scissors, as scissors will not cut stone. Paper beats stone, as paper will wrap up stone, and scissors beat paper, as scissors cut paper. Janken is often used to decide who shall perform some duty or task. Thus, jinrikisha men play it to determine which is entitled to a passenger. In this case it is customary to cry 'one, two, three,' which is uttered as a thrice-repeated hissing sound before each decisive movement of the hand. […] Mushi Ken, or 'Reptile Ken', is played like Janken. The thumb is called kebi, 'snake;' the forefinger, kairu, 'frog,' and the little finger, namekuji, 'slug.' The snake beats the frog, the frog the slug, and the slug the snake. […] In Kitsune Ken, the two hands slightly bent forward and raised to the ears is called kitsune, 'fox;' the two hands placed on the thighs in the respectful posture, shoya, 'the headman of a village,' and the extended forefinger, teppo, 'gun.' […] kitsune beats shoya, because the fox can deceive the man; the shoya beats teppo, because the gun may not shoot the magistrate, but the teppo beats the kitsune, because the gun kills the fox.",
+      "supportedClaim": "Üç el biçimi ve DÖNGÜSEL üstünlük ilişkisi kaynakta AÇIKÇA verilir: taş makası, kâğıt taşı, makas kâğıdı yener; her üstünlüğün gerekçesi de kaydedilmiştir. Atış eşzamanlıdır ve üç sayımla yapılır. Oyun bir işi kime düşeceğine karar vermek için kullanılır (Culin'in örneği: jinrikişa çekicileri müşteriyi paylaşır). İki bağımsız varyant — Mushi Ken (yılan-kurbağa-sümüklüböcek) ve Kitsune Ken (tilki-muhtar-tüfek) — aynı sayfalarda kural düzeyinde verilir. Culin ayrıca BÖLGESEL bir farkı dipnotta kaydeder: makas kuzeyde işaret parmağı ile başparmak, Tokyo'da işaret ve orta parmaktır.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (cu31924023272424) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "conkers",
+      "sourceRef": "Gomme, Alice Bertha, The Traditional Games of England, Scotland and Ireland (London: David Nutt, 1894–1898)",
+      "edition": "cilt I (1894) ve cilt II (1898), University of Toronto nüshaları (NOT_IN_COPYRIGHT)",
+      "locator": "'Conquerors or Conkers', cilt I, ss. 77–78; kural açıklaması cilt II, s. 471",
+      "supportingPassage": "Conquerors or Conkers. I. 'Cobbly co! My first blow!' […] II. 'Obli, obli O, my first go; And when the nut is struck, Obli, obli onker, my nut will conquer.' III. 'Cobblety cuts, Put down your nuts.' […] [cilt II, s. 471:] The object of some of the games in the first group is the destruction of the article with which the opponent plays. This is the case with the games of 'conkers' played with nuts on a string, and peg-top; the nuts and top are broken, if possible, by the players, to prevent their being used again […] The victories of the one destroyed are tacked on and appropriated by each victor in succession. So we see a nut or a top which has destroyed another having a record of, say, twenty-five victories, taking these twenty-five victories of its opponent and adding them to its own score.",
+      "supportedClaim": "Oyun ipe geçirilmiş bir sert kabuklu meyveyle oynanır; oyuncular sırayla vurur ve amaç rakibin meyvesini KIRMAKTIR. Vuruş sırası bir tekerlemeyle ilan edilir ('my first go' / 'put down your nuts') — yani sıra hakkı sözle alınır. Kazanan meyve, kırdığı meyvenin GALİBİYET SAYISINI da devralır ve bu birikimli sayım oyunun puanlama sistemidir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (traditionalgames01gommuoft · traditionalgames02gommuoft) — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "marbles",
+      "sourceRef": "Gomme, Alice Bertha, The Traditional Games of England, Scotland and Ireland (London: David Nutt, 1894–1898)",
+      "edition": "cilt II (1898), University of Toronto nüshası (NOT_IN_COPYRIGHT)",
+      "locator": "'Ring-taw', cilt II, ss. 113–114",
+      "supportingPassage": "A rough ring is made on the ground, and the players each place in it an equal share in 'stonies,' or alleys. They each bowl to the ring with another marble from a distance. The boy whose marble is nearest has the first chance to 'taw;' if he misses a shot the second boy, whose marble was next nearest to the ring, follows, and if he misses, the next, and so on. If one player knocks out a marble, he is entitled to 'taw' at the rest in the ring until he misses […] Any one's 'taw' staying within the ring after being tawn at the 'shots,' is said to be 'fat,' and the owner of the 'taw' must then replace any marbles he has knocked out in the ring. — Earls Heaton, Yorks. (Herbert Hardy). […] 'If the game be knuckle-up the player stands and shoots in that position. If the game be knuckle-down he must stoop and shoot with the knuckle of the first finger touching the ground at taw. In both cases, however, the player's toe must be on taw.' […] The line was thus called taw as marking the place for the toe of the player, and the marble a taw as being the one shot from the taw-line.",
+      "supportedClaim": "Yere bir halka çizilir ve her oyuncu halkaya EŞİT sayıda misket koyar; atış sırası halkaya en yakın atanla belirlenir (lag); halkadan misket çıkaran oyuncu ıskalayana kadar atmayı SÜRDÜRÜR; atış taşı halkanın içinde kalırsa ('fat') oyuncu çıkardığı bütün misketleri geri koyar; atış çizgisi ve atış taşı AYNI kelimeyle ('taw') adlandırılır ve iki atış duruşu vardır (knuckle-up · knuckle-down). Kaynak ayrıca İrlanda'da düğmeyle oynanan biçimi kaydeder.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin (traditionalgames02gommuoft) — kamusal alan",
       "status": "verified"
     }
   ]
