@@ -42,7 +42,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_ROOT = os.path.dirname(HERE)
 
 VALID_TYPES = ("book", "journal", "museum", "ethnography", "archive", "field-record")
-VALID_VERIFICATION = ("bibliographic", "page-verified")
+
+# FAZ 5 DÜZELTMESİ — GÖMÜLÜ LİSTE KALDIRILDI.
+# Bu sabit, `project_config.json § sourceVerification.levels` ile AYNI
+# listeyi ikinci kez yazıyordu. Faz 5'te config'e üçüncü bir seviye
+# eklendi ve bu satır onu tanımadığı için kapı, geçerli bir veriyi
+# reddetti. İki listeden biri değişince öteki sessizce yalancı olur —
+# Faz 4'ün `calibrate_pages.py` dersinin aynısı. Artık tek kaynak vardır
+# ve bu sabit yalnızca config okunamazsa devreye giren bir tabandır.
+VALID_VERIFICATION_FALLBACK = ("bibliographic", "page-verified")
 REF_MIN = 12
 
 # ② Kaynak SAYILMAYANLAR. Künyede geçmeleri kapıyı kırmızı yakar.
@@ -162,9 +170,13 @@ def check_independence(games: list, cfg: dict, rep: Report) -> None:
 
     min_ind = cfg.get("sourcing", {}).get("minIndependentSourcesPerGame", 2)
 
+    levels = tuple(cfg.get("sourceVerification", {}).get("levels")
+                   or VALID_VERIFICATION_FALLBACK)
     bad_verif = [g.get("gameId") for g in games
-                 if g.get("sourceVerification") not in VALID_VERIFICATION]
-    rep.check(not bad_verif, "doğrulama seviyesi geçerli" + brief(bad_verif))
+                 if g.get("sourceVerification") not in levels]
+    rep.check(not bad_verif,
+              "doğrulama seviyesi geçerli (config: %s)" % ", ".join(levels)
+              + brief(bad_verif))
 
     # page-verified iddiası, künyede bir locator ile DESTEKLENMEK zorundadır.
     # Desteksiz bir 'sayfayı gördüm' iddiası, bu kitabın en pahalı yalanıdır.

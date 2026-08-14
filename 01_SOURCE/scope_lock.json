@@ -5,7 +5,9 @@
     "kez koşturuldu, çıktısı burada dondu ve artık her koşuda yeniden",
     "üretilmez. Model bir gün başka bir liste üretirse bu KAPI ISIRIR;",
     "liste sessizce güncellenmez. Değişiklik amendments[] ister.",
-    "Denetleyen: 04_BUILD/validate_scope.py"
+    "Denetleyen: 04_BUILD/validate_scope.py",
+    "FAZ 5: amendments[0] (K23) — iki İngiliz tahtasız madde çıkarıldı,",
+    "iki yedek terfi etti. Liste DEĞİŞTİ, özet YENİDEN HESAPLANDI."
   ],
   "version": "1.0",
   "lockedOn": "2026-08-13",
@@ -20,12 +22,77 @@
     "boardless": 15
   },
   "count": 100,
-  "cultures": 71,
+  "cultures": 73,
   "integrity": {
-    "sha256": "71158f75e0fbdacea3486760bd9bd486d9dce5005bb56f46cd4e31614b05413f",
+    "sha256": "efc4d78c84821d30a7269b0aeed42d0a7a433bb8642e60ee14c73c015f133c47",
     "algorithm": "sha256(sorted gameIds joined by \\n)"
   },
-  "amendments": [],
+  "amendments": [
+    {
+      "id": "A1",
+      "date": "2026-08-14",
+      "phase": "phase5",
+      "decision": "K23",
+      "reason": "Tahtasız ailenin iki kusuru: (a) on beş maddenin BEŞİ İngilizdi ve aile kitabın en dar kültür kümesiydi (11 kültür), (b) fivestones ile gonggi aynı mekaniği taşıyordu — bu uyarı Faz 1'den beri fivestones kaydının unresolvedQuestions alanında duruyordu ve Faz 4 onu çözmedi, yalnızca biçimde azalttı. Kurucu iki çıkarma + iki yedek terfisi yetkilendirdi. Çıkarılanlar mekanik AYIRT EDİCİLİK puanına göre seçildi (projenin kendi scores.distinct alanı): fivestones 2 (ailenin en düşüğü, gonggi ile çakışan), marbles 3 (petanque ile 'hedefe atma' kümesinde ve özü bahis olduğu için K5 dönüşümü gerektiriyor). cats-cradle KORUNDU: distinct 5 ile ailenin en ayırt edici maddesi ve ailenin TEK sayfa-doğrulanmış kaydı — onu çıkarmak mekanik çeşitliliği ve kaynak kalitesini DÜŞÜRÜRDÜ.",
+      "removed": [
+        {
+          "gameId": "fivestones",
+          "name": "Fivestones",
+          "family": "boardless",
+          "culture": "English",
+          "distinctScore": 2,
+          "why": "gonggi ile aynı mekanik (Faz 1 uyarısı: 'ikisinden biri elenmelidir'); ailenin en düşük ayırt edicilik puanı; İngiliz yoğunlaşmasına katkı. gonggi DEĞİL fivestones çıkarıldı çünkü gonggi'yi çıkarmak İngiliz sayısını düşürmez ve bir kültürü tamamen silerdi."
+        },
+        {
+          "gameId": "marbles",
+          "name": "Marbles",
+          "family": "boardless",
+          "culture": "English",
+          "distinctScore": 3,
+          "why": "petanque ile aynı 'hedefe nişan alıp atma' kümesinde — bu çakışmayı projenin kendi quoits kaydı adlandırıyor; oyunun ÖZÜ kazandığını alıkoymaktır ve K5 uyarınca puana çevrilmesi gerekiyordu, yani basılan biçim kaynaktaki oyun değil."
+        }
+      ],
+      "added": [
+        {
+          "gameId": "lagori",
+          "name": "Lagori",
+          "family": "boardless",
+          "culture": "Kannada",
+          "distinctScore": 4,
+          "why": "kapsamda HİÇ bulunmayan bir kültür (Kannada); iki aşamalı mekanik (yığını devir → kaçarken yeniden kur) kitapta eşi olmayan bir yapıdır; 4–12 oyuncu ailece oynanır."
+        },
+        {
+          "gameId": "kho-kho",
+          "name": "Kho-Kho",
+          "family": "boardless",
+          "culture": "Marathi",
+          "distinctScore": 4,
+          "why": "kapsamda HİÇ bulunmayan bir kültür (Marathi); kovalamaca ailesinde körlemesine olmayan TEK yapı (yön kısıtlı kovalayıcı + kho devri); 8–18 oyuncuyla kitabın en büyük grup oyunu, oyuncu sayısı çeşitliliğini genişletir."
+        }
+      ],
+      "familyBalanceEffect": "DEĞİŞMEDİ. Dört maddenin dördü de tahtasız ailedendir; boardless 15 → 15 ve family_index.json hedefleri (14/10/15/14/17/15/15 = 100) dokunulmadan geçerli kalır. Değişiklik ailenin İÇİNDEDİR.",
+      "cultureBalanceEffect": "ÖLÇÜLDÜ. Kitap geneli: 71 → 73 kültür (+2, Kannada ve Marathi kapsama ilk kez giriyor). Tahtasız aile: 11 → 13 kültür (+2); İngiliz madde sayısı 5 → 3 (−2). Aile artık kitabın en dar kümesi değildir.",
+      "mechanicalEffect": "gonggi/fivestones çakışması ÇÖZÜLDÜ — küme artık tek maddedir (gonggi). marbles/petanque çakışması azaltıldı. Yerine gelen iki mekanik kitapta eşsizdir: yığın devirme + baskı altında yeniden kurma (lagori) ve yön kısıtlı takım kovalamacası (kho-kho).",
+      "cost": "İKİ YAZILMIŞ MADDE GERİ ALINDI. fivestones ve marbles Faz 4'te yazılmıştı; prozaları silinmedi, korumalı katmanda 02_MANUSCRIPT/retired_phase5.json içine arşivlendi. Yazılmış oyun sayısı 22 → 20. Bu maliyet bilerek ödendi: kurucunun ölçütleri portföy ölçütleridir ve 'zaten yazılmıştı' onlardan biri değildir.",
+      "sourceQualityNote": "DÜRÜST KAYIT: iki yeni maddenin de kaynağı Faz 5'te ARANDI ve dönem birinci-el kaydı BULUNAMADI. kho-kho'nun kuralları ilk kez 1914'te Deccan Gymkhana komitesince çerçevelendi ve 1935'te basıldı; lagori için ikinci bağımsız kaynak hâlâ eksiktir. İkisi de kuyruğa DOĞRULANMAMIŞ olarak girer ve zayıf kanıtla yazılmazlar (§13). Terfi bir KAPSAM kararıdır, bir yazım izni değil.",
+      "measuredBefore": {
+        "label": "before",
+        "totalGames": 100,
+        "totalCultures": 71,
+        "boardlessGames": 15,
+        "boardlessCultures": 11,
+        "boardlessEnglish": 5
+      },
+      "measuredAfter": {
+        "label": "after",
+        "totalGames": 100,
+        "totalCultures": 73,
+        "boardlessGames": 15,
+        "boardlessCultures": 13,
+        "boardlessEnglish": 3
+      }
+    }
+  ],
   "entries": [
     {
       "gameId": "oware",
@@ -2157,30 +2224,6 @@
       "reconstructed": false
     },
     {
-      "gameId": "marbles",
-      "name": "Marbles",
-      "family": "boardless",
-      "culture": "English",
-      "region": "Western Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "England (and cognate forms worldwide)",
-      "period": "clay and stone marbles are ancient; the modern ring game is documented from the 17th century",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)",
-        "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)"
-      ],
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.48,
-      "playersMax": 8,
-      "reconstructed": false
-    },
-    {
       "gameId": "conkers",
       "name": "Conkers",
       "family": "boardless",
@@ -2274,30 +2317,6 @@
       "eligibility": "eligible",
       "selectionScore": 4.28,
       "playersMax": 2,
-      "reconstructed": false
-    },
-    {
-      "gameId": "fivestones",
-      "name": "Fivestones",
-      "family": "boardless",
-      "culture": "English",
-      "region": "Western Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "England",
-      "period": "recorded in 19th-century collections; the skill form is far older",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-        "Opie, Iona & Peter, Children's Games in Street and Playground (Oxford: Oxford University Press, 1969)"
-      ],
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.2,
-      "playersMax": 6,
       "reconstructed": false
     },
     {
@@ -2440,6 +2459,52 @@
       "selectionScore": 3.96,
       "playersMax": 12,
       "reconstructed": false
+    },
+    {
+      "gameId": "lagori",
+      "name": "Lagori",
+      "family": "boardless",
+      "culture": "Kannada",
+      "region": "South Asia",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "India (widespread)",
+      "period": "documented in 20th-century collections; long-standing street game",
+      "sourceCount": 1,
+      "sourceRefs": [
+        "Government of India, Ministry of Education, reports on indigenous games and their codification (20th century)"
+      ],
+      "sourceConfidence": "low",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.74,
+      "playersMax": 12,
+      "reconstructed": false
+    },
+    {
+      "gameId": "kho-kho",
+      "name": "Kho Kho",
+      "family": "boardless",
+      "culture": "Marathi",
+      "region": "South Asia",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "Maharashtra, India",
+      "period": "codified as a sport in the early 20th century from older chasing games",
+      "sourceCount": 1,
+      "sourceRefs": [
+        "Government of India, Ministry of Education, reports on indigenous games and their codification (20th century)"
+      ],
+      "sourceConfidence": "low",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.22,
+      "playersMax": 18,
+      "reconstructed": false
     }
   ],
   "reserve": [
@@ -2450,12 +2515,12 @@
     "cuarenta",
     "daldos",
     "ephedrismos",
+    "fivestones",
     "janggi",
-    "kho-kho",
-    "lagori",
     "ludus-duodecim-scriptorum",
     "ludus-latrunculorum",
     "luk-tsut-kei",
+    "marbles",
     "nine-holes",
     "puluc",
     "quoits",

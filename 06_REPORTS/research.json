@@ -12,7 +12,8 @@
     "single_source": 38,
     "verification": {
       "verified": 28,
-      "blocked": 9
+      "blocked": 9,
+      "pending": 2
     },
     "pilot_verified_any": 7,
     "pilot_verified_full": 3,

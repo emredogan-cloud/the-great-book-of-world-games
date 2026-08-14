@@ -429,7 +429,8 @@
         "Gonggi ile aynı mekanik; ikisinden biri elenmelidir."
       ],
       "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
+      "playtestStatus": "not-started",
+      "scopeNote": "FAZ 5 · K23 ile kapsamdan ÇIKARILDI ve yedek havuzuna döndü. Prozası silinmedi (02_MANUSCRIPT/retired_phase5.json). gonggi ile mekanik çakışma."
     },
     {
       "gameId": "otedama",
@@ -842,7 +843,7 @@
       "status": "candidate",
       "restrictionStatus": "open",
       "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
+      "sourceVerification": "attempted-not-found",
       "sources": [
         {
           "ref": "Government of India, Ministry of Education, reports on indigenous games and their codification (20th century)",
@@ -899,10 +900,12 @@
         "play": 4
       },
       "unresolvedQuestions": [
-        "Sekiz kişiden az oynanamaz; kitabın 'aile akşamı' vaadine uymuyor. Kitaba girecekse küçük gruplu bir uyarlama gerekir ve bu uyarlamanın modern olduğu söylenmelidir."
+        "Sekiz kişiden az oynanamaz; kitabın 'aile akşamı' vaadine uymuyor. Kitaba girecekse küçük gruplu bir uyarlama gerekir ve bu uyarlamanın modern olduğu söylenmelidir.",
+        "FAZ 5 BULGUSU: dönem birinci-el kaydı ARANDI ve BULUNAMADI. Kuralları ilk kez 1914'te Deccan Gymkhana (Pune) komitesince çerçevelendi, ilk basılı kural kitabı 1935'tir. Yani bu oyunun OYNANABİLİR biçimi 20. yüzyıl kodifikasyonudur, etnografik bir kayıt değil. Prozada bu AÇIKÇA söylenmelidir; 'kadim' çerçevesi kaynaksızdır."
       ],
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
+      "editorialStatus": "shortlisted",
+      "playtestStatus": "not-started",
+      "scopeNote": "Kapsama K23 ile girdi. Kaynak DOĞRULANMADI: yazım, 1914/1935 kodifikasyonuna dayanan denetlenebilir bir edisyon bulunmadan yapılamaz."
     },
     {
       "gameId": "gilli-danda",
@@ -1007,7 +1010,7 @@
       "status": "candidate",
       "restrictionStatus": "open",
       "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
+      "sourceVerification": "attempted-not-found",
       "sources": [
         {
           "ref": "Government of India, Ministry of Education, reports on indigenous games and their codification (20th century)",
@@ -1068,10 +1071,12 @@
         "play": 4
       },
       "unresolvedQuestions": [
-        "İkinci bağımsız kaynak gerekiyor."
+        "İkinci bağımsız kaynak gerekiyor.",
+        "FAZ 5 BULGUSU: dönem birinci-el kaydı ARANDI ve BULUNAMADI. Thurston 1906 (Ethnographic Notes in Southern India) tarandı — oyun bölümü yok. archive.org 1850–1930 'games + India' başlık taraması kullanılabilir kayıt vermedi. Oyun yaygın ve canlıdır ama sayfa-doğrulanabilir bir dönem kaydına henüz bağlanmadı."
       ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+      "editorialStatus": "shortlisted",
+      "playtestStatus": "not-started",
+      "scopeNote": "Kapsama K23 ile girdi. Kaynak DOĞRULANMADI: yaşayan bir sokak oyununun kuralı, denetlenebilir bir kayıt olmadan yazılamaz (§13)."
     },
     {
       "gameId": "myinda",
@@ -2299,8 +2304,9 @@
         "Oyunun özü 'kazandığını alıkoymaktır' ve bu bir bahis biçimidir; K5 uyarınca kitap puanla oynanan bir sürüm basar ve farkı söyler."
       ],
       "gamblingReframed": true,
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+      "editorialStatus": "reserve",
+      "playtestStatus": "not-started",
+      "scopeNote": "FAZ 5 · K23 ile kapsamdan ÇIKARILDI ve yedek havuzuna döndü. Prozası silinmedi (02_MANUSCRIPT/retired_phase5.json). petanque ile 'hedefe atma' çakışması + K5 bahis özü."
     }
   ]
 }

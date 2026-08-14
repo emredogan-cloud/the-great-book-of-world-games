@@ -546,3 +546,90 @@ Faz 3'ün kuyruğu 80 oyunu en alt önceliğe koyuyordu çünkü
 
 > Bir engeli abartmak, onu küçümsemek kadar yanlıştır.
 > İkisi de aynı şeyi yapar: kararı yanlış veriye dayandırır.
+
+---
+
+### K23 · KAPSAM DEĞİŞİKLİĞİ — tahtasız ailede iki çıkarma, iki terfi
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 14 Ağustos 2026
+**Uygulayan kayıt:** `01_SOURCE/scope_lock.json § amendments[0]`
+
+Kurucu, tahtasız ailenin **iki ayrı** kusurunu kapatmak için iki İngiliz
+maddenin çıkarılmasını ve yedek havuzdan iki terfiyi yetkilendirdi.
+
+| | ÇIKARILAN | EKLENEN |
+|---|---|---|
+| 1 | **Fivestones** · İngiliz | **Lagori** · Kannada |
+| 2 | **Marbles** · İngiliz | **Kho-Kho** · Marathi |
+
+**Seçim gerekçesi bir tercih değil bir TÜRETMEDİR.** Projenin kendi
+`scores.distinct` alanı (mekanik ayırt edicilik) tahtasız ailenin beş
+İngiliz maddesini şöyle sıralar:
+
+| madde | distinct | kaynak | not |
+|---|---:|---:|---|
+| **fivestones** | **2** | 5 | Faz 1 kaydı: *"Gonggi ile aynı mekanik; ikisinden biri elenmelidir."* |
+| **marbles** | **3** | 5 | petanque ile "hedefe atma" kümesinde; özü bahis (K5 dönüşümü şart) |
+| conkers | 4 | 5 | kitapta eşsiz: vurmalı düello |
+| hopscotch | 4 | 5 | `bed` sınıfının tek maddesi + efsane düzeltmesi |
+| cats-cradle | **5** | 5 | **ailenin en ayırt edici ve TEK sayfa-doğrulanmış** maddesi |
+
+En düşük iki ayırt edicilik çıkarıldı. **Cats-cradle korundu** — yazılmamış
+olduğu için çıkarmak "ucuz" olurdu ama mekanik çeşitliliği ve kaynak
+kalitesini birlikte **düşürürdü**; ikisi de kurucunun ölçütleri arasında.
+
+**Gonggi değil fivestones çıkarıldı**, çünkü gonggi'yi çıkarmak İngiliz
+sayısını düşürmez ve kapsamdan bir kültürü tamamen silerdi.
+
+#### Ölçülen etki — iddia değil, sayı
+
+| | ÖNCE | SONRA |
+|---|---:|---:|
+| kitap · oyun | 100 | **100** |
+| kitap · kültür | 71 | **73** |
+| tahtasız · oyun | 15 | **15** |
+| **tahtasız · kültür** | **11** | **13** |
+| **tahtasız · İngiliz madde** | **5** | **3** |
+| yedek havuz | 19 | 19 |
+
+Aile hedefleri **dokunulmadı** (14/10/15/14/17/15/15 = 100): dört maddenin
+dördü de tahtasız ailedendir ve değişiklik ailenin **içindedir**.
+
+#### Ödenen bedel — gizlenmez
+
+Fivestones ve marbles **Faz 4'te yazılmıştı**. Yazılmış oyun sayısı
+**22 → 20** düştü. Prozaları silinmedi; korumalı katmanda
+`02_MANUSCRIPT/retired_phase5.json` içinde duruyor ve ikisi de yedek
+havuza geri kondu. *"Zaten yazılmıştı" kurucunun ölçütleri arasında
+değildir.*
+
+#### Terfi bir YAZIM İZNİ DEĞİLDİR
+
+İki yeni maddenin kaynağı **arandı ve bulunamadı**:
+
+- **kho-kho** — kuralları ilk kez **1914**'te Deccan Gymkhana komitesince
+  çerçevelendi, ilk basılı kural kitabı **1935**. Dönem etnografik kaydı
+  yok; oynanabilir biçim bir **20. yüzyıl kodifikasyonudur**.
+- **lagori** — Thurston 1906 tam metni tarandı (oyun bölümü yok);
+  archive.org 1850–1930 başlık taraması sonuç vermedi.
+
+İkisi de kuyrukta **P6**'dadır ve **yazılamazlar** (§13). Yeni bir
+öncelik seviyesi bunun için açıldı:
+
+> **P4 ≠ P6.** P4 bir **erişim** engelidir: kayıt vardır, nüshası
+> kapalıdır, kurucunun kütüphane kartı onu açar. P6 bir **varlık**
+> sorunudur: denetlenebilir bir kayıt henüz yoktur ve hiçbir izin onu
+> var etmez. İkisini aynı kovaya atmak, Faz 3'ün *"denenmedi = engelli"*
+> hatasının bir seviye derindeki tekrarı olurdu.
+
+#### Sayfa modeline etkisi — ölçüldü (§20)
+
+| | Faz 4 (22 oyun) | **Faz 5 (20 oyun)** |
+|---|---:|---:|
+| toplam sayfa | 258 | **260** |
+| sapma | +%0,8 | **+%1,6** ✅ |
+| ciltsiz telif | 8,41 $ | **8,37 $** |
+| ciltli telif | 10,96 $ | **10,92 $** |
+
+Çıkan iki madde kısa metinli ve küçük diyagramlıydı; gitmeleri ortalamayı
+yukarı itti. Sayfa **hedefi** değiştirilmedi (yol haritası § 15).

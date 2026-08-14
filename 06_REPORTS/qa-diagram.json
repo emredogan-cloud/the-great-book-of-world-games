@@ -4,9 +4,9 @@
   "errors": [],
   "warnings": [],
   "facts": {
-    "diagrams": 27,
+    "diagrams": 25,
     "byClass": {
-      "point": 16,
+      "point": 14,
       "pit": 2,
       "track": 2,
       "bodily": 4,

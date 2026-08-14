@@ -19,9 +19,16 @@
     "kaynağı da denenmiş ve erişilememişti (Finkel 2007 telifli; British",
     "Museum nesne kaydı HTTP 403) ama kayıt yalnızca source_verification",
     "içinde duruyordu, kuyrukta değil. Denenip erişilemeyen bir oyunun",
-    "engelli kuyruğunda GÖRÜNMEMESİ, engeli küçümsemenin bir biçimidir."
+    "engelli kuyruğunda GÖRÜNMEMESİ, engeli küçümsemenin bir biçimidir.",
+    "",
+    "FAZ 5: kapsam değişikliği (K23) iki YENİ oyun getirdi ve ikisinin de",
+    "kaynağı ARANDI. Bulunamadılar. Bu kuyruğa GİRMEDİLER çünkü buranın",
+    "tanımı 'telif/ödünç engeli'dir; onlarınki bir ERİŞİM engeli değil,",
+    "kaydın kendisinin bulunamamasıdır. Ayrı bölümde tutuluyorlar:",
+    "`amendmentSourceGaps`. İkisini aynı kovaya atmak, Faz 3'ün",
+    "'denenmedi = engelli' hatasının aynısı olurdu."
   ],
-  "generatedAtPhase": "phase4",
+  "generatedAtPhase": "phase5",
   "count": 5,
   "blockedSources": [
     "Murray 1913 · Murray 1952 (ödünç kısıtı)",
@@ -108,5 +115,27 @@
       "newPriority": 1
     }
   ],
-  "notYetAttempted": 82
+  "notYetAttempted": 82,
+  "amendmentSourceGaps": [
+    {
+      "gameId": "lagori",
+      "family": "boardless",
+      "culture": "Kannada",
+      "enteredScope": "K23 · 2026-08-14",
+      "reason": "kaynak ARANDI · dönem kaydı BULUNAMADI",
+      "distinctFromAccessBlocked": "Bu bir telif/ödünç engeli DEĞİLDİR. Erişilemeyen bir kayıt yok; henüz uygun bir kayıt bulunamadı.",
+      "nextAction": "Kannada/Marathi dilinde dönem folklor derlemesi ya da 20. yy erken saha kaydı ara",
+      "writable": false
+    },
+    {
+      "gameId": "kho-kho",
+      "family": "boardless",
+      "culture": "Marathi",
+      "enteredScope": "K23 · 2026-08-14",
+      "reason": "kaynak ARANDI · denetlenebilir edisyon BULUNAMADI",
+      "distinctFromAccessBlocked": "Kayıt VARDIR (1914 komite · 1935 kural kitabı) ama nüshası bulunamadı. Bulunduğunda erişim engeline dönüşebilir.",
+      "nextAction": "1935 Akhil Maharashtra kural kitabının nüshasını ara",
+      "writable": false
+    }
+  ]
 }

@@ -11,30 +11,38 @@
     "Bu ayrım Faz 3'ün düzeltmesidir ve korunur.",
     "",
     "`expectedPageWeight` bir KESTİRİMDİR, bir bütçe denetimi değil.",
-    "150 mm bütçesi yalnızca RENDER edilmiş çıktıdan ölçülür (K19)."
+    "150 mm bütçesi yalnızca RENDER edilmiş çıktıdan ölçülür (K19).",
+    "",
+    "FAZ 5: P6 eklendi — 'kaynak ARANDI, KAYIT BULUNAMADI'. P4'ten",
+    "ayrıdır: P4'ün kaydı vardır ve erişim izni onu açar; P6'nın",
+    "kaydı henüz yoktur ve hiçbir izin onu var etmez. K23 kapsam",
+    "değişikliğiyle gelen iki oyun buradadır."
   ],
-  "generatedAtPhase": "phase4",
+  "generatedAtPhase": "phase5",
   "priorityMeaning": {
     "1": "erişilebilir · yeterince doğrulanmış · kuralı tam",
     "2": "erişilebilir · doğrulama Faz 4 içinde tamamlanabilir",
     "3": "yeniden kurgulanmış · reconstructionPlan belgeli",
     "4": "kaynak DENENDİ ve erişilemedi — telif / ödünç kısıtı",
-    "5": "çözülmemiş kural kimliği ya da kaynak uyuşmazlığı"
+    "5": "çözülmemiş kural kimliği ya da kaynak uyuşmazlığı",
+    "6": "kaynak ARANDI · denetlenebilir KAYIT BULUNAMADI"
   },
   "orderingRule": "priority ASC → verifiedSources DESC → family → gameId",
   "total": 100,
   "byPriority": {
-    "1": 24,
+    "1": 22,
     "2": 65,
     "3": 5,
     "4": 5,
-    "5": 1
+    "5": 1,
+    "6": 2
   },
   "bySourceStatus": {
     "verified": 3,
-    "partially-verified": 22,
+    "partially-verified": 20,
     "not-attempted": 70,
-    "access-blocked": 5
+    "access-blocked": 5,
+    "record-not-found": 2
   },
   "accessibleNotYetWrittenByFamily": {
     "boardless": 8,
@@ -127,26 +135,6 @@
       "deferralReason": null
     },
     {
-      "gameId": "fivestones",
-      "title": "Fivestones",
-      "family": "boardless",
-      "culture": "English",
-      "priority": 1,
-      "reason": "≥1 sayfa-doğrulanmış künye · kural tam",
-      "accessibility": "accessible",
-      "sourceStatus": "partially-verified",
-      "verifiedSources": 1,
-      "blockedSources": 0,
-      "ruleStatus": "complete",
-      "playabilityStatus": "rules-complete",
-      "reconstructionStatus": "not-reconstructed",
-      "diagramComplexity": "low",
-      "expectedPageWeight": 1.4,
-      "manuscriptStatus": "draft",
-      "blocker": null,
-      "deferralReason": null
-    },
-    {
       "gameId": "gonggi",
       "title": "Gonggi",
       "family": "boardless",
@@ -191,26 +179,6 @@
       "title": "Jan-ken",
       "family": "boardless",
       "culture": "Japanese",
-      "priority": 1,
-      "reason": "≥1 sayfa-doğrulanmış künye · kural tam",
-      "accessibility": "accessible",
-      "sourceStatus": "partially-verified",
-      "verifiedSources": 1,
-      "blockedSources": 0,
-      "ruleStatus": "complete",
-      "playabilityStatus": "rules-complete",
-      "reconstructionStatus": "not-reconstructed",
-      "diagramComplexity": "low",
-      "expectedPageWeight": 1.4,
-      "manuscriptStatus": "draft",
-      "blocker": null,
-      "deferralReason": null
-    },
-    {
-      "gameId": "marbles",
-      "title": "Marbles",
-      "family": "boardless",
-      "culture": "English",
       "priority": 1,
       "reason": "≥1 sayfa-doğrulanmış künye · kural tam",
       "accessibility": "accessible",
@@ -2045,6 +2013,46 @@
       "manuscriptStatus": "not-started",
       "blocker": "beyansız yeniden kurgulama",
       "deferralReason": "yeniden kurgulanmış · reconstructionPlan YOK"
+    },
+    {
+      "gameId": "kho-kho",
+      "title": "Kho Kho",
+      "family": "boardless",
+      "culture": "Marathi",
+      "priority": 6,
+      "reason": "kaynak ARANDI · denetlenebilir kayıt bulunamadı",
+      "accessibility": "deferred",
+      "sourceStatus": "record-not-found",
+      "verifiedSources": 0,
+      "blockedSources": 1,
+      "ruleStatus": "complete",
+      "playabilityStatus": "rules-complete",
+      "reconstructionStatus": "not-reconstructed",
+      "diagramComplexity": "low",
+      "expectedPageWeight": 1.4,
+      "manuscriptStatus": "not-started",
+      "blocker": "kaynak kaydı yok",
+      "deferralReason": "kaynak ARANDI · denetlenebilir kayıt bulunamadı"
+    },
+    {
+      "gameId": "lagori",
+      "title": "Lagori",
+      "family": "boardless",
+      "culture": "Kannada",
+      "priority": 6,
+      "reason": "kaynak ARANDI · denetlenebilir kayıt bulunamadı",
+      "accessibility": "deferred",
+      "sourceStatus": "record-not-found",
+      "verifiedSources": 0,
+      "blockedSources": 1,
+      "ruleStatus": "complete",
+      "playabilityStatus": "rules-complete",
+      "reconstructionStatus": "not-reconstructed",
+      "diagramComplexity": "low",
+      "expectedPageWeight": 1.4,
+      "manuscriptStatus": "not-started",
+      "blocker": "kaynak kaydı yok",
+      "deferralReason": "kaynak ARANDI · denetlenebilir kayıt bulunamadı"
     }
   ]
 }

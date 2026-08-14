@@ -1,6 +1,6 @@
 {
   "status": "pass",
-  "checks": 22,
+  "checks": 25,
   "errors": [],
   "warnings": [],
   "facts": {
@@ -15,7 +15,23 @@
       "boardless": 15
     },
     "restrictedTotal": 9,
-    "locked_cultures": 71,
+    "locked_cultures": 73,
+    "modelDivergence": {
+      "modelOnly": [
+        "fivestones",
+        "marbles"
+      ],
+      "lockOnly": [
+        "kho-kho",
+        "lagori"
+      ],
+      "explainedByAmendments": [
+        "fivestones",
+        "kho-kho",
+        "lagori",
+        "marbles"
+      ]
+    },
     "pilot_games": 12
   }
 }

@@ -255,15 +255,20 @@ def check_scope(cfg, fams, games, lock, rep: Report) -> None:
               % (len(ids), cfg["scope"]["games"]))
 
     # ① Kilidin kendi bütünlüğü — dosyaya elle dokunulmuş mu
+    #
+    # FAZ 5 DÜZELTMESİ. Bu denetim eskiden `have == want or amendments`
+    # diyordu: yani BİR TANE şerh düşüldüğü anda özet denetimi ÖMÜR BOYU
+    # devre dışı kalıyordu ve liste ondan sonra sessizce değiştirilebilirdi.
+    # Faz 5'in kendi kapsam değişikliği bu deliği açacaktı.
+    #
+    # Doğru ayrım: şerh, özetin NEDEN değiştiğini açıklar; DENETLENMEMESİNİ
+    # sağlamaz. Bir değişiklik yapan, özeti de yeniden hesaplamak zorundadır.
     want = digest(ids)
     have = (lock.get("integrity") or {}).get("sha256")
-    if have != want and not lock.get("amendments"):
-        rep.check(False,
-                  "kilit özeti tutmuyor ve DEĞİŞİKLİK ŞERHİ YOK "
-                  "(beklenen %s… · bulunan %s…)" % (want[:12], str(have)[:12]))
-    else:
-        rep.check(have == want or bool(lock.get("amendments")),
-                  "kilit bütünlüğü doğrulandı")
+    rep.check(have == want,
+              "kilit bütünlüğü doğrulandı (şerh olsa da özet DENETLENİR)" +
+              ("" if have == want else
+               " — beklenen %s… · bulunan %s…" % (want[:12], str(have)[:12])))
 
     # ② Envanter kayması — kilit değil, ALTINDAKİ kayıt değişmiş olabilir
     missing = [i for i in ids if i not in by]
@@ -336,6 +341,50 @@ def check_scope(cfg, fams, games, lock, rep: Report) -> None:
                   "değişiklik şerhi #%d eksiksiz" % (i + 1) +
                   ("" if not miss else " — EKSİK ALAN: %s" % miss))
 
+    # ⑥ MODEL ↔ KİLİT AYRIŞMASI — FAZ 5'te EKLENDİ
+    #
+    # scope_lock.json'ın kendi başlığı şunu VAAT EDİYORDU:
+    #   "Model bir gün başka bir liste üretirse bu KAPI ISIRIR."
+    # Isırmıyordu. Böyle bir denetim hiç yazılmamıştı; seçim modeli her
+    # koşuda kendi 100'ünü üretiyor, kilit kendi 100'ünü taşıyor ve ikisi
+    # KARŞILAŞTIRILMIYORDU. Faz 5'in kapsam değişikliği ikisini gerçekten
+    # ayrıştırdı ve hiçbir kapı fark etmedi.
+    #
+    # Kural: model ile kilit ayrışabilir — ama ayrışmanın TAMAMI kayıtlı bir
+    # şerhle açıklanmak zorundadır. Açıklanmayan tek bir kimlik bile sessiz
+    # değişimdir ve bu dosyanın varlık sebebi tam olarak onu yasaklamaktır.
+    try:
+        sys.path.insert(0, HERE)
+        import score_candidates as sc  # noqa: E402
+        model_ids = {g["gameId"] for g in sc.select(games, fams["families"])[0]}
+    except Exception as exc:  # noqa: BLE001 — model koşamazsa denetim atlanır
+        rep.warn("seçim modeli koşturulamadı, ayrışma denetimi atlandı: %s" % exc)
+        return
+
+    amended_out, amended_in = set(), set()
+    for am in lock.get("amendments", []):
+        amended_out |= {r["gameId"] for r in am.get("removed", [])
+                        if isinstance(r, dict) and r.get("gameId")}
+        amended_in |= {a["gameId"] for a in am.get("added", [])
+                       if isinstance(a, dict) and a.get("gameId")}
+
+    lock_ids = set(ids)
+    unexplained_out = sorted((model_ids - lock_ids) - amended_out)
+    unexplained_in = sorted((lock_ids - model_ids) - amended_in)
+    rep.facts["modelDivergence"] = {
+        "modelOnly": sorted(model_ids - lock_ids),
+        "lockOnly": sorted(lock_ids - model_ids),
+        "explainedByAmendments": sorted(amended_out | amended_in),
+    }
+    rep.check(not unexplained_out,
+              "modelde olup kilitte OLMAYAN her oyun bir şerhle açıklanmış" +
+              ("" if not unexplained_out
+               else " — AÇIKLANMAMIŞ DÜŞÜŞ: %s" % unexplained_out[:5]))
+    rep.check(not unexplained_in,
+              "kilitte olup modelde OLMAYAN her oyun bir şerhle açıklanmış" +
+              ("" if not unexplained_in
+               else " — AÇIKLANMAMIŞ EKLEME: %s" % unexplained_in[:5]))
+
 
 def check_pilot(cfg, games, lock, pilot, rep: Report) -> None:
     print("\n── pilot kilidi ──")
@@ -406,6 +455,7 @@ def check_pilot(cfg, games, lock, pilot, rep: Report) -> None:
 
 
 def main() -> int:
+    global ROOT, CONFIG, GAME_INDEX, FAMILY_INDEX
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--write", action="store_true",
@@ -413,9 +463,22 @@ def main() -> int:
     ap.add_argument("--amend", default=None, help="--write ile: değişiklik gerekçesi")
     ap.add_argument("--pilot", default=None,
                     help="--write ile: virgülle ayrılmış 12 pilot gameId")
+    # FAZ 5: `--root` EKLENDİ ve bu bir kolaylık değil bir DÜZELTMEDİR.
+    # selftest bütün kapıları "--root sözleşmesiyle" koşturur; bu betik onu
+    # tanımadığı için her çağrı argparse hatasıyla ÇIKIŞ 2 veriyordu — yani
+    # kapsam kilidine yazılan her kasıtlı kusur testi, kapı ısırdığı için
+    # değil KOMUT SATIRI BOZUK olduğu için "geçiyordu". Yeşil yanan ama
+    # hiçbir şey sınamayan bir test, testsizlikten daha kötüdür.
+    ap.add_argument("--root", default=ROOT,
+                    help="kurgu kök (selftest sözleşmesi)")
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--json", default=None)
     args = ap.parse_args()
+
+    ROOT = os.path.abspath(args.root)
+    CONFIG = os.path.join(ROOT, "project_config.json")
+    GAME_INDEX = os.path.join(ROOT, "01_SOURCE", "game_index.json")
+    FAMILY_INDEX = os.path.join(ROOT, "01_SOURCE", "family_index.json")
 
     print("=" * 74)
     print("  KAPSAM KİLİDİ (A3) VE PİLOT KİLİDİ")

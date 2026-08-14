@@ -24,8 +24,8 @@
     "Denetleyen: 04_BUILD/validate_research.py"
   ],
   "version": "1.0",
-  "phase": "phase4",
-  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2",
+  "phase": "phase5",
+  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23",
   "records": [
     {
       "gameId": "yut-nori",
@@ -443,6 +443,41 @@
       "verifiedOn": "2026-08-14",
       "accessMethod": "archive.org tam metin (traditionalgames02gommuoft) — kamusal alan",
       "status": "verified"
+    },
+    {
+      "gameId": "lagori",
+      "sourceRef": "Dönem birinci-el kaydı aranıyor (Kannada/Karnataka sokak oyunu)",
+      "edition": "—",
+      "locator": "ARANDI · BULUNAMADI",
+      "attemptedSources": [
+        "Thurston, Edgar, Ethnographic Notes in Southern India (Madras, 1906) — tam metin tarandı, oyun bölümü YOK",
+        "archive.org advancedsearch: title:(games) AND India, 1850–1930 — kullanılabilir kayıt yok"
+      ],
+      "supportedClaim": "YOK — hiçbir kural iddiası doğrulanmadı.",
+      "verifiedOn": null,
+      "attemptedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin + katalog taraması",
+      "status": "pending",
+      "note": "Oyun kapsama K23 ile girdi; kaynak DOĞRULANMADI. Zayıf kanıtla yazılmaz (§13).",
+      "supportingPassage": ""
+    },
+    {
+      "gameId": "kho-kho",
+      "sourceRef": "Deccan Gymkhana kural komitesi (1914) · Akhil Maharashtra Shareerik Shikshan Mandal (1935)",
+      "edition": "—",
+      "locator": "ARANDI · DENETLENEBİLİR EDİSYON BULUNAMADI",
+      "attemptedSources": [
+        "1914 Deccan Gymkhana kural çerçevesi — birincil metin çevrimiçi bulunamadı",
+        "1935 basılı kural kitabı — nüsha bulunamadı",
+        "Dönem etnografyası (Indian Antiquary vb.) — oyun kaydı bulunamadı"
+      ],
+      "supportedClaim": "YOK — hiçbir kural iddiası doğrulanmadı.",
+      "verifiedOn": null,
+      "attemptedOn": "2026-08-14",
+      "accessMethod": "web + archive.org katalog taraması",
+      "status": "pending",
+      "note": "Oyunun oynanabilir biçimi 20. yüzyıl KODİFİKASYONUDUR. Yazım, denetlenebilir bir edisyon gerektirir.",
+      "supportingPassage": ""
     }
   ]
 }
