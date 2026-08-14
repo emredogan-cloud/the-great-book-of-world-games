@@ -772,6 +772,16 @@ def part6_phase2_gates(rep, tmp: str) -> None:
                  {"glyph": "king", "label": "kral"})),
             ("sözlükte OLMAYAN glif YAKALANIR",
              lambda d: d["diagrams"][1]["pieces"][0].__setitem__("glyph", "tiger")),
+            # FAZ 5: efsane sembolleri BİRBİRİNDEN ayırt edilebilmeli.
+            # Faz 4 sembolün ÇİZİLMESİNİ sağladı; çizimlerin FARKLI
+            # olduğunu kimse denetlemiyordu. `light` ile `empty` efsanede
+            # birebir aynı dairedir ve okur hangisinin hangisi olduğunu
+            # öğrenemez — görsel denetimde beş diyagramda bulundu.
+            ("efsanede AYIRT EDİLEMEYEN iki sembol YAKALANIR",
+             lambda d: (d["diagrams"][0]["pieces"].append(
+                            {"at": "a1", "glyph": "empty"}),
+                        d["diagrams"][0]["legend"].append(
+                            {"glyph": "empty", "label": "boş yer"}))),
             ("RENK kullanımı YAKALANIR",
              lambda d: d["diagrams"][3].__setitem__("colour", "#c00")),
             ("uyarlama ALTYAZISININ silinmesi YAKALANIR",

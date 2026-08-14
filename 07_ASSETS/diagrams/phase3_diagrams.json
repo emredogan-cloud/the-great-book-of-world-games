@@ -1159,14 +1159,6 @@
         {
           "at": "R1",
           "glyph": "light"
-        },
-        {
-          "at": "near",
-          "glyph": "empty"
-        },
-        {
-          "at": "far",
-          "glyph": "empty"
         }
       ],
       "arrows": [
@@ -1180,10 +1172,6 @@
         {
           "glyph": "light",
           "label": "the tossed stone"
-        },
-        {
-          "glyph": "empty",
-          "label": "stones waiting on the ground"
         },
         {
           "glyph": "move",

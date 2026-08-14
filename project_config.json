@@ -431,26 +431,26 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 444,
-        "wordsPerGame": 682,
-        "textPagesPerGame": 1.238,
-        "diagramPagesPerGame": 0.298,
-        "measuredPagesPerGame": 1.536,
-        "billedPagesPerGame": 2.1,
-        "spreadOverflowRate": 0.05,
+        "wordsPerTypesetPage": 451,
+        "wordsPerGame": 706,
+        "textPagesPerGame": 1.27,
+        "diagramPagesPerGame": 0.296,
+        "measuredPagesPerGame": 1.566,
+        "billedPagesPerGame": 2.087,
+        "spreadOverflowRate": 0.043,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 20,
-        "projectedTotalPages": 260,
-        "deviationPct": 1.56,
+        "sampleSize": 23,
+        "projectedTotalPages": 258,
+        "deviationPct": 0.78,
         "withinTolerance": true,
         "measuredAtPhase": "phase5",
         "measuredAtGate": "phase1",
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-batch1-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -502,7 +502,22 @@
           "sayfaya çıktı. Sayfa hedefi DEĞİŞTİRİLMEDİ (yol haritası § 15).",
           "",
           "Sürücü yine BOTH: metin farkı 0,686 · diyagram farkı 0,628.",
-          "Faz 4'ün bulgusu iki örneklemde üst üste doğrulandı."
+          "Faz 4'ün bulgusu iki örneklemde üst üste doğrulandı.",
+          "",
+          "FAZ 5 · ÜRETİM BATCH 1'DEN SONRA (23 oyun).",
+          "",
+          "                     Faz 5 (20)   batch 1 (23)",
+          "  kelime/sayfa           444          451",
+          "  kelime/oyun            682          706",
+          "  olculen sayfa/oyun    1,54         1.57",
+          "  faturalanan           2,10         2.09",
+          "  TASMA ORANI          1/20         1/23",
+          "  toplam sayfa           260          258",
+          "  sapma                 +1,6%       +0.8%",
+          "",
+          "cats-cradle K24 istisnasi yuzunden DORT sayfalik bir maddedir ve tasma",
+          "oranini tek basina yukari cekiyor. Bu, istisnanin BILINEN ve KABUL",
+          "EDILEN maliyetidir; gizlenmiyor."
         ]
       },
       "$comment": [
@@ -540,7 +555,7 @@
       "calibrated": true,
       "calibratedAtPhase": "phase2",
       "calibratedOn": "2026-08-13",
-      "recalibratedAtPhase": "phase5"
+      "recalibratedAtPhase": "phase5-batch1"
     },
     "editionsHypothesis": [
       {

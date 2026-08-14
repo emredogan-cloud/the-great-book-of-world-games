@@ -303,6 +303,7 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
 
     bad_class, bad_type, bad_coord, out_of_bounds = [], [], [], []
     bad_glyph, legend_missing, legend_extra = [], [], []
+    legend_ambiguous: list = []
     recon_mismatch, bad_panels, colour_used, bad_grey = [], [], [], []
     orphan_game = []
 
@@ -374,6 +375,34 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
         for extra in sorted(legend - used):
             legend_extra.append("%s → %s (ÖLÜ SEMBOL)" % (did, extra))
 
+        # ── FAZ 5 · EFSANEDE AYIRT EDİLEMEYEN İKİ SEMBOL ─────────────────
+        #
+        # Faz 4, efsane sembolünün ÇİZİLMESİNİ sağladı (font bağımlılığı
+        # gitti) ama ÇİZİMLERİN BİRBİRİNDEN FARKLI olduğunu hiç denetlemedi.
+        # Efsane bir glifi yalnızca (dolgu + halka + çarpı) ile çizer; yani
+        # `light`, `empty`, `lightAlt`, `seedCount` ve `inHand` efsanede
+        # BİREBİR AYNI dairedir. `king` ile `lightSpecial` de öyle.
+        #
+        # Bu görsel denetimde bulundu: cats-cradle efsanesinde "ipin
+        # tutulduğu parmak" ve "ip yolu" satırları aynı boş daireyi
+        # taşıyordu ve okur hangisinin hangisi olduğunu ÖĞRENEMİYORDU.
+        # Ölçüm sayıları tertemizdi — Faz 4'ün tilki kusurunun aynısı, bir
+        # adım öteye taşınmış hâli.
+        sig: dict = {}
+        for e in d.get("legend", []):
+            k = e.get("glyph")
+            gl = lang["glyphs"].get(k)
+            if not gl:
+                continue          # ok/işaret: ayrı çizim yolu
+            s = (gl.get("fill"),
+                 k in ("king", "lightSpecial", "darkSpecial"),
+                 k == "captured")
+            if s in sig and sig[s] != k:
+                legend_ambiguous.append(
+                    "%s → '%s' ile '%s' efsanede AYNI çiziliyor"
+                    % (did, sig[s], k))
+            sig[s] = k
+
         # ⑥ Yeniden kurgulama tutarlılığı — iki yönlü
         g = games.get(gid, {})
         is_recon = g.get("playabilityStatus") == "reconstructed"
@@ -424,6 +453,8 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
     rep.check(not bad_glyph, "kullanılan her glif ve ok sözlükte var" + brief(bad_glyph))
     rep.check(not legend_missing, "efsane kullanılan her sembolü içeriyor" + brief(legend_missing))
     rep.check(not legend_extra, "efsanede ÖLÜ sembol yok" + brief(legend_extra))
+    rep.check(not legend_ambiguous,
+              "efsanede AYIRT EDİLEMEYEN iki sembol yok" + brief(legend_ambiguous))
     rep.check(not recon_mismatch,
               "diyagram beyanı kaydın beyanıyla tutarlı" + brief(recon_mismatch))
     rep.check(not bad_panels, "panel sayıları kurala uyuyor" + brief(bad_panels))
