@@ -158,8 +158,11 @@
         "(c) Figürleri metinle anlat, diyagramı ikiye indir — 'explain' puanı 2'dir, yani bu en riskli seçenektir."
       ],
       "decidedBy": "kurucu",
-      "status": "open",
-      "raisedAtPhase": "phase5"
+      "status": "resolved",
+      "raisedAtPhase": "phase5",
+      "resolvedBy": "K24 · kurucu onaylı tekil diyagram istisnası",
+      "resolvedOn": "2026-08-14",
+      "resolution": "Kurucu 150 mm tavanının YALNIZCA cats-cradle için aşılmasını onayladı. Genel tavan değişmedi. project_config.json § diagram.diagramBudgetOverrides ve dört kasıtlı kusur testi istisnayı dar tutuyor."
     }
   ]
 }

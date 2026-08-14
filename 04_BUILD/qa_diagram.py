@@ -187,14 +187,24 @@ def check_rendered_budget(cfg: dict, diagrams: list, root: str,
         print("  · tanım kümesi kısmi (korumalı katman yok) — bayatlık "
               "denetimi ATLANDI; selftest kapsar")
 
+    ovr = cfg["diagram"].get("diagramBudgetOverrides") or {}
+
+    def _cap(gid: str) -> float:
+        o = ovr.get(gid)
+        return float(o["maxMm"]) if isinstance(o, dict) and o.get("maxMm") \
+            else float(limit)
+
     over, wide = [], []
     for d in diagrams:
         m = measured.get(d["diagramId"])
         if not m:
             continue
-        if m["heightMm"] > limit:
+        # Tek diyagram tavanı da K24 istisnasını tanır; yoksa istisna
+        # yalnızca TOPLAMDA işler ve tek büyük bir panel yine reddedilirdi.
+        if m["heightMm"] > _cap(d["gameId"]):
             over.append("%s → %.1f mm (%+.1f)"
-                        % (d["diagramId"], m["heightMm"], m["heightMm"] - limit))
+                        % (d["diagramId"], m["heightMm"],
+                           m["heightMm"] - _cap(d["gameId"])))
         if m["renderedWidthMm"] > lang_width(cfg, root):
             wide.append("%s → %.1f mm" % (d["diagramId"], m["renderedWidthMm"]))
     rep.check(not over,
@@ -210,17 +220,58 @@ def check_rendered_budget(cfg: dict, diagrams: list, root: str,
     # kapı yeşil yanıyordu. Tablut tam olarak bunu yapıyordu — 88,5 + 93,0
     # = 181,5 mm — ve on dokuz maddelik örneklemde çift sayfayı aşan TEK
     # madde oydu. Yani bütçe, tutması gereken şeyi tutmuyordu.
+    # ── K24 · TEKİL İSTİSNA ────────────────────────────────────────────
+    # Kurucu YALNIZCA cats-cradle için tavanı açtı. Mantık bilerek
+    # "istisna listesi" değil "kimlik eşlemesi" biçimindedir:
+    #
+    #     limit = override.get(gameId, 150)
+    #
+    # Genel bir "muafiyet bayrağı" (örn. `allowOverBudget: true`) ASLA
+    # eklenmedi, çünkü bir bayrak her maddeye yazılabilir; bir kimlik
+    # eşlemesi ise her yeni satır için bir KARAR ister.
+    overrides = cfg["diagram"].get("diagramBudgetOverrides") or {}
+
+    def limit_for(gid: str) -> tuple:
+        ov = overrides.get(gid)
+        if isinstance(ov, dict) and ov.get("maxMm"):
+            return float(ov["maxMm"]), True
+        return float(limit), False
+
     per_game: dict = {}
     for d in diagrams:
         m = measured.get(d["diagramId"])
         if m:
             per_game.setdefault(d["gameId"], []).append(m["heightMm"])
-    over_game = ["%s → %.1f mm (%d diyagram, %+.1f)"
-                 % (g, sum(hs), len(hs), sum(hs) - limit)
-                 for g, hs in sorted(per_game.items()) if sum(hs) > limit]
+
+    over_game, exceptions = [], []
+    for g, hs in sorted(per_game.items()):
+        cap, is_ex = limit_for(g)
+        total = sum(hs)
+        if total > cap:
+            over_game.append("%s → %.1f mm (%d diyagram, %+.1f · tavan %.0f)"
+                             % (g, total, len(hs), total - cap, cap))
+        elif is_ex:
+            exceptions.append("%s → %.1f mm (%d diyagram · İSTİSNA tavanı "
+                              "%.0f · normal tavan %d)"
+                              % (g, total, len(hs), cap, limit))
     rep.check(not over_game,
-              "hiçbir OYUN toplam %d mm bütçesini aşmıyor" % limit
-              + brief(over_game))
+              "hiçbir OYUN kendi diyagram tavanını aşmıyor (normal %d mm)"
+              % limit + brief(over_game))
+    for line in exceptions:
+        print("  · K24 İSTİSNA UYGULANDI: %s" % line)
+
+    # İstisna sözlüğü DARALTILMIŞ kalmalı. Bu denetim istisnanın kendisini
+    # değil, istisnanın YAYILMASINI engeller.
+    stray = sorted(k for k in overrides
+                   if not k.startswith("$") and k != "cats-cradle")
+    rep.check(not stray,
+              "diyagram bütçesi istisnası YALNIZCA cats-cradle (K24)"
+              + brief(stray))
+    unused = [k for k in overrides
+              if not k.startswith("$") and k not in per_game]
+    rep.check(not unused,
+              "tanımlı her istisna GERÇEKTEN kullanılıyor (ölü muafiyet yok)"
+              + brief(unused))
 
     if measured:
         hs = [m["heightMm"] for m in measured.values()]

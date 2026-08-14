@@ -290,7 +290,31 @@
       25,
       55,
       100
-    ]
+    ],
+    "diagramBudgetOverrides": {
+      "$comment": [
+        "KURUCU ONAYLI TEKİL İSTİSNA — K24. GENEL BİR MUAFİYET DEĞİLDİR.",
+        "",
+        "Bu sözlük SADECE burada adı geçen oyunlar için 150 mm tavanını",
+        "değiştirir. Başka HİÇBİR oyun etkilenmez ve `maxDiagramMmPerGame`",
+        "değeri DEĞİŞMEDİ: 150 mm hâlâ kitabın kuralıdır.",
+        "",
+        "⚠ BURAYA İKİNCİ BİR SATIR EKLEMEK BİR KURUCU KARARIDIR.",
+        "Bir istisna listesi, bir kez 'liste' hâline geldiği anda tavanın",
+        "kendisi bir öneriye dönüşür. selftest bu sözlüğün YALNIZCA",
+        "cats-cradle taşıdığını her koşuda sınar; ikinci bir kimlik",
+        "eklenirse kapı KIRMIZI yanar ve yeni bir karar kaydı ister."
+      ],
+      "cats-cradle": {
+        "maxMm": 340,
+        "decision": "K24",
+        "approvedBy": "kurucu",
+        "approvedOn": "2026-08-14",
+        "reason": "Kaynak (Jayne 1906, ss. 324–338) SEKİZ adlandırılmış figür verir ve oyunun kendisi o figürlerin sırayla alınmasıdır. Sekiz figür 150 mm'ye sıkıştırılırsa figür başına ~18 mm düşer; o boyutta parmak ve ip yolu okunmaz ve diyagram doğruluğu (öncelik 4) çöker. İstisna BOYUT için değil OKUNABİLİRLİK için verilmiştir.",
+        "scope": "YALNIZCA cats-cradle. Başka hiçbir oyuna genişletilemez.",
+        "supersedesHold": "source_access_pending.json § editorialHolds[cats-cradle]"
+      }
+    }
   },
   "playability": {
     "$comment": [

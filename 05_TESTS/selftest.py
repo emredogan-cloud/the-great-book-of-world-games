@@ -1383,6 +1383,81 @@ def part9_phase5_gates(rep, tmp: str) -> None:
     # denetler. Denetim tek yönlüydü ("her tanımın ölçümü var mı"); tersi
     # sorulmuyordu ve K23 iki diyagramı emekliye ayırdığında tam olarak
     # o koptu.
+    # ── K24 · CATS-CRADLE İSTİSNASI DAR MI ────────────────────────────────
+    #
+    # Bir istisna iki yönden bozulabilir ve ikisi de sessizdir:
+    #   ① İSTİSNA ÇALIŞMAZ  → kurucu kararı uygulanmamış olur
+    #   ② İSTİSNA YAYILIR   → 150 mm tavanı bir öneriye dönüşür
+    #
+    # İkincisi çok daha tehlikelidir çünkü hiçbir şey kırmızı yanmaz:
+    # kitap yavaşça bütçesiz bir kitaba dönüşür. Aşağıdaki dört kurgu
+    # ikisini birden sınar.
+    print("  ▸ K24 · cats-cradle diyagram istisnası")
+    rrx = os.path.join(root, "06_REPORTS", "diagram-render.json")
+    cfgx = os.path.join(root, "project_config.json")
+    if os.path.exists(rrx):
+        with open(rrx, encoding="utf-8") as fh:
+            base_r = fh.read()
+        with open(cfgx, encoding="utf-8") as fh:
+            base_c = fh.read()
+
+        def blow_up(d, gid, mm=300.0):
+            hit = False
+            for x in d["diagrams"]:
+                if x["gameId"] == gid:
+                    x["heightMm"] = mm
+                    hit = True
+            return hit
+
+        try:
+            # ① cats-cradle tavanı AŞAR → GEÇMELİ
+            d = json.loads(base_r)
+            if blow_up(d, "cats-cradle"):
+                write_json(rrx, d)
+                code, out = run_gate("qa_diagram.py", root)
+                rep.check(code == 0,
+                          "cats-cradle 150 mm'yi AŞSA DA geçer (K24 istisnası "
+                          "GERÇEKTEN uygulanıyor)", out)
+
+            # ② başka bir oyun aşar → KIRMIZI
+            d = json.loads(base_r)
+            if blow_up(d, "tablut"):
+                write_json(rrx, d)
+                code, out = run_gate("qa_diagram.py", root)
+                rep.check(code != 0,
+                          "cats-cradle DIŞINDA bir oyun 150 mm'yi aşarsa "
+                          "YAKALANIR (istisna genelleşmiyor)", out)
+            write_json(rrx, json.loads(base_r))
+
+            # ③ istisna sözlüğüne İKİNCİ bir oyun eklenirse → KIRMIZI
+            c = json.loads(base_c)
+            c["diagram"]["diagramBudgetOverrides"]["tablut"] = {
+                "maxMm": 400, "reason": "kaçak muafiyet"}
+            with open(cfgx, "w", encoding="utf-8") as fh:
+                json.dump(c, fh, ensure_ascii=False, indent=2)
+            code, out = run_gate("qa_diagram.py", root)
+            rep.check(code != 0,
+                      "istisna sözlüğüne İKİNCİ oyun eklemek YAKALANIR "
+                      "(tavan bir 'listeye' dönüşemez)", out)
+
+            # ④ istisna SİLİNİRSE ve cats-cradle aşıyorsa → KIRMIZI
+            c = json.loads(base_c)
+            c["diagram"]["diagramBudgetOverrides"] = {}
+            with open(cfgx, "w", encoding="utf-8") as fh:
+                json.dump(c, fh, ensure_ascii=False, indent=2)
+            d = json.loads(base_r)
+            if blow_up(d, "cats-cradle"):
+                write_json(rrx, d)
+                code, out = run_gate("qa_diagram.py", root)
+                rep.check(code != 0,
+                          "istisna KALDIRILIRSA cats-cradle da tavana tabi "
+                          "olur (istisna bir varsayım değil bir KAYIT)", out)
+        finally:
+            with open(rrx, "w", encoding="utf-8") as fh:
+                fh.write(base_r)
+            with open(cfgx, "w", encoding="utf-8") as fh:
+                fh.write(base_c)
+
     # Bu denetim yalnızca TAM tanım kümesi görünürken koşar (qa_diagram ile
     # aynı sözleşme): CI'da `phase4_diagrams.json` korumalı katmandadır ve
     # kısmi bir küme her tanımı "hayalet" gösterirdi.
