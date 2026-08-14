@@ -147,6 +147,9 @@ def build(root: str, args) -> int:
     unresolved = {u["gameId"]: u["reason"]
                   for u in pending.get("unresolvedIdentity", [])}
     gap_ids = {g["gameId"] for g in pending.get("amendmentSourceGaps", [])}
+    holds = {h["gameId"]: h["conflict"]
+             for h in pending.get("editorialHolds", [])
+             if h.get("status") == "open"}
 
     ver, blk = {}, {}
     for r in sv["records"]:
@@ -201,6 +204,11 @@ def build(root: str, args) -> int:
             "manuscriptStatus": written.get(gid, "not-started"),
             "blocker": blocker,
             "deferralReason": reason if pr in DEFERRED else None,
+            # EDİTORYAL ASKI önceliği DEĞİŞTİRMEZ ve `blocker` DEĞİLDİR:
+            # kaynak tamdır, oyun erişilebilirdir. Engel kitabın kendi
+            # üretim kuralındadır. Kuyruğu bozmadan GÖRÜNÜR kalmalı, yoksa
+            # bir sonraki üretici onu P1'de görüp duvara çarpar.
+            "editorialHold": holds.get(gid),
         })
 
     rows.sort(key=lambda r: (r["priority"], -r["verifiedSources"],
@@ -337,6 +345,19 @@ def check(root: str, args) -> int:
     if written_gap:
         errs.append("KAYNAKSIZ oyun YAZILMIŞ (§13 ihlali): %s"
                     % ", ".join(written_gap[:5]))
+
+    # ⑦ EDİTORYAL ASKI — FAZ 5. Askı bir gerekçedir, bir etiket değil.
+    documented = {h["gameId"] for h in pending.get("editorialHolds", [])}
+    undoc = [r["gameId"] for r in rows
+             if r.get("editorialHold") and r["gameId"] not in documented]
+    if undoc:
+        errs.append("BELGELENMEMİŞ editoryal askı: %s" % ", ".join(undoc[:5]))
+    held_written = [r["gameId"] for r in rows
+                    if r.get("editorialHold")
+                    and r["manuscriptStatus"] != "not-started"]
+    if held_written:
+        errs.append("EDİTORYAL ASKIDAKİ oyun yazılmış: %s"
+                    % ", ".join(held_written[:5]))
 
     for e in errs:
         print("  ✗ %s" % e)

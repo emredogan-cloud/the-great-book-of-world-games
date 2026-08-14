@@ -25,7 +25,7 @@
   ],
   "version": "1.0",
   "phase": "phase5",
-  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23",
+  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation",
   "records": [
     {
       "gameId": "yut-nori",
@@ -478,6 +478,66 @@
       "status": "pending",
       "note": "Oyunun oynanabilir biçimi 20. yüzyıl KODİFİKASYONUDUR. Yazım, denetlenebilir bir edisyon gerektirir.",
       "supportingPassage": ""
+    },
+    {
+      "gameId": "hnefatafl",
+      "sourceRef": "Fiske, Willard, Chess in Iceland and in Icelandic Literature (Florence: Florentine Typographical Society, 1905)",
+      "edition": "University of Toronto nüshası (NOT_IN_COPYRIGHT) — archive.org chessinicelandin00fiskuoft",
+      "locator": "'Stray Notes', ss. 58–59",
+      "supportingPassage": "He explains it as \"the king in a kind of chess played by the ancients\"; \"the game was called hnefatofl … The players were two, as in chess; there was only one king (hnefi), here called 'the unarmed lord'; the pieces (toflur) were white and red, the white attacking, the red defending the hnefi\" […] \"For whatever we may not know about hnefatafl, we do know that it could never have lain in the same cradle as chess.\"",
+      "supportedClaim": "YALNIZCA ŞUNLAR: iki oyuncu · tek kral (hnefi) · iki renk taş · bir taraf saldırır, öteki kralı savunur. HAREKET, ALMA, TAHTA ÖLÇÜSÜ ve KAZANMA KOŞULU YOKTUR. Fiske filolojik bir inceleme yazar, bir kural kaydı değil; kendi cümlesiyle oyunun ne olduğu 'tam olarak bilinmiyor'.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "pending",
+      "note": "KAYNAK ERİŞİLEBİLİR AMA KURAL VERMİYOR. Bu bir erişim engeli DEĞİLDİR; kaydın kendisi kural taşımaz. Faz 5'te açıldı ve okundu. Madde yazılamaz; yazılırsa kural UYDURULMUŞ olur."
+    },
+    {
+      "gameId": "halatafl",
+      "sourceRef": "Fiske, Willard, Chess in Iceland and in Icelandic Literature (Florence: Florentine Typographical Society, 1905)",
+      "edition": "University of Toronto nüshası (NOT_IN_COPYRIGHT) — archive.org chessinicelandin00fiskuoft",
+      "locator": "'Stray Notes', s. 59 (hnefatafl rubriği içinde anılır)",
+      "supportingPassage": "The rubric closes with the citation of a compound substantive, hnettafla, \"the piece of the hnefi\"; and by a reference to the words halatafl and hunn, with which we are likely to have to do hereafter.",
+      "supportedClaim": "Terimin VARLIĞI doğrulandı. Kural yok: halatafl bu sayfada yalnızca bir sözlük göndermesi olarak geçer.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "pending",
+      "note": "hnefatafl ile aynı durum. Kitabın TEK belgelenmiş tafl oyunu tablut'tur (Linnaeus 1732) ve o YAZILDI."
+    },
+    {
+      "gameId": "cats-cradle",
+      "sourceRef": "Jayne, Caroline Furness, String Figures: A Study of Cat's-Cradle in Many Lands (New York: Scribner, 1906)",
+      "edition": "Cornell nüshası (NOT_IN_COPYRIGHT) — archive.org cu31924029861469",
+      "locator": "'The Real Cat's-Cradle', ss. 324–338",
+      "supportingPassage": "Two persons and one loop of string are required for the game of \"Real Cat's-Cradle,\" which is played by the persons alternately taking the string off each other's hands to produce eight definite figures which have been given distinctive names, as follows: 1. Cradle; 2, Soldier's Bed; 3, Candles; 4, Manger; 5, Diamonds; 6, Cat's Eye; 7, Fish in a Dish; 8, Clock. […] My father, Dr. Horace Howard Furness, tells me that as a child he ended the game of Cat's-cradle by forming the \"Clock\" from the \"Fish in a Dish\".",
+      "supportedClaim": "KURAL TAM: iki oyuncu · tek ip halkası · sırayla ipi birbirinin elinden alma · SEKİZ adlandırılmış figür sırası · 'Clock' oyunu bitirir · Filipinli Linao Moro biçiminde 'Cat's Eye'dan 'Manger'a dönülür (varyant). Her figürün adım adım el hareketleri ss. 325–338 arasında verilmiştir.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "KAYNAK YETERLİ, ENGEL EDİTORYALDİR: sekiz figür, oyun başına 150 mm diyagram tavanına (K19) sığmıyor — figür başına ~18 mm düşer ve o boyutta el hareketi okunmaz. Üç seçenek de kurucu kararıdır: (a) tavanı bu madde için aşmak, (b) maddeyi ilk üç figürle basmak (kaynaktan EKSİK olur), (c) figürleri metinle anlatıp diyagramı azaltmak. Ajan bunu tek başına seçemez."
+    },
+    {
+      "gameId": "oware",
+      "sourceRef": "Culin, Stewart, 'Mancala, the National Game of Africa', Report of the U.S. National Museum for 1894 (Washington, 1896)",
+      "edition": "Boston University nüshası — archive.org mancalanationalg00culi",
+      "locator": "ss. 597–598 (Suriye biçimi) · s. 594 (Vei biçimi)",
+      "supportingPassage": "A lad from Damascus described to me the methods of play. […] One game is called La'b madjnuni, or the \"Crazy game.\" […] Prince Momolu Massaquoi, son of the King of the Vei tribe, described to me the manner of playing the game among the Vei. They call the game Kpo […]",
+      "supportedClaim": "Culin'in AYRINTILI kural kayıtları SURİYE (Şam) ve VEI (Liberya) biçimlerinindir. Gold Coast/Akan wari'si yalnızca Bent'in alıntısında ANILIR ('He then proceeds to identify Isafuba with the games of Wari played on the west coast of Africa') ve kuralı verilmez.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "pending",
+      "note": "KİMLİK TUZAĞI — Totolospi ve Sugoroku ile aynı sınıf. Akan oyununu Şam ya da Vei kaydından yazmak, kitabın kültür künyesini yalanlar. oware için AKAN kaydı gerekir."
+    },
+    {
+      "gameId": "jianzi",
+      "sourceRef": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+      "edition": "Cornell nüshası — archive.org cu31924023272424",
+      "locator": "§ XXXIII 'Tjye-ki tcha-ki — Shuttlecock Kicking', ss. 39–43",
+      "supportingPassage": "The Korean shuttlecock consists of a flattened ball made of cotton cloth and filled with clay or ashes, having a feather from a pheasant's tail stuck in the top. Shopkeepers play the game in the streets to keep their feet warm. The Tjye-ki is kicked from one person to another, and may be put in place to kick with the hand.",
+      "supportedClaim": "YALNIZCA NESNE ve bağlam. Puanlama yok, tur yok, oyuncu sayısı yok, bitiş koşulu yok. Ayrıca kayıt KORE (Tjye-ki) ve JAPON (hago) biçimlerinindir; kapsamdaki madde HAN ÇİNLİSİDİR.",
+      "verifiedOn": "2026-08-14",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "pending",
+      "note": "FAZ 4'ÜN ERTELEME KARARI SAYFA AÇILARAK DOĞRULANDI. Faz 4 bunu ikincil bilgiyle ertelemişti; Faz 5 sayfayı okudu ve karar aynen geçerli."
     }
   ]
 }
