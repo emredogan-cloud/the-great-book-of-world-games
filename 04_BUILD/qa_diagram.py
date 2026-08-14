@@ -157,6 +157,22 @@ def check_rendered_budget(cfg: dict, diagrams: list, root: str,
     rep.check(not unrendered,
               "her diyagram render edilmiş ve ÖLÇÜLMÜŞ" + brief(unrendered))
 
+    # FAZ 5 EKLEMESİ — TERS YÖN: ölçümde olup TANIMI OLMAYAN diyagram.
+    #
+    # Denetim tek yönlüydü: "her tanımın ölçümü var mı". Tersi sorulmuyordu
+    # ve Faz 5'te tam olarak o koptu — K23 iki oyunu kapsamdan çıkardı,
+    # tanımları silindi, ama ölçüm dosyası ikisini de SAYMAYA devam etti ve
+    # kapı yeşil yandı.
+    #
+    # Bu bir muhasebe hatası değil bir BÜTÇE hatasıdır: ölçüm dosyası, oyun
+    # başına 150 mm toplamının hesaplandığı yerdir. Artık var olmayan bir
+    # diyagram o toplama girerse bütçe gerçek kitabı değil eski kitabı
+    # denetler.
+    ghost = sorted(set(measured) - {d["diagramId"] for d in diagrams})
+    rep.check(not ghost,
+              "ölçümde TANIMI OLMAYAN diyagram yok (bayat render raporu)"
+              + brief(ghost))
+
     over, wide = [], []
     for d in diagrams:
         m = measured.get(d["diagramId"])

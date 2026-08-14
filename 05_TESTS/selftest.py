@@ -1377,7 +1377,30 @@ def part9_phase5_gates(rep, tmp: str) -> None:
             with open(cp, "w", encoding="utf-8") as fh:
                 fh.write(orig_c)
 
-    # ── ⑤ ARKA MADDE VE ÜÇ İNDEKS ─────────────────────────────────────────
+    # ── ⑤ BAYAT RENDER RAPORU ─────────────────────────────────────────────
+    # 150 mm bütçesi ölçüm dosyasından hesaplanır. Artık var olmayan bir
+    # diyagram o dosyada kalırsa bütçe, gerçek kitabı değil ESKİ kitabı
+    # denetler. Denetim tek yönlüydü ("her tanımın ölçümü var mı"); tersi
+    # sorulmuyordu ve K23 iki diyagramı emekliye ayırdığında tam olarak
+    # o koptu.
+    print("  ▸ bayat render raporu")
+    rr = os.path.join(root, "06_REPORTS", "diagram-render.json")
+    if os.path.exists(rr):
+        with open(rr, encoding="utf-8") as fh:
+            orig_r = fh.read()
+        try:
+            d = json.loads(orig_r)
+            d["diagrams"].append(dict(d["diagrams"][0],
+                                      diagramId="a-retired-diagram"))
+            write_json(rr, d)
+            code, out = run_gate("qa_diagram.py", root)
+            rep.check(code != 0,
+                      "ölçümde durup TANIMI OLMAYAN diyagram YAKALANIR", out)
+        finally:
+            with open(rr, "w", encoding="utf-8") as fh:
+                fh.write(orig_r)
+
+    # ── ⑥ ARKA MADDE VE ÜÇ İNDEKS ─────────────────────────────────────────
     # Arka madde ÜRETİLİR. Üretilmiş olması onu doğru yapmaz: üreteç yanlış
     # kova hesaplarsa indeks de özet de AYNI yanlışı taşır ve dosya kendi
     # içinde tutarlı görünür. Kapı kovaları envanterden YENİDEN hesaplar;
