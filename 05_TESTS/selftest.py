@@ -1377,6 +1377,104 @@ def part9_phase5_gates(rep, tmp: str) -> None:
             with open(cp, "w", encoding="utf-8") as fh:
                 fh.write(orig_c)
 
+    # ── ⑤ ARKA MADDE VE ÜÇ İNDEKS ─────────────────────────────────────────
+    # Arka madde ÜRETİLİR. Üretilmiş olması onu doğru yapmaz: üreteç yanlış
+    # kova hesaplarsa indeks de özet de AYNI yanlışı taşır ve dosya kendi
+    # içinde tutarlı görünür. Kapı kovaları envanterden YENİDEN hesaplar;
+    # aşağıdaki kusurlar tam olarak o yeniden hesabı sınar.
+    print("  ▸ arka madde ve üç indeks")
+    bmp = os.path.join(root, "02_MANUSCRIPT", "backmatter.json")
+    if os.path.exists(bmp):
+        with open(bmp, encoding="utf-8") as fh:
+            orig_b = fh.read()
+
+        def drop_from_one_index(d):
+            """Oyun ÜÇ indeksin BİRİNDEN düşer — ötekilerde durur."""
+            b = d["indexes"]["byPlayerCount"]["buckets"]
+            k = next(k for k, v in b.items() if v)
+            b[k].pop()
+
+        def move_to_wrong_bucket(d):
+            """İki kişilik bir oyun '5+' kovasına taşınır."""
+            b = d["indexes"]["byPlayerCount"]["buckets"]
+            row = b["2"].pop()
+            b["5+"].append(row)
+
+        def wrong_culture_bucket(d):
+            b = d["indexes"]["byCulture"]["buckets"]
+            k = next(k for k, v in b.items() if v)
+            other = next(x for x in b if x != k)
+            b[other].append(b[k].pop())
+
+        def invent_page_number(d):
+            """Dizilmemiş bir oyuna SAYFA NUMARASI verilir (§27 ihlali)."""
+            for rows in d["indexes"]["byCulture"]["buckets"].values():
+                for r in rows:
+                    if r["page"] is None:
+                        r["page"] = 137
+                        r["pageStatus"] = "measured"
+                        return
+
+        def shift_real_page(d):
+            """Gerçek bir sayfa numarası ölçümden KAYDIRILIR."""
+            for rows in d["indexes"]["byCulture"]["buckets"].values():
+                for r in rows:
+                    if r["page"] is not None:
+                        r["page"] += 4
+                        return
+
+        def false_glossary_claim(d):
+            """Sözlük, prozada geçmeyen bir terimi 'geçiyor' gösterir."""
+            d["glossary"][0]["attestedIn"] = ["tablut"]
+            d["glossary"][0]["term"] = "zzz-not-a-real-word"
+
+        def shrink_glossary(d):
+            d["glossary"] = d["glossary"][:20]
+
+        def overclaim_verification(d):
+            """Kaynakça, olmayan bir sayfa doğrulaması iddia eder."""
+            d["bibliography"][0]["pageVerifiedCount"] = 9
+
+        def stale_after_scope_change(d):
+            """Kapsam değişti, arka madde YENİDEN ÜRETİLMEDİ."""
+            d["bibliography"] = d["bibliography"][:-1]
+
+        def ghost_template(d):
+            d["boardTemplates"].append({
+                "gameId": "tablut", "title": "Tablut",
+                "diagramId": "a-diagram-that-does-not-exist",
+                "boardClass": "cell", "size": {"cols": 9, "rows": 9},
+                "reconstructed": False, "photocopyNote": "x"})
+
+        try:
+            for label, mut in [
+                ("oyun ÜÇ indeksin BİRİNDEN düşerse YAKALANIR",
+                 drop_from_one_index),
+                ("YANLIŞ oyuncu-sayısı kovası YAKALANIR", move_to_wrong_bucket),
+                ("YANLIŞ kültür kovası YAKALANIR", wrong_culture_bucket),
+                ("DİZİLMEMİŞ oyuna sayfa numarası UYDURULMASI YAKALANIR",
+                 invent_page_number),
+                ("ölçümden KAYMIŞ sayfa numarası YAKALANIR", shift_real_page),
+                ("sözlüğün YANLIŞ 'prozada geçiyor' iddiası YAKALANIR",
+                 false_glossary_claim),
+                ("60 terimin ALTINA düşen sözlük YAKALANIR", shrink_glossary),
+                ("OLMAYAN sayfa doğrulaması iddiası YAKALANIR",
+                 overclaim_verification),
+                ("kapsam değişince BAYAT kalan arka madde YAKALANIR",
+                 stale_after_scope_change),
+                ("OLMAYAN diyagrama bağlı şablon YAKALANIR", ghost_template),
+            ]:
+                d = json.loads(orig_b)
+                mut(d)
+                write_json(bmp, d)
+                code, out = run_gate("qa_index.py", root)
+                rep.check(code != 0, label, out)
+        finally:
+            with open(bmp, "w", encoding="utf-8") as fh:
+                fh.write(orig_b)
+        code, out = run_gate("qa_index.py", root)
+        rep.check(code == 0, "TEMİZ arka madde geçer", out)
+
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,

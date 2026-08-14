@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "checks": 31,
+  "errors": [],
+  "layer": "manuscript",
+  "scopeGames": 100,
+  "measuredGames": 20,
+  "boardTemplates": 18,
+  "glossaryTerms": 61,
+  "glossaryAttested": 26,
+  "bibliographyEntries": 100,
+  "bibliographyPageVerified": 23,
+  "cultures": 73,
+  "inventedTraditions": 5
+}
