@@ -8,10 +8,11 @@
 > ```
 > FAZ 5 · KOŞU 1 SONUNDA :  20 / 100
 > FAZ 5 · KOŞU 2 SONUNDA :  23 / 100
+> FAZ 5 · KOŞU 3 SONUNDA :  25 / 100
 > HEDEF                  : 100 / 100
 > ```
 >
-> ⛔ **FAZ 5 KENDİ ANA HEDEFİNİ TUTTURAMADI.** Kalan **77 oyun**
+> ⛔ **FAZ 5 KENDİ ANA HEDEFİNİ TUTTURAMADI.** Kalan **75 oyun**
 > yazılmadı. Rapor bunu ilk sayfada söylüyor ve § 4'te tek tek gerekçesini
 > veriyor.
 
@@ -21,14 +22,14 @@
 
 | | Faz 4 | Faz 5 · koşu 1 | **Faz 5 · koşu 2** |
 |---|---:|---:|---:|
-| **Yazılmış oyun** | 22 | 20 | **23** |
+| **Yazılmış oyun** | 22 | 20 | **25** |
 | Kapsamdaki oyun | 100 | 100 | **100** |
 | Kapsamdaki kültür | 71 | 73 | **73** |
-| Manuscript'teki kültür | 14 | 14 | **15** |
-| Doğrulama kaydı | 37 | 44 | **51** |
+| Manuscript'teki kültür | 14 | 14 | **17** |
+| Doğrulama kaydı | 37 | 44 | **54** |
 | `verified` kayıt | 28 | 29 | **31** |
 | Arka madde | yok | altı bölüm | **altı bölüm · güncel** |
-| Sayfa göndermesi ölçülmüş oyun | — | 20 | **23** |
+| Sayfa göndermesi ölçülmüş oyun | — | 20 | **25** |
 | Sayfa modeli | 258 | 260 | **258** |
 | Hedeften sapma | +%0,8 | +%1,6 | **+%0,8** ✅ |
 | Ciltsiz birim telif | 8,41 $ | 8,37 $ | **8,41 $** |
@@ -79,7 +80,8 @@ denetleniyor ve **şerh bir muafiyet değildir** (§ 12.1).
 | K23 ile geri alınan (yazılmıştı) | −2 |
 | **Koşu 1 sonunda** | **20** |
 | Koşu 2'de yazılan | **+3** |
-| **ŞU AN** | **23 / 100** |
+| Koşu 3'te yazılan | **+2** |
+| **ŞU AN** | **25 / 100** |
 
 Geri alınan iki maddenin prozası **silinmedi**:
 `02_MANUSCRIPT/retired_phase5.json` (korumalı katman) tam metni ve iki
@@ -89,13 +91,13 @@ diyagram tanımını taşıyor.
 
 ## 3 · KALAN OYUNLAR
 
-**77 oyun.**
+**75 oyun.**
 
 | | |
 |---|---:|
 | Kapsam | 100 |
-| Yazılmış | 23 |
-| **Kalan** | **77** |
+| Yazılmış | 25 |
+| **Kalan** | **75** |
 
 ### 3.1 Koşu 2'de yazılan üç oyun
 
@@ -124,6 +126,23 @@ Bu batch'in en önemli editoryal kararı budur:
 
 > Bir kaynağı alıntılayan kaynak, iki kaynak değildir. Aksini saymak,
 > künye sayısını iki katına çıkarmanın en kolay ve en sessiz yoludur.
+
+### 3.3 Koşu 3 (batch 2) — iki savaş tahtası oyunu
+
+| oyun | aile | kültür | kaynak | sayfa |
+|---|---|---|---|---|
+| **Xiangqi** | savaş tahtası | Han Çinlisi | Falkener 1892 | ss. 143–149 |
+| **Sittuyin** | savaş tahtası | Birmanya | Falkener 1892 | ss. 177–179 |
+
+İkisi de **tam kural seti** taşıyor. **K20 şerhi künyede açıkça yazılı:**
+Falkener bir **Viktorya derlemesidir**, birinci elden gözlem değil; kendi
+kaynaklarını (Hyde 1694 · Irwin 1793 · Cox 1801) adlandırır. Erişilebilir
+kamusal alanda Çin ve Birmanya kaynaklı **birinci el kural kaydı
+bulunamadı** ve künye bunu gizlemiyor.
+
+**İkisi de DİYAGRAMSIZ ve bu bir karardır** (§ 8.2).
+
+Manuscript kültür sayısı **15 → 17**.
 
 ---
 
@@ -309,6 +328,25 @@ karede hangi taşın durduğu **kurulum listesindedir**.
 
 **③ Cats-cradle efsanesinde iki sembol BİREBİR AYNI daireydi.**
 *"ipin tutulduğu parmak"* ve *"ip yolu"* satırları ayırt edilemiyordu.
+
+### 8.2 v1.4 ÜÇ KURAL-TAŞIYAN TAHTA UNSURUNU ÇİZEMİYOR
+
+Tek bir fazda **üç ayrı** tahta özelliği çizilemedi ve üçü de **kural
+taşıyor** — yani eksik çizmek, kuralla **çelişen** bir tahta üretir:
+
+| unsur | oyun | neden kural taşır | v1.4 |
+|---|---|---|---|
+| **haç biçimli tahta** | pachisi | köşeler yoktur; iz haçın kollarını dolaşır | `cell` dolu ızgara çizer |
+| **nehir + hisar köşegeni** | xiangqi | fil nehri geçemez; general hisarı terk edemez | `point` düz ızgara çizer |
+| **terfi köşegeni** | sittuyin | er köşegene varınca terfi eder | `cell` köşegen çizemez |
+| **ip figürleri** | cats-cradle | oyunun kendisi figür dizisidir | `bodily/hands` soyut şema |
+
+Dördü de **diyagramsız** basılıyor ve dördünde de gerekçe maddenin
+`englishValidation.diagram` alanında yazılı.
+
+> **AÇIK KARAR — diyagram dili v1.5.** Bu dört unsur bir eğilim değil bir
+> **desen**dir: kitabın kalan 75 oyununun büyük kısmı düzensiz tahtalıdır.
+> Dili büyütmek bir **mimari karardır** (§ 16) ve ajan tek başına yapamaz.
 
 ---
 
@@ -525,7 +563,7 @@ kadar yapılmadı**.
 
 | # | blok | kimde | durum |
 |---|---|---|---|
-| 1 | **77 oyun yazılmadı** | üretim + kaynak | ⛔ **ana blok** |
+| 1 | **75 oyun yazılmadı** | üretim + kaynak | ⛔ **ana blok** |
 | 2 | **Dış insan testi** | kurucu — paket hazır | ⛔ Faz 2'den beri aynı |
 | 3 | Telifli kaynak erişimi (Parlett · Bell · Murray · Zaslavsky) | kurucu | 5 oyun P4 + kuyruğun büyük kısmı |
 | 4 | **Diyagram dili v1.5 — ip figürleri** | kurucu | 🆕 açık karar (§ 7.2) |
@@ -536,7 +574,7 @@ kadar yapılmadı**.
 | **A5** | `STYLE.md` onayı | kurucu | açık |
 | **A6** | Yazar biyografisi | kurucu | açık |
 
-### 19.1 Kalan 77 oyunun gerçek engeli
+### 19.1 Kalan 75 oyunun gerçek engeli
 
 Faz 5 on kaynak açtı ve **yedisi kural taşımıyordu**. Bu küçük bir
 örneklemdir ama deseni nettir:
@@ -559,13 +597,13 @@ Faz 5 on kaynak açtı ve **yedisi kural taşımıyordu**. Bu küçük bir
 
 | hazır | değil |
 |---|---|
-| Kapsam kilitli · şerhli · denetlenen (100 · 73 kültür) | **77 oyun yazılmadı** |
+| Kapsam kilitli · şerhli · denetlenen (100 · 73 kültür) | **75 oyun yazılmadı** |
 | Arka madde tam ve **üretilen** · üç indeks doğrulanmış | **Dış test kanıtı (0)** |
 | Kalibre sayfa modeli (258 · +%0,8) ve senkron ekonomi | `locked` oyun (0) |
 | K24 istisnası kayıtlı, dar ve **dört testle kilitli** | Ön madde ve giriş denemesi |
 | 177 kasıtlı kusur testi · yedi kapı kusuru kapatıldı | ~130 görsel |
 | Erişilebilir-önce kuyruk · altı seviye | Telifli kaynak erişimi |
-| Yazım şablonu 23 oyunda sınandı | Diyagram dili v1.5 kararı |
+| Yazım şablonu 25 oyunda sınandı | **Diyagram dili v1.5 kararı** |
 
 ---
 
@@ -573,8 +611,8 @@ Faz 5 on kaynak açtı ve **yedisi kural taşımıyordu**. Bu küçük bir
 
 | bilinmeyen | ne zaman öğrenilir |
 |---|---|
-| Yirmi üç madde masada çalışıyor mu | **dış test** — açık |
-| Kalan 77'nin kaçı gerçekten yazılabilir | Faz 5 onda üçünü yazabildi |
+| Yirmi beş madde masada çalışıyor mu | **dış test** — açık |
+| Kalan 75'in kaçı gerçekten yazılabilir | Faz 5 on iki kaynaktan beşini yazabildi |
 | Taşma oranı %4–5'te kalıyor mu | daha büyük örneklem |
 | İp figürleri çizilebilir mi | diyagram dili v1.5 kararı |
 | Haç tahtası çizilebilir mi | aynı karar |
