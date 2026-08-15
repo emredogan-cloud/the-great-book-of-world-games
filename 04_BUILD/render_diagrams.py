@@ -66,12 +66,6 @@ class Canvas:
                 'stroke-width="%.2f"/>'
                 % (cx, cy, r * 0.55, grey(0) if fill == 100 else "#000", self.sw))
 
-    def rect(self, x, y, w, h):
-        """Dolgusuz dikdörtgen — `bodily/bed` bölmeleri (v1.4)."""
-        self.parts.append(
-            '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" fill="none" '
-            'stroke="#000" stroke-width="%.2f"/>' % (x, y, w, h, self.sw))
-
     def text(self, x, y, s, pt, anchor="middle"):
         self.parts.append(
             '<text x="%.2f" y="%.2f" font-family="serif" font-size="%.2f" '
@@ -95,6 +89,14 @@ class Canvas:
                 '<line x1="%.2f" y1="%.2f" x2="%.2f" y2="%.2f" stroke="%s" '
                 'stroke-width="%.2f"/>' % (x1, y1, x2, y2, ink, self.sw * 1.4))
 
+    def rect(self, x, y, w, h, ink="#000"):
+        """Dolgusuz dikdörtgen — `bodily/bed` bölmeleri (v1.4) ve v1.5'te
+        haç tahtasının VAR OLAN kareleri. Izgara çizgileri bir haçın
+        köşelerini de doldururdu; kare kare çizim doldurmaz."""
+        self.parts.append(
+            '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" fill="none" '
+            'stroke="%s" stroke-width="%.2f"/>' % (x, y, w, h, ink, self.sw))
+
     def svg(self, title: str) -> str:
         return ('<?xml version="1.0" encoding="UTF-8"?>\n'
                 '<svg xmlns="http://www.w3.org/2000/svg" width="%.2f" '
@@ -105,13 +107,24 @@ class Canvas:
                    "\n".join(self.parts)))
 
 
-def coord_xy(coord: str, cls: str, size: dict, x0, y0, step):
+def coord_xy(coord: str, cls: str, size: dict, x0, y0, step, ry=None):
+    """Koordinat → piksel. `ry` verilirse satır y'si ondan alınır.
+
+    v1.5: `gapAfterRow` (nehir) satır konumlarını kaydırır ve bu kaydırmayı
+    TEK bir yerde tutmak zorundayız; iki ayrı hesap ayrışırsa taşlar
+    tahtanın yanına düşer."""
     if cls in ("cell", "point"):
-        col = ord(coord[0]) - ord("a")
-        row = int(coord[1:]) - 1
+        try:
+            col = ord(coord[0]) - ord("a")
+            row = int(coord[1:]) - 1
+        except (ValueError, IndexError):
+            return None
         rows = size.get("rows", 1)
         off = step / 2.0 if cls == "cell" else 0.0
-        return x0 + col * step + off, y0 + (rows - 1 - row) * step + off
+        y = ry(row) if ry else y0 + (rows - 1 - row) * step
+        if cls == "cell":
+            y = y - step + off if ry else y + off
+        return x0 + col * step + off, y
     return None
 
 
@@ -165,25 +178,70 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
 
     elif cls in ("cell", "point"):
         cols, rows = size.get("cols", 1), size.get("rows", 1)
-        n = cols if cls == "point" else cols
+        # v1.5 ① OMITTED CELLS — tahtada BULUNMAYAN kareler (haç tahtası).
+        # v1.5 ③ GAP AFTER ROW — nehir: bir sıradan sonra bir sıra boşluk.
+        omit = set(d.get("omitCells") or [])
+        gap_after = d.get("gapAfterRow")
+        gap_mm = step_mm if gap_after else 0.0
         w = pad * 2 + (cols - (0 if cls == "cell" else 1)) * step_mm
-        h = pad * 2 + (rows - (0 if cls == "cell" else 1)) * step_mm + legend_h
+        h = (pad * 2 + (rows - (0 if cls == "cell" else 1)) * step_mm
+             + gap_mm + legend_h)
         c = Canvas(w, h, sw)
         x0, y0 = pad * MM, pad * MM
         step = step_mm * MM
+        gap = gap_mm * MM
+
+        def ry(row):
+            """Satırın y'si. `gapAfterRow` verilmişse ALT bölge aşağı kayar.
+
+            Nehir bir boşluk değil bir KURALDIR (fil geçemez); bu yüzden
+            çizimde de gerçek bir boşluk olarak durur, bir çizgi olarak
+            değil."""
+            y = y0 + (rows - 1 - row) * step
+            if gap_after and row <= gap_after - 1:
+                y += gap
+            return y
+
         if cls == "cell":
-            for i in range(cols + 1):
-                c.line(x0 + i * step, y0, x0 + i * step, y0 + rows * step)
-            for j in range(rows + 1):
-                c.line(x0, y0 + j * step, x0 + cols * step, y0 + j * step)
+            if omit:
+                # VAR OLAN kareleri tek tek çiz. Izgara çizgileri bir haçın
+                # köşelerini de doldurur; kare kare çizim doldurmaz.
+                for col in range(cols):
+                    for row in range(rows):
+                        coord = "%s%d" % (chr(ord("a") + col), row + 1)
+                        if coord in omit:
+                            continue
+                        cx, cy = x0 + col * step, ry(row) - step + step
+                        c.rect(x0 + col * step, ry(row) - step, step, step)
+            else:
+                for i in range(cols + 1):
+                    c.line(x0 + i * step, ry(rows - 1) - step,
+                           x0 + i * step, ry(0))
+                for j in range(rows + 1):
+                    yy = ry(j - 1) if j else ry(0)
+                    c.line(x0, yy, x0 + cols * step, yy)
         else:
             for i in range(cols):
-                c.line(x0 + i * step, y0, x0 + i * step, y0 + (rows - 1) * step)
+                if gap_after:
+                    c.line(x0 + i * step, ry(rows - 1),
+                           x0 + i * step, ry(gap_after))
+                    c.line(x0 + i * step, ry(gap_after - 1),
+                           x0 + i * step, ry(0))
+                else:
+                    c.line(x0 + i * step, ry(rows - 1), x0 + i * step, ry(0))
             for j in range(rows):
-                c.line(x0, y0 + j * step, x0 + (cols - 1) * step, y0 + j * step)
+                c.line(x0, ry(j), x0 + (cols - 1) * step, ry(j))
+
+        # v1.5 ② LINES — hisar köşegeni, terfi köşegeni, bölge sınırı.
+        for ln in d.get("lines") or []:
+            f = coord_xy(ln.get("from", ""), cls, size, x0, y0, step, ry)
+            t = coord_xy(ln.get("to", ""), cls, size, x0, y0, step, ry)
+            if f and t:
+                c.line(f[0], f[1], t[0], t[1])
+
         r = step * ratio / 2.0
         for p in d.get("pieces", []):
-            xy = coord_xy(p["at"], cls, size, x0, y0, step)
+            xy = coord_xy(p["at"], cls, size, x0, y0, step, ry)
             if not xy:
                 continue
             g = lang["glyphs"][p["glyph"]]
@@ -193,8 +251,8 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
                 c.cross(xy[0], xy[1], r * 0.8,
                         "#fff" if g["fill"] >= 55 else "#000")
         for a in d.get("arrows", []):
-            f = coord_xy(a.get("from", ""), cls, size, x0, y0, step)
-            t = coord_xy(a.get("to", ""), cls, size, x0, y0, step)
+            f = coord_xy(a.get("from", ""), cls, size, x0, y0, step, ry)
+            t = coord_xy(a.get("to", ""), cls, size, x0, y0, step, ry)
             if f and t:
                 spec = lang["arrows"][a["kind"]]
                 c.arrow(f[0], f[1], t[0], t[1], spec["widthPt"] * 96 / 72,
@@ -244,6 +302,49 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
         c.line(x0, y0, x0 + side, y0 + side, sw * 96 / 72, "4,3")
         c.line(x0 + side, y0, x0, y0 + side, sw * 96 / 72, "4,3")
         c.circle(x0 + side / 2, y0 + side / 2, step * 0.30, 0)
+
+    elif cls == "bodily" and d.get("frame") == "figure":
+        # `figure` (v1.5) — İP FİGÜRÜ. `hands` çerçevesi soyut bir şema
+        # çizer ve iki figürü BİRBİRİNDEN AYIRT EDEMEZ: Beşik ile Asker
+        # Yatağı aynı görünür. Faz 5 bunu görsel denetimde ölçtü.
+        #
+        # Burada ipin GERÇEK YOLU taşınır: adlandırılmış düğümler (parmaklar
+        # ve çaprazlama noktaları, 0–1 normalize) ve `strings` — düğümden
+        # düğüme geçen polilinler. Sınır denetimi tanımlı düğüm kümesidir.
+        nodes = d.get("nodes", {})
+        span = size.get("spanMm", 58.0)
+        aspect = size.get("aspect", 0.72)
+        w = pad * 2 + span
+        h = pad * 2 + span * aspect + legend_h
+        c = Canvas(w, h, sw)
+        x0, y0 = pad * MM, pad * MM
+
+        def fxy(k):
+            x, y = nodes[k]
+            return x0 + x * span * MM, y0 + y * span * aspect * MM
+
+        # İpin kendisi ÖNCE çizilir; parmaklar üstüne biner, çünkü ip
+        # parmağın ARKASINDAN geçer ve okur bunu görmek zorundadır.
+        for path in d.get("strings", []):
+            pts = [k for k in path if k in nodes]
+            for a, b in zip(pts, pts[1:]):
+                ax, ay = fxy(a)
+                bx, by = fxy(b)
+                c.line(ax, ay, bx, by)
+        placed = {p["at"]: p for p in d.get("pieces", [])}
+        for k in nodes:
+            gk = placed.get(k, {}).get("glyph")
+            if gk:
+                g = lang["glyphs"][gk]
+                c.circle(*fxy(k), 2.0 * MM, g["fill"],
+                         ring=gk in ("king", "lightSpecial", "darkSpecial"))
+        for a in d.get("arrows", []):
+            if a.get("from") in nodes and a.get("to") in nodes:
+                spec = lang["arrows"][a["kind"]]
+                fx, fy = fxy(a["from"])
+                tx, ty = fxy(a["to"])
+                c.arrow(fx, fy, tx, ty, spec["widthPt"] * 96 / 72,
+                        "3,2" if spec["style"] == "dotted" else None)
 
     elif cls == "bodily" and d.get("frame") == "bed":
         # `bed` (v1.4) — ZEMİNE ÇİZİLEN BÖLMELER. Bölmeler AÇIKÇA verilir;

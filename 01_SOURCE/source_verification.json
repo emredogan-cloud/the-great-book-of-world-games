@@ -25,7 +25,7 @@
   ],
   "version": "1.0",
   "phase": "phase5",
-  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation + phase5-batch-2",
+  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation + phase5-batch-2 + phase5-batch-3",
   "records": [
     {
       "gameId": "yut-nori",
@@ -658,6 +658,30 @@
       "accessMethod": "archive.org tam metin — kamusal alan",
       "status": "pending",
       "note": "AÇIK İZ — bir sonraki batch. Forbes 1860 erişilebilir ve shatranj için ayrı bir bölüm taşıyor. UYARI: Forbes'un chaturanga tezi (dört kişilik zarlı oyun asıldır) sonradan Murray tarafından çürütüldü; kural aktarımı ayrı, tarih tezi ayrı değerlendirilmeli."
+    },
+    {
+      "gameId": "chaturanga",
+      "sourceRef": "Forbes, Duncan, The History of Chess (London: W. H. Allen and Co., 1860)",
+      "edition": "Bayerische Staatsbibliothek nüshası — archive.org 10431564bsb",
+      "locator": "'On the Moves of the Pieces', ss. 19–21",
+      "supportingPassage": "The King moves one square in all directions; the Pawn moves one square straight forward, but smites an enemy through either angle, in advance; the Elephant, O Prince of many lands, moves (so far as his path is clear) in the direction of the four cardinal points, according to his own pleasure; the Horse moves over three squares in an oblique direction; and the Ship, O Yudhishthira, moves two squares diagonally. […] the dice for the Chaturanga had the four numbers, two, three, four, and five; the three and four, as also the two and five, being opposite each other, so as to make the amount seven, as in our own cubic die. […] Sir William Jones, and his learned friend the Brahman Radha Kant, have fallen into a very serious error respecting the move and power of the Elephant […] the expression used in the original admits of no doubt […] It is the adverb chatushtayam which simply means in the four cardinal directions […] The Elephant, then, had precisely the move of our Rook.",
+      "supportedClaim": "Beş taşın hareketi (şah bir kare her yöne; er bir kare ileri, köşegen alır; FİL dört ana yönde kale gibi; at eğik üç kare; gemi iki kare köşegen) ve dört yüzlü zarın 2-3-4-5 değerleri ile karşılıklı yüzlerin toplamının yedi olması. Ayrıca Forbes'un Jones/Radha Kant düzeltmesi: fil VEZİR gibi değil KALE gibi hareket eder.",
+      "verifiedOn": "2026-08-15",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "KURAL için kullanıldı, TARİH TEZİ için DEĞİL. Forbes'un 'dört elli zarlı oyun satrancın aslıdır' tezi Murray 1913 tarafından çürütüldü ve madde bunu prozasında söylüyor. Sıra kaybı, şah alma yordamı ve bitiş Forbes'ta YOKTUR; madde bunları editoryal olarak işaretliyor."
+    },
+    {
+      "gameId": "shatranj",
+      "sourceRef": "Forbes, Duncan, The History of Chess (London: W. H. Allen and Co., 1860)",
+      "edition": "Bayerische Staatsbibliothek nüshası — archive.org 10431564bsb",
+      "locator": "'Shatranj — the Medieval Chess', ss. 39–41 · terfi dipnotu s. 148",
+      "supportingPassage": "suppose the Black King, on taking his station beside the Green monarch, becomes a Farzin, shorn of half the power he possessed when free and independent […] let the Red and Yellow forces unite on the further side of the board, so that King may be opposite to King, and Farzin to Farzin […] This is the precise state in which the game was introduced into Persia, the powers of the pieces being the same as in the Chaturanga; and thus the game continued to be played in Asia and Europe for nearly a thousand years afterwards. […] In the Shatranj, or medieval game, a Pawn, on reaching the opposite extremity of the board, instantly became a Farzin or Counsellor only, but never a Rukh, a Knight, or a Fil.",
+      "supportedClaim": "İki elli oyuna geçiş; şahın şaha, ferzinin ferzine karşı dizilmesi; taşların güçlerinin chaturanga'dan DEĞİŞMEDEN geçmesi (yani şah bir kare, ferzin bir köşegen kare, fil iki köşegen kare sıçrayarak, rukh kale, at at, er bir ileri); ve TERFİNİN YALNIZCA FERZİNE olması — asla rukh, at ya da fil'e değil.",
+      "verifiedOn": "2026-08-15",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "Çıplak şah ve kilitlenme kuralları Forbes'ta YOKTUR; madde ikisini de editoryal olarak işaretliyor. Forbes'un tarih tezi kullanılmadı."
     }
   ]
 }

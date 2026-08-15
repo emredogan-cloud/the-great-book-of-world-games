@@ -281,6 +281,36 @@ INVENTED_TRADITIONS = [
         "gameId": None,
     },
     {
+        "claim": "Chess began as a four-handed Indian game played with dice.",
+        "verdict": "The game is real. The genealogy is not.",
+        "detail": "Duncan Forbes built his 1860 History of Chess on the "
+                  "argument that the four-handed dice game chaturanga is the "
+                  "original from which every other chess descends, and that "
+                  "the two-handed game is a later simplification. H. J. R. "
+                  "Murray took the case apart in 1913: the four-handed form "
+                  "is the later variant, not the ancestor, and the two-handed "
+                  "game is the older of the two. This book prints Forbes's "
+                  "rules, which he translated carefully, and rejects his "
+                  "history, which he did not prove. A source can be right "
+                  "about what it saw and wrong about what it concluded.",
+        "gameId": "chaturanga",
+    },
+    {
+        "claim": "The elephant in early Indian chess moved like a queen.",
+        "verdict": "A translator's slip, corrected by the next translator.",
+        "detail": "Sir William Jones and the Brahman Radha Kant rendered the "
+                  "Sanskrit as 'the Elephant moves in all directions as far "
+                  "as the driver pleases', which would give it the modern "
+                  "queen's power. Forbes showed the word is chatushtayam — "
+                  "in the four cardinal directions — so the elephant moved "
+                  "as a rook. He also noted that the modern queen's move is "
+                  "not much older than three and a half centuries. The "
+                  "correction is worth keeping because it is the opposite "
+                  "case to the one above: here Forbes is the one who got it "
+                  "right.",
+        "gameId": "chaturanga",
+    },
+    {
         "claim": "Every board scratched on a stone is a game board.",
         "verdict": "Some are; most cannot be shown to be.",
         "detail": "Scratched grids appear on temple floors, roof slabs and "

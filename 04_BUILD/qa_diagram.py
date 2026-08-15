@@ -455,6 +455,60 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
     rep.check(not legend_extra, "efsanede ÖLÜ sembol yok" + brief(legend_extra))
     rep.check(not legend_ambiguous,
               "efsanede AYIRT EDİLEMEYEN iki sembol yok" + brief(legend_ambiguous))
+
+    # ── v1.5 ALANLARI (K25) ────────────────────────────────────────────
+    #
+    # v1.5 dört yetenek ekledi ve her yetenek yeni bir SESSİZ YALAN yolu
+    # açtı: olmayan bir kareye taş koymak, tanımsız bir koordinata çizgi
+    # çekmek, tahtanın dışında bir nehir açmak, tanımsız bir düğümden ip
+    # geçirmek. Dördü de render'da sessizce YOK SAYILIR — yani diyagram
+    # çizilir, eksik çizilir ve kimse fark etmez.
+    v15 = []
+    for d in diagrams:
+        did = d["diagramId"]
+        size = d.get("size") or {}
+        omit = set(d.get("omitCells") or [])
+        cls = d.get("boardClass")
+
+        def valid(coord):
+            if cls not in ("cell", "point") or not coord:
+                return False
+            try:
+                col = ord(coord[0]) - ord("a")
+                row = int(coord[1:]) - 1
+            except (ValueError, IndexError):
+                return False
+            return 0 <= col < size.get("cols", 0) and \
+                0 <= row < size.get("rows", 0)
+
+        for p in d.get("pieces", []):
+            if p.get("at") in omit:
+                v15.append("%s → taş TAHTADA OLMAYAN karede: %s"
+                           % (did, p["at"]))
+        for ln in d.get("lines") or []:
+            for end in ("from", "to"):
+                cc = ln.get(end)
+                if not valid(cc):
+                    v15.append("%s → çizgi ucu geçersiz: %s" % (did, cc))
+                elif cc in omit:
+                    v15.append("%s → çizgi ucu OLMAYAN karede: %s" % (did, cc))
+        g = d.get("gapAfterRow")
+        if g is not None and not (1 <= g < size.get("rows", 0)):
+            v15.append("%s → gapAfterRow tahta dışında: %s" % (did, g))
+        if d.get("frame") == "figure":
+            nodes = d.get("nodes") or {}
+            if not nodes:
+                v15.append("%s → figure çerçevesi düğümsüz" % did)
+            for path in d.get("strings") or []:
+                for k in path:
+                    if k not in nodes:
+                        v15.append("%s → ip TANIMSIZ düğümden geçiyor: %s"
+                                   % (did, k))
+            for p in d.get("pieces", []):
+                if p.get("at") not in nodes:
+                    v15.append("%s → taş TANIMSIZ düğümde: %s"
+                               % (did, p.get("at")))
+    rep.check(not v15, "v1.5 alanları tahtanın İÇİNDE ve TANIMLI" + brief(v15))
     rep.check(not recon_mismatch,
               "diyagram beyanı kaydın beyanıyla tutarlı" + brief(recon_mismatch))
     rep.check(not bad_panels, "panel sayıları kurala uyuyor" + brief(bad_panels))
