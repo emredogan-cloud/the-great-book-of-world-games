@@ -2,7 +2,7 @@
   "status": "pass",
   "measuredOn": "phase5",
   "measuredAtGate": "phase1",
-  "sampleSize": 25,
+  "sampleSize": 27,
   "sampleGames": [
     "tablut",
     "yut-nori",
@@ -28,9 +28,11 @@
     "shogi",
     "pachisi",
     "xiangqi",
-    "sittuyin"
+    "sittuyin",
+    "shatranj",
+    "chaturanga"
   ],
-  "sampleCaveat": "Örneklem 25 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
+  "sampleCaveat": "Örneklem 27 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
   "geometry": {
     "trimWidthMm": 215.9,
     "trimHeightMm": 279.4,
@@ -326,13 +328,13 @@
       "gameId": "cats-cradle",
       "words": 843,
       "textHeightMm": 324.6,
-      "diagramHeightMm": 111.0,
+      "diagramHeightMm": 58.8,
       "diagrams": [
         "catscradle-cradle"
       ],
       "textPages": 1.341,
-      "diagramPages": 0.459,
-      "measuredPages": 1.8,
+      "diagramPages": 0.243,
+      "measuredPages": 1.584,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -354,11 +356,13 @@
       "gameId": "pachisi",
       "words": 825,
       "textHeightMm": 365.3,
-      "diagramHeightMm": 0.0,
-      "diagrams": [],
+      "diagramHeightMm": 106.5,
+      "diagrams": [
+        "pachisi-board"
+      ],
       "textPages": 1.51,
-      "diagramPages": 0.0,
-      "measuredPages": 1.51,
+      "diagramPages": 0.44,
+      "measuredPages": 1.95,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -366,11 +370,13 @@
       "gameId": "xiangqi",
       "words": 889,
       "textHeightMm": 353.1,
-      "diagramHeightMm": 0.0,
-      "diagrams": [],
+      "diagramHeightMm": 104.0,
+      "diagrams": [
+        "xiangqi-board"
+      ],
       "textPages": 1.459,
-      "diagramPages": 0.0,
-      "measuredPages": 1.459,
+      "diagramPages": 0.43,
+      "measuredPages": 1.889,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -378,33 +384,59 @@
       "gameId": "sittuyin",
       "words": 796,
       "textHeightMm": 331.4,
+      "diagramHeightMm": 81.0,
+      "diagrams": [
+        "sittuyin-board"
+      ],
+      "textPages": 1.37,
+      "diagramPages": 0.335,
+      "measuredPages": 1.704,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "shatranj",
+      "words": 731,
+      "textHeightMm": 326.1,
       "diagramHeightMm": 0.0,
       "diagrams": [],
-      "textPages": 1.37,
+      "textPages": 1.348,
       "diagramPages": 0.0,
-      "measuredPages": 1.37,
+      "measuredPages": 1.348,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "chaturanga",
+      "words": 842,
+      "textHeightMm": 343.8,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 1.421,
+      "diagramPages": 0.0,
+      "measuredPages": 1.421,
       "billedPages": 2,
       "overflowsSpread": false
     }
   ],
-  "avgWordsPerGame": 716.5,
-  "measuredWordsPerPage": 461.2,
+  "avgWordsPerGame": 721.7,
+  "measuredWordsPerPage": 457.4,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.554,
-  "avgBilledPagesPerGame": 2.08,
-  "avgTextPagesPerGame": 1.281,
-  "avgDiagramPagesPerGame": 0.272,
+  "avgMeasuredPagesPerGame": 1.578,
+  "avgBilledPagesPerGame": 2.074,
+  "avgTextPagesPerGame": 1.289,
+  "avgDiagramPagesPerGame": 0.289,
   "spreadOverflowGames": [
     "tablut"
   ],
-  "spreadOverflowRate": 0.04,
+  "spreadOverflowRate": 0.037,
   "finding": "Metin farkı (0.69 sayfa) ve diyagram farkı (0.63) AYNI büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden denetlemek zorundadır.",
   "overflowDriver": "both",
   "textSpreadPages": 0.686,
   "diagramSpreadPages": 0.628,
-  "projectedBodyPages": 208,
-  "projectedTotalPages": 258,
+  "projectedBodyPages": 207,
+  "projectedTotalPages": 256,
   "pageTarget": 256,
-  "deviationPct": 0.78,
+  "deviationPct": 0.0,
   "withinTolerance": true
 }

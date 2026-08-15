@@ -4,12 +4,12 @@
   "errors": [],
   "layer": "manuscript",
   "scopeGames": 100,
-  "measuredGames": 25,
-  "boardTemplates": 19,
+  "measuredGames": 27,
+  "boardTemplates": 22,
   "glossaryTerms": 61,
-  "glossaryAttested": 28,
+  "glossaryAttested": 30,
   "bibliographyEntries": 100,
-  "bibliographyPageVerified": 26,
+  "bibliographyPageVerified": 28,
   "cultures": 73,
-  "inventedTraditions": 5
+  "inventedTraditions": 7
 }

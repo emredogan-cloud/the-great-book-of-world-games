@@ -777,6 +777,21 @@ def part6_phase2_gates(rep, tmp: str) -> None:
             # olduğunu kimse denetlemiyordu. `light` ile `empty` efsanede
             # birebir aynı dairedir ve okur hangisinin hangisi olduğunu
             # öğrenemez — görsel denetimde beş diyagramda bulundu.
+            # FAZ 5 · v1.5 (K25). Dort yeni alan dort yeni SESSIZ YALAN
+            # yolu acti: olmayan bir kareye tas koymak, tanimsiz bir
+            # koordinata cizgi cekmek, tahta disinda bir nehir acmak,
+            # tanimsiz bir dugumden ip gecirmek. Dordu de render'da
+            # SESSIZCE YOK SAYILIR — yani diyagram cizilir, eksik cizilir
+            # ve kimse fark etmez.
+            ("v1.5 · OLMAYAN kareye konan tas YAKALANIR",
+             lambda d: (d["diagrams"][0].__setitem__("omitCells", ["a1"]),
+                        d["diagrams"][0]["pieces"].__setitem__(
+                            0, {"at": "a1", "glyph": "light"}))),
+            ("v1.5 · TANIMSIZ koordinata cekilen cizgi YAKALANIR",
+             lambda d: d["diagrams"][0].__setitem__(
+                 "lines", [{"from": "a1", "to": "z9"}])),
+            ("v1.5 · tahta DISINDA nehir YAKALANIR",
+             lambda d: d["diagrams"][0].__setitem__("gapAfterRow", 99)),
             ("efsanede AYIRT EDİLEMEYEN iki sembol YAKALANIR",
              lambda d: (d["diagrams"][0]["pieces"].append(
                             {"at": "a1", "glyph": "empty"}),

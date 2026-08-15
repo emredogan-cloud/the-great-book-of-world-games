@@ -1,316 +1,376 @@
 {
- "$comment": [
-  "DİYAGRAM DİLİ — makine okunur sözlük. Faz 2'de DONDURULDU.",
-  "İnsan okunur karşılığı: 00_CONTEXT/DIAGRAM_LANGUAGE.md",
-  "Denetleyen: 04_BUILD/qa_diagram.py",
-  "",
-  "Bu dosya bir SÖZLÜKTÜR: burada olmayan bir glif, bir tahta sınıfı ya",
-  "da bir gri seviyesi kullanılamaz. Sözlüğü genişletmek bir sürüm",
-  "yükseltmesidir çünkü 60. oyunda notasyon değiştirmek önceki 59",
-  "diyagramı geçersiz kılar."
- ],
- "version": "1.4",
- "frozenAtPhase": "phase2",
- "frozenOn": "2026-08-13",
- "boardClasses": {
-  "cell": {
-   "coordRule": "file-rank",
-   "note": "taş karenin içinde"
-  },
-  "point": {
-   "coordRule": "file-rank",
-   "note": "taş kesişimin üstünde",
-   "graphMode": true,
-   "$graphComment": [
-    "v1.2 → v1.3: `point` sınıfı artık DÜZENSİZ tahtaları da taşır.",
-    "",
-    "Faz 3'ün ilk gerçek batch'i dili kırdı: pong-hau-ki (5 nokta), nerenchi",
-    "(24 nokta, üç iç içe kare), picaria (9 nokta), diviyan-keliya (kare +",
-    "köşegen + dört üçgen) ve awithlaknannai (uzun zincir) IZGARA DEĞİLDİR.",
-    "Izgara varsayan bir çizici bu tahtaların HİÇBİRİNİ doğru çizemez.",
-    "",
-    "Yanlış çizilmiş bir tahta bu kitabın ölüm biçimidir: okur kuralı okur,",
-    "tahtaya bakar, ikisi uyuşmaz ve oyun çalışmaz. Bu yüzden yaklaşık bir",
-    "ızgara ile idare etmek YASAKTIR.",
-    "",
-    "Çözüm: tanımlayıcı `nodes` (ad → [x,y], 0–1 normalize) ve `edges`",
-    "(ad çiftleri) taşıyabilir. Koordinat kalıbı serbest bırakılır ama SINIR",
-    "denetimi sıkılaşır: bir taş yalnızca TANIMLI bir düğümde durabilir.",
-    "Determinizm korunur — aynı girdi aynı SVG'yi üretir."
-   ],
-   "coordRuleGraph": "graph"
-  },
-  "pit": {
-   "coordRule": "row-pit",
-   "note": "tohum çukurda; sayı RAKAMLA yazılır"
-  },
-  "track": {
-   "coordRule": "station",
-   "note": "durak numarası, hareket yönünde"
-  },
-  "bodily": {
-   "coordRule": "frame",
-   "note": "tahta yok; referans çerçevesi var",
-   "frames": [
-    "hands",
-    "formation",
-    "bed"
-   ],
-   "$bedComment": [
-    "v1.3 → v1.4: `bodily` sınıfına ÜÇÜNCÜ bir çerçeve eklendi: `bed`.",
-    "",
-    "Sebep v1.3'ünkinin aynısıdır. Seksek yatağı bir IZGARA DEĞİLDİR: sekiz",
-    "bölme, kimi tek kimi yan yana çift, kimi yarım daire. Iki sütunlu bir",
-    "ızgarayla çizmek on iki bölme üretir ve okur o yatağı zemine çizip",
-    "oynayamaz — yani § 17'nin yasakladığı 'uygun bir ızgarayla idare etme'nin",
-    "tam kendisidir.",
-    "",
-    "`bed` çerçevesi bölmeleri AÇIKÇA listeler: her bölmenin kimliği, sol üst",
-    "köşesi, genişliği, yüksekliği ve ETİKETİ. Koordinat kuralı bölme",
-    "kimliğidir ve sınır denetimi tanımlı bölme kümesidir — `point`in graph",
-    "kipiyle aynı disiplin.",
-    "",
-    "EKLEME GERİYE DÖNÜK DEĞİLDİR: mevcut hiçbir tanımlayıcı değişmedi.",
-    "v1.2 → v1.3 geçişi de böyleydi. Dondurma, dilin BÜYÜMESİNİ değil",
-    "mevcut notasyonun DEĞİŞMESİNİ yasaklar."
-   ]
-  }
- },
- "coordPatterns": {
-  "file-rank": "^[a-z]([1-9][0-9]?)$",
-  "row-pit": "^[AB]'?([1-9][0-9]?)$|^\\[[AB]\\]$",
-  "station": "^(0|[1-9][0-9]?[ab]?|out)$",
-  "frame": "^(near|far|left|right|centre|[LR][1-5]|ring|role[1-9]|d[1-9][0-9]?)$",
-  "graph": "^[a-z][a-z0-9_]{0,7}$"
- },
- "glyphs": {
-  "light": {
-   "symbol": "○",
-   "fill": 0,
-   "stroke": 100,
-   "label": "açık taraf"
-  },
-  "dark": {
-   "symbol": "●",
-   "fill": 100,
-   "stroke": 100,
-   "label": "koyu taraf"
-  },
-  "lightSpecial": {
-   "symbol": "◎",
-   "fill": 0,
-   "stroke": 100,
-   "label": "ayrıcalıklı taş (açık)"
-  },
-  "darkSpecial": {
-   "symbol": "◉",
-   "fill": 100,
-   "stroke": 100,
-   "label": "ayrıcalıklı taş (koyu)"
-  },
-  "lightAlt": {
-   "symbol": "□",
-   "fill": 0,
-   "stroke": 100,
-   "label": "ikinci taş tipi (açık)"
-  },
-  "darkAlt": {
-   "symbol": "■",
-   "fill": 100,
-   "stroke": 100,
-   "label": "ikinci taş tipi (koyu)"
-  },
-  "king": {
-   "symbol": "◎",
-   "fill": 0,
-   "stroke": 100,
-   "label": "kral"
-  },
-  "promoted": {
-   "symbol": "▤",
-   "fill": 25,
-   "stroke": 100,
-   "label": "terfi etmiş taş"
-  },
-  "blindfolded": {
-   "symbol": "◍",
-   "fill": 25,
-   "stroke": 100,
-   "label": "gözü bağlı oyuncu"
-  },
-  "seedCount": {
-   "symbol": "4",
-   "fill": 0,
-   "stroke": 100,
-   "label": "tohum sayısı"
-  },
-  "empty": {
-   "symbol": "·",
-   "fill": 0,
-   "stroke": 100,
-   "label": "boş yer"
-  },
-  "captured": {
-   "symbol": "×",
-   "fill": 0,
-   "stroke": 100,
-   "label": "bu hamlede alındı"
-  },
-  "removed": {
-   "symbol": "⊘",
-   "fill": 55,
-   "stroke": 100,
-   "label": "tahtadan çıktı"
-  },
-  "inHand": {
-   "symbol": "[]",
-   "fill": 0,
-   "stroke": 100,
-   "label": "elde / ambarda"
-  }
- },
- "arrows": {
-  "move": {
-   "symbol": "→",
-   "style": "solid",
-   "widthPt": 1.0,
-   "label": "gösterilen hamle"
-  },
-  "alternate": {
-   "symbol": "⇢",
-   "style": "dotted",
-   "widthPt": 0.75,
-   "label": "olası hamle"
-  },
-  "flow": {
-   "symbol": "⤳",
-   "style": "curved",
-   "widthPt": 1.0,
-   "label": "ekim / iz yönü"
-  },
-  "forbidden": {
-   "symbol": "⊣",
-   "style": "barred",
-   "widthPt": 1.0,
-   "label": "yasak hamle"
-  },
-  "mandatory": {
-   "symbol": "→",
-   "style": "solid",
-   "widthPt": 1.5,
-   "label": "zorunlu hamle"
-  },
-  "swap": {
-   "symbol": "↔",
-   "style": "solid",
-   "widthPt": 1.0,
-   "label": "yer değiştirme"
-  }
- },
- "markers": {
-  "repeat": {
-   "symbol": "↺",
-   "label": "tekrar eden konum",
-   "requiresCount": true
-  },
-  "score": {
-   "symbol": "⟦⟧",
-   "label": "puan şeridi"
-  },
-  "ring": {
-   "symbol": "⌒",
-   "label": "çember (kişi sayısı değişken)"
-  }
- },
- "panelRules": {
-  "maxPanels": 2,
-  "exactPanelsForBoardClass": {
-   "bodily/hands": 3
-  },
-  "panelLabelPosition": "top-left",
-  "$comment": "İki panelden fazlası diyagram bütçesini aşar. Tek istisna ip figürüdür: orada ARA ADIM kuralın kendisidir, örneği değil.",
-  "panelLayout": {
-   "default": "horizontal",
-   "bodily/hands": "vertical",
-   "bodily/bed": "single"
-  },
-  "$layoutComment": [
-   "FAZ 2 ÖLÇÜMÜ BİR KUSUR BULDU VE DİL DÜZELTİLDİ (v1.0 → v1.1).",
-   "İp figürü üç panel ister (§ 2.5a). Üç panel YAN YANA dizilince 214 mm",
-   "eder ve tam genişlik sınırı 180 mm'dir — yani dilin kendi kuralı, kendi",
-   "baskı sınırını aşıyordu. Kusur bir tanımlayıcıda değil DİLDEDİR.",
-   "Düzeltme: `bodily/hands` panelleri DİKEY dizilir. Genişlik 71 mm'ye",
-   "iner ve sınırın altına girer. Notasyon değişmedi, DİZİLİM değişti."
-  ],
-  "legendCountedOncePerDiagram": true,
-  "$legendComment": [
-   "v1.1 → v1.2: DİKEY panellerde efsane BİR KEZ basılır.",
-   "v1.1'de her panel kendi efsanesini taşıyordu; üç panelli ip figürü aynı",
-   "efsaneyi üç kez basıyor, 27 mm israf ediyor ve okura aynı şeyi üç kez",
-   "okutuyordu. D7 efsaneyi DİYAGRAMIN içinde ister, her PANELİN içinde değil.",
-   "",
-   "Ayrıca `bodily/hands` gövdesi 46 mm'den 30 mm'ye indirildi: ip figürü",
-   "±10 mm'lik bir alanda yaşıyor ve gövdenin yarısı boş kenar payıydı.",
-   "Çizgi kalınlığı (0,75 pt) ve glif boyu (7 pt) DEĞİŞMEDİ — yani bu bir",
-   "sadeleştirmedir, okunmaz hâle gelene kadar küçültme DEĞİLDİR.",
-   "",
-   "ÖLÇÜLEN SONUÇ: Cat's Cradle 182,5 mm → 111,5 mm."
-  ]
- },
- "diagramTypes": [
-  "board-diagram",
-  "setup-illustration",
-  "move-diagram",
-  "piece-diagram",
-  "map",
-  "cultural-plate"
- ],
- "print": {
-  "ink": "black",
-  "colourForbidden": true,
-  "greyLevelsAllowed": [
-   0,
-   25,
-   55,
-   100
-  ],
-  "minStrokePt": 0.75,
-  "minGlyphPt": 7.0,
-  "pieceDiameterRatioMin": 0.62,
-  "pieceDiameterRatioMax": 0.72,
-  "maxWidthSingleColumnMm": 88,
-  "maxWidthFullMm": 180,
-  "photocopyScalesTested": [
-   100,
-   71
-  ],
-  "maxDiagramColumnHeightMm": 150,
-  "$diagramBudgetComment": [
-   "DİYAGRAM BÜTÇESİ 150 MM — kurucu Karar A ile BAĞLAYICI (karar K19).",
-   "Türetimi: çift sayfanın 484 mm metin alanından metin 332 mm alır,",
-   "diyagrama 152 mm kalır. 150 mm o artığın kendisidir, bir tercih değil.",
-   "",
-   "⚠ ÖLÇÜM RENDER EDİLMİŞ ÇIKTIDANDIR (qa_diagram.py § ⑨).",
-   "Tanımlayıcı metadata boyut vermez: boyutu adım aralığı, efsane satır",
-   "sayısı, panel dizilimi ve altyazı belirler. Render edilmemiş bir",
-   "diyagram DENETLENMEMİŞTİR ve geçemez."
-  ]
- },
- "reconstructionRule": {
   "$comment": [
-   "Bir diyagram tarihsel bir kaydı OLDUĞUNDAN KESİN gösterebilir ve bu,",
-   "prozadaki 'yeniden kurgulanmıştır' etiketini sessizce yalanlar.",
-   "Kaynakta OLMAYAN her öğe noktalı konturla çizilir."
+    "DİYAGRAM DİLİ — makine okunur sözlük. Faz 2'de DONDURULDU.",
+    "İnsan okunur karşılığı: 00_CONTEXT/DIAGRAM_LANGUAGE.md",
+    "Denetleyen: 04_BUILD/qa_diagram.py",
+    "",
+    "Bu dosya bir SÖZLÜKTÜR: burada olmayan bir glif, bir tahta sınıfı ya",
+    "da bir gri seviyesi kullanılamaz. Sözlüğü genişletmek bir sürüm",
+    "yükseltmesidir çünkü 60. oyunda notasyon değiştirmek önceki 59",
+    "diyagramı geçersiz kılar."
   ],
-  "requiresFlag": "reconstructed",
-  "mustMatchPlayabilityStatus": "reconstructed",
-  "unsourcedElementStroke": "dotted",
-  "captionRequired": true
- },
- "adaptationRule": {
-  "$comment": "Özgün olandan farklı bir tahta basılıyorsa diyagram bunu SÖYLER.",
-  "field": "adaptedFrom",
-  "titleSuffix": "(uyarlama)",
-  "captionRequired": true
- }
+  "version": "1.5",
+  "frozenAtPhase": "phase2",
+  "frozenOn": "2026-08-13",
+  "boardClasses": {
+    "cell": {
+      "coordRule": "file-rank",
+      "note": "taş karenin içinde",
+      "omitCells": {
+        "since": "1.5",
+        "type": "list of coords",
+        "note": "Tahtada BULUNMAYAN kareler. Verilirse ızgara çizgileri değil, VAR OLAN karelerin kendisi çizilir. Haç, artı ve L biçimli tahtalar bunun içindir.",
+        "rule": "Bir taş omitCells içindeki bir kareye konamaz."
+      },
+      "lines": {
+        "since": "1.5",
+        "type": "list of {from,to}",
+        "note": "Tahtanın üstüne çizilen açık çizgiler: hisar köşegenleri, terfi köşegeni, bölge sınırı. Uçları TANIMLI koordinat olmak zorundadır."
+      }
+    },
+    "point": {
+      "coordRule": "file-rank",
+      "note": "taş kesişimin üstünde",
+      "graphMode": true,
+      "$graphComment": [
+        "v1.2 → v1.3: `point` sınıfı artık DÜZENSİZ tahtaları da taşır.",
+        "",
+        "Faz 3'ün ilk gerçek batch'i dili kırdı: pong-hau-ki (5 nokta), nerenchi",
+        "(24 nokta, üç iç içe kare), picaria (9 nokta), diviyan-keliya (kare +",
+        "köşegen + dört üçgen) ve awithlaknannai (uzun zincir) IZGARA DEĞİLDİR.",
+        "Izgara varsayan bir çizici bu tahtaların HİÇBİRİNİ doğru çizemez.",
+        "",
+        "Yanlış çizilmiş bir tahta bu kitabın ölüm biçimidir: okur kuralı okur,",
+        "tahtaya bakar, ikisi uyuşmaz ve oyun çalışmaz. Bu yüzden yaklaşık bir",
+        "ızgara ile idare etmek YASAKTIR.",
+        "",
+        "Çözüm: tanımlayıcı `nodes` (ad → [x,y], 0–1 normalize) ve `edges`",
+        "(ad çiftleri) taşıyabilir. Koordinat kalıbı serbest bırakılır ama SINIR",
+        "denetimi sıkılaşır: bir taş yalnızca TANIMLI bir düğümde durabilir.",
+        "Determinizm korunur — aynı girdi aynı SVG'yi üretir."
+      ],
+      "coordRuleGraph": "graph",
+      "gapAfterRow": {
+        "since": "1.5",
+        "type": "int (rank)",
+        "note": "Bu sıradan sonra bir sıra boyu boşluk bırakılır ve dikey çizgiler orada KESİLİR. Xiangqi'nin nehri budur: bir boşluk değil bir KURAL (fil geçemez)."
+      },
+      "lines": {
+        "since": "1.5",
+        "type": "list of {from,to}",
+        "note": "hisar köşegenleri gibi açık çizgiler"
+      }
+    },
+    "pit": {
+      "coordRule": "row-pit",
+      "note": "tohum çukurda; sayı RAKAMLA yazılır"
+    },
+    "track": {
+      "coordRule": "station",
+      "note": "durak numarası, hareket yönünde"
+    },
+    "bodily": {
+      "coordRule": "frame",
+      "note": "tahta yok; referans çerçevesi var",
+      "frames": [
+        "hands",
+        "formation",
+        "bed",
+        "figure"
+      ],
+      "$bedComment": [
+        "v1.3 → v1.4: `bodily` sınıfına ÜÇÜNCÜ bir çerçeve eklendi: `bed`.",
+        "",
+        "Sebep v1.3'ünkinin aynısıdır. Seksek yatağı bir IZGARA DEĞİLDİR: sekiz",
+        "bölme, kimi tek kimi yan yana çift, kimi yarım daire. Iki sütunlu bir",
+        "ızgarayla çizmek on iki bölme üretir ve okur o yatağı zemine çizip",
+        "oynayamaz — yani § 17'nin yasakladığı 'uygun bir ızgarayla idare etme'nin",
+        "tam kendisidir.",
+        "",
+        "`bed` çerçevesi bölmeleri AÇIKÇA listeler: her bölmenin kimliği, sol üst",
+        "köşesi, genişliği, yüksekliği ve ETİKETİ. Koordinat kuralı bölme",
+        "kimliğidir ve sınır denetimi tanımlı bölme kümesidir — `point`in graph",
+        "kipiyle aynı disiplin.",
+        "",
+        "EKLEME GERİYE DÖNÜK DEĞİLDİR: mevcut hiçbir tanımlayıcı değişmedi.",
+        "v1.2 → v1.3 geçişi de böyleydi. Dondurma, dilin BÜYÜMESİNİ değil",
+        "mevcut notasyonun DEĞİŞMESİNİ yasaklar."
+      ],
+      "$figureComment": [
+        "v1.4 → v1.5: `bodily` sınıfına DÖRDÜNCÜ çerçeve: `figure`.",
+        "",
+        "`hands` çerçevesi soyut bir parmak-ip şeması çizer ve iki ip figürünü",
+        "BİRBİRİNDEN AYIRT EDEMEZ: Beşik ile Asker Yatağı aynı görünür. Faz 5",
+        "bunu görsel denetimde ölçtü ve cats-cradle'ı tek diyagramla bastı.",
+        "",
+        "`figure` çerçevesi ipin GERÇEK YOLUNU taşır: adlandırılmış düğümler",
+        "(parmaklar ve çaprazlama noktaları, 0–1 normalize) ve `strings`",
+        "(düğümden düğüme geçen polilinler). Koordinat kuralı düğüm kimliğidir",
+        "ve sınır denetimi tanımlı düğüm kümesidir — `point`in graph kipiyle",
+        "aynı disiplin. Determinizm korunur."
+      ]
+    }
+  },
+  "coordPatterns": {
+    "file-rank": "^[a-z]([1-9][0-9]?)$",
+    "row-pit": "^[AB]'?([1-9][0-9]?)$|^\\[[AB]\\]$",
+    "station": "^(0|[1-9][0-9]?[ab]?|out)$",
+    "frame": "^(near|far|left|right|centre|[LR][1-5]|ring|role[1-9]|d[1-9][0-9]?)$",
+    "graph": "^[a-z][a-z0-9_]{0,7}$"
+  },
+  "glyphs": {
+    "light": {
+      "symbol": "○",
+      "fill": 0,
+      "stroke": 100,
+      "label": "açık taraf"
+    },
+    "dark": {
+      "symbol": "●",
+      "fill": 100,
+      "stroke": 100,
+      "label": "koyu taraf"
+    },
+    "lightSpecial": {
+      "symbol": "◎",
+      "fill": 0,
+      "stroke": 100,
+      "label": "ayrıcalıklı taş (açık)"
+    },
+    "darkSpecial": {
+      "symbol": "◉",
+      "fill": 100,
+      "stroke": 100,
+      "label": "ayrıcalıklı taş (koyu)"
+    },
+    "lightAlt": {
+      "symbol": "□",
+      "fill": 0,
+      "stroke": 100,
+      "label": "ikinci taş tipi (açık)"
+    },
+    "darkAlt": {
+      "symbol": "■",
+      "fill": 100,
+      "stroke": 100,
+      "label": "ikinci taş tipi (koyu)"
+    },
+    "king": {
+      "symbol": "◎",
+      "fill": 0,
+      "stroke": 100,
+      "label": "kral"
+    },
+    "promoted": {
+      "symbol": "▤",
+      "fill": 25,
+      "stroke": 100,
+      "label": "terfi etmiş taş"
+    },
+    "blindfolded": {
+      "symbol": "◍",
+      "fill": 25,
+      "stroke": 100,
+      "label": "gözü bağlı oyuncu"
+    },
+    "seedCount": {
+      "symbol": "4",
+      "fill": 0,
+      "stroke": 100,
+      "label": "tohum sayısı"
+    },
+    "empty": {
+      "symbol": "·",
+      "fill": 0,
+      "stroke": 100,
+      "label": "boş yer"
+    },
+    "captured": {
+      "symbol": "×",
+      "fill": 0,
+      "stroke": 100,
+      "label": "bu hamlede alındı"
+    },
+    "removed": {
+      "symbol": "⊘",
+      "fill": 55,
+      "stroke": 100,
+      "label": "tahtadan çıktı"
+    },
+    "inHand": {
+      "symbol": "[]",
+      "fill": 0,
+      "stroke": 100,
+      "label": "elde / ambarda"
+    }
+  },
+  "arrows": {
+    "move": {
+      "symbol": "→",
+      "style": "solid",
+      "widthPt": 1.0,
+      "label": "gösterilen hamle"
+    },
+    "alternate": {
+      "symbol": "⇢",
+      "style": "dotted",
+      "widthPt": 0.75,
+      "label": "olası hamle"
+    },
+    "flow": {
+      "symbol": "⤳",
+      "style": "curved",
+      "widthPt": 1.0,
+      "label": "ekim / iz yönü"
+    },
+    "forbidden": {
+      "symbol": "⊣",
+      "style": "barred",
+      "widthPt": 1.0,
+      "label": "yasak hamle"
+    },
+    "mandatory": {
+      "symbol": "→",
+      "style": "solid",
+      "widthPt": 1.5,
+      "label": "zorunlu hamle"
+    },
+    "swap": {
+      "symbol": "↔",
+      "style": "solid",
+      "widthPt": 1.0,
+      "label": "yer değiştirme"
+    }
+  },
+  "markers": {
+    "repeat": {
+      "symbol": "↺",
+      "label": "tekrar eden konum",
+      "requiresCount": true
+    },
+    "score": {
+      "symbol": "⟦⟧",
+      "label": "puan şeridi"
+    },
+    "ring": {
+      "symbol": "⌒",
+      "label": "çember (kişi sayısı değişken)"
+    }
+  },
+  "panelRules": {
+    "maxPanels": 2,
+    "exactPanelsForBoardClass": {
+      "bodily/hands": 3,
+      "bodily/figure": 1
+    },
+    "panelLabelPosition": "top-left",
+    "$comment": "İki panelden fazlası diyagram bütçesini aşar. Tek istisna ip figürüdür: orada ARA ADIM kuralın kendisidir, örneği değil.",
+    "panelLayout": {
+      "default": "horizontal",
+      "bodily/hands": "vertical",
+      "bodily/bed": "single",
+      "bodily/figure": "single"
+    },
+    "$layoutComment": [
+      "FAZ 2 ÖLÇÜMÜ BİR KUSUR BULDU VE DİL DÜZELTİLDİ (v1.0 → v1.1).",
+      "İp figürü üç panel ister (§ 2.5a). Üç panel YAN YANA dizilince 214 mm",
+      "eder ve tam genişlik sınırı 180 mm'dir — yani dilin kendi kuralı, kendi",
+      "baskı sınırını aşıyordu. Kusur bir tanımlayıcıda değil DİLDEDİR.",
+      "Düzeltme: `bodily/hands` panelleri DİKEY dizilir. Genişlik 71 mm'ye",
+      "iner ve sınırın altına girer. Notasyon değişmedi, DİZİLİM değişti."
+    ],
+    "legendCountedOncePerDiagram": true,
+    "$legendComment": [
+      "v1.1 → v1.2: DİKEY panellerde efsane BİR KEZ basılır.",
+      "v1.1'de her panel kendi efsanesini taşıyordu; üç panelli ip figürü aynı",
+      "efsaneyi üç kez basıyor, 27 mm israf ediyor ve okura aynı şeyi üç kez",
+      "okutuyordu. D7 efsaneyi DİYAGRAMIN içinde ister, her PANELİN içinde değil.",
+      "",
+      "Ayrıca `bodily/hands` gövdesi 46 mm'den 30 mm'ye indirildi: ip figürü",
+      "±10 mm'lik bir alanda yaşıyor ve gövdenin yarısı boş kenar payıydı.",
+      "Çizgi kalınlığı (0,75 pt) ve glif boyu (7 pt) DEĞİŞMEDİ — yani bu bir",
+      "sadeleştirmedir, okunmaz hâle gelene kadar küçültme DEĞİLDİR.",
+      "",
+      "ÖLÇÜLEN SONUÇ: Cat's Cradle 182,5 mm → 111,5 mm."
+    ]
+  },
+  "diagramTypes": [
+    "board-diagram",
+    "setup-illustration",
+    "move-diagram",
+    "piece-diagram",
+    "map",
+    "cultural-plate"
+  ],
+  "print": {
+    "ink": "black",
+    "colourForbidden": true,
+    "greyLevelsAllowed": [
+      0,
+      25,
+      55,
+      100
+    ],
+    "minStrokePt": 0.75,
+    "minGlyphPt": 7.0,
+    "pieceDiameterRatioMin": 0.62,
+    "pieceDiameterRatioMax": 0.72,
+    "maxWidthSingleColumnMm": 88,
+    "maxWidthFullMm": 180,
+    "photocopyScalesTested": [
+      100,
+      71
+    ],
+    "maxDiagramColumnHeightMm": 150,
+    "$diagramBudgetComment": [
+      "DİYAGRAM BÜTÇESİ 150 MM — kurucu Karar A ile BAĞLAYICI (karar K19).",
+      "Türetimi: çift sayfanın 484 mm metin alanından metin 332 mm alır,",
+      "diyagrama 152 mm kalır. 150 mm o artığın kendisidir, bir tercih değil.",
+      "",
+      "⚠ ÖLÇÜM RENDER EDİLMİŞ ÇIKTIDANDIR (qa_diagram.py § ⑨).",
+      "Tanımlayıcı metadata boyut vermez: boyutu adım aralığı, efsane satır",
+      "sayısı, panel dizilimi ve altyazı belirler. Render edilmemiş bir",
+      "diyagram DENETLENMEMİŞTİR ve geçemez."
+    ]
+  },
+  "reconstructionRule": {
+    "$comment": [
+      "Bir diyagram tarihsel bir kaydı OLDUĞUNDAN KESİN gösterebilir ve bu,",
+      "prozadaki 'yeniden kurgulanmıştır' etiketini sessizce yalanlar.",
+      "Kaynakta OLMAYAN her öğe noktalı konturla çizilir."
+    ],
+    "requiresFlag": "reconstructed",
+    "mustMatchPlayabilityStatus": "reconstructed",
+    "unsourcedElementStroke": "dotted",
+    "captionRequired": true
+  },
+  "adaptationRule": {
+    "$comment": "Özgün olandan farklı bir tahta basılıyorsa diyagram bunu SÖYLER.",
+    "field": "adaptedFrom",
+    "titleSuffix": "(uyarlama)",
+    "captionRequired": true
+  },
+  "$v15Comment": [
+    "v1.4 → v1.5 · KURUCU YETKİSİYLE (karar K25).",
+    "",
+    "Faz 5 tek batch'te DÖRT ayrı tahta unsurunun çizilemediğini ölçtü ve",
+    "dördü de KURAL TAŞIYOR — yani eksik çizmek, kuralla ÇELİŞEN bir tahta",
+    "üretir. Dört madde bu yüzden DİYAGRAMSIZ basılmıştı:",
+    "",
+    "  pachisi     haç biçimli tahta — köşeler YOKTUR",
+    "  xiangqi     nehir + hisar köşegenleri",
+    "  sittuyin    terfi köşegeni",
+    "  cats-cradle ip figürleri",
+    "",
+    "v1.5 dört yetenek ekler:",
+    "  ① omitCells   — `cell` tahtasında BULUNMAYAN kareler",
+    "  ② lines       — tahtanın üstüne açık çizgiler (köşegen · hisar)",
+    "  ③ gapAfterRow — `point` tahtasında bir sıradan sonra boşluk (nehir)",
+    "  ④ bodily/figure — ip figürü: düğümler + ip yolları",
+    "",
+    "EKLEME GERİYE DÖNÜK DEĞİLDİR: mevcut hiçbir tanımlayıcı değişmedi ve",
+    "hiçbir mevcut diyagramın çıktısı kaymadı. Dondurma, dilin BÜYÜMESİNİ",
+    "değil mevcut notasyonun DEĞİŞMESİNİ yasaklar — v1.2→v1.3 (graph) ve",
+    "v1.3→v1.4 (bed) geçişleri de böyleydi."
+  ]
 }

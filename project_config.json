@@ -431,26 +431,26 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 461,
-        "wordsPerGame": 716,
-        "textPagesPerGame": 1.281,
-        "diagramPagesPerGame": 0.272,
-        "measuredPagesPerGame": 1.554,
-        "billedPagesPerGame": 2.08,
-        "spreadOverflowRate": 0.04,
+        "wordsPerTypesetPage": 457,
+        "wordsPerGame": 722,
+        "textPagesPerGame": 1.289,
+        "diagramPagesPerGame": 0.289,
+        "measuredPagesPerGame": 1.578,
+        "billedPagesPerGame": 2.074,
+        "spreadOverflowRate": 0.037,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 25,
-        "projectedTotalPages": 258,
-        "deviationPct": 0.78,
+        "sampleSize": 27,
+        "projectedTotalPages": 256,
+        "deviationPct": 0.0,
         "withinTolerance": true,
         "measuredAtPhase": "phase5",
         "measuredAtGate": "phase1",
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-batch2-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-batch3-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -532,7 +532,22 @@
           "",
           "xiangqi ve sittuyin DIYAGRAMSIZ maddelerdir (v1.4 nehir/hisar ve",
           "terfi kosegenini cizemiyor), bu yuzden diyagram ortalamasini asagi",
-          "cektiler ve model 258'de sabit kaldi."
+          "cektiler ve model 258'de sabit kaldi.",
+          "",
+          "FAZ 5 · BATCH 3'TEN SONRA (27 oyun) — v1.5 DIYAGRAMLARIYLA.",
+          "",
+          "                     batch 2 (25)   batch 3 (27)",
+          "  kelime/sayfa           447           457",
+          "  kelime/oyun            718           722",
+          "  olculen sayfa/oyun    1,57          1.58",
+          "  faturalanan           2,09          2.07",
+          "  TASMA ORANI           1/25          1/27",
+          "  toplam sayfa           258           256",
+          "  sapma                +%0,8         +0.0%",
+          "",
+          "K25 (diyagram dili v1.5) DORT diyagrami geri getirdi (pachisi ·",
+          "xiangqi · sittuyin · cats-cradle) ve HICBIRI cift sayfayi asmadi.",
+          "Model tam hedefe oturdu: 256 sayfa, sapma %0,0."
         ]
       },
       "$comment": [
@@ -570,7 +585,7 @@
       "calibrated": true,
       "calibratedAtPhase": "phase2",
       "calibratedOn": "2026-08-13",
-      "recalibratedAtPhase": "phase5-batch2"
+      "recalibratedAtPhase": "phase5-batch3"
     },
     "editionsHypothesis": [
       {

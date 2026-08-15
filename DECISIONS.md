@@ -690,3 +690,78 @@ hiçbir şey kırmızı yanmadan olur.
 
 `source_access_pending.json § editorialHolds[cats-cradle]` bu kararla
 **kapandı**.
+
+---
+
+### K25 · DİYAGRAM DİLİ v1.5 — dört yeni yetenek, kurucu yetkisiyle
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 15 Ağustos 2026
+
+Faz 5 tek fazda **dört** tahta unsurunun çizilemediğini ölçtü ve dördü de
+**kural taşıyordu** — yani eksik çizmek, kuralla **çelişen** bir tahta
+üretir. Dört madde bu yüzden **diyagramsız** basılmıştı.
+
+| unsur | oyun | v1.4 ne yapıyordu |
+|---|---|---|
+| haç biçimli tahta | pachisi | 11×11 **dolu ızgara** çiziyordu |
+| nehir + hisar köşegeni | xiangqi | düz kesişim ızgarası |
+| terfi köşegeni | sittuyin | köşegen çizemiyordu |
+| ip figürleri | cats-cradle | iki figürü **ayırt edemiyordu** |
+
+**v1.5 dört yetenek ekler:**
+
+| # | alan | ne yapar |
+|---|---|---|
+| ① | `omitCells` | tahtada **bulunmayan** kareler — haç, artı, L |
+| ② | `lines` | tahtanın üstüne açık çizgiler — hisar, terfi köşegeni |
+| ③ | `gapAfterRow` | bir sıradan sonra boşluk ve kesilen dikey çizgiler — **nehir** |
+| ④ | `bodily/figure` | ip figürü: düğümler + `strings` polilinleri |
+
+**EKLEME GERİYE DÖNÜK DEĞİLDİR.** Mevcut hiçbir tanımlayıcı değişmedi ve
+yirmi altı diyagramın çıktısı **byte düzeyinde aynı kaldı**; yalnızca dört
+yeni diyagram eklendi. Dondurma, dilin **büyümesini** değil mevcut
+notasyonun **değişmesini** yasaklar — v1.2→v1.3 (graph) ve v1.3→v1.4 (bed)
+geçişleri de böyleydi.
+
+**Dört yeni alan dört yeni SESSİZ YALAN yolu açtı** ve dördü de kapıya
+bağlandı: olmayan bir kareye taş koymak · tanımsız bir koordinata çizgi
+çekmek · tahta dışında bir nehir açmak · tanımsız bir düğümden ip
+geçirmek. Dördü de render'da **sessizce yok sayılırdı**.
+
+**Ölçülen sonuç:** dört diyagram geri geldi, hiçbiri çift sayfayı aşmadı,
+sayfa modeli **256 · sapma %0,0**.
+
+> ⚠ **K24 hâlâ KULLANILMIYOR.** cats-cradle artık **58,8 mm**'dir. İstisna
+> kayıtlı ve etkin kalıyor; gerekmedi çünkü asıl kısıt milimetre değil
+> **notasyondu** ve v1.5 onu çözdü.
+
+---
+
+### K26 · FORBES 1860 — kuralı alınır, tarihi ALINMAZ
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 15 Ağustos 2026
+
+Forbes 1860 shatranj ve chaturanga için **erişilebilir ve ayrıntılı** bir
+kamusal alan kaynağıdır. Ama kitabın merkezî tezi — *dört elli zarlı
+chaturanga bütün satrançların atasıdır* — **H. J. R. Murray tarafından 1913'te
+çürütülmüştür**.
+
+**Karar:** Forbes'tan **kurallar** alınır, **tarih tezi** alınmaz; ve tez
+sessizce atlanmaz, **açıkça düzeltilir**.
+
+Arka maddedeki *uydurulmuş gelenekler* kutusuna **iki düzeltme** eklendi:
+
+1. *"Satranç dört elli zarlı bir Hint oyunu olarak başladı."* → **Oyun
+   gerçek, soyağacı değil.** Dört elli biçim ata değil, sonraki bir
+   varyanttır.
+2. *"Erken Hint satrancında fil vezir gibi hareket ederdi."* → **Bir
+   çeviri hatası, sonraki çevirmen tarafından düzeltildi.** Jones ve Radha
+   Kant yanlış çevirdi; `chatushtayam` "dört ana yönde" demektir ve fil
+   **kale** gibi hareket eder. Bu düzeltmeyi yapan **Forbes'un kendisidir**.
+
+İkinci madde bilerek eklendi: birincisi Forbes'un yanıldığı, ikincisi
+**haklı olduğu** yerdir.
+
+> Bir kaynak gördüğü şeyde haklı, çıkardığı sonuçta haksız olabilir. Bir
+> oyun kitabının okuruna bunu göstermesi, doğru kuralı vermek kadar
+> değerlidir.

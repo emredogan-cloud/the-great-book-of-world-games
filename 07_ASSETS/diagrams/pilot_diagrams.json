@@ -457,48 +457,6 @@
       ]
     },
     {
-      "diagramId": "catscradle-cradle",
-      "gameId": "cats-cradle",
-      "type": "move-diagram",
-      "boardClass": "bodily",
-      "frame": "hands",
-      "size": {},
-      "panels": 3,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "L1",
-          "glyph": "light"
-        },
-        {
-          "at": "R1",
-          "glyph": "light"
-        }
-      ],
-      "arrows": [
-        {
-          "kind": "move",
-          "from": "near",
-          "to": "far"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "ipin tutulduğu parmak"
-        },
-        {
-          "glyph": "move",
-          "label": "ipin alındığı yön"
-        }
-      ],
-      "caption": "Beşik: iki düz ip ve ortadaki çapraz ilmek. Kalan yedi figür metinde SIRAYLA verilmiştir; bu diyagram dili ip figürlerinin kendisini çizemez."
-    },
-    {
       "diagramId": "mbube-formation",
       "gameId": "mbube-mbube",
       "type": "setup-illustration",
@@ -545,6 +503,92 @@
           "label": "çember — altı ile yirmi kişi arasında"
         }
       ]
+    },
+    {
+      "diagramId": "catscradle-cradle",
+      "gameId": "cats-cradle",
+      "type": "move-diagram",
+      "boardClass": "bodily",
+      "frame": "figure",
+      "size": {
+        "spanMm": 58.0,
+        "aspect": 0.66
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "greyLevels": [
+        0,
+        100
+      ],
+      "nodes": {
+        "lt": [
+          0.1,
+          0.14
+        ],
+        "rt": [
+          0.9,
+          0.14
+        ],
+        "lb": [
+          0.1,
+          0.86
+        ],
+        "rb": [
+          0.9,
+          0.86
+        ],
+        "ln": [
+          0.12,
+          0.62
+        ],
+        "lf": [
+          0.12,
+          0.38
+        ],
+        "rn": [
+          0.88,
+          0.62
+        ],
+        "rf": [
+          0.88,
+          0.38
+        ]
+      },
+      "strings": [
+        [
+          "lt",
+          "rt"
+        ],
+        [
+          "lb",
+          "rb"
+        ],
+        [
+          "ln",
+          "rf"
+        ],
+        [
+          "lf",
+          "rn"
+        ]
+      ],
+      "pieces": [
+        {
+          "at": "lf",
+          "glyph": "light"
+        },
+        {
+          "at": "rf",
+          "glyph": "light"
+        }
+      ],
+      "legend": [
+        {
+          "glyph": "light",
+          "label": "orta parmak — ilmeği taşıyan"
+        }
+      ],
+      "caption": "BEŞİK. Üstte ve altta iki düz ip; ortada orta parmak ilmekleri ÇAPRAZLANIR. İkinci oyuncu bu iki çaprazı çimdikleyip dışarıdan dolaştırarak ortadan yukarı alır ve Asker Yatağı'nı çıkarır."
     }
   ]
 }
