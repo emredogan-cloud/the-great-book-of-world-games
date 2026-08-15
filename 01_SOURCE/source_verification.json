@@ -25,7 +25,7 @@
   ],
   "version": "1.0",
   "phase": "phase5",
-  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation",
+  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation + phase5-batch-2",
   "records": [
     {
       "gameId": "yut-nori",
@@ -621,6 +621,43 @@
       "accessMethod": "archive.org tam metin",
       "status": "pending",
       "note": "KÜLTÜR UYUŞMAZLIĞI: kapsam kaydı HAN ÇİNLİSİ, kaynak JAPON kodifikasyonudur ve sayım yöntemi Japondur (Çin alan sayımı değil). §9 'kaynak iddia edilen kültürü desteklemeli' şartı KARŞILANMIYOR. Çin biçimi için Smith'in kendi künyesindeki Z. Volpicelli, Journal of the China Branch of the Royal Asiatic Society XXVI gerekir."
+    },
+    {
+      "gameId": "xiangqi",
+      "sourceRef": "Falkener, Edward, Games Ancient and Oriental, and How to Play Them (London: Longmans, Green and Co., 1892)",
+      "edition": "Google nüshası (NOT_IN_COPYRIGHT) — archive.org gamesancientand00falkgoog",
+      "locator": "'Chinese Chess', ss. 143–149",
+      "supportingPassage": "The pieces are placed, not in the centre of the squares, but on the intersection of the lines: so there are nine men in a row instead of eight. In the centre of each side, 50, is the King or General, with a Guard on each side, 40 and 60. They occupy the fortress, a square of nine points, having diagonal lines running through it, the King moving along the perpendicular and horizontal lines, and his Guards along the diagonal lines. They never quit the fortress […] The Elephants have the move of the ship in Chaturanga — two squares diagonally: but they cannot jump over an intermediate piece, neither can they cross the river. The Horse has the move of our knight, but may not jump over an intermediate piece […] The Chariot moves as our rukh […] The Catapult and Cannon move like the Chariot, except that they cannot move without jumping over one piece; but they cannot jump over two. The Soldiers move and take one point at a time in a forward direction; they can cross the river […] when across they can move and take either in a forward or a lateral direction; on reaching the opposite end they can move and take only laterally. The Kings may not face each other without intervening pieces.",
+      "supportedClaim": "Dokuz dosyalık tahta ve taşların KESİŞİMLERDE durması; nehir; dokuz noktalı köşegenli hisar; generalin ve korumaların hisarı terk edememesi; kurulum sırası (50 general, 40/60 koruma, 30/70 fil, 20/80 at, 10/90 araba, 22/82 top, 13–93 beş er); filin iki köşegen adımı ve nehir yasağı; atın sıçrayamaması; arabanın kale hareketi; topun TAM BİR taş üzerinden sıçraması; erin nehri geçtikten sonra yan hareketi ve son çizgide yalnızca yan hareketi; iki generalin karşı karşıya gelememesi; wo-tĕ / tsum-da terimleri.",
+      "verifiedOn": "2026-08-15",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "K20 ŞERHİ: Falkener bir Viktorya DERLEMESİDİR, birinci elden gözlem değil. Kendi kaynaklarını (Hyde 1694, Irwin 1793, Cox 1801) adlandırır ve sahibi olduğu iki takımı fotoğraflar. Erişilebilir kamusal alanda Çin kaynaklı birinci el bir kural kaydı bulunamadı; künye bu durumu AÇIKÇA yazıyor."
+    },
+    {
+      "gameId": "sittuyin",
+      "sourceRef": "Falkener, Edward, Games Ancient and Oriental, and How to Play Them (London: Longmans, Green and Co., 1892)",
+      "edition": "Google nüshası (NOT_IN_COPYRIGHT) — archive.org gamesancientand00falkgoog",
+      "locator": "'Burmese Chess', ss. 177–179",
+      "supportingPassage": "The names of the pieces are, according to Captain Cox: Meng — The King […] Chekoy — Lieutenant General […] Hatha — War Chariots […] Chein — Elephants […] Mhee — Cavalry […] Yein — Foot Soldiers. The King has the same move as with us. The Queen moves diagonally only, but only one square at a time. The Rukhs have the same move as with us. The Bishops move one square diagonally, but are able to move, but not to take, one square forward, being thus able to change their colour. […] The Knights move as our Knights. The Pawns also move and take as our Pawns, and queen on arriving at the diagonal line. The Board is a square of eight cells, and has a line […] running diagonally […] Although this is the ordinary disposition of the men, either party may adopt another line of battle; but the pawns must not be altered. […] there is only one line of squares dividing the combatants, and that the battle must begin immediately […] the first pawn queens in four moves, the second in three, and the third in two moves.",
+      "supportedClaim": "Altı taşın adı (Cox'a göre) ve hareketi; vezirin yalnızca BİR köşegen kare gitmesi; filin alamadan bir kare ileri gidebilmesi; sekiz kareli tahta ve KÖŞEGEN çizgi; erin köşegene varınca terfi etmesi; er sıralarının SABİT ama arkadaki dizilimin SERBEST olması; orduları tek bir sıranın ayırması; sağdaki üç erin dört/üç/iki hamlede terfi etmesi.",
+      "verifiedOn": "2026-08-15",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "K20 ŞERHİ: Falkener bir derlemedir ve taş adları için Captain Hiram Cox'u kaynak gösterir; tanımladığı takım Cambridge'de Mr Scott'a aittir ve fotoğraflanmıştır."
+    },
+    {
+      "gameId": "shatranj",
+      "sourceRef": "Forbes, Duncan, The History of Chess (London: W. H. Allen, 1860)",
+      "edition": "Bayerische Staatsbibliothek nüshası — archive.org 10431564bsb",
+      "locator": "'Theory and Practice of the Shatranj' bölümü — SAYFA DOĞRULAMASI TAMAMLANMADI",
+      "supportingPassage": "",
+      "supportedClaim": "HENÜZ YOK. Eser indirildi ve şatranç/shatranj bölümü bulundu; sayfa seviyesinde pasaj çıkarma bu batch'te yapılmadı.",
+      "verifiedOn": null,
+      "attemptedOn": "2026-08-15",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "pending",
+      "note": "AÇIK İZ — bir sonraki batch. Forbes 1860 erişilebilir ve shatranj için ayrı bir bölüm taşıyor. UYARI: Forbes'un chaturanga tezi (dört kişilik zarlı oyun asıldır) sonradan Murray tarafından çürütüldü; kural aktarımı ayrı, tarih tezi ayrı değerlendirilmeli."
     }
   ]
 }
