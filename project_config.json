@@ -431,17 +431,17 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 451,
-        "wordsPerGame": 706,
-        "textPagesPerGame": 1.27,
-        "diagramPagesPerGame": 0.296,
-        "measuredPagesPerGame": 1.566,
-        "billedPagesPerGame": 2.087,
-        "spreadOverflowRate": 0.043,
+        "wordsPerTypesetPage": 461,
+        "wordsPerGame": 716,
+        "textPagesPerGame": 1.281,
+        "diagramPagesPerGame": 0.272,
+        "measuredPagesPerGame": 1.554,
+        "billedPagesPerGame": 2.08,
+        "spreadOverflowRate": 0.04,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 23,
+        "sampleSize": 25,
         "projectedTotalPages": 258,
         "deviationPct": 0.78,
         "withinTolerance": true,
@@ -450,7 +450,7 @@
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-batch1-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-batch2-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -517,7 +517,22 @@
           "",
           "cats-cradle K24 istisnasi yuzunden DORT sayfalik bir maddedir ve tasma",
           "oranini tek basina yukari cekiyor. Bu, istisnanin BILINEN ve KABUL",
-          "EDILEN maliyetidir; gizlenmiyor."
+          "EDILEN maliyetidir; gizlenmiyor.",
+          "",
+          "FAZ 5 · ÜRETİM BATCH 2'DEN SONRA (25 oyun).",
+          "",
+          "                     batch 1 (23)   batch 2 (25)",
+          "  kelime/sayfa           447           461",
+          "  kelime/oyun            700           716",
+          "  olculen sayfa/oyun    1,57          1.55",
+          "  faturalanan           2,09          2.08",
+          "  TASMA ORANI           1/23          1/25",
+          "  toplam sayfa           258           258",
+          "  sapma                +%0,8         +0.8%",
+          "",
+          "xiangqi ve sittuyin DIYAGRAMSIZ maddelerdir (v1.4 nehir/hisar ve",
+          "terfi kosegenini cizemiyor), bu yuzden diyagram ortalamasini asagi",
+          "cektiler ve model 258'de sabit kaldi."
         ]
       },
       "$comment": [
@@ -555,7 +570,7 @@
       "calibrated": true,
       "calibratedAtPhase": "phase2",
       "calibratedOn": "2026-08-13",
-      "recalibratedAtPhase": "phase5-batch1"
+      "recalibratedAtPhase": "phase5-batch2"
     },
     "editionsHypothesis": [
       {
