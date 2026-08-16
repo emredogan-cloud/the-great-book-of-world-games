@@ -9,10 +9,11 @@
 > FAZ 5 · KOŞU 1 SONUNDA :  20 / 100
 > FAZ 5 · KOŞU 2 SONUNDA :  23 / 100
 > FAZ 5 · KOŞU 3 SONUNDA :  25 / 100
+> FAZ 5 · KOŞU 4 SONUNDA :  27 / 100
 > HEDEF                  : 100 / 100
 > ```
 >
-> ⛔ **FAZ 5 KENDİ ANA HEDEFİNİ TUTTURAMADI.** Kalan **75 oyun**
+> ⛔ **FAZ 5 KENDİ ANA HEDEFİNİ TUTTURAMADI.** Kalan **73 oyun**
 > yazılmadı. Rapor bunu ilk sayfada söylüyor ve § 4'te tek tek gerekçesini
 > veriyor.
 
@@ -91,13 +92,13 @@ diyagram tanımını taşıyor.
 
 ## 3 · KALAN OYUNLAR
 
-**75 oyun.**
+**73 oyun.**
 
 | | |
 |---|---:|
 | Kapsam | 100 |
-| Yazılmış | 25 |
-| **Kalan** | **75** |
+| Yazılmış | 27 |
+| **Kalan** | **73** |
 
 ### 3.1 Koşu 2'de yazılan üç oyun
 
@@ -189,6 +190,58 @@ karşılaştırmadır, kural seti değil.
 Faz 4 bunu iki oyunda bulmuştu; Faz 5 sayfayı açarak **dördünü de**
 doğruladı. Bu artık bir tesadüf değil bir **desen**dir ve kuyruğun
 "erişilebilir" etiketinin ne kadar iyimser olabileceğini gösterir.
+
+### 4.3 KAYNAK AVI (batch 4) — kurucu yetkisiyle, sonuçlarıyla
+
+Kurucu Parlett/Culin-Kore tıkanıklarını aşmak için açık bir literatür avı
+yetkilendirdi. Av **gerçekten yapıldı** ve **bir oyun bile açmadı**.
+
+| aranan | sonuç |
+|---|---|
+| **Alfonso X**, Libro de los juegos (alquerque · catch-the-hare) | **bulunamadı** — denetlenebilir açık transkripsiyon yok |
+| **Elsdon Best**, Games and Pastimes of the Maori (mu-torere) | **bulunamadı** — archive.org'da yok, NZETC çözülmedi |
+| **Culin**, 'Hawaiian Games' 1899 (konane) | **erişilemedi** — yalnızca JSTOR |
+| **Gomme** cilt I (1894) | **bulundu** — ama içeriği İNGİLİZ oyunlarıdır |
+| **Gomme** cilt II (1898) | **bulunamadı** |
+| **Falkener** § Atep/Mora (morra) | **kısmi** — mekanik var, PUANLAMA yok |
+| **Gomme** § Morris (twelve-mens-morris) | **kısmi** — yalnızca dokuz taşlı biçim |
+| **Foster's Hoyle** 1897 (şans ailesi) | **sonuçsuz** — on iki oyunun hepsi sıfır |
+
+**Gomme cilt I iki kez kültür tuzağı çıkardı:** `gilli-danda` için
+*Tipcat*, `myinda` için *Blind Man's Buff* — ikisi de **İngiliz** kayıttır,
+oysa kapsam **Pencap** ve **Antik Yunan** der. İkisi de kullanılmadı.
+
+> **Bu bir çaba sorunu değil bir ARZ sorunudur.** Kalan oyunların
+> kaynakları ya telifli (Parlett · Bell · Murray · Zaslavsky), ya JSTOR'da,
+> ya da yalnızca basılı. Kurucunun kütüphane erişimi üretim hızını
+> belirleyen **tek** değişkendir.
+
+### 4.4 KUYRUK TEMİZLİĞİ — beş oyun DÜŞÜRÜLDÜ
+
+Kurucu direktifi 2 uyarınca kültürel kimliği uyuşmayan ve doğrulanamayan
+oyunlar doğru duruma taşındı:
+
+| oyun | nereye | neden |
+|---|---|---|
+| **go** | P5 | kaynak **tam** ama **Japon** kodifikasyonu; kapsam **Han Çinlisi** |
+| **tien-gow** | P5 | Culin § LXXXI **Kore** dominolarıdır |
+| **sugoroku** | P5 | Culin'in bölümü **Kore** oyunudur |
+| **jianzi** | P5 | **Kore/Japon** nesne kaydı, kural yok |
+| **gomoku** | P6 | amaç var, **kural seti yok** |
+
+`build_queue.py` P6'yı genelleştirdi: artık yalnızca K23 terfilerine değil,
+kaynağı **aranıp bulunamayan her oyuna** açık.
+
+**Sonuç dürüst bir düşüştür:**
+
+| | önce | sonra |
+|---|---:|---:|
+| erişilebilir · yazılmamış | **73** | **60** |
+| P5 (kimlik / kaynak uyuşmazlığı) | 1 | **5** |
+| P6 (kayıt bulunamadı) | 2 | **3** |
+
+> Kuyruk küçülmedi; **doğrulandı**. On üç oyun zaten yazılamıyordu ve
+> kuyruk onları yazılabilir gösteriyordu.
 
 ---
 
@@ -563,7 +616,7 @@ kadar yapılmadı**.
 
 | # | blok | kimde | durum |
 |---|---|---|---|
-| 1 | **75 oyun yazılmadı** | üretim + kaynak | ⛔ **ana blok** |
+| 1 | **73 oyun yazılmadı** | **kaynak arzı** | ⛔ **ana blok** |
 | 2 | **Dış insan testi** | kurucu — paket hazır | ⛔ Faz 2'den beri aynı |
 | 3 | Telifli kaynak erişimi (Parlett · Bell · Murray · Zaslavsky) | kurucu | 5 oyun P4 + kuyruğun büyük kısmı |
 | 4 | **Diyagram dili v1.5 — ip figürleri** | kurucu | 🆕 açık karar (§ 7.2) |
@@ -574,7 +627,7 @@ kadar yapılmadı**.
 | **A5** | `STYLE.md` onayı | kurucu | açık |
 | **A6** | Yazar biyografisi | kurucu | açık |
 
-### 19.1 Kalan 75 oyunun gerçek engeli
+### 19.1 Kalan 73 oyunun gerçek engeli
 
 Faz 5 on kaynak açtı ve **yedisi kural taşımıyordu**. Bu küçük bir
 örneklemdir ama deseni nettir:

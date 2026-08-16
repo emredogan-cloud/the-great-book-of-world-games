@@ -144,9 +144,12 @@ def build(root: str, args) -> int:
 
     inv = {g["gameId"]: g for g in index["games"]}
     blocked_ids = {g["gameId"] for g in pending["games"]}
-    unresolved = {u["gameId"]: u["reason"]
+    unresolved = {u["gameId"]: u.get("reason", "kural kimliği çözülmedi")
                   for u in pending.get("unresolvedIdentity", [])}
-    gap_ids = {g["gameId"] for g in pending.get("amendmentSourceGaps", [])}
+    # P6 artık yalnızca K23 terfilerine özgü değildir: kaynağı ARANIP
+    # bulunamayan HER oyun buraya girer (kurucu · batch 4 direktifi).
+    gap_ids = {g["gameId"] for g in pending.get("amendmentSourceGaps", [])} | \
+        {g["gameId"] for g in pending.get("sourceRecordGaps", [])}
     holds = {h["gameId"]: h["conflict"]
              for h in pending.get("editorialHolds", [])
              if h.get("status") == "open"}
@@ -326,7 +329,8 @@ def check(root: str, args) -> int:
     #    mümkün kılar: kaydı olmayan bir oyunu ERİŞİLEBİLİR göstermek,
     #    kaydı olan bir oyunu P6'ya sürgün etmek, ve P6'daki bir oyunu
     #    yine de YAZMAK.
-    gaps = {g["gameId"] for g in pending.get("amendmentSourceGaps", [])}
+    gaps = {g["gameId"] for g in pending.get("amendmentSourceGaps", [])} | \
+        {g["gameId"] for g in pending.get("sourceRecordGaps", [])}
     p6 = {r["gameId"] for r in rows if r["priority"] == 6}
     stray = sorted(p6 - gaps)
     if stray:

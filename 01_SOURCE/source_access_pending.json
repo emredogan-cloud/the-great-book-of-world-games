@@ -34,7 +34,7 @@
     "(P4) ne de bir kayıt boşluğudur (P6): kaynak masada durur ve yeterlidir.",
     "Engel kitabın İÇİNDEDİR ve çözümü kurucu kararıdır."
   ],
-  "generatedAtPhase": "phase5",
+  "generatedAtPhase": "phase5-batch4",
   "count": 5,
   "blockedSources": [
     "Murray 1913 · Murray 1952 (ödünç kısıtı)",
@@ -111,7 +111,40 @@
       "phase4Note": "Faz 4'te kuyruğa EKLENDİ; Faz 3'te engelli kaydı vardı ama bu kuyrukta görünmüyordu."
     }
   ],
-  "unresolvedIdentity": [],
+  "unresolvedIdentity": [
+    {
+      "gameId": "go",
+      "culture": "Han Chinese",
+      "reason": "KAYNAK TAM ama KÜLTÜR UYUŞMUYOR — Japon kodifikasyonu",
+      "detail": "Smith 1908 eksiksiz bir kural kitabıdır (ss. 24–26: sıra, yerleştirme, ko, toprak amacı) ama JAPON biçimini ve JAPON sayımını verir (alınan taşlarla toprağı doldurma), Çin alan sayımını değil. Kapsam kaydı HAN ÇİNLİSİ der. §9 'kaynak iddia edilen kültürü desteklemeli' şartı KARŞILANMIYOR.",
+      "needed": "Z. Volpicelli, 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society XXVI — Smith'in kendi künyesinde geçiyor",
+      "attemptedOn": "2026-08-16"
+    },
+    {
+      "gameId": "tien-gow",
+      "culture": "Cantonese",
+      "reason": "KORE CİLDİ TUZAĞI — kaynak Kore dominolarını anlatıyor",
+      "detail": "Culin 1895 § LXXXI 'Kol-hpai' KORE dominolarıdır; Çin dominoları yalnızca karşılaştırma notudur. Ayrı basılan Chinese Games with Dice and Dominoes indirildi ve 'tien kow' başlığı bulunamadı.",
+      "needed": "Kanton kaynaklı ya da tien-gow başlıklı bir dönem kaydı",
+      "attemptedOn": "2026-08-16"
+    },
+    {
+      "gameId": "sugoroku",
+      "culture": "Japanese",
+      "reason": "KORE CİLDİ TUZAĞI — Faz 4'te işaretlendi, Faz 5'te doğrulandı",
+      "detail": "Culin'in `ssang-ryouk` bölümü KORE oyununu anlatır ve hamleler için 'the English game of Backgammon'a gönderir; Japon kaydı yalnızca bir tahta resmidir.",
+      "needed": "Japon kaynaklı bir sugoroku kural kaydı",
+      "attemptedOn": "2026-08-16"
+    },
+    {
+      "gameId": "jianzi",
+      "culture": "Han Chinese",
+      "reason": "KORE/JAPON NESNE KAYDI — kural yok, kültür de uyuşmuyor",
+      "detail": "Culin 1895 ss. 39–43 NESNEYİ anlatır (pamuk bezi, kil, sülün tüyü) ve bağlamı verir; puanlama, tur, oyuncu sayısı ve bitiş YOKTUR. Kayıt ayrıca KORE (Tjye-ki) ve JAPON (hago) biçimlerinindir; kapsam HAN ÇİNLİSİ der.",
+      "needed": "Çin kaynaklı bir jianzi kural kaydı",
+      "attemptedOn": "2026-08-16"
+    }
+  ],
   "resolvedInPhase4": [
     {
       "gameId": "totolospi",
@@ -163,6 +196,69 @@
       "resolvedBy": "K24 · kurucu onaylı tekil diyagram istisnası",
       "resolvedOn": "2026-08-14",
       "resolution": "Kurucu 150 mm tavanının YALNIZCA cats-cradle için aşılmasını onayladı. Genel tavan değişmedi. project_config.json § diagram.diagramBudgetOverrides ve dört kasıtlı kusur testi istisnayı dar tutuyor."
+    }
+  ],
+  "sourceRecordGaps": [
+    {
+      "gameId": "gomoku",
+      "family": "territory",
+      "culture": "Japanese",
+      "reason": "kaynak ARANDI · AMAÇ var, KURAL SETİ yok",
+      "detail": "Smith 1908 ss. 24–25 oyunu adlandırır, Japon kimliğini ve amacını (beş taşı sıraya dizmek) verir; sıra kuralı, başlangıç, berabere ve fazla-sıra kuralı YOKTUR. jianzi ile aynı sınıf: amaç kural seti değildir.",
+      "nextAction": "tam bir gomoku/renju kural kaydı ara",
+      "writable": false,
+      "attemptedOn": "2026-08-16"
+    }
+  ],
+  "sourceHunts": [
+    {
+      "phase": "phase5-batch4",
+      "authorisedBy": "kurucu",
+      "date": "2026-08-16",
+      "purpose": "Parlett/Culin-Kore tıkanıklarını aşacak kamusal alan birinci el kayıt",
+      "results": [
+        {
+          "target": "Alfonso X, Libro de los juegos (1283) — alquerque · catch-the-hare",
+          "outcome": "BULUNAMADI",
+          "detail": "archive.org başlık taraması sonuç vermedi; El Escorial MS T.I.6'nın denetlenebilir açık transkripsiyonu bulunamadı."
+        },
+        {
+          "target": "Elsdon Best, Games and Pastimes of the Maori (1925) — mu-torere",
+          "outcome": "BULUNAMADI",
+          "detail": "archive.org'da yok; NZETC adresi çözülmedi."
+        },
+        {
+          "target": "Culin, 'Hawaiian Games', American Anthropologist 1:2 (1899) — konane",
+          "outcome": "ERİŞİLEMEDİ",
+          "detail": "yalnızca JSTOR nüshası var; tam metin indirilemiyor."
+        },
+        {
+          "target": "Gomme, Traditional Games, cilt I (1894)",
+          "outcome": "BULUNDU",
+          "detail": "760 KB indirildi. İçeriği İNGİLİZ oyunlarıdır: gilli-danda (Pencap) için 'Tipcat', myinda (Antik Yunan) için 'Blind Man's Buff' — ikisi de KÜLTÜR TUZAĞI, kullanılmadı."
+        },
+        {
+          "target": "Gomme, cilt II (1898)",
+          "outcome": "BULUNAMADI",
+          "detail": "traditionalgames02gommuoft indirilemedi; Gomme adıyla yalnızca cilt I listeleniyor."
+        },
+        {
+          "target": "Falkener 1892 § Atep/Mora — morra",
+          "outcome": "KISMİ",
+          "detail": "ss. 103–105 mekaniği verir (iki biçim: ikisi birden parmak atar ve ikisi de tahmin eder; ya da biri atar öteki tahmin eder) ve İTALYAN oyununu adlandırır — ama PUANLAMA ve KAZANMA yoktur. Yazılamaz."
+        },
+        {
+          "target": "Gomme cilt I § Nine Men's Morris — twelve-mens-morris",
+          "outcome": "KISMİ",
+          "detail": "Dokuz taşlı biçim var (zaten yazıldı); ON İKİ taşlı biçim için ayrı bir kayıt yok."
+        },
+        {
+          "target": "Foster's Complete Hoyle (1897) — şans ailesi",
+          "outcome": "SONUÇSUZ",
+          "detail": "briscola · durak · schafkopf · truco · karnoffel · passe-dix · dreidel · hanafuda: HEPSİ sıfır. Şans ailesinin on iki oyunu Parlett'e bağlı kalıyor."
+        }
+      ],
+      "conclusion": "Av GERÇEKTEN yapıldı ve BİR oyun bile açmadı. Bulunan iki kaynak (Gomme cilt I, Falkener Atep) ya kültür tuzağı ya da eksik kuraldır. Bu bir çaba sorunu değil bir ARZ sorunudur: kalan oyunların kaynakları ya telifli, ya JSTOR'da, ya da yalnızca basılı."
     }
   ]
 }
