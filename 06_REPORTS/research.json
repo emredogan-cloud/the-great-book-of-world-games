@@ -11,9 +11,9 @@
     "independent_ge2": 122,
     "single_source": 38,
     "verification": {
-      "verified": 35,
+      "verified": 37,
       "blocked": 9,
-      "pending": 12
+      "pending": 10
     },
     "pilot_verified_any": 7,
     "pilot_verified_full": 4,

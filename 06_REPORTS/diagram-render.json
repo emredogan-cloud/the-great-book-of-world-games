@@ -295,6 +295,34 @@
       "withinDiagramBudget": true
     },
     {
+      "diagramId": "hnefatafl-setup",
+      "gameId": "hnefatafl",
+      "widthMm": 75.0,
+      "heightMm": 88.5,
+      "legendMm": 13.5,
+      "boardClass": "cell",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/hnefatafl-setup.svg",
+      "renderedWidthMm": 75.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "patolli-cross",
+      "gameId": "patolli",
+      "widthMm": 82.0,
+      "heightMm": 100.0,
+      "legendMm": 18.0,
+      "boardClass": "cell",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/patolli-cross.svg",
+      "renderedWidthMm": 82.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
       "diagramId": "tablut-setup",
       "gameId": "tablut",
       "widthMm": 75.0,

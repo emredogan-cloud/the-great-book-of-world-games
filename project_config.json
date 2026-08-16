@@ -432,16 +432,16 @@
       ],
       "measured": {
         "wordsPerTypesetPage": 457,
-        "wordsPerGame": 722,
-        "textPagesPerGame": 1.289,
-        "diagramPagesPerGame": 0.289,
-        "measuredPagesPerGame": 1.578,
-        "billedPagesPerGame": 2.074,
-        "spreadOverflowRate": 0.037,
+        "wordsPerGame": 731,
+        "textPagesPerGame": 1.303,
+        "diagramPagesPerGame": 0.297,
+        "measuredPagesPerGame": 1.599,
+        "billedPagesPerGame": 2.069,
+        "spreadOverflowRate": 0.034,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 27,
+        "sampleSize": 29,
         "projectedTotalPages": 256,
         "deviationPct": 0.0,
         "withinTolerance": true,
@@ -450,7 +450,7 @@
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-batch3-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-batch4-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -547,7 +547,13 @@
           "",
           "K25 (diyagram dili v1.5) DORT diyagrami geri getirdi (pachisi ·",
           "xiangqi · sittuyin · cats-cradle) ve HICBIRI cift sayfayi asmadi.",
-          "Model tam hedefe oturdu: 256 sayfa, sapma %0,0."
+          "Model tam hedefe oturdu: 256 sayfa, sapma %0,0.",
+          "",
+          "FAZ 5 · BATCH 4'TEN SONRA (29 oyun) — K27 yeniden kurgulamalari.",
+          "",
+          "  toplam sayfa 256 · sapma +0.0% · tasma 1/29",
+          "  hnefatafl ve patolli YENIDEN KURGULANMIS maddelerdir ve ikisi de",
+          "  cift sayfaya sigiyor."
         ]
       },
       "$comment": [
@@ -585,7 +591,7 @@
       "calibrated": true,
       "calibratedAtPhase": "phase2",
       "calibratedOn": "2026-08-13",
-      "recalibratedAtPhase": "phase5-batch3"
+      "recalibratedAtPhase": "phase5-batch4"
     },
     "editionsHypothesis": [
       {

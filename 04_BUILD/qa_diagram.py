@@ -486,6 +486,12 @@ def check_diagrams(lang: dict, diagrams: list, games: dict, rep: Report) -> None
                 v15.append("%s → taş TAHTADA OLMAYAN karede: %s"
                            % (did, p["at"]))
         for ln in d.get("lines") or []:
+            # SIFIR UZUNLUKLU çizgi SESSİZ bir no-op'tur: render onu çizer,
+            # hiçbir şey görünmez, ve tanımlayıcı "köşe işaretlendi" der.
+            # Kurucunun "silent layout failure" uyarısı tam olarak budur.
+            if ln.get("from") and ln.get("from") == ln.get("to"):
+                v15.append("%s → SIFIR UZUNLUKLU çizgi (görünmez): %s"
+                           % (did, ln.get("from")))
             for end in ("from", "to"):
                 cc = ln.get(end)
                 if not valid(cc):

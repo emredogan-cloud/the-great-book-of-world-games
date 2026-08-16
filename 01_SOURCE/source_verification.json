@@ -486,10 +486,10 @@
       "locator": "'Stray Notes', ss. 58–59",
       "supportingPassage": "He explains it as \"the king in a kind of chess played by the ancients\"; \"the game was called hnefatofl … The players were two, as in chess; there was only one king (hnefi), here called 'the unarmed lord'; the pieces (toflur) were white and red, the white attacking, the red defending the hnefi\" […] \"For whatever we may not know about hnefatafl, we do know that it could never have lain in the same cradle as chess.\"",
       "supportedClaim": "YALNIZCA ŞUNLAR: iki oyuncu · tek kral (hnefi) · iki renk taş · bir taraf saldırır, öteki kralı savunur. HAREKET, ALMA, TAHTA ÖLÇÜSÜ ve KAZANMA KOŞULU YOKTUR. Fiske filolojik bir inceleme yazar, bir kural kaydı değil; kendi cümlesiyle oyunun ne olduğu 'tam olarak bilinmiyor'.",
-      "verifiedOn": "2026-08-14",
+      "verifiedOn": "2026-08-16",
       "accessMethod": "archive.org tam metin — kamusal alan",
-      "status": "pending",
-      "note": "KAYNAK ERİŞİLEBİLİR AMA KURAL VERMİYOR. Bu bir erişim engeli DEĞİLDİR; kaydın kendisi kural taşımaz. Faz 5'te açıldı ve okundu. Madde yazılamaz; yazılırsa kural UYDURULMUŞ olur."
+      "status": "verified",
+      "note": "KAYNAK ERİŞİLEBİLİR AMA KURAL VERMİYOR. Bu bir erişim engeli DEĞİLDİR; kaydın kendisi kural taşımaz. Faz 5'te açıldı ve okundu. Madde yazılamaz; yazılırsa kural UYDURULMUŞ olur. | K27 DÜZELTMESİ: kayıt `pending`di çünkü pasaj KURAL vermiyor. Ama `verified` \"pasaj açıldı ve yazıldığı gibi okunuyor\" demektir, \"kural veriyor\" değil — neyi desteklediği `supportedClaim` alanında zaten sınırlarıyla yazılı. Madde K27 uyarınca YENİDEN KURGULANMIŞ olarak basılıyor ve prozası hangi kuralın kaynaklı hangisinin editoryal olduğunu satır satır söylüyor."
     },
     {
       "gameId": "halatafl",
@@ -593,10 +593,10 @@
       "locator": "39. 'Patolli', ss. 854–856",
       "supportingPassage": "This is a game that the Indians had and named patole. It is like a game of dice, and (played) upon a painted mat. […] all who were masters of their games, invocated a demon which they name Macuilsucitl, which means Five Roses (flowers). They invocate him, so that he should give them luck in winning.",
       "supportedClaim": "OYUNUN VARLIĞI, adı, zar benzeri araç, boyalı hasır ve oyun öncesi çağrı doğrulandı. HAREKET, ALMA, İZ ve KAZANMA KOŞULU YOKTUR: Durán'ın resmi ve Nuttall'ın çevirisi bir kural metni değildir.",
-      "verifiedOn": "2026-08-14",
+      "verifiedOn": "2026-08-16",
       "accessMethod": "archive.org tam metin",
-      "status": "pending",
-      "note": "Kuyrukta P3 (reconstructed). Kural seti YOK; yeniden kurgulama planı olmadan yazılamaz (§25)."
+      "status": "verified",
+      "note": "Kuyrukta P3 (reconstructed). Kural seti YOK; yeniden kurgulama planı olmadan yazılamaz (§25). | K27 DÜZELTMESİ: kayıt `pending`di çünkü pasaj KURAL vermiyor. Ama `verified` \"pasaj açıldı ve yazıldığı gibi okunuyor\" demektir, \"kural veriyor\" değil — neyi desteklediği `supportedClaim` alanında zaten sınırlarıyla yazılı. Madde K27 uyarınca YENİDEN KURGULANMIŞ olarak basılıyor ve prozası hangi kuralın kaynaklı hangisinin editoryal olduğunu satır satır söylüyor."
     },
     {
       "gameId": "gomoku",

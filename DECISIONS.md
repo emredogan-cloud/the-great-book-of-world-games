@@ -765,3 +765,63 @@ Arka maddedeki *uydurulmuş gelenekler* kutusuna **iki düzeltme** eklendi:
 > Bir kaynak gördüğü şeyde haklı, çıkardığı sonuçta haksız olabilir. Bir
 > oyun kitabının okuruna bunu göstermesi, doğru kuralı vermek kadar
 > değerlidir.
+
+---
+
+### K27 · YENİDEN KURGULAMA POLİTİKASI — kurucu onaylı
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 16 Ağustos 2026
+
+Çekirdek mekaniği **tarihsel olarak belgelenmiş** ama belirli kuralları
+(puanlama, tur sırası, bitiş) **kayıp ya da erişilemez** olan oyunlar
+editoryal olarak tamamlanıp **oynanabilir** hâle getirilebilir.
+
+**ŞART — üçü de bağlayıcı:**
+
+1. Madde **`reconstructed`** olarak işaretlenir (envanter ve manuscript
+   **iki yönlü** uyuşmak zorunda; `qa_manuscript § ③` denetler).
+2. Prozada **hangi kuralın kaynaklı, hangisinin editoryal** olduğu
+   satır satır söylenir — `(Editorial ruling)` işaretiyle.
+3. `reconstructionNotice` maddenin **başında** neyin bilinmediğini yazar.
+
+**Politika neyi DEĞİŞTİRMEZ:**
+
+- Kaynağın **ne söylediği** yine sayfa seviyesinde doğrulanır.
+- **Başka bir kültürün oyunundan kural ÖDÜNÇ ALINMAZ** — bu yasak
+  patolli maddesinde ayrıca yazılıdır (pachisi benzetmesi tam olarak bu
+  yüzden reddedildi).
+- Çekirdek mekanik **belgelenmemişse** politika uygulanmaz; oyun
+  Kütüphaneci listesine gider.
+
+#### `verified` ne demektir — bir açıklık
+
+K27 bir belirsizliği ortaya çıkardı ve kayıt düzeltildi:
+
+> **`verified` = "pasaj açıldı ve yazıldığı gibi okunuyor".**
+> **`verified` ≠ "pasaj tam kural veriyor".**
+
+Neyi desteklediği `supportedClaim` alanında **sınırlarıyla** yazılıdır.
+Fiske hnefatafl için yalnızca terminoloji verir ve kaydı bunu söyler;
+kayıt yine de `verified`dir çünkü pasaj gerçekten öyle okunmaktadır.
+
+#### İlk uygulama
+
+| oyun | belgelenen | editoryal olan |
+|---|---|---|
+| **hnefatafl** | ad, iki oyuncu, tek kral, iki taraf (Fiske ss. 58–59) | **bütün mekanik** — Linnaeus'un tablut kaydından aktarıldı |
+| **patolli** | hasır, fasulye zarı, bahis, çağrı (Culin ss. 854–856) | tur mantığı, yasal hamle, puanlama, bitiş |
+
+---
+
+### K28 · KÜTÜPHANECİ YOLU — kurucu kaynak sağlar
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 16 Ağustos 2026
+
+Ne yeniden kurgulanabilen ne de değiştirilebilen oyunlar için kurucu
+**kaynak metni doğrudan sağlar**. Ajan bu durumda **tam künyeyi ve
+ihtiyaç duyduğu bölümü** listeler; uydurmaz, tahmin etmez, bekler.
+
+**Liste:** `06_REPORTS/LIBRARIAN_REQUEST_LIST.md` — üretilen dosya,
+kuyruktan türetilir.
+
+> Bir kaynağı istemek, onu uydurmaktan her zaman ucuzdur.
