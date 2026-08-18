@@ -893,3 +893,76 @@ Teslim, üç oyunun **tam olarak eksik olan şeyini** verdi:
 
 `go` ve `sugoroku` **P5'te kaldı**: teslim onların doğru kültür kaynağını
 içermiyor.
+
+---
+
+### K28 · ŞANS AİLESİ 15 → 4 · ON BİR SLOT YEDEKTEN DOLDURULDU
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 18 Ağustos 2026
+**Uygulayan kayıt:** `scope_lock.json § amendments[1]`
+
+Şans ailesinin on bir oyununun **tamamı** David Parlett'in telifli
+eserlerine bağlıydı. Kütüphaneci teslimi onları kapsamıyordu ve
+**hiçbiri yeniden kurgulanamaz**: bir kart ya da zar oyununun kural seti
+mekanikten **türetilemez**, ezberlenir.
+
+| ÇIKARILAN (11) | kültür |
+|---|---|
+| shagai · hanafuda-koi-koi · durak · karnoffel · dreidel · mus · truco · briscola · tali · schafkopf · passe-dix | Moğol · Japon · Rus · Alman · Aşkenaz · Bask · Río de la Plata · İtalyan · Roma · Bavyera · Fransız |
+
+Arşiv: `09_ARCHIVE/blocked-chance/` — **silinmediler**, envanterde
+duruyorlar ve kütüphane erişimi gelirse geri alınabilirler.
+
+| EKLENEN (11) | aile | kaynak |
+|---|---|---|
+| **janggi** | savaş tahtası | Culin 1895 § LXXIV (Wilkinson) |
+| **tuknanavuhpi** | savaş tahtası | Culin 1907 |
+| **ludus-latrunculorum** | savaş tahtası | Falkener · Forbes · Fiske |
+| **polis** | savaş tahtası | kurucu teslimi |
+| **nine-holes** | çizgi-toprak | Gomme 1894 |
+| **luk-tsut-kei** | çizgi-toprak | Culin 1895 |
+| **achi** | çizgi-toprak | kurucu teslimi |
+| **chaupar** | eve dönüş | Culin 1895/1898 · Falkener · Forbes |
+| **ludus-duodecim-scriptorum** | eve dönüş | Fiske · Forbes |
+| **daldos** | eve dönüş | *kaynaksız — kapsamda, yazılmamış* |
+| **ephedrismos** | tahtasız | *kaynaksız — kapsamda, yazılmamış* |
+
+#### Aile hedefleri YENİDEN YAZILDI
+
+| aile | önce | **sonra** |
+|---|---:|---:|
+| ekim | 14 | **14** |
+| av-kuşatma | 10 | **10** |
+| eve dönüş | 15 | **18** |
+| çizgi-toprak | 14 | **17** |
+| savaş tahtası | 17 | **21** |
+| **şans** | **15** | **4** |
+| tahtasız | 15 | **16** |
+| **toplam** | **100** | **100** ✅ |
+
+#### BEDELİ ÖLÇÜLDÜ VE GİZLENMEDİ
+
+**Kültür: 73 → 68.** Kaybedilen altı kültür: **Aşkenaz Yahudi · Bask ·
+Bavyera · Moğol · Rus · Río de la Plata**. Kazanılan: **Danca**.
+
+Yedek havuz bu kaybı **karşılayamadı**: havuzun dört şans oyununun
+**üçü** aynı telif duvarına çarpıyor (crown-and-anchor ve tarocchini
+Parlett, cho-han Bell).
+
+> Alt başlığın **≥45 kültür** vaadi hâlâ fazlasıyla tutuluyor (68), ama
+> altı kültür geri alınamaz biçimde kapsamdan çıktı ve bu, telifli bir
+> kaynağın bir kitaba ödettiği gerçek bedeldir.
+
+#### İKİ OYUN BİLEREK ALINMADI
+
+Seçim modeli **puluc** ve **quoits** önerdi; kitap ikisini de almadı:
+
+- **puluc** — kültürü (Kekchi Maya) kapsamda `bul` ile zaten temsil
+  ediliyor ve elde kaynağı yok. Yerine **daldos** alındı (Danca —
+  kapsamda **hiç** olmayan bir kültür).
+- **quoits** — İngiliz'dir ve tahtasız ailede İngiliz yoğunlaşmasını
+  **yeniden üretirdi**; **K23 tam olarak onu düzeltmişti**. Ayrıca kendi
+  kaydı petanque ile "hedefe atma" çakışmasını adlandırıyor.
+
+Ayrışmanın tamamı şerhte tek tek yazılıdır. **Model bir öneridir; kapsam
+bir karardır.**

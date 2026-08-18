@@ -1,6 +1,6 @@
 {
   "status": "pass",
-  "checks": 25,
+  "checks": 26,
   "errors": [],
   "warnings": [],
   "facts": {
@@ -8,28 +8,68 @@
     "familyCounts": {
       "sowing": 14,
       "hunt-siege": 10,
-      "race": 15,
-      "territory": 14,
-      "war-board": 17,
-      "chance": 15,
-      "boardless": 15
+      "race": 18,
+      "territory": 17,
+      "war-board": 21,
+      "chance": 4,
+      "boardless": 16
     },
     "restrictedTotal": 9,
-    "locked_cultures": 73,
+    "locked_cultures": 68,
     "modelDivergence": {
       "modelOnly": [
+        "durak",
         "fivestones",
-        "marbles"
+        "hanafuda-koi-koi",
+        "karnoffel",
+        "marbles",
+        "puluc",
+        "quoits",
+        "shagai"
       ],
       "lockOnly": [
-        "kho-kho",
-        "lagori"
-      ],
-      "explainedByAmendments": [
-        "fivestones",
+        "astragaloi",
+        "chaupar",
+        "ephedrismos",
         "kho-kho",
         "lagori",
-        "marbles"
+        "mahjong",
+        "set-dilth",
+        "tien-gow"
+      ],
+      "explainedByAmendments": [
+        "achi",
+        "astragaloi",
+        "briscola",
+        "chaupar",
+        "daldos",
+        "dreidel",
+        "durak",
+        "ephedrismos",
+        "fivestones",
+        "hanafuda-koi-koi",
+        "janggi",
+        "karnoffel",
+        "kho-kho",
+        "lagori",
+        "ludus-duodecim-scriptorum",
+        "ludus-latrunculorum",
+        "luk-tsut-kei",
+        "mahjong",
+        "marbles",
+        "mus",
+        "nine-holes",
+        "passe-dix",
+        "polis",
+        "puluc",
+        "quoits",
+        "schafkopf",
+        "set-dilth",
+        "shagai",
+        "tali",
+        "tien-gow",
+        "truco",
+        "tuknanavuhpi"
       ]
     },
     "pilot_games": 12

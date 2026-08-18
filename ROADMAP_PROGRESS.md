@@ -24,15 +24,15 @@
 
 | | Ölçülen | Hedef |
 |---|---:|---:|
-| Envanter kaydı | **160** | — |
-| Aday oyun | **153** | ≥140 |
-| Üretime hazır kural | **119** | — |
+| Envanter kaydı | **161** | — |
+| Aday oyun | **154** | ≥140 |
+| Üretime hazır kural | **120** | — |
 | Kilitli oyun | **0** | 100 |
 | Yazılmış oyun | **0** | 100 |
 | Oynanabilirlik testi geçen | **0** | 100 |
 | Kültür | **89** | ≥45 |
 | Aile | **7** | 7 |
-| Kısıt taraması | **160/160** | 160/160 |
+| Kısıt taraması | **161/161** | 161/161 |
 | Modellenen sayfa | **250** | 256 |
 
 ---

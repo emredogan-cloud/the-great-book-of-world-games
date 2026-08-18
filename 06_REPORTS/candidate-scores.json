@@ -11,7 +11,7 @@
     "visual": 0.06
   },
   "diversityBonus": 0.15,
-  "eligible": 119,
+  "eligible": 120,
   "proposed": 100,
   "proposedCultures": [
     "Abbasid Arab",
@@ -22,16 +22,13 @@
     "Ancient Greek",
     "Ancient Indian",
     "Andalusi Arab",
-    "Apache",
-    "Ashkenazi Jewish",
-    "Basque",
-    "Bavarian",
     "Bengali",
     "Burmese",
     "Byzantine",
     "Cantonese",
     "Castilian",
     "Dakarkari",
+    "Danish",
     "Egyptian Arab",
     "English",
     "French",
@@ -66,7 +63,6 @@
     "Punjabi",
     "Roman",
     "Russian",
-    "Río de la Plata",
     "Sinhalese",
     "Somali",
     "Sotho",
@@ -100,33 +96,33 @@
       "cultures": 10
     },
     "race": {
-      "target": 15,
+      "target": 18,
       "eligible": 19,
-      "selected": 15,
-      "cultures": 15
+      "selected": 18,
+      "cultures": 17
     },
     "territory": {
-      "target": 14,
-      "eligible": 18,
-      "selected": 14,
-      "cultures": 13
-    },
-    "war-board": {
       "target": 17,
-      "eligible": 20,
+      "eligible": 18,
       "selected": 17,
-      "cultures": 16
-    },
-    "chance": {
-      "target": 15,
-      "eligible": 19,
-      "selected": 15,
       "cultures": 15
     },
-    "boardless": {
-      "target": 15,
+    "war-board": {
+      "target": 21,
+      "eligible": 21,
+      "selected": 21,
+      "cultures": 20
+    },
+    "chance": {
+      "target": 4,
       "eligible": 19,
-      "selected": 15,
+      "selected": 4,
+      "cultures": 4
+    },
+    "boardless": {
+      "target": 16,
+      "eligible": 19,
+      "selected": 16,
       "cultures": 11
     }
   },
@@ -212,6 +208,12 @@
       "score": 4.02
     },
     {
+      "gameId": "quoits",
+      "family": "boardless",
+      "culture": "English",
+      "score": 4.02
+    },
+    {
       "gameId": "pilolo",
       "family": "boardless",
       "culture": "Ga",
@@ -246,72 +248,6 @@
       "family": "chance",
       "culture": "German",
       "score": 4.36
-    },
-    {
-      "gameId": "dreidel",
-      "family": "chance",
-      "culture": "Ashkenazi Jewish",
-      "score": 4.34
-    },
-    {
-      "gameId": "astragaloi",
-      "family": "chance",
-      "culture": "Ancient Greek",
-      "score": 4.26
-    },
-    {
-      "gameId": "mus",
-      "family": "chance",
-      "culture": "Basque",
-      "score": 4.18
-    },
-    {
-      "gameId": "truco",
-      "family": "chance",
-      "culture": "Río de la Plata",
-      "score": 4.16
-    },
-    {
-      "gameId": "briscola",
-      "family": "chance",
-      "culture": "Italian",
-      "score": 4.12
-    },
-    {
-      "gameId": "tali",
-      "family": "chance",
-      "culture": "Roman",
-      "score": 4.0
-    },
-    {
-      "gameId": "tien-gow",
-      "family": "chance",
-      "culture": "Cantonese",
-      "score": 3.98
-    },
-    {
-      "gameId": "set-dilth",
-      "family": "chance",
-      "culture": "Apache",
-      "score": 3.94
-    },
-    {
-      "gameId": "mahjong",
-      "family": "chance",
-      "culture": "Han Chinese",
-      "score": 3.86
-    },
-    {
-      "gameId": "schafkopf",
-      "family": "chance",
-      "culture": "Bavarian",
-      "score": 3.82
-    },
-    {
-      "gameId": "passe-dix",
-      "family": "chance",
-      "culture": "French",
-      "score": 3.8
     },
     {
       "gameId": "bagh-chal",
@@ -458,10 +394,28 @@
       "score": 3.98
     },
     {
+      "gameId": "puluc",
+      "family": "race",
+      "culture": "Kekchi Maya",
+      "score": 3.92
+    },
+    {
       "gameId": "sugoroku",
       "family": "race",
       "culture": "Japanese",
       "score": 3.88
+    },
+    {
+      "gameId": "daldos",
+      "family": "race",
+      "culture": "Danish",
+      "score": 3.86
+    },
+    {
+      "gameId": "ludus-duodecim-scriptorum",
+      "family": "race",
+      "culture": "Roman",
+      "score": 3.76
     },
     {
       "gameId": "oware",
@@ -632,6 +586,24 @@
       "score": 3.74
     },
     {
+      "gameId": "luk-tsut-kei",
+      "family": "territory",
+      "culture": "Cantonese",
+      "score": 3.58
+    },
+    {
+      "gameId": "nine-holes",
+      "family": "territory",
+      "culture": "English",
+      "score": 3.4
+    },
+    {
+      "gameId": "achi",
+      "family": "territory",
+      "culture": "Akan",
+      "score": 3.32
+    },
+    {
       "gameId": "yote",
       "family": "war-board",
       "culture": "Wolof",
@@ -732,27 +704,52 @@
       "family": "war-board",
       "culture": "Thai",
       "score": 3.98
+    },
+    {
+      "gameId": "janggi",
+      "family": "war-board",
+      "culture": "Korean",
+      "score": 3.86
+    },
+    {
+      "gameId": "ludus-latrunculorum",
+      "family": "war-board",
+      "culture": "Roman",
+      "score": 3.86
+    },
+    {
+      "gameId": "tuknanavuhpi",
+      "family": "war-board",
+      "culture": "Hopi",
+      "score": 3.8
+    },
+    {
+      "gameId": "polis",
+      "family": "war-board",
+      "culture": "Ancient Greek",
+      "score": 3.52
     }
   ],
   "reserve": [
-    "achi",
+    "astragaloi",
+    "briscola",
     "chaupar",
     "cho-han",
     "crown-and-anchor",
     "cuarenta",
-    "daldos",
+    "dreidel",
     "ephedrismos",
-    "janggi",
     "kho-kho",
     "lagori",
-    "ludus-duodecim-scriptorum",
-    "ludus-latrunculorum",
-    "luk-tsut-kei",
-    "nine-holes",
-    "puluc",
-    "quoits",
+    "mahjong",
+    "mus",
+    "passe-dix",
     "renju",
+    "schafkopf",
+    "set-dilth",
+    "tali",
     "tarocchini",
-    "tuknanavuhpi"
+    "tien-gow",
+    "truco"
   ]
 }

@@ -412,6 +412,11 @@ MATERIAL_TERMS: dict[str, str] = {
         "four flat objects marked horse, camel, sheep and goat",
     "üçüncü zar eklenir": "add a third die",
     "üç zar ve kuru fasulye": "three dice and dried beans",
+    # K28 ile terfi eden yedek oyunların getirdiği ipuçları.
+    "kâğıda çizilmiş sıralar": "rows drawn on paper",
+    "kâğıda çizilmiş üç sıra": "three rows drawn on paper",
+    "kalem biçimli dört yüzlü zar": "a four-sided pencil used as a die",
+    "tavla taşları": "backgammon counters",
     "kuma açılmış çukurlar": "pits scooped in sand",
     "kuma çizilmiş ızgara": "a grid drawn in sand",
     "kareli defter kâğıdı ve iki kalem": "squared paper and two pencils",

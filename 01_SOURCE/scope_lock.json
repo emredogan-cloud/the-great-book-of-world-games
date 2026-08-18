@@ -15,16 +15,16 @@
   "familyTargets": {
     "sowing": 14,
     "hunt-siege": 10,
-    "race": 15,
-    "territory": 14,
-    "war-board": 17,
-    "chance": 15,
-    "boardless": 15
+    "race": 18,
+    "territory": 17,
+    "war-board": 21,
+    "chance": 4,
+    "boardless": 16
   },
   "count": 100,
-  "cultures": 73,
+  "cultures": 68,
   "integrity": {
-    "sha256": "efc4d78c84821d30a7269b0aeed42d0a7a433bb8642e60ee14c73c015f133c47",
+    "sha256": "a3ef7b48753bcc644efc0fdd23c5a0124a57185cecd9f563b2cca9a3457c5ea8",
     "algorithm": "sha256(sorted gameIds joined by \\n)"
   },
   "amendments": [
@@ -91,6 +91,247 @@
         "boardlessCultures": 13,
         "boardlessEnglish": 3
       }
+    },
+    {
+      "id": "A2",
+      "date": "2026-08-18",
+      "phase": "phase5",
+      "decision": "K28",
+      "reason": "ŞANS AİLESİNİN ON BİR OYUNU KALICI OLARAK ÇIKARILDI. Hepsi Parlett'in telifli eserlerine bağlıydı; kütüphaneci teslimi onları kapsamıyordu ve hiçbiri yeniden kurgulanamaz — bir kart ya da zar oyununun kural seti mekanikten TÜRETİLEMEZ, ezberlenir. Kurucu K28 ile çıkarmayı ve aile hedefinin 15'ten 4'e indirilmesini onayladı. Boşalan on bir slot, KAYNAĞI ELDE OLAN yedek oyunlarla dolduruldu.",
+      "removed": [
+        {
+          "gameId": "shagai",
+          "name": "Shagai",
+          "family": "chance",
+          "culture": "Mongolian",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "hanafuda-koi-koi",
+          "name": "Koi-Koi",
+          "family": "chance",
+          "culture": "Japanese",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "durak",
+          "name": "Durak",
+          "family": "chance",
+          "culture": "Russian",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "karnoffel",
+          "name": "Karnöffel",
+          "family": "chance",
+          "culture": "German",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "dreidel",
+          "name": "Dreidel",
+          "family": "chance",
+          "culture": "Ashkenazi Jewish",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "mus",
+          "name": "Mus",
+          "family": "chance",
+          "culture": "Basque",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "truco",
+          "name": "Truco",
+          "family": "chance",
+          "culture": "Río de la Plata",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "briscola",
+          "name": "Briscola",
+          "family": "chance",
+          "culture": "Italian",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "tali",
+          "name": "Tali",
+          "family": "chance",
+          "culture": "Roman",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "schafkopf",
+          "name": "Schafkopf",
+          "family": "chance",
+          "culture": "Bavarian",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "passe-dix",
+          "name": "Passe-dix",
+          "family": "chance",
+          "culture": "French",
+          "why": "Parlett'e bağlı · erişilemedi · yeniden kurgulanamaz"
+        },
+        {
+          "gameId": "puluc",
+          "name": "Puluc",
+          "family": "race",
+          "culture": "Kekchi Maya",
+          "why": "SEÇİM MODELİ bunu önerdi, kitap ALMADI: kültürü (Kekchi Maya) kapsamda `bul` ile zaten temsil ediliyor ve elde kaynağı yok. Yerine daldos alındı (Danca — kapsamda HİÇ olmayan bir kültür)."
+        },
+        {
+          "gameId": "quoits",
+          "name": "Quoits",
+          "family": "boardless",
+          "culture": "English",
+          "why": "SEÇİM MODELİ bunu önerdi, kitap ALMADI: İngiliz'dir ve tahtasız ailede İngiliz yoğunlaşmasını yeniden üretirdi — K23 tam olarak onu düzeltmişti. Ayrıca kendi kaydı petanque ile 'hedefe atma' çakışmasını adlandırıyor."
+        }
+      ],
+      "added": [
+        {
+          "gameId": "achi",
+          "name": "Achi",
+          "family": "territory",
+          "culture": "Akan",
+          "why": "kurucu K28 listesi"
+        },
+        {
+          "gameId": "janggi",
+          "name": "Janggi",
+          "family": "war-board",
+          "culture": "Korean",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "tuknanavuhpi",
+          "name": "Tuknanavuhpi",
+          "family": "war-board",
+          "culture": "Hopi",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "nine-holes",
+          "name": "Nine Holes",
+          "family": "territory",
+          "culture": "English",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "chaupar",
+          "name": "Chaupar",
+          "family": "race",
+          "culture": "Hindustani",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "ludus-latrunculorum",
+          "name": "Ludus Latrunculorum",
+          "family": "war-board",
+          "culture": "Roman",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "luk-tsut-kei",
+          "name": "Luk Tsut K'i",
+          "family": "territory",
+          "culture": "Cantonese",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "ludus-duodecim-scriptorum",
+          "name": "Ludus Duodecim Scriptorum",
+          "family": "race",
+          "culture": "Roman",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "daldos",
+          "name": "Daldøs",
+          "family": "race",
+          "culture": "Danish",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "ephedrismos",
+          "name": "Ephedrismos",
+          "family": "boardless",
+          "culture": "Ancient Greek",
+          "why": "yedek havuz · kaynağı elde"
+        },
+        {
+          "gameId": "polis",
+          "name": "Polis",
+          "family": "war-board",
+          "culture": "Ancient Greek",
+          "why": "kurucu K28 listesi"
+        },
+        {
+          "gameId": "set-dilth",
+          "name": "Set-dilth",
+          "family": "chance",
+          "culture": "Apache",
+          "why": "ŞANS AİLESİNDE TUTULDU. Seçim modeli daha yüksek puanlı yedekleri (tarocchini · cho-han · crown-and-anchor) önerir ama ÜÇÜ DE aynı telif duvarına çarpar; bunlar erişilebilir ya da zaten yazılmıştır."
+        },
+        {
+          "gameId": "astragaloi",
+          "name": "Astragaloi",
+          "family": "chance",
+          "culture": "Ancient Greek",
+          "why": "ŞANS AİLESİNDE TUTULDU. Seçim modeli daha yüksek puanlı yedekleri (tarocchini · cho-han · crown-and-anchor) önerir ama ÜÇÜ DE aynı telif duvarına çarpar; bunlar erişilebilir ya da zaten yazılmıştır."
+        },
+        {
+          "gameId": "tien-gow",
+          "name": "Tien Gow",
+          "family": "chance",
+          "culture": "Cantonese",
+          "why": "ŞANS AİLESİNDE TUTULDU. Seçim modeli daha yüksek puanlı yedekleri (tarocchini · cho-han · crown-and-anchor) önerir ama ÜÇÜ DE aynı telif duvarına çarpar; bunlar erişilebilir ya da zaten yazılmıştır."
+        },
+        {
+          "gameId": "mahjong",
+          "name": "Mahjong",
+          "family": "chance",
+          "culture": "Han Chinese",
+          "why": "ŞANS AİLESİNDE TUTULDU. Seçim modeli daha yüksek puanlı yedekleri (tarocchini · cho-han · crown-and-anchor) önerir ama ÜÇÜ DE aynı telif duvarına çarpar; bunlar erişilebilir ya da zaten yazılmıştır."
+        }
+      ],
+      "familyBalanceEffect": "YENİDEN YAZILDI (kurucu onayı). chance 15→4; war-board 17→21, race 15→18, territory 14→17, boardless 15→16; sowing 14 ve hunt-siege 10 değişmedi. Toplam 100 korundu.",
+      "cultureBalanceEffect": "ÖLÇÜLDÜ ve BEDELİ VAR: 73 → 68 kültür. KAYBEDİLEN: Ashkenazi Jewish, Basque, Bavarian, Mongolian, Russian, Río de la Plata. KAZANILAN: Danish. Kayıp, çıkarılan on bir şans oyununun taşıdığı kültürlerdir ve yedek havuz onları karşılayamadı — havuzun şans oyunlarının üçü de aynı telif duvarına çarpıyor. Alt başlığın ≥45 kültür vaadi hâlâ fazlasıyla tutuluyor.",
+      "mechanicalEffect": "Şans ailesi dörde iner ve kitabın 'yedi aile' tezi korunur ama şans ailesi artık en küçüğüdür. Eklenen on bir oyun dört aileye dağıldı; hiçbiri mevcut bir mekaniği yinelemiyor. quoits BİLEREK alınmadı: tahtasız ailede İngiliz yoğunlaşmasını yeniden üretirdi ve K23 tam olarak onu düzeltmişti.",
+      "cost": "Sekiz kültür kapsamdan çıktı ve bu geri alınamaz bir kayıptır. Kurucunun kütüphane erişimi gelirse bu oyunlar yeniden değerlendirilebilir; kayıtları 09_ARCHIVE/blocked-chance/ ve envanterde DURUYOR.",
+      "sourceQualityNote": "Eklenen on bir oyunun sekizinin kaynağı ELDEKİ kamusal alan derlemelerindedir (Culin 1895/1898/1907, Gomme 1894, Falkener 1892, Fiske 1905, Forbes 1860). achi kurucu teslimindedir. daldos ve ephedrismos kaynaksız girdi ve kuyrukta yazılmamış olarak duruyor — kapsamda olmak yazılmış olmak değildir.",
+      "measuredBefore": {
+        "label": "before",
+        "games": 100,
+        "cultures": 73,
+        "families": {
+          "boardless": 15,
+          "chance": 15,
+          "hunt-siege": 10,
+          "race": 15,
+          "sowing": 14,
+          "territory": 14,
+          "war-board": 17
+        }
+      },
+      "measuredAfter": {
+        "label": "after",
+        "games": 100,
+        "cultures": 68,
+        "families": {
+          "boardless": 16,
+          "chance": 4,
+          "hunt-siege": 10,
+          "race": 18,
+          "sowing": 14,
+          "territory": 17,
+          "war-board": 21
+        }
+      },
+      "modelDivergenceNote": "Aile hedefleri değişince seçim modeli farklı bir 100 üretir. Ayrışmanın TAMAMI bu şerhte tek tek açıklanmıştır: modelin önerdiği iki oyun gerekçesiyle alınmadı, kitabın tuttuğu dört şans oyunu gerekçesiyle tutuldu. Model bir öneridir; kapsam bir karardır."
     }
   ],
   "entries": [
@@ -1792,126 +2033,6 @@
       "reconstructed": false
     },
     {
-      "gameId": "shagai",
-      "name": "Shagai",
-      "family": "chance",
-      "culture": "Mongolian",
-      "region": "Central Asia",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "attributed",
-      "researchStatus": "candidate",
-      "countryOrArea": "Mongolia",
-      "period": "long-standing; documented in modern ethnography and still played",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-        "Kabzińska-Stawarz, Iwona, Games of Mongolian Shepherds (Warsaw: Institute of the History of Material Culture, 1991)"
-      ],
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.4,
-      "playersMax": 6,
-      "reconstructed": false
-    },
-    {
-      "gameId": "hanafuda-koi-koi",
-      "name": "Koi-Koi",
-      "family": "chance",
-      "culture": "Japanese",
-      "region": "East Asia",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "Japan",
-      "period": "the flower-card pack dates from the late 18th century, created under card prohibitions",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
-        "Pakarnian, John / Depaulis, Thierry, studies on Japanese card packs in The Playing-Card (IPCS)"
-      ],
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.38,
-      "playersMax": 2,
-      "reconstructed": false
-    },
-    {
-      "gameId": "durak",
-      "name": "Durak",
-      "family": "chance",
-      "culture": "Russian",
-      "region": "Eastern Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "Russia and neighbouring countries",
-      "period": "documented from the 19th century; the most widely played card game in the region",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-        "McLeod, John, Pagat card game rules archive (documentary collection of played rules)"
-      ],
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.36,
-      "playersMax": 6,
-      "reconstructed": false
-    },
-    {
-      "gameId": "karnoffel",
-      "name": "Karnöffel",
-      "family": "chance",
-      "culture": "German",
-      "region": "Central Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "Germany · Switzerland",
-      "period": "named in a 1426 document; the oldest European card game with identifiable surviving rules",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
-        "Dummett, Michael & McLeod, John, studies on early European card games"
-      ],
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.36,
-      "playersMax": 6,
-      "reconstructed": false
-    },
-    {
-      "gameId": "dreidel",
-      "name": "Dreidel",
-      "family": "chance",
-      "culture": "Ashkenazi Jewish",
-      "region": "Central and Eastern Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "attributed",
-      "researchStatus": "candidate",
-      "countryOrArea": "Ashkenazi diaspora",
-      "period": "the four-sided spinning top is documented in Europe from the medieval period; the Hanukkah association is later",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-        "Encyclopaedia Judaica, entry on dreidel / trendel and the European teetotum"
-      ],
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.34,
-      "playersMax": 8,
-      "reconstructed": false
-    },
-    {
       "gameId": "astragaloi",
       "name": "Astragaloi",
       "family": "chance",
@@ -1933,102 +2054,6 @@
       "ruleCompleteness": "complete",
       "eligibility": "eligible",
       "selectionScore": 4.26,
-      "playersMax": 6,
-      "reconstructed": false
-    },
-    {
-      "gameId": "mus",
-      "name": "Mus",
-      "family": "chance",
-      "culture": "Basque",
-      "region": "Western Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "Basque Country (Spain · France)",
-      "period": "first described in the 18th century; widely played today",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-        "Larramendi, Manuel de, Diccionario trilingüe (1745) — earliest known reference to mus"
-      ],
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.18,
-      "playersMax": 4,
-      "reconstructed": false
-    },
-    {
-      "gameId": "truco",
-      "name": "Truco",
-      "family": "chance",
-      "culture": "Río de la Plata",
-      "region": "South America",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "Argentina · Uruguay",
-      "period": "derived from Spanish truc; documented in the region from the 19th century",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-        "Depaulis, Thierry, studies on Iberian and Latin American card games, in The Playing-Card (IPCS)"
-      ],
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.16,
-      "playersMax": 6,
-      "reconstructed": false
-    },
-    {
-      "gameId": "briscola",
-      "name": "Briscola",
-      "family": "chance",
-      "culture": "Italian",
-      "region": "Southern Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "Italy",
-      "period": "documented from the 19th century; widely played today",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-        "McLeod, John, Pagat card game rules archive (documentary collection of played rules)"
-      ],
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.12,
-      "playersMax": 6,
-      "reconstructed": false
-    },
-    {
-      "gameId": "tali",
-      "name": "Tali",
-      "family": "chance",
-      "culture": "Roman",
-      "region": "Mediterranean",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "Roman Empire",
-      "period": "attested throughout the Republic and Empire; regulated by law",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Suetonius, Divus Augustus 71 (Augustus' letters describing play with tali)",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 4.0,
       "playersMax": 6,
       "reconstructed": false
     },
@@ -2101,54 +2126,6 @@
       "eligibility": "eligible",
       "selectionScore": 3.86,
       "playersMax": 4,
-      "reconstructed": false
-    },
-    {
-      "gameId": "schafkopf",
-      "name": "Schafkopf",
-      "family": "chance",
-      "culture": "Bavarian",
-      "region": "Central Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "Bavaria, Germany",
-      "period": "documented from the early 19th century",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-        "McLeod, John, Pagat card game rules archive (documentary collection of played rules)"
-      ],
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 3.82,
-      "playersMax": 4,
-      "reconstructed": false
-    },
-    {
-      "gameId": "passe-dix",
-      "name": "Passe-dix",
-      "family": "chance",
-      "culture": "French",
-      "region": "Western Europe",
-      "playabilityStatus": "rules-complete",
-      "restrictionStatus": "open",
-      "researchStatus": "candidate",
-      "countryOrArea": "France",
-      "period": "documented from the medieval period; one of the oldest recorded dice games",
-      "sourceCount": 2,
-      "sourceRefs": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
-      ],
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "ruleCompleteness": "complete",
-      "eligibility": "eligible",
-      "selectionScore": 3.8,
-      "playersMax": 8,
       "reconstructed": false
     },
     {
@@ -2505,6 +2482,269 @@
       "selectionScore": 3.22,
       "playersMax": 18,
       "reconstructed": false
+    },
+    {
+      "gameId": "achi",
+      "name": "Achi",
+      "family": "territory",
+      "culture": "Akan",
+      "region": "West Africa",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "Ghana",
+      "period": "documented in 20th-century collections",
+      "sourceCount": 1,
+      "sourceRefs": [
+        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
+      ],
+      "sourceConfidence": "low",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.32,
+      "playersMax": 2,
+      "reconstructed": false
+    },
+    {
+      "gameId": "janggi",
+      "name": "Janggi",
+      "family": "war-board",
+      "culture": "Korean",
+      "region": "East Asia",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "Korea",
+      "period": "documented in detail in the 1890s; derived from xiangqi",
+      "sourceCount": 2,
+      "sourceRefs": [
+        "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+        "Murray, H. J. R., A History of Chess (Oxford: Clarendon Press, 1913)"
+      ],
+      "sourceConfidence": "high",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.86,
+      "playersMax": 2,
+      "reconstructed": false
+    },
+    {
+      "gameId": "tuknanavuhpi",
+      "name": "Tuknanavuhpi",
+      "family": "war-board",
+      "culture": "Hopi",
+      "region": "North America",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "attributed",
+      "researchStatus": "candidate",
+      "countryOrArea": "Arizona",
+      "period": "recorded in Bureau of American Ethnology fieldwork around 1900",
+      "sourceCount": 2,
+      "sourceRefs": [
+        "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
+        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
+      ],
+      "sourceConfidence": "medium",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.8,
+      "playersMax": 2,
+      "reconstructed": false
+    },
+    {
+      "gameId": "nine-holes",
+      "name": "Nine Holes",
+      "family": "territory",
+      "culture": "English",
+      "region": "Western Europe",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "England",
+      "period": "recorded in 16th–19th century sources",
+      "sourceCount": 2,
+      "sourceRefs": [
+        "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "sourceConfidence": "medium",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.4,
+      "playersMax": 2,
+      "reconstructed": false
+    },
+    {
+      "gameId": "chaupar",
+      "name": "Chaupar",
+      "family": "race",
+      "culture": "Hindustani",
+      "region": "South Asia",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "northern India",
+      "period": "documented alongside pachisi from the 16th century",
+      "sourceCount": 2,
+      "sourceRefs": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
+      ],
+      "sourceConfidence": "medium",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.7,
+      "playersMax": 4,
+      "reconstructed": false
+    },
+    {
+      "gameId": "ludus-latrunculorum",
+      "name": "Ludus Latrunculorum",
+      "family": "war-board",
+      "culture": "Roman",
+      "region": "Mediterranean",
+      "playabilityStatus": "reconstructed",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "Roman Empire",
+      "period": "played from at least the 1st century BCE; a complete board survives from a 1st-century CE burial",
+      "sourceCount": 3,
+      "sourceRefs": [
+        "Schädler, Ulrich, studies on ludus latrunculorum and Roman board games, in Board Game Studies",
+        "Crummy, Philip et al., Stanway: An Élite Burial Site at Camulodunum, Britannia Monograph 24 (London, 2007)",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "sourceConfidence": "reconstructed",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "partial",
+      "eligibility": "eligible",
+      "selectionScore": 3.86,
+      "playersMax": 2,
+      "reconstructed": true
+    },
+    {
+      "gameId": "luk-tsut-kei",
+      "name": "Luk Tsut K'i",
+      "family": "territory",
+      "culture": "Cantonese",
+      "region": "East Asia",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "southern China",
+      "period": "recorded in the 1890s",
+      "sourceCount": 2,
+      "sourceRefs": [
+        "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "sourceConfidence": "medium",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.58,
+      "playersMax": 2,
+      "reconstructed": false
+    },
+    {
+      "gameId": "ludus-duodecim-scriptorum",
+      "name": "Ludus Duodecim Scriptorum",
+      "family": "race",
+      "culture": "Roman",
+      "region": "Mediterranean",
+      "playabilityStatus": "reconstructed",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "Roman Empire",
+      "period": "attested from the 1st century BCE; boards and graffiti survive widely",
+      "sourceCount": 2,
+      "sourceRefs": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Schädler, Ulrich, studies on Roman board games, in Board Game Studies"
+      ],
+      "sourceConfidence": "reconstructed",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "partial",
+      "eligibility": "eligible",
+      "selectionScore": 3.76,
+      "playersMax": null,
+      "reconstructed": true
+    },
+    {
+      "gameId": "daldos",
+      "name": "Daldøs",
+      "family": "race",
+      "culture": "Danish",
+      "region": "Northern Europe",
+      "playabilityStatus": "rules-complete",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "Jutland, Denmark · south-west Norway",
+      "period": "surviving boards from the 18th–19th century; play continued into living memory",
+      "sourceCount": 2,
+      "sourceRefs": [
+        "Michaelsen, Peter, studies on daldøs and related Nordic race games, in Board Game Studies",
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "sourceConfidence": "medium",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "complete",
+      "eligibility": "eligible",
+      "selectionScore": 3.86,
+      "playersMax": 2,
+      "reconstructed": false
+    },
+    {
+      "gameId": "ephedrismos",
+      "name": "Ephedrismos",
+      "family": "boardless",
+      "culture": "Ancient Greek",
+      "region": "Mediterranean",
+      "playabilityStatus": "reconstructed",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "Greece",
+      "period": "depicted on vases and terracottas from the 5th–4th centuries BCE",
+      "sourceCount": 2,
+      "sourceRefs": [
+        "Pollux, Onomasticon IX (list and description of Greek games)",
+        "Metropolitan Museum of Art / British Museum — Greek terracotta groups showing ephedrismos"
+      ],
+      "sourceConfidence": "reconstructed",
+      "sourceVerification": "bibliographic",
+      "ruleCompleteness": "partial",
+      "eligibility": "eligible",
+      "selectionScore": 3.58,
+      "playersMax": 6,
+      "reconstructed": true
+    },
+    {
+      "gameId": "polis",
+      "name": "Polis",
+      "family": "war-board",
+      "culture": "Ancient Greek",
+      "region": "Mediterranean",
+      "playabilityStatus": "reconstructed",
+      "restrictionStatus": "open",
+      "researchStatus": "candidate",
+      "countryOrArea": "Greece",
+      "period": "referred to in ancient sources; the rules are compiled from them",
+      "sourceCount": 1,
+      "sourceRefs": [
+        "Founder-delivered rule summary (librarian delivery, 2026) — compiled from ancient references and archaeological finds; no edition or page supplied"
+      ],
+      "sourceConfidence": "reconstructed",
+      "sourceVerification": "attempted-not-found",
+      "ruleCompleteness": "partial",
+      "eligibility": "eligible",
+      "selectionScore": 3.52,
+      "playersMax": 2,
+      "reconstructed": true
     }
   ],
   "reserve": [

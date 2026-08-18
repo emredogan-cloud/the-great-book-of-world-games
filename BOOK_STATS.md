@@ -9,25 +9,25 @@
 
 | | Ölçülen | Hedef | |
 |---|---:|---:|---|
-| Envanter kaydı | **160** | — | |
-| Aday oyun | **153** | ≥140 | `████████████████████` |
-| Yayımlanabilir aday | **151** | — | |
-| Üretime hazır kural | **119** | — | |
+| Envanter kaydı | **161** | — | |
+| Aday oyun | **154** | ≥140 | `████████████████████` |
+| Yayımlanabilir aday | **152** | — | |
+| Üretime hazır kural | **120** | — | |
 | Kilitli oyun | **0** | 100 | `····················` |
 | Yazılmış oyun | **0** | 100 | `····················` |
 | Oynanabilirlik testi geçen | **0** | 100 | `····················` |
 | Kültür | **89** | ≥45 | `████████████████████` |
 | Bölge | **33** | — | |
 | Aile | **7** | 7 | |
-| Kısıt taraması | **160/160** | 160/160 | `████████████████████` |
-| Görsel gerektiren madde | **149** | — | |
+| Kısıt taraması | **161/161** | 161/161 | `████████████████████` |
+| Görsel gerektiren madde | **150** | — | |
 
 ## 2. Kural bütünlüğü ve kısıt taraması
 
 | Oynanabilirlik durumu | Sayı | | Kısıt durumu | Sayı |
 |---|---:|---|---|---:|
-| `rules-complete` | 109 | | `open` | 116 |
-| `reconstructed` | 10 | | `attributed` | 35 |
+| `rules-complete` | 109 | | `open` | 117 |
+| `reconstructed` | 11 | | `attributed` | 35 |
 | `unresolved` | 32 | | `restricted` | 6 |
 | `not-production-ready` | 0 | | `excluded` | 3 |
 | `excluded` | 9 | | — | — |
@@ -60,9 +60,9 @@
 |---|---:|---:|---:|---|
 | The Sowing Games | **20** | 16 | 14 | `████████████` |
 | The Hunt and the Siege | **21** | 16 | 10 | `████████████` |
-| The Race Home | **24** | 16 | 15 | `████████████` |
-| The Line and the Territory | **20** | 16 | 14 | `████████████` |
-| The War Board | **24** | 16 | 17 | `████████████` |
-| Chance and Nerve | **22** | 16 | 15 | `████████████` |
-| Games Without a Board | **22** | 16 | 15 | `████████████` |
+| The Race Home | **24** | 16 | 18 | `████████████` |
+| The Line and the Territory | **20** | 16 | 17 | `████████████` |
+| The War Board | **25** | 16 | 21 | `████████████` |
+| Chance and Nerve | **22** | 16 | 4 | `████████████` |
+| Games Without a Board | **22** | 16 | 16 | `████████████` |
 

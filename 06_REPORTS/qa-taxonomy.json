@@ -5,7 +5,7 @@
   "warnings": [],
   "facts": {
     "families": 7,
-    "restriction_open": 116,
+    "restriction_open": 117,
     "restriction_attributed": 35,
     "restriction_restricted": 6,
     "restriction_excluded": 3,
@@ -14,12 +14,12 @@
       "hunt-siege": 21,
       "race": 24,
       "territory": 20,
-      "war-board": 24,
+      "war-board": 25,
       "chance": 22,
       "boardless": 22
     },
     "cultures": 89,
-    "candidates": 153,
+    "candidates": 154,
     "dropped": 7
   }
 }

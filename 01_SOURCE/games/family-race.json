@@ -437,7 +437,25 @@
       ],
       "culturalNotes": "Roma tahtalarının çoğunda altı harfli altı kelimelik alaycı yazıtlar vardır; bunlar kural değil, masanın sesidir.",
       "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+      "playtestStatus": "not-started",
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 30,
+        "max": 60
+      },
+      "ageMinEstimate": 10,
+      "materialsHint": [
+        "üç sıra × on iki işaret",
+        "on beşer taş",
+        "üç zar"
+      ],
+      "substitutionHint": [
+        "kâğıda çizilmiş üç sıra",
+        "tavla taşları"
+      ]
     },
     {
       "gameId": "tabula",

@@ -2024,6 +2024,91 @@
       ],
       "editorialStatus": "reserve",
       "playtestStatus": "not-started"
+    },
+    {
+      "gameId": "polis",
+      "name": "Polis",
+      "altNames": [
+        "Plinthion",
+        "Poleis"
+      ],
+      "culture": "Ancient Greek",
+      "region": "Mediterranean",
+      "countryOrArea": "Greece",
+      "period": "referred to in ancient sources; the rules are compiled from them",
+      "family": "war-board",
+      "taxonomyRationale": "Kıskaç (custodian) almasıyla oynanan ızgara tahtası; savaş tahtası ailesinin tanımıdır.",
+      "status": "candidate",
+      "restrictionStatus": "open",
+      "sourceConfidence": "reconstructed",
+      "sourceVerification": "attempted-not-found",
+      "sources": [
+        {
+          "ref": "Founder-delivered rule summary (librarian delivery, 2026) — compiled from ancient references and archaeological finds; no edition or page supplied",
+          "type": "archive"
+        }
+      ],
+      "ruleCompleteness": {
+        "setup": "partial",
+        "play": "known",
+        "turnLogic": "known",
+        "objective": "known",
+        "endCondition": "known",
+        "verdict": "partial",
+        "unknownElements": [
+          "Başlangıç dizilimi kaynaklara göre değişir: tahta boş başlar ya da taşlar ilk iki sıraya dizilir. 'Polis' (kale) kuralının geometrisi Pollux'ta bulanıktır."
+        ]
+      },
+      "clarity": {
+        "setupPerformable": true,
+        "firstTurnTakeable": true,
+        "legalMoveDistinguishable": true,
+        "victoryDeterminable": true,
+        "tieDefined": false,
+        "terminationRisk": "loop-possible",
+        "terminationRule": "Tekrar eden konum berabere sayılır (editoryal)."
+      },
+      "playabilityStatus": "reconstructed",
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "durationMinutes": {
+        "min": 20,
+        "max": 40
+      },
+      "ageMinEstimate": 9,
+      "materialsHint": [
+        "8×8 ızgara",
+        "iki renk disk"
+      ],
+      "substitutionHint": [
+        "dama tahtası",
+        "iki renk düğme"
+      ],
+      "childSuitable": true,
+      "environment": "table",
+      "visualNeeds": [
+        "board-diagram",
+        "move-diagram"
+      ],
+      "scores": {
+        "source": 2,
+        "playability": 3,
+        "cultural": 4,
+        "distinct": 4,
+        "access": 5,
+        "explain": 4,
+        "visual": 4,
+        "play": 4
+      },
+      "unresolvedQuestions": [
+        "Başlangıç dizilimi ve 'polis' kuralının tam geometrisi kaynaklarda net değildir; madde yeniden kurgulanmış olarak basılmalıdır."
+      ],
+      "reconstructionPlan": "BOŞLUK: başlangıç dizilimi ve 'polis' (kale) kuralının geometrisi. KAPATMA: kitap boş tahtayla başlayan ve taşları sırayla süren biçimi basar, kıskaç almasını ve köşe kuralını kaynaktan alır, kale kuralını AÇIKÇA belirsiz ilan eder ve basmaz. DAYANAK: kıskaç alması ve köşe kuralı kurucu teslimindedir; kale kuralı için yeterli tanım yoktur. ETİKET: madde 'yeniden kurgulanmış kural' başlığıyla basılır.",
+      "culturalNotes": "Antik kaynaklar oyunu şehir devletleri arasındaki bir savaş benzetmesi olarak anar; taşlara 'köpekler' (kynodes) denir.",
+      "editorialStatus": "shortlisted",
+      "playtestStatus": "not-started"
     }
   ]
 }

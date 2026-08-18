@@ -130,7 +130,7 @@
       "order": 3,
       "en": "The Race Home",
       "tr": "Eve dönüş yarışı",
-      "targetGames": 15,
+      "targetGames": 18,
       "candidateFloor": 16,
       "definition": "Taşların sabit bir iz üzerinde bir hedefe doğru ilerlediği, ilerleme miktarını bir çekiliş aletinin (zar · çubuk · deniz kabuğu · aşık kemiği) belirlediği oyunlar.",
       "inclusionRule": [
@@ -172,7 +172,7 @@
       "order": 4,
       "en": "The Line and the Territory",
       "tr": "Çizgi ve toprak",
-      "targetGames": 14,
+      "targetGames": 17,
       "candidateFloor": 16,
       "definition": "Kazanmanın bir DİZİLİŞLE belirlendiği oyunlar: hiza kurmak, alan kuşatmak, bağlantı tamamlamak.",
       "inclusionRule": [
@@ -212,7 +212,7 @@
       "order": 5,
       "en": "The War Board",
       "tr": "Savaş tahtası",
-      "targetGames": 17,
+      "targetGames": 21,
       "targetGamesPhase1Hypothesis": 13,
       "targetChangeNote": "A2 · kurucu onayı · 13 → 17. Ailede 20 uygun aday var; av-kuşatmanın dört oyunluk açığı BURAYA taşındı, yapay şişirmeyle değil mevcut uygun havuzdan.",
       "candidateFloor": 16,
@@ -256,7 +256,7 @@
       "order": 6,
       "en": "Chance and Nerve",
       "tr": "Şans ve cesaret",
-      "targetGames": 15,
+      "targetGames": 4,
       "candidateFloor": 16,
       "definition": "Sonucun bir ÇEKİLİŞ ALETİYLE belirlendiği, izi ve gelişen tahta konumu olmayan oyunlar. Her turun kararı 'nereye gideyim' değil, 'riski alayım mı'dır.",
       "inclusionRule": [
@@ -297,7 +297,7 @@
       "order": 7,
       "en": "Games Without a Board",
       "tr": "Tahtasız oyunlar",
-      "targetGames": 15,
+      "targetGames": 16,
       "candidateFloor": 16,
       "definition": "Tahta da çekiliş aleti de istemeyen oyunlar: bedenle, sesle, iple, taşla ya da yere çizilen bir işaretle oynanır.",
       "inclusionRule": [
@@ -370,5 +370,8 @@
     "",
     "İKİNCİL AİLE (secondaryFamily) kitapta BASILMAZ. Yalnızca tasnif kararının",
     "tartışmalı olduğu yerlerde kaydı tutar; okur her oyunu tek yerde bulur."
+  ],
+  "$k28": [
+    "K28 · 18 Ağustos 2026 — kurucu onayıyla aile hedefleri YENİDEN YAZILDI. Şans ailesi 15 → 4: on bir oyunun tamamı Parlett'e bağlıydı ve hiçbiri yeniden kurgulanamazdı (bir kart/zar oyununun kural seti mekanikten türetilemez). Boşalan on bir slot yedek havuzdan dolduruldu."
   ]
 }

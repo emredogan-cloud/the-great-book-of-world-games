@@ -3,13 +3,13 @@
   "checks": 13,
   "errors": [],
   "warnings": [
-    "38 oyun tek kaynaklı — locked olabilmeleri için ikinci bağımsız künye gerekir"
+    "39 oyun tek kaynaklı — locked olabilmeleri için ikinci bağımsız künye gerekir"
   ],
   "facts": {
-    "games": 160,
-    "source_records": 304,
+    "games": 161,
+    "source_records": 305,
     "independent_ge2": 122,
-    "single_source": 38,
+    "single_source": 39,
     "verification": {
       "verified": 37,
       "blocked": 9,
