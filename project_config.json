@@ -431,26 +431,26 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 463,
-        "wordsPerGame": 735,
-        "textPagesPerGame": 1.308,
-        "diagramPagesPerGame": 0.278,
-        "measuredPagesPerGame": 1.587,
-        "billedPagesPerGame": 2.059,
-        "spreadOverflowRate": 0.029,
+        "wordsPerTypesetPage": 464,
+        "wordsPerGame": 724,
+        "textPagesPerGame": 1.295,
+        "diagramPagesPerGame": 0.264,
+        "measuredPagesPerGame": 1.559,
+        "billedPagesPerGame": 2.053,
+        "spreadOverflowRate": 0.026,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 34,
-        "projectedTotalPages": 256,
-        "deviationPct": 0.0,
+        "sampleSize": 38,
+        "projectedTotalPages": 254,
+        "deviationPct": -0.78,
         "withinTolerance": true,
         "measuredAtPhase": "phase5",
         "measuredAtGate": "phase1",
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-batch4-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-batch5-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -561,7 +561,14 @@
           "  Bes kutuphaneci oyunu eklendi; hicbiri cift sayfayi asmadi.",
           "  v1.5 hucre geometrisi DUZELTILDI: her cell tahtasinin en ust sirasi",
           "  bir adim yukari kayip tuvalin disina tasiyordu (Ur tahtasinda gorsel",
-          "  denetimde yakalandi). Duzeltme butun cell diyagramlarini etkiledi."
+          "  denetimde yakalandi). Duzeltme butun cell diyagramlarini etkiledi.",
+          "",
+          "FAZ 5 · BATCH 5 (38 oyun) — K28 sonrasi.",
+          "",
+          "  toplam sayfa 254 · sapma -0.8% · tasma 1/38",
+          "  Dort kutuphaneci oyunu daha eklendi (sugoroku · mbube-mbube · achi ·",
+          "  polis). Model ilk kez hedefin ALTINA indi (254 < 256): eklenen",
+          "  maddeler kisa metinli ve kucuk diyagramlidir."
         ]
       },
       "$comment": [
@@ -599,7 +606,7 @@
       "calibrated": true,
       "calibratedAtPhase": "phase2",
       "calibratedOn": "2026-08-13",
-      "recalibratedAtPhase": "phase5-batch4"
+      "recalibratedAtPhase": "phase5-batch5"
     },
     "editionsHypothesis": [
       {

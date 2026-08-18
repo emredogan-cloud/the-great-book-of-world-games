@@ -4,18 +4,22 @@
     "Kural metni BURADA DURMAZ; yalnızca sayı ve dürüstlük bayrakları.",
     "Tam kayıt korumalı katmandadır (01_SOURCE/rules/)."
   ],
-  "generatedAtPhase": "phase5-batch4",
+  "generatedAtPhase": "phase5-batch5",
   "deliveryFile": "games-lib-screenshots/Tien gow Tin Kau 天九 ve.txt",
-  "records": 5,
-  "founderSupplied": 5,
+  "records": 9,
+  "founderSupplied": 9,
   "independentlyVerified": 0,
   "bibliographyComplete": 0,
-  "bibliographyIncomplete": 5,
+  "bibliographyIncomplete": 9,
   "games": [
+    "achi",
     "bao-la-kiswahili",
     "gomoku",
     "jianzi",
+    "mbube-mbube",
+    "polis",
     "royal-game-of-ur",
+    "sugoroku",
     "tien-gow"
   ]
 }

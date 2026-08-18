@@ -2,7 +2,7 @@
   "status": "pass",
   "measuredOn": "phase5",
   "measuredAtGate": "phase1",
-  "sampleSize": 34,
+  "sampleSize": 38,
   "sampleGames": [
     "tablut",
     "yut-nori",
@@ -37,9 +37,13 @@
     "jianzi",
     "gomoku",
     "royal-game-of-ur",
-    "bao-la-kiswahili"
+    "bao-la-kiswahili",
+    "sugoroku",
+    "mbube-mbube",
+    "achi",
+    "polis"
   ],
-  "sampleCaveat": "Örneklem 34 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
+  "sampleCaveat": "Örneklem 38 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
   "geometry": {
     "trimWidthMm": 215.9,
     "trimHeightMm": 279.4,
@@ -518,26 +522,78 @@
       "measuredPages": 1.648,
       "billedPages": 2,
       "overflowsSpread": false
+    },
+    {
+      "gameId": "sugoroku",
+      "words": 620,
+      "textHeightMm": 284.2,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 1.174,
+      "diagramPages": 0.0,
+      "measuredPages": 1.174,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "mbube-mbube",
+      "words": 612,
+      "textHeightMm": 273.0,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 1.128,
+      "diagramPages": 0.0,
+      "measuredPages": 1.128,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "achi",
+      "words": 602,
+      "textHeightMm": 288.7,
+      "diagramHeightMm": 81.0,
+      "diagrams": [
+        "achi-wheel"
+      ],
+      "textPages": 1.193,
+      "diagramPages": 0.335,
+      "measuredPages": 1.528,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "polis",
+      "words": 687,
+      "textHeightMm": 302.3,
+      "diagramHeightMm": 55.0,
+      "diagrams": [
+        "polis-capture"
+      ],
+      "textPages": 1.249,
+      "diagramPages": 0.227,
+      "measuredPages": 1.477,
+      "billedPages": 2,
+      "overflowsSpread": false
     }
   ],
-  "avgWordsPerGame": 734.8,
-  "measuredWordsPerPage": 463.1,
+  "avgWordsPerGame": 723.8,
+  "measuredWordsPerPage": 464.2,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.587,
-  "avgBilledPagesPerGame": 2.059,
-  "avgTextPagesPerGame": 1.308,
-  "avgDiagramPagesPerGame": 0.278,
+  "avgMeasuredPagesPerGame": 1.559,
+  "avgBilledPagesPerGame": 2.053,
+  "avgTextPagesPerGame": 1.295,
+  "avgDiagramPagesPerGame": 0.264,
   "spreadOverflowGames": [
     "tablut"
   ],
-  "spreadOverflowRate": 0.029,
+  "spreadOverflowRate": 0.026,
   "finding": "Metin farkı (0.69 sayfa) ve diyagram farkı (0.63) AYNI büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden denetlemek zorundadır.",
   "overflowDriver": "both",
   "textSpreadPages": 0.686,
   "diagramSpreadPages": 0.628,
-  "projectedBodyPages": 206,
-  "projectedTotalPages": 256,
+  "projectedBodyPages": 205,
+  "projectedTotalPages": 254,
   "pageTarget": 256,
-  "deviationPct": 0.0,
+  "deviationPct": -0.78,
   "withinTolerance": true
 }

@@ -49,8 +49,8 @@
     "hunt-siege": 6,
     "race": 10,
     "sowing": 12,
-    "territory": 10,
-    "war-board": 13
+    "territory": 9,
+    "war-board": 12
   },
   "games": [
     {
@@ -1308,7 +1308,7 @@
       "reconstructionStatus": "not-reconstructed",
       "diagramComplexity": "low",
       "expectedPageWeight": 1.4,
-      "manuscriptStatus": "not-started",
+      "manuscriptStatus": "draft",
       "blocker": null,
       "deferralReason": null,
       "editorialHold": null
@@ -1938,7 +1938,7 @@
       "reconstructionStatus": "documented",
       "diagramComplexity": "low",
       "expectedPageWeight": 1.4,
-      "manuscriptStatus": "not-started",
+      "manuscriptStatus": "draft",
       "blocker": null,
       "deferralReason": null,
       "editorialHold": null
@@ -1959,7 +1959,7 @@
       "reconstructionStatus": "not-reconstructed",
       "diagramComplexity": "low",
       "expectedPageWeight": 1.4,
-      "manuscriptStatus": "not-started",
+      "manuscriptStatus": "draft",
       "blocker": "kaynak erişimi",
       "deferralReason": "kaynak DENENDİ ve erişilemedi",
       "editorialHold": null
@@ -2085,7 +2085,7 @@
       "reconstructionStatus": "not-reconstructed",
       "diagramComplexity": "low",
       "expectedPageWeight": 1.4,
-      "manuscriptStatus": "not-started",
+      "manuscriptStatus": "draft",
       "blocker": "kural kimliği çözülmedi",
       "deferralReason": "KORE CİLDİ TUZAĞI — Faz 4'te işaretlendi, Faz 5'te doğrulandı",
       "editorialHold": null
