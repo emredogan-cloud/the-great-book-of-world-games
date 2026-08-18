@@ -100,6 +100,30 @@ jobs:
           else
             echo "::notice::build_queue.py henüz yok — Faz 4 teslimatı"
           fi
+      # ── KURUCU ARAŞTIRMA BOŞLUK KAYDI ───────────────────────────────
+      # Kayıt manuscript'e BAKMADAN üretilebilir: yazılmış küme kapsamdan
+      # TÜRETİLİR (kapsam − kayıt − yazılabilir). Bu kasıtlıdır — manuscript
+      # depoda yoktur (K12) ve kayıt yalnızca yerelde doğrulanan bir belge
+      # olsaydı sessizce bayatlardı.
+      #
+      # Kapı ayrıca bir ÖRTÜŞME denetimi yapar: bir oyun yazıldığı hâlde
+      # kayıttan düşmezse kırmızı yanar ve kurucu ÇÖZÜLMÜŞ bir engeli
+      # araştırmaya gönderilmez.
+      - name: kurucu boşluk kaydı güncel mi
+        run: |
+          if [ -f 04_BUILD/build_gap_register.py ]; then
+            python3 04_BUILD/build_gap_register.py --check
+          else
+            echo "::notice::build_gap_register.py henüz yok"
+          fi
+      # Teslim dizini yoksa BOŞ KOŞAR ve 0 döner (kurucu § 17).
+      - name: kurucu teslim alımı
+        run: |
+          if [ -f 04_BUILD/founder_delivery_ingest.py ]; then
+            python3 04_BUILD/founder_delivery_ingest.py --check
+          else
+            echo "::notice::founder_delivery_ingest.py henüz yok"
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -1,5 +1,19 @@
 # KÜTÜPHANECİ İSTEK LİSTESİ — Faz 5
 
+> ⛔ **BU LİSTE AŞILMIŞTIR (18 Ağustos 2026).** İki sayısı da artık
+> yanlıştır: *"yazılmamış oyun: 71"* — bugün **59**'dur; ve § 1'deki
+> şans ailesi listesi **K28 kapsam değişikliğinden ÖNCEDİR** (aile
+> 15 → 4'e indi, on bir madde kapsamdan çıktı).
+>
+> **Güncel istek listesi:**
+> [`FOUNDER_RESEARCH_PACK.md`](FOUNDER_RESEARCH_PACK.md) — kaynak kaynak,
+> insan araştırmacı için · tam kayıt:
+> [`FOUNDER_RESEARCH_GAP_REGISTER.md`](FOUNDER_RESEARCH_GAP_REGISTER.md)
+>
+> Bu dosya **silinmiyor**: K28 kütüphaneci yolunun ilk biçimidir ve
+> teslimin nasıl istendiğinin tarihidir. Ama **istek olarak
+> kullanılmaz**.
+
 > **Üretilen dosya.** Karar K28 uyarınca: kurucu kaynak metnini sağlar,
 > ajan uydurmaz. Her satır **tam künyeyi** ve **ihtiyaç duyulan bölümü**
 > verir.

@@ -92,7 +92,8 @@ Yeşilse CI de yeşil olur. Kırmızıysa ilerleme yoktur.
 03_APLUS/       A+ içerik modülleri
 04_BUILD/       doğrulayıcılar, kalite kapıları, üretim hattı
 05_TESTS/       kapıların kendi testi ve kurgu üreteci
-06_REPORTS/     ölçüm raporları ve faz raporları
+06_REPORTS/     ölçüm raporları, faz raporları ve kurucu araştırma kaydı
+06_FOUNDER_DELIVERY/  kurucunun bulduğu kaynaklar — ham teslim DEPO DIŞINDA
 07_ASSETS/      görseller: raw (salt okunur) → processed → print/kindle/web
 08_OUTPUT/      üretilmiş yayın dosyaları — depoda durmaz
 09_ARCHIVE/     düşen maddeler ve devre dışı sürümler

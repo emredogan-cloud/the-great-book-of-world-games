@@ -5,6 +5,95 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.5.7] — 2026-08-18 · FAZ 5 · KURUCU ARAŞTIRMA BOŞLUK KAYDI
+
+**Yazılan oyun: 0.** Bu bir üretim değil bir **ölçüm** teslimidir:
+kurucunun § 3 direktifi, yazılamayan her oyunun **neden** yazılamadığını
+ve kurucunun **tam olarak neyi** araması gerektiğini tek bir yetkili
+kayda toplamayı istedi.
+
+### Ölçüm — 59 değil, 52
+
+| | |
+|---|---:|
+| Kapsam | 100 |
+| Yazılmış | 41 |
+| **Kurucu müdahalesi OLMADAN yazılabilir** | **7** |
+| **Kurucu araştırması GEREKEN** | **52** |
+
+Batch 6 raporu *"kalan 59 oyunun 52'sinin kaynağı erişilemez"* diyordu.
+Bu doğruydu ama **eksikti**: kurucuya hangi yedisinin kendi müdahalesini
+gerektirmediğini söylemiyordu. Yedi oyun (`gilli-danda` · `chaupar` ·
+`tabula` · `nine-holes` · `alquerque` · `tuknanavuhpi` ·
+`ludus-latrunculorum`) elde bulunan derlemelerde **gerçek isabete**
+sahiptir ve kurucu beklemeden yazılır. Onları engelli listesinde
+göstermek, kurucuyu **gereksiz** bir araştırmaya göndermekti.
+
+### İki eksen — karıştırılmıyor
+
+`status` kaynak avının **kanıt** durumudur (`BLOCKED` 34 ·
+`SOURCE-PENDING` 16 · `UNRESOLVED` 2); `primaryBlocker` oyunun
+**yazılamama sebebidir** (`P1`…`P10`). Denenmemiş bir kaynağa *engelli*
+demek Faz 3'ün hatasıydı; 59 maddeyi tek bir duvar olarak sunmak Faz
+5'in riskiydi. **İkisi de yapılmadı.**
+
+`UNATTEMPTED` **sıfırdır** ve bu ölçülmüştür: Batch 6'da kalan 59 oyunun
+tamamı elde bulunan on kamusal alan derlemesine karşı tarandı.
+
+### En önemli tek bulgu — 52 araştırma değil, 5 kitap
+
+**Murray 1952 tek başına 24 madde açar.** Parlett 1999 · Zaslavsky 1973 ·
+Bell 1960–69 · Russ 2000 eklenirse **46/52**. Kayıt bu yüzden **iki
+biçimde** basıldı: oyun oyun (kayıt) ve **kaynak kaynak** (paket) —
+çünkü kütüphaneye bir oyun için değil bir **kitap** için gidilir.
+
+Kalan altısı (`ephedrismos` · `kho-kho` · `lagori` · `mu-torere` ·
+`myinda` · `gebeta`) ayrı ayrı avlanmak zorundadır.
+
+### Ne kaybediliyor — ölçüldü
+
+Çözülmezse kitap **38 kültür** ve **dokuz bölge** kaybeder (Oceania ·
+Central Asia · Iberia · Horn of Africa · South America · Central
+Europe · Southern Europe · North-East Africa · Anatolia). Ekim ailesi
+14 hedefinde **2**'de kalır.
+
+### Yeni dosyalar
+
+| dosya | ne |
+|---|---|
+| `06_REPORTS/FOUNDER_RESEARCH_GAP_REGISTER.md` | oyun oyun · § 6'nın on beş alanı |
+| `06_REPORTS/FOUNDER_RESEARCH_PACK.md` | kaynak kaynak · insan araştırmacı için |
+| `01_SOURCE/founder_research_gap_register.json` | makine okunur |
+| `04_BUILD/build_gap_register.py` | üretir + `--check` |
+| `04_BUILD/founder_delivery_ingest.py` | teslim alır · hash'ler · künye denetler |
+| `06_FOUNDER_DELIVERY/` | teslim dizini — **ham teslim `.gitignore`da** |
+
+### Yeni kapılar — ikisi de CI'da
+
+`build_gap_register --check` bir **örtüşme** denetimi yapar:
+kapsam = yazılmış + yazılabilir + engelli. Bir oyun **yazıldığı hâlde**
+kayıttan düşmezse CI kırmızı yanar — yani kurucu **çözülmüş** bir engeli
+araştırmaya gönderilmez. Kayıt manuscript'e **bakmadan** üretilir
+(yazılmış küme kapsamdan türetilir) ama manuscript **eldeyse** türetim
+onunla karşılaştırılır.
+
+`founder_delivery_ingest --check` teslim yoksa **boş koşar** (§ 17).
+
+### Aşılan ve düzeltilen kayıtlar
+
+- `06_REPORTS/LIBRARIAN_REQUEST_LIST.md` **aşılmış** olarak işaretlendi:
+  iki sayısı da yanlıştı (71 → 59; şans ailesi listesi K28 öncesiydi).
+  **Silinmedi** — K28 yolunun tarihidir.
+- `01_SOURCE/source_access_pending.json` bir **durum notu** aldı:
+  beş engelli kaydın dördü (`mbube-mbube` · `astragaloi` ·
+  `bao-la-kiswahili` · `royal-game-of-ur`) kütüphaneci teslimiyle
+  çözülmüştü ve dosya hâlâ *"deferred"* diyordu. Kayıt dizilerine
+  **dokunulmadı** (§ 23: engelli-oyun tarihi silinmez).
+
+**Karar:** K30.
+
+---
+
 ## [0.5.1] — 2026-08-14 · FAZ 5 · ÜRETİM — K24 istisnası ve üç oyun
 
 **Yazılan: 3 oyun** (manuscript **20 → 23**).

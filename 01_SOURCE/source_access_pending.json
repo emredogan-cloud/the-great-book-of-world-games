@@ -32,7 +32,23 @@
     "ayrıldı: kaynağı TAM ve sayfa-doğrulanmış olduğu hâlde, kitabın kendi",
     "üretim kuralları yüzünden yazılamayan madde. Bu ne bir erişim engeli",
     "(P4) ne de bir kayıt boşluğudur (P6): kaynak masada durur ve yeterlidir.",
-    "Engel kitabın İÇİNDEDİR ve çözümü kurucu kararıdır."
+    "Engel kitabın İÇİNDEDİR ve çözümü kurucu kararıdır.",
+    "",
+    "FAZ 5 · BATCH 6 SONRASI DURUM NOTU (2026-08-18).",
+    "",
+    "Bu dosyanın `games`, `unresolvedIdentity` ve `amendmentSourceGaps`",
+    "dizileri TARİHTİR ve SİLİNMEZ: bir engelin bir zamanlar var olduğu",
+    "kaydı, engelin çözülmesiyle yanlış olmaz. Ama hangi kaydın HÂLÂ",
+    "geçerli olduğu ayrıca söylenmelidir — yoksa dosya doğru bir tarihle",
+    "yanlış bir bugünü aynı anda anlatır.",
+    "",
+    "GÜNCEL DURUM ARTIK ŞURADADIR:",
+    "  06_REPORTS/FOUNDER_RESEARCH_GAP_REGISTER.md   oyun oyun",
+    "  06_REPORTS/FOUNDER_RESEARCH_PACK.md           kaynak kaynak",
+    "  01_SOURCE/founder_research_gap_register.json  makine okunur",
+    "",
+    "Aşağıdaki `stillBlocked` alanı bu dosyadaki kayıtların hangisinin",
+    "bugün hâlâ engelli olduğunu söyler ve kayıt dizilerine DOKUNMAZ."
   ],
   "generatedAtPhase": "phase5-batch4",
   "count": 5,
@@ -267,5 +283,35 @@
       "resolvedOn": "2026-08-18",
       "resolution": "KURUCU KÜTÜPHANECİ TESLİMİ tam kural setini sağladı."
     }
-  ]
+  ],
+  "stillBlocked": {
+    "$note": "Bu alan ÜRETİLMİŞ bir özet değil, elle tutulan bir DURUM notudur ve kayıt dizilerini değiştirmez. Kanonik sayım 01_SOURCE/founder_research_gap_register.json içindedir.",
+    "measuredOn": "2026-08-18",
+    "accessBlockedStillOpen": [
+      "mahjong"
+    ],
+    "accessBlockedResolvedSince": {
+      "gameIds": [
+        "mbube-mbube",
+        "astragaloi",
+        "bao-la-kiswahili",
+        "royal-game-of-ur"
+      ],
+      "how": "K28/K29 kütüphaneci yolu — kurucu kaynak sağladı. Kayıtlar founderSupplied=true · independentVerification=false taşır; Finkel · de Voogt · Zaslavsky · Pollux için projenin ENGELLİ kayıtları OLDUĞU GİBİ durur ve hiçbir madde o kitapların okunduğunu iddia etmez."
+    },
+    "unresolvedIdentityStillOpen": [
+      "go"
+    ],
+    "unresolvedIdentityResolvedSince": {
+      "gameIds": [
+        "sugoroku"
+      ],
+      "how": "sugoroku kütüphaneci teslimiyle yazıldı. `go` ÇÖZÜLMEDİ: teslim Çin kaynağını içermiyordu ve madde P5'te durur."
+    },
+    "amendmentSourceGapsStillOpen": [
+      "lagori",
+      "kho-kho"
+    ],
+    "notYetAttemptedNowZero": "Batch 6'da kalan 59 oyunun TAMAMI elde bulunan kamusal alan derlemelerine karşı tarandı. `notYetAttempted: 82` alanı FAZ 4 ÖLÇÜMÜDÜR ve tarih olarak durur; bugünkü değeri SIFIRDIR."
+  }
 }

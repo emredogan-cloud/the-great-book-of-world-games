@@ -96,3 +96,25 @@ __pycache__/
 !07_ASSETS/diagrams/diagram_language.json
 !07_ASSETS/diagrams/pilot_diagrams.json
 !07_ASSETS/diagrams/phase3_diagrams.json
+
+# ── KURUCU HAM TESLİMİ · karar K12 ile AYNI GEREKÇE ────────────────────────
+# 06_FOUNDER_DELIVERY/ kurucunun bulduğu KAYNAKLARIN bırakıldığı yerdir ve
+# içinde telifli tarama, PDF ve ekran görüntüsü bulunur. Bunları public bir
+# depoya koymak, kitabın kaynak standardının kendisini ihlal eder.
+#
+# Depoda YALNIZCA iki şey durur: dizinin YAPISI (README) ve her oyun için
+# NE İSTENDİĞİ (REQUEST.md). Teslimin KENDİSİ yereldedir; depoya giren tek
+# ölçüm 06_REPORTS/founder-delivery-ingest.json içindeki hash ve künye
+# durumudur — yani teslimin VARLIĞI denetlenebilir, İÇERİĞİ sızmaz.
+06_FOUNDER_DELIVERY/*
+!06_FOUNDER_DELIVERY/README.md
+!06_FOUNDER_DELIVERY/*/
+06_FOUNDER_DELIVERY/*/*
+!06_FOUNDER_DELIVERY/*/REQUEST.md
+
+# ── ÖNCEKİ KURUCU TESLİMİ · aynı gerekçe ───────────────────────────────────
+# `games-lib-screenshots/` K28/K29 kütüphaneci teslimidir: telifli kaynak
+# ekran görüntüleri ve kural özetleri taşır. TAKİP EDİLMİYORDU ama
+# KORUNMUYORDU da — tek bir `git add -A` onu public depoya sokardı.
+# Niyet ile koruma aynı şey değildir; bu satır ikincisidir.
+games-lib-screenshots/

@@ -188,6 +188,10 @@ Tam yol haritası: [`THE_GREAT_BOOK_OF_WORLD_GAMES_IMPLEMENTATION_ROADMAP.md`](T
 | [`BOOK_STATS.md`](BOOK_STATS.md) | Ölçülen sayılar | **üretilir** |
 | [`ROADMAP_PROGRESS.md`](ROADMAP_PROGRESS.md) | Faz ilerlemesi | **üretilir** |
 | `project_config.json` | Makine okunur tek doğruluk kaynağı | kurucu onayıyla |
+| [`06_REPORTS/FOUNDER_RESEARCH_GAP_REGISTER.md`](06_REPORTS/FOUNDER_RESEARCH_GAP_REGISTER.md) | **Yazılamayan her oyun** · engel sınıfı · kurucunun tam olarak neyi araması gerektiği | **üretilir** |
+| [`06_REPORTS/FOUNDER_RESEARCH_PACK.md`](06_REPORTS/FOUNDER_RESEARCH_PACK.md) | Aynı kayıt **kaynağa göre** — insan araştırmacı için çalışma paketi | **üretilir** |
+| `01_SOURCE/founder_research_gap_register.json` | Kaydın makine okunur biçimi | `build_gap_register.py` |
+| [`06_FOUNDER_DELIVERY/README.md`](06_FOUNDER_DELIVERY/README.md) | Teslim biçimi ve alım hattı | sabit |
 
 ---
 

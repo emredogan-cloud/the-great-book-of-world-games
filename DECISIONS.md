@@ -896,6 +896,100 @@ içermiyor.
 
 ---
 
+### K30 · KURUCU ARAŞTIRMA BOŞLUK KAYDI — "kalan" ile "engelli" AYRI ŞEYLERDİR
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 18 Ağustos 2026
+
+Kurucu, kalan 59 oyunun **tek tek** ne durumda olduğunu ve **kendisinin
+tam olarak neyi araştırması gerektiğini** istedi. Bu, projenin en sık
+yaptığı iki hatanın ikisini birden kapatan bir karardır.
+
+#### İki hata, iki yönde
+
+Faz 3 **denenmemiş** bir oyuna *engelli* dedi. Faz 5 raporu ise tersini
+riske attı: 59 oyunu tek bir "kaynak duvarı" olarak sundu ve kurucuya
+**hangisinin gerçekten kendi müdahalesini gerektirdiğini** söylemedi.
+
+Kayıt bunu **iki ayrı eksenle** çözer ve eksenler karıştırılmaz:
+
+| eksen | ne ölçer | değerler |
+|---|---|---|
+| `status` | kaynak avının **kanıt** durumu | `BLOCKED` · `SOURCE-PENDING` · `UNRESOLVED` |
+| `primaryBlocker` | oyunun **yazılamama sebebi** | `P1`…`P10` |
+
+Bir oyun `SOURCE-PENDING` olup `P2` taşıyabilir: *künyesi var, HENÜZ
+denenmedi, ama denendiğinde açılabilir metin bulunması beklenmiyor.*
+Buna "engelli" demek Faz 3'ün hatasını tekrarlardı; "sırada" demek Faz
+5'in hatasını tekrarlardı. **İkisi de söylenmiyor; ölçülen söyleniyor.**
+
+#### Ölçüm
+
+| | |
+|---|---:|
+| Kapsam | 100 |
+| Yazılmış | 41 |
+| **Kurucu müdahalesi OLMADAN yazılabilir** | **7** |
+| **Kurucu araştırması GEREKEN** | **52** |
+| ↳ `BLOCKED` — denendi, açılamadı | 34 |
+| ↳ `SOURCE-PENDING` — künye var, denenmedi | 16 |
+| ↳ `UNRESOLVED` — kaynak açık, kültür uyuşmuyor | 2 |
+| `UNATTEMPTED` | **0** |
+
+`UNATTEMPTED` **sıfırdır**: Batch 6'da kalan 59 oyunun tamamı elde
+bulunan kamusal alan derlemelerine karşı tarandı. Artık "henüz
+bakılmadı" diyebileceğimiz bir oyun yok.
+
+#### En önemli tek bulgu
+
+**Murray 1952 tek başına 52 maddenin 24'ünü açar.** Ona Parlett 1999,
+Zaslavsky 1973, Bell 1960–69 ve Russ 2000 eklenirse **46'sı** açılır.
+Yani kurucunun önündeki iş 52 ayrı araştırma değil, **beş kitaptır**.
+
+Bu, K28'in kütüphaneci yolunu **ölçülebilir** kılar: teslim istekleri
+artık oyun oyun değil **eser eser** düzenlenir, çünkü kütüphaneye bir
+oyun için değil bir kitap için gidilir.
+
+#### Yeni kapılar
+
+| kapı | ne yapar |
+|---|---|
+| `build_gap_register.py --check` | kayıt bayat mı · **kapsam = yazılmış + yazılabilir + engelli** örtüşme denetimi |
+| `founder_delivery_ingest.py --check` | teslimi alır · hash'ler · künye denetler; **teslim yoksa BOŞ KOŞAR** |
+
+Örtüşme denetimi bir dürüstlük kapısıdır: bir oyun **yazıldığı hâlde**
+kayıttan düşmezse CI kırmızı yanar — yani kurucu **çözülmüş** bir engeli
+araştırmaya gönderilmez.
+
+Kayıt manuscript'e **bakmadan** üretilebilir: yazılmış küme kapsamdan
+türetilir (kapsam − kayıt − yazılabilir) ve manuscript **eldeyse**
+türetim onunla karşılaştırılır. Bu kasıtlıdır — manuscript depoda yoktur
+(K12) ve kayıt yalnızca yerelde doğrulanan bir belge olsaydı sessizce
+bayatlardı.
+
+#### Ham teslim depoya GİRMEZ
+
+`06_FOUNDER_DELIVERY/` telifli tarama taşır ve `.gitignore`dadır;
+gerekçe K12 ile aynıdır. Depoda yalnızca **dizinin yapısı** (`README.md`),
+**ne istendiği** (`REQUEST.md`) ve **ölçüm** (`06_REPORTS/founder-delivery-ingest.json`
+içindeki hash + künye durumu) durur. Teslimin **varlığı** denetlenebilir,
+**içeriği** sızmaz.
+
+#### Makine bir PDF'in içinde kural olup olmadığına karar VEREMEZ
+
+Alım betiği mekanik doğrulama yapar ve orada **durur**:
+`awaiting-agent-extraction`. Kanıt listesini ajan **sayfayı okuyarak**
+işaretler. Bir taramayı görüp "kural tam" demek, sayfayı açmadan künye
+yazmakla aynı hatadır — K17'nin kendisi budur.
+
+**Belgeler:** `06_REPORTS/FOUNDER_RESEARCH_GAP_REGISTER.md` (oyun oyun) ·
+`06_REPORTS/FOUNDER_RESEARCH_PACK.md` (kaynak kaynak) ·
+`01_SOURCE/founder_research_gap_register.json` (makine okunur)
+
+> Kurucuya "52 oyun kaldı" demek bir rapordur.
+> "Beş kitap bul, 46'sı açılır" demek bir **plandır**.
+
+---
+
 ### K28 · ŞANS AİLESİ 15 → 4 · ON BİR SLOT YEDEKTEN DOLDURULDU
 
 **Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 18 Ağustos 2026

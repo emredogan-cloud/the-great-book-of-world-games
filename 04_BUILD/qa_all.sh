@@ -154,6 +154,20 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
   run "MANUSCRIPT BÜTÜNLÜĞÜ"    $PY 04_BUILD/qa_manuscript.py \
                                    --json 06_REPORTS/qa-manuscript.json
 
+# ── KURUCU ARAŞTIRMA KAYDI ─────────────────────────────────────────────────
+# Kayıt ÜRETİLİR ve burada BAYAT MI diye denetlenir. Bayat bir boşluk kaydı,
+# kurucuyu ÇÖZÜLMÜŞ bir engeli araştırmaya gönderir — yani yanlış olmakla
+# kalmaz, insan emeğini çöpe atar.
+#
+# Kapı ayrıca bir ÖRTÜŞME denetimi yapar: kapsam = yazılmış + yazılabilir +
+# engelli. Bir oyun yazıldığı hâlde kayıttan düşmezse burası kırmızı yanar.
+[ -f 04_BUILD/build_gap_register.py ] && \
+  run "KURUCU BOŞLUK KAYDI"     $PY 04_BUILD/build_gap_register.py --check
+# Teslim dizini yoksa BOŞ KOŞAR ve 0 döner (§ 17: teslim gelmeden sonraki
+# aşamalar çalıştırılmaz).
+[ -f 04_BUILD/founder_delivery_ingest.py ] && \
+  run "kurucu teslim alımı"     $PY 04_BUILD/founder_delivery_ingest.py --check
+
 # ── FAZ 5 KAPILARI ─────────────────────────────────────────────────────────
 # Arka madde ÜRETİLİR (build_backmatter.py) ve burada DENETLENİR. Üretilmiş
 # bir dosya, denetlenmedikçe elle yazılmış bir dosyadan güvenli değildir:

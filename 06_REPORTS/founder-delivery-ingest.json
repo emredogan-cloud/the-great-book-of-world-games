@@ -1,0 +1,262 @@
+{
+  "$comment": [
+    "KURUCU TESLİM ALIMI — public yapısal özet.",
+    "Kural metni BURADA DURMAZ; yalnızca hash, künye durumu ve bayraklar.",
+    "Ham teslim 06_FOUNDER_DELIVERY/ altındadır ve TAKİP EDİLMEZ:",
+    "telifli tarama public bir depoya konmaz (K12 ile aynı gerekçe).",
+    "",
+    "`awaiting-agent-extraction` bir başarısızlık DEĞİLDİR: makine bir",
+    "PDF'in içinde kural olup olmadığına karar veremez. Kanıt listesini",
+    "ajan SAYFAYI OKUYARAK işaretler — K17'nin kendisi budur."
+  ],
+  "deliveryRoot": "06_FOUNDER_DELIVERY/",
+  "gamesWithFolder": 10,
+  "delivered": 0,
+  "awaitingDelivery": 10,
+  "errors": 0,
+  "bibliographyComplete": 0,
+  "lockable": 0,
+  "independentlyVerified": 0,
+  "records": [
+    {
+      "gameId": "adji-boto",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2389,
+          "sha256": "5c47cffa1181f89996d26f7eb0e9afcc3349d6632f55e33057898025fdc8f8aa"
+        }
+      ],
+      "bytes": 2389,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Adji-boto",
+      "family": "sowing",
+      "culture": "Ndyuka Maroon",
+      "primaryBlocker": "P2",
+      "priorityClass": "B",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "bagh-chal",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2363,
+          "sha256": "4a0693b6b5879ed9625802ae2c42301bbcf2dee0027bdd4e2aac2a8ad43257cc"
+        }
+      ],
+      "bytes": 2363,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Bagh-Chal",
+      "family": "hunt-siege",
+      "culture": "Nepali",
+      "primaryBlocker": "P1",
+      "priorityClass": "A",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "bohnenspiel",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2405,
+          "sha256": "72f12b3de842e29dac7452a3572ea438505061fd37da94065d0d4e2751c49acd"
+        }
+      ],
+      "bytes": 2405,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Bohnenspiel",
+      "family": "sowing",
+      "culture": "German",
+      "primaryBlocker": "P1",
+      "priorityClass": "A",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "congklak",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2529,
+          "sha256": "fa8a0abd238cf465f513e0b370d0c56feabe6d1473c9a8ce212dae38469abb69"
+        }
+      ],
+      "bytes": 2529,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Congklak",
+      "family": "sowing",
+      "culture": "Javanese",
+      "primaryBlocker": "P1",
+      "priorityClass": "A",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "konane",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2960,
+          "sha256": "dcc296d921fb7729d26b1f73438ad416a165b490de5b3db13ef07884bdf65540"
+        }
+      ],
+      "bytes": 2960,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Kōnane",
+      "family": "war-board",
+      "culture": "Hawaiian",
+      "primaryBlocker": "P2",
+      "priorityClass": "C",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "morra",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2121,
+          "sha256": "5e4d9fda242ebde367cfb43540284d2707e38db7daa0b2e9768012fb5ee0ce03"
+        }
+      ],
+      "bytes": 2121,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Morra",
+      "family": "boardless",
+      "culture": "Italian",
+      "primaryBlocker": "P3",
+      "priorityClass": "A",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "mu-torere",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2880,
+          "sha256": "e41a9297c35b656e2848afe562205e36d5f1d4287e0dc9f13a2ef30a07d5f5f4"
+        }
+      ],
+      "bytes": 2880,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Mū Tōrere",
+      "family": "territory",
+      "culture": "Māori",
+      "primaryBlocker": "P2",
+      "priorityClass": "C",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "oware",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2992,
+          "sha256": "7d620f66358ee8c2aaa68f508ad7e0b5486cca16b7cba5fcf2c34186e679037a"
+        }
+      ],
+      "bytes": 2992,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Oware",
+      "family": "sowing",
+      "culture": "Akan",
+      "primaryBlocker": "P1",
+      "priorityClass": "A",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "sungka",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2618,
+          "sha256": "252e2ee65fdfde25889118797afd7b6cc8714a666c5a17f1a9d6b5b4ef21e6c1"
+        }
+      ],
+      "bytes": 2618,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Sungka",
+      "family": "sowing",
+      "culture": "Visayan",
+      "primaryBlocker": "P2",
+      "priorityClass": "A",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "yote",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2547,
+          "sha256": "a48a0bb35181065082dafb5981fc555aa62561ccbfadf247c43c97f8a577dd88"
+        }
+      ],
+      "bytes": 2547,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Yoté",
+      "family": "war-board",
+      "culture": "Wolof",
+      "primaryBlocker": "P2",
+      "priorityClass": "C",
+      "state": "awaiting-delivery"
+    }
+  ]
+}
