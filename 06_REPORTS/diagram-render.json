@@ -407,6 +407,20 @@
       "withinDiagramBudget": true
     },
     {
+      "diagramId": "janggi-camp",
+      "gameId": "janggi",
+      "widthMm": 68.0,
+      "heightMm": 84.0,
+      "legendMm": 9.0,
+      "boardClass": "point",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/janggi-camp.svg",
+      "renderedWidthMm": 68.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
       "diagramId": "tablut-setup",
       "gameId": "tablut",
       "widthMm": 75.0,

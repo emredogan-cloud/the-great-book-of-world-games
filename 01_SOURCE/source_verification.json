@@ -682,6 +682,18 @@
       "accessMethod": "archive.org tam metin — kamusal alan",
       "status": "verified",
       "note": "Çıplak şah ve kilitlenme kuralları Forbes'ta YOKTUR; madde ikisini de editoryal olarak işaretliyor. Forbes'un tarih tezi kullanılmadı."
+    },
+    {
+      "gameId": "janggi",
+      "sourceRef": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+      "edition": "Cornell nüshası (NOT_IN_COPYRIGHT) — archive.org cu31924023272424",
+      "locator": "§ LXXIV 'Tjyang-keui — Chess' (W. H. Wilkinson), ss. 82–89",
+      "supportingPassage": "Korean chess, Tjyang-keui […] is admittedly a variant of Chinese, yet […] there are some important differences […] the files are carried across the 'river,' which is, in fact, ignored […] except that the King is placed in the centre of his 'camp,' and that the 'Horse' and 'Elephant' are interchangeable […] The moves of these pieces follow two general laws […] The first is that the pieces invariably take as they move; the second, that, within their limitations, they move along any marked line. […] neither they nor the river files must be left out on the Korean [board]. […] the Chariot […] may move from one corner of the 'camp' to the centre, or […] to the corner diagonally opposite, because those points are connected by a marked line. […] The General, or King […] may move from his original position at the centre on to any one of the nine points in his camp, but he can never leave his camp. […] the other is allowed, should opportunity occur, to check his opponent's King with his own […] the act of checking the opponent's King with one's own is in itself a confession of inferiority […] If he is the only piece on his side […] he is allowed, as the equivalent of a move, to turn over and remain in his original position.",
+      "supportedClaim": "Kore satrancının Çin'den FARKLARI: nehir dosyaları karşıya taşınır ve nehir yok sayılır; şah hisarın MERKEZİNDE başlar; at ve fil DEĞİŞTİRİLEBİLİR. İKİ GENEL YASA: taşlar hareket ettikleri gibi alır; taşlar ÇİZİLİ HER çizgi boyunca gidebilir. Hisar köşegenleri Kore tahtasından çıkarılamaz. Araba ve top köşegenleri kullanır. Şah hisarın dokuz noktasında bir adım gider ve hisarı terk edemez. KAYBEDEN TARAF AYRICALIKLARI: kendi şahıyla şah çekerek berabere zorlama (aşağılık itirafı) ve tek kalan şahın PAS geçmesi.",
+      "verifiedOn": "2026-08-18",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "W. H. Wilkinson Seul'de görevli İngiliz konsolos vekiliydi ve bölümü Culin için YAZDI; Britanya Elçiliği bahçesinde oynanan bir oyunu örnek verir. BİRİNCİ EL gözlem, derleme değil. Fil ve atın adımları Çin oyununa havale edilir; madde onları editoryal olarak yazar ve işaretler."
     }
   ]
 }

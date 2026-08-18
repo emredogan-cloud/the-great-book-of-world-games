@@ -432,16 +432,16 @@
       ],
       "measured": {
         "wordsPerTypesetPage": 467,
-        "wordsPerGame": 726,
-        "textPagesPerGame": 1.299,
-        "diagramPagesPerGame": 0.256,
-        "measuredPagesPerGame": 1.555,
-        "billedPagesPerGame": 2.05,
-        "spreadOverflowRate": 0.025,
+        "wordsPerGame": 730,
+        "textPagesPerGame": 1.303,
+        "diagramPagesPerGame": 0.259,
+        "measuredPagesPerGame": 1.562,
+        "billedPagesPerGame": 2.049,
+        "spreadOverflowRate": 0.024,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 40,
+        "sampleSize": 41,
         "projectedTotalPages": 254,
         "deviationPct": -0.78,
         "withinTolerance": true,
@@ -570,7 +570,8 @@
           "  polis). Model ilk kez hedefin ALTINA indi (254 < 256): eklenen",
           "  maddeler kisa metinli ve kucuk diyagramlidir.",
           "",
-          "FAZ 5 · BATCH 6 (40 oyun): 254 sayfa · sapma -0.8%"
+          "FAZ 5 · BATCH 6 (40 oyun): 254 sayfa · sapma -0.8%",
+          "  batch 6b (41 oyun): 254 sayfa · -0.8%"
         ]
       },
       "$comment": [

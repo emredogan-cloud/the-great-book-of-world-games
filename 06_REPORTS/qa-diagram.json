@@ -4,9 +4,9 @@
   "errors": [],
   "warnings": [],
   "facts": {
-    "diagrams": 37,
+    "diagrams": 38,
     "byClass": {
-      "point": 17,
+      "point": 18,
       "pit": 2,
       "track": 2,
       "bodily": 4,
@@ -15,7 +15,7 @@
     "diagramMm": {
       "min": 36.1,
       "max": 107.0,
-      "mean": 68.9,
+      "mean": 69.3,
       "limit": 150
     }
   }
