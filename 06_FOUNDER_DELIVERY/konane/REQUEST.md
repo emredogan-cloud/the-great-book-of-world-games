@@ -7,7 +7,7 @@
 | **oyun** | Kōnane |
 | **kültür** | Hawaiian · Oceania |
 | **aile** | war-board |
-| **öncelik** | C · bileşik puan 20.6 |
+| **öncelik** | C · bileşik puan 20.4 |
 | **engel** | `P2` — SOURCE TEXT UNAVAILABLE |
 | **durum** | `BLOCKED` |
 

@@ -7,7 +7,7 @@
 | **oyun** | Bohnenspiel |
 | **kültür** | German · Central Europe |
 | **aile** | sowing |
-| **öncelik** | A · bileşik puan 22.3 |
+| **öncelik** | A · bileşik puan 21.6 |
 | **engel** | `P1` — SOURCE ACCESS BLOCKED |
 | **durum** | `BLOCKED` |
 

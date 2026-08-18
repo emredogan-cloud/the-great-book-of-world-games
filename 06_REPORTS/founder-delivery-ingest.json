@@ -24,7 +24,7 @@
         {
           "name": "REQUEST.md",
           "bytes": 2389,
-          "sha256": "5c47cffa1181f89996d26f7eb0e9afcc3349d6632f55e33057898025fdc8f8aa"
+          "sha256": "02106923958a0fd8d804407fb19a609e8d0090c8e7bf57354cde3c3a3fc0ac34"
         }
       ],
       "bytes": 2389,
@@ -39,7 +39,31 @@
       "family": "sowing",
       "culture": "Ndyuka Maroon",
       "primaryBlocker": "P2",
-      "priorityClass": "B",
+      "priorityClass": "C",
+      "state": "awaiting-delivery"
+    },
+    {
+      "gameId": "ampe",
+      "files": [
+        {
+          "name": "REQUEST.md",
+          "bytes": 2304,
+          "sha256": "756eae5f3032f5da2a4c5e6a1ad67122b0dc878099ef3fbea1941a8af29662ce"
+        }
+      ],
+      "bytes": 2304,
+      "sourceFiles": 0,
+      "bibliography": {},
+      "bibliographyMissing": [],
+      "errors": [],
+      "warnings": [
+        "henüz teslim yok — klasör açık, bekliyor"
+      ],
+      "title": "Ampe",
+      "family": "boardless",
+      "culture": "Akan",
+      "primaryBlocker": "P1",
+      "priorityClass": "A",
       "state": "awaiting-delivery"
     },
     {
@@ -48,7 +72,7 @@
         {
           "name": "REQUEST.md",
           "bytes": 2363,
-          "sha256": "4a0693b6b5879ed9625802ae2c42301bbcf2dee0027bdd4e2aac2a8ad43257cc"
+          "sha256": "2b48667beebdc08a0c5a247dcc08ce2569306ba06b541ce3c1a56f2a4c1ab8ce"
         }
       ],
       "bytes": 2363,
@@ -72,7 +96,7 @@
         {
           "name": "REQUEST.md",
           "bytes": 2405,
-          "sha256": "72f12b3de842e29dac7452a3572ea438505061fd37da94065d0d4e2751c49acd"
+          "sha256": "f9165259e32bf7c0ba9ff300f6382559105661a039ee353122be7a26c1c5e9c8"
         }
       ],
       "bytes": 2405,
@@ -120,7 +144,7 @@
         {
           "name": "REQUEST.md",
           "bytes": 2960,
-          "sha256": "dcc296d921fb7729d26b1f73438ad416a165b490de5b3db13ef07884bdf65540"
+          "sha256": "2d56db7c225ac16e45cb46a1201f899f6cbe3a608365693741c687ca79942eee"
         }
       ],
       "bytes": 2960,
@@ -163,15 +187,15 @@
       "state": "awaiting-delivery"
     },
     {
-      "gameId": "mu-torere",
+      "gameId": "pilolo",
       "files": [
         {
           "name": "REQUEST.md",
-          "bytes": 2880,
-          "sha256": "e41a9297c35b656e2848afe562205e36d5f1d4287e0dc9f13a2ef30a07d5f5f4"
+          "bytes": 2326,
+          "sha256": "686e38841fd9a1d4eaad48a31f2dedfd44eebeb68810c4bca65f257429b6ffdc"
         }
       ],
-      "bytes": 2880,
+      "bytes": 2326,
       "sourceFiles": 0,
       "bibliography": {},
       "bibliographyMissing": [],
@@ -179,33 +203,9 @@
       "warnings": [
         "henüz teslim yok — klasör açık, bekliyor"
       ],
-      "title": "Mū Tōrere",
-      "family": "territory",
-      "culture": "Māori",
-      "primaryBlocker": "P2",
-      "priorityClass": "C",
-      "state": "awaiting-delivery"
-    },
-    {
-      "gameId": "oware",
-      "files": [
-        {
-          "name": "REQUEST.md",
-          "bytes": 2992,
-          "sha256": "7d620f66358ee8c2aaa68f508ad7e0b5486cca16b7cba5fcf2c34186e679037a"
-        }
-      ],
-      "bytes": 2992,
-      "sourceFiles": 0,
-      "bibliography": {},
-      "bibliographyMissing": [],
-      "errors": [],
-      "warnings": [
-        "henüz teslim yok — klasör açık, bekliyor"
-      ],
-      "title": "Oware",
-      "family": "sowing",
-      "culture": "Akan",
+      "title": "Pilolo",
+      "family": "boardless",
+      "culture": "Ga",
       "primaryBlocker": "P1",
       "priorityClass": "A",
       "state": "awaiting-delivery"
@@ -240,7 +240,7 @@
         {
           "name": "REQUEST.md",
           "bytes": 2547,
-          "sha256": "a48a0bb35181065082dafb5981fc555aa62561ccbfadf247c43c97f8a577dd88"
+          "sha256": "8cce58fd7deaa73dd50dd20c1d44f05247edf54a69130e73c91160c7a924b35b"
         }
       ],
       "bytes": 2547,

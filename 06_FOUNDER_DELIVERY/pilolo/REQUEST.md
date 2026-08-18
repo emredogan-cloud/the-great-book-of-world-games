@@ -1,32 +1,30 @@
-# TESLİM İSTEĞİ — Yoté (`yote`)
+# TESLİM İSTEĞİ — Pilolo (`pilolo`)
 
 <!-- ÜRETİLMİŞ DOSYA — 04_BUILD/founder_delivery_ingest.py --scaffold -->
 
 | | |
 |---|---|
-| **oyun** | Yoté |
-| **kültür** | Wolof · West Africa |
-| **aile** | war-board |
-| **öncelik** | C · bileşik puan 20.4 |
-| **engel** | `P2` — SOURCE TEXT UNAVAILABLE |
-| **durum** | `SOURCE-PENDING` |
+| **oyun** | Pilolo |
+| **kültür** | Ga · West Africa |
+| **aile** | boardless |
+| **öncelik** | A · bileşik puan 19.8 |
+| **engel** | `P1` — SOURCE ACCESS BLOCKED |
+| **durum** | `BLOCKED` |
 
 ## NEDEN YAZILAMIYOR
 
-Birincil künye Dakar basımı dar dağıtımlı bir eserdir ve HİÇ DENENMEDİ; ikinci künye (Zaslavsky) engelli.
+Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.
 
 ## ZATEN DENETLENDİ — BUNLARI TEKRAR ARAMAYIN
 
 - Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
 - Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Béart 1955 · Mémoires de l'IFAN 42 — HİÇ denenmedi
 - Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı
 
 ## ARANACAK
 
-1. Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca)
-2. 5×6 ızgara, elde tutulan taşların sırayla girmesi, atlayarak alma ve ALINAN HER TAŞLA BİRLİKTE İKİNCİ BİR TAŞIN DA KALDIRILMASI kuralı — oyunun ayırt edici mekaniği budur (distinct=5)
-3. Wolof atfını veren bir kaynak
+1. Zaslavsky 1973'te pilolo maddesi — saklama/arama sırası, puanlama, bitiş
+2. GANA KAYNAKLI ikinci bağımsız künye (Ga çocuk oyunları)
 
 ## ASGARİ KABUL EDİLEBİLİR KANIT
 
@@ -36,25 +34,24 @@ RULE EVIDENCE
 SOURCE EVIDENCE
   [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
 CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
+  [ ] culture identity  [ ] attribution
 ```
 
 ## İDEAL KANIT
 
-Béart 1955 — Batı Afrika oyunlarının en iyi saha kaydı; zamma ile AYNI kaynak, tek teslim iki oyun açar.
+Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).
 
 ## ARAMA KALIPLARI
 
 *Bunlar birer stratejidir; bu adreslerin var olduğu iddia edilmez.*
 
-- `Béart "Jeux et jouets de l'Ouest africain" IFAN 1955 PDF`
-- `"yoté" OR "yote" Wolof Senegal game rules double capture`
-- `jeux ouest africain yoté règles IFAN Dakar`
+- `"pilolo" Ghana Ga children's game rules`
+- `Ga people traditional children games Ghana ethnography`
 
 ## BU KLASÖRE NE KOYULUR
 
 ```
-yote/
+pilolo/
     source.pdf          tarama · PDF · ekran görüntüsü        (opsiyonel)
     source.md           metin ya da kural özeti               (opsiyonel)
     bibliography.md     ZORUNLU — aşağıdaki şablon            (zorunlu)

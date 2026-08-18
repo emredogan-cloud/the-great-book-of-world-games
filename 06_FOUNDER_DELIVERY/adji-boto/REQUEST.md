@@ -7,7 +7,7 @@
 | **oyun** | Adji-boto |
 | **kültür** | Ndyuka Maroon · South America |
 | **aile** | sowing |
-| **öncelik** | B · bileşik puan 20.3 |
+| **öncelik** | C · bileşik puan 19.6 |
 | **engel** | `P2` — SOURCE TEXT UNAVAILABLE |
 | **durum** | `SOURCE-PENDING` |
 

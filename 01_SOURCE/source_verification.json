@@ -25,7 +25,7 @@
   ],
   "version": "1.0",
   "phase": "phase5",
-  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation + phase5-batch-2 + phase5-batch-3",
+  "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation + phase5-batch-2 + phase5-batch-3 + phase5-batch7-founder-delivery",
   "records": [
     {
       "gameId": "yut-nori",
@@ -694,6 +694,83 @@
       "accessMethod": "archive.org tam metin — kamusal alan",
       "status": "verified",
       "note": "W. H. Wilkinson Seul'de görevli İngiliz konsolos vekiliydi ve bölümü Culin için YAZDI; Britanya Elçiliği bahçesinde oynanan bir oyunu örnek verir. BİRİNCİ EL gözlem, derleme değil. Fil ve atın adımları Çin oyununa havale edilir; madde onları editoryal olarak yazar ve işaretler."
+    },
+    {
+      "gameId": "oware",
+      "sourceRef": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+      "edition": "1952 first edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "§ 7.5.12 'Ashanti, Gold Coast: Wari', ss. 181–182",
+      "supportingPassage": "7.5.12. Ashanti, Gold Coast: Wari (Dr. G. T. Bennett, 'The Game of Wari', in R. S. Rattray, Religion and Art in Ashanti, 1927, pp. 382-90). 2x6 holes and two stores, one at each end of the board; four beans in each hole; one lap to the move; one round; play anticlockwise. A move can begin from any of the player's holes, and if it is so heavily loaded that the sowing is not completed before it reaches this hole again, this hole is then omitted from the sowing. The player must leave his opponent a hole from which to play […] Captures are made when the last bean in hand falls in a hole on the opponent's row, making its contents two or three beans. If the hole from which the capture is made is immediately preceded by an unbroken sequence of holes on the same row also containing two or three beans, the contents of these holes are also taken. When no more captures are possible, each player adds the beans left in his own holes to his store, and the player wins who has the larger number of beans in his store.",
+      "supportedClaim": "Tahta 2×6 çukur ve iki hazne; her çukurda dört tohum; tek tur ekim; saat yönünün TERSİNE; ağır yüklü çukurda başlangıç çukuru atlanır; alma son tohumun RAKİP sırasında bir çukuru 2 ya da 3'e getirmesiyle olur ve aynı sıradaki kesintisiz 2/3 dizisi de alınır; besleme zorunluluğu; bitişte kalan tohumlar kendi haznesine eklenir ve çok olan kazanır. KÜLTÜR: Ashanti = Akan.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; sayfa denklemi doğrulandı (Murray: basılı = pdf − 19; Bell: basılı = pdf − 36)",
+      "status": "verified"
+    },
+    {
+      "gameId": "oware",
+      "sourceRef": "Bell, R. C., Board and Table Games from Many Civilizations, 2nd ed. (Oxford: Oxford University Press)",
+      "edition": "second edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "'Wari', ss. 116–117",
+      "supportingPassage": "Each player begins with four seeds in each hole on his side of the board. 1. The opening player lifts all the seeds out of one of the holes on his side of the board and sows one into each of the holes in an anti-clockwise direction […] 2. If the last seed of a lift drops into an enemy hole to make a final score of 2 or 3, these seeds are captured and are placed in the player's store. The seeds of any unbroken sequence of 2's and 3's on the opponent's side of the board contiguous with and behind the plundered hole are also lifted. A player is not, however, allowed to capture all the pieces on the opponent's side of the board as this would leave him nothing to lift at the next turn of play. 3. A heavily loaded cup may contain more than 12 seeds […] The emptied cup is omitted from the sowing on the second or subsequent cycles and remains empty. 4. When an opponent's cups are empty a player must, if possible, feed seeds into them. If he cannot do so the game is over and all the seeds left on the board become the player's.",
+      "supportedClaim": "Bell aynı kural setini bağımsız bir anlatımla verir ve 'aç bırakmama' kuralını AÇIKÇA yazar: rakibin bütün taşlarını alan bir hamle YASAKTIR. Bitiş kuralı da nettir. ⚠ BAĞIMSIZLIK SINIRI: Bell'in tahta çizimi (fig. 106) 'redrawn from Rattray's Religion and Art in Ashanti' der; Murray'in kaynağı da Rattray içindeki Bennett'tir. İKİSİ AYNI KÖKTEN TÜREMEKTEDİR ve SOURCING_STANDARD § 3 uyarınca BİR bağımsız kaynak sayılır.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; sayfa denklemi doğrulandı (Murray: basılı = pdf − 19; Bell: basılı = pdf − 36)",
+      "status": "verified"
+    },
+    {
+      "gameId": "pallanguzhi",
+      "sourceRef": "Bell, R. C., Board and Table Games from Many Civilizations, 2nd ed. (Oxford: Oxford University Press)",
+      "edition": "second edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "'Pallanguli', ss. 115–116",
+      "supportingPassage": "Pallanguli is played by the Tamil women of southern India and Ceylon […] The players start with seven holes and place six seeds in each. The opening player then lifts the seeds from any hole on his side of the board, leaving it empty, and moving anti-clockwise sows one seed into each pit. […] When the last seed of a lift falls into a hole, either on his own side of the board or his opponent's, he picks up all the pieces in the next hole and continues sowing as before in the same direction. If the last seed of a lift falls into a hole with an empty hole beyond, any seeds in the hole immediately beyond the empty hole are captured and put into the player's store hole; he then continues play from the next loaded hole beyond; but if the last seed of a lift falls into a hole with two empty holes beyond he wins nothing and his turn ceases. […] Four seeds in a hole is called a cow and, irrespective of the sower, becomes the property of the owner of the hole […] The game ends when one player is reduced to less than six seeds and is unable to fill even one hole at the beginning of a round.",
+      "supportedClaim": "Tamil kadınlarının oyunu (KÜLTÜR doğrulandı); 2×7 çukur, çukur başına altı tohum; saat yönünün tersine; ZİNCİRLİ ekim (son tohum düşünce SONRAKİ çukur alınıp devam edilir); bir boş çukurun ÖTESİNDEKİ çukur alınır; İKİ boş çukur turu bitirir; dört tohumluk çukur 'inek'tir ve ÇUKUR SAHİBİNİN olur; tur sonunda altışar doldurulur, dolduramayan çukurlar 'çöp çukuru' olur; altı tohumun altına düşen kaybeder.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; sayfa denklemi doğrulandı (Murray: basılı = pdf − 19; Bell: basılı = pdf − 36)",
+      "status": "verified"
+    },
+    {
+      "gameId": "dara",
+      "sourceRef": "Bell, R. C., Board and Table Games from Many Civilizations, 2nd ed. (Oxford: Oxford University Press)",
+      "edition": "second edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "'Dara', ss. 95–96",
+      "supportingPassage": "Several games of this group are played in North Africa, one of the best being Dara of the Dakarkari people, Nigeria. The board consists of thirty small depressions made in the ground in five rows of six each. First phase. Each player has twelve distinctive stones or pieces of pottery. They are placed one at a time in the holes in alternate turns of play. When all the pieces have been positioned the second phase begins. Second phase. Alternately, one piece is moved orthogonally to the next hole, the object being to form a line of three pieces in consecutive holes orthogonally, but not diagonally. When a three is formed the player removes one of his opponent's pieces from the board. The game ends when one player is unable to make further lines of three pieces. Lines of four pieces do not count.",
+      "supportedClaim": "Dakarkari halkının oyunu, Nijerya (KÜLTÜR doğrulandı); tahta beş sıra × altı = otuz çukur; oyuncu başına on iki taş; BİRİNCİ AŞAMA sırayla yerleştirme; İKİNCİ AŞAMA bir çukur yana dikey/yatay hareket; amaç ardışık ÜÇ dizmek (köşegen SAYILMAZ); üçlü kuran rakipten bir taş alır; DÖRTLÜ SAYILMAZ; bitiş: bir oyuncu artık üçlü kuramadığında.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; sayfa denklemi doğrulandı (Murray: basılı = pdf − 19; Bell: basılı = pdf − 36)",
+      "status": "verified"
+    },
+    {
+      "gameId": "mu-torere",
+      "sourceRef": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+      "edition": "1952 first edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "§ 4.8.3 'Maoris, New Zealand: Mu-torere', s. 93",
+      "supportingPassage": "4.8.3. Maoris, New Zealand: Mu-torere (Elsdon Best, 111-13; also in Man, 1917, p. 7). Two persons play. The board (Fig. 41) is an eight-rayed star with cells (kewai) at the ends of the rays and one at the centre (putahi). Each player has four men, placed, one side on 1-4, the other on 5-8. A man can move either to the central point or to the end of an adjacent ray, provided the point is empty. No captures may be made, and the first player to blockade his opponent wins. The first move must allow the second player to play.",
+      "supportedClaim": "Māori oyunu (KÜLTÜR doğrulandı, kaynak Elsdon Best'e dayanır); tahta SEKİZ IŞINLI YILDIZ, ışın uçlarında hücreler (kewai) ve merkezde bir hücre (putahi); oyuncu başına dört taş, biri 1–4 öteki 5–8'de; hareket YALNIZCA merkeze ya da KOMŞU ışın ucuna ve hedef BOŞ olmalı; ALMA YOK; rakibi kilitleyen kazanır; İLK HAMLE ikinci oyuncuya hamle bırakmak ZORUNDADIR.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; sayfa denklemi doğrulandı (Murray: basılı = pdf − 19; Bell: basılı = pdf − 36)",
+      "status": "verified"
+    },
+    {
+      "gameId": "catch-the-hare",
+      "sourceRef": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+      "edition": "1952 first edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "§ 5.1.1 'Spain: De cercar la liebre', s. 99",
+      "supportingPassage": "5.1.1. Spain: De cercar la liebre, 'catch the hare' (Alf. 916). Played on board A (Fig. 43), the men arranged as in the diagram, the hare on the central point, and the twelve hunters on the first and second rows and on the end points of the third row. Both hare and men have the same power of move, one step along a marked line in any direction, the point reached being empty. The power of move accordingly varies from point to point. The hare alone can take, and captures are made by the short multiple leap of the English draughts. The aim of the game is to enclose the hare so that it can neither move nor take. Alf. says that this is possible even if the number of hunters is reduced to ten, and that a good player can give his adversary the odds of one or two men.",
+      "supportedClaim": "İspanya/Kastilya oyunu, kaynağı Alfonso X el yazması (Alf. 916) — KÜLTÜR doğrulandı; tahta çizgili alquerque tipi (Fig. 43 A); tavşan MERKEZ noktada, on iki avcı birinci ve ikinci sıralarda ve üçüncü sıranın UÇ noktalarında; hem tavşan hem avcılar çizili bir çizgi boyunca BİR adım gider ve hedef nokta BOŞ olmalıdır; YALNIZCA TAVŞAN alır ve alma İngiliz damasının kısa çoklu sıçramasıdır; amaç tavşanı ne gidebilecek ne alabilecek hâle GETİRMEKTİR.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; sayfa denklemi doğrulandı (Murray: basılı = pdf − 19; Bell: basılı = pdf − 36)",
+      "status": "verified"
+    },
+    {
+      "gameId": "hasami-shogi",
+      "sourceRef": "Bell, R. C., Board and Table Games from Many Civilizations, 2nd ed. (Oxford: Oxford University Press)",
+      "edition": "second edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "'Hasami Shogi (1)', s. 97",
+      "supportingPassage": "This game, also from Japan, is played on a quarter of the I-go board (9x9 squares). Each player has 18 pieces of his own colour and they are placed on the two back rows. The object is to form five men in a row excluding the two home rows. No diagonal moves are allowed. Method of Play 1. A piece cannot land on a square occupied by another piece. 2. A piece can jump over an adjacent piece to land on a vacant square beyond; but it cannot jump over a vacant square and an occupied square in the same move. 3. When a player traps an opposing piece between two of his own on a rank or file (custodian capture), it is removed from the board. 4. A piece may move between two enemy pieces safely. 5. A player wins the game when he has five pieces in a row on a file, rank, or diagonally.",
+      "supportedClaim": "Japon oyunu (KÜLTÜR doğrulandı); 9×9 tahta; oyuncu başına 18 taş, iki geri sırada; amaç İKİ EV SIRASI DIŞINDA beş taşı sıraya dizmek; KÖŞEGEN HAREKET YOK; dolu kareye inilmez; komşu taşın üzerinden boş kareye SIÇRANIR ama boş+dolu birlikte atlanamaz; KISTIRARAK ALMA (custodian) dikey/yatay; iki düşman taşının ARASINA girmek GÜVENLİDİR; kazanma beş taşlık dizi (dikey, yatay ya da KÖŞEGEN). ⚠ VARYANT: Bell 'Hasami Shogi (2)' adıyla AYRI bir savaş-oyunu biçimi verir; kitap (1)'i basar ve (2)'yi varyant olarak anar.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; sayfa denklemi doğrulandı (Murray: basılı = pdf − 19; Bell: basılı = pdf − 36)",
+      "status": "verified"
     }
   ]
 }

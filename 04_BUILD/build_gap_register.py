@@ -567,24 +567,6 @@ ENTRIES.update({
     pat=['"bagh chal" rules tigers goats Nepal board game',
          'bagh-chal Nepali traditional game rules ethnography']),
 
-"catch-the-hare": g("BLOCKED", "P1", 3, ["alfonso-1283", "murray-1952"],
-    "Birinci el kaynak bir 1283 el yazmasıdır ve denetlenebilir açık "
-    "transkripsiyonu bulunamadı; ikinci kaynak (Murray 1952) engelli.",
-    C_SCAN + ["Alfonso X · El Escorial MS T.I.6 — archive.org başlık taraması "
-              "sonuç vermedi, açık transkripsiyon bulunamadı (Batch 4 avı)",
-              "Murray 1952 DENENDİ ve açılamadı"],
-    "El yazmasının 'cercar la liebre' faslının transkripsiyonu ve çevirisi.",
-    ["Alfonso X, Libro de los juegos — 'cercar la liebre' faslı: folio numarası, "
-     "transkripsiyon, çeviri, tahta minyatürü",
-     "Sonja Musser Golladay'ın 2007 doktora tezi (Univ. of Arizona) — "
-     "eserin tam transkripsiyonu ve İngilizce çevirisi",
-     "Tavşanın ve avcıların sayısı, hareketi ve kazanma koşulu"],
-    s=["P2"], cult=CULT_FULL,
-    ideal="Golladay tezi ya da bir tıpkıbasım edisyonu — folio-doğrulanmış.",
-    pat=['Alfonso X Libro de los juegos "cercar la liebre" transcription',
-         'Golladay Libros de Acedrex Dados E Tablas dissertation PDF',
-         'El Escorial T.I.6 libro de los juegos facsimile folio']),
-
 "halatafl": g("BLOCKED", "P3", 2, ["murray-1952"],
     "Erişilebilir kaynak AÇILDI ve oyunun yalnızca ADINI verdi: Fiske 1905'te "
     "halatafl bir SÖZLÜK GÖNDERMESİDİR, kural değil. Ayrıca oyunun "
@@ -835,43 +817,6 @@ ENTRIES.update({
     pat=['Nsimbi "Omweso: A Game People Play in Uganda" 1968 PDF',
          '"omweso" OR "mweso" Ganda Uganda mancala rules four row']),
 
-"oware": g("BLOCKED", "P1", 4, ["murray-1952", "devoogt-1997", "zaslavsky-1973"],
-    "Üç künyenin ÜÇÜ de engelli. Erişilebilir kamusal alan alternatifi AÇILDI "
-    "ve KÜLTÜR TUZAĞI çıktı: Culin 1896'nın ayrıntılı kural kayıtları SURİYE "
-    "(Şam) ve VEI (Liberya) biçimlerinindir; Gold Coast/Akan wari'si yalnızca "
-    "Bent'in alıntısında ANILIR ve kuralı verilmez. Akan oyununu Şam kaydından "
-    "yazmak kitabın kültür künyesini yalanlar.",
-    C_SCAN + ["Culin 1896 · 'Mancala, the National Game of Africa' AÇILDI: "
-              "ss. 597–598 Suriye biçimi, s. 594 Vei biçimi — Akan kuralı YOK "
-              "(source_verification.json, 2026-08-14)",
-              "Murray 1952 · de Voogt 1997 · Zaslavsky 1973 — üçü de DENENDİ ve açılamadı"],
-    "AKAN kaynaklı bir kural kaydı.",
-    ["Murray 1952'de wari/awele maddesi — Gold Coast biçimi",
-     "Ya da: Gana/Akan kaynaklı herhangi bir dönem ya da çağdaş kural kaydı",
-     "Alma kuralı (son tohumun düştüğü çukurda 2 ya da 3), 'aç bırakmama' "
-     "kuralı ve döngü/bitiş kuralı — kayıt sonsuz döngüyü GERÇEK bir risk "
-     "olarak işaretliyor ve kitabın basacağı bitiş kuralının EDİTORYAL "
-     "olduğunu söylüyor; kaynak bunu desteklemeli"],
-    s=["P5"], cult=CULT_FULL,
-    ideal="Bir Akan/Gana kaynağı ki hem kuralı hem de oyunun adının "
-          "tartışmalı halk etimolojisini tek bir hikâyeye indirgemesin.",
-    pat=['Murray 1952 wari awele Gold Coast rules mancala',
-         '"oware" Akan Ghana rules ethnography', 'awale wari Gold Coast traditional rules 19th century']),
-
-"pallanguzhi": g("BLOCKED", "P1", 3, ["murray-1952", "russ-2000"],
-    W_ACCESS + " Ayrıca bölgesel kural çeşitleri ÇOK FAZLADIR ve hangisinin "
-    "'ana' sayılacağı KAYNAKLA gerekçelendirilmelidir.",
-    C_SCAN + ["Murray 1952 ve Russ 2000 proje genelinde DENENDİ ve açılamadı"],
-    "Kural metni ve hangi bölgesel biçimin basılacağının gerekçesi.",
-    ["Murray 1952 ya da Russ 2000'de pallanguzhi maddesi — 2×7 çukur, "
-     "kaç tohum, alma koşulu (dört tohum kuralı), tur sonu yeniden dizme",
-     "Bölgesel çeşitlerden HANGİSİNİN yaygın/kanonik olduğunu söyleyen bir kaynak — "
-     "kitap bir biçim seçecek ve seçimini gerekçelendirecek",
-     "Tamil atfını veren bir kaynak"],
-    s=["P7"], cult=CULT_FULL,
-    pat=['"pallanguzhi" OR "pallankuzhi" Tamil mancala rules variants',
-         'pallanguzhi traditional rules South India seven pits']),
-
 "sungka": g("SOURCE-PENDING", "P2", 4, ["culin-1900-philippine", "murray-1952"],
     "Birincil künye 1900 tarihli bir dergi makalesidir — KAMUSAL ALANDADIR — "
     "ama proje onu HİÇ DENEMEDİ; ikinci künye (Murray 1952) engelli.",
@@ -910,16 +855,6 @@ ENTRIES.update({
 ENTRIES.update({
 
 # ── LINE AND TERRITORY ─────────────────────────────────────────────────────
-"dara": g("BLOCKED", "P1", 4, ["murray-1952", "zaslavsky-1973"], W_ACCESS,
-    C_SCAN + ["Murray 1952 ve Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı"],
-    "İki künyenin ikisi de engelli.",
-    ["Murray 1952 ya da Zaslavsky 1973'te dara/doki/derrah maddesi",
-     "5×6 (ya da 6×6) ızgara, 12'şer taş, yerleştirme aşaması, üçlü sıra kurma, "
-     "üçlü sıranın kaydırma aşamasındaki işlevi, bitiş"],
-    cult=CULT_FULL,
-    pat=['"dara" Dakarkari Nigeria game rules three in a row',
-         '"derrah" OR "doki" African alignment game rules']),
-
 "go": g("UNRESOLVED", "P5", 3, ["volpicelli-weiqi", "murray-1952"],
     "KAYNAK TAM AMA KÜLTÜR UYUŞMUYOR. Smith 1908 (ss. 24–26) EKSİKSİZ bir "
     "kural kitabıdır — sıra, yerleştirme, ko, taşların bir daha oynanmaması, "
@@ -982,29 +917,6 @@ ENTRIES.update({
     cult=CULT_FULL,
     pat=['"morabaraba" Sotho rules twelve pieces mill game',
          '"umlabalaba" OR "mmela" Southern Africa morris rules']),
-
-"mu-torere": g("BLOCKED", "P2", 3, ["best-1925", "specialist-articles"],
-    "Birincil künye ARANDI ve BULUNAMADI (archive.org'da yok, NZETC adresi "
-    "çözülmedi); ikinci künye bir dergi makalesidir ve hiç denenmedi. Oyun "
-    "`attributed` taranmıştır: Māori atfı ZORUNLUDUR ve kayıt ayrıca "
-    "ÇAĞDAŞ Māori kaynaklı bir künye ve MÜMKÜNSE TOPLULUK ONAYI istiyor.",
-    C_SCAN + ["Best 1925 · Games and Pastimes of the Maori — archive.org'da yok, "
-              "NZETC adresi çözülmedi (Batch 4 kaynak avı, 2026-08-16)",
-              "Ascher 1987 · Mathematics Magazine — HİÇ denenmedi"],
-    "Kural metni ve çağdaş Māori kaynaklı atıf.",
-    ["Best, Elsdon, Games and Pastimes of the Maori (1925) — mū tōrere bölümü "
-     "(NZETC ya da National Library of New Zealand)",
-     "Ascher, Marcia, 'Mu Torere: An Analysis of a Maori Game', Mathematics "
-     "Magazine 60:2 (1987) — ikinci bağımsız kaynak",
-     "ÇAĞDAŞ Māori kaynaklı bir künye — atıf zorunluluğu için",
-     "Sekiz uçlu yıldız tahtası, 4'er taş, YALNIZCA komşu boşluğa hareket, "
-     "merkeze girme kısıtı ve kilitlenme galibiyeti"],
-    s=["P1", "P5"], cult=CULT_FULL,
-    ideal="NZETC üzerinden Best 1925 tam metni + bir Māori kurumunun "
-          "(Te Papa · iwi) çağdaş anlatımı.",
-    pat=['Elsdon Best "Games and Pastimes of the Maori" NZETC full text',
-         'Ascher "Mu Torere" Mathematics Magazine 1987 PDF',
-         'mu torere Maori game rules Te Papa']),
 
 "shax": g("BLOCKED", "P1", 4, ["murray-1952", "zaslavsky-1973"],
     W_ACCESS + " Kayıt ayrıca SOMALİ KAYNAKLI çağdaş bir künye istiyor.",
@@ -1084,20 +996,6 @@ ENTRIES.update({
 ENTRIES.update({
 
 # ── WAR BOARD ──────────────────────────────────────────────────────────────
-"hasami-shogi": g("BLOCKED", "P1", 3, ["parlett-1999", "bell-1960"],
-    W_ACCESS + " Ayrıca KAZANMA KOŞULUNUN iki farklı biçimi (kıstırma sayısı "
-    "ya da sıra kurma) kaynaklarda BİRLİKTE geçer ve kitap birini seçmek zorundadır.",
-    C_SCAN + ["Parlett ve Bell proje genelinde DENENDİ ve açılamadı",
-              "Falkener 1892 Japon satrancı bölümü AÇILDI ama hasami shogi'yi vermiyor"],
-    "Kural metni ve iki kazanma koşulundan hangisinin kanonik olduğu.",
-    ["Parlett ya da Bell'de hasami shogi maddesi — tahta ölçüsü, taş sayısı, "
-     "hareket, KISTIRARAK ALMA kuralı, köşe kuralı",
-     "İki kazanma koşulundan (kıstırma sayısı / sıra kurma) hangisinin dönem "
-     "kaynağında durduğunu söyleyen bir künye",
-     "Japon kaynaklı bir künye"],
-    s=["P7"],
-    pat=['"hasami shogi" rules Japanese capture game', 'hasami shogi traditional rules variants Japan']),
-
 "jeu-de-dames": g("BLOCKED", "P1", 4, ["murray-1952", "parlett-1999"],
     W_ACCESS,
     C_SCAN + ["Murray 1952 ve Parlett proje genelinde DENENDİ ve açılamadı"],
@@ -1868,6 +1766,24 @@ def render_pack_tail(L, rows):
     A("")
     return L
 
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# ÇÖZÜLDÜ — kurucu teslimi (Faz 5 · Batch 7 · 19 Ağustos 2026)
+# ═══════════════════════════════════════════════════════════════════════════
+# Bu altı oyun kayıttan ÇIKTI çünkü YAZILDILAR. Kayıtları burada durur:
+# bir engelin bir zamanlar var olduğu, çözülmesiyle yanlış olmaz (§23).
+#
+# Üç eser geldi (Murray 1952 · Bell · kısmi Parlett), ikisi gelmedi
+# (Zaslavsky indirilemedi; "Russ" dosyası bir yapay zekâ çıktısıydı).
+RESOLVED_BY_DELIVERY = {
+ "oware":          "Murray 1952 § 7.5.12 ss.181–182 (Ashanti = Akan) + Bell ss.116–117 — İKİSİ DE Rattray 1927'den türer, BİR bağımsız kaynak sayılır",
+ "pallanguzhi":    "Bell ss.115–116 — 'played by the Tamil women of southern India'",
+ "dara":           "Bell ss.95–96 — 'Dara of the Dakarkari people, Nigeria'",
+ "mu-torere":      "Murray 1952 § 4.8.3 s.93 — 'Maoris, New Zealand', Elsdon Best'e dayanır",
+ "catch-the-hare": "Murray 1952 § 5.1.1 s.99 — 'Spain: De cercar la liebre', Alfonso X (Alf. 916)",
+ "hasami-shogi":   "Bell s.97 'Hasami Shogi (1)' — 'also from Japan'; Bell'in (2) biçimi VARYANT olarak anıldı",
+}
 
 SCOPE_CACHE = {}
 

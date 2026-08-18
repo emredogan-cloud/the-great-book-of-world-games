@@ -2,7 +2,7 @@
   "status": "pass",
   "measuredOn": "phase5",
   "measuredAtGate": "phase1",
-  "sampleSize": 41,
+  "sampleSize": 47,
   "sampleGames": [
     "tablut",
     "yut-nori",
@@ -44,9 +44,15 @@
     "polis",
     "astragaloi",
     "senet",
-    "janggi"
+    "janggi",
+    "oware",
+    "pallanguzhi",
+    "dara",
+    "mu-torere",
+    "catch-the-hare",
+    "hasami-shogi"
   ],
-  "sampleCaveat": "Örneklem 41 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
+  "sampleCaveat": "Örneklem 47 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
   "geometry": {
     "trimWidthMm": 215.9,
     "trimHeightMm": 279.4,
@@ -617,24 +623,108 @@
       "measuredPages": 1.843,
       "billedPages": 2,
       "overflowsSpread": false
+    },
+    {
+      "gameId": "oware",
+      "words": 796,
+      "textHeightMm": 299.5,
+      "diagramHeightMm": 40.1,
+      "diagrams": [
+        "oware-capture"
+      ],
+      "textPages": 1.238,
+      "diagramPages": 0.166,
+      "measuredPages": 1.403,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "pallanguzhi",
+      "words": 768,
+      "textHeightMm": 282.6,
+      "diagramHeightMm": 40.1,
+      "diagrams": [
+        "pallanguzhi-relay"
+      ],
+      "textPages": 1.168,
+      "diagramPages": 0.166,
+      "measuredPages": 1.333,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "dara",
+      "words": 640,
+      "textHeightMm": 266.0,
+      "diagramHeightMm": 69.0,
+      "diagrams": [
+        "dara-three"
+      ],
+      "textPages": 1.099,
+      "diagramPages": 0.285,
+      "measuredPages": 1.384,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "mu-torere",
+      "words": 546,
+      "textHeightMm": 232.8,
+      "diagramHeightMm": 83.0,
+      "diagrams": [
+        "mutorere-star"
+      ],
+      "textPages": 0.962,
+      "diagramPages": 0.343,
+      "measuredPages": 1.305,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "catch-the-hare",
+      "words": 741,
+      "textHeightMm": 295.3,
+      "diagramHeightMm": 53.0,
+      "diagrams": [
+        "hare-board"
+      ],
+      "textPages": 1.22,
+      "diagramPages": 0.219,
+      "measuredPages": 1.439,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "hasami-shogi",
+      "words": 693,
+      "textHeightMm": 287.5,
+      "diagramHeightMm": 97.0,
+      "diagrams": [
+        "hasami-sandwich"
+      ],
+      "textPages": 1.188,
+      "diagramPages": 0.401,
+      "measuredPages": 1.589,
+      "billedPages": 2,
+      "overflowsSpread": false
     }
   ],
-  "avgWordsPerGame": 729.7,
-  "measuredWordsPerPage": 467.0,
+  "avgWordsPerGame": 725.6,
+  "measuredWordsPerPage": 470.3,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.562,
-  "avgBilledPagesPerGame": 2.049,
-  "avgTextPagesPerGame": 1.303,
-  "avgDiagramPagesPerGame": 0.259,
+  "avgMeasuredPagesPerGame": 1.543,
+  "avgBilledPagesPerGame": 2.043,
+  "avgTextPagesPerGame": 1.283,
+  "avgDiagramPagesPerGame": 0.26,
   "spreadOverflowGames": [
     "tablut"
   ],
-  "spreadOverflowRate": 0.024,
-  "finding": "Metin farkı (0.69 sayfa) ve diyagram farkı (0.63) AYNI büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden denetlemek zorundadır.",
+  "spreadOverflowRate": 0.021,
+  "finding": "Metin farkı (0.70 sayfa) ve diyagram farkı (0.63) AYNI büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden denetlemek zorundadır.",
   "overflowDriver": "both",
-  "textSpreadPages": 0.686,
+  "textSpreadPages": 0.696,
   "diagramSpreadPages": 0.628,
-  "projectedBodyPages": 205,
+  "projectedBodyPages": 204,
   "projectedTotalPages": 254,
   "pageTarget": 256,
   "deviationPct": -0.78,

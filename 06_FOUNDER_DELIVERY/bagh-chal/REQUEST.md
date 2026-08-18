@@ -7,7 +7,7 @@
 | **oyun** | Bagh-Chal |
 | **kültür** | Nepali · South Asia |
 | **aile** | hunt-siege |
-| **öncelik** | A · bileşik puan 21.0 |
+| **öncelik** | A · bileşik puan 20.5 |
 | **engel** | `P1` — SOURCE ACCESS BLOCKED |
 | **durum** | `BLOCKED` |
 
