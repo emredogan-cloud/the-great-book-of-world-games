@@ -317,13 +317,29 @@ def check(root: str, args) -> int:
         errs.append("erişilebilir ama blocker taşıyor: %s"
                     % ", ".join(contradiction[:5]))
 
-    # ⑤ yazılmış bir oyun sıfır doğrulanmış kaynak taşıyamaz
+    # ⑤ yazılmış bir oyun DAYANAKSIZ olamaz.
+    #
+    # FAZ 5 · K28 GENİŞLETMESİ. Kapı eskiden tek bir dayanak tanıyordu:
+    # `source_verification.json` içinde `verified` bir kayıt. Kurucunun
+    # kütüphaneci teslimi ÜÇÜNCÜ bir dayanak getirdi ve o kayıtlar bilerek
+    # `verified` DEĞİLDİR — künyeleri eksiktir ve öyle olduklarını
+    # söylerler. Onları `verified` saymak, kurucunun § 24 talimatının tam
+    # tersi olurdu: "kurucu özetini bağımsız doğrulanmış kaynağa
+    # YÜKSELTME".
+    #
+    # Bu yüzden kapı ikisini AYRI AYRI tanır ve ikisini de kabul eder;
+    # ama dayanağı OLMAYAN bir yazılmış oyunu hâlâ reddeder.
+    lib = set()
+    lp = os.path.join(root, "01_SOURCE", "rules", "librarian_delivery.json")
+    if os.path.exists(lp):
+        lib = {r["gameId"] for r in load(lp).get("records", [])}
     ghost = [r["gameId"] for r in rows
              if r["manuscriptStatus"] != "not-started"
-             and r["verifiedSources"] == 0]
+             and r["verifiedSources"] == 0
+             and r["gameId"] not in lib]
     if ghost:
-        errs.append("doğrulanmamış kaynakla YAZILMIŞ oyun: %s"
-                    % ", ".join(ghost[:5]))
+        errs.append("DAYANAKSIZ yazılmış oyun (ne doğrulanmış künye ne "
+                    "kütüphaneci kaydı): %s" % ", ".join(ghost[:5]))
 
     # ⑥ P6 — FAZ 5. Üç yönlü denetim, çünkü bu seviye üç farklı yalanı
     #    mümkün kılar: kaydı olmayan bir oyunu ERİŞİLEBİLİR göstermek,
@@ -345,7 +361,8 @@ def check(root: str, args) -> int:
                     "(boşluk gizlenmiş): %s" % ", ".join(hidden[:5]))
     written_gap = [r["gameId"] for r in rows
                    if r["priority"] == 6
-                   and r["manuscriptStatus"] != "not-started"]
+                   and r["manuscriptStatus"] != "not-started"
+                   and r["gameId"] not in lib]
     if written_gap:
         errs.append("KAYNAKSIZ oyun YAZILMIŞ (§13 ihlali): %s"
                     % ", ".join(written_gap[:5]))

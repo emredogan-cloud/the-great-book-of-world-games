@@ -983,11 +983,21 @@ def part7_phase3_gates(rep, tmp: str) -> None:
     qp = os.path.join(root, "01_SOURCE", "production_queue.json")
     if os.path.exists(qp):
         q = json.load(open(qp, encoding="utf-8"))
+        # K28: kurucunun kütüphaneci teslimi ÜÇÜNCÜ bir üretim dayanağıdır
+        # ve o kayıtlar bilerek `verified` DEĞİLDİR (künyeleri eksiktir ve
+        # öyle söylerler). İkisi ayrı sayılır, ikisi de kabul edilir.
+        _lib = set()
+        _lp = os.path.join(root, "01_SOURCE", "rules",
+                           "librarian_delivery.json")
+        if os.path.exists(_lp):
+            _lib = {r["gameId"] for r in
+                    json.load(open(_lp, encoding="utf-8")).get("records", [])}
         drafted_unverified = [g["gameId"] for g in q["games"]
                               if g["manuscriptStatus"] == "draft"
-                              and g["verifiedSources"] == 0]
+                              and g["verifiedSources"] == 0
+                              and g["gameId"] not in _lib]
         rep.check(not drafted_unverified,
-                  "hiçbir DRAFT oyun sıfır doğrulanmış kaynakla yazılmamış — %s"
+                  "hiçbir DRAFT oyun DAYANAKSIZ yazılmamış — %s"
                   % (drafted_unverified or "temiz"))
         locked_any = [g["gameId"] for g in q["games"]
                       if g["manuscriptStatus"] == "locked"]
@@ -1401,6 +1411,52 @@ def part9_phase5_gates(rep, tmp: str) -> None:
         finally:
             with open(cp, "w", encoding="utf-8") as fh:
                 fh.write(orig_c)
+
+    # ── K28 · KÜTÜPHANECİ KAYDI DÜRÜSTLÜĞÜ ────────────────────────────────
+    #
+    # Kurucu teslimi üretim için YETERLİDİR ama bağımsız doğrulanmış bir
+    # künye DEĞİLDİR. En tehlikeli kusur, bu ayrımın SESSİZCE kaybolmasıdır:
+    # bir kayıt "bağımsız doğrulandı" derse ya da olmayan bir sayfa
+    # gösterirse, kitabın tek denetlenebilir iddiası çöker.
+    print("  ▸ K28 · kütüphaneci kaydı dürüstlüğü")
+    lp = os.path.join(root, "01_SOURCE", "rules", "librarian_delivery.json")
+    if os.path.exists(lp):
+        with open(lp, encoding="utf-8") as fh:
+            orig_l = fh.read()
+
+        def claim_verified(d):
+            """Kurucu özetini 'bağımsız doğrulanmış' diye YÜKSELTİR."""
+            d["records"][0]["independentVerification"] = True
+
+        def invent_pages(d):
+            """OLMAYAN bir sayfa numarası uydurur."""
+            d["records"][0]["sourcePages"] = "pp. 41-48"
+
+        def drop_flag(d):
+            d["records"][0]["founderSupplied"] = False
+
+        def duplicate_record(d):
+            d["records"].append(dict(d["records"][0]))
+
+        try:
+            for label, mut in [
+                ("kurucu özetini 'BAĞIMSIZ DOĞRULANMIŞ' göstermek YAKALANIR",
+                 claim_verified),
+                ("künyesi eksikken SAYFA UYDURMAK YAKALANIR", invent_pages),
+                ("founderSupplied bayrağının SİLİNMESİ YAKALANIR", drop_flag),
+                ("kütüphaneci kaydında YİNELENEN oyun YAKALANIR",
+                 duplicate_record),
+            ]:
+                d = json.loads(orig_l)
+                mut(d)
+                write_json(lp, d)
+                code, out = run_gate("librarian_ingest.py", root)
+                rep.check(code != 0, label, out)
+        finally:
+            with open(lp, "w", encoding="utf-8") as fh:
+                fh.write(orig_l)
+        code, out = run_gate("librarian_ingest.py", root)
+        rep.check(code == 0, "DÜRÜST kütüphaneci kaydı geçer", out)
 
     # ── ⑤ BAYAT RENDER RAPORU ─────────────────────────────────────────────
     # 150 mm bütçesi ölçüm dosyasından hesaplanır. Artık var olmayan bir

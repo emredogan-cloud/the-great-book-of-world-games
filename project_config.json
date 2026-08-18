@@ -431,17 +431,17 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 457,
-        "wordsPerGame": 731,
-        "textPagesPerGame": 1.303,
-        "diagramPagesPerGame": 0.297,
-        "measuredPagesPerGame": 1.599,
-        "billedPagesPerGame": 2.069,
-        "spreadOverflowRate": 0.034,
+        "wordsPerTypesetPage": 463,
+        "wordsPerGame": 735,
+        "textPagesPerGame": 1.308,
+        "diagramPagesPerGame": 0.278,
+        "measuredPagesPerGame": 1.587,
+        "billedPagesPerGame": 2.059,
+        "spreadOverflowRate": 0.029,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 29,
+        "sampleSize": 34,
         "projectedTotalPages": 256,
         "deviationPct": 0.0,
         "withinTolerance": true,
@@ -553,7 +553,15 @@
           "",
           "  toplam sayfa 256 · sapma +0.0% · tasma 1/29",
           "  hnefatafl ve patolli YENIDEN KURGULANMIS maddelerdir ve ikisi de",
-          "  cift sayfaya sigiyor."
+          "  cift sayfaya sigiyor.",
+          "",
+          "FAZ 5 · BATCH 4 (34 oyun) — kutuphaneci teslimi.",
+          "",
+          "  toplam sayfa 256 · sapma +0.0% · tasma 1/34",
+          "  Bes kutuphaneci oyunu eklendi; hicbiri cift sayfayi asmadi.",
+          "  v1.5 hucre geometrisi DUZELTILDI: her cell tahtasinin en ust sirasi",
+          "  bir adim yukari kayip tuvalin disina tasiyordu (Ur tahtasinda gorsel",
+          "  denetimde yakalandi). Duzeltme butun cell diyagramlarini etkiledi."
         ]
       },
       "$comment": [

@@ -4,18 +4,18 @@
   "errors": [],
   "warnings": [],
   "facts": {
-    "diagrams": 31,
+    "diagrams": 34,
     "byClass": {
-      "point": 15,
+      "point": 16,
       "pit": 2,
       "track": 2,
       "bodily": 4,
-      "cell": 8
+      "cell": 10
     },
     "diagramMm": {
       "min": 36.1,
       "max": 107.0,
-      "mean": 70.2,
+      "mean": 69.8,
       "limit": 150
     }
   }

@@ -121,27 +121,11 @@
       "attemptedOn": "2026-08-16"
     },
     {
-      "gameId": "tien-gow",
-      "culture": "Cantonese",
-      "reason": "KORE CİLDİ TUZAĞI — kaynak Kore dominolarını anlatıyor",
-      "detail": "Culin 1895 § LXXXI 'Kol-hpai' KORE dominolarıdır; Çin dominoları yalnızca karşılaştırma notudur. Ayrı basılan Chinese Games with Dice and Dominoes indirildi ve 'tien kow' başlığı bulunamadı.",
-      "needed": "Kanton kaynaklı ya da tien-gow başlıklı bir dönem kaydı",
-      "attemptedOn": "2026-08-16"
-    },
-    {
       "gameId": "sugoroku",
       "culture": "Japanese",
       "reason": "KORE CİLDİ TUZAĞI — Faz 4'te işaretlendi, Faz 5'te doğrulandı",
       "detail": "Culin'in `ssang-ryouk` bölümü KORE oyununu anlatır ve hamleler için 'the English game of Backgammon'a gönderir; Japon kaydı yalnızca bir tahta resmidir.",
       "needed": "Japon kaynaklı bir sugoroku kural kaydı",
-      "attemptedOn": "2026-08-16"
-    },
-    {
-      "gameId": "jianzi",
-      "culture": "Han Chinese",
-      "reason": "KORE/JAPON NESNE KAYDI — kural yok, kültür de uyuşmuyor",
-      "detail": "Culin 1895 ss. 39–43 NESNEYİ anlatır (pamuk bezi, kil, sülün tüyü) ve bağlamı verir; puanlama, tur, oyuncu sayısı ve bitiş YOKTUR. Kayıt ayrıca KORE (Tjye-ki) ve JAPON (hago) biçimlerinindir; kapsam HAN ÇİNLİSİ der.",
-      "needed": "Çin kaynaklı bir jianzi kural kaydı",
       "attemptedOn": "2026-08-16"
     }
   ],
@@ -198,18 +182,7 @@
       "resolution": "Kurucu 150 mm tavanının YALNIZCA cats-cradle için aşılmasını onayladı. Genel tavan değişmedi. project_config.json § diagram.diagramBudgetOverrides ve dört kasıtlı kusur testi istisnayı dar tutuyor."
     }
   ],
-  "sourceRecordGaps": [
-    {
-      "gameId": "gomoku",
-      "family": "territory",
-      "culture": "Japanese",
-      "reason": "kaynak ARANDI · AMAÇ var, KURAL SETİ yok",
-      "detail": "Smith 1908 ss. 24–25 oyunu adlandırır, Japon kimliğini ve amacını (beş taşı sıraya dizmek) verir; sıra kuralı, başlangıç, berabere ve fazla-sıra kuralı YOKTUR. jianzi ile aynı sınıf: amaç kural seti değildir.",
-      "nextAction": "tam bir gomoku/renju kural kaydı ara",
-      "writable": false,
-      "attemptedOn": "2026-08-16"
-    }
-  ],
+  "sourceRecordGaps": [],
   "sourceHunts": [
     {
       "phase": "phase5-batch4",
@@ -259,6 +232,40 @@
         }
       ],
       "conclusion": "Av GERÇEKTEN yapıldı ve BİR oyun bile açmadı. Bulunan iki kaynak (Gomme cilt I, Falkener Atep) ya kültür tuzağı ya da eksik kuraldır. Bu bir çaba sorunu değil bir ARZ sorunudur: kalan oyunların kaynakları ya telifli, ya JSTOR'da, ya da yalnızca basılı."
+    }
+  ],
+  "resolvedByLibrarian": [
+    {
+      "gameId": "tien-gow",
+      "culture": "Cantonese",
+      "reason": "KORE CİLDİ TUZAĞI — kaynak Kore dominolarını anlatıyor",
+      "detail": "Culin 1895 § LXXXI 'Kol-hpai' KORE dominolarıdır; Çin dominoları yalnızca karşılaştırma notudur. Ayrı basılan Chinese Games with Dice and Dominoes indirildi ve 'tien kow' başlığı bulunamadı.",
+      "needed": "Kanton kaynaklı ya da tien-gow başlıklı bir dönem kaydı",
+      "attemptedOn": "2026-08-16",
+      "resolvedOn": "2026-08-18",
+      "resolution": "KURUCU KÜTÜPHANECİ TESLİMİ doğru kültürün kurallarını sağladı; kimlik uyuşmazlığı ortadan kalktı. Kayıt founderSupplied=true, independentVerification=false."
+    },
+    {
+      "gameId": "jianzi",
+      "culture": "Han Chinese",
+      "reason": "KORE/JAPON NESNE KAYDI — kural yok, kültür de uyuşmuyor",
+      "detail": "Culin 1895 ss. 39–43 NESNEYİ anlatır (pamuk bezi, kil, sülün tüyü) ve bağlamı verir; puanlama, tur, oyuncu sayısı ve bitiş YOKTUR. Kayıt ayrıca KORE (Tjye-ki) ve JAPON (hago) biçimlerinindir; kapsam HAN ÇİNLİSİ der.",
+      "needed": "Çin kaynaklı bir jianzi kural kaydı",
+      "attemptedOn": "2026-08-16",
+      "resolvedOn": "2026-08-18",
+      "resolution": "KURUCU KÜTÜPHANECİ TESLİMİ doğru kültürün kurallarını sağladı; kimlik uyuşmazlığı ortadan kalktı. Kayıt founderSupplied=true, independentVerification=false."
+    },
+    {
+      "gameId": "gomoku",
+      "family": "territory",
+      "culture": "Japanese",
+      "reason": "kaynak ARANDI · AMAÇ var, KURAL SETİ yok",
+      "detail": "Smith 1908 ss. 24–25 oyunu adlandırır, Japon kimliğini ve amacını (beş taşı sıraya dizmek) verir; sıra kuralı, başlangıç, berabere ve fazla-sıra kuralı YOKTUR. jianzi ile aynı sınıf: amaç kural seti değildir.",
+      "nextAction": "tam bir gomoku/renju kural kaydı ara",
+      "writable": false,
+      "attemptedOn": "2026-08-16",
+      "resolvedOn": "2026-08-18",
+      "resolution": "KURUCU KÜTÜPHANECİ TESLİMİ tam kural setini sağladı."
     }
   ]
 }

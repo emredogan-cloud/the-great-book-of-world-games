@@ -1,0 +1,21 @@
+{
+  "$comment": [
+    "KÜTÜPHANECİ ALIMI — public yapısal özet.",
+    "Kural metni BURADA DURMAZ; yalnızca sayı ve dürüstlük bayrakları.",
+    "Tam kayıt korumalı katmandadır (01_SOURCE/rules/)."
+  ],
+  "generatedAtPhase": "phase5-batch4",
+  "deliveryFile": "games-lib-screenshots/Tien gow Tin Kau 天九 ve.txt",
+  "records": 5,
+  "founderSupplied": 5,
+  "independentlyVerified": 0,
+  "bibliographyComplete": 0,
+  "bibliographyIncomplete": 5,
+  "games": [
+    "bao-la-kiswahili",
+    "gomoku",
+    "jianzi",
+    "royal-game-of-ur",
+    "tien-gow"
+  ]
+}

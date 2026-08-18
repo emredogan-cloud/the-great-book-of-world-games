@@ -825,3 +825,71 @@ ihtiyaç duyduğu bölümü** listeler; uydurmaz, tahmin etmez, bekler.
 kuyruktan türetilir.
 
 > Bir kaynağı istemek, onu uydurmaktan her zaman ucuzdur.
+
+---
+
+### K29 · KÜTÜPHANECİ TESLİMİ ÜÇÜNCÜ BİR ÜRETİM DAYANAĞIDIR
+
+**Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 18 Ağustos 2026
+
+Kurucu, engellenmiş oyunlar için **kural özetlerini doğrudan sağladı**
+(`games-lib-screenshots/Tien gow Tin Kau 天九 ve.txt`). Bu, projenin
+kaynak modelinde **yeni bir durum** açtı.
+
+Proje bugüne kadar **iki** durum tanıyordu:
+
+| durum | anlamı |
+|---|---|
+| `verified` | pasaj açıldı, sayfa okundu, künye tam |
+| değil | yazılamaz |
+
+Kurucu teslimi **üçüncüsüdür** ve ikisinin de yerine geçmez:
+
+```
+founderSupplied         = true
+independentVerification = false
+bibliographyStatus      = incomplete
+```
+
+**Üretim için YETERLİDİR** (kurucu yetkisi) ama **`verified` DEĞİLDİR** ve
+asla öyle gösterilmez. Kurucunun § 24 talimatı bağlayıcıdır:
+*"DO NOT UPGRADE IT INTO AN INDEPENDENTLY VERIFIED SOURCE WITHOUT ACTUAL
+EVIDENCE."*
+
+#### Sayfa numarası UYDURULMADI
+
+Teslim dosyası URL veriyor, **baskı ve sayfa vermiyor**. Beş kaydın
+beşinde de `sourcePages` **boştur** ve `bibliographyStatus`
+**`incomplete`** yazar. Doğrulayıcıyı yeşile boyamak için künye
+uydurmak, kitabın tek denetlenebilir iddiasını yıkardı.
+
+#### Üç kapı bu yüzden değişti — ve zayıflamadı
+
+| kapı | eski | yeni |
+|---|---|---|
+| `build_queue --check` | yazılmış oyun **`verified` künye** ister | **`verified` VEYA kütüphaneci kaydı** ister; ikisi de yoksa hâlâ kırmızı |
+| `qa_rules` | `01_SOURCE/rules/*.json` = oyun başına bir kayıt | çok oyunlu teslim dosyası **muaf**; kendi kapısı var |
+| `selftest` | aynı ikili varsayım | aynı üçlü ayrım |
+
+**Yeni kapı:** `04_BUILD/librarian_ingest.py` — kanonik kaydı üretir ve
+**dürüstlüğünü denetler**. Dört kasıtlı kusur testi:
+
+| kurgu | beklenen |
+|---|---|
+| kurucu özetini "bağımsız doğrulanmış" göstermek | **KIRMIZI** |
+| künye eksikken sayfa uydurmak | **KIRMIZI** |
+| `founderSupplied` bayrağını silmek | **KIRMIZI** |
+| kütüphaneci kaydında yinelenen oyun | **KIRMIZI** |
+
+#### Üç oyunun engeli KALKTI
+
+Teslim, üç oyunun **tam olarak eksik olan şeyini** verdi:
+
+| oyun | eski durum | çözüm |
+|---|---|---|
+| **jianzi** | P5 · Culin'in cildi Kore/Japon nesnesini anlatıyordu | **Çin** kuralları sağlandı |
+| **tien-gow** | P5 · Culin'in cildi Kore dominosuydu | **Kanton** kuralları sağlandı |
+| **gomoku** | P6 · amaç vardı, kural seti yoktu | tam Japon kural seti sağlandı |
+
+`go` ve `sugoroku` **P5'te kaldı**: teslim onların doğru kültür kaynağını
+içermiyor.

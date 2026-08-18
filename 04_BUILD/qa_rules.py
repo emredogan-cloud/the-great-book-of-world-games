@@ -380,6 +380,10 @@ def merge_protected_rules(games: list, root: str, rep: Report) -> int:
     for fn in sorted(os.listdir(d)):
         if not fn.endswith(".json"):
             continue
+        # Kütüphaneci teslimi ÇOK OYUNLU bir kanonik kayıttır, oyun başına
+        # bir kural dosyası değil. Kendi kapısı vardır: librarian_ingest.py.
+        if fn == "librarian_delivery.json":
+            continue
         try:
             with open(os.path.join(d, fn), encoding="utf-8") as fh:
                 rec = json.load(fh)

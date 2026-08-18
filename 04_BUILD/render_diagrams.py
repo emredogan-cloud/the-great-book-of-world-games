@@ -123,7 +123,7 @@ def coord_xy(coord: str, cls: str, size: dict, x0, y0, step, ry=None):
         off = step / 2.0 if cls == "cell" else 0.0
         y = ry(row) if ry else y0 + (rows - 1 - row) * step
         if cls == "cell":
-            y = y - step + off if ry else y + off
+            y = y + off          # üst kenar + yarım adım = hücre merkezi
         return x0 + col * step + off, y
     return None
 
@@ -202,7 +202,12 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
                 y += gap
             return y
 
+        # `ry(row)` bir hücrenin ÜST kenarıdır; hücre oradan bir adım
+        # aşağı iner. (v1.5'in ilk sürümü bunu bir adım YUKARI çiziyordu
+        # ve her cell tahtasının en üst sırası tuvalin dışına taşıyordu —
+        # görsel denetimde Ur tahtasında yakalandı.)
         if cls == "cell":
+            top, bot = ry(rows - 1), ry(0) + step
             if omit:
                 # VAR OLAN kareleri tek tek çiz. Izgara çizgileri bir haçın
                 # köşelerini de doldurur; kare kare çizim doldurmaz.
@@ -211,15 +216,13 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
                         coord = "%s%d" % (chr(ord("a") + col), row + 1)
                         if coord in omit:
                             continue
-                        cx, cy = x0 + col * step, ry(row) - step + step
-                        c.rect(x0 + col * step, ry(row) - step, step, step)
+                        c.rect(x0 + col * step, ry(row), step, step)
             else:
                 for i in range(cols + 1):
-                    c.line(x0 + i * step, ry(rows - 1) - step,
-                           x0 + i * step, ry(0))
-                for j in range(rows + 1):
-                    yy = ry(j - 1) if j else ry(0)
-                    c.line(x0, yy, x0 + cols * step, yy)
+                    c.line(x0 + i * step, top, x0 + i * step, bot)
+                for j in range(rows):
+                    c.line(x0, ry(j), x0 + cols * step, ry(j))
+                c.line(x0, bot, x0 + cols * step, bot)
         else:
             for i in range(cols):
                 if gap_after:

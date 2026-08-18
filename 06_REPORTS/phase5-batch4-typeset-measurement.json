@@ -2,7 +2,7 @@
   "status": "pass",
   "measuredOn": "phase5",
   "measuredAtGate": "phase1",
-  "sampleSize": 29,
+  "sampleSize": 34,
   "sampleGames": [
     "tablut",
     "yut-nori",
@@ -32,9 +32,14 @@
     "shatranj",
     "chaturanga",
     "hnefatafl",
-    "patolli"
+    "patolli",
+    "tien-gow",
+    "jianzi",
+    "gomoku",
+    "royal-game-of-ur",
+    "bao-la-kiswahili"
   ],
-  "sampleCaveat": "Örneklem 29 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
+  "sampleCaveat": "Örneklem 34 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
   "geometry": {
     "trimWidthMm": 215.9,
     "trimHeightMm": 279.4,
@@ -447,24 +452,90 @@
       "measuredPages": 1.965,
       "billedPages": 2,
       "overflowsSpread": false
+    },
+    {
+      "gameId": "tien-gow",
+      "words": 830,
+      "textHeightMm": 352.4,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 1.456,
+      "diagramPages": 0.0,
+      "measuredPages": 1.456,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "jianzi",
+      "words": 626,
+      "textHeightMm": 293.9,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 1.214,
+      "diagramPages": 0.0,
+      "measuredPages": 1.214,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "gomoku",
+      "words": 684,
+      "textHeightMm": 284.9,
+      "diagramHeightMm": 95.0,
+      "diagrams": [
+        "gomoku-fouls"
+      ],
+      "textPages": 1.177,
+      "diagramPages": 0.393,
+      "measuredPages": 1.57,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "royal-game-of-ur",
+      "words": 770,
+      "textHeightMm": 355.4,
+      "diagramHeightMm": 50.5,
+      "diagrams": [
+        "ur-board"
+      ],
+      "textPages": 1.469,
+      "diagramPages": 0.209,
+      "measuredPages": 1.677,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "bao-la-kiswahili",
+      "words": 870,
+      "textHeightMm": 336.7,
+      "diagramHeightMm": 62.0,
+      "diagrams": [
+        "bao-board"
+      ],
+      "textPages": 1.391,
+      "diagramPages": 0.256,
+      "measuredPages": 1.648,
+      "billedPages": 2,
+      "overflowsSpread": false
     }
   ],
-  "avgWordsPerGame": 731.2,
-  "measuredWordsPerPage": 457.1,
+  "avgWordsPerGame": 734.8,
+  "measuredWordsPerPage": 463.1,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.599,
-  "avgBilledPagesPerGame": 2.069,
-  "avgTextPagesPerGame": 1.303,
-  "avgDiagramPagesPerGame": 0.297,
+  "avgMeasuredPagesPerGame": 1.587,
+  "avgBilledPagesPerGame": 2.059,
+  "avgTextPagesPerGame": 1.308,
+  "avgDiagramPagesPerGame": 0.278,
   "spreadOverflowGames": [
     "tablut"
   ],
-  "spreadOverflowRate": 0.034,
+  "spreadOverflowRate": 0.029,
   "finding": "Metin farkı (0.69 sayfa) ve diyagram farkı (0.63) AYNI büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden denetlemek zorundadır.",
   "overflowDriver": "both",
   "textSpreadPages": 0.686,
   "diagramSpreadPages": 0.628,
-  "projectedBodyPages": 207,
+  "projectedBodyPages": 206,
   "projectedTotalPages": 256,
   "pageTarget": 256,
   "deviationPct": 0.0,

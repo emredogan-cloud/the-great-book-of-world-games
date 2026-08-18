@@ -323,6 +323,48 @@
       "withinDiagramBudget": true
     },
     {
+      "diagramId": "ur-board",
+      "gameId": "royal-game-of-ur",
+      "widthMm": 68.0,
+      "heightMm": 46.5,
+      "legendMm": 13.5,
+      "boardClass": "cell",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/ur-board.svg",
+      "renderedWidthMm": 68.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "gomoku-fouls",
+      "gameId": "gomoku",
+      "widthMm": 82.0,
+      "heightMm": 91.0,
+      "legendMm": 9.0,
+      "boardClass": "point",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/gomoku-fouls.svg",
+      "renderedWidthMm": 82.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "bao-board",
+      "gameId": "bao-la-kiswahili",
+      "widthMm": 68.0,
+      "heightMm": 58.0,
+      "legendMm": 18.0,
+      "boardClass": "cell",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/bao-board.svg",
+      "renderedWidthMm": 68.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
       "diagramId": "tablut-setup",
       "gameId": "tablut",
       "widthMm": 75.0,
