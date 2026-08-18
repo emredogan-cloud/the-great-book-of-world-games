@@ -986,12 +986,16 @@ def part7_phase3_gates(rep, tmp: str) -> None:
         # K28: kurucunun kütüphaneci teslimi ÜÇÜNCÜ bir üretim dayanağıdır
         # ve o kayıtlar bilerek `verified` DEĞİLDİR (künyeleri eksiktir ve
         # öyle söylerler). İkisi ayrı sayılır, ikisi de kabul edilir.
+        # İKİ KATMAN: tam kayıt korumalı, public özet takip edilir.
         _lib = set()
         _lp = os.path.join(root, "01_SOURCE", "rules",
                            "librarian_delivery.json")
+        _pp = os.path.join(root, "06_REPORTS", "librarian-ingest.json")
         if os.path.exists(_lp):
             _lib = {r["gameId"] for r in
                     json.load(open(_lp, encoding="utf-8")).get("records", [])}
+        elif os.path.exists(_pp):
+            _lib = set(json.load(open(_pp, encoding="utf-8")).get("games", []))
         drafted_unverified = [g["gameId"] for g in q["games"]
                               if g["manuscriptStatus"] == "draft"
                               and g["verifiedSources"] == 0

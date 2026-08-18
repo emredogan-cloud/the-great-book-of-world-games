@@ -78,6 +78,27 @@ def dump(path: str, payload) -> None:
         fh.write("\n")
 
 
+
+def librarian_ids(root: str) -> set:
+    """Kütüphaneci teslimindeki oyun kimlikleri.
+
+    ⚠ İKİ KATMAN. Tam kayıt (`01_SOURCE/rules/librarian_delivery.json`)
+    KORUMALIDIR ve CI'da YOKTUR — kural metni taşır. Public özet
+    (`06_REPORTS/librarian-ingest.json`) yalnızca SAYI ve KİMLİK taşır ve
+    takip edilir. Kapı önce korumalı kaydı dener, yoksa public özete düşer.
+
+    Bu ayrım olmadan kapı CI'da beş oyunu "dayanaksız" sayıyordu: dosya
+    orada yoktu, yani kanıt yok sanıldı. Kimlik listesi güvenli
+    metadatadır; kural metni değildir.
+    """
+    p = os.path.join(root, "01_SOURCE", "rules", "librarian_delivery.json")
+    if os.path.exists(p):
+        return {r["gameId"] for r in load(p).get("records", [])}
+    p = os.path.join(root, "06_REPORTS", "librarian-ingest.json")
+    if os.path.exists(p):
+        return set(load(p).get("games", []))
+    return set()
+
 def diagram_complexity(entry: dict, inv: dict) -> str:
     """Diyagram yükü — 150 mm bütçesini kimin zorlayacağının ön kestirimi.
 
@@ -329,10 +350,7 @@ def check(root: str, args) -> int:
     #
     # Bu yüzden kapı ikisini AYRI AYRI tanır ve ikisini de kabul eder;
     # ama dayanağı OLMAYAN bir yazılmış oyunu hâlâ reddeder.
-    lib = set()
-    lp = os.path.join(root, "01_SOURCE", "rules", "librarian_delivery.json")
-    if os.path.exists(lp):
-        lib = {r["gameId"] for r in load(lp).get("records", [])}
+    lib = librarian_ids(root)
     ghost = [r["gameId"] for r in rows
              if r["manuscriptStatus"] != "not-started"
              and r["verifiedSources"] == 0
