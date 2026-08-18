@@ -192,6 +192,8 @@ Tam yol haritası: [`THE_GREAT_BOOK_OF_WORLD_GAMES_IMPLEMENTATION_ROADMAP.md`](T
 | [`06_REPORTS/FOUNDER_RESEARCH_PACK.md`](06_REPORTS/FOUNDER_RESEARCH_PACK.md) | Aynı kayıt **kaynağa göre** — insan araştırmacı için çalışma paketi | **üretilir** |
 | `01_SOURCE/founder_research_gap_register.json` | Kaydın makine okunur biçimi | `build_gap_register.py` |
 | [`06_FOUNDER_DELIVERY/README.md`](06_FOUNDER_DELIVERY/README.md) | Teslim biçimi ve alım hattı | sabit |
+| [`06_REPORTS/FOUNDER_DELIVERY_INTAKE_REPORT.md`](06_REPORTS/FOUNDER_DELIVERY_INTAKE_REPORT.md) | Teslim edilen her dosyanın **gerçekte ne olduğu** · sağlama toplamları | teslim başına |
+| [`06_REPORTS/FINAL_WRITING_COMPLETION_REPORT.md`](06_REPORTS/FINAL_WRITING_COMPLETION_REPORT.md) | Yazım fazının **ölçülen** durumu · nihai kapsam kararı | batch başına |
 
 ---
 

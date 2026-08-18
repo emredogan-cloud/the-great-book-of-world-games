@@ -5,6 +5,85 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.5.8] — 2026-08-19 · FAZ 5 · BATCH 7 — KURUCU TESLİMİ ALINDI
+
+**Yazılan: 7 oyun** (manuscript **41 → 48**).
+
+| oyun | aile | kültür | kaynak |
+|---|---|---|---|
+| **Oware** | ekim | Akan | Murray ss.181–182 · Bell ss.116–117 |
+| **Pallanguzhi** | ekim | Tamil | Bell ss.115–116 |
+| **Dara** | çizgi-toprak | Dakarkari | Bell ss.95–96 |
+| **Mū Tōrere** | çizgi-toprak | Māori | Murray s.93 |
+| **Catch the Hare** | av-kuşatma | Kastilya | Murray s.99 (Alfonso X) |
+| **Hasami Shogi** | savaş tahtası | Japon | Bell s.97 |
+| **Li'b el-Merafib** | eve dönüş | Sudan Arabı | Bell ss.12–14 |
+
+**Ekim ailesi 2 → 4.** Kitabın en büyük açığı açılmaya başladı.
+
+### Teslim: altı dosya, üçü kullanılabilir
+
+`Murray 1952` ✅ · `Bell` ✅ · `Parlett 1999` ⚠ kısmi tarama (açtığı
+oyun **sıfır**) · `Africa Counts` ⛔ **1.5 KB'lık PHP hata sayfası** ·
+`"Russ 2000"` ⛔ **yapay zekâ sohbet çıktısı** · `ERIC zip` ◻ ilgisiz.
+
+Adı hiçbir şey söylemeyen dosya (`B-001-002-771.pdf`) teslimin **en iyi
+kaynağı** çıktı: Bell'in *Board and Table Games*'i. Dosya adı ne olumlu
+ne olumsuz bir kanıttır. **Karar K31.**
+
+`"Russ"` dosyası beş oyunun kurallarını iddia ediyor ve **makul
+görünüyor** — tehlikesi budur. Sıfır birebir pasaj, sıfır sayfa, 34
+asistan alıntı işareti. `SOURCING_STANDARD § 2` uyarınca **kullanılmadı**;
+`pallanguzhi` ve `omweso` zaten onsuz açıldı.
+
+### Sayfa açmak üç maddeyi DURDURDU
+
+`konane` → Murray'in bölümü *"WAR-GAMES OF WHICH WE HAVE NO CERTAIN
+KNOWLEDGE"* başlığı altında ve kuralın kurtarılamaz olduğunu söylüyor →
+**FINAL SOURCE BLOCKED**. `bagh-chal` → Murray'in dört kaplan-keçi
+maddesi de **Hindistan**, kapsam **Nepalli** der. `game-of-the-goose` →
+Bell'in kuralları **1725 İngiliz levhasından**, kapsam **İtalyan** der.
+Üçü de yazılabilirdi ve üçü de yanlış olurdu.
+
+### Görsel denetim, sayısal kapının geçirdiği ALTI kusur buldu
+
+En ciddisi: `track` sınıfının render kodu `size.stations` alanını
+**okumuyor** ve yut-nori devresini **sabit** çiziyor. `li'b el-merafib`in
+sarmalı 54,0 × 76,5 mm ölçüldü, bütçeden geçti — ve basılacak olan şey
+**Kore yut tahtasıydı**. Diyagram **geri çekildi**; madde diyagramsız
+basıldı. **Karar K32.**
+
+Öteki beşi: `markers` alanı tahtaya hiç çizilmiyor (dört diyagram
+olmayan bir sembol vaat ediyordu) · `dara` **dörtlü** okunuyordu ·
+`hasami` taşı iki kez çiziyordu · `hasami` panel sayısı yanlıştı · üç
+efsane **kırpılıyordu**. Hepsi düzeltildi ve gözle doğrulandı.
+
+### Dürüstlük kayıtları
+
+`oware` iki künye taşır ama **bir** bağımsız kaynağı vardır: ikisi de
+Rattray 1927'den türer (§ 3) → `locked` **olamaz**.
+Bell'in sayfa kayması **değişkendir** (pdf−31 … pdf−36); bütün Bell
+künyeleri sayfa **üst satırından** okundu, aritmetikle türetilmedi.
+
+### Ölçüm
+
+254 sayfa (−%0,8) · 48 madde · 34 929 kelime · 728 kelime/oyun ·
+44 diyagram · 46 `verified` kaynak kaydı · uydurulmuş sayfa **0**.
+`project_config` sampleSize 41 → 48 senkronlandı.
+
+**Boşluk kaydı 52 → 45.** Eksik iki eser (Zaslavsky · Russ) **dokuz
+oyun** açar.
+
+**FINAL VERIFIED SCOPE = 48 / 100.** Kapsam değişikliği **yapılmadı**:
+eksik olan aday kalitesi değil **kaynak arzıdır** (§ 16 gerekçesi
+raporda).
+
+**Rapor:** `06_REPORTS/FINAL_WRITING_COMPLETION_REPORT.md` ·
+`06_REPORTS/FOUNDER_DELIVERY_INTAKE_REPORT.md`
+**Kararlar:** K31 · K32.
+
+---
+
 ## [0.5.7] — 2026-08-18 · FAZ 5 · KURUCU ARAŞTIRMA BOŞLUK KAYDI
 
 **Yazılan oyun: 0.** Bu bir üretim değil bir **ölçüm** teslimidir:

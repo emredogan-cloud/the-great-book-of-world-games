@@ -896,6 +896,108 @@ içermiyor.
 
 ---
 
+### K31 · TESLİM EDİLEN BİR DOSYA, TESLİM EDİLEN BİR KAYNAK DEĞİLDİR
+
+**Karar veren:** kurucu (§ 4 · § 6 · § 11) · **Faz:** 5 · **Tarih:** 19 Ağustos 2026
+
+Kurucu altı dosya teslim etti. **İkisi adının söylediği şey değildi** ve
+ikisi de dosya adına bakılarak kabul edilseydi kitaba girecekti.
+
+| dosya | adı ne diyor | gerçekte ne |
+|---|---|---|
+| `africa-counts-…pdf` | Zaslavsky 1973 | **1.5 KB'lık PHP hata sayfası** |
+| `Laurence Russ … (2000).txt` | Russ 2000 | **yapay zekâ sohbet çıktısı** |
+| `B-001-002-771.pdf` | hiçbir şey | **Bell, Board and Table Games** |
+
+Üçüncü satır ikisi kadar önemlidir: **adı hiçbir şey söylemeyen dosya
+teslimin en iyi kaynağı çıktı.** Dosya adı ne olumlu ne olumsuz bir
+kanıttır; PDF künyesi ve içerik kanıttır.
+
+#### Yapay zekâ çıktısı neden reddedildi
+
+`SOURCING_STANDARD.md` § 2 zaten yazıyordu: *"LLM çıktısı — hiçbir
+koşulda"*. Bu karar o satırı bir **olaya** bağlar.
+
+Dosya beş oyunun (adji-boto · congklak · omweso · toguz-kumalak ·
+pallanguzhi) kurallarını iddia ediyor ve iddiaları **makul görünüyor**.
+Tehlikesi tam olarak budur: doğrulanamaz bir metin, doğru bir metinden
+ayırt edilemez. Ölçülen parmak izleri: üç kez *"The information for the
+question you asked…"* açılışı, 34 asistan alıntı işareti, **sıfır**
+birebir pasaj, **sıfır** sayfa numarası.
+
+`pallanguzhi` ve `omweso` o dosya **olmadan** açıldı — Bell'den ve
+Murray'den, sayfa numaralarıyla. Yani dosyanın reddedilmesi hiçbir oyunu
+kaybettirmedi; kabul edilmesi ise beş maddeyi doğrulanamaz kılardı.
+
+#### İki kez "sayfayı aç" kuralı kitabı kurtardı
+
+| oyun | beklenen | sayfa açılınca çıkan |
+|---|---|---|
+| `konane` | Murray açar | Murray'in bölüm başlığı: **"WAR-GAMES OF WHICH WE HAVE NO CERTAIN KNOWLEDGE"** ve *"none of which gives any clear indication of how it is played"* → **FINAL SOURCE BLOCKED** |
+| `bagh-chal` | Murray açar | Murray'in dört kaplan-keçi maddesi de **Hindistan** (Bengal · United Provinces · Punjab · Manipur); kapsam **Nepalli** der → kültür tuzağı |
+| `game-of-the-goose` | Bell açar | Bell'in kuralları **1725 İngiliz levhasından** (Tyburn · Jack Shepherd); kapsam **İtalyan** der → kültür tuzağı |
+
+Üçü de yazılabilirdi ve üçü de yanlış olurdu.
+
+#### Bağımsızlık, künye sayısıyla ölçülmez
+
+`oware` iki künye taşır (Murray ss.181–182 · Bell ss.116–117) ama
+**bir** bağımsız kaynağı vardır: Murray'in kaynağı Rattray içindeki
+Bennett'tir, Bell'in çizimi *"redrawn from Rattray"* der. § 3 uyarınca
+ikisi **bir** sayılır ve `oware` `locked` **olamaz**. Kayıt bunu söyler.
+
+**Sonuç:** teslim → **alım** → **açma** → **kültür denetimi** →
+**bağımsızlık denetimi** → yazım. Dört adımın üçü bu teslimde bir şeyi
+durdurdu.
+
+---
+
+### K32 · ÖLÇÜLEN BİR DİYAGRAM, DOĞRU BİR DİYAGRAM DEĞİLDİR
+
+**Karar veren:** kurucu (§ 14) · **Faz:** 5 · **Tarih:** 19 Ağustos 2026
+
+Batch 7 altı diyagram üretti ve sayısal kapı **altısını da yeşil
+geçirdi**. Görsel denetim **altı kusur** buldu.
+
+| # | kusur | sayısal kapı |
+|---|---|---|
+| 1 | `markers` alanı tahtaya **hiç çizilmiyor** — dört diyagram efsanede olmayan bir sembol vaat ediyordu | YEŞİL |
+| 2 | `dara` üçlüye bitişik bir taş yüzünden **dörtlü** okunuyordu — Bell dörtlünün saymadığını söyler | YEŞİL |
+| 3 | `hasami` hareket eden taşı hem çıkışta hem varışta çiziyordu | YEŞİL |
+| 4 | `hasami` `panels: 2` diyordu, tek tahta çiziliyordu | YEŞİL |
+| 5 | üç efsane sağ kenardan **kırpılıyordu** | YEŞİL |
+| 6 | `merafib-spiral` **Kore yut tahtası** çiziyordu | YEŞİL |
+
+#### Altıncısı bir kural hatasıdır, bir çizim hatası değil
+
+`li'b el-merafib` bir **sarmal** yarış oyunudur. `track` sınıfının
+render kodu:
+
+```python
+elif cls == "track":
+    n = 20          # ← SABİT, ve hiç kullanılmıyor
+    ...             # yut-nori devresi çizilir
+```
+
+`size.stations` **okunmuyor**. Diyagram 54,0 × 76,5 mm ölçüldü, bütçe
+denetiminden geçti — ve basılacak olan şey Sudan sarmalı değil **Kore
+yut tahtasıydı**.
+
+**Karar:** diyagram **geri çekildi**, madde diyagramsız basıldı ve
+sebebi `englishValidation.diagram` içine yazıldı. § 13 genel bir tahtayla
+yaklaştırmayı açıkça yasaklar; yanlış bir tahta basmak, tahta basmamaktan
+**kötüdür**.
+
+**Diyagram dili DEĞİŞMEDİ** (v1.5 dondurulmuş kalır). `track` sınıfının
+sarmal desteği bir **açık iştir** ve kurucu yetkisi gerektirir (K25 ile
+aynı sınıf).
+
+> `mutorere-star` ise v1.5'in `nodes`/`edges` grafiğiyle çizildi:
+> sekiz ışınlı yıldız bir ızgarayla yaklaştırılamaz ve dilin bu yeteneği
+> `achi-wheel`den beri vardı.
+
+---
+
 ### K30 · KURUCU ARAŞTIRMA BOŞLUK KAYDI — "kalan" ile "engelli" AYRI ŞEYLERDİR
 
 **Karar veren:** kurucu · **Faz:** 5 · **Tarih:** 18 Ağustos 2026
