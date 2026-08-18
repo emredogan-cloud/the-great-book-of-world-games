@@ -79,6 +79,11 @@ onunla karşılaştırılır.
 
 `founder_delivery_ingest --check` teslim yoksa **boş koşar** (§ 17).
 
+Kapılar **kanıtlandı**: `selftest` § ⑩ yedi kasıtlı kusur sınar ve
+yedisi de kırmızı yanar (**185 → 192** denetim). Aralarında en sinsisi
+*"kayıtta olmayan gameId ile teslim klasörü"*: yanlış yazılmış bir
+klasör adı, kurucunun bulduğu kaynağın **sessizce buharlaşmasıdır**.
+
 ### Aşılan ve düzeltilen kayıtlar
 
 - `06_REPORTS/LIBRARIAN_REQUEST_LIST.md` **aşılmış** olarak işaretlendi:

@@ -1663,6 +1663,103 @@ def part9_phase5_gates(rep, tmp: str) -> None:
         rep.check(code == 0, "TEMİZ arka madde geçer", out)
 
 
+def part10_founder_gap_register(rep, tmp: str) -> None:
+    """⑩ KURUCU BOŞLUK KAYDI KAPISI GERÇEKTEN ISIRIYOR MU (K30).
+
+    Bu kaydın kusuru ötekilerden FARKLI biçimde pahalıdır: yanlış bir
+    boşluk kaydı kodu bozmaz, **insanı** yanlış yere gönderir. Kurucu
+    çözülmüş bir engeli araştırmaya giderse kaybedilen şey bir CI koşusu
+    değil, bir insanın günüdür.
+
+    Dört kusur sınanır ve dördü de SESSİZ kusurdur:
+
+      · kayıt BAYAT — üretilen belge diskteki belgeyle uyuşmuyor
+      · bir oyun YAZILDI ama kayıttan DÜŞMEDİ (örtüşme kopar)
+      · bir oyun HİÇBİR kümede değil (kapsam büyüdü, kayıt büyümedi)
+      · aynı oyun HEM engelli HEM yazılabilir (kümeler çakışır)
+    """
+    print("\n⑩ Kurucu boşluk kaydı ısırıyor (K30)")
+    root = ROOT
+    script = os.path.join(BUILD, "build_gap_register.py")
+    if not os.path.exists(script):
+        return
+
+    code, out = run_gate("build_gap_register.py", root, "--check")
+    rep.check(code == 0, "GÜNCEL boşluk kaydı geçer", out)
+
+    # ── ① BAYAT KAYIT ────────────────────────────────────────────────────
+    # Üretilmiş bir belge, denetlenmedikçe elle yazılmış bir belgeden
+    # güvenli değildir: kimse ona bakmaz ve o sessizce eskir.
+    md = os.path.join(root, "06_REPORTS", "FOUNDER_RESEARCH_GAP_REGISTER.md")
+    with open(md, encoding="utf-8") as fh:
+        orig_md = fh.read()
+    try:
+        with open(md, "w", encoding="utf-8") as fh:
+            fh.write(orig_md.replace("KURUCU ARAŞTIRMASI GEREKEN", "KALAN", 1))
+        code, out = run_gate("build_gap_register.py", root, "--check")
+        rep.check(code != 0, "BAYAT boşluk kaydı YAKALANIR", out)
+    finally:
+        with open(md, "w", encoding="utf-8") as fh:
+            fh.write(orig_md)
+
+    # ── ②③④ ÖRTÜŞME — kapsam = yazılmış + yazılabilir + engelli ─────────
+    # Üç küme kapsamı TAM olarak bölmelidir. Bölmezse kayıt ya bir oyunu
+    # unutur ya da onu iki kez sayar; ikisi de kurucuyu yanıltır.
+    sp = os.path.join(root, "01_SOURCE", "scope_lock.json")
+    with open(sp, encoding="utf-8") as fh:
+        orig_sp = fh.read()
+
+    def drop_blocked(d):
+        """Engelli bir oyun kapsamdan ÇIKAR — kayıt onu hâlâ taşır."""
+        d["entries"] = [e for e in d["entries"] if e["gameId"] != "oware"]
+
+    def add_ghost(d):
+        """Kapsama YENİ bir oyun girer ve hiçbir kümeye yazılmaz."""
+        ghost = dict(d["entries"][0])
+        ghost["gameId"] = "hayalet-oyun"
+        ghost["name"] = "Hayalet"
+        d["entries"].append(ghost)
+
+    def duplicate_writable(d):
+        """Yazılabilir bir oyun kapsamdan düşerse küme aritmetiği kopar."""
+        d["entries"] = [e for e in d["entries"] if e["gameId"] != "nine-holes"]
+
+    try:
+        for label, mut in [
+            ("kayıtta olan oyun KAPSAMDAN düşerse YAKALANIR", drop_blocked),
+            ("hiçbir kümede olmayan YENİ oyun YAKALANIR", add_ghost),
+            ("yazılabilir oyun kapsamdan düşerse YAKALANIR", duplicate_writable),
+        ]:
+            d = json.loads(orig_sp)
+            mut(d)
+            write_json(sp, d)
+            code, out = run_gate("build_gap_register.py", root, "--check")
+            rep.check(code != 0, label, out)
+    finally:
+        with open(sp, "w", encoding="utf-8") as fh:
+            fh.write(orig_sp)
+
+    # ── ⑤ TESLİM ALIMI ───────────────────────────────────────────────────
+    # Teslim YOKKEN kapı BOŞ KOŞMALIDIR (kurucu § 17). Boş koşmayan bir
+    # kapı, henüz gelmemiş bir teslimi kusur sayar ve hattı kilitler.
+    if os.path.exists(os.path.join(BUILD, "founder_delivery_ingest.py")):
+        code, out = run_gate("founder_delivery_ingest.py", root, "--check")
+        rep.check(code == 0, "teslim yokken alım kapısı BOŞ KOŞAR", out)
+
+        # Kayıtta OLMAYAN bir gameId ile klasör açmak YAKALANMALIDIR:
+        # yanlış yazılmış bir klasör adı, teslimin sessizce kaybolmasıdır.
+        ghost_dir = os.path.join(root, "06_FOUNDER_DELIVERY", "hayalet-oyun")
+        os.makedirs(ghost_dir, exist_ok=True)
+        gp = os.path.join(ghost_dir, "source.md")
+        try:
+            with open(gp, "w", encoding="utf-8") as fh:
+                fh.write("x\n")
+            code, out = run_gate("founder_delivery_ingest.py", root, "--check")
+            rep.check(code != 0, "kayıtta OLMAYAN gameId klasörü YAKALANIR", out)
+        finally:
+            shutil.rmtree(ghost_dir, ignore_errors=True)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1684,6 +1781,7 @@ def main() -> int:
         part7_phase3_gates(rep, tmp)
         part8_phase4_gates(rep, tmp)
         part9_phase5_gates(rep, tmp)
+        part10_founder_gap_register(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:

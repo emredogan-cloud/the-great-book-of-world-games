@@ -981,6 +981,24 @@ Alım betiği mekanik doğrulama yapar ve orada **durur**:
 işaretler. Bir taramayı görüp "kural tam" demek, sayfayı açmadan künye
 yazmakla aynı hatadır — K17'nin kendisi budur.
 
+#### Kapılar KANITLANDI — yedi kasıtlı kusur
+
+Bir kapının VARLIĞI yetmez, ISIRMASI gerekir (K18). `selftest` § ⑩:
+
+| kurgu | beklenen |
+|---|---|
+| kayıt BAYAT (üretilen ≠ diskteki) | **KIRMIZI** |
+| kayıttaki bir oyun kapsamdan düşer | **KIRMIZI** |
+| kapsama giren yeni oyun hiçbir kümede değil | **KIRMIZI** |
+| yazılabilir oyun kapsamdan düşer | **KIRMIZI** |
+| teslim YOKKEN alım kapısı | **YEŞİL** — boş koşar (§ 17) |
+| kayıtta OLMAYAN gameId ile teslim klasörü | **KIRMIZI** |
+| güncel kayıt | **YEŞİL** |
+
+Sondan ikincisi bir teslim kaybını önler: yanlış yazılmış bir klasör
+adı, teslimin **sessizce buharlaşmasıdır** — kurucu kaynağı bulmuş
+olur ve kimse görmez.
+
 **Belgeler:** `06_REPORTS/FOUNDER_RESEARCH_GAP_REGISTER.md` (oyun oyun) ·
 `06_REPORTS/FOUNDER_RESEARCH_PACK.md` (kaynak kaynak) ·
 `01_SOURCE/founder_research_gap_register.json` (makine okunur)
