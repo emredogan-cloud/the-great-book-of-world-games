@@ -15,12 +15,17 @@ girecekti.
 
 ## 1 · ALINAN DOSYALAR — altı kalem, 33 MB
 
+> Not: teslim edilen bir dosya adında geçen 13 haneli ISBN dizisi bu
+> raporda `«isbn»` ile değiştirilmiştir. Depo `kdp-free` stratejisindedir
+> ve ISBN benzeri diziler `validate_structure` tarafından reddedilir;
+> kapıyı gevşetmek yerine dizi kısaltıldı.
+
 | # | dosya | boyut | sha256 (ilk 20) | GERÇEKTE NE |
 |---|---|---:|---|---|
 | 1 | `619290767-A-History-of-Board-games-Other-Than-Chess.pdf` | 16.0 MB | `7baedcee3ad01ceff4f1…` | ✅ **Murray 1952** — gerçek, 296 s., metin katmanı var |
 | 2 | `1036688786-Parlett-The-Oxford-History-of-Board-Games-Uno.pdf` | 7.8 MB | `0cd6885f7ced8a1b49a1…` | ⚠ **Parlett 1999** — gerçek ama **KISMİ** tarama (157 s.) |
 | 3 | `B-001-002-771.pdf` | 7.6 MB | `ea0022b26cfb3ef5e77b…` | ✅ **Bell**, *Board and Table Games*, 2. baskı — 269 s. |
-| 4 | `africa-counts-…-9781556523502.pdf` | **1.5 KB** | `62fdfb50761ace06e0f1…` | ⛔ **PDF DEĞİL** — PHP hata sayfası |
+| 4 | `africa-counts-…-«isbn».pdf` | **1.5 KB** | `62fdfb50761ace06e0f1…` | ⛔ **PDF DEĞİL** — PHP hata sayfası |
 | 5 | `Laurence Russ - The Complete Mancala Games Book (2000).txt` | 27 KB | `8c1b5145a036673108e3…` | ⛔ **KİTAP DEĞİL** — yapay zekâ sohbet çıktısı |
 | 6 | `ERICThesaurus2025.zip` | 1.0 MB | `6e5460976a29d07415aa…` | ◻ **İLGİSİZ** — ERIC eğitim tezaurusu (XML) |
 
