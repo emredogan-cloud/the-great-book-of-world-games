@@ -47,7 +47,7 @@
   "accessibleNotYetWrittenByFamily": {
     "boardless": 7,
     "hunt-siege": 6,
-    "race": 10,
+    "race": 9,
     "sowing": 12,
     "territory": 9,
     "war-board": 12
@@ -1896,7 +1896,7 @@
       "reconstructionStatus": "documented",
       "diagramComplexity": "high",
       "expectedPageWeight": 1.8,
-      "manuscriptStatus": "not-started",
+      "manuscriptStatus": "draft",
       "blocker": null,
       "deferralReason": null,
       "editorialHold": null
@@ -1980,7 +1980,7 @@
       "reconstructionStatus": "not-reconstructed",
       "diagramComplexity": "low",
       "expectedPageWeight": 1.4,
-      "manuscriptStatus": "not-started",
+      "manuscriptStatus": "draft",
       "blocker": "kaynak erişimi",
       "deferralReason": "kaynak DENENDİ ve erişilemedi",
       "editorialHold": null

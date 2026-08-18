@@ -431,17 +431,17 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 464,
-        "wordsPerGame": 724,
-        "textPagesPerGame": 1.295,
-        "diagramPagesPerGame": 0.264,
-        "measuredPagesPerGame": 1.559,
-        "billedPagesPerGame": 2.053,
-        "spreadOverflowRate": 0.026,
+        "wordsPerTypesetPage": 467,
+        "wordsPerGame": 726,
+        "textPagesPerGame": 1.299,
+        "diagramPagesPerGame": 0.256,
+        "measuredPagesPerGame": 1.555,
+        "billedPagesPerGame": 2.05,
+        "spreadOverflowRate": 0.025,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 38,
+        "sampleSize": 40,
         "projectedTotalPages": 254,
         "deviationPct": -0.78,
         "withinTolerance": true,
@@ -450,7 +450,7 @@
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-batch5-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-batch6-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -568,7 +568,9 @@
           "  toplam sayfa 254 · sapma -0.8% · tasma 1/38",
           "  Dort kutuphaneci oyunu daha eklendi (sugoroku · mbube-mbube · achi ·",
           "  polis). Model ilk kez hedefin ALTINA indi (254 < 256): eklenen",
-          "  maddeler kisa metinli ve kucuk diyagramlidir."
+          "  maddeler kisa metinli ve kucuk diyagramlidir.",
+          "",
+          "FAZ 5 · BATCH 6 (40 oyun): 254 sayfa · sapma -0.8%"
         ]
       },
       "$comment": [
@@ -606,7 +608,7 @@
       "calibrated": true,
       "calibratedAtPhase": "phase2",
       "calibratedOn": "2026-08-13",
-      "recalibratedAtPhase": "phase5-batch5"
+      "recalibratedAtPhase": "phase5-batch6"
     },
     "editionsHypothesis": [
       {
