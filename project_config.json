@@ -441,7 +441,7 @@
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 47,
+        "sampleSize": 48,
         "projectedTotalPages": 254,
         "deviationPct": -0.78,
         "withinTolerance": true,

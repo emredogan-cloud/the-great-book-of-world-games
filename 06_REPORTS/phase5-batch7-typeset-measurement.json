@@ -2,7 +2,7 @@
   "status": "pass",
   "measuredOn": "phase5",
   "measuredAtGate": "phase1",
-  "sampleSize": 47,
+  "sampleSize": 48,
   "sampleGames": [
     "tablut",
     "yut-nori",
@@ -50,9 +50,10 @@
     "dara",
     "mu-torere",
     "catch-the-hare",
-    "hasami-shogi"
+    "hasami-shogi",
+    "li-b-el-merafib"
   ],
-  "sampleCaveat": "Örneklem 47 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
+  "sampleCaveat": "Örneklem 48 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
   "geometry": {
     "trimWidthMm": 215.9,
     "trimHeightMm": 279.4,
@@ -707,15 +708,27 @@
       "measuredPages": 1.589,
       "billedPages": 2,
       "overflowsSpread": false
+    },
+    {
+      "gameId": "li-b-el-merafib",
+      "words": 826,
+      "textHeightMm": 316.6,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 1.308,
+      "diagramPages": 0.0,
+      "measuredPages": 1.308,
+      "billedPages": 2,
+      "overflowsSpread": false
     }
   ],
-  "avgWordsPerGame": 725.6,
-  "measuredWordsPerPage": 470.3,
+  "avgWordsPerGame": 727.7,
+  "measuredWordsPerPage": 473.2,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.543,
-  "avgBilledPagesPerGame": 2.043,
-  "avgTextPagesPerGame": 1.283,
-  "avgDiagramPagesPerGame": 0.26,
+  "avgMeasuredPagesPerGame": 1.538,
+  "avgBilledPagesPerGame": 2.042,
+  "avgTextPagesPerGame": 1.284,
+  "avgDiagramPagesPerGame": 0.254,
   "spreadOverflowGames": [
     "tablut"
   ],

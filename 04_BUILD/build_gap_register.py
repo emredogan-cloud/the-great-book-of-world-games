@@ -657,20 +657,6 @@ ENTRIES.update({
     pat=['Seville "Cultural Legacy of the Royal Game of the Goose" open access PDF',
          '"game of the goose" 63 spaces rules historical', 'giuoco dell\'oca regole storiche 63']),
 
-"li-b-el-merafib": g("SOURCE-PENDING", "P2", 3, ["specialist-articles", "bell-1960"],
-    "Birincil künye 1925 tarihli bir bölgesel dergidir ve HİÇ DENENMEDİ; "
-    "ikinci künye (Bell) engelli.",
-    C_SCAN + ["Davies 1925 · Sudan Notes and Records 8 — HİÇ denenmedi",
-              "Bell proje genelinde DENENDİ ve açılamadı"],
-    "Sarmal izin uzunluğu, sırtlan ve anne taşlarının kuralı, kuyu kuralı.",
-    ["Davies, R., 'Some Arab Games and Puzzles', Sudan Notes and Records 8 (1925) — "
-     "makalenin tamamı",
-     "Sarmal iz, 'anne' taşı, sırtlanın serbest kalma koşulu ve kuyuya varma kuralı"],
-    s=["P1"],
-    ideal="1925 tarihli makale kamusal alanda olabilir; ciltli dergi taraması ideal.",
-    pat=['Davies "Some Arab Games and Puzzles" Sudan Notes Records 1925',
-         '"hyena game" Sudan spiral race game rules', '"li\'b el merafib" rules']),
-
 "ludus-duodecim-scriptorum": g("SOURCE-PENDING", "P6", 1, ["specialist-articles", "murray-1952"],
     "Yeniden kurgulama BELİRSİZDİR: taşların iz üzerindeki YÖNÜ ve başlangıç "
     "yerleşimi kesin bilinmiyor. Tahta yazıtları kural değil, SÖZ OYUNUDUR — "
@@ -1782,6 +1768,7 @@ RESOLVED_BY_DELIVERY = {
  "dara":           "Bell ss.95–96 — 'Dara of the Dakarkari people, Nigeria'",
  "mu-torere":      "Murray 1952 § 4.8.3 s.93 — 'Maoris, New Zealand', Elsdon Best'e dayanır",
  "catch-the-hare": "Murray 1952 § 5.1.1 s.99 — 'Spain: De cercar la liebre', Alfonso X (Alf. 916)",
+ "li-b-el-merafib":"Bell ss.12–14 — 'played by the Baggara Arabs of the Sudan'",
  "hasami-shogi":   "Bell s.97 'Hasami Shogi (1)' — 'also from Japan'; Bell'in (2) biçimi VARYANT olarak anıldı",
 }
 

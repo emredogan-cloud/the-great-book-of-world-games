@@ -14,7 +14,7 @@ ve o kitap masaya oturduğunda içinden birden çok madde çıkar.
 
 ## 0 · ÖNCE BUNU OKUYUN — ÜÇ SATIRLIK ÖZET
 
-1. **Murray 1952'yi bulun.** Tek başına 46 maddenin **24'ünü** açar.
+1. **Murray 1952'yi bulun.** Tek başına 45 maddenin **24'ünü** açar.
 2. Sonra **Parlett 1999 · Zaslavsky 1973 · Bell 1960–69 · Russ 2000**.
    Beşi birlikte **46 madde** açar.
 3. Geri kalan altı madde tek tek avlanır ve § 3'te ayrı listelenmiştir.
@@ -99,14 +99,14 @@ Aşağıdaki oyunların GEÇTİĞİ sayfaların taraması ya da fotoğrafı. Mur
 | `morabaraba` | The Line and the Territory | Sotho | A | 18.6 | Zaslavsky 1973 ya da Murray 1952'de morabaraba/umlabalaba maddesi |
 | `shax` | The Line and the Territory | Somali | A | 18.6 | Murray 1952 ya da Zaslavsky 1973'te shax/jare maddesi |
 | `tapatan` | The Line and the Territory | Tagalog | A | 18.6 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — tapatan bölümü, sayfa numarasıyla |
-| `ashta-kashte` | The Race Home | Bengali | A | 18.5 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
-| `nard` | The Race Home | Persian | C | 17.5 | Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma |
+| `ashta-kashte` | The Race Home | Bengali | A | 18.2 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
 | `rimau-rimau` | The Hunt and the Siege | Malay | A | 17.5 | Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi |
 | `zamma` | The War Board | Amazigh | C | 17.4 | Murray 1952 ya da Béart 1955'te zamma/sig maddesi |
+| `nard` | The Race Home | Persian | C | 17.2 | Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma |
 | `halatafl` | The Hunt and the Siege | Icelandic | E | 16.5 | Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma |
 | `jeu-de-dames` | The War Board | French | A | 16.4 | Murray 1952 ya da Parlett'te international/Polish draughts maddesi — 10×10 tahta, 20'şer taş, geriye alma, dama taşının uzun menzili, AZAMİ ALMA ZO… |
 | `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.6 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
-| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 15.5 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
+| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 15.2 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
 | `luk-tsut-kei` | The Line and the Territory | Cantonese | E | 14.6 | Murray 1952'de luk tsut k'i maddesi |
 | `terni-lapilli` | The Line and the Territory | Roman | E | 14.6 | Roma üç-taş oyununun MEKANİĞİNİ tartışan bir arkeoloji/klasik filoloji çalışması |
 
@@ -136,80 +136,15 @@ var olduğu iddia edilmez*
 06_FOUNDER_DELIVERY/shax/
 06_FOUNDER_DELIVERY/tapatan/
 06_FOUNDER_DELIVERY/ashta-kashte/
-06_FOUNDER_DELIVERY/nard/
 06_FOUNDER_DELIVERY/rimau-rimau/
 06_FOUNDER_DELIVERY/zamma/
+06_FOUNDER_DELIVERY/nard/
 06_FOUNDER_DELIVERY/halatafl/
 06_FOUNDER_DELIVERY/jeu-de-dames/
 06_FOUNDER_DELIVERY/twelve-mens-morris/
 06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/
 06_FOUNDER_DELIVERY/luk-tsut-kei/
 06_FOUNDER_DELIVERY/terni-lapilli/
-```
-
----
-
-### ▸ Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
-
-| | |
-|---|---|
-| **AÇTIĞI MADDE** | **10** |
-| **DURUM** | ⛔ **DENENDİ ve açılamadı** |
-| **KANIT** | telif altında — açık tam metin yok (blockedSources kaydı) |
-| **NEDEN** | Telif altındadır. Dover tıpkıbasımı yaygın ve ucuzdur. |
-
-**NEREDE ARANIR**
-
-- Dover 1979 tıpkıbasımı — ikinci el piyasada bol ve ucuz
-- Üniversite kütüphanesi
-- archive.org ödünç hesabı
-
-**NE İSTİYORUZ**
-
-İlgili oyunların maddeleri. Bell her oyunu tahta diyagramıyla ve kısa kural metniyle verir; madde + diyagram birlikte gerekir.
-
-> EN UCUZ ÇÖZÜM. Dover tıpkıbasımı hâlâ basılıyor.
-
-**AÇTIĞI MADDELER**
-
-| oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
-|---|---|---|:---:|---:|---|
-| `bohnenspiel` | The Sowing Games | German | A | 21.6 | Murray 1952 ya da Bell'de Bohnenspiel maddesi — 2×6 çukur, 6'şar tohum, ekim yönü, 2/4/6 alma kuralı, zincirli alma |
-| `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.5 | Bell ya da Parlett'te bagh-chal maddesi |
-| `konane` | The War Board | Hawaiian | C | 20.4 | Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranma… |
-| `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | 19.5 | Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi |
-| `bul` | The Race Home | Kekchi Maya | C | 19.5 | Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) — makalenin tamamı |
-| `li-b-el-merafib` | The Race Home | Sudanese Arab | C | 19.5 | Davies, R., 'Some Arab Games and Puzzles', Sudan Notes and Records 8 (1925) — makalenin tamamı |
-| `ashta-kashte` | The Race Home | Bengali | A | 18.5 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
-| `len-choa` | The Hunt and the Siege | Thai | A | 17.5 | Bell'de len choa maddesi — tahta, leopar/hayvan sayıları, hareket, alma, bitiş |
-| `rimau-rimau` | The Hunt and the Siege | Malay | A | 17.5 | Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi |
-| `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.6 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
-
-**ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
-var olduğu iddia edilmez*
-
-- `"Bohnenspiel" German mancala rules Murray`
-- `das Bohnenspiel Regeln historisch Saatspiel`
-- `"bagh chal" rules tigers goats Nepal board game`
-- `bagh-chal Nepali traditional game rules ethnography`
-- `Culin "Hawaiian Games" American Anthropologist 1899 archive.org`
-- `American Anthropologist volume 1 1899 full text HathiTrust`
-- `konane Hawaiian checkers rules Bishop Museum`
-- `"aadu puli attam" rules board tigers goats Tamil`
-
-**BUNLARI ŞURAYA BIRAKIN**
-
-```
-06_FOUNDER_DELIVERY/bohnenspiel/
-06_FOUNDER_DELIVERY/bagh-chal/
-06_FOUNDER_DELIVERY/konane/
-06_FOUNDER_DELIVERY/aadu-puli-attam/
-06_FOUNDER_DELIVERY/bul/
-06_FOUNDER_DELIVERY/li-b-el-merafib/
-06_FOUNDER_DELIVERY/ashta-kashte/
-06_FOUNDER_DELIVERY/len-choa/
-06_FOUNDER_DELIVERY/rimau-rimau/
-06_FOUNDER_DELIVERY/twelve-mens-morris/
 ```
 
 ---
@@ -243,8 +178,8 @@ var olduğu iddia edilmez*
 | `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.5 | Bell ya da Parlett'te bagh-chal maddesi |
 | `turkish-dama` | The War Board | Turkish | A | 19.4 | Murray 1952 ya da Parlett'te Turkish draughts maddesi — 8×8 tahta, 16'şar taş İKİNCİ ve ÜÇÜNCÜ sırada, taşların İLERİ VE YANA gitmesi (köşegen DEĞİ… |
 | `petanque` | Games Without a Board | Provençal | A | 18.8 | FIPJP resmî kural kitabı — SÜRÜM, yürürlük tarihi ve madde numaraları |
-| `daldos` | The Race Home | Danish | C | 18.5 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
-| `game-of-the-goose` | The Race Home | Italian | E | 17.5 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
+| `daldos` | The Race Home | Danish | C | 18.2 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
+| `game-of-the-goose` | The Race Home | Italian | E | 17.2 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
 | `jeu-de-dames` | The War Board | French | A | 16.4 | Murray 1952 ya da Parlett'te international/Polish draughts maddesi — 10×10 tahta, 20'şer taş, geriye alma, dama taşının uzun menzili, AZAMİ ALMA ZO… |
 | `makruk` | The War Board | Thai | E | 16.4 | Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır) |
 | `surakarta` | The War Board | Javanese | D | 16.4 | Surakarta'nın Java'daki geleneksel varlığını gösteren bir DÖNEM kaydı (20. yy öncesi ya da erken 20. yy saha kaydı) |
@@ -279,11 +214,74 @@ var olduğu iddia edilmez*
 
 ---
 
+### ▸ Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
+
+| | |
+|---|---|
+| **AÇTIĞI MADDE** | **9** |
+| **DURUM** | ⛔ **DENENDİ ve açılamadı** |
+| **KANIT** | telif altında — açık tam metin yok (blockedSources kaydı) |
+| **NEDEN** | Telif altındadır. Dover tıpkıbasımı yaygın ve ucuzdur. |
+
+**NEREDE ARANIR**
+
+- Dover 1979 tıpkıbasımı — ikinci el piyasada bol ve ucuz
+- Üniversite kütüphanesi
+- archive.org ödünç hesabı
+
+**NE İSTİYORUZ**
+
+İlgili oyunların maddeleri. Bell her oyunu tahta diyagramıyla ve kısa kural metniyle verir; madde + diyagram birlikte gerekir.
+
+> EN UCUZ ÇÖZÜM. Dover tıpkıbasımı hâlâ basılıyor.
+
+**AÇTIĞI MADDELER**
+
+| oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
+|---|---|---|:---:|---:|---|
+| `bohnenspiel` | The Sowing Games | German | A | 21.6 | Murray 1952 ya da Bell'de Bohnenspiel maddesi — 2×6 çukur, 6'şar tohum, ekim yönü, 2/4/6 alma kuralı, zincirli alma |
+| `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.5 | Bell ya da Parlett'te bagh-chal maddesi |
+| `konane` | The War Board | Hawaiian | C | 20.4 | Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranma… |
+| `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | 19.5 | Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi |
+| `bul` | The Race Home | Kekchi Maya | C | 19.2 | Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) — makalenin tamamı |
+| `ashta-kashte` | The Race Home | Bengali | A | 18.2 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
+| `len-choa` | The Hunt and the Siege | Thai | A | 17.5 | Bell'de len choa maddesi — tahta, leopar/hayvan sayıları, hareket, alma, bitiş |
+| `rimau-rimau` | The Hunt and the Siege | Malay | A | 17.5 | Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi |
+| `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.6 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
+
+**ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
+var olduğu iddia edilmez*
+
+- `"Bohnenspiel" German mancala rules Murray`
+- `das Bohnenspiel Regeln historisch Saatspiel`
+- `"bagh chal" rules tigers goats Nepal board game`
+- `bagh-chal Nepali traditional game rules ethnography`
+- `Culin "Hawaiian Games" American Anthropologist 1899 archive.org`
+- `American Anthropologist volume 1 1899 full text HathiTrust`
+- `konane Hawaiian checkers rules Bishop Museum`
+- `"aadu puli attam" rules board tigers goats Tamil`
+
+**BUNLARI ŞURAYA BIRAKIN**
+
+```
+06_FOUNDER_DELIVERY/bohnenspiel/
+06_FOUNDER_DELIVERY/bagh-chal/
+06_FOUNDER_DELIVERY/konane/
+06_FOUNDER_DELIVERY/aadu-puli-attam/
+06_FOUNDER_DELIVERY/bul/
+06_FOUNDER_DELIVERY/ashta-kashte/
+06_FOUNDER_DELIVERY/len-choa/
+06_FOUNDER_DELIVERY/rimau-rimau/
+06_FOUNDER_DELIVERY/twelve-mens-morris/
+```
+
+---
+
 ### ▸ Uzmanlık makaleleri — tek oyunu açan dar künyeler
 
 | | |
 |---|---|
-| **AÇTIĞI MADDE** | **10** |
+| **AÇTIĞI MADDE** | **9** |
 | **DURUM** | ◻ **HİÇ DENENMEDİ** — engelli değil, sırası gelmedi |
 | **KANIT** | proje bunların hiçbirini denemedi |
 | **NEDEN** | Hakemli dergi ya da dar dağıtımlı monografi. |
@@ -318,14 +316,13 @@ Aşağıdaki her künye TEK bir oyunu açar:
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
 | `adji-boto` | The Sowing Games | Ndyuka Maroon | C | 19.6 | Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) — makalenin tamamı |
-| `bul` | The Race Home | Kekchi Maya | C | 19.5 | Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) — makalenin tamamı |
-| `li-b-el-merafib` | The Race Home | Sudanese Arab | C | 19.5 | Davies, R., 'Some Arab Games and Puzzles', Sudan Notes and Records 8 (1925) — makalenin tamamı |
+| `bul` | The Race Home | Kekchi Maya | C | 19.2 | Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) — makalenin tamamı |
 | `gebeta` | The Sowing Games | Amhara | C | 18.6 | Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971) — makalenin tamamı |
 | `omweso` | The Sowing Games | Ganda | C | 18.6 | Nsimbi, M. B., Omweso: A Game People Play in Uganda (Los Angeles: UCLA African Studies Center, 1968) — kural bölümü |
-| `daldos` | The Race Home | Danish | C | 18.5 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
-| `game-of-the-goose` | The Race Home | Italian | E | 17.5 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
+| `daldos` | The Race Home | Danish | C | 18.2 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
+| `game-of-the-goose` | The Race Home | Italian | E | 17.2 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
 | `ayoayo` | The Sowing Games | Yoruba | E | 16.6 | Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977) — kural bölümü |
-| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 15.5 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
+| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 15.2 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
 | `mahjong` | Chance and Nerve | Han Chinese | C | 14.2 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
@@ -335,17 +332,16 @@ var olduğu iddia edilmez*
 - `"adji boto" Ndyuka Maroon Suriname game rules`
 - `Verbeeck "Bul" Patolli Maya Board Game Studies 1998 PDF`
 - `"bul" OR "boolik" Kekchi Maya game rules`
-- `Davies "Some Arab Games and Puzzles" Sudan Notes Records 1925`
-- `"hyena game" Sudan spiral race game rules`
-- `"li'b el merafib" rules`
 - `Pankhurst "Gabata" Ethiopia Observer 1971 board games`
+- `"gebeta" OR "gabata" Ethiopian mancala rules Amhara`
+- `Townshend Mankala Eastern Southern Africa Azania 1979`
+- `Nsimbi "Omweso: A Game People Play in Uganda" 1968 PDF`
 
 **BUNLARI ŞURAYA BIRAKIN**
 
 ```
 06_FOUNDER_DELIVERY/adji-boto/
 06_FOUNDER_DELIVERY/bul/
-06_FOUNDER_DELIVERY/li-b-el-merafib/
 06_FOUNDER_DELIVERY/gebeta/
 06_FOUNDER_DELIVERY/omweso/
 06_FOUNDER_DELIVERY/daldos/

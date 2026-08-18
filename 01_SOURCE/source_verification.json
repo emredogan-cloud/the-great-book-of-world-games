@@ -771,6 +771,17 @@
       "verifiedOn": "2026-08-19",
       "accessMethod": "kurucu teslimi — PDF metin katmanı; sayfa denklemi doğrulandı (Murray: basılı = pdf − 19; Bell: basılı = pdf − 36)",
       "status": "verified"
+    },
+    {
+      "gameId": "li-b-el-merafib",
+      "sourceRef": "R. C. Bell, Board and Table Games from Many Civilizations, 2nd ed. (Oxford: Oxford University Press), 'The Hyena Game', pp. 12–14",
+      "edition": "second edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "'The Hyena Game', ss. 12–14 (üst satır: 'HYENA GAME 13' · '14 RACE GAMES')",
+      "supportingPassage": "Li'b el Merafib or the Hyena game is played by the Baggara Arabs of the Sudan. The board is made by tracing a spiral groove in the sand and making a random number of holes along its course. Each hole represents a day's journey. A larger hole at the centre is a well and the beginning of the track is a village. Each player has a marker which represents his mother. The dice consists of three pieces of split stick […] one rounded green surface and one flat white one. […] One white side up a taba / Two white sides up 2 and the turn ends / Three white sides up 3 / Three green sides up 6. […] 2. A player must throw a taba before his mother can leave the village. […] 5. A mother must reach the well exactly. […] 8. The mother first arriving back at the village lets a hyena loose […] It travels at twice the speed of the other pieces as its scores are doubled. 9. At the well it is held up until it has paid ten tabas for a drink. 10. On leaving the well it still moves at double speed and eats any women it overtakes. It cannot eat before drinking. 11. The player who becomes the hyena is the winner […]",
+      "supportedClaim": "Sudan'ın Baggara Araplarının oyunu (KÜLTÜR doğrulandı, Bell'in kendi cümlesi); tahta kuma çizilen SARMAL oluk ve üzerinde rastgele sayıda çukur, her çukur bir GÜNLÜK yol; merkezdeki büyük çukur KUYU, başlangıç KÖY; taş oyuncunun ANNESİDİR; zar üç yarık çubuktur (bir yüzü yeşil-yuvarlak, bir yüzü beyaz-düz); puanlar taba/2/3/6 ve İKİ beyaz turu BİTİRİR; anne köyden çıkmak için önce taba atmalıdır; kuyuya TAM sayıyla varılır; dönüşte köye ilk varan SIRTLANI salar; sırtlan ÇİFT hızla gider, kuyuda içmek için on taba öder ve ancak içtikten SONRA yiyebilir; sırtlanı salan KAZANIR.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; basılı sayfa numarası ÜST SATIRDAN okundu (Bell taramasında sayfa kayması değişkendir, aritmetik kullanılmadı)",
+      "status": "verified"
     }
   ]
 }
