@@ -896,6 +896,85 @@ içermiyor.
 
 ---
 
+### K33 · ENVANTERİN KAYNAK ATFI, KAYNAĞIN KENDİSİ DEĞİLDİR
+
+**Karar veren:** kurucu (§ 4 · § 26 yetkisiyle ajan) · **Faz:** 5 · **Tarih:** 19 Ağustos 2026
+
+Kurucu, boşluk kaydının istediği iki eserden birini teslim etti:
+Zaslavsky'nin *Africa Counts*'ı. Kitap **gerçekti**, 369 sayfaydı ve
+metin katmanı tamdı. Kayıt onun **altı** oyun açacağını söylüyordu.
+
+**Açtığı oyun: bir.**
+
+| oyun | *Africa Counts* içinde |
+|---|---:|
+| `ampe` · `pilolo` · `shisima` · `morabaraba` · `mefuvha` | **0 geçiş** |
+| `ayoayo` | künye var, kural **çapraz gönderme** |
+| `omweso` | **tam kural seti** ✅ |
+
+Beş oyun bu kitapta **yoktur**. Projenin envanteri onları *Africa
+Counts*'a atfetmişti ve atıf **yanlıştı** — büyük olasılıkla
+Zaslavsky'nin 1998 tarihli *Math Games and Activities from Around the
+World* adlı AYRI kitabıyla karışmış.
+
+#### Dersin kendisi
+
+Faz 1'den beri her boşluk kaydı şu biçimdeydi: *"bu oyun şu esere
+bağlıdır."* O cümlenin iki yarısı vardır ve proje yalnızca birini
+denetliyordu:
+
+```
+[oyun] ←──── ATIF ────→ [eser]
+        ↑                  ↑
+   denetlendi         DENETLENMEDİ
+   (oyun kapsamda)    (eser oyunu GERÇEKTEN içeriyor mu?)
+```
+
+Bir eserin **erişilebilir olması**, o eserin **aranan oyunu içermesi**
+demek değildir. K31 *"teslim edilen bir dosya, teslim edilen bir kaynak
+değildir"* diyordu; K33 bir adım daha gider:
+
+> **Bir künye, bir kaynak değildir.** Atıf ancak sayfa açıldığında
+> kaynak olur.
+
+#### Aynı hata bu fazda üç kez daha ölçüldü
+
+`bagh-chal` (Murray'de var, **yanlış kültürde**) · `game-of-the-goose`
+(Bell'de tam kural, ama **İngiliz levhası**) · `congklak` (Murray'de
+madde var, **kural yok**). Dördü de envanterde *"kaynağı var"*
+görünüyordu.
+
+#### Yedek havuz da ölçüldü ve bir gölge çıktı
+
+| yedek havuz (19 kayıt) | |
+|---|---:|
+| Zaten KAPSAMDA | **10** (ikisi zaten basılmış: `achi` · `janggi`) |
+| Gerçekten kapsam dışı | 9 |
+| Elimdeki kaynaklarla yazılabilir | **2** |
+| ↳ biri (`puluc`) **`bul` ile AYNI OYUN** | |
+| **Kullanılabilir gerçek yedek** | **1** |
+
+Havuz bir **sigorta** değil, kapsamın **gölgesidir**. 48 boş slot için
+bir aday sunar. Bu yüzden § 10'un verdiği değiştirme yetkisi
+**kullanılmadı**: değiştirilecek bir şey yoktu, eksik olan aday değil
+**arz**dı.
+
+`puluc` ile `bul`'un aynı oyun olması ayrıca bir envanter kusurudur ve
+ikisini de yazmak **yinelenen madde** üretirdi.
+
+#### Karar
+
+1. Envanterdeki kaynak atıfları **kanıt sayılmaz**; yalnızca sayfa
+   açıldığında kanıt olur.
+2. Bir eser teslim edildiğinde **önce içindekiler/dizin okunur** —
+   bu fazın en verimli hamlesi Bell'in 43 bölüm başlığını basılı sayfa
+   numaralarıyla çıkarmak oldu ve üç oyun oradan geldi.
+3. `puluc` ↔ `bul` yinelenmesi kayda geçirildi; `bul` basıldı, `puluc`
+   yedekte **yazılmadan** durur.
+4. **FINAL VERIFIED SCOPE = 52 / 100** ilan edilir. 100 uydurulmaz.
+
+---
+
 ### K31 · TESLİM EDİLEN BİR DOSYA, TESLİM EDİLEN BİR KAYNAK DEĞİLDİR
 
 **Karar veren:** kurucu (§ 4 · § 6 · § 11) · **Faz:** 5 · **Tarih:** 19 Ağustos 2026

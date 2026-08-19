@@ -5,6 +5,71 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.5.9] — 2026-08-19 · FAZ 5 · BATCH 8 — TESLİM #2 VE YAZIM FAZI KAPANIŞI
+
+**Yazılan: 4 oyun** (manuscript **48 → 52**).
+
+| oyun | aile | kültür | kaynak |
+|---|---|---|---|
+| **Omweso** | ekim | Ganda | Zaslavsky ss. 133–136 |
+| **Dama** | savaş tahtası | Türk | Bell s. 74 |
+| **Jeu de Dames** | savaş tahtası | Fransız | Bell ss. 74–75 |
+| **Bul** | eve dönüş | Kekchi Maya | Bell ss. 89–90 ('Puluc') |
+
+### Zaslavsky geldi — ve beklenen altı oyunun beşi kitapta YOKTU
+
+*Africa Counts* **gerçekti** (369 s., tam metin katmanı) ama kelime
+sınırlı arama şunu verdi: `ampe` 0 · `pilolo` 0 · `shisima` 0 ·
+`morabaraba` 0 · `mefuvha` 0. Envanter beş oyunu bu kitaba **yanlış
+atfetmiş**. `ayoayo` da açılmadı: Zaslavsky kuralı *"similar to …
+wari"* diye **havale eder**. Açtığı tek oyun **omweso** oldu — ama tam
+kural setiyle (Nsimbi 1968 temelli). **Karar K33.**
+
+`Mancala.pdf` de Voogt'un *Expedition* dergi yazısıdır (kural yok,
+görüntü-only); omweso dosyası Wernham'ın araştırma özetidir ve
+Nsimbi'ye dayandığı için **bağımsız sayılmadı**. **Russ yine gelmedi.**
+
+### Üç oyun Bell'in İÇİNDEKİLER'inden geldi
+
+Bell'in 43 bölüm başlığı basılı sayfa numaralarıyla çıkarıldı ve
+`turkish-dama`, `jeu-de-dames`, `bul` oradan açıldı. `bul` için Bell'in
+*Puluc* bölümü kültürü kendi cümlesiyle veriyor: *"the Kekchi Indians …
+descended from the Mayas"*.
+
+**Kurulum şekilleri GÖZLE okundu:** `turkish-dama` ve `jeu-de-dames`
+için kurulum metinde yok, fig. 60 ve fig. 61'de. Sayfalar render edilip
+şekiller okundu (8×8/16 taş; 10×10/20 taş) — ezberden yazılmadı.
+
+### Görsel denetim iki kusur daha buldu
+
+`omweso-capture` → `pit` koordinatı yalnızca A/B sırasını tanıyor, dört
+sıralı tahtanın iki sırası **boş** çizildi → diyagram **geri çekildi**.
+`dama-orthogonal` → `forbidden` oku `move` ile **aynı** çiziliyor, yasak
+köşegen **yasal** görünüyordu → ok **çıkarıldı**. K32'nin üçüncü ve
+dördüncü örneği.
+
+### Yedek havuz ölçüldü: 19 kayıt, 1 kullanılabilir aday
+
+10'u zaten kapsamda (ikisi zaten basılmış), 9'u kapsam dışı, ikisi
+elimdeki kaynaklarla yazılabilir — ve biri (`puluc`) **`bul` ile aynı
+oyun**. **Değiştirme yapılmadı**: 48 boş slot için havuz bir aday sunuyor
+ve § 12 güçlü maddeleri kolay olanla değiştirmeyi yasaklıyor.
+
+### Ölçüm
+
+254 sayfa (−%0,8) · 52 madde · **37 863 kelime** · 728 kelime/oyun ·
+49 SVG · 69 kaynak kaydı (50 `verified`) · hayalet künye **0** ·
+uydurulmuş sayfa **0** · 36 kültür · 21 bölge.
+
+```
+FINAL VERIFIED SCOPE = 52 / 100
+```
+
+**Raporlar:** `FINAL_WRITING_PHASE_CLOSURE.md` · `FINAL_SOURCE_AUDIT.md`
+**Karar:** K33.
+
+---
+
 ## [0.5.8] — 2026-08-19 · FAZ 5 · BATCH 7 — KURUCU TESLİMİ ALINDI
 
 **Yazılan: 7 oyun** (manuscript **41 → 48**).

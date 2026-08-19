@@ -194,6 +194,8 @@ Tam yol haritası: [`THE_GREAT_BOOK_OF_WORLD_GAMES_IMPLEMENTATION_ROADMAP.md`](T
 | [`06_FOUNDER_DELIVERY/README.md`](06_FOUNDER_DELIVERY/README.md) | Teslim biçimi ve alım hattı | sabit |
 | [`06_REPORTS/FOUNDER_DELIVERY_INTAKE_REPORT.md`](06_REPORTS/FOUNDER_DELIVERY_INTAKE_REPORT.md) | Teslim edilen her dosyanın **gerçekte ne olduğu** · sağlama toplamları | teslim başına |
 | [`06_REPORTS/FINAL_WRITING_COMPLETION_REPORT.md`](06_REPORTS/FINAL_WRITING_COMPLETION_REPORT.md) | Yazım fazının **ölçülen** durumu · nihai kapsam kararı | batch başına |
+| [`06_REPORTS/FINAL_WRITING_PHASE_CLOSURE.md`](06_REPORTS/FINAL_WRITING_PHASE_CLOSURE.md) | **Yazım fazı kapanışı** · nihai kapsam · yedek havuz ölçümü | faz sonu |
+| [`06_REPORTS/FINAL_SOURCE_AUDIT.md`](06_REPORTS/FINAL_SOURCE_AUDIT.md) | Her maddenin künye · kültür · kurgulama denetimi | faz sonu |
 
 ---
 
