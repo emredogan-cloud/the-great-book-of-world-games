@@ -18,37 +18,37 @@
   "version": "1.0",
   "generatedBy": "04_BUILD/build_gap_register.py",
   "scopeTarget": 100,
-  "written": 48,
+  "written": 51,
   "writableWithoutFounder": 7,
-  "founderResearchRequired": 45,
+  "founderResearchRequired": 42,
   "unattempted": 0,
   "statusCounts": {
-    "BLOCKED": 28,
-    "SOURCE-PENDING": 15,
+    "BLOCKED": 26,
+    "SOURCE-PENDING": 14,
     "UNRESOLVED": 2
   },
   "blockerCounts": {
-    "P1": 20,
-    "P2": 17,
+    "P1": 18,
+    "P2": 16,
     "P3": 2,
     "P5": 2,
     "P6": 3,
     "P8": 1
   },
   "priorityCounts": {
-    "A": 18,
+    "A": 16,
     "B": 0,
-    "C": 14,
+    "C": 13,
     "D": 2,
     "E": 11
   },
   "familyGap": {
     "sowing": {
       "target": 14,
-      "written": 4,
+      "written": 5,
       "writable": 0,
-      "blocked": 10,
-      "deficit": 10
+      "blocked": 9,
+      "deficit": 9
     },
     "hunt-siege": {
       "target": 10,
@@ -73,10 +73,10 @@
     },
     "war-board": {
       "target": 21,
-      "written": 11,
+      "written": 13,
       "writable": 3,
-      "blocked": 7,
-      "deficit": 10
+      "blocked": 5,
+      "deficit": 8
     },
     "chance": {
       "target": 4,
@@ -98,9 +98,7 @@
     "Amhara",
     "Bengali",
     "Danish",
-    "French",
     "Ga",
-    "Ganda",
     "German",
     "Hawaiian",
     "Icelandic",
@@ -122,14 +120,12 @@
     "Sotho",
     "Tagalog",
     "Thai",
-    "Turkish",
     "Venda",
     "Visayan",
     "Wolof",
     "Yoruba"
   ],
   "regionsLostIfUnresolved": [
-    "Anatolia · Eastern Mediterranean",
     "Central Asia",
     "Central Europe",
     "Horn of Africa",
@@ -141,7 +137,7 @@
       "work": "murray-1952",
       "citation": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
       "attemptEvidence": "attempted-and-refused",
-      "unlocks": 20,
+      "unlocks": 18,
       "games": [
         "aadu-puli-attam",
         "ashta-kashte",
@@ -150,7 +146,6 @@
         "go",
         "halatafl",
         "hus",
-        "jeu-de-dames",
         "ludus-duodecim-scriptorum",
         "luk-tsut-kei",
         "morabaraba",
@@ -160,27 +155,8 @@
         "sungka",
         "tapatan",
         "terni-lapilli",
-        "turkish-dama",
         "twelve-mens-morris",
         "zamma"
-      ]
-    },
-    {
-      "work": "parlett-1999",
-      "citation": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-      "attemptEvidence": "attempted-and-refused",
-      "unlocks": 10,
-      "games": [
-        "bagh-chal",
-        "daldos",
-        "game-of-the-goose",
-        "jeu-de-dames",
-        "mahjong",
-        "makruk",
-        "morra",
-        "petanque",
-        "surakarta",
-        "turkish-dama"
       ]
     },
     {
@@ -201,10 +177,26 @@
       ]
     },
     {
+      "work": "parlett-1999",
+      "citation": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+      "attemptEvidence": "attempted-and-refused",
+      "unlocks": 8,
+      "games": [
+        "bagh-chal",
+        "daldos",
+        "game-of-the-goose",
+        "mahjong",
+        "makruk",
+        "morra",
+        "petanque",
+        "surakarta"
+      ]
+    },
+    {
       "work": "specialist-articles",
       "citation": "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
       "attemptEvidence": "never-attempted",
-      "unlocks": 9,
+      "unlocks": 8,
       "games": [
         "adji-boto",
         "ayoayo",
@@ -213,8 +205,7 @@
         "game-of-the-goose",
         "gebeta",
         "ludus-duodecim-scriptorum",
-        "mahjong",
-        "omweso"
+        "mahjong"
       ]
     },
     {
@@ -237,11 +228,10 @@
       "work": "russ-2000",
       "citation": "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
       "attemptEvidence": "attempted-and-refused",
-      "unlocks": 4,
+      "unlocks": 3,
       "games": [
         "adji-boto",
         "congklak",
-        "omweso",
         "toguz-kumalak"
       ]
     },
@@ -249,12 +239,11 @@
       "work": "townshend-1979",
       "citation": "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 (1979)",
       "attemptEvidence": "never-attempted",
-      "unlocks": 4,
+      "unlocks": 3,
       "games": [
         "gebeta",
         "hus",
-        "mefuvha",
-        "omweso"
+        "mefuvha"
       ]
     },
     {
@@ -537,11 +526,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/bohnenspiel/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 4,
-      "familyDeficitScore": 3.6,
+      "familyDeficitScore": 3.2,
       "culturalValue": 4,
       "mechanicalUniqueness": 5,
       "pageEconomy": 5,
-      "compositeScore": 21.6,
+      "compositeScore": 21.2,
       "priorityClass": "A",
       "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
       "sourceRefs": [
@@ -731,11 +720,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/konane/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 2.4,
+      "familyDeficitScore": 1.9,
       "culturalValue": 5,
       "mechanicalUniqueness": 5,
       "pageEconomy": 5,
-      "compositeScore": 20.4,
+      "compositeScore": 19.9,
       "priorityClass": "C",
       "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [
@@ -832,11 +821,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/yote/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 2.4,
+      "familyDeficitScore": 1.9,
       "culturalValue": 5,
       "mechanicalUniqueness": 5,
       "pageEconomy": 5,
-      "compositeScore": 20.4,
+      "compositeScore": 19.9,
       "priorityClass": "C",
       "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [
@@ -1030,192 +1019,6 @@
       ]
     },
     {
-      "gameId": "adji-boto",
-      "title": "Adji-boto",
-      "altNames": [
-        "Adji"
-      ],
-      "culture": "Ndyuka Maroon",
-      "region": "South America",
-      "countryOrArea": "Suriname",
-      "period": "documented in 20th-century ethnography of Maroon communities",
-      "family": "sowing",
-      "restrictionStatus": "attributed",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye 1932 tarihli bir antropoloji dergisidir ve HİÇ DENENMEDİ; ikinci künye (Russ 2000) engelli. Oyun `attributed` taranmıştır: Ndyuka Maroon atfı ZORUNLUDUR.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Herskovits 1932 · JRAI 62 — HİÇ denenmedi",
-        "Russ 2000 proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
-      ],
-      "whatWasMissing": "Çukur dizilimi, ekim yönü, alma kuralı ve Ndyuka bağlamı.",
-      "founderMustFind": [
-        "Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) — makalenin tamamı",
-        "Ndyuka Maroon topluluğunun oyunla ilişkisini veren çağdaş bir kaynak (atıf zorunluluğu için)"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "1932 makalesi kamusal alanda olabilir; JRAI ciltli sayısı ideal.",
-      "searchPatterns": [
-        "Herskovits \"Wari in the New World\" JRAI 1932 PDF",
-        "\"adji boto\" Ndyuka Maroon Suriname game rules"
-      ],
-      "works": [
-        "specialist-articles",
-        "russ-2000"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/adji-boto/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 4,
-      "pageEconomy": 4,
-      "compositeScore": 19.6,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932)",
-        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
-      ],
-      "unresolvedQuestions": []
-    },
-    {
-      "gameId": "congklak",
-      "title": "Congklak",
-      "altNames": [
-        "Congkak",
-        "Dakon"
-      ],
-      "culture": "Javanese",
-      "region": "Southeast Asia",
-      "countryOrArea": "Indonesia · Malaysia",
-      "period": "documented from the 19th century; archaeological board finds are older",
-      "family": "sowing",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 ve Russ 2000 proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
-      ],
-      "whatWasMissing": "İki künyenin ikisi de engelli.",
-      "founderMustFind": [
-        "Murray 1952 ya da Russ 2000'de congklak/congkak/dakon maddesi",
-        "Çukur sayısı, depo (rumah) kuralı, eş zamanlı başlangıç olup olmadığı, ekim yönü, alma, tur sonu ve yeniden dizme kuralı",
-        "KARAR MALZEMESİ: sungka ile mekanik farkı — kitap ikisini ayrı madde yapacaksa farkı yazmalı"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
-      "searchPatterns": [
-        "\"congklak\" OR \"congkak\" OR \"dakon\" Javanese mancala rules",
-        "congkak Malay Indonesian sowing game rules ethnography"
-      ],
-      "works": [
-        "murray-1952",
-        "russ-2000"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/congklak/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 4,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 5,
-      "compositeScore": 19.6,
-      "priorityClass": "A",
-      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
-      ],
-      "unresolvedQuestions": []
-    },
-    {
       "gameId": "shisima",
       "title": "Shisima",
       "altNames": [
@@ -1307,103 +1110,6 @@
       ],
       "unresolvedQuestions": [
         "İkinci bağımsız kaynak gerekiyor — tercihen Kenya kaynaklı."
-      ]
-    },
-    {
-      "gameId": "sungka",
-      "title": "Sungka",
-      "altNames": [
-        "Sungkaan"
-      ],
-      "culture": "Visayan",
-      "region": "Southeast Asia",
-      "countryOrArea": "Philippines",
-      "period": "recorded in the late 19th century by American and Spanish observers",
-      "family": "sowing",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye 1900 tarihli bir dergi makalesidir — KAMUSAL ALANDADIR — ama proje onu HİÇ DENEMEDİ; ikinci künye (Murray 1952) engelli.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Culin 1900 · 'Philippine Games', American Anthropologist 2:4 — HİÇ denenmedi (AYNI derginin 1899 Hawaiian sayısı denendi ve yalnızca JSTOR nüshası bulundu)",
-        "Murray 1952 DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "whatWasMissing": "Culin'in sungka bölümü — çukur sayısı, depo kuralı, ekim yönü, alma.",
-      "founderMustFind": [
-        "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — sungka bölümü, SAYFA NUMARASIYLA (proje bu makalenin sayfa aralığını henüz görmedi ve tahmin etmiyor)",
-        "KARAR MALZEMESİ: congklak ile mekanik farkı — varyant kutusuna mı sığar, ayrı madde mi olmalı?"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "American Anthropologist cilt 2 (1900) ciltli sayısının taraması — kamusal alandadır ve archive.org/HathiTrust'ta olması beklenir.",
-      "searchPatterns": [
-        "Culin \"Philippine Games\" American Anthropologist 1900 archive.org",
-        "American Anthropologist volume 2 1900 full text archive",
-        "\"sungka\" Visayan Philippine mancala rules Culin"
-      ],
-      "works": [
-        "culin-1900-philippine",
-        "murray-1952"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/sungka/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 4,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 5,
-      "compositeScore": 19.6,
-      "priorityClass": "A",
-      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
-      "sourceRefs": [
-        "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "unresolvedQuestions": [
-        "Congklak ile mekanik farkı kitapta bir varyant kutusuna mı sığar, ayrı madde mi olmalı?"
       ]
     },
     {
@@ -1503,36 +1209,42 @@
       ]
     },
     {
-      "gameId": "turkish-dama",
-      "title": "Dama",
+      "gameId": "adji-boto",
+      "title": "Adji-boto",
       "altNames": [
-        "Turkish draughts"
+        "Adji"
       ],
-      "culture": "Turkish",
-      "region": "Anatolia · Eastern Mediterranean",
-      "countryOrArea": "Türkiye",
-      "period": "documented from the 19th century",
-      "family": "war-board",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [],
+      "culture": "Ndyuka Maroon",
+      "region": "South America",
+      "countryOrArea": "Suriname",
+      "period": "documented in 20th-century ethnography of Maroon communities",
+      "family": "sowing",
+      "restrictionStatus": "attributed",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
       "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
+      "whyAgentCannotWrite": "Birincil künye 1932 tarihli bir antropoloji dergisidir ve HİÇ DENENMEDİ; ikinci künye (Russ 2000) engelli. Oyun `attributed` taranmıştır: Ndyuka Maroon atfı ZORUNLUDUR.",
       "alreadyChecked": [
         "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
         "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 ve Parlett proje genelinde DENENDİ ve açılamadı"
+        "Herskovits 1932 · JRAI 62 — HİÇ denenmedi",
+        "Russ 2000 proje genelinde DENENDİ ve açılamadı"
       ],
       "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
+        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
       ],
-      "whatWasMissing": "İki künyenin ikisi de engelli.",
+      "whatWasMissing": "Çukur dizilimi, ekim yönü, alma kuralı ve Ndyuka bağlamı.",
       "founderMustFind": [
-        "Murray 1952 ya da Parlett'te Turkish draughts maddesi — 8×8 tahta, 16'şar taş İKİNCİ ve ÜÇÜNCÜ sırada, taşların İLERİ VE YANA gitmesi (köşegen DEĞİL), dama taşının uzun menzili, alma zorunluluğu",
-        "Anadolu kaynaklı bir dönem kaydı"
+        "Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) — makalenin tamamı",
+        "Ndyuka Maroon topluluğunun oyunla ilişkisini veren çağdaş bir kaynak (atıf zorunluluğu için)"
       ],
       "minimumEvidence": {
         "rule": [
@@ -1560,34 +1272,35 @@
         ],
         "cultural": [
           "culture identity",
-          "attribution"
+          "region",
+          "attribution",
+          "historical context"
         ],
         "reconstruction": []
       },
-      "idealEvidence": "Osmanlı/Türk kaynaklı bir dönem kaydı kültür künyesini güçlendirir.",
+      "idealEvidence": "1932 makalesi kamusal alanda olabilir; JRAI ciltli sayısı ideal.",
       "searchPatterns": [
-        "Turkish draughts dama rules orthogonal capture",
-        "Türk daması kuralları tarihi kaynak",
-        "Murray Turkish draughts rules 1952"
+        "Herskovits \"Wari in the New World\" JRAI 1932 PDF",
+        "\"adji boto\" Ndyuka Maroon Suriname game rules"
       ],
       "works": [
-        "murray-1952",
-        "parlett-1999"
+        "specialist-articles",
+        "russ-2000"
       ],
       "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/turkish-dama/",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/adji-boto/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 4,
-      "familyDeficitScore": 2.4,
-      "culturalValue": 4,
+      "unlockEase": 3,
+      "familyDeficitScore": 3.2,
+      "culturalValue": 5,
       "mechanicalUniqueness": 4,
-      "pageEconomy": 5,
-      "compositeScore": 19.4,
-      "priorityClass": "A",
-      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
+      "pageEconomy": 4,
+      "compositeScore": 19.2,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+        "Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932)",
+        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
       ],
       "unresolvedQuestions": []
     },
@@ -1689,6 +1402,193 @@
       "unresolvedQuestions": []
     },
     {
+      "gameId": "congklak",
+      "title": "Congklak",
+      "altNames": [
+        "Congkak",
+        "Dakon"
+      ],
+      "culture": "Javanese",
+      "region": "Southeast Asia",
+      "countryOrArea": "Indonesia · Malaysia",
+      "period": "documented from the 19th century; archaeological board finds are older",
+      "family": "sowing",
+      "restrictionStatus": "open",
+      "status": "BLOCKED",
+      "primaryBlocker": "P1",
+      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
+      "secondaryBlockers": [],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Murray 1952 ve Russ 2000 proje genelinde DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
+      ],
+      "whatWasMissing": "İki künyenin ikisi de engelli.",
+      "founderMustFind": [
+        "Murray 1952 ya da Russ 2000'de congklak/congkak/dakon maddesi",
+        "Çukur sayısı, depo (rumah) kuralı, eş zamanlı başlangıç olup olmadığı, ekim yönü, alma, tur sonu ve yeniden dizme kuralı",
+        "KARAR MALZEMESİ: sungka ile mekanik farkı — kitap ikisini ayrı madde yapacaksa farkı yazmalı"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
+      "searchPatterns": [
+        "\"congklak\" OR \"congkak\" OR \"dakon\" Javanese mancala rules",
+        "congkak Malay Indonesian sowing game rules ethnography"
+      ],
+      "works": [
+        "murray-1952",
+        "russ-2000"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/congklak/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 4,
+      "familyDeficitScore": 3.2,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 3,
+      "pageEconomy": 5,
+      "compositeScore": 19.2,
+      "priorityClass": "A",
+      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
+      "sourceRefs": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
+      ],
+      "unresolvedQuestions": []
+    },
+    {
+      "gameId": "sungka",
+      "title": "Sungka",
+      "altNames": [
+        "Sungkaan"
+      ],
+      "culture": "Visayan",
+      "region": "Southeast Asia",
+      "countryOrArea": "Philippines",
+      "period": "recorded in the late 19th century by American and Spanish observers",
+      "family": "sowing",
+      "restrictionStatus": "open",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Birincil künye 1900 tarihli bir dergi makalesidir — KAMUSAL ALANDADIR — ama proje onu HİÇ DENEMEDİ; ikinci künye (Murray 1952) engelli.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Culin 1900 · 'Philippine Games', American Anthropologist 2:4 — HİÇ denenmedi (AYNI derginin 1899 Hawaiian sayısı denendi ve yalnızca JSTOR nüshası bulundu)",
+        "Murray 1952 DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "whatWasMissing": "Culin'in sungka bölümü — çukur sayısı, depo kuralı, ekim yönü, alma.",
+      "founderMustFind": [
+        "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — sungka bölümü, SAYFA NUMARASIYLA (proje bu makalenin sayfa aralığını henüz görmedi ve tahmin etmiyor)",
+        "KARAR MALZEMESİ: congklak ile mekanik farkı — varyant kutusuna mı sığar, ayrı madde mi olmalı?"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "American Anthropologist cilt 2 (1900) ciltli sayısının taraması — kamusal alandadır ve archive.org/HathiTrust'ta olması beklenir.",
+      "searchPatterns": [
+        "Culin \"Philippine Games\" American Anthropologist 1900 archive.org",
+        "American Anthropologist volume 2 1900 full text archive",
+        "\"sungka\" Visayan Philippine mancala rules Culin"
+      ],
+      "works": [
+        "culin-1900-philippine",
+        "murray-1952"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/sungka/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 4,
+      "familyDeficitScore": 3.2,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 3,
+      "pageEconomy": 5,
+      "compositeScore": 19.2,
+      "priorityClass": "A",
+      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
+      "sourceRefs": [
+        "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "unresolvedQuestions": [
+        "Congklak ile mekanik farkı kitapta bir varyant kutusuna mı sığar, ayrı madde mi olmalı?"
+      ]
+    },
+    {
       "gameId": "petanque",
       "title": "Pétanque",
       "altNames": [
@@ -1770,102 +1670,6 @@
       ],
       "unresolvedQuestions": [
         "Modern kodifikasyon 1907'dir; 'geleneksel' etiketi dikkatle kullanılmalıdır."
-      ]
-    },
-    {
-      "gameId": "gebeta",
-      "title": "Gebeta",
-      "altNames": [
-        "Gabata",
-        "Gebet'a"
-      ],
-      "culture": "Amhara",
-      "region": "Horn of Africa",
-      "countryOrArea": "Ethiopia",
-      "period": "rock-cut boards of uncertain date; play documented from the 19th century",
-      "family": "sowing",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "İki künyenin ikisi de hakemli dergi makalesidir ve İKİSİ DE HİÇ DENENMEDİ. Bu oyun kayıtta engelli KANITI olmayan az sayıdaki maddeden biridir.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Pankhurst 1971 · Ethiopia Observer 14 — HİÇ denenmedi",
-        "Townshend 1979 · Azania 14 — HİÇ denenmedi"
-      ],
-      "sourcesAttempted": [
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 (1979)"
-      ],
-      "whatWasMissing": "Gabata biçimlerinin hangisinin basılacağı ve o biçimin kural metni.",
-      "founderMustFind": [
-        "Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971) — makalenin tamamı",
-        "Townshend 1979 · Azania 14 — ikinci bağımsız kaynak olarak",
-        "⚠ Kayıt uyarıyor: kaya oyulmuş tahtaların TARİHLENDİRMESİ tartışmalıdır; kitap kesin tarih VERMEYECEK — kaynak bunu desteklemeli"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Pankhurst makalesi + Amhara atfını veren çağdaş bir kaynak.",
-      "searchPatterns": [
-        "Pankhurst \"Gabata\" Ethiopia Observer 1971 board games",
-        "\"gebeta\" OR \"gabata\" Ethiopian mancala rules Amhara",
-        "Townshend Mankala Eastern Southern Africa Azania 1979"
-      ],
-      "works": [
-        "specialist-articles",
-        "townshend-1979"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/gebeta/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 4,
-      "pageEconomy": 3,
-      "compositeScore": 18.6,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971)",
-        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)"
-      ],
-      "unresolvedQuestions": [
-        "Kaya oyulmuş tahtaların tarihlendirilmesi tartışmalıdır; kitap kesin tarih vermemelidir."
       ]
     },
     {
@@ -1962,103 +1766,6 @@
       ]
     },
     {
-      "gameId": "hus",
-      "title": "Hus",
-      "altNames": [
-        "ǁHus",
-        "Ohus"
-      ],
-      "culture": "Nama",
-      "region": "Southern Africa",
-      "countryOrArea": "Namibia",
-      "period": "documented by ethnographers from the late 19th century",
-      "family": "sowing",
-      "restrictionStatus": "attributed",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye (Murray 1952) engelli; ikincisi (Townshend 1979) HİÇ DENENMEDİ. Oyun `attributed` taranmıştır: Nama atfı ZORUNLUDUR.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 DENENDİ ve açılamadı",
-        "Townshend 1979 — HİÇ denenmedi"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 (1979)"
-      ],
-      "whatWasMissing": "Dört sıralı tahtanın kural metni ve Nama bağlamı.",
-      "founderMustFind": [
-        "Murray 1952 ya da Townshend 1979'da hus/ǁhus maddesi — dört sıra, ekim yönü, alma koşulu, bitiş",
-        "Nama topluluğu atfını veren bir kaynak (atıf zorunluluğu için)"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
-      "searchPatterns": [
-        "\"hus\" Nama mancala four row rules Namibia",
-        "Townshend Mankala Azania 1979 hus ohus"
-      ],
-      "works": [
-        "murray-1952",
-        "townshend-1979"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/hus/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 4,
-      "pageEconomy": 3,
-      "compositeScore": 18.6,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)"
-      ],
-      "unresolvedQuestions": []
-    },
-    {
       "gameId": "morabaraba",
       "title": "Morabaraba",
       "altNames": [
@@ -2148,107 +1855,6 @@
       "sourceRefs": [
         "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
         "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "unresolvedQuestions": []
-    },
-    {
-      "gameId": "omweso",
-      "title": "Omweso",
-      "altNames": [
-        "Mweso"
-      ],
-      "culture": "Ganda",
-      "region": "East Africa",
-      "countryOrArea": "Uganda",
-      "period": "documented from the late 19th century; associated with the Buganda court",
-      "family": "sowing",
-      "restrictionStatus": "attributed",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye 1968 tarihli dar dağıtımlı bir monografidir ve HİÇ DENENMEDİ; üçüncü künye (Russ 2000) engelli. Oyun `attributed` taranmıştır: Ganda atfı ZORUNLUDUR.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Nsimbi 1968 — HİÇ denenmedi",
-        "Townshend 1979 — HİÇ denenmedi",
-        "Russ 2000 DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 (1979)",
-        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
-      ],
-      "whatWasMissing": "Dört sıralı tahtanın tam kural metni — omweso alma kuralları karmaşıktır.",
-      "founderMustFind": [
-        "Nsimbi, M. B., Omweso: A Game People Play in Uganda (Los Angeles: UCLA African Studies Center, 1968) — kural bölümü",
-        "Başlangıç dizilimi, ekim yönü, alma koşulu, emitwe (özel hamle) kuralı, bitiş",
-        "Ganda atfını veren çağdaş bir kaynak"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Nsimbi 1968 — oyunun en yetkili tek kaynağıdır ve UCLA yayınıdır.",
-      "searchPatterns": [
-        "Nsimbi \"Omweso: A Game People Play in Uganda\" 1968 PDF",
-        "\"omweso\" OR \"mweso\" Ganda Uganda mancala rules four row"
-      ],
-      "works": [
-        "specialist-articles",
-        "townshend-1979",
-        "russ-2000"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/omweso/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 4,
-      "pageEconomy": 3,
-      "compositeScore": 18.6,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Nsimbi, M. B., Omweso: A Game People Play in Uganda (Los Angeles: UCLA African Studies Center, 1968)",
-        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)",
-        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)"
       ],
       "unresolvedQuestions": []
     },
@@ -2441,105 +2047,6 @@
       "unresolvedQuestions": []
     },
     {
-      "gameId": "toguz-kumalak",
-      "title": "Toguz Kumalak",
-      "altNames": [
-        "Toguz Korgool",
-        "Togyz Kumalak"
-      ],
-      "culture": "Kazakh",
-      "region": "Central Asia",
-      "countryOrArea": "Kazakhstan · Kyrgyzstan",
-      "period": "documented from the 19th century; revived as a competitive sport in the 20th",
-      "family": "sowing",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [
-        {
-          "code": "P7",
-          "name": "VARIANT CONFLICT"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz. Ayrıca MODERN SPOR KURALLARI ile 19. yüzyıl derlemeleri arasındaki fark ÖLÇÜLMEMİŞTİR ve kitabın hangisini basacağı belirsizdir.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Russ 2000 ve de Voogt 1997 proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
-        "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)"
-      ],
-      "whatWasMissing": "Kural metni ve hangi kural katmanının (dönem mi, modern spor mu) basılacağı.",
-      "founderMustFind": [
-        "Russ 2000 ya da de Voogt 1997'de toguz kumalak maddesi — 2×9 çukur, 9'ar tohum, tuzdyk (kutsal çukur) kuralı, kazan, alma koşulu, bitiş",
-        "19. yüzyıl bir Orta Asya kaydı — modern spor kodifikasyonuyla FARKI ölçmek için",
-        "Kazak atfını veren bir kaynak"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Hem dönem kaydını hem modern kodifikasyonu tartışan bir çalışma.",
-      "searchPatterns": [
-        "\"toguz kumalak\" OR \"togyz kumalak\" rules tuzdyk Kazakh",
-        "toguz korgool Kyrgyz Kazakh mancala historical rules"
-      ],
-      "works": [
-        "russ-2000",
-        "devoogt-1997"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/toguz-kumalak/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 3,
-      "compositeScore": 18.6,
-      "priorityClass": "D",
-      "priorityReason": "portföyde eşi olmayan bir mekanik taşır",
-      "sourceRefs": [
-        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
-        "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)"
-      ],
-      "unresolvedQuestions": [
-        "Modern spor kurallarıyla 19. yüzyıl derlemeleri arasındaki fark ölçülmedi; kitap hangisini basacak?"
-      ]
-    },
-    {
       "gameId": "ashta-kashte",
       "title": "Ashta Kashte",
       "altNames": [
@@ -2726,6 +2233,298 @@
       ]
     },
     {
+      "gameId": "gebeta",
+      "title": "Gebeta",
+      "altNames": [
+        "Gabata",
+        "Gebet'a"
+      ],
+      "culture": "Amhara",
+      "region": "Horn of Africa",
+      "countryOrArea": "Ethiopia",
+      "period": "rock-cut boards of uncertain date; play documented from the 19th century",
+      "family": "sowing",
+      "restrictionStatus": "open",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "İki künyenin ikisi de hakemli dergi makalesidir ve İKİSİ DE HİÇ DENENMEDİ. Bu oyun kayıtta engelli KANITI olmayan az sayıdaki maddeden biridir.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Pankhurst 1971 · Ethiopia Observer 14 — HİÇ denenmedi",
+        "Townshend 1979 · Azania 14 — HİÇ denenmedi"
+      ],
+      "sourcesAttempted": [
+        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
+        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 (1979)"
+      ],
+      "whatWasMissing": "Gabata biçimlerinin hangisinin basılacağı ve o biçimin kural metni.",
+      "founderMustFind": [
+        "Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971) — makalenin tamamı",
+        "Townshend 1979 · Azania 14 — ikinci bağımsız kaynak olarak",
+        "⚠ Kayıt uyarıyor: kaya oyulmuş tahtaların TARİHLENDİRMESİ tartışmalıdır; kitap kesin tarih VERMEYECEK — kaynak bunu desteklemeli"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "region",
+          "attribution",
+          "historical context"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Pankhurst makalesi + Amhara atfını veren çağdaş bir kaynak.",
+      "searchPatterns": [
+        "Pankhurst \"Gabata\" Ethiopia Observer 1971 board games",
+        "\"gebeta\" OR \"gabata\" Ethiopian mancala rules Amhara",
+        "Townshend Mankala Eastern Southern Africa Azania 1979"
+      ],
+      "works": [
+        "specialist-articles",
+        "townshend-1979"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/gebeta/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 3.2,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 4,
+      "pageEconomy": 3,
+      "compositeScore": 18.2,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971)",
+        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)"
+      ],
+      "unresolvedQuestions": [
+        "Kaya oyulmuş tahtaların tarihlendirilmesi tartışmalıdır; kitap kesin tarih vermemelidir."
+      ]
+    },
+    {
+      "gameId": "hus",
+      "title": "Hus",
+      "altNames": [
+        "ǁHus",
+        "Ohus"
+      ],
+      "culture": "Nama",
+      "region": "Southern Africa",
+      "countryOrArea": "Namibia",
+      "period": "documented by ethnographers from the late 19th century",
+      "family": "sowing",
+      "restrictionStatus": "attributed",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Birincil künye (Murray 1952) engelli; ikincisi (Townshend 1979) HİÇ DENENMEDİ. Oyun `attributed` taranmıştır: Nama atfı ZORUNLUDUR.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Murray 1952 DENENDİ ve açılamadı",
+        "Townshend 1979 — HİÇ denenmedi"
+      ],
+      "sourcesAttempted": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 (1979)"
+      ],
+      "whatWasMissing": "Dört sıralı tahtanın kural metni ve Nama bağlamı.",
+      "founderMustFind": [
+        "Murray 1952 ya da Townshend 1979'da hus/ǁhus maddesi — dört sıra, ekim yönü, alma koşulu, bitiş",
+        "Nama topluluğu atfını veren bir kaynak (atıf zorunluluğu için)"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "region",
+          "attribution",
+          "historical context"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
+      "searchPatterns": [
+        "\"hus\" Nama mancala four row rules Namibia",
+        "Townshend Mankala Azania 1979 hus ohus"
+      ],
+      "works": [
+        "murray-1952",
+        "townshend-1979"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/hus/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 3.2,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 4,
+      "pageEconomy": 3,
+      "compositeScore": 18.2,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)"
+      ],
+      "unresolvedQuestions": []
+    },
+    {
+      "gameId": "toguz-kumalak",
+      "title": "Toguz Kumalak",
+      "altNames": [
+        "Toguz Korgool",
+        "Togyz Kumalak"
+      ],
+      "culture": "Kazakh",
+      "region": "Central Asia",
+      "countryOrArea": "Kazakhstan · Kyrgyzstan",
+      "period": "documented from the 19th century; revived as a competitive sport in the 20th",
+      "family": "sowing",
+      "restrictionStatus": "open",
+      "status": "BLOCKED",
+      "primaryBlocker": "P1",
+      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
+      "secondaryBlockers": [
+        {
+          "code": "P7",
+          "name": "VARIANT CONFLICT"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz. Ayrıca MODERN SPOR KURALLARI ile 19. yüzyıl derlemeleri arasındaki fark ÖLÇÜLMEMİŞTİR ve kitabın hangisini basacağı belirsizdir.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Russ 2000 ve de Voogt 1997 proje genelinde DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+        "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)"
+      ],
+      "whatWasMissing": "Kural metni ve hangi kural katmanının (dönem mi, modern spor mu) basılacağı.",
+      "founderMustFind": [
+        "Russ 2000 ya da de Voogt 1997'de toguz kumalak maddesi — 2×9 çukur, 9'ar tohum, tuzdyk (kutsal çukur) kuralı, kazan, alma koşulu, bitiş",
+        "19. yüzyıl bir Orta Asya kaydı — modern spor kodifikasyonuyla FARKI ölçmek için",
+        "Kazak atfını veren bir kaynak"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "region",
+          "attribution",
+          "historical context"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Hem dönem kaydını hem modern kodifikasyonu tartışan bir çalışma.",
+      "searchPatterns": [
+        "\"toguz kumalak\" OR \"togyz kumalak\" rules tuzdyk Kazakh",
+        "toguz korgool Kyrgyz Kazakh mancala historical rules"
+      ],
+      "works": [
+        "russ-2000",
+        "devoogt-1997"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/toguz-kumalak/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 3.2,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 5,
+      "pageEconomy": 3,
+      "compositeScore": 18.2,
+      "priorityClass": "D",
+      "priorityReason": "portföyde eşi olmayan bir mekanik taşır",
+      "sourceRefs": [
+        "Russ, Laurence, The Complete Mancala Games Book (New York: Marlowe & Company, 2000)",
+        "de Voogt, Alex, Mancala Board Games (London: British Museum Press, 1997)"
+      ],
+      "unresolvedQuestions": [
+        "Modern spor kurallarıyla 19. yüzyıl derlemeleri arasındaki fark ölçülmedi; kitap hangisini basacak?"
+      ]
+    },
+    {
       "gameId": "len-choa",
       "title": "Len Choa",
       "altNames": [
@@ -2904,112 +2703,6 @@
         "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
       ],
       "unresolvedQuestions": []
-    },
-    {
-      "gameId": "zamma",
-      "title": "Zamma",
-      "altNames": [
-        "Sig",
-        "Kharbga (related)"
-      ],
-      "culture": "Amazigh",
-      "region": "North Africa",
-      "countryOrArea": "Algeria · Morocco · Sahara",
-      "period": "documented in 19th–20th century fieldwork",
-      "family": "war-board",
-      "restrictionStatus": "attributed",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        },
-        {
-          "code": "P7",
-          "name": "VARIANT CONFLICT"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye (Murray 1952) engelli; ikincisi (Béart 1955) HİÇ DENENMEDİ. Ayrıca TAŞ SAYISI kaynaklara göre DEĞİŞİYOR ve kitap bir sayı seçip gerekçesini yazmak zorundadır. Oyun `attributed` taranmıştır: Amazigh atfı ZORUNLUDUR.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 DENENDİ ve açılamadı",
-        "Béart 1955 — HİÇ denenmedi"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar: IFAN, 1955), 2 cilt"
-      ],
-      "whatWasMissing": "Kural metni ve taş sayısı çelişkisini çözecek bir künye.",
-      "founderMustFind": [
-        "Murray 1952 ya da Béart 1955'te zamma/sig maddesi",
-        "Tahta (9×9 köşegenli ızgara), taş sayısı, hareket, atlayarak alma, 'mollah' (dama) taşının menzili",
-        "TAŞ SAYISI için bir karar dayanağı: kaynaklar farklı sayı veriyor ve kitap birini seçip gerekçesini yazacak",
-        "Amazigh atfını veren bir kaynak"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
-      "searchPatterns": [
-        "\"zamma\" Berber Amazigh draughts rules North Africa",
-        "\"sig\" OR \"kharbga\" North African board game rules",
-        "Béart jeux ouest africain zamma sig règles"
-      ],
-      "works": [
-        "murray-1952",
-        "beart-1955"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/zamma/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 2.4,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 4,
-      "pageEconomy": 3,
-      "compositeScore": 17.4,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar, 1955)"
-      ],
-      "unresolvedQuestions": [
-        "Taş sayısı kaynaklara göre değişiyor; kitap bir sayı seçmeli ve gerekçesini yazmalı."
-      ]
     },
     {
       "gameId": "game-of-the-goose",
@@ -3205,112 +2898,17 @@
       ]
     },
     {
-      "gameId": "ayoayo",
-      "title": "Ayòayò",
+      "gameId": "zamma",
+      "title": "Zamma",
       "altNames": [
-        "Ayo"
+        "Sig",
+        "Kharbga (related)"
       ],
-      "culture": "Yoruba",
-      "region": "West Africa",
-      "countryOrArea": "Nigeria",
-      "period": "documented in the 20th century; part of a long regional sowing tradition",
-      "family": "sowing",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye Nijerya basımı dar dağıtımlı bir monografidir ve HİÇ DENENMEDİ; ikinci künye (Zaslavsky) engelli.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Odeleye 1977 — HİÇ denenmedi",
-        "Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
-      ],
-      "whatWasMissing": "Ayò'nun ekim ve alma kuralı ve Oware'den FARKI.",
-      "founderMustFind": [
-        "Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977) — kural bölümü",
-        "KARAR MALZEMESİ: Ayòayò ile Oware kitapta AYRI maddeler mi? Kayıt mekanik yakınlığı ve tekrar riskini işaretliyor — farkı yazan bir kaynak gerekir"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
-      "searchPatterns": [
-        "Odeleye \"Ayo: A Popular Yoruba Game\" 1977",
-        "\"ayoayo\" OR \"ayò\" Yoruba mancala rules"
-      ],
-      "works": [
-        "specialist-articles",
-        "zaslavsky-1973"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/ayoayo/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 2,
-      "pageEconomy": 4,
-      "compositeScore": 16.6,
-      "priorityClass": "E",
-      "priorityReason": "yararlı ama kritik değil",
-      "sourceRefs": [
-        "Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977)",
-        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
-      ],
-      "unresolvedQuestions": [
-        "Oware ile aynı sayfada mı, ayrı madde mi? İkisi mekanik olarak çok yakın ve kitabın tekrar riski var."
-      ]
-    },
-    {
-      "gameId": "mefuvha",
-      "title": "Mefuvha",
-      "altNames": [
-        "Muravharavha"
-      ],
-      "culture": "Venda",
-      "region": "Southern Africa",
-      "countryOrArea": "Limpopo, South Africa",
-      "period": "documented in 20th-century ethnographic literature",
-      "family": "sowing",
+      "culture": "Amazigh",
+      "region": "North Africa",
+      "countryOrArea": "Algeria · Morocco · Sahara",
+      "period": "documented in 19th–20th century fieldwork",
+      "family": "war-board",
       "restrictionStatus": "attributed",
       "status": "SOURCE-PENDING",
       "primaryBlocker": "P2",
@@ -3319,24 +2917,30 @@
         {
           "code": "P1",
           "name": "SOURCE ACCESS BLOCKED"
+        },
+        {
+          "code": "P7",
+          "name": "VARIANT CONFLICT"
         }
       ],
       "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye (Zaslavsky) engelli; ikincisi (Townshend 1979) HİÇ DENENMEDİ. Oyun `attributed` taranmıştır: Venda atfı ZORUNLUDUR.",
+      "whyAgentCannotWrite": "Birincil künye (Murray 1952) engelli; ikincisi (Béart 1955) HİÇ DENENMEDİ. Ayrıca TAŞ SAYISI kaynaklara göre DEĞİŞİYOR ve kitap bir sayı seçip gerekçesini yazmak zorundadır. Oyun `attributed` taranmıştır: Amazigh atfı ZORUNLUDUR.",
       "alreadyChecked": [
         "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
         "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Zaslavsky 1973 DENENDİ ve açılamadı",
-        "Townshend 1979 — HİÇ denenmedi"
+        "Murray 1952 DENENDİ ve açılamadı",
+        "Béart 1955 — HİÇ denenmedi"
       ],
       "sourcesAttempted": [
-        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
-        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 (1979)"
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar: IFAN, 1955), 2 cilt"
       ],
-      "whatWasMissing": "Dört sıralı tahtanın kural metni ve Venda bağlamı.",
+      "whatWasMissing": "Kural metni ve taş sayısı çelişkisini çözecek bir künye.",
       "founderMustFind": [
-        "Zaslavsky 1973 ya da Townshend 1979'da mefuvha/muravharavha maddesi",
-        "Venda topluluğu atfını veren bir kaynak"
+        "Murray 1952 ya da Béart 1955'te zamma/sig maddesi",
+        "Tahta (9×9 köşegenli ızgara), taş sayısı, hareket, atlayarak alma, 'mollah' (dama) taşının menzili",
+        "TAŞ SAYISI için bir karar dayanağı: kaynaklar farklı sayı veriyor ve kitap birini seçip gerekçesini yazacak",
+        "Amazigh atfını veren bir kaynak"
       ],
       "minimumEvidence": {
         "rule": [
@@ -3372,29 +2976,32 @@
       },
       "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
       "searchPatterns": [
-        "\"mefuvha\" OR \"muravharavha\" Venda game rules South Africa",
-        "Venda traditional board game four row mancala"
+        "\"zamma\" Berber Amazigh draughts rules North Africa",
+        "\"sig\" OR \"kharbga\" North African board game rules",
+        "Béart jeux ouest africain zamma sig règles"
       ],
       "works": [
-        "zaslavsky-1973",
-        "townshend-1979"
+        "murray-1952",
+        "beart-1955"
       ],
       "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/mefuvha/",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/zamma/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 3.6,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
+      "familyDeficitScore": 1.9,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 4,
       "pageEconomy": 3,
-      "compositeScore": 16.6,
-      "priorityClass": "E",
-      "priorityReason": "yararlı ama kritik değil",
+      "compositeScore": 16.9,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [
-        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
-        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)"
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar, 1955)"
       ],
-      "unresolvedQuestions": []
+      "unresolvedQuestions": [
+        "Taş sayısı kaynaklara göre değişiyor; kitap bir sayı seçmeli ve gerekçesini yazmalı."
+      ]
     },
     {
       "gameId": "halatafl",
@@ -3498,38 +3105,42 @@
       ]
     },
     {
-      "gameId": "jeu-de-dames",
-      "title": "Jeu de Dames",
+      "gameId": "ayoayo",
+      "title": "Ayòayò",
       "altNames": [
-        "International draughts",
-        "Polish draughts"
+        "Ayo"
       ],
-      "culture": "French",
-      "region": "Western Europe",
-      "countryOrArea": "France · Netherlands",
-      "period": "the 10×10 form recorded from the 18th century; the 8×8 form is older",
-      "family": "war-board",
+      "culture": "Yoruba",
+      "region": "West Africa",
+      "countryOrArea": "Nigeria",
+      "period": "documented in the 20th century; part of a long regional sowing tradition",
+      "family": "sowing",
       "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [],
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
       "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
+      "whyAgentCannotWrite": "Birincil künye Nijerya basımı dar dağıtımlı bir monografidir ve HİÇ DENENMEDİ; ikinci künye (Zaslavsky) engelli.",
       "alreadyChecked": [
         "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
         "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 ve Parlett proje genelinde DENENDİ ve açılamadı"
+        "Odeleye 1977 — HİÇ denenmedi",
+        "Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı"
       ],
       "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
+        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
       ],
-      "whatWasMissing": "İki künyenin ikisi de engelli.",
+      "whatWasMissing": "Ayò'nun ekim ve alma kuralı ve Oware'den FARKI.",
       "founderMustFind": [
-        "Murray 1952 ya da Parlett'te international/Polish draughts maddesi — 10×10 tahta, 20'şer taş, geriye alma, dama taşının uzun menzili, AZAMİ ALMA ZORUNLULUĞU",
-        "Oyunun 1723 Paris kökeni ve 'Polonya daması' adının hikâyesi",
-        "KARAR MALZEMESİ: kayıt uyarıyor — 'okur damayı zaten biliyor; kitaba girmesi ancak Alquerque–Dama–Türk Daması hattını göstermek içinse anlamlıdır'. alquerque YAZILABİLİR durumda; hat bu maddeyle tamamlanır"
+        "Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977) — kural bölümü",
+        "KARAR MALZEMESİ: Ayòayò ile Oware kitapta AYRI maddeler mi? Kayıt mekanik yakınlığı ve tekrar riskini işaretliyor — farkı yazan bir kaynak gerekir"
       ],
       "minimumEvidence": {
         "rule": [
@@ -3563,31 +3174,127 @@
       },
       "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
       "searchPatterns": [
-        "international draughts rules 10x10 majority capture history",
-        "jeu de dames polonaises 1723 histoire règles"
+        "Odeleye \"Ayo: A Popular Yoruba Game\" 1977",
+        "\"ayoayo\" OR \"ayò\" Yoruba mancala rules"
       ],
       "works": [
-        "murray-1952",
-        "parlett-1999"
+        "specialist-articles",
+        "zaslavsky-1973"
       ],
       "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/jeu-de-dames/",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/ayoayo/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 4,
-      "familyDeficitScore": 2.4,
-      "culturalValue": 3,
+      "unlockEase": 3,
+      "familyDeficitScore": 3.2,
+      "culturalValue": 4,
       "mechanicalUniqueness": 2,
-      "pageEconomy": 5,
-      "compositeScore": 16.4,
-      "priorityClass": "A",
-      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
+      "pageEconomy": 4,
+      "compositeScore": 16.2,
+      "priorityClass": "E",
+      "priorityReason": "yararlı ama kritik değil",
       "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+        "Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977)",
+        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
       ],
       "unresolvedQuestions": [
-        "Okur damayı zaten biliyor; kitaba girmesi ancak Alquerque–Dama–Türk Daması hattını göstermek içinse anlamlıdır."
+        "Oware ile aynı sayfada mı, ayrı madde mi? İkisi mekanik olarak çok yakın ve kitabın tekrar riski var."
       ]
+    },
+    {
+      "gameId": "mefuvha",
+      "title": "Mefuvha",
+      "altNames": [
+        "Muravharavha"
+      ],
+      "culture": "Venda",
+      "region": "Southern Africa",
+      "countryOrArea": "Limpopo, South Africa",
+      "period": "documented in 20th-century ethnographic literature",
+      "family": "sowing",
+      "restrictionStatus": "attributed",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Birincil künye (Zaslavsky) engelli; ikincisi (Townshend 1979) HİÇ DENENMEDİ. Oyun `attributed` taranmıştır: Venda atfı ZORUNLUDUR.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Zaslavsky 1973 DENENDİ ve açılamadı",
+        "Townshend 1979 — HİÇ denenmedi"
+      ],
+      "sourcesAttempted": [
+        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 (1979)"
+      ],
+      "whatWasMissing": "Dört sıralı tahtanın kural metni ve Venda bağlamı.",
+      "founderMustFind": [
+        "Zaslavsky 1973 ya da Townshend 1979'da mefuvha/muravharavha maddesi",
+        "Venda topluluğu atfını veren bir kaynak"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "region",
+          "attribution",
+          "historical context"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
+      "searchPatterns": [
+        "\"mefuvha\" OR \"muravharavha\" Venda game rules South Africa",
+        "Venda traditional board game four row mancala"
+      ],
+      "works": [
+        "zaslavsky-1973",
+        "townshend-1979"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/mefuvha/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 3.2,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 3,
+      "pageEconomy": 3,
+      "compositeScore": 16.2,
+      "priorityClass": "E",
+      "priorityReason": "yararlı ama kritik değil",
+      "sourceRefs": [
+        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+        "Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania 14 (1979)"
+      ],
+      "unresolvedQuestions": []
     },
     {
       "gameId": "makruk",
@@ -3673,11 +3380,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/makruk/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 2.4,
+      "familyDeficitScore": 1.9,
       "culturalValue": 4,
       "mechanicalUniqueness": 3,
       "pageEconomy": 4,
-      "compositeScore": 16.4,
+      "compositeScore": 15.9,
       "priorityClass": "E",
       "priorityReason": "yararlı ama kritik değil",
       "sourceRefs": [
@@ -3776,11 +3483,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/surakarta/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 2,
-      "familyDeficitScore": 2.4,
+      "familyDeficitScore": 1.9,
       "culturalValue": 3,
       "mechanicalUniqueness": 5,
       "pageEconomy": 4,
-      "compositeScore": 16.4,
+      "compositeScore": 15.9,
       "priorityClass": "D",
       "priorityReason": "portföyde eşi olmayan bir mekanik taşır",
       "sourceRefs": [

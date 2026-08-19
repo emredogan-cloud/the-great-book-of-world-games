@@ -2,7 +2,7 @@
   "status": "pass",
   "checks": 16,
   "errors": [],
-  "games": 48,
+  "games": 51,
   "outOfScope": [],
   "scopeLocked": 100,
   "blocksUsed": [
@@ -37,8 +37,8 @@
     "unknown",
     "winCondition"
   ],
-  "withDiagrams": 38,
-  "withoutDiagrams": 10,
+  "withDiagrams": 40,
+  "withoutDiagrams": 11,
   "reconstructed": 7,
   "externalPlaytests": 0
 }

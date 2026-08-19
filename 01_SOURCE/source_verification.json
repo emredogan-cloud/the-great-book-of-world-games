@@ -782,6 +782,39 @@
       "verifiedOn": "2026-08-19",
       "accessMethod": "kurucu teslimi — PDF metin katmanı; basılı sayfa numarası ÜST SATIRDAN okundu (Bell taramasında sayfa kayması değişkendir, aritmetik kullanılmadı)",
       "status": "verified"
+    },
+    {
+      "gameId": "omweso",
+      "sourceRef": "Claudia Zaslavsky, Africa Counts: Number and Pattern in African Cultures, 'Rules for Playing Omweso (Mweso)', pp. 133–136",
+      "edition": "Lawrence Hill Books baskısı, vdoc.pub taraması (kurucu teslimi #2, 2026-08-19) · 369 s. · ABBYY metin katmanı",
+      "locator": "'Rules for Playing Omweso (Mweso)', ss. 133–136; kültür künyesi Figure 11-4, s. 123",
+      "supportingPassage": "Rules for Playing Omweso (Mweso) (based on Omweso, A Game People Play in Uganda, by M. B. Nsimbi). Board: four rows, eight holes in each row. Players: two (or two teams), one on each side of the board, each player controlling the sixteen holes in front of him. Counters: sixty-four seeds or pebbles, thirty-two for each side. […] Moves: 1. Each of the two players in turn scoops up all the counters from any hole on his side containing two or more counters, and distributes them in a counter-clockwise direction, one in each hole, starting with the hole adjacent to the one from which he had picked up the counters. If the last counter falls into an occupied hole, the player picks up all the counters in that hole and continues dropping them as before. He has completed his move when his last counter falls into an empty hole. […] Capturing Counters: 1. Vulnerable Position. When a player has counters in two opposite holes […] the counters in both holes are open to capture by his opponent. 2. Method of Capture. When a player, in the course of his move, drops his last counter into a non-empty hole in his inner row, directly opposite the vulnerable counters in his opponent's holes, he may collect the enemy counters, and then continue his move in the usual manner. […] 3. Capture by Reverse Move. […] The maximum number of counters distributed in any single reverse play may not exceed nine. […] Victory: A player wins when he has captured all the counters, or when his opponent has not more than one counter in each hole, thus preventing any move on his part. […] Figure 11-4 Board for Omweso (or Mweso), played by the Ganda of Uganda. British Museum.",
+      "supportedClaim": "Uganda'nın Ganda halkının oyunu (KÜLTÜR doğrulandı, Figure 11-4). Tahta dört sıra × sekiz çukur; oyuncu başına 32 tohum, toplam 64 ve HEPSİ oyunda kalır; oyuncu kendi ÖNÜNDEKİ 16 çukuru yönetir; ekim saat yönünün TERSİNE ve ZİNCİRLİDİR (son tohum DOLU çukura düşerse alınıp sürdürülür, BOŞ çukura düşerse tur biter); alma koşulu son tohumun İÇ SIRADAKİ dolu bir çukura düşmesi ve KARŞIDAKİ iki çukurun ikisinde de tohum bulunmasıdır; TERS hamleyle alma yalnızca A/B/O/P çukurlarından ve azami DOKUZ tohumla; kazanma bütün tohumları almak ya da rakibi her çukurda en fazla bir tohuma indirmektir. Kural seti Nsimbi 1968'e dayanır ve Zaslavsky bunu künyesinde SÖYLER.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi #2 — PDF metin katmanı; basılı numaralar sayfa üst satırından okundu. Kurulum ŞEKİLLERİ (fig. 60 · fig. 61) sayfanın kendisi RENDER edilip GÖZLE okundu.",
+      "status": "verified"
+    },
+    {
+      "gameId": "jeu-de-dames",
+      "sourceRef": "R. C. Bell, Board and Table Games from Many Civilizations, 2nd ed. (Oxford: Oxford University Press), 'Continental or Polish Draughts', pp. 74–75",
+      "edition": "second edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "'Continental or Polish Draughts', ss. 74–75 (kurulum: fig. 61, s. 74)",
+      "supportingPassage": "The jeu forcé (English draughts) only lasted a few years in France and was replaced about 1650 by a variety known as 'Le Grand Forçat'. This also became obsolete within fifty years and was replaced by the game now known as Polish or Continental draughts, first played in the cafés of Paris in 1727. […] Rules 1. The opening position of the pieces is shown in fig. 61. 2. A man moves one square diagonally forwards. 3. A man captures by the short leap both diagonally forwards or backwards. Capturing is compulsory. 4. A king can move diagonally any number of unoccupied squares. 5. A king may land any number of vacant squares beyond a captured piece. Rules 4 and 5 may occur together (a long leap). 6. If a player has a choice of captures he must choose the one in which the greatest number of captures are made, or if equal numbers are at risk, then the more powerful pieces must be taken. 7. Captured pieces are only lifted at the end of the move and a dead piece forms an impassable barrier. 8. A man is only promoted to a king when he remains on the opponent's back line; if on reaching the crowned line more captures are possible, they must be made and the move completed, the man remaining uncrowned until he again reaches the crowned line and remains there at the end of the move.",
+      "supportedClaim": "Fransız oyunu (KÜLTÜR doğrulandı: 'first played in the cafés of Paris in 1727'). Sekiz kural maddesi tam. KURULUM metinde değil fig. 61'dedir ve ŞEKİL GÖZLE OKUNDU: 10×10 tahta, her tarafta DÖRT dolu sıra = oyuncu başına 20 taş, koyu karelerde. Azami alma zorunluluğu (6), ölü taşın hamle sonuna kadar tahtada kalması ve GEÇİLMEZ engel olması (7), ve terfi için geri sırada KALMA şartı (8) bu oyunun ayırt edici kurallarıdır.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi #2 — PDF metin katmanı; basılı numaralar sayfa üst satırından okundu. Kurulum ŞEKİLLERİ (fig. 60 · fig. 61) sayfanın kendisi RENDER edilip GÖZLE okundu.",
+      "status": "verified"
+    },
+    {
+      "gameId": "turkish-dama",
+      "sourceRef": "R. C. Bell, Board and Table Games from Many Civilizations, 2nd ed. (Oxford: Oxford University Press), 'Turkish Draughts', p. 74",
+      "edition": "second edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "'Turkish Draughts', s. 74 (kurulum: fig. 60)",
+      "supportingPassage": "Rules 1. A man moves one square forwards or sideways but not diagonally, and on reaching the eighth row becomes a king. 2. A man captures by the short jump forwards or sideways and may take more than one piece in a turn of play. 3. Captured pieces are removed as taken and a turn continues until the piece can make no more captures. 4. A king can move forwards, sideways, or backwards any number of vacant squares, and the king can place himself on any vacant square beyond the captured piece to make further captures. 5. The first player to capture or immobilize all his opponent's pieces, or reduce the enemy to a single man against a king, wins the game. […] Fig. 60. Opening position in Turkish draughts.",
+      "supportedClaim": "Türk oyunu (Bell'in başlığı 'Turkish draughts'). Beş kural maddesi tam. Taşlar İLERİ ve YANA gider, KÖŞEGEN GİTMEZ — bu oyunu bütün öteki damalardan ayıran kuraldır. Alma da ileri/yana kısa sıçramadır; alınan taşlar ANINDA kaldırılır (Polonya damasının tersine). Dama uzun menzillidir ve alınan taşın ötesinde İSTEDİĞİ boş kareye konabilir. KURULUM metinde değil fig. 60'tadır ve ŞEKİL GÖZLE OKUNDU: 8×8 tahta, her tarafta İKİNCİ ve ÜÇÜNCÜ sıralar dolu = oyuncu başına 16 taş; geri sıra BOŞ.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi #2 — PDF metin katmanı; basılı numaralar sayfa üst satırından okundu. Kurulum ŞEKİLLERİ (fig. 60 · fig. 61) sayfanın kendisi RENDER edilip GÖZLE okundu.",
+      "status": "verified"
     }
   ]
 }

@@ -441,7 +441,7 @@
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 48,
+        "sampleSize": 51,
         "projectedTotalPages": 254,
         "deviationPct": -0.78,
         "withinTolerance": true,
@@ -450,7 +450,7 @@
         "overflowDriver": "both",
         "textSpreadPages": 0.686,
         "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-batch7-typeset-measurement.json",
+        "report": "06_REPORTS/phase5-batch8-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",

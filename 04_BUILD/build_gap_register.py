@@ -787,22 +787,6 @@ ENTRIES.update({
     pat=['"mefuvha" OR "muravharavha" Venda game rules South Africa',
          'Venda traditional board game four row mancala']),
 
-"omweso": g("SOURCE-PENDING", "P2", 3, ["specialist-articles", "townshend-1979", "russ-2000"],
-    "Birincil künye 1968 tarihli dar dağıtımlı bir monografidir ve HİÇ "
-    "DENENMEDİ; üçüncü künye (Russ 2000) engelli. Oyun `attributed` "
-    "taranmıştır: Ganda atfı ZORUNLUDUR.",
-    C_SCAN + ["Nsimbi 1968 — HİÇ denenmedi", "Townshend 1979 — HİÇ denenmedi",
-              "Russ 2000 DENENDİ ve açılamadı"],
-    "Dört sıralı tahtanın tam kural metni — omweso alma kuralları karmaşıktır.",
-    ["Nsimbi, M. B., Omweso: A Game People Play in Uganda (Los Angeles: UCLA "
-     "African Studies Center, 1968) — kural bölümü",
-     "Başlangıç dizilimi, ekim yönü, alma koşulu, emitwe (özel hamle) kuralı, bitiş",
-     "Ganda atfını veren çağdaş bir kaynak"],
-    s=["P1"], cult=CULT_FULL,
-    ideal="Nsimbi 1968 — oyunun en yetkili tek kaynağıdır ve UCLA yayınıdır.",
-    pat=['Nsimbi "Omweso: A Game People Play in Uganda" 1968 PDF',
-         '"omweso" OR "mweso" Ganda Uganda mancala rules four row']),
-
 "sungka": g("SOURCE-PENDING", "P2", 4, ["culin-1900-philippine", "murray-1952"],
     "Birincil künye 1900 tarihli bir dergi makalesidir — KAMUSAL ALANDADIR — "
     "ama proje onu HİÇ DENEMEDİ; ikinci künye (Murray 1952) engelli.",
@@ -982,20 +966,6 @@ ENTRIES.update({
 ENTRIES.update({
 
 # ── WAR BOARD ──────────────────────────────────────────────────────────────
-"jeu-de-dames": g("BLOCKED", "P1", 4, ["murray-1952", "parlett-1999"],
-    W_ACCESS,
-    C_SCAN + ["Murray 1952 ve Parlett proje genelinde DENENDİ ve açılamadı"],
-    "İki künyenin ikisi de engelli.",
-    ["Murray 1952 ya da Parlett'te international/Polish draughts maddesi — "
-     "10×10 tahta, 20'şer taş, geriye alma, dama taşının uzun menzili, "
-     "AZAMİ ALMA ZORUNLULUĞU",
-     "Oyunun 1723 Paris kökeni ve 'Polonya daması' adının hikâyesi",
-     "KARAR MALZEMESİ: kayıt uyarıyor — 'okur damayı zaten biliyor; kitaba "
-     "girmesi ancak Alquerque–Dama–Türk Daması hattını göstermek içinse "
-     "anlamlıdır'. alquerque YAZILABİLİR durumda; hat bu maddeyle tamamlanır"],
-    pat=['international draughts rules 10x10 majority capture history',
-         'jeu de dames polonaises 1723 histoire règles']),
-
 "konane": g("BLOCKED", "P2", 3, ["culin-1899-hawaiian", "bell-1960"],
     "Birincil künye KAMUSAL ALANDADIR ama yalnızca JSTOR nüshası bulundu ve "
     "tam metin indirilemedi; ikinci künye (Bell) engelli. Oyun `attributed` "
@@ -1061,17 +1031,6 @@ ENTRIES.update({
     pat=['surakarta game origin traditional Javanese evidence',
          'permainan surakarta Jawa asal usul permainan tradisional',
          'surakarta board game history invented 20th century']),
-
-"turkish-dama": g("BLOCKED", "P1", 4, ["murray-1952", "parlett-1999"], W_ACCESS,
-    C_SCAN + ["Murray 1952 ve Parlett proje genelinde DENENDİ ve açılamadı"],
-    "İki künyenin ikisi de engelli.",
-    ["Murray 1952 ya da Parlett'te Turkish draughts maddesi — 8×8 tahta, "
-     "16'şar taş İKİNCİ ve ÜÇÜNCÜ sırada, taşların İLERİ VE YANA gitmesi "
-     "(köşegen DEĞİL), dama taşının uzun menzili, alma zorunluluğu",
-     "Anadolu kaynaklı bir dönem kaydı"],
-    ideal="Osmanlı/Türk kaynaklı bir dönem kaydı kültür künyesini güçlendirir.",
-    pat=['Turkish draughts dama rules orthogonal capture',
-         'Türk daması kuralları tarihi kaynak', 'Murray Turkish draughts rules 1952']),
 
 "yote": g("SOURCE-PENDING", "P2", 3, ["beart-1955", "zaslavsky-1973"],
     "Birincil künye Dakar basımı dar dağıtımlı bir eserdir ve HİÇ DENENMEDİ; "
@@ -1769,6 +1728,9 @@ RESOLVED_BY_DELIVERY = {
  "mu-torere":      "Murray 1952 § 4.8.3 s.93 — 'Maoris, New Zealand', Elsdon Best'e dayanır",
  "catch-the-hare": "Murray 1952 § 5.1.1 s.99 — 'Spain: De cercar la liebre', Alfonso X (Alf. 916)",
  "li-b-el-merafib":"Bell ss.12–14 — 'played by the Baggara Arabs of the Sudan'",
+ "omweso":         "Zaslavsky ss.133–136 (Nsimbi 1968 temelli) — Figure 11-4: 'played by the Ganda of Uganda'",
+ "turkish-dama":   "Bell s.74 'Turkish Draughts' — kurulum fig. 60 gözle okundu",
+ "jeu-de-dames":   "Bell ss.74–75 'Continental or Polish Draughts' — 'cafés of Paris in 1727'; kurulum fig. 61 gözle okundu",
  "hasami-shogi":   "Bell s.97 'Hasami Shogi (1)' — 'also from Japan'; Bell'in (2) biçimi VARYANT olarak anıldı",
 }
 
