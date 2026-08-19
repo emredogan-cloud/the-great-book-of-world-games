@@ -2,7 +2,7 @@
   "status": "pass",
   "measuredOn": "phase5",
   "measuredAtGate": "phase1",
-  "sampleSize": 51,
+  "sampleSize": 52,
   "sampleGames": [
     "tablut",
     "yut-nori",
@@ -54,9 +54,10 @@
     "li-b-el-merafib",
     "omweso",
     "turkish-dama",
-    "jeu-de-dames"
+    "jeu-de-dames",
+    "bul"
   ],
-  "sampleCaveat": "Örneklem 51 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
+  "sampleCaveat": "Örneklem 52 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
   "geometry": {
     "trimWidthMm": 215.9,
     "trimHeightMm": 279.4,
@@ -763,19 +764,33 @@
       "measuredPages": 1.633,
       "billedPages": 2,
       "overflowsSpread": false
+    },
+    {
+      "gameId": "bul",
+      "words": 811,
+      "textHeightMm": 323.3,
+      "diagramHeightMm": 41.0,
+      "diagrams": [
+        "bul-stack"
+      ],
+      "textPages": 1.336,
+      "diagramPages": 0.169,
+      "measuredPages": 1.505,
+      "billedPages": 2,
+      "overflowsSpread": false
     }
   ],
-  "avgWordsPerGame": 726.5,
-  "measuredWordsPerPage": 474.0,
+  "avgWordsPerGame": 728.1,
+  "measuredWordsPerPage": 475.2,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.533,
-  "avgBilledPagesPerGame": 2.039,
-  "avgTextPagesPerGame": 1.277,
-  "avgDiagramPagesPerGame": 0.255,
+  "avgMeasuredPagesPerGame": 1.532,
+  "avgBilledPagesPerGame": 2.038,
+  "avgTextPagesPerGame": 1.279,
+  "avgDiagramPagesPerGame": 0.254,
   "spreadOverflowGames": [
     "tablut"
   ],
-  "spreadOverflowRate": 0.02,
+  "spreadOverflowRate": 0.019,
   "finding": "Metin farkı (0.70 sayfa) ve diyagram farkı (0.63) AYNI büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden denetlemek zorundadır.",
   "overflowDriver": "both",
   "textSpreadPages": 0.696,

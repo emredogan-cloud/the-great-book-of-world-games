@@ -18,18 +18,18 @@
   "version": "1.0",
   "generatedBy": "04_BUILD/build_gap_register.py",
   "scopeTarget": 100,
-  "written": 51,
+  "written": 52,
   "writableWithoutFounder": 7,
-  "founderResearchRequired": 42,
+  "founderResearchRequired": 41,
   "unattempted": 0,
   "statusCounts": {
     "BLOCKED": 26,
-    "SOURCE-PENDING": 14,
+    "SOURCE-PENDING": 13,
     "UNRESOLVED": 2
   },
   "blockerCounts": {
     "P1": 18,
-    "P2": 16,
+    "P2": 15,
     "P3": 2,
     "P5": 2,
     "P6": 3,
@@ -38,7 +38,7 @@
   "priorityCounts": {
     "A": 16,
     "B": 0,
-    "C": 13,
+    "C": 12,
     "D": 2,
     "E": 11
   },
@@ -59,10 +59,10 @@
     },
     "race": {
       "target": 18,
-      "written": 10,
+      "written": 11,
       "writable": 2,
-      "blocked": 6,
-      "deficit": 8
+      "blocked": 5,
+      "deficit": 7
     },
     "territory": {
       "target": 17,
@@ -106,7 +106,6 @@
     "Javanese",
     "Kannada",
     "Kazakh",
-    "Kekchi Maya",
     "Luhya",
     "Malay",
     "Marathi",
@@ -163,13 +162,12 @@
       "work": "bell-1960",
       "citation": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)",
       "attemptEvidence": "attempted-and-refused",
-      "unlocks": 9,
+      "unlocks": 8,
       "games": [
         "aadu-puli-attam",
         "ashta-kashte",
         "bagh-chal",
         "bohnenspiel",
-        "bul",
         "konane",
         "len-choa",
         "rimau-rimau",
@@ -193,22 +191,6 @@
       ]
     },
     {
-      "work": "specialist-articles",
-      "citation": "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-      "attemptEvidence": "never-attempted",
-      "unlocks": 8,
-      "games": [
-        "adji-boto",
-        "ayoayo",
-        "bul",
-        "daldos",
-        "game-of-the-goose",
-        "gebeta",
-        "ludus-duodecim-scriptorum",
-        "mahjong"
-      ]
-    },
-    {
       "work": "zaslavsky-1973",
       "citation": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
       "attemptEvidence": "attempted-and-refused",
@@ -222,6 +204,21 @@
         "shax",
         "shisima",
         "yote"
+      ]
+    },
+    {
+      "work": "specialist-articles",
+      "citation": "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
+      "attemptEvidence": "never-attempted",
+      "unlocks": 7,
+      "games": [
+        "adji-boto",
+        "ayoayo",
+        "daldos",
+        "game-of-the-goose",
+        "gebeta",
+        "ludus-duodecim-scriptorum",
+        "mahjong"
       ]
     },
     {
@@ -1305,103 +1302,6 @@
       "unresolvedQuestions": []
     },
     {
-      "gameId": "bul",
-      "title": "Bul",
-      "altNames": [
-        "Buul",
-        "Boolik"
-      ],
-      "culture": "Kekchi Maya",
-      "region": "Mesoamerica",
-      "countryOrArea": "Guatemala · Belize",
-      "period": "documented in the 20th century; still played in some communities",
-      "family": "race",
-      "restrictionStatus": "attributed",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye bir hakemli dergi makalesidir ve HİÇ DENENMEDİ; ikinci künye (Bell) engelli. Oyun `attributed` taranmıştır: Kekchi Maya atfı ZORUNLUDUR.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Verbeeck 1998 · Board Game Studies 1 — HİÇ denenmedi",
-        "Bell proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)"
-      ],
-      "whatWasMissing": "Makale metni: iz uzunluğu, mısır tanesi atışı, çarpışma/öldürme kuralı.",
-      "founderMustFind": [
-        "Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) — makalenin tamamı",
-        "Kekchi Maya atfını ve çağdaş bağlamı veren bir kaynak"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Board Game Studies cilt 1 PDF'i — dergi eski sayılarını açık arşivde tutuyor olabilir.",
-      "searchPatterns": [
-        "Verbeeck \"Bul\" Patolli Maya Board Game Studies 1998 PDF",
-        "\"bul\" OR \"boolik\" Kekchi Maya game rules"
-      ],
-      "works": [
-        "specialist-articles",
-        "bell-1960"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/bul/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 2.2,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 4,
-      "compositeScore": 19.2,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
-      ],
-      "unresolvedQuestions": []
-    },
-    {
       "gameId": "congklak",
       "title": "Congklak",
       "altNames": [
@@ -2047,192 +1947,6 @@
       "unresolvedQuestions": []
     },
     {
-      "gameId": "ashta-kashte",
-      "title": "Ashta Kashte",
-      "altNames": [
-        "Ashta-kashte"
-      ],
-      "culture": "Bengali",
-      "region": "South Asia",
-      "countryOrArea": "Bengal",
-      "period": "documented in 19th–20th century collections",
-      "family": "race",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)"
-      ],
-      "whatWasMissing": "İki künyenin ikisi de engelli.",
-      "founderMustFind": [
-        "Murray 1952 ya da Bell'de ashta-kashte maddesi",
-        "7×7 tahta, işaretli güvenli kareler, dört kavrukemik/deniz kabuğu atışı, iz yönü, alma, eve giriş koşulu"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
-      "searchPatterns": [
-        "\"ashta kashte\" Bengali race game rules board",
-        "ashtapada cowrie race game Bengal rules"
-      ],
-      "works": [
-        "murray-1952",
-        "bell-1960"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/ashta-kashte/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 4,
-      "familyDeficitScore": 2.2,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 5,
-      "compositeScore": 18.2,
-      "priorityClass": "A",
-      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
-      ],
-      "unresolvedQuestions": []
-    },
-    {
-      "gameId": "daldos",
-      "title": "Daldøs",
-      "altNames": [
-        "Daldøsa",
-        "Sáhkku (related)"
-      ],
-      "culture": "Danish",
-      "region": "Northern Europe",
-      "countryOrArea": "Jutland, Denmark · south-west Norway",
-      "period": "surviving boards from the 18th–19th century; play continued into living memory",
-      "family": "race",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye (Parlett) engelli.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Michaelsen · Board Game Studies — HİÇ denenmedi",
-        "Parlett proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
-      ],
-      "whatWasMissing": "Kural metni: tahta biçimi, dört yüzlü çubuk zar, taş hareketi, alma.",
-      "founderMustFind": [
-        "Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi",
-        "Daldøs ile Sámi sáhkku arasındaki ilişkiyi TARTIŞAN ama KÖKEN İDDİASI YAPMAYAN bir kaynak (kayıt bu iddiayı açıkça yasaklıyor)"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Board Game Studies makalesi PDF'i + Danimarka müze nesne kaydı.",
-      "searchPatterns": [
-        "Michaelsen daldøs Board Game Studies PDF",
-        "\"daldøs\" OR \"daldosa\" game rules Denmark",
-        "sáhkku daldøs Nordic race game scholarship"
-      ],
-      "works": [
-        "specialist-articles",
-        "parlett-1999"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/daldos/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 2.2,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 3,
-      "compositeScore": 18.2,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Michaelsen, Peter, studies on daldøs and related Nordic race games, in Board Game Studies",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
-      ],
-      "unresolvedQuestions": [
-        "Daldøs ile Sámi sáhkku arasındaki ilişki tartışmalıdır; kitap köken iddiası yapmamalı."
-      ]
-    },
-    {
       "gameId": "gebeta",
       "title": "Gebeta",
       "altNames": [
@@ -2525,6 +2239,192 @@
       ]
     },
     {
+      "gameId": "ashta-kashte",
+      "title": "Ashta Kashte",
+      "altNames": [
+        "Ashta-kashte"
+      ],
+      "culture": "Bengali",
+      "region": "South Asia",
+      "countryOrArea": "Bengal",
+      "period": "documented in 19th–20th century collections",
+      "family": "race",
+      "restrictionStatus": "open",
+      "status": "BLOCKED",
+      "primaryBlocker": "P1",
+      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
+      "secondaryBlockers": [],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)"
+      ],
+      "whatWasMissing": "İki künyenin ikisi de engelli.",
+      "founderMustFind": [
+        "Murray 1952 ya da Bell'de ashta-kashte maddesi",
+        "7×7 tahta, işaretli güvenli kareler, dört kavrukemik/deniz kabuğu atışı, iz yönü, alma, eve giriş koşulu"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
+      "searchPatterns": [
+        "\"ashta kashte\" Bengali race game rules board",
+        "ashtapada cowrie race game Bengal rules"
+      ],
+      "works": [
+        "murray-1952",
+        "bell-1960"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/ashta-kashte/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 4,
+      "familyDeficitScore": 1.9,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 3,
+      "pageEconomy": 5,
+      "compositeScore": 17.9,
+      "priorityClass": "A",
+      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
+      "sourceRefs": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
+      ],
+      "unresolvedQuestions": []
+    },
+    {
+      "gameId": "daldos",
+      "title": "Daldøs",
+      "altNames": [
+        "Daldøsa",
+        "Sáhkku (related)"
+      ],
+      "culture": "Danish",
+      "region": "Northern Europe",
+      "countryOrArea": "Jutland, Denmark · south-west Norway",
+      "period": "surviving boards from the 18th–19th century; play continued into living memory",
+      "family": "race",
+      "restrictionStatus": "open",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye (Parlett) engelli.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Michaelsen · Board Game Studies — HİÇ denenmedi",
+        "Parlett proje genelinde DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "whatWasMissing": "Kural metni: tahta biçimi, dört yüzlü çubuk zar, taş hareketi, alma.",
+      "founderMustFind": [
+        "Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi",
+        "Daldøs ile Sámi sáhkku arasındaki ilişkiyi TARTIŞAN ama KÖKEN İDDİASI YAPMAYAN bir kaynak (kayıt bu iddiayı açıkça yasaklıyor)"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Board Game Studies makalesi PDF'i + Danimarka müze nesne kaydı.",
+      "searchPatterns": [
+        "Michaelsen daldøs Board Game Studies PDF",
+        "\"daldøs\" OR \"daldosa\" game rules Denmark",
+        "sáhkku daldøs Nordic race game scholarship"
+      ],
+      "works": [
+        "specialist-articles",
+        "parlett-1999"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/daldos/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 1.9,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 5,
+      "pageEconomy": 3,
+      "compositeScore": 17.9,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Michaelsen, Peter, studies on daldøs and related Nordic race games, in Board Game Studies",
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "unresolvedQuestions": [
+        "Daldøs ile Sámi sáhkku arasındaki ilişki tartışmalıdır; kitap köken iddiası yapmamalı."
+      ]
+    },
+    {
       "gameId": "len-choa",
       "title": "Len Choa",
       "altNames": [
@@ -2783,11 +2683,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/game-of-the-goose/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 2.2,
+      "familyDeficitScore": 1.9,
       "culturalValue": 4,
       "mechanicalUniqueness": 3,
       "pageEconomy": 5,
-      "compositeScore": 17.2,
+      "compositeScore": 16.9,
       "priorityClass": "E",
       "priorityReason": "yararlı ama kritik değil",
       "sourceRefs": [
@@ -2882,11 +2782,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/nard/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 2.2,
+      "familyDeficitScore": 1.9,
       "culturalValue": 5,
       "mechanicalUniqueness": 3,
       "pageEconomy": 4,
-      "compositeScore": 17.2,
+      "compositeScore": 16.9,
       "priorityClass": "C",
       "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [
@@ -3966,11 +3866,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 1,
-      "familyDeficitScore": 2.2,
+      "familyDeficitScore": 1.9,
       "culturalValue": 5,
       "mechanicalUniqueness": 4,
       "pageEconomy": 3,
-      "compositeScore": 15.2,
+      "compositeScore": 14.9,
       "priorityClass": "C",
       "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [

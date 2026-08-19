@@ -14,7 +14,7 @@ ve o kitap masaya oturduğunda içinden birden çok madde çıkar.
 
 ## 0 · ÖNCE BUNU OKUYUN — ÜÇ SATIRLIK ÖZET
 
-1. **Murray 1952'yi bulun.** Tek başına 42 maddenin **24'ünü** açar.
+1. **Murray 1952'yi bulun.** Tek başına 41 maddenin **24'ünü** açar.
 2. Sonra **Parlett 1999 · Zaslavsky 1973 · Bell 1960–69 · Russ 2000**.
    Beşi birlikte **46 madde** açar.
 3. Geri kalan altı madde tek tek avlanır ve § 3'te ayrı listelenmiştir.
@@ -97,14 +97,14 @@ Aşağıdaki oyunların GEÇTİĞİ sayfaların taraması ya da fotoğrafı. Mur
 | `morabaraba` | The Line and the Territory | Sotho | A | 18.6 | Zaslavsky 1973 ya da Murray 1952'de morabaraba/umlabalaba maddesi |
 | `shax` | The Line and the Territory | Somali | A | 18.6 | Murray 1952 ya da Zaslavsky 1973'te shax/jare maddesi |
 | `tapatan` | The Line and the Territory | Tagalog | A | 18.6 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — tapatan bölümü, sayfa numarasıyla |
-| `ashta-kashte` | The Race Home | Bengali | A | 18.2 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
 | `hus` | The Sowing Games | Nama | C | 18.2 | Murray 1952 ya da Townshend 1979'da hus/ǁhus maddesi — dört sıra, ekim yönü, alma koşulu, bitiş |
+| `ashta-kashte` | The Race Home | Bengali | A | 17.9 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
 | `rimau-rimau` | The Hunt and the Siege | Malay | A | 17.5 | Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi |
-| `nard` | The Race Home | Persian | C | 17.2 | Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma |
+| `nard` | The Race Home | Persian | C | 16.9 | Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma |
 | `zamma` | The War Board | Amazigh | C | 16.9 | Murray 1952 ya da Béart 1955'te zamma/sig maddesi |
 | `halatafl` | The Hunt and the Siege | Icelandic | E | 16.5 | Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma |
 | `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.6 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
-| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 15.2 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
+| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 14.9 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
 | `luk-tsut-kei` | The Line and the Territory | Cantonese | E | 14.6 | Murray 1952'de luk tsut k'i maddesi |
 | `terni-lapilli` | The Line and the Territory | Roman | E | 14.6 | Roma üç-taş oyununun MEKANİĞİNİ tartışan bir arkeoloji/klasik filoloji çalışması |
 
@@ -131,8 +131,8 @@ var olduğu iddia edilmez*
 06_FOUNDER_DELIVERY/morabaraba/
 06_FOUNDER_DELIVERY/shax/
 06_FOUNDER_DELIVERY/tapatan/
-06_FOUNDER_DELIVERY/ashta-kashte/
 06_FOUNDER_DELIVERY/hus/
+06_FOUNDER_DELIVERY/ashta-kashte/
 06_FOUNDER_DELIVERY/rimau-rimau/
 06_FOUNDER_DELIVERY/nard/
 06_FOUNDER_DELIVERY/zamma/
@@ -149,7 +149,7 @@ var olduğu iddia edilmez*
 
 | | |
 |---|---|
-| **AÇTIĞI MADDE** | **9** |
+| **AÇTIĞI MADDE** | **8** |
 | **DURUM** | ⛔ **DENENDİ ve açılamadı** |
 | **KANIT** | telif altında — açık tam metin yok (blockedSources kaydı) |
 | **NEDEN** | Telif altındadır. Dover tıpkıbasımı yaygın ve ucuzdur. |
@@ -174,8 +174,7 @@ var olduğu iddia edilmez*
 | `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.5 | Bell ya da Parlett'te bagh-chal maddesi |
 | `konane` | The War Board | Hawaiian | C | 19.9 | Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranma… |
 | `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | 19.5 | Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi |
-| `bul` | The Race Home | Kekchi Maya | C | 19.2 | Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) — makalenin tamamı |
-| `ashta-kashte` | The Race Home | Bengali | A | 18.2 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
+| `ashta-kashte` | The Race Home | Bengali | A | 17.9 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
 | `len-choa` | The Hunt and the Siege | Thai | A | 17.5 | Bell'de len choa maddesi — tahta, leopar/hayvan sayıları, hareket, alma, bitiş |
 | `rimau-rimau` | The Hunt and the Siege | Malay | A | 17.5 | Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi |
 | `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.6 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
@@ -199,7 +198,6 @@ var olduğu iddia edilmez*
 06_FOUNDER_DELIVERY/bagh-chal/
 06_FOUNDER_DELIVERY/konane/
 06_FOUNDER_DELIVERY/aadu-puli-attam/
-06_FOUNDER_DELIVERY/bul/
 06_FOUNDER_DELIVERY/ashta-kashte/
 06_FOUNDER_DELIVERY/len-choa/
 06_FOUNDER_DELIVERY/rimau-rimau/
@@ -236,8 +234,8 @@ var olduğu iddia edilmez*
 | `morra` | Games Without a Board | Italian | A | 21.8 | Morra'nın PUANLAMASINI ve KAZANMA koşulunu veren herhangi bir künye |
 | `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.5 | Bell ya da Parlett'te bagh-chal maddesi |
 | `petanque` | Games Without a Board | Provençal | A | 18.8 | FIPJP resmî kural kitabı — SÜRÜM, yürürlük tarihi ve madde numaraları |
-| `daldos` | The Race Home | Danish | C | 18.2 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
-| `game-of-the-goose` | The Race Home | Italian | E | 17.2 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
+| `daldos` | The Race Home | Danish | C | 17.9 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
+| `game-of-the-goose` | The Race Home | Italian | E | 16.9 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
 | `makruk` | The War Board | Thai | E | 15.9 | Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır) |
 | `surakarta` | The War Board | Javanese | D | 15.9 | Surakarta'nın Java'daki geleneksel varlığını gösteren bir DÖNEM kaydı (20. yy öncesi ya da erken 20. yy saha kaydı) |
 | `mahjong` | Chance and Nerve | Han Chinese | C | 14.2 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
@@ -264,80 +262,6 @@ var olduğu iddia edilmez*
 06_FOUNDER_DELIVERY/game-of-the-goose/
 06_FOUNDER_DELIVERY/makruk/
 06_FOUNDER_DELIVERY/surakarta/
-06_FOUNDER_DELIVERY/mahjong/
-```
-
----
-
-### ▸ Uzmanlık makaleleri — tek oyunu açan dar künyeler
-
-| | |
-|---|---|
-| **AÇTIĞI MADDE** | **8** |
-| **DURUM** | ◻ **HİÇ DENENMEDİ** — engelli değil, sırası gelmedi |
-| **KANIT** | proje bunların hiçbirini denemedi |
-| **NEDEN** | Hakemli dergi ya da dar dağıtımlı monografi. |
-
-**NEREDE ARANIR**
-
-- Board Game Studies Journal — eski sayıları açık arşivde olabilir
-- JSTOR / Taylor & Francis (kurumsal erişim)
-- Yazar kopyası / akademik ağ
-- Üniversite kütüphanesi
-
-**NE İSTİYORUZ**
-
-Aşağıdaki her künye TEK bir oyunu açar:
-  · Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) → bul
-  · Michaelsen, Peter, daldøs ve kuzey yarış oyunları üzerine çalışmalar, Board Game Studies → daldos
-  · Schädler, Ulrich, Roma tahta oyunları üzerine çalışmalar, Board Game Studies → ludus-duodecim-scriptorum
-  · Davies, R., 'Some Arab Games and Puzzles', Sudan Notes and Records 8 (1925) → li-b-el-merafib
-  · Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) → adji-boto
-  · Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971) → gebeta
-  · Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: OUP Nigeria, 1977) → ayoayo
-  · Nsimbi, M. B., Omweso: A Game People Play in Uganda (Los Angeles: UCLA African Studies Center, 1968) → omweso
-  · Ascher, Marcia, 'Mu Torere: An Analysis of a Maori Game', Mathematics Magazine 60:2 (1987) → mu-torere
-  · Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) → game-of-the-goose
-  · Austin, R. G., "Zeno's Game of τάβλη", Journal of Hellenic Studies 54 (1934) → tabula (destek)
-  · Stanwick, Michael, mahjong kökeni üzerine çalışmalar, The Playing-Card (IPCS) → mahjong (destek)
-
-> Board Game Studies eski sayıları ve Amsterdam University Press başlıklarının bir bölümü AÇIK ERİŞİMLİDİR. Denenmeden engelli sayılmazlar — bu yüzden hepsi SOURCE-PENDING'dir, BLOCKED değil.
-
-**AÇTIĞI MADDELER**
-
-| oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
-|---|---|---|:---:|---:|---|
-| `adji-boto` | The Sowing Games | Ndyuka Maroon | C | 19.2 | Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) — makalenin tamamı |
-| `bul` | The Race Home | Kekchi Maya | C | 19.2 | Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) — makalenin tamamı |
-| `daldos` | The Race Home | Danish | C | 18.2 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
-| `gebeta` | The Sowing Games | Amhara | C | 18.2 | Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971) — makalenin tamamı |
-| `game-of-the-goose` | The Race Home | Italian | E | 17.2 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
-| `ayoayo` | The Sowing Games | Yoruba | E | 16.2 | Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977) — kural bölümü |
-| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 15.2 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
-| `mahjong` | Chance and Nerve | Han Chinese | C | 14.2 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
-
-**ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
-var olduğu iddia edilmez*
-
-- `Herskovits "Wari in the New World" JRAI 1932 PDF`
-- `"adji boto" Ndyuka Maroon Suriname game rules`
-- `Verbeeck "Bul" Patolli Maya Board Game Studies 1998 PDF`
-- `"bul" OR "boolik" Kekchi Maya game rules`
-- `Michaelsen daldøs Board Game Studies PDF`
-- `"daldøs" OR "daldosa" game rules Denmark`
-- `sáhkku daldøs Nordic race game scholarship`
-- `Pankhurst "Gabata" Ethiopia Observer 1971 board games`
-
-**BUNLARI ŞURAYA BIRAKIN**
-
-```
-06_FOUNDER_DELIVERY/adji-boto/
-06_FOUNDER_DELIVERY/bul/
-06_FOUNDER_DELIVERY/daldos/
-06_FOUNDER_DELIVERY/gebeta/
-06_FOUNDER_DELIVERY/game-of-the-goose/
-06_FOUNDER_DELIVERY/ayoayo/
-06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/
 06_FOUNDER_DELIVERY/mahjong/
 ```
 
@@ -400,6 +324,78 @@ var olduğu iddia edilmez*
 06_FOUNDER_DELIVERY/shax/
 06_FOUNDER_DELIVERY/ayoayo/
 06_FOUNDER_DELIVERY/mefuvha/
+```
+
+---
+
+### ▸ Uzmanlık makaleleri — tek oyunu açan dar künyeler
+
+| | |
+|---|---|
+| **AÇTIĞI MADDE** | **7** |
+| **DURUM** | ◻ **HİÇ DENENMEDİ** — engelli değil, sırası gelmedi |
+| **KANIT** | proje bunların hiçbirini denemedi |
+| **NEDEN** | Hakemli dergi ya da dar dağıtımlı monografi. |
+
+**NEREDE ARANIR**
+
+- Board Game Studies Journal — eski sayıları açık arşivde olabilir
+- JSTOR / Taylor & Francis (kurumsal erişim)
+- Yazar kopyası / akademik ağ
+- Üniversite kütüphanesi
+
+**NE İSTİYORUZ**
+
+Aşağıdaki her künye TEK bir oyunu açar:
+  · Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) → bul
+  · Michaelsen, Peter, daldøs ve kuzey yarış oyunları üzerine çalışmalar, Board Game Studies → daldos
+  · Schädler, Ulrich, Roma tahta oyunları üzerine çalışmalar, Board Game Studies → ludus-duodecim-scriptorum
+  · Davies, R., 'Some Arab Games and Puzzles', Sudan Notes and Records 8 (1925) → li-b-el-merafib
+  · Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) → adji-boto
+  · Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971) → gebeta
+  · Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: OUP Nigeria, 1977) → ayoayo
+  · Nsimbi, M. B., Omweso: A Game People Play in Uganda (Los Angeles: UCLA African Studies Center, 1968) → omweso
+  · Ascher, Marcia, 'Mu Torere: An Analysis of a Maori Game', Mathematics Magazine 60:2 (1987) → mu-torere
+  · Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) → game-of-the-goose
+  · Austin, R. G., "Zeno's Game of τάβλη", Journal of Hellenic Studies 54 (1934) → tabula (destek)
+  · Stanwick, Michael, mahjong kökeni üzerine çalışmalar, The Playing-Card (IPCS) → mahjong (destek)
+
+> Board Game Studies eski sayıları ve Amsterdam University Press başlıklarının bir bölümü AÇIK ERİŞİMLİDİR. Denenmeden engelli sayılmazlar — bu yüzden hepsi SOURCE-PENDING'dir, BLOCKED değil.
+
+**AÇTIĞI MADDELER**
+
+| oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
+|---|---|---|:---:|---:|---|
+| `adji-boto` | The Sowing Games | Ndyuka Maroon | C | 19.2 | Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) — makalenin tamamı |
+| `gebeta` | The Sowing Games | Amhara | C | 18.2 | Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971) — makalenin tamamı |
+| `daldos` | The Race Home | Danish | C | 17.9 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
+| `game-of-the-goose` | The Race Home | Italian | E | 16.9 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
+| `ayoayo` | The Sowing Games | Yoruba | E | 16.2 | Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977) — kural bölümü |
+| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 14.9 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
+| `mahjong` | Chance and Nerve | Han Chinese | C | 14.2 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
+
+**ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
+var olduğu iddia edilmez*
+
+- `Herskovits "Wari in the New World" JRAI 1932 PDF`
+- `"adji boto" Ndyuka Maroon Suriname game rules`
+- `Pankhurst "Gabata" Ethiopia Observer 1971 board games`
+- `"gebeta" OR "gabata" Ethiopian mancala rules Amhara`
+- `Townshend Mankala Eastern Southern Africa Azania 1979`
+- `Michaelsen daldøs Board Game Studies PDF`
+- `"daldøs" OR "daldosa" game rules Denmark`
+- `sáhkku daldøs Nordic race game scholarship`
+
+**BUNLARI ŞURAYA BIRAKIN**
+
+```
+06_FOUNDER_DELIVERY/adji-boto/
+06_FOUNDER_DELIVERY/gebeta/
+06_FOUNDER_DELIVERY/daldos/
+06_FOUNDER_DELIVERY/game-of-the-goose/
+06_FOUNDER_DELIVERY/ayoayo/
+06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/
+06_FOUNDER_DELIVERY/mahjong/
 ```
 
 ---

@@ -20,11 +20,11 @@
 | | ölçülen |
 |---|---:|
 | Nihai kapsam | **100** |
-| Yazılmış | **51** |
+| Yazılmış | **52** |
 | Kurucu MÜDAHALESİ OLMADAN yazılabilir | **7** |
-| **KURUCU ARAŞTIRMASI GEREKEN** | **42** |
+| **KURUCU ARAŞTIRMASI GEREKEN** | **41** |
 | ↳ `BLOCKED` — kaynak denendi, açılamadı | **26** |
-| ↳ `SOURCE-PENDING` — künye var, HENÜZ denenmedi | **14** |
+| ↳ `SOURCE-PENDING` — künye var, HENÜZ denenmedi | **13** |
 | ↳ `UNRESOLVED` — kaynak açık, kimlik/kültür uyuşmuyor | **2** |
 | `UNATTEMPTED` — hiç denenmemiş ve engelsiz | **0** |
 
@@ -38,7 +38,7 @@
 | sınıf | ad | sayı |
 |---|---|---:|
 | `P1` | SOURCE ACCESS BLOCKED | 18 |
-| `P2` | SOURCE TEXT UNAVAILABLE | 16 |
+| `P2` | SOURCE TEXT UNAVAILABLE | 15 |
 | `P3` | RULES INCOMPLETE | 2 |
 | `P5` | CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED | 2 |
 | `P6` | RECONSTRUCTION TOO UNCERTAIN | 3 |
@@ -75,8 +75,8 @@ kamusal alan derlemelerindedir ve ajan bunları kurucu beklemeden yazar.
 | The Sowing Games | 14 | 5 | 0 | **9** | 9 | `████········` 36% |
 | The Line and the Territory | 17 | 8 | 1 | **8** | 9 | `█████·······` 47% |
 | Games Without a Board | 16 | 7 | 1 | **8** | 9 | `█████·······` 44% |
-| The Race Home | 18 | 10 | 2 | **6** | 8 | `██████······` 56% |
 | The Hunt and the Siege | 10 | 5 | 0 | **5** | 5 | `██████······` 50% |
+| The Race Home | 18 | 11 | 2 | **5** | 7 | `███████·····` 61% |
 | The War Board | 21 | 13 | 3 | **5** | 8 | `███████·····` 62% |
 | Chance and Nerve | 4 | 3 | 0 | **1** | 1 | `█████████···` 75% |
 
@@ -90,7 +90,7 @@ kamusal alan derlemelerindedir ve ajan bunları kurucu beklemeden yazar.
 
 ## 4 · KÜLTÜR VE BÖLGE AÇIĞI
 
-Kapsam **68 kültür** vaat ediyor; yazılan **27**. Kalan **30 kültürün**
+Kapsam **68 kültür** vaat ediyor; yazılan **27**. Kalan **29 kültürün**
 tamamı bu kayıttaki maddelerdedir — yani bu kayıt çözülmezse kitap
 kültür vaadini **68'de değil 27'de** kapatır.
 
@@ -134,10 +134,10 @@ yapılar kitapta **hiç yoktur** ve yalnızca bu kayıttaki maddelerdedir:
 | eser | açtığı madde | durum |
 |---|---:|---|
 | Murray, H. J. R., A History of Board-Games Other Than Chess | **18** | ⛔ denendi · açılamadı |
-| Bell, R. C., Board and Table Games from Many Civilizations | **9** | ⛔ denendi · açılamadı |
+| Bell, R. C., Board and Table Games from Many Civilizations | **8** | ⛔ denendi · açılamadı |
 | Parlett, David, The Oxford History of Board Games | **8** | ⛔ denendi · açılamadı |
-| Uzmanlık makaleleri — tek oyunu açan dar künyeler | **8** | ◻ HİÇ denenmedi |
 | Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture | **8** | ⛔ denendi · açılamadı |
+| Uzmanlık makaleleri — tek oyunu açan dar künyeler | **7** | ◻ HİÇ denenmedi |
 | Russ, Laurence, The Complete Mancala Games Book | **3** | ⛔ denendi · açılamadı |
 | Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 | **3** | ◻ HİÇ denenmedi |
 | Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 | **2** | ◻ HİÇ denenmedi |
@@ -173,7 +173,7 @@ compositeScore = unlockEase        (0–5 · açık cetvel, aşağıda)
 |---|---|---:|
 | **A** | YÜKSEK GETİRİ — tek iyi kaynak maddeyi hemen açar | 16 |
 | **B** | AİLE DENGESİ — ciddi eksik bir aileyi doldurur | 0 |
-| **C** | KÜLTÜREL ÇEŞİTLİLİK — kaybedilen bir kültürü geri getirir | 13 |
+| **C** | KÜLTÜREL ÇEŞİTLİLİK — kaybedilen bir kültürü geri getirir | 12 |
 | **D** | MEKANİK ÇEŞİTLİLİK — eşi olmayan bir mekanik taşır | 2 |
 | **E** | DÜŞÜK ETKİ — yararlı ama kritik değil | 11 |
 
@@ -189,38 +189,37 @@ compositeScore = unlockEase        (0–5 · açık cetvel, aşağıda)
 | 8 | **Shisima** `shisima` | The Line and the Territory | Luhya | A | **19.6** | `BLOCKED` | `P1` |
 | 9 | **Aadu Puli Attam** `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | **19.5** | `BLOCKED` | `P1` |
 | 10 | **Adji-boto** `adji-boto` | The Sowing Games | Ndyuka Maroon | C | **19.2** | `SOURCE-PENDING` | `P2` |
-| 11 | **Bul** `bul` | The Race Home | Kekchi Maya | C | **19.2** | `SOURCE-PENDING` | `P2` |
-| 12 | **Congklak** `congklak` | The Sowing Games | Javanese | A | **19.2** | `BLOCKED` | `P1` |
-| 13 | **Sungka** `sungka` | The Sowing Games | Visayan | A | **19.2** | `SOURCE-PENDING` | `P2` |
-| 14 | **Pétanque** `petanque` | Games Without a Board | Provençal | A | **18.8** | `SOURCE-PENDING` | `P8` |
-| 15 | **Go** `go` | The Line and the Territory | Han Chinese | C | **18.6** | `UNRESOLVED` | `P5` |
-| 16 | **Morabaraba** `morabaraba` | The Line and the Territory | Sotho | A | **18.6** | `BLOCKED` | `P1` |
-| 17 | **Shax** `shax` | The Line and the Territory | Somali | A | **18.6** | `BLOCKED` | `P1` |
-| 18 | **Tapatan** `tapatan` | The Line and the Territory | Tagalog | A | **18.6** | `BLOCKED` | `P2` |
-| 19 | **Ashta Kashte** `ashta-kashte` | The Race Home | Bengali | A | **18.2** | `BLOCKED` | `P1` |
-| 20 | **Daldøs** `daldos` | The Race Home | Danish | C | **18.2** | `SOURCE-PENDING` | `P2` |
-| 21 | **Gebeta** `gebeta` | The Sowing Games | Amhara | C | **18.2** | `SOURCE-PENDING` | `P2` |
-| 22 | **Hus** `hus` | The Sowing Games | Nama | C | **18.2** | `SOURCE-PENDING` | `P2` |
-| 23 | **Toguz Kumalak** `toguz-kumalak` | The Sowing Games | Kazakh | D | **18.2** | `BLOCKED` | `P1` |
-| 24 | **Len Choa** `len-choa` | The Hunt and the Siege | Thai | A | **17.5** | `BLOCKED` | `P1` |
-| 25 | **Rimau-rimau** `rimau-rimau` | The Hunt and the Siege | Malay | A | **17.5** | `BLOCKED` | `P1` |
-| 26 | **The Game of the Goose** `game-of-the-goose` | The Race Home | Italian | E | **17.2** | `SOURCE-PENDING` | `P1` |
-| 27 | **Nard** `nard` | The Race Home | Persian | C | **17.2** | `SOURCE-PENDING` | `P2` |
-| 28 | **Zamma** `zamma` | The War Board | Amazigh | C | **16.9** | `SOURCE-PENDING` | `P2` |
-| 29 | **Halatafl** `halatafl` | The Hunt and the Siege | Icelandic | E | **16.5** | `BLOCKED` | `P3` |
-| 30 | **Ayòayò** `ayoayo` | The Sowing Games | Yoruba | E | **16.2** | `SOURCE-PENDING` | `P2` |
-| 31 | **Mefuvha** `mefuvha` | The Sowing Games | Venda | E | **16.2** | `SOURCE-PENDING` | `P2` |
-| 32 | **Makruk** `makruk` | The War Board | Thai | E | **15.9** | `BLOCKED` | `P1` |
-| 33 | **Surakarta** `surakarta` | The War Board | Javanese | D | **15.9** | `UNRESOLVED` | `P5` |
-| 34 | **Ephedrismos** `ephedrismos` | Games Without a Board | Ancient Greek | C | **15.8** | `BLOCKED` | `P6` |
-| 35 | **Lagori** `lagori` | Games Without a Board | Kannada | E | **15.8** | `BLOCKED` | `P2` |
-| 36 | **Myinda** `myinda` | Games Without a Board | Ancient Greek | E | **15.8** | `BLOCKED` | `P1` |
-| 37 | **Twelve Men's Morris** `twelve-mens-morris` | The Line and the Territory | Medieval European | E | **15.6** | `BLOCKED` | `P1` |
-| 38 | **Ludus Duodecim Scriptorum** `ludus-duodecim-scriptorum` | The Race Home | Roman | C | **15.2** | `SOURCE-PENDING` | `P6` |
-| 39 | **Kho Kho** `kho-kho` | Games Without a Board | Marathi | E | **14.8** | `BLOCKED` | `P2` |
-| 40 | **Luk Tsut K'i** `luk-tsut-kei` | The Line and the Territory | Cantonese | E | **14.6** | `BLOCKED` | `P2` |
-| 41 | **Terni Lapilli** `terni-lapilli` | The Line and the Territory | Roman | E | **14.6** | `BLOCKED` | `P6` |
-| 42 | **Mahjong** `mahjong` | Chance and Nerve | Han Chinese | C | **14.2** | `BLOCKED` | `P1` |
+| 11 | **Congklak** `congklak` | The Sowing Games | Javanese | A | **19.2** | `BLOCKED` | `P1` |
+| 12 | **Sungka** `sungka` | The Sowing Games | Visayan | A | **19.2** | `SOURCE-PENDING` | `P2` |
+| 13 | **Pétanque** `petanque` | Games Without a Board | Provençal | A | **18.8** | `SOURCE-PENDING` | `P8` |
+| 14 | **Go** `go` | The Line and the Territory | Han Chinese | C | **18.6** | `UNRESOLVED` | `P5` |
+| 15 | **Morabaraba** `morabaraba` | The Line and the Territory | Sotho | A | **18.6** | `BLOCKED` | `P1` |
+| 16 | **Shax** `shax` | The Line and the Territory | Somali | A | **18.6** | `BLOCKED` | `P1` |
+| 17 | **Tapatan** `tapatan` | The Line and the Territory | Tagalog | A | **18.6** | `BLOCKED` | `P2` |
+| 18 | **Gebeta** `gebeta` | The Sowing Games | Amhara | C | **18.2** | `SOURCE-PENDING` | `P2` |
+| 19 | **Hus** `hus` | The Sowing Games | Nama | C | **18.2** | `SOURCE-PENDING` | `P2` |
+| 20 | **Toguz Kumalak** `toguz-kumalak` | The Sowing Games | Kazakh | D | **18.2** | `BLOCKED` | `P1` |
+| 21 | **Ashta Kashte** `ashta-kashte` | The Race Home | Bengali | A | **17.9** | `BLOCKED` | `P1` |
+| 22 | **Daldøs** `daldos` | The Race Home | Danish | C | **17.9** | `SOURCE-PENDING` | `P2` |
+| 23 | **Len Choa** `len-choa` | The Hunt and the Siege | Thai | A | **17.5** | `BLOCKED` | `P1` |
+| 24 | **Rimau-rimau** `rimau-rimau` | The Hunt and the Siege | Malay | A | **17.5** | `BLOCKED` | `P1` |
+| 25 | **The Game of the Goose** `game-of-the-goose` | The Race Home | Italian | E | **16.9** | `SOURCE-PENDING` | `P1` |
+| 26 | **Nard** `nard` | The Race Home | Persian | C | **16.9** | `SOURCE-PENDING` | `P2` |
+| 27 | **Zamma** `zamma` | The War Board | Amazigh | C | **16.9** | `SOURCE-PENDING` | `P2` |
+| 28 | **Halatafl** `halatafl` | The Hunt and the Siege | Icelandic | E | **16.5** | `BLOCKED` | `P3` |
+| 29 | **Ayòayò** `ayoayo` | The Sowing Games | Yoruba | E | **16.2** | `SOURCE-PENDING` | `P2` |
+| 30 | **Mefuvha** `mefuvha` | The Sowing Games | Venda | E | **16.2** | `SOURCE-PENDING` | `P2` |
+| 31 | **Makruk** `makruk` | The War Board | Thai | E | **15.9** | `BLOCKED` | `P1` |
+| 32 | **Surakarta** `surakarta` | The War Board | Javanese | D | **15.9** | `UNRESOLVED` | `P5` |
+| 33 | **Ephedrismos** `ephedrismos` | Games Without a Board | Ancient Greek | C | **15.8** | `BLOCKED` | `P6` |
+| 34 | **Lagori** `lagori` | Games Without a Board | Kannada | E | **15.8** | `BLOCKED` | `P2` |
+| 35 | **Myinda** `myinda` | Games Without a Board | Ancient Greek | E | **15.8** | `BLOCKED` | `P1` |
+| 36 | **Twelve Men's Morris** `twelve-mens-morris` | The Line and the Territory | Medieval European | E | **15.6** | `BLOCKED` | `P1` |
+| 37 | **Ludus Duodecim Scriptorum** `ludus-duodecim-scriptorum` | The Race Home | Roman | C | **14.9** | `SOURCE-PENDING` | `P6` |
+| 38 | **Kho Kho** `kho-kho` | Games Without a Board | Marathi | E | **14.8** | `BLOCKED` | `P2` |
+| 39 | **Luk Tsut K'i** `luk-tsut-kei` | The Line and the Territory | Cantonese | E | **14.6** | `BLOCKED` | `P2` |
+| 40 | **Terni Lapilli** `terni-lapilli` | The Line and the Territory | Roman | E | **14.6** | `BLOCKED` | `P6` |
+| 41 | **Mahjong** `mahjong` | Chance and Nerve | Han Chinese | C | **14.2** | `BLOCKED` | `P1` |
 
 ---
 
@@ -886,73 +885,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 11 · Bul
-
-| | |
-|---|---|
-| **GAME ID** | `bul` |
-| **TITLE** | Bul |
-| **ALTERNATE NAME(S)** | Buul, Boolik |
-| **CULTURE** | Kekchi Maya |
-| **REGION** | Mesoamerica · Guatemala · Belize |
-| **FAMILY** | The Race Home |
-| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `attributed` · öncelik C · puan 19.2 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Birincil künye bir hakemli dergi makalesidir ve HİÇ DENENMEDİ; ikinci künye (Bell) engelli. Oyun `attributed` taranmıştır: Kekchi Maya atfı ZORUNLUDUR.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Verbeeck 1998 · Board Game Studies 1 — HİÇ denenmedi
-- Bell proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Uzmanlık makaleleri — tek oyunu açan dar künyeler
-- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
-
-**WHAT WAS MISSING**
-
-Makale metni: iz uzunluğu, mısır tanesi atışı, çarpışma/öldürme kuralı.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Verbeeck, Lieve, 'Bul: A Patolli Game in Maya Lowland', Board Game Studies 1 (1998) — makalenin tamamı
-2. Kekchi Maya atfını ve çağdaş bağlamı veren bir kaynak
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**IDEAL EVIDENCE** — Board Game Studies cilt 1 PDF'i — dergi eski sayılarını açık arşivde tutuyor olabilir.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/bul/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `Verbeeck "Bul" Patolli Maya Board Game Studies 1998 PDF`
-- `"bul" OR "boolik" Kekchi Maya game rules`
-
----
-
-### 12 · Congklak
+### 11 · Congklak
 
 | | |
 |---|---|
@@ -1018,7 +951,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 13 · Sungka
+### 12 · Sungka
 
 | | |
 |---|---|
@@ -1085,7 +1018,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 14 · Pétanque
+### 13 · Pétanque
 
 | | |
 |---|---|
@@ -1150,7 +1083,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 15 · Go
+### 14 · Go
 
 | | |
 |---|---|
@@ -1219,7 +1152,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 16 · Morabaraba
+### 15 · Morabaraba
 
 | | |
 |---|---|
@@ -1286,7 +1219,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 17 · Shax
+### 16 · Shax
 
 | | |
 |---|---|
@@ -1352,7 +1285,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 18 · Tapatan
+### 17 · Tapatan
 
 | | |
 |---|---|
@@ -1418,139 +1351,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 19 · Ashta Kashte
-
-| | |
-|---|---|
-| **GAME ID** | `ashta-kashte` |
-| **TITLE** | Ashta Kashte |
-| **ALTERNATE NAME(S)** | Ashta-kashte |
-| **CULTURE** | Bengali |
-| **REGION** | South Asia · Bengal |
-| **FAMILY** | The Race Home |
-| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
-| **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 18.2 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
-- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
-
-**WHAT WAS MISSING**
-
-İki künyenin ikisi de engelli.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Murray 1952 ya da Bell'de ashta-kashte maddesi
-2. 7×7 tahta, işaretli güvenli kareler, dört kavrukemik/deniz kabuğu atışı, iz yönü, alma, eve giriş koşulu
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/ashta-kashte/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"ashta kashte" Bengali race game rules board`
-- `ashtapada cowrie race game Bengal rules`
-
----
-
-### 20 · Daldøs
-
-| | |
-|---|---|
-| **GAME ID** | `daldos` |
-| **TITLE** | Daldøs |
-| **ALTERNATE NAME(S)** | Daldøsa, Sáhkku (related) |
-| **CULTURE** | Danish |
-| **REGION** | Northern Europe · Jutland, Denmark · south-west Norway |
-| **FAMILY** | The Race Home |
-| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 18.2 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye (Parlett) engelli.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Michaelsen · Board Game Studies — HİÇ denenmedi
-- Parlett proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Uzmanlık makaleleri — tek oyunu açan dar künyeler
-- Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)
-
-**WHAT WAS MISSING**
-
-Kural metni: tahta biçimi, dört yüzlü çubuk zar, taş hareketi, alma.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi
-2. Daldøs ile Sámi sáhkku arasındaki ilişkiyi TARTIŞAN ama KÖKEN İDDİASI YAPMAYAN bir kaynak (kayıt bu iddiayı açıkça yasaklıyor)
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — Board Game Studies makalesi PDF'i + Danimarka müze nesne kaydı.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/daldos/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `Michaelsen daldøs Board Game Studies PDF`
-- `"daldøs" OR "daldosa" game rules Denmark`
-- `sáhkku daldøs Nordic race game scholarship`
-
----
-
-### 21 · Gebeta
+### 18 · Gebeta
 
 | | |
 |---|---|
@@ -1618,7 +1419,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 22 · Hus
+### 19 · Hus
 
 | | |
 |---|---|
@@ -1684,7 +1485,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 23 · Toguz Kumalak
+### 20 · Toguz Kumalak
 
 | | |
 |---|---|
@@ -1750,7 +1551,139 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 24 · Len Choa
+### 21 · Ashta Kashte
+
+| | |
+|---|---|
+| **GAME ID** | `ashta-kashte` |
+| **TITLE** | Ashta Kashte |
+| **ALTERNATE NAME(S)** | Ashta-kashte |
+| **CULTURE** | Bengali |
+| **REGION** | South Asia · Bengal |
+| **FAMILY** | The Race Home |
+| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
+| **SECONDARY BLOCKERS** | — |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 17.9 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
+- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
+
+**WHAT WAS MISSING**
+
+İki künyenin ikisi de engelli.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Murray 1952 ya da Bell'de ashta-kashte maddesi
+2. 7×7 tahta, işaretli güvenli kareler, dört kavrukemik/deniz kabuğu atışı, iz yönü, alma, eve giriş koşulu
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+```
+
+**IDEAL EVIDENCE** — Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/ashta-kashte/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `"ashta kashte" Bengali race game rules board`
+- `ashtapada cowrie race game Bengal rules`
+
+---
+
+### 22 · Daldøs
+
+| | |
+|---|---|
+| **GAME ID** | `daldos` |
+| **TITLE** | Daldøs |
+| **ALTERNATE NAME(S)** | Daldøsa, Sáhkku (related) |
+| **CULTURE** | Danish |
+| **REGION** | Northern Europe · Jutland, Denmark · south-west Norway |
+| **FAMILY** | The Race Home |
+| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
+| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 17.9 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye (Parlett) engelli.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Michaelsen · Board Game Studies — HİÇ denenmedi
+- Parlett proje genelinde DENENDİ ve açılamadı
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Uzmanlık makaleleri — tek oyunu açan dar künyeler
+- Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)
+
+**WHAT WAS MISSING**
+
+Kural metni: tahta biçimi, dört yüzlü çubuk zar, taş hareketi, alma.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi
+2. Daldøs ile Sámi sáhkku arasındaki ilişkiyi TARTIŞAN ama KÖKEN İDDİASI YAPMAYAN bir kaynak (kayıt bu iddiayı açıkça yasaklıyor)
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+```
+
+**IDEAL EVIDENCE** — Board Game Studies makalesi PDF'i + Danimarka müze nesne kaydı.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/daldos/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `Michaelsen daldøs Board Game Studies PDF`
+- `"daldøs" OR "daldosa" game rules Denmark`
+- `sáhkku daldøs Nordic race game scholarship`
+
+---
+
+### 23 · Len Choa
 
 | | |
 |---|---|
@@ -1814,7 +1747,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 25 · Rimau-rimau
+### 24 · Rimau-rimau
 
 | | |
 |---|---|
@@ -1879,7 +1812,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 26 · The Game of the Goose
+### 25 · The Game of the Goose
 
 | | |
 |---|---|
@@ -1891,7 +1824,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Race Home |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik E · puan 17.2 |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik E · puan 16.9 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1947,7 +1880,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 27 · Nard
+### 26 · Nard
 
 | | |
 |---|---|
@@ -1959,7 +1892,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Race Home |
 | **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 17.2 |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 16.9 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -2014,7 +1947,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 28 · Zamma
+### 27 · Zamma
 
 | | |
 |---|---|
@@ -2083,7 +2016,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 29 · Halatafl
+### 28 · Halatafl
 
 | | |
 |---|---|
@@ -2149,7 +2082,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 30 · Ayòayò
+### 29 · Ayòayò
 
 | | |
 |---|---|
@@ -2215,7 +2148,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 31 · Mefuvha
+### 30 · Mefuvha
 
 | | |
 |---|---|
@@ -2281,7 +2214,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 32 · Makruk
+### 31 · Makruk
 
 | | |
 |---|---|
@@ -2350,7 +2283,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 33 · Surakarta
+### 32 · Surakarta
 
 | | |
 |---|---|
@@ -2418,7 +2351,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 34 · Ephedrismos
+### 33 · Ephedrismos
 
 | | |
 |---|---|
@@ -2486,7 +2419,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 35 · Lagori
+### 34 · Lagori
 
 | | |
 |---|---|
@@ -2551,7 +2484,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 36 · Myinda
+### 35 · Myinda
 
 | | |
 |---|---|
@@ -2617,7 +2550,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 37 · Twelve Men's Morris
+### 36 · Twelve Men's Morris
 
 | | |
 |---|---|
@@ -2684,7 +2617,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 38 · Ludus Duodecim Scriptorum
+### 37 · Ludus Duodecim Scriptorum
 
 | | |
 |---|---|
@@ -2696,7 +2629,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Race Home |
 | **PRIMARY BLOCKER** | `P6` — RECONSTRUCTION TOO UNCERTAIN |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 15.2 |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 14.9 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -2753,7 +2686,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 39 · Kho Kho
+### 38 · Kho Kho
 
 | | |
 |---|---|
@@ -2818,7 +2751,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 40 · Luk Tsut K'i
+### 39 · Luk Tsut K'i
 
 | | |
 |---|---|
@@ -2884,7 +2817,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 41 · Terni Lapilli
+### 40 · Terni Lapilli
 
 | | |
 |---|---|
@@ -2953,7 +2886,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 42 · Mahjong
+### 41 · Mahjong
 
 | | |
 |---|---|

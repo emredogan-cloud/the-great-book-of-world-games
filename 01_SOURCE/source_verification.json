@@ -815,6 +815,17 @@
       "verifiedOn": "2026-08-19",
       "accessMethod": "kurucu teslimi #2 — PDF metin katmanı; basılı numaralar sayfa üst satırından okundu. Kurulum ŞEKİLLERİ (fig. 60 · fig. 61) sayfanın kendisi RENDER edilip GÖZLE okundu.",
       "status": "verified"
+    },
+    {
+      "gameId": "bul",
+      "sourceRef": "R. C. Bell, Board and Table Games from Many Civilizations, 2nd ed. (Oxford: Oxford University Press), 'Puluc', pp. 89–90",
+      "edition": "second edition, Internet Archive scan (founder delivery, 2026-08-19)",
+      "locator": "'Puluc', ss. 89–90 (üst satır: 'PULUC 89' · '9o WAR GAMES')",
+      "supportingPassage": "PULUC. This is another running-fight game played by the Kekchi Indians of Central America who are descended from the Mayas. This description is taken from the German text of von Karl Sapper in the Boas Anniversary volume, article 190, p. 283. […] Ten corn cobs are laid on the ground like the rungs of a ladder. The players sit at either end of the maize highway and each has five counters of his own colour, made of little pieces of stick. Four flat maize ears are used as dice with one surface blackened and the other left natural. Scores: 2 yellow surfaces up 2 / 3 yellow surfaces up 3 / 4 yellow surfaces up 5 / 4 black surfaces up 4. […] 3. A player may move a piece forwards on to a space occupied by an enemy piece; the latter is taken prisoner by being placed beneath the winning piece and is moved backwards along the highway by its conqueror in his journey towards the far end of the board. 4. If the victor and the vanquished reach the end of the board (an exact throw is not required), the victor returns to his team ready to be re-entered on the highway for another journey along it, while the poor prisoner is slain and is out of the game. 5. If a player moves a piece on to a space occupied by an enemy piece in charge of a prisoner, the player's piece is placed on the top of the stack, and the whole stack reverses its direction towards the goal of the new victor. […] 7. A stack may capture a single piece or another stack. 8. When a player has no pieces left he has lost the game.",
+      "supportedClaim": "Orta Amerika'nın Kekchi halkının oyunu, Maya soyundan (KÜLTÜR doğrulandı, Bell'in kendi cümlesi). On mısır koçanı merdiven basamağı gibi dizilir; oyuncular iki UÇTA oturur; oyuncu başına BEŞ taş; zar DÖRT yassı mısır başağıdır ve puanlar 2/3/5/4'tür. Alma ÖLDÜRMEZ: alınan taş galibin ALTINA konur ve galibin yolunda GERİ taşınır; uca varılırsa tutsak ölür, galip takıma döner. Yığının üstüne konan yeni bir taş bütün yığının YÖNÜNÜ çevirir ve sahiplik birkaç kez el değiştirebilir. Taşı kalmayan kaybeder. ⚠ KAYNAK BOŞLUĞU: TEK sarı yüz için puan VERİLMEMİŞTİR.",
+      "verifiedOn": "2026-08-19",
+      "accessMethod": "kurucu teslimi — PDF metin katmanı; basılı numaralar sayfa üst satırından okundu",
+      "status": "verified"
     }
   ]
 }
