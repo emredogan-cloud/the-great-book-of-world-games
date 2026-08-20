@@ -41,21 +41,56 @@ DEFAULT_ROOT = os.path.dirname(HERE)
 # alan derlemelerinde GERÇEK isabeti olan ve kurucu müdahalesi GEREKTİRMEYEN
 # oyunlar. Bunlar bir ENGEL değil bir SIRA meselesidir ve kayda GİRMEZ.
 WRITABLE_NOW = {
-    "gilli-danda":        "Culin 1907 · 'Tipcat' — ⚠ kültür tuzağı riski: isabet İNGİLİZ/Kuzey Amerika kaydıdır, sayfa açılmadan yazılamaz",
-    "chaupar":            "Culin 1895 · 'Chausar' — ⚠ kültür tuzağı riski: isabet Culin'in KORE cildindedir, sayfa açılmadan yazılamaz",
-    "tabula":             "Fiske 1905",
-    "nine-holes":         "Gomme 1894",
-    "alquerque":          "Fiske 1905",
-    "tuknanavuhpi":       "Culin 1907",
-    "ludus-latrunculorum": "Falkener 1892 — ⚠ yeniden kurgulama beyanı zorunlu",
+    # FAZ 6 · MURRAY 1952 AÇILDI VE BU LİSTE YENİDEN ÖLÇÜLDÜ.
+    #
+    # Kurucu teslimi Murray'in tam metnini getirdi. Yedi maddenin yedisi de
+    # tek tek AÇILDI; üçü yazıldı ve listeden düştü (alquerque · ashta-kashte
+    # · rimau-rimau — son ikisi bu listede DEĞİL, ENTRIES'te BLOCKED'dı ve
+    # engelin gerekçesi 'Murray denendi, açılamadı' idi).
+    #
+    # Kalan dördü SAYFA AÇILARAK elendi ve gerekçeleri artık bir tahmin değil
+    # bir ÖLÇÜMDÜR. Bir maddenin burada durması onun yazılabilir olduğunu
+    # söyler; yazılamıyorsa NEDEN yazılamadığı burada yazar.
+    "chaupar":            "Culin 1895 · 'Chausar' — ⚠ kültür tuzağı riski: isabet "
+                          "Culin'in KORE cildindedir. Murray s. 134'te chaupar'a "
+                          "yalnızca ATIF verir, kural seti YOK. Kaynak elde değil.",
+    "gilli-danda":        "Culin 1907 · 'Tipcat' — ⚠ kültür tuzağı riski: isabet "
+                          "İNGİLİZ/Kuzey Amerika kaydıdır. Murray'de HİÇ geçmiyor "
+                          "(0 isabet). Kaynak elde değil.",
+    "nine-holes":         "Gomme 1894 · Murray s. 39 § 3.1 TAM KURAL SETİ VERİR ve "
+                          "erişilebilir. YAZILMADI: envanterin kendi puanı "
+                          "`distinct: 1` ve kendi şerhi bu maddeyi kitabın beşinci "
+                          "üç-taş oyunu olarak ELENECEK aday sayıyor. Engel bir "
+                          "KAYNAK sorunu değil, bir EDİTORYAL karardır.",
+    "tabula":             "Murray ss. 29–31 · ⛔ ÇÖZÜLEMEDİ: § 2.8.2'nin basılı metni "
+                          "taşların 'table D'den toplandığını söyler, ama aynı "
+                          "sayfadaki Fig. 16 (Ostia levhası) BEŞ tablo gösterir "
+                          "(A·B·C·D·E). Metin ve şekil izin SON çeyreğinde çelişir "
+                          "ve hangisinden toplandığı sayfadan çıkarılamaz. Tabula "
+                          "(§ 2.8.3) o oyunun bir sırası eksik hâlidir, yani aynı "
+                          "belirsizliği devralır. Bir yarış oyununun BİTİŞ çeyreği "
+                          "tahminle yazılamaz.",
+    "tuknanavuhpi":       "Culin 1907 · Murray s. 149–150'de Hopi totolospi'yi verir "
+                          "ama kural seti EKSİKTİR: Voth'un kaydı için Murray "
+                          "'failed to ascertain why' der. Culin'in kendi cildi elde "
+                          "değil.",
+    "ludus-latrunculorum": "Falkener 1892 · ⛔ ÇÖZÜLEMEDİ: Murray ss. 33–35 oyunun "
+                          "OYNANIŞININ bilinmediğini yazar. Kaynağın kendisi 'kural "
+                          "yok' diyorsa yeniden kurgulama bir beyan değil bir "
+                          "uydurmadır.",
 }
 
 # Projenin DENEDİĞİ ve AÇAMADIĞI eserler. Bir eser bir kez bu listeye
 # girdiyse, ona bağlı HER oyun için engel kanıtlanmış sayılır — aynı
 # engelli kaynağa tekrar tekrar zaman harcanmaz (§ 26).
-BLOCKED_WORKS = {"Murray, H. J. R., A History of Board-Games",
-                 "Murray, H. J. R., A History of Chess",
-                 "Bell, R. C.", "Parlett", "Zaslavsky", "de Voogt", "Russ",
+# ⚠ FAZ 6: MURRAY 1952 BU LİSTEDEN ÇIKARILDI. Kurucu teslimi eserin tam
+# metnini getirdi ve üç oyun oradan SAYFA SEVİYESİNDE yazıldı. Bir eseri
+# 'denendi ve açılamadı' diye işaretlemek ucuzdur; işareti KALDIRMAK ise
+# ancak eser gerçekten açıldığında yapılabilir. Aynı şey Bell için Faz 5'te
+# yapılmıştı ve o da listede DURUYORDU — o da kaldırıldı, çünkü turkish-dama
+# ve jeu-de-dames Bell ss. 74-75'ten yazılmıştır.
+BLOCKED_WORKS = {"Murray, H. J. R., A History of Chess",
+                 "Parlett", "Zaslavsky", "de Voogt", "Russ",
                  "Finkel", "Pollux"}
 
 E_RULE = ["setup", "player count", "materials", "board / topology", "first move",
@@ -594,23 +629,8 @@ ENTRIES.update({
      "TAYLAND KAYNAKLI ikinci bağımsız künye"],
     s=["P2"], pat=['"len choa" Thai leopard game rules', 'Thai traditional board games leopard tiger rules']),
 
-"rimau-rimau": g("BLOCKED", "P1", 4, ["murray-1952", "bell-1960"], W_ACCESS,
-    C_SCAN + ["Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"],
-    "İki künyenin ikisi de engelli.",
-    ["Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi",
-     "Tahta (alquerque temelli), kaplan sayısı, av taşı sayısı, çoklu alma kuralı"],
-    ideal="Malezya kaynaklı çağdaş bir künye kültür atfını güçlendirir.",
-    pat=['"rimau rimau" Malay tiger game rules', '"main rimau" Malaysia traditional board game']),
 
 # ── RACE HOME ──────────────────────────────────────────────────────────────
-"ashta-kashte": g("BLOCKED", "P1", 4, ["murray-1952", "bell-1960"], W_ACCESS,
-    C_SCAN + ["Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"],
-    "İki künyenin ikisi de engelli.",
-    ["Murray 1952 ya da Bell'de ashta-kashte maddesi",
-     "7×7 tahta, işaretli güvenli kareler, dört kavrukemik/deniz kabuğu atışı, "
-     "iz yönü, alma, eve giriş koşulu"],
-    pat=['"ashta kashte" Bengali race game rules board',
-         'ashtapada cowrie race game Bengal rules']),
 
 "daldos": g("SOURCE-PENDING", "P2", 3, ["specialist-articles", "parlett-1999"],
     "Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye "
@@ -646,9 +666,13 @@ ENTRIES.update({
     "Yeniden kurgulama BELİRSİZDİR: taşların iz üzerindeki YÖNÜ ve başlangıç "
     "yerleşimi kesin bilinmiyor. Tahta yazıtları kural değil, SÖZ OYUNUDUR — "
     "yani en çok bulunan kanıt en az kural taşıyan kanıttır.",
-    C_SCAN + ["Murray 1952 DENENDİ ve açılamadı",
+    C_SCAN + ["Murray 1952 FAZ 6'DA AÇILDI (ss. 29–31) ve ÇELİŞKİLİ ÇIKTI: "
+              "basılı metin taşların 'table D'den toplandığını söyler, aynı "
+              "sayfadaki Fig. 16 (Ostia levhası) BEŞ tablo gösterir (A·B·C·D·E). "
+              "İzin SON çeyreği sayfadan çıkarılamıyor.",
               "Schädler · Board Game Studies — HİÇ denenmedi"],
-    "İz yönü, başlangıç yerleşimi ve alma kuralı — hiçbiri kesin değil.",
+    "İzin son çeyreği (nereden toplanır) — Murray'in metni ve şekli çelişiyor. "
+    "Başlangıç yerleşimi ve alma kuralı Murray s. 31'de VARDIR.",
     ["Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması",
      "XII scripta için önerilmiş yeniden kurgulamalar ve ARALARINDAKİ FARK",
      "Tabula ile XII scripta arasındaki tarihsel geçişi veren bir kaynak"],
@@ -752,7 +776,8 @@ ENTRIES.update({
 "hus": g("SOURCE-PENDING", "P2", 3, ["murray-1952", "townshend-1979"],
     "Birincil künye (Murray 1952) engelli; ikincisi (Townshend 1979) HİÇ "
     "DENENMEDİ. Oyun `attributed` taranmıştır: Nama atfı ZORUNLUDUR.",
-    C_SCAN + ["Murray 1952 DENENDİ ve açılamadı", "Townshend 1979 — HİÇ denenmedi"],
+    C_SCAN + ["Murray 1952 DENENDİ ve açılamadı", "Townshend 1979 — HİÇ denenmedi",
+              "FAZ 6 · MURRAY ss. 207 ve 209 AÇILDI. § 8.2.4 diziyi ve dört açılış biçimini verir, ortak kurallar s. 207'dedir. YAZILMADI: 4×16 = 64 çukurluk tahta bu kitabın malzeme eşiğinin üstündedir ve Schultze'nin kaydıyla ILN çizimi tahta boyutunda ÇELİŞİR (4×16'ya karşı 4×8)."],
     "Dört sıralı tahtanın kural metni ve Nama bağlamı.",
     ["Murray 1952 ya da Townshend 1979'da hus/ǁhus maddesi — dört sıra, "
      "ekim yönü, alma koşulu, bitiş",
@@ -810,36 +835,6 @@ ENTRIES.update({
 ENTRIES.update({
 
 # ── LINE AND TERRITORY ─────────────────────────────────────────────────────
-"go": g("UNRESOLVED", "P5", 3, ["volpicelli-weiqi", "murray-1952"],
-    "KAYNAK TAM AMA KÜLTÜR UYUŞMUYOR. Smith 1908 (ss. 24–26) EKSİKSİZ bir "
-    "kural kitabıdır — sıra, yerleştirme, ko, taşların bir daha oynanmaması, "
-    "toprak amacı — ama JAPON kodifikasyonunu ve JAPON SAYIMINI (alınan "
-    "taşlarla toprağı doldurma) verir, Çin ALAN sayımını değil. Kapsam kaydı "
-    "HAN ÇİNLİSİ der. § 9'un 'kaynak iddia edilen kültürü desteklemeli' şartı "
-    "KARŞILANMIYOR.",
-    ["Smith 1908 'Rules of Play' ss. 24–26 AÇILDI ve TAM kural seti doğrulandı",
-     "Falkener 1892 Bölüm XXIII ss. 239–240 AÇILDI: 19×19, taşlar konduktan "
-     "sonra hareket etmez, bağlantı yalnızca çizgi boyunca",
-     "Murray 1952 · Parlett 1999 · Shotwell 2003 — üçü de erişilemedi",
-     "Culin 1895 tarandı — Çin biçimi için kural seti yok"],
-    "ÇİN biçimini ve ÇİN ALAN SAYIMINI veren bir kaynak.",
-    ["Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal "
-     "Asiatic Society N.S. XXVI (1894) — Smith'in KENDİ künyesinde geçiyor",
-     "Ya da: Çin alan sayımını (taş + çevrelenen boş kesişim) veren başka "
-     "herhangi bir denetlenebilir kaynak",
-     "⚠ ALTERNATİF ÇÖZÜM — KURUCU KARARI: maddenin kültür künyesi JAPON "
-     "olarak değiştirilirse Smith 1908 ZATEN YETERLİDİR ve oyun BUGÜN yazılır. "
-     "Bu bir araştırma değil bir karardır.",
-     "KARAR MALZEMESİ: kitap 9×9 mı 19×19 mu basacak? 650 kelimede 19×19 "
-     "öğretilemez; 9×9 seçimi EDİTORYALDİR ve gerekçesi yazılmalıdır"],
-    s=["P7"],
-    rule=["scoring"], src=["author", "title", "publication year", "exact page", "stable locator"],
-    cult=CULT_FULL,
-    ideal="Volpicelli makalesi — hem Çin biçimini hem Çin sayımını verir ve "
-          "kültür uyuşmazlığını tek hamlede kapatır.",
-    pat=['Volpicelli "Wei-chi" Journal China Branch Royal Asiatic Society 1894',
-         'weiqi Chinese area scoring rules 19th century source',
-         'wei-ch\'i Chinese go rules historical article archive.org']),
 
 "luk-tsut-kei": g("BLOCKED", "P2", 3, ["murray-1952"],
     "Elde bulunan derlemelerde KULLANILABİLİR isabet yok. Culin 1895 Kore "
@@ -847,7 +842,8 @@ ENTRIES.update({
     "tuzak xiangqi, tien-gow ve jianzi'de üç kez ölçüldü.",
     C_SCAN + ["Culin 1895 · Korean Games tarandı — Kanton biçimi için "
               "kullanılabilir kural seti bulunamadı",
-              "Murray 1952 DENENDİ ve açılamadı"],
+              "Murray 1952 DENENDİ ve açılamadı",
+              "FAZ 6 · MURRAY s. 42 AÇILDI: § 3.3.13 oyunun TARİHİNİ verir (Konfüçyüs dönemi, Swei hanedanı, kiu kung adı) ama oyuna ÖZEL kural vermez; § 3.3'ün ortak kurallarına havale eder. Kitabın beşinci üç-taş oyunu olurdu ve ayırt edici bir kuralı YOK."],
     "Kanton kaynaklı ya da Çin biçimini açıkça veren bir kural kaydı.",
     ["Murray 1952'de luk tsut k'i maddesi",
      "Ya da: Çin/Kanton kaynaklı bir üç-taş oyunu kaydı",
@@ -898,7 +894,8 @@ ENTRIES.update({
     "ama açık nüshası bulunmadı; ikinci künye (Murray 1952) engelli.",
     C_SCAN + ["Culin 1900 · 'Philippine Games' — açık nüsha bulunamadı; AYNI "
               "derginin 1899 sayısı denendi ve yalnızca JSTOR nüshası çıktı",
-              "Murray 1952 DENENDİ ve açılamadı"],
+              "Murray 1952 DENENDİ ve açılamadı",
+              "FAZ 6 · MURRAY s. 42 AÇILDI: § 3.3.14 yalnızca 'Philippines: Tapatan (Culin, f, 648). Widely played.' der. KURAL SETİ YOK — bu bir künyedir, bir kaynak değil."],
     "Culin'in tapatan bölümü.",
     ["Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — "
      "tapatan bölümü, sayfa numarasıyla",
@@ -935,7 +932,8 @@ ENTRIES.update({
     C_SCAN + ["Gomme 1894 cilt I § Nine Men's Morris AÇILDI: dokuz taşlı biçim "
               "var (yazıldı), ON İKİ taşlı biçim için ayrı kayıt YOK "
               "(Batch 4 kaynak avı)",
-              "Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"],
+              "Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı",
+              "FAZ 6 · MURRAY s. 43 AÇILDI ve KURAL SETİ TAMDIR. YAZILMADI: madde zaten `nine-mens-morris`in 'Twelve men' VARYANTI olarak basılıdır. Envanterin kendi şerhi ve Faz 4'ün diyagram altyazısı aynı kararı veriyordu. Engel bir KAYNAK sorunu değil, bir TEKRAR sorunudur."],
     "On iki taşlı biçimin tahtası (köşegenli) ve o biçime özgü kurallar.",
     ["Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta "
      "ve 12'şer taş",
@@ -1041,7 +1039,8 @@ ENTRIES.update({
     "Ayrıca TAŞ SAYISI kaynaklara göre DEĞİŞİYOR ve kitap bir sayı seçip "
     "gerekçesini yazmak zorundadır. Oyun `attributed` taranmıştır: "
     "Amazigh atfı ZORUNLUDUR.",
-    C_SCAN + ["Murray 1952 DENENDİ ve açılamadı", "Béart 1955 — HİÇ denenmedi"],
+    C_SCAN + ["Murray 1952 DENENDİ ve açılamadı", "Béart 1955 — HİÇ denenmedi",
+              "FAZ 6 · MURRAY ss. 66 ve 69 AÇILDI. § 4.2.35 dörtlü alquerque tahtası üzerinde AYRI ve ZENGİN bir oyun verir: ileri-yalnız hareket, HER YÖNE sıçrama, zorunlu alma, huff ve karşı kenarda TERFİ. YAZILMADI çünkü Murray terfi etmiş taşın ALMA gücü için açıkça 'nothing is said' der — yani oyunun bitişini belirleyen taşın kuralı KAYNAKTA YOKTUR."],
     "Kural metni ve taş sayısı çelişkisini çözecek bir künye.",
     ["Murray 1952 ya da Béart 1955'te zamma/sig maddesi",
      "Tahta (9×9 köşegenli ızgara), taş sayısı, hareket, atlayarak alma, "

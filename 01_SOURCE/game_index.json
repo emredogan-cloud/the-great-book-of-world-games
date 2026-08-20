@@ -3156,12 +3156,13 @@
       "taxonomyRationale": "Tek kaplan çok sayıda insana karşı; hedefler asimetriktir ve alma yalnızca kaplanın yetkisidir.",
       "status": "candidate",
       "restrictionStatus": "open",
-      "sourceConfidence": "medium",
+      "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
+          "type": "book",
+          "locator": "§ 5.6.1, s. 108"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -3488,12 +3489,13 @@
       "taxonomyRationale": "7×7 spiral iz; deniz kabuğu atışıyla ilerlenir ve hedef merkeze varmaktır.",
       "status": "candidate",
       "restrictionStatus": "open",
-      "sourceConfidence": "medium",
+      "sourceConfidence": "high",
       "sourceVerification": "bibliographic",
       "sources": [
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
+          "type": "book",
+          "locator": "§ 6.3 ve § 6.3.3, ss. 129 ve 131"
         },
         {
           "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
@@ -5744,7 +5746,8 @@
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
+          "type": "book",
+          "locator": "§ 4.7.1, ss. 89–91"
         },
         {
           "ref": "Shotwell, Peter, Go! More Than a Game (Boston: Tuttle, 2003)",
@@ -5817,12 +5820,11 @@
         "visual": 5,
         "play": 5
       },
-      "unresolvedQuestions": [
-        "Kitap 9×9 mu 19×19 mu basacak? 650 kelimede 19×19 öğretilemez; 9×9 seçimi editoryaldir ve gerekçesi yazılmalıdır."
-      ],
+      "unresolvedQuestions": [],
       "adaptationNotes": "Kitap 9×9 tahtayı seçer: bir akşamda öğrenilip bitirilebilir ve kuralın tamamı değişmeden kalır. Bu bir kolaylaştırma değil, ÖLÇEK seçimidir ve prozada söylenir.",
       "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+      "playtestStatus": "not-started",
+      "culturalNotes": "Murray § 4.7.1 künyeyi 'China: Wei-k'i; Korea: Patok; Japan: I-go' diye açar ve 19×19 tahtayı bir ÇİN kaydına (Chao Wu King, 970–1127) bağlar. Kapsamın HAN ÇİNLİSİ atfı böylece kaynakla desteklendi."
     },
     {
       "gameId": "gomoku",
@@ -7253,7 +7255,8 @@
         },
         {
           "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
+          "type": "book",
+          "locator": "§ 4.2 ve § 4.2.1, ss. 65–66"
         },
         {
           "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",

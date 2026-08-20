@@ -5,11 +5,11 @@
   "model": {
     "games": 100,
     "families": 7,
-    "bodyPages": 205,
+    "bodyPages": 204,
     "openerPages": 14,
     "frontMatterPages": 14,
     "backMatterPages": 21,
-    "rawTotal": 254,
+    "rawTotal": 253,
     "total": 254
   },
   "target": 256,

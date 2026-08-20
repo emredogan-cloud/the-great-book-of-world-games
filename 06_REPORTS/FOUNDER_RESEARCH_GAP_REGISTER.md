@@ -20,12 +20,12 @@
 | | ölçülen |
 |---|---:|
 | Nihai kapsam | **100** |
-| Yazılmış | **52** |
-| Kurucu MÜDAHALESİ OLMADAN yazılabilir | **7** |
-| **KURUCU ARAŞTIRMASI GEREKEN** | **41** |
-| ↳ `BLOCKED` — kaynak denendi, açılamadı | **26** |
+| Yazılmış | **56** |
+| Kurucu MÜDAHALESİ OLMADAN yazılabilir | **6** |
+| **KURUCU ARAŞTIRMASI GEREKEN** | **38** |
+| ↳ `BLOCKED` — kaynak denendi, açılamadı | **24** |
 | ↳ `SOURCE-PENDING` — künye var, HENÜZ denenmedi | **13** |
-| ↳ `UNRESOLVED` — kaynak açık, kimlik/kültür uyuşmuyor | **2** |
+| ↳ `UNRESOLVED` — kaynak açık, kimlik/kültür uyuşmuyor | **1** |
 | `UNATTEMPTED` — hiç denenmemiş ve engelsiz | **0** |
 
 > `UNATTEMPTED` **sıfırdır** ve bu kasıtlıdır: Batch 6'da kalan 59 oyunun
@@ -37,29 +37,28 @@
 
 | sınıf | ad | sayı |
 |---|---|---:|
-| `P1` | SOURCE ACCESS BLOCKED | 18 |
+| `P1` | SOURCE ACCESS BLOCKED | 16 |
 | `P2` | SOURCE TEXT UNAVAILABLE | 15 |
 | `P3` | RULES INCOMPLETE | 2 |
-| `P5` | CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED | 2 |
+| `P5` | CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED | 1 |
 | `P6` | RECONSTRUCTION TOO UNCERTAIN | 3 |
 | `P8` | SOURCE LOCATOR MISSING | 1 |
 
 ---
 
-## 2 · KURUCU MÜDAHALESİ GEREKTİRMEYEN 7 OYUN
+## 2 · KURUCU MÜDAHALESİ GEREKTİRMEYEN 6 OYUN
 
 Bunlar **engelli değildir** — sıra beklerler. Kaynakları elde bulunan
 kamusal alan derlemelerindedir ve ajan bunları kurucu beklemeden yazar.
 
 | oyun | aile | isabet |
 |---|---|---|
-| `alquerque` | The War Board | Fiske 1905 |
-| `chaupar` | The Race Home | Culin 1895 · 'Chausar' — ⚠ kültür tuzağı riski: isabet Culin'in KORE cildindedir, sayfa açılmadan yazılamaz |
-| `gilli-danda` | Games Without a Board | Culin 1907 · 'Tipcat' — ⚠ kültür tuzağı riski: isabet İNGİLİZ/Kuzey Amerika kaydıdır, sayfa açılmadan yazılamaz |
-| `ludus-latrunculorum` | The War Board | Falkener 1892 — ⚠ yeniden kurgulama beyanı zorunlu |
-| `nine-holes` | The Line and the Territory | Gomme 1894 |
-| `tabula` | The Race Home | Fiske 1905 |
-| `tuknanavuhpi` | The War Board | Culin 1907 |
+| `chaupar` | The Race Home | Culin 1895 · 'Chausar' — ⚠ kültür tuzağı riski: isabet Culin'in KORE cildindedir. Murray s. 134'te chaupar'a yalnızca ATIF verir, kural seti YOK. Kaynak elde değil. |
+| `gilli-danda` | Games Without a Board | Culin 1907 · 'Tipcat' — ⚠ kültür tuzağı riski: isabet İNGİLİZ/Kuzey Amerika kaydıdır. Murray'de HİÇ geçmiyor (0 isabet). Kaynak elde değil. |
+| `ludus-latrunculorum` | The War Board | Falkener 1892 · ⛔ ÇÖZÜLEMEDİ: Murray ss. 33–35 oyunun OYNANIŞININ bilinmediğini yazar. Kaynağın kendisi 'kural yok' diyorsa yeniden kurgulama bir beyan değil bir uydurmadır. |
+| `nine-holes` | The Line and the Territory | Gomme 1894 · Murray s. 39 § 3.1 TAM KURAL SETİ VERİR ve erişilebilir. YAZILMADI: envanterin kendi puanı `distinct: 1` ve kendi şerhi bu maddeyi kitabın beşinci üç-taş oyunu olarak ELENECEK aday sayıyor. Engel bir KAYNAK sorunu değil, bir EDİTORYAL karardır. |
+| `tabula` | The Race Home | Murray ss. 29–31 · ⛔ ÇÖZÜLEMEDİ: § 2.8.2'nin basılı metni taşların 'table D'den toplandığını söyler, ama aynı sayfadaki Fig. 16 (Ostia levhası) BEŞ tablo gösterir (A·B·C·D·E). Metin ve şekil izin SON çeyreğinde çelişir ve hangisinden toplandığı sayfadan çıkarılamaz. Tabula (§ 2.8.3) o oyunun bir sırası eksik hâlidir, yani aynı belirsizliği devralır. Bir yarış oyununun BİTİŞ çeyreği tahminle yazılamaz. |
+| `tuknanavuhpi` | The War Board | Culin 1907 · Murray s. 149–150'de Hopi totolospi'yi verir ama kural seti EKSİKTİR: Voth'un kaydı için Murray 'failed to ascertain why' der. Culin'in kendi cildi elde değil. |
 
 > ⚠ İlk ikisi **kültür tuzağı riski** taşır ve sayfa açılmadan yazılamaz.
 > Totolospi, sugoroku, tien-gow, jianzi ve xiangqi'de aynı tuzak beş kez
@@ -73,11 +72,11 @@ kamusal alan derlemelerindedir ve ajan bunları kurucu beklemeden yazar.
 | aile | hedef | yazılan | yazılabilir | **engelli** | açık | tamamlanma |
 |---|---:|---:|---:|---:|---:|---|
 | The Sowing Games | 14 | 5 | 0 | **9** | 9 | `████········` 36% |
-| The Line and the Territory | 17 | 8 | 1 | **8** | 9 | `█████·······` 47% |
 | Games Without a Board | 16 | 7 | 1 | **8** | 9 | `█████·······` 44% |
-| The Hunt and the Siege | 10 | 5 | 0 | **5** | 5 | `██████······` 50% |
-| The Race Home | 18 | 11 | 2 | **5** | 7 | `███████·····` 61% |
-| The War Board | 21 | 13 | 3 | **5** | 8 | `███████·····` 62% |
+| The Line and the Territory | 17 | 9 | 1 | **7** | 8 | `██████······` 53% |
+| The War Board | 21 | 14 | 2 | **5** | 7 | `████████····` 67% |
+| The Hunt and the Siege | 10 | 6 | 0 | **4** | 4 | `███████·····` 60% |
+| The Race Home | 18 | 12 | 2 | **4** | 6 | `████████····` 67% |
 | Chance and Nerve | 4 | 3 | 0 | **1** | 1 | `█████████···` 75% |
 
 > **Ekim ailesi kitabın en büyük açığıdır ve tek bir sebebi vardır:**
@@ -90,7 +89,7 @@ kamusal alan derlemelerindedir ve ajan bunları kurucu beklemeden yazar.
 
 ## 4 · KÜLTÜR VE BÖLGE AÇIĞI
 
-Kapsam **68 kültür** vaat ediyor; yazılan **27**. Kalan **29 kültürün**
+Kapsam **68 kültür** vaat ediyor; yazılan **27**. Kalan **27 kültürün**
 tamamı bu kayıttaki maddelerdedir — yani bu kayıt çözülmezse kitap
 kültür vaadini **68'de değil 27'de** kapatır.
 
@@ -133,11 +132,11 @@ yapılar kitapta **hiç yoktur** ve yalnızca bu kayıttaki maddelerdedir:
 
 | eser | açtığı madde | durum |
 |---|---:|---|
-| Murray, H. J. R., A History of Board-Games Other Than Chess | **18** | ⛔ denendi · açılamadı |
-| Bell, R. C., Board and Table Games from Many Civilizations | **8** | ⛔ denendi · açılamadı |
+| Murray, H. J. R., A History of Board-Games Other Than Chess | **15** | ⛔ denendi · açılamadı |
 | Parlett, David, The Oxford History of Board Games | **8** | ⛔ denendi · açılamadı |
 | Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture | **8** | ⛔ denendi · açılamadı |
 | Uzmanlık makaleleri — tek oyunu açan dar künyeler | **7** | ◻ HİÇ denenmedi |
+| Bell, R. C., Board and Table Games from Many Civilizations | **6** | ⛔ denendi · açılamadı |
 | Russ, Laurence, The Complete Mancala Games Book | **3** | ⛔ denendi · açılamadı |
 | Townshend, Philip, 'Mankala in Eastern and Southern Africa: A Distributional Analysis', Azania: Journal of the British Institute in Eastern Africa 14 | **3** | ◻ HİÇ denenmedi |
 | Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 | **2** | ◻ HİÇ denenmedi |
@@ -148,7 +147,6 @@ yapılar kitapta **hiç yoktur** ve yalnızca bu kayıttaki maddelerdedir:
 | de Voogt, Alex, Mancala Board Games | **1** | ⛔ denendi · açılamadı |
 | Yaşayan federasyon/kodifikasyon kuralları | **1** | ◻ HİÇ denenmedi |
 | Murray, H. J. R., A History of Chess | **1** | ⛔ denendi · açılamadı |
-| Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society, N.S. XXVI | **1** | ◻ HİÇ denenmedi |
 
 **Kümülatif:** Murray 1952 tek başına **24** madde açar. Ona Parlett,
 Zaslavsky, Bell ve Russ eklenirse **52 maddenin 46'sı** açılır. Geri
@@ -171,9 +169,9 @@ compositeScore = unlockEase        (0–5 · açık cetvel, aşağıda)
 
 | sınıf | anlamı | sayı |
 |---|---|---:|
-| **A** | YÜKSEK GETİRİ — tek iyi kaynak maddeyi hemen açar | 16 |
+| **A** | YÜKSEK GETİRİ — tek iyi kaynak maddeyi hemen açar | 14 |
 | **B** | AİLE DENGESİ — ciddi eksik bir aileyi doldurur | 0 |
-| **C** | KÜLTÜREL ÇEŞİTLİLİK — kaybedilen bir kültürü geri getirir | 12 |
+| **C** | KÜLTÜREL ÇEŞİTLİLİK — kaybedilen bir kültürü geri getirir | 11 |
 | **D** | MEKANİK ÇEŞİTLİLİK — eşi olmayan bir mekanik taşır | 2 |
 | **E** | DÜŞÜK ETKİ — yararlı ama kritik değil | 11 |
 
@@ -181,45 +179,42 @@ compositeScore = unlockEase        (0–5 · açık cetvel, aşağıda)
 |---:|---|---|---|:---:|---:|---|---|
 | 1 | **Morra** `morra` | Games Without a Board | Italian | A | **21.8** | `BLOCKED` | `P3` |
 | 2 | **Bohnenspiel** `bohnenspiel` | The Sowing Games | German | A | **21.2** | `BLOCKED` | `P1` |
-| 3 | **Bagh-Chal** `bagh-chal` | The Hunt and the Siege | Nepali | A | **20.5** | `BLOCKED` | `P1` |
-| 4 | **Kōnane** `konane` | The War Board | Hawaiian | C | **19.9** | `BLOCKED` | `P2` |
-| 5 | **Yoté** `yote` | The War Board | Wolof | C | **19.9** | `SOURCE-PENDING` | `P2` |
-| 6 | **Ampe** `ampe` | Games Without a Board | Akan | A | **19.8** | `BLOCKED` | `P1` |
-| 7 | **Pilolo** `pilolo` | Games Without a Board | Ga | A | **19.8** | `BLOCKED` | `P1` |
-| 8 | **Shisima** `shisima` | The Line and the Territory | Luhya | A | **19.6** | `BLOCKED` | `P1` |
-| 9 | **Aadu Puli Attam** `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | **19.5** | `BLOCKED` | `P1` |
-| 10 | **Adji-boto** `adji-boto` | The Sowing Games | Ndyuka Maroon | C | **19.2** | `SOURCE-PENDING` | `P2` |
-| 11 | **Congklak** `congklak` | The Sowing Games | Javanese | A | **19.2** | `BLOCKED` | `P1` |
-| 12 | **Sungka** `sungka` | The Sowing Games | Visayan | A | **19.2** | `SOURCE-PENDING` | `P2` |
+| 3 | **Bagh-Chal** `bagh-chal` | The Hunt and the Siege | Nepali | A | **20.0** | `BLOCKED` | `P1` |
+| 4 | **Ampe** `ampe` | Games Without a Board | Akan | A | **19.8** | `BLOCKED` | `P1` |
+| 5 | **Pilolo** `pilolo` | Games Without a Board | Ga | A | **19.8** | `BLOCKED` | `P1` |
+| 6 | **Kōnane** `konane` | The War Board | Hawaiian | C | **19.7** | `BLOCKED` | `P2` |
+| 7 | **Yoté** `yote` | The War Board | Wolof | C | **19.7** | `SOURCE-PENDING` | `P2` |
+| 8 | **Shisima** `shisima` | The Line and the Territory | Luhya | A | **19.4** | `BLOCKED` | `P1` |
+| 9 | **Adji-boto** `adji-boto` | The Sowing Games | Ndyuka Maroon | C | **19.2** | `SOURCE-PENDING` | `P2` |
+| 10 | **Congklak** `congklak` | The Sowing Games | Javanese | A | **19.2** | `BLOCKED` | `P1` |
+| 11 | **Sungka** `sungka` | The Sowing Games | Visayan | A | **19.2** | `SOURCE-PENDING` | `P2` |
+| 12 | **Aadu Puli Attam** `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | **19.0** | `BLOCKED` | `P1` |
 | 13 | **Pétanque** `petanque` | Games Without a Board | Provençal | A | **18.8** | `SOURCE-PENDING` | `P8` |
-| 14 | **Go** `go` | The Line and the Territory | Han Chinese | C | **18.6** | `UNRESOLVED` | `P5` |
-| 15 | **Morabaraba** `morabaraba` | The Line and the Territory | Sotho | A | **18.6** | `BLOCKED` | `P1` |
-| 16 | **Shax** `shax` | The Line and the Territory | Somali | A | **18.6** | `BLOCKED` | `P1` |
-| 17 | **Tapatan** `tapatan` | The Line and the Territory | Tagalog | A | **18.6** | `BLOCKED` | `P2` |
-| 18 | **Gebeta** `gebeta` | The Sowing Games | Amhara | C | **18.2** | `SOURCE-PENDING` | `P2` |
-| 19 | **Hus** `hus` | The Sowing Games | Nama | C | **18.2** | `SOURCE-PENDING` | `P2` |
-| 20 | **Toguz Kumalak** `toguz-kumalak` | The Sowing Games | Kazakh | D | **18.2** | `BLOCKED` | `P1` |
-| 21 | **Ashta Kashte** `ashta-kashte` | The Race Home | Bengali | A | **17.9** | `BLOCKED` | `P1` |
-| 22 | **Daldøs** `daldos` | The Race Home | Danish | C | **17.9** | `SOURCE-PENDING` | `P2` |
-| 23 | **Len Choa** `len-choa` | The Hunt and the Siege | Thai | A | **17.5** | `BLOCKED` | `P1` |
-| 24 | **Rimau-rimau** `rimau-rimau` | The Hunt and the Siege | Malay | A | **17.5** | `BLOCKED` | `P1` |
-| 25 | **The Game of the Goose** `game-of-the-goose` | The Race Home | Italian | E | **16.9** | `SOURCE-PENDING` | `P1` |
-| 26 | **Nard** `nard` | The Race Home | Persian | C | **16.9** | `SOURCE-PENDING` | `P2` |
-| 27 | **Zamma** `zamma` | The War Board | Amazigh | C | **16.9** | `SOURCE-PENDING` | `P2` |
-| 28 | **Halatafl** `halatafl` | The Hunt and the Siege | Icelandic | E | **16.5** | `BLOCKED` | `P3` |
-| 29 | **Ayòayò** `ayoayo` | The Sowing Games | Yoruba | E | **16.2** | `SOURCE-PENDING` | `P2` |
-| 30 | **Mefuvha** `mefuvha` | The Sowing Games | Venda | E | **16.2** | `SOURCE-PENDING` | `P2` |
-| 31 | **Makruk** `makruk` | The War Board | Thai | E | **15.9** | `BLOCKED` | `P1` |
-| 32 | **Surakarta** `surakarta` | The War Board | Javanese | D | **15.9** | `UNRESOLVED` | `P5` |
-| 33 | **Ephedrismos** `ephedrismos` | Games Without a Board | Ancient Greek | C | **15.8** | `BLOCKED` | `P6` |
-| 34 | **Lagori** `lagori` | Games Without a Board | Kannada | E | **15.8** | `BLOCKED` | `P2` |
-| 35 | **Myinda** `myinda` | Games Without a Board | Ancient Greek | E | **15.8** | `BLOCKED` | `P1` |
-| 36 | **Twelve Men's Morris** `twelve-mens-morris` | The Line and the Territory | Medieval European | E | **15.6** | `BLOCKED` | `P1` |
-| 37 | **Ludus Duodecim Scriptorum** `ludus-duodecim-scriptorum` | The Race Home | Roman | C | **14.9** | `SOURCE-PENDING` | `P6` |
-| 38 | **Kho Kho** `kho-kho` | Games Without a Board | Marathi | E | **14.8** | `BLOCKED` | `P2` |
-| 39 | **Luk Tsut K'i** `luk-tsut-kei` | The Line and the Territory | Cantonese | E | **14.6** | `BLOCKED` | `P2` |
-| 40 | **Terni Lapilli** `terni-lapilli` | The Line and the Territory | Roman | E | **14.6** | `BLOCKED` | `P6` |
-| 41 | **Mahjong** `mahjong` | Chance and Nerve | Han Chinese | C | **14.2** | `BLOCKED` | `P1` |
+| 14 | **Morabaraba** `morabaraba` | The Line and the Territory | Sotho | A | **18.4** | `BLOCKED` | `P1` |
+| 15 | **Shax** `shax` | The Line and the Territory | Somali | A | **18.4** | `BLOCKED` | `P1` |
+| 16 | **Tapatan** `tapatan` | The Line and the Territory | Tagalog | A | **18.4** | `BLOCKED` | `P2` |
+| 17 | **Gebeta** `gebeta` | The Sowing Games | Amhara | C | **18.2** | `SOURCE-PENDING` | `P2` |
+| 18 | **Hus** `hus` | The Sowing Games | Nama | C | **18.2** | `SOURCE-PENDING` | `P2` |
+| 19 | **Toguz Kumalak** `toguz-kumalak` | The Sowing Games | Kazakh | D | **18.2** | `BLOCKED` | `P1` |
+| 20 | **Daldøs** `daldos` | The Race Home | Danish | C | **17.7** | `SOURCE-PENDING` | `P2` |
+| 21 | **Len Choa** `len-choa` | The Hunt and the Siege | Thai | A | **17.0** | `BLOCKED` | `P1` |
+| 22 | **The Game of the Goose** `game-of-the-goose` | The Race Home | Italian | E | **16.7** | `SOURCE-PENDING` | `P1` |
+| 23 | **Nard** `nard` | The Race Home | Persian | C | **16.7** | `SOURCE-PENDING` | `P2` |
+| 24 | **Zamma** `zamma` | The War Board | Amazigh | C | **16.7** | `SOURCE-PENDING` | `P2` |
+| 25 | **Ayòayò** `ayoayo` | The Sowing Games | Yoruba | E | **16.2** | `SOURCE-PENDING` | `P2` |
+| 26 | **Mefuvha** `mefuvha` | The Sowing Games | Venda | E | **16.2** | `SOURCE-PENDING` | `P2` |
+| 27 | **Halatafl** `halatafl` | The Hunt and the Siege | Icelandic | E | **16.0** | `BLOCKED` | `P3` |
+| 28 | **Ephedrismos** `ephedrismos` | Games Without a Board | Ancient Greek | C | **15.8** | `BLOCKED` | `P6` |
+| 29 | **Lagori** `lagori` | Games Without a Board | Kannada | E | **15.8** | `BLOCKED` | `P2` |
+| 30 | **Myinda** `myinda` | Games Without a Board | Ancient Greek | E | **15.8** | `BLOCKED` | `P1` |
+| 31 | **Makruk** `makruk` | The War Board | Thai | E | **15.7** | `BLOCKED` | `P1` |
+| 32 | **Surakarta** `surakarta` | The War Board | Javanese | D | **15.7** | `UNRESOLVED` | `P5` |
+| 33 | **Twelve Men's Morris** `twelve-mens-morris` | The Line and the Territory | Medieval European | E | **15.4** | `BLOCKED` | `P1` |
+| 34 | **Kho Kho** `kho-kho` | Games Without a Board | Marathi | E | **14.8** | `BLOCKED` | `P2` |
+| 35 | **Ludus Duodecim Scriptorum** `ludus-duodecim-scriptorum` | The Race Home | Roman | C | **14.7** | `SOURCE-PENDING` | `P6` |
+| 36 | **Luk Tsut K'i** `luk-tsut-kei` | The Line and the Territory | Cantonese | E | **14.4** | `BLOCKED` | `P2` |
+| 37 | **Terni Lapilli** `terni-lapilli` | The Line and the Territory | Roman | E | **14.4** | `BLOCKED` | `P6` |
+| 38 | **Mahjong** `mahjong` | Chance and Nerve | Han Chinese | C | **14.2** | `BLOCKED` | `P1` |
 
 ---
 
@@ -372,7 +367,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Hunt and the Siege |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 20.5 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 20.0 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -425,144 +420,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 4 · Kōnane
-
-| | |
-|---|---|
-| **GAME ID** | `konane` |
-| **TITLE** | Kōnane |
-| **ALTERNATE NAME(S)** | Hawaiian checkers |
-| **CULTURE** | Hawaiian |
-| **REGION** | Oceania · Hawai'i |
-| **FAMILY** | The War Board |
-| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED · `P5` CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `attributed` · öncelik C · puan 19.9 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Birincil künye KAMUSAL ALANDADIR ama yalnızca JSTOR nüshası bulundu ve tam metin indirilemedi; ikinci künye (Bell) engelli. Oyun `attributed` taranmıştır: Hawaii atfı ZORUNLUDUR ve kayıt ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye istiyor.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Culin 1899 · 'Hawaiian Games', American Anthropologist 1:2 — yalnızca JSTOR nüshası, tam metin indirilemedi (Batch 4 avı)
-- Culin 1898 · Chess and Playing-Cards AÇILDI (pachisi ve patolli buradan doğrulandı) — kōnane maddesi taranmadı
-- Bell proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899)
-- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
-
-**WHAT WAS MISSING**
-
-Culin'in kōnane bölümü ve çağdaş Hawaii atfı.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranmalı — proje bu makalenin sayfa aralığını henüz görmedi)
-2. Tahta ölçüsü, ilk iki taşın kaldırılması, YALNIZCA atlayarak alma, çoklu atlama kuralı ve hamlesiz kalanın kaybetmesi
-3. ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye — atıf zorunluluğu için (Bishop Museum · Hawaiian kültür kurumları)
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**IDEAL EVIDENCE** — American Anthropologist cilt 1 (1899) taraması + Bishop Museum kaydı.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/konane/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `Culin "Hawaiian Games" American Anthropologist 1899 archive.org`
-- `American Anthropologist volume 1 1899 full text HathiTrust`
-- `konane Hawaiian checkers rules Bishop Museum`
-
----
-
-### 5 · Yoté
-
-| | |
-|---|---|
-| **GAME ID** | `yote` |
-| **TITLE** | Yoté |
-| **ALTERNATE NAME(S)** | Yote, Choko (related) |
-| **CULTURE** | Wolof |
-| **REGION** | West Africa · Senegal · Gambia · Mali |
-| **FAMILY** | The War Board |
-| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 19.9 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Birincil künye Dakar basımı dar dağıtımlı bir eserdir ve HİÇ DENENMEDİ; ikinci künye (Zaslavsky) engelli.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Béart 1955 · Mémoires de l'IFAN 42 — HİÇ denenmedi
-- Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar: IFAN, 1955), 2 cilt
-- Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)
-
-**WHAT WAS MISSING**
-
-Béart'ın yoté kaydı — özellikle ÇİFT ALMA kuralı.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca)
-2. 5×6 ızgara, elde tutulan taşların sırayla girmesi, atlayarak alma ve ALINAN HER TAŞLA BİRLİKTE İKİNCİ BİR TAŞIN DA KALDIRILMASI kuralı — oyunun ayırt edici mekaniği budur (distinct=5)
-3. Wolof atfını veren bir kaynak
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**IDEAL EVIDENCE** — Béart 1955 — Batı Afrika oyunlarının en iyi saha kaydı; zamma ile AYNI kaynak, tek teslim iki oyun açar.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/yote/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `Béart "Jeux et jouets de l'Ouest africain" IFAN 1955 PDF`
-- `"yoté" OR "yote" Wolof Senegal game rules double capture`
-- `jeux ouest africain yoté règles IFAN Dakar`
-
----
-
-### 6 · Ampe
+### 4 · Ampe
 
 | | |
 |---|---|
@@ -626,7 +484,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 7 · Pilolo
+### 5 · Pilolo
 
 | | |
 |---|---|
@@ -690,6 +548,143 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
+### 6 · Kōnane
+
+| | |
+|---|---|
+| **GAME ID** | `konane` |
+| **TITLE** | Kōnane |
+| **ALTERNATE NAME(S)** | Hawaiian checkers |
+| **CULTURE** | Hawaiian |
+| **REGION** | Oceania · Hawai'i |
+| **FAMILY** | The War Board |
+| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
+| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED · `P5` CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `attributed` · öncelik C · puan 19.7 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Birincil künye KAMUSAL ALANDADIR ama yalnızca JSTOR nüshası bulundu ve tam metin indirilemedi; ikinci künye (Bell) engelli. Oyun `attributed` taranmıştır: Hawaii atfı ZORUNLUDUR ve kayıt ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye istiyor.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Culin 1899 · 'Hawaiian Games', American Anthropologist 1:2 — yalnızca JSTOR nüshası, tam metin indirilemedi (Batch 4 avı)
+- Culin 1898 · Chess and Playing-Cards AÇILDI (pachisi ve patolli buradan doğrulandı) — kōnane maddesi taranmadı
+- Bell proje genelinde DENENDİ ve açılamadı
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899)
+- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
+
+**WHAT WAS MISSING**
+
+Culin'in kōnane bölümü ve çağdaş Hawaii atfı.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranmalı — proje bu makalenin sayfa aralığını henüz görmedi)
+2. Tahta ölçüsü, ilk iki taşın kaldırılması, YALNIZCA atlayarak alma, çoklu atlama kuralı ve hamlesiz kalanın kaybetmesi
+3. ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye — atıf zorunluluğu için (Bishop Museum · Hawaiian kültür kurumları)
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
+```
+
+**IDEAL EVIDENCE** — American Anthropologist cilt 1 (1899) taraması + Bishop Museum kaydı.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/konane/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `Culin "Hawaiian Games" American Anthropologist 1899 archive.org`
+- `American Anthropologist volume 1 1899 full text HathiTrust`
+- `konane Hawaiian checkers rules Bishop Museum`
+
+---
+
+### 7 · Yoté
+
+| | |
+|---|---|
+| **GAME ID** | `yote` |
+| **TITLE** | Yoté |
+| **ALTERNATE NAME(S)** | Yote, Choko (related) |
+| **CULTURE** | Wolof |
+| **REGION** | West Africa · Senegal · Gambia · Mali |
+| **FAMILY** | The War Board |
+| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
+| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 19.7 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Birincil künye Dakar basımı dar dağıtımlı bir eserdir ve HİÇ DENENMEDİ; ikinci künye (Zaslavsky) engelli.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Béart 1955 · Mémoires de l'IFAN 42 — HİÇ denenmedi
+- Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar: IFAN, 1955), 2 cilt
+- Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)
+
+**WHAT WAS MISSING**
+
+Béart'ın yoté kaydı — özellikle ÇİFT ALMA kuralı.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca)
+2. 5×6 ızgara, elde tutulan taşların sırayla girmesi, atlayarak alma ve ALINAN HER TAŞLA BİRLİKTE İKİNCİ BİR TAŞIN DA KALDIRILMASI kuralı — oyunun ayırt edici mekaniği budur (distinct=5)
+3. Wolof atfını veren bir kaynak
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
+```
+
+**IDEAL EVIDENCE** — Béart 1955 — Batı Afrika oyunlarının en iyi saha kaydı; zamma ile AYNI kaynak, tek teslim iki oyun açar.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/yote/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `Béart "Jeux et jouets de l'Ouest africain" IFAN 1955 PDF`
+- `"yoté" OR "yote" Wolof Senegal game rules double capture`
+- `jeux ouest africain yoté règles IFAN Dakar`
+
+---
+
 ### 8 · Shisima
 
 | | |
@@ -702,7 +697,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Line and the Territory |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | `P2` SOURCE TEXT UNAVAILABLE |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 19.6 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 19.4 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -754,72 +749,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 9 · Aadu Puli Attam
-
-| | |
-|---|---|
-| **GAME ID** | `aadu-puli-attam` |
-| **TITLE** | Aadu Puli Attam |
-| **ALTERNATE NAME(S)** | Puli Meka, Goats and Tigers |
-| **CULTURE** | Tamil |
-| **REGION** | South Asia · Tamil Nadu, India |
-| **FAMILY** | The Hunt and the Siege |
-| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
-| **SECONDARY BLOCKERS** | `P4` GAME IDENTITY UNRESOLVED |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 19.5 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Bell ve Murray 1952 proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
-- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
-
-**WHAT WAS MISSING**
-
-İki künyenin ikisi de engelli; kural metni elde yok.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi
-2. Tahta çizimi (üçgen ızgara), keçi ve kaplan sayıları, yerleştirme aşaması, atlama-alma kuralı, kaplanın kilitlenme koşulu
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — Bir madde ki hem tahtayı hem de KAPLAN KİLİTLENMESİ koşulunu versin — Bagh-Chal ile farkı buradadır ve kitap iki maddeyi ayırmak için bu farkı yazmak zorundadır.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/aadu-puli-attam/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"aadu puli attam" rules board tigers goats Tamil`
-- `"puli meka" game rules South India`
-
----
-
-### 10 · Adji-boto
+### 9 · Adji-boto
 
 | | |
 |---|---|
@@ -885,7 +815,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 11 · Congklak
+### 10 · Congklak
 
 | | |
 |---|---|
@@ -951,7 +881,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 12 · Sungka
+### 11 · Sungka
 
 | | |
 |---|---|
@@ -1015,6 +945,71 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 - `Culin "Philippine Games" American Anthropologist 1900 archive.org`
 - `American Anthropologist volume 2 1900 full text archive`
 - `"sungka" Visayan Philippine mancala rules Culin`
+
+---
+
+### 12 · Aadu Puli Attam
+
+| | |
+|---|---|
+| **GAME ID** | `aadu-puli-attam` |
+| **TITLE** | Aadu Puli Attam |
+| **ALTERNATE NAME(S)** | Puli Meka, Goats and Tigers |
+| **CULTURE** | Tamil |
+| **REGION** | South Asia · Tamil Nadu, India |
+| **FAMILY** | The Hunt and the Siege |
+| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
+| **SECONDARY BLOCKERS** | `P4` GAME IDENTITY UNRESOLVED |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 19.0 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Bell ve Murray 1952 proje genelinde DENENDİ ve açılamadı
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
+- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
+
+**WHAT WAS MISSING**
+
+İki künyenin ikisi de engelli; kural metni elde yok.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi
+2. Tahta çizimi (üçgen ızgara), keçi ve kaplan sayıları, yerleştirme aşaması, atlama-alma kuralı, kaplanın kilitlenme koşulu
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+```
+
+**IDEAL EVIDENCE** — Bir madde ki hem tahtayı hem de KAPLAN KİLİTLENMESİ koşulunu versin — Bagh-Chal ile farkı buradadır ve kitap iki maddeyi ayırmak için bu farkı yazmak zorundadır.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/aadu-puli-attam/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `"aadu puli attam" rules board tigers goats Tamil`
+- `"puli meka" game rules South India`
 
 ---
 
@@ -1083,76 +1078,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 14 · Go
-
-| | |
-|---|---|
-| **GAME ID** | `go` |
-| **TITLE** | Go |
-| **ALTERNATE NAME(S)** | Weiqi, Baduk, Igo |
-| **CULTURE** | Han Chinese |
-| **REGION** | East Asia · China · Korea · Japan |
-| **FAMILY** | The Line and the Territory |
-| **PRIMARY BLOCKER** | `P5` — CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED |
-| **SECONDARY BLOCKERS** | `P7` VARIANT CONFLICT |
-| **CURRENT STATUS** | `UNRESOLVED` · kısıt taraması: `open` · öncelik C · puan 18.6 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-KAYNAK TAM AMA KÜLTÜR UYUŞMUYOR. Smith 1908 (ss. 24–26) EKSİKSİZ bir kural kitabıdır — sıra, yerleştirme, ko, taşların bir daha oynanmaması, toprak amacı — ama JAPON kodifikasyonunu ve JAPON SAYIMINI (alınan taşlarla toprağı doldurma) verir, Çin ALAN sayımını değil. Kapsam kaydı HAN ÇİNLİSİ der. § 9'un 'kaynak iddia edilen kültürü desteklemeli' şartı KARŞILANMIYOR.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Smith 1908 'Rules of Play' ss. 24–26 AÇILDI ve TAM kural seti doğrulandı
-- Falkener 1892 Bölüm XXIII ss. 239–240 AÇILDI: 19×19, taşlar konduktan sonra hareket etmez, bağlantı yalnızca çizgi boyunca
-- Murray 1952 · Parlett 1999 · Shotwell 2003 — üçü de erişilemedi
-- Culin 1895 tarandı — Çin biçimi için kural seti yok
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society, N.S. XXVI (1894)
-- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
-
-**WHAT WAS MISSING**
-
-ÇİN biçimini ve ÇİN ALAN SAYIMINI veren bir kaynak.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society N.S. XXVI (1894) — Smith'in KENDİ künyesinde geçiyor
-2. Ya da: Çin alan sayımını (taş + çevrelenen boş kesişim) veren başka herhangi bir denetlenebilir kaynak
-3. ⚠ ALTERNATİF ÇÖZÜM — KURUCU KARARI: maddenin kültür künyesi JAPON olarak değiştirilirse Smith 1908 ZATEN YETERLİDİR ve oyun BUGÜN yazılır. Bu bir araştırma değil bir karardır.
-4. KARAR MALZEMESİ: kitap 9×9 mı 19×19 mu basacak? 650 kelimede 19×19 öğretilemez; 9×9 seçimi EDİTORYALDİR ve gerekçesi yazılmalıdır
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] scoring
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**IDEAL EVIDENCE** — Volpicelli makalesi — hem Çin biçimini hem Çin sayımını verir ve kültür uyuşmazlığını tek hamlede kapatır.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/go/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `Volpicelli "Wei-chi" Journal China Branch Royal Asiatic Society 1894`
-- `weiqi Chinese area scoring rules 19th century source`
-- `wei-ch'i Chinese go rules historical article archive.org`
-
----
-
-### 15 · Morabaraba
+### 14 · Morabaraba
 
 | | |
 |---|---|
@@ -1164,7 +1090,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Line and the Territory |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `attributed` · öncelik A · puan 18.6 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `attributed` · öncelik A · puan 18.4 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1219,7 +1145,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 16 · Shax
+### 15 · Shax
 
 | | |
 |---|---|
@@ -1231,7 +1157,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Line and the Territory |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 18.6 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 18.4 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1285,7 +1211,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 17 · Tapatan
+### 16 · Tapatan
 
 | | |
 |---|---|
@@ -1297,7 +1223,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Line and the Territory |
 | **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 18.6 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 18.4 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1309,6 +1235,7 @@ Birincil künye 1900 tarihli bir dergi makalesidir — KAMUSAL ALANDADIR — ama
 - Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
 - Culin 1900 · 'Philippine Games' — açık nüsha bulunamadı; AYNI derginin 1899 sayısı denendi ve yalnızca JSTOR nüshası çıktı
 - Murray 1952 DENENDİ ve açılamadı
+- FAZ 6 · MURRAY s. 42 AÇILDI: § 3.3.14 yalnızca 'Philippines: Tapatan (Culin, f, 648). Widely played.' der. KURAL SETİ YOK — bu bir künyedir, bir kaynak değil.
 
 **WHAT SOURCE WAS ATTEMPTED**
 
@@ -1351,7 +1278,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 18 · Gebeta
+### 17 · Gebeta
 
 | | |
 |---|---|
@@ -1419,7 +1346,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 19 · Hus
+### 18 · Hus
 
 | | |
 |---|---|
@@ -1443,6 +1370,7 @@ Birincil künye (Murray 1952) engelli; ikincisi (Townshend 1979) HİÇ DENENMED�
 - Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
 - Murray 1952 DENENDİ ve açılamadı
 - Townshend 1979 — HİÇ denenmedi
+- FAZ 6 · MURRAY ss. 207 ve 209 AÇILDI. § 8.2.4 diziyi ve dört açılış biçimini verir, ortak kurallar s. 207'dedir. YAZILMADI: 4×16 = 64 çukurluk tahta bu kitabın malzeme eşiğinin üstündedir ve Schultze'nin kaydıyla ILN çizimi tahta boyutunda ÇELİŞİR (4×16'ya karşı 4×8).
 
 **WHAT SOURCE WAS ATTEMPTED**
 
@@ -1485,7 +1413,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 20 · Toguz Kumalak
+### 19 · Toguz Kumalak
 
 | | |
 |---|---|
@@ -1551,72 +1479,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 21 · Ashta Kashte
-
-| | |
-|---|---|
-| **GAME ID** | `ashta-kashte` |
-| **TITLE** | Ashta Kashte |
-| **ALTERNATE NAME(S)** | Ashta-kashte |
-| **CULTURE** | Bengali |
-| **REGION** | South Asia · Bengal |
-| **FAMILY** | The Race Home |
-| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
-| **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 17.9 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
-- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
-
-**WHAT WAS MISSING**
-
-İki künyenin ikisi de engelli.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Murray 1952 ya da Bell'de ashta-kashte maddesi
-2. 7×7 tahta, işaretli güvenli kareler, dört kavrukemik/deniz kabuğu atışı, iz yönü, alma, eve giriş koşulu
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/ashta-kashte/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"ashta kashte" Bengali race game rules board`
-- `ashtapada cowrie race game Bengal rules`
-
----
-
-### 22 · Daldøs
+### 20 · Daldøs
 
 | | |
 |---|---|
@@ -1628,7 +1491,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Race Home |
 | **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 17.9 |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 17.7 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1683,7 +1546,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 23 · Len Choa
+### 21 · Len Choa
 
 | | |
 |---|---|
@@ -1695,7 +1558,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Hunt and the Siege |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | `P2` SOURCE TEXT UNAVAILABLE |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 17.5 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 17.0 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1747,72 +1610,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 24 · Rimau-rimau
-
-| | |
-|---|---|
-| **GAME ID** | `rimau-rimau` |
-| **TITLE** | Rimau-rimau |
-| **ALTERNATE NAME(S)** | Main Rimau |
-| **CULTURE** | Malay |
-| **REGION** | Southeast Asia · Malaysia |
-| **FAMILY** | The Hunt and the Siege |
-| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
-| **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik A · puan 17.5 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
-- Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
-
-**WHAT WAS MISSING**
-
-İki künyenin ikisi de engelli.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi
-2. Tahta (alquerque temelli), kaplan sayısı, av taşı sayısı, çoklu alma kuralı
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — Malezya kaynaklı çağdaş bir künye kültür atfını güçlendirir.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/rimau-rimau/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"rimau rimau" Malay tiger game rules`
-- `"main rimau" Malaysia traditional board game`
-
----
-
-### 25 · The Game of the Goose
+### 22 · The Game of the Goose
 
 | | |
 |---|---|
@@ -1824,7 +1622,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Race Home |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik E · puan 16.9 |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik E · puan 16.7 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1880,7 +1678,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 26 · Nard
+### 23 · Nard
 
 | | |
 |---|---|
@@ -1892,7 +1690,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Race Home |
 | **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 16.9 |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 16.7 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1947,7 +1745,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 27 · Zamma
+### 24 · Zamma
 
 | | |
 |---|---|
@@ -1959,7 +1757,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The War Board |
 | **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED · `P7` VARIANT CONFLICT |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `attributed` · öncelik C · puan 16.9 |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `attributed` · öncelik C · puan 16.7 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -1971,6 +1769,7 @@ Birincil künye (Murray 1952) engelli; ikincisi (Béart 1955) HİÇ DENENMEDİ. 
 - Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
 - Murray 1952 DENENDİ ve açılamadı
 - Béart 1955 — HİÇ denenmedi
+- FAZ 6 · MURRAY ss. 66 ve 69 AÇILDI. § 4.2.35 dörtlü alquerque tahtası üzerinde AYRI ve ZENGİN bir oyun verir: ileri-yalnız hareket, HER YÖNE sıçrama, zorunlu alma, huff ve karşı kenarda TERFİ. YAZILMADI çünkü Murray terfi etmiş taşın ALMA gücü için açıkça 'nothing is said' der — yani oyunun bitişini belirleyen taşın kuralı KAYNAKTA YOKTUR.
 
 **WHAT SOURCE WAS ATTEMPTED**
 
@@ -2016,73 +1815,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 28 · Halatafl
-
-| | |
-|---|---|
-| **GAME ID** | `halatafl` |
-| **TITLE** | Halatafl |
-| **ALTERNATE NAME(S)** | Fox game (Icelandic) |
-| **CULTURE** | Icelandic |
-| **REGION** | Northern Europe · Iceland |
-| **FAMILY** | The Hunt and the Siege |
-| **PRIMARY BLOCKER** | `P3` — RULES INCOMPLETE |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED · `P4` GAME IDENTITY UNRESOLVED |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 16.5 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Erişilebilir kaynak AÇILDI ve oyunun yalnızca ADINI verdi: Fiske 1905'te halatafl bir SÖZLÜK GÖNDERMESİDİR, kural değil. Ayrıca oyunun fox-and-geese'ten AYRI bir madde olup olmadığı çözülmemiştir — fox-and-geese ZATEN YAZILDI ve tekrar riski gerçektir.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Fiske 1905 'Stray Notes', s. 59 AÇILDI: terimin VARLIĞI doğrulandı, kural yok (source_verification.json, 2026-08-14)
-- Fiske'in kitabındaki TEK belgelenmiş tafl oyunu tablut'tur ve o yazıldı
-- Murray 1952 DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
-
-**WHAT WAS MISSING**
-
-Kural metninin tamamı ve halatafl'ın fox-and-geese'ten farkı.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma
-2. İzlanda saga/sözlük geleneğinde halatafl'ın ne olduğunu söyleyen bir çalışma
-3. KARAR MALZEMESİ: halatafl fox-and-geese'ten AYRI bir oyun mu? Ayrı değilse kapsam kaydı bir yedekle değiştirilmelidir
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**IDEAL EVIDENCE** — Bir İskandinav oyun tarihi çalışması ki halatafl ile fox-and-geese ilişkisini AÇIKÇA tartışsın.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/halatafl/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"halatafl" Icelandic fox game rules`
-- `halatafl saga reference fox and geese Iceland`
-- `Icelandic board games hnefatafl halatafl scholarship`
-
----
-
-### 29 · Ayòayò
+### 25 · Ayòayò
 
 | | |
 |---|---|
@@ -2148,7 +1881,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 30 · Mefuvha
+### 26 · Mefuvha
 
 | | |
 |---|---|
@@ -2214,6 +1947,271 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
+### 27 · Halatafl
+
+| | |
+|---|---|
+| **GAME ID** | `halatafl` |
+| **TITLE** | Halatafl |
+| **ALTERNATE NAME(S)** | Fox game (Icelandic) |
+| **CULTURE** | Icelandic |
+| **REGION** | Northern Europe · Iceland |
+| **FAMILY** | The Hunt and the Siege |
+| **PRIMARY BLOCKER** | `P3` — RULES INCOMPLETE |
+| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED · `P4` GAME IDENTITY UNRESOLVED |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 16.0 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Erişilebilir kaynak AÇILDI ve oyunun yalnızca ADINI verdi: Fiske 1905'te halatafl bir SÖZLÜK GÖNDERMESİDİR, kural değil. Ayrıca oyunun fox-and-geese'ten AYRI bir madde olup olmadığı çözülmemiştir — fox-and-geese ZATEN YAZILDI ve tekrar riski gerçektir.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Fiske 1905 'Stray Notes', s. 59 AÇILDI: terimin VARLIĞI doğrulandı, kural yok (source_verification.json, 2026-08-14)
+- Fiske'in kitabındaki TEK belgelenmiş tafl oyunu tablut'tur ve o yazıldı
+- Murray 1952 DENENDİ ve açılamadı
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
+
+**WHAT WAS MISSING**
+
+Kural metninin tamamı ve halatafl'ın fox-and-geese'ten farkı.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma
+2. İzlanda saga/sözlük geleneğinde halatafl'ın ne olduğunu söyleyen bir çalışma
+3. KARAR MALZEMESİ: halatafl fox-and-geese'ten AYRI bir oyun mu? Ayrı değilse kapsam kaydı bir yedekle değiştirilmelidir
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
+```
+
+**IDEAL EVIDENCE** — Bir İskandinav oyun tarihi çalışması ki halatafl ile fox-and-geese ilişkisini AÇIKÇA tartışsın.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/halatafl/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `"halatafl" Icelandic fox game rules`
+- `halatafl saga reference fox and geese Iceland`
+- `Icelandic board games hnefatafl halatafl scholarship`
+
+---
+
+### 28 · Ephedrismos
+
+| | |
+|---|---|
+| **GAME ID** | `ephedrismos` |
+| **TITLE** | Ephedrismos |
+| **ALTERNATE NAME(S)** | Piggyback game |
+| **CULTURE** | Ancient Greek |
+| **REGION** | Mediterranean · Greece |
+| **FAMILY** | Games Without a Board |
+| **PRIMARY BLOCKER** | `P6` — RECONSTRUCTION TOO UNCERTAIN |
+| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik C · puan 15.8 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Yeniden kurgulama BELİRSİZDİR: kaç atış yapıldığı ve taşıma mesafesi bilinmiyor; bilinenler heykel ve vazolardan çıkarılmıştır. § 13 zayıf kanıtla yazmayı yasaklar.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Pollux Onomasticon IX — denetlenebilir açık edisyon bulunamadı
+- Müze terracotta kayıtları oyunun VARLIĞINI verir, kuralını değil
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Pollux, Julius, Onomasticon, Book IX — denetlenebilir modern edisyon: E. Bethe (ed.), Pollucis Onomasticon (Leipzig: Teubner, 1900–1937)
+
+**WHAT WAS MISSING**
+
+Atış sayısı, taşıma mesafesi ve bitiş koşulu hiçbir kaynakta yok.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Pollux IX'da ephedrismos pasajı — Yunanca metin + satır numarası
+2. Oyunu bir KURAL olarak tarif eden herhangi bir antik pasaj
+3. Modern bir akademik yeniden kurgulama — belirsizlik beyanıyla birlikte
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] first move  [ ] turn order  [ ] scoring  [ ] end condition
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+RECONSTRUCTION EVIDENCE
+  [ ] reconstruction source  [ ] uncertainty statement  [ ] competing interpretation
+```
+
+**IDEAL EVIDENCE** — Bir klasik filoloji çalışması ya da müze sergi künyesi ki hem pasajı hem ikonografiyi tartışsın ve NE BİLİNMEDİĞİNİ söylesin.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/ephedrismos/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `"ephedrismos" Greek game reconstruction`
+- `Pollux Onomasticon IX games Bethe edition`
+
+---
+
+### 29 · Lagori
+
+| | |
+|---|---|
+| **GAME ID** | `lagori` |
+| **TITLE** | Lagori |
+| **ALTERNATE NAME(S)** | Pittu, Seven Stones, Lingocha |
+| **CULTURE** | Kannada |
+| **REGION** | South Asia · India (widespread) |
+| **FAMILY** | Games Without a Board |
+| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
+| **SECONDARY BLOCKERS** | — |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 15.8 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Dönem birinci-el kaydı ARANDI ve BULUNAMADI. Hiçbir kural iddiası doğrulanmamıştır.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- archive.org tam metin + katalog taraması (2026-08-14)
+- Thurston 1906 · Ethnographic Notes in Southern India tarandı — oyun bölümü yok
+- archive.org 1850–1930 başlık taraması sonuç vermedi
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Kaydın KENDİSİ bulunamayan oyunlar — arama görevi kurucuya aittir
+
+**WHAT WAS MISSING**
+
+Kannada/Karnataka bağlamında oyunu KURAL seviyesinde veren dönem kaydı.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. 20. yy başı bir Güney Hindistan saha kaydı ya da folklor derlemesi
+2. Kannada dilinde bir çocuk oyunları derlemesi
+3. İkinci bağımsız künye
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+```
+
+**IDEAL EVIDENCE** — Dönem etnografyası, sayfa-doğrulanmış, Kannada/Karnataka atfıyla.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/lagori/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `"lagori" OR "pittu" OR "lingocha" Karnataka game ethnography`
+- `seven stones game South India folklore 1900s archive`
+
+---
+
+### 30 · Myinda
+
+| | |
+|---|---|
+| **GAME ID** | `myinda` |
+| **TITLE** | Myinda |
+| **ALTERNATE NAME(S)** | Blind man's buff (Greek), Muinda |
+| **CULTURE** | Ancient Greek |
+| **REGION** | Mediterranean · Greece |
+| **FAMILY** | Games Without a Board |
+| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
+| **SECONDARY BLOCKERS** | `P5` CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 15.8 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Elde açılabilir tek kayıt Gomme'un İNGİLİZ 'Blind Man's Buff' maddesidir ve bu bir KÜLTÜR TUZAĞIDIR: Antik Yunan maddesini İngiliz kaydından yazmak kitabın kültür künyesini yalanlar.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Gomme 1894 cilt I AÇILDI: 'Blind Man's Buff' İNGİLİZ oyunudur — kullanılmadı (Batch 4 kaynak avı bunu açıkça kaydetti)
+- Pollux Onomasticon IX — denetlenebilir açık edisyon bulunamadı
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Pollux, Julius, Onomasticon, Book IX — denetlenebilir modern edisyon: E. Bethe (ed.), Pollucis Onomasticon (Leipzig: Teubner, 1900–1937)
+
+**WHAT WAS MISSING**
+
+Antik Yunan biçimini KURAL seviyesinde veren bir kaynak.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Pollux IX'da myinda/muinda pasajı — Yunanca metin + satır numarası + çeviri
+2. Oyunun Yunan biçimini tarif eden başka bir antik pasaj ya da akademik çalışma
+3. Yunan biçimi ile İngiliz biçimi arasındaki farkı söyleyen bir kaynak
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
+```
+
+**IDEAL EVIDENCE** — Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/myinda/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `"myinda" OR "muinda" Greek game Pollux`
+- `ancient Greek blind man's buff game evidence`
+
+---
+
 ### 31 · Makruk
 
 | | |
@@ -2226,7 +2224,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The War Board |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | `P3` RULES INCOMPLETE |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 15.9 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 15.7 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -2295,7 +2293,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The War Board |
 | **PRIMARY BLOCKER** | `P5` — CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED · `P4` GAME IDENTITY UNRESOLVED |
-| **CURRENT STATUS** | `UNRESOLVED` · kısıt taraması: `open` · öncelik D · puan 15.9 |
+| **CURRENT STATUS** | `UNRESOLVED` · kısıt taraması: `open` · öncelik D · puan 15.7 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -2351,206 +2349,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 33 · Ephedrismos
-
-| | |
-|---|---|
-| **GAME ID** | `ephedrismos` |
-| **TITLE** | Ephedrismos |
-| **ALTERNATE NAME(S)** | Piggyback game |
-| **CULTURE** | Ancient Greek |
-| **REGION** | Mediterranean · Greece |
-| **FAMILY** | Games Without a Board |
-| **PRIMARY BLOCKER** | `P6` — RECONSTRUCTION TOO UNCERTAIN |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik C · puan 15.8 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Yeniden kurgulama BELİRSİZDİR: kaç atış yapıldığı ve taşıma mesafesi bilinmiyor; bilinenler heykel ve vazolardan çıkarılmıştır. § 13 zayıf kanıtla yazmayı yasaklar.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Pollux Onomasticon IX — denetlenebilir açık edisyon bulunamadı
-- Müze terracotta kayıtları oyunun VARLIĞINI verir, kuralını değil
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Pollux, Julius, Onomasticon, Book IX — denetlenebilir modern edisyon: E. Bethe (ed.), Pollucis Onomasticon (Leipzig: Teubner, 1900–1937)
-
-**WHAT WAS MISSING**
-
-Atış sayısı, taşıma mesafesi ve bitiş koşulu hiçbir kaynakta yok.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Pollux IX'da ephedrismos pasajı — Yunanca metin + satır numarası
-2. Oyunu bir KURAL olarak tarif eden herhangi bir antik pasaj
-3. Modern bir akademik yeniden kurgulama — belirsizlik beyanıyla birlikte
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] first move  [ ] turn order  [ ] scoring  [ ] end condition
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-RECONSTRUCTION EVIDENCE
-  [ ] reconstruction source  [ ] uncertainty statement  [ ] competing interpretation
-```
-
-**IDEAL EVIDENCE** — Bir klasik filoloji çalışması ya da müze sergi künyesi ki hem pasajı hem ikonografiyi tartışsın ve NE BİLİNMEDİĞİNİ söylesin.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/ephedrismos/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"ephedrismos" Greek game reconstruction`
-- `Pollux Onomasticon IX games Bethe edition`
-
----
-
-### 34 · Lagori
-
-| | |
-|---|---|
-| **GAME ID** | `lagori` |
-| **TITLE** | Lagori |
-| **ALTERNATE NAME(S)** | Pittu, Seven Stones, Lingocha |
-| **CULTURE** | Kannada |
-| **REGION** | South Asia · India (widespread) |
-| **FAMILY** | Games Without a Board |
-| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
-| **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 15.8 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Dönem birinci-el kaydı ARANDI ve BULUNAMADI. Hiçbir kural iddiası doğrulanmamıştır.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- archive.org tam metin + katalog taraması (2026-08-14)
-- Thurston 1906 · Ethnographic Notes in Southern India tarandı — oyun bölümü yok
-- archive.org 1850–1930 başlık taraması sonuç vermedi
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Kaydın KENDİSİ bulunamayan oyunlar — arama görevi kurucuya aittir
-
-**WHAT WAS MISSING**
-
-Kannada/Karnataka bağlamında oyunu KURAL seviyesinde veren dönem kaydı.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. 20. yy başı bir Güney Hindistan saha kaydı ya da folklor derlemesi
-2. Kannada dilinde bir çocuk oyunları derlemesi
-3. İkinci bağımsız künye
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — Dönem etnografyası, sayfa-doğrulanmış, Kannada/Karnataka atfıyla.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/lagori/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"lagori" OR "pittu" OR "lingocha" Karnataka game ethnography`
-- `seven stones game South India folklore 1900s archive`
-
----
-
-### 35 · Myinda
-
-| | |
-|---|---|
-| **GAME ID** | `myinda` |
-| **TITLE** | Myinda |
-| **ALTERNATE NAME(S)** | Blind man's buff (Greek), Muinda |
-| **CULTURE** | Ancient Greek |
-| **REGION** | Mediterranean · Greece |
-| **FAMILY** | Games Without a Board |
-| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
-| **SECONDARY BLOCKERS** | `P5` CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 15.8 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Elde açılabilir tek kayıt Gomme'un İNGİLİZ 'Blind Man's Buff' maddesidir ve bu bir KÜLTÜR TUZAĞIDIR: Antik Yunan maddesini İngiliz kaydından yazmak kitabın kültür künyesini yalanlar.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Gomme 1894 cilt I AÇILDI: 'Blind Man's Buff' İNGİLİZ oyunudur — kullanılmadı (Batch 4 kaynak avı bunu açıkça kaydetti)
-- Pollux Onomasticon IX — denetlenebilir açık edisyon bulunamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Pollux, Julius, Onomasticon, Book IX — denetlenebilir modern edisyon: E. Bethe (ed.), Pollucis Onomasticon (Leipzig: Teubner, 1900–1937)
-
-**WHAT WAS MISSING**
-
-Antik Yunan biçimini KURAL seviyesinde veren bir kaynak.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Pollux IX'da myinda/muinda pasajı — Yunanca metin + satır numarası + çeviri
-2. Oyunun Yunan biçimini tarif eden başka bir antik pasaj ya da akademik çalışma
-3. Yunan biçimi ile İngiliz biçimi arasındaki farkı söyleyen bir kaynak
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**IDEAL EVIDENCE** — Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/myinda/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"myinda" OR "muinda" Greek game Pollux`
-- `ancient Greek blind man's buff game evidence`
-
----
-
-### 36 · Twelve Men's Morris
+### 33 · Twelve Men's Morris
 
 | | |
 |---|---|
@@ -2562,7 +2361,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Line and the Territory |
 | **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
 | **SECONDARY BLOCKERS** | `P3` RULES INCOMPLETE · `P7` VARIANT CONFLICT |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 15.6 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 15.4 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -2574,6 +2373,7 @@ Erişilebilir kaynak AÇILDI ve YALNIZCA dokuz taşlı biçimi verdi — o biçi
 - Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
 - Gomme 1894 cilt I § Nine Men's Morris AÇILDI: dokuz taşlı biçim var (yazıldı), ON İKİ taşlı biçim için ayrı kayıt YOK (Batch 4 kaynak avı)
 - Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı
+- FAZ 6 · MURRAY s. 43 AÇILDI ve KURAL SETİ TAMDIR. YAZILMADI: madde zaten `nine-mens-morris`in 'Twelve men' VARYANTI olarak basılıdır. Envanterin kendi şerhi ve Faz 4'ün diyagram altyazısı aynı kararı veriyordu. Engel bir KAYNAK sorunu değil, bir TEKRAR sorunudur.
 
 **WHAT SOURCE WAS ATTEMPTED**
 
@@ -2617,76 +2417,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 37 · Ludus Duodecim Scriptorum
-
-| | |
-|---|---|
-| **GAME ID** | `ludus-duodecim-scriptorum` |
-| **TITLE** | Ludus Duodecim Scriptorum |
-| **ALTERNATE NAME(S)** | XII scripta, Twelve-line game |
-| **CULTURE** | Roman |
-| **REGION** | Mediterranean · Roman Empire |
-| **FAMILY** | The Race Home |
-| **PRIMARY BLOCKER** | `P6` — RECONSTRUCTION TOO UNCERTAIN |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 14.9 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Yeniden kurgulama BELİRSİZDİR: taşların iz üzerindeki YÖNÜ ve başlangıç yerleşimi kesin bilinmiyor. Tahta yazıtları kural değil, SÖZ OYUNUDUR — yani en çok bulunan kanıt en az kural taşıyan kanıttır.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Murray 1952 DENENDİ ve açılamadı
-- Schädler · Board Game Studies — HİÇ denenmedi
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Uzmanlık makaleleri — tek oyunu açan dar künyeler
-- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
-
-**WHAT WAS MISSING**
-
-İz yönü, başlangıç yerleşimi ve alma kuralı — hiçbiri kesin değil.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması
-2. XII scripta için önerilmiş yeniden kurgulamalar ve ARALARINDAKİ FARK
-3. Tabula ile XII scripta arasındaki tarihsel geçişi veren bir kaynak
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-RECONSTRUCTION EVIDENCE
-  [ ] reconstruction source  [ ] uncertainty statement  [ ] competing interpretation
-```
-
-**IDEAL EVIDENCE** — Rakip yeniden kurgulamaları KARŞILAŞTIRAN bir çalışma — kitap tek yorum seçecek ve seçtiğini beyan edecek.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `Schädler ludus duodecim scriptorum reconstruction Board Game Studies`
-- `XII scripta Roman game reconstruction rules scholarship`
-
----
-
-### 38 · Kho Kho
+### 34 · Kho Kho
 
 | | |
 |---|---|
@@ -2751,7 +2482,76 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 39 · Luk Tsut K'i
+### 35 · Ludus Duodecim Scriptorum
+
+| | |
+|---|---|
+| **GAME ID** | `ludus-duodecim-scriptorum` |
+| **TITLE** | Ludus Duodecim Scriptorum |
+| **ALTERNATE NAME(S)** | XII scripta, Twelve-line game |
+| **CULTURE** | Roman |
+| **REGION** | Mediterranean · Roman Empire |
+| **FAMILY** | The Race Home |
+| **PRIMARY BLOCKER** | `P6` — RECONSTRUCTION TOO UNCERTAIN |
+| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 14.7 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Yeniden kurgulama BELİRSİZDİR: taşların iz üzerindeki YÖNÜ ve başlangıç yerleşimi kesin bilinmiyor. Tahta yazıtları kural değil, SÖZ OYUNUDUR — yani en çok bulunan kanıt en az kural taşıyan kanıttır.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Murray 1952 FAZ 6'DA AÇILDI (ss. 29–31) ve ÇELİŞKİLİ ÇIKTI: basılı metin taşların 'table D'den toplandığını söyler, aynı sayfadaki Fig. 16 (Ostia levhası) BEŞ tablo gösterir (A·B·C·D·E). İzin SON çeyreği sayfadan çıkarılamıyor.
+- Schädler · Board Game Studies — HİÇ denenmedi
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Uzmanlık makaleleri — tek oyunu açan dar künyeler
+- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
+
+**WHAT WAS MISSING**
+
+İzin son çeyreği (nereden toplanır) — Murray'in metni ve şekli çelişiyor. Başlangıç yerleşimi ve alma kuralı Murray s. 31'de VARDIR.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması
+2. XII scripta için önerilmiş yeniden kurgulamalar ve ARALARINDAKİ FARK
+3. Tabula ile XII scripta arasındaki tarihsel geçişi veren bir kaynak
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+RECONSTRUCTION EVIDENCE
+  [ ] reconstruction source  [ ] uncertainty statement  [ ] competing interpretation
+```
+
+**IDEAL EVIDENCE** — Rakip yeniden kurgulamaları KARŞILAŞTIRAN bir çalışma — kitap tek yorum seçecek ve seçtiğini beyan edecek.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `Schädler ludus duodecim scriptorum reconstruction Board Game Studies`
+- `XII scripta Roman game reconstruction rules scholarship`
+
+---
+
+### 36 · Luk Tsut K'i
 
 | | |
 |---|---|
@@ -2763,7 +2563,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Line and the Territory |
 | **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 14.6 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 14.4 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -2775,6 +2575,7 @@ Elde bulunan derlemelerde KULLANILABİLİR isabet yok. Culin 1895 Kore cildidir 
 - Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
 - Culin 1895 · Korean Games tarandı — Kanton biçimi için kullanılabilir kural seti bulunamadı
 - Murray 1952 DENENDİ ve açılamadı
+- FAZ 6 · MURRAY s. 42 AÇILDI: § 3.3.13 oyunun TARİHİNİ verir (Konfüçyüs dönemi, Swei hanedanı, kiu kung adı) ama oyuna ÖZEL kural vermez; § 3.3'ün ortak kurallarına havale eder. Kitabın beşinci üç-taş oyunu olurdu ve ayırt edici bir kuralı YOK.
 
 **WHAT SOURCE WAS ATTEMPTED**
 
@@ -2817,7 +2618,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 40 · Terni Lapilli
+### 37 · Terni Lapilli
 
 | | |
 |---|---|
@@ -2829,7 +2630,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 | **FAMILY** | The Line and the Territory |
 | **PRIMARY BLOCKER** | `P6` — RECONSTRUCTION TOO UNCERTAIN |
 | **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED · `P4` GAME IDENTITY UNRESOLVED |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 14.6 |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik E · puan 14.4 |
 
 **WHY THE AGENT CANNOT WRITE IT**
 
@@ -2886,7 +2687,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 41 · Mahjong
+### 38 · Mahjong
 
 | | |
 |---|---|

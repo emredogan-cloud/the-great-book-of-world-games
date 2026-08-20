@@ -1,1683 +1,1683 @@
 {
-  "$comment": [
-    "AİLE IV · territory — The Line and the Territory",
-    "DETERMİNİSTİK SINIR: alma bir HAMLE mi (war-board), yoksa bir DİZİLİŞİN",
-    "SONUCU mu (territory)? Değirmen oyunları bu ölçüt sayesinde buraya girer."
-  ],
-  "family": "territory",
-  "games": [
+ "$comment": [
+  "AİLE IV · territory — The Line and the Territory",
+  "DETERMİNİSTİK SINIR: alma bir HAMLE mi (war-board), yoksa bir DİZİLİŞİN",
+  "SONUCU mu (territory)? Değirmen oyunları bu ölçüt sayesinde buraya girer."
+ ],
+ "family": "territory",
+ "games": [
+  {
+   "gameId": "go",
+   "name": "Go",
+   "altNames": [
+    "Weiqi",
+    "Baduk",
+    "Igo"
+   ],
+   "culture": "Han Chinese",
+   "region": "East Asia",
+   "countryOrArea": "China · Korea · Japan",
+   "period": "referred to in Chinese texts from the 1st millennium BCE; continuous play to the present",
+   "family": "territory",
+   "taxonomyRationale": "Kazanma koşulu kuşatılan ALANDIR; taş alma, kuşatmanın sonucudur, seçilen bir hamle değildir.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "page-verified",
+   "sources": [
     {
-      "gameId": "go",
-      "name": "Go",
-      "altNames": [
-        "Weiqi",
-        "Baduk",
-        "Igo"
-      ],
-      "culture": "Han Chinese",
-      "region": "East Asia",
-      "countryOrArea": "China · Korea · Japan",
-      "period": "referred to in Chinese texts from the 1st millennium BCE; continuous play to the present",
-      "family": "territory",
-      "taxonomyRationale": "Kazanma koşulu kuşatılan ALANDIR; taş alma, kuşatmanın sonucudur, seçilen bir hamle değildir.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "page-verified",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        },
-        {
-          "ref": "Shotwell, Peter, Go! More Than a Game (Boston: Tuttle, 2003)",
-          "type": "book"
-        },
-        {
-          "ref": "Falkener, Edward, Games Ancient and Oriental and How to Play Them (London: Longmans, Green & Co., 1892)",
-          "type": "book",
-          "locator": "Böl. XXIII 'Wei-K'i and Go', ss. 239–240"
-        },
-        {
-          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
-          "type": "ethnography",
-          "locator": "§ LXXV 'Pa-tok — Pebble Game', ss. 91–92",
-          "note": "Faz 2 sayfa doğrulaması: Falkener'dan BAĞIMSIZ ikinci doğrulama. Kore (Pa-tok) · Çin (Wei ch'i) · Japonya (Go) aynı oyundur ve 19×19 = 361 kesişim burada da doğrulanmıştır."
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Ko kuralı döngüyü keser; kitap ko'yu bir kural olarak değil, bir SORUNUN ÇÖZÜMÜ olarak anlatır."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 20,
-        "max": 60
-      },
-      "ageMinEstimate": 8,
-      "materialsHint": [
-        "9×9 veya 19×19 kesişimli tahta",
-        "siyah ve beyaz taşlar"
-      ],
-      "substitutionHint": [
-        "kâğıda çizilmiş 9×9 ızgara",
-        "iki renk düğme"
-      ],
-      "childSuitable": true,
-      "supervision": "none",
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram",
-        "setup-illustration",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 5,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 5,
-        "explain": 3,
-        "visual": 5,
-        "play": 5
-      },
-      "unresolvedQuestions": [
-        "Kitap 9×9 mu 19×19 mu basacak? 650 kelimede 19×19 öğretilemez; 9×9 seçimi editoryaldir ve gerekçesi yazılmalıdır."
-      ],
-      "adaptationNotes": "Kitap 9×9 tahtayı seçer: bir akşamda öğrenilip bitirilebilir ve kuralın tamamı değişmeden kalır. Bu bir kolaylaştırma değil, ÖLÇEK seçimidir ve prozada söylenir.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
     },
     {
-      "gameId": "gomoku",
-      "name": "Gomoku",
-      "altNames": [
-        "Five in a Row",
-        "Gobang"
-      ],
-      "culture": "Japanese",
-      "region": "East Asia",
-      "countryOrArea": "Japan",
-      "period": "documented from the 19th century; earlier Chinese antecedents likely",
-      "family": "territory",
-      "taxonomyRationale": "Kazanma koşulu beş taşlık bir HİZADIR; alma yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
-          "type": "ethnography"
-        },
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 20
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "kesişimli ızgara",
-        "iki renk taş"
-      ],
-      "substitutionHint": [
-        "kareli defter kâğıdı ve iki kalem"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram"
-      ],
-      "scores": {
-        "source": 3,
-        "playability": 5,
-        "cultural": 3,
-        "access": 5,
-        "distinct": 3,
-        "explain": 5,
-        "visual": 3,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "İlk oynayanın kazanma avantajı bilinmektedir; kitap bir dengeleme kuralı basmalı ve bunun modern bir düzeltme olduğunu söylemelidir."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book",
+     "locator": "§ 4.7.1, ss. 89–91"
     },
     {
-      "gameId": "nine-mens-morris",
-      "name": "Nine Men's Morris",
-      "altNames": [
-        "Merels",
-        "Mühle",
-        "Dokuz Taş"
-      ],
-      "culture": "Medieval European",
-      "region": "Europe",
-      "countryOrArea": "Europe (widespread)",
-      "period": "boards cut into cathedral cloisters from the medieval period; a Roman antecedent is disputed",
-      "family": "territory",
-      "taxonomyRationale": "Hiçbir tur 'şu taşı al' hamlesi değildir: değirmen kurulur ve alma ondan DOĞAR. Ölçüt bu yüzden territory der.",
-      "secondaryFamily": "war-board",
-      "status": "researched",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        },
-        {
-          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography",
-          "locator": "'Nine Men's Morris', cilt I, ss. 414–417"
-        },
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "İki oyuncu da 'uçma' aşamasındayken döngü olur; kitap tekrar eden konumu berabere sayar."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "üç iç içe kare ve bağlantı çizgileri",
-        "9 + 9 taş"
-      ],
-      "substitutionHint": [
-        "kâğıda çizilmiş tahta",
-        "düğme veya bozuk para"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram",
-        "setup-illustration",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 5,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 4,
-        "explain": 5,
-        "visual": 5,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "Kurna Tapınağı'ndaki tahta çiziminin MÖ 1400'e tarihlenmesi yaygın olarak tekrarlanır ama TARİHLENDİRİLEMEZ; kitap bu iddiayı basmamalıdır."
-      ],
-      "culturalNotes": "Shakespeare'in Bir Yaz Gecesi Rüyası'nda geçen 'the nine men's morris is fill'd up with mud' dizesi, oyunun 16. yüzyıl İngiltere'sinde açık havada oynandığının kanıtıdır.",
-      "editorialStatus": "shortlisted",
-      "playtestStatus": "scheduled"
+     "ref": "Shotwell, Peter, Go! More Than a Game (Boston: Tuttle, 2003)",
+     "type": "book"
     },
     {
-      "gameId": "twelve-mens-morris",
-      "name": "Twelve Men's Morris",
-      "altNames": [
-        "Morabaraba-type morris",
-        "Larger merels"
-      ],
-      "culture": "Medieval European",
-      "region": "Europe",
-      "countryOrArea": "Europe (widespread)",
-      "period": "boards with diagonals recorded from the medieval period",
-      "family": "territory",
-      "taxonomyRationale": "Dokuz Taş'ın çapraz çizgili biçimi; alma yine değirmenin sonucudur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        },
-        {
-          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Dokuz Taş ile aynı kural."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 7,
-      "materialsHint": [
-        "çapraz çizgili morris tahtası",
-        "12 + 12 taş"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 3,
-        "access": 5,
-        "distinct": 2,
-        "explain": 5,
-        "visual": 3,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "Dokuz Taş maddesinin içinde varyant kutusu olarak mı verilmeli? Ayrı madde tekrar riski taşır."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+     "ref": "Falkener, Edward, Games Ancient and Oriental and How to Play Them (London: Longmans, Green & Co., 1892)",
+     "type": "book",
+     "locator": "Böl. XXIII 'Wei-K'i and Go', ss. 239–240"
     },
     {
-      "gameId": "terni-lapilli",
-      "name": "Terni Lapilli",
-      "altNames": [
-        "Three-stone game (Roman)"
-      ],
-      "culture": "Roman",
-      "region": "Mediterranean",
-      "countryOrArea": "Roman Empire",
-      "period": "boards scratched into Roman pavements; the name appears in Ovid",
-      "family": "territory",
-      "taxonomyRationale": "Üç taşlık hiza kurma; alma yoktur ve kazanma bir dizilişten doğar.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "reconstructed",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Ovid, Ars Amatoria III (reference to a three-in-a-row game)",
-          "type": "archive"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "partial",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "partial",
-        "unknownElements": [
-          "Taşların yerleştirmeden sonra kaydırılıp kaydırılmadığı kaynaklardan kesin çıkmaz."
-        ]
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "reconstructed",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 3,
-        "max": 10
-      },
-      "ageMinEstimate": 5,
-      "materialsHint": [
-        "3×3 ızgara",
-        "3 + 3 taş"
-      ],
-      "substitutionHint": [
-        "kâğıt ve düğme"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 3,
-        "playability": 4,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 3,
-        "explain": 5,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "Modern 'XOX' ile ilişkisi kesin değildir; kitap köken iddiası yapmamalı."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "tapatan",
-      "name": "Tapatan",
-      "altNames": [
-        "Three Men's Morris (Philippines)"
-      ],
-      "culture": "Tagalog",
-      "region": "Southeast Asia",
-      "countryOrArea": "Philippines",
-      "period": "recorded in 1900 fieldwork",
-      "family": "territory",
-      "taxonomyRationale": "Üç taşlık hiza kurma; taşlar yerleştirildikten sonra kaydırılır ve alma yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)",
-          "type": "journal"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Kaydırma aşamasında döngü olabilir; kitap tekrar eden konumu berabere sayar."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 3,
-        "max": 10
-      },
-      "ageMinEstimate": 5,
-      "materialsHint": [
-        "3×3 çizgili tahta",
-        "3 + 3 taş"
-      ],
-      "substitutionHint": [
-        "kâğıt",
-        "üç bozuk para ve üç düğme"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 5,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 3,
-        "explain": 5,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "picaria",
-      "name": "Picaria",
-      "altNames": [
-        "Pitarilla"
-      ],
-      "culture": "Tewa Pueblo",
-      "region": "North America",
-      "countryOrArea": "New Mexico",
-      "period": "recorded in Bureau of American Ethnology fieldwork around 1900",
-      "family": "territory",
-      "taxonomyRationale": "Üç taşlık hiza kurma; genişletilmiş ızgarada kaydırma vardır, alma yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Tewa Pueblo topluluklarına aittir. Oyun İspanyol temasından sonra kaydedilmiştir ve kökeni tartışmalıdır; kitap köken iddiası yapmadan halk adını basar.",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography",
-          "locator": "s. 797, şekil 1099–1100 (Dozier'in Santa Clara tarifi aynı sayfada)"
-        },
-        {
-          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Tekrar eden konum berabere sayılır."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 15
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "çapraz çizgili ızgara",
-        "3 + 3 taş"
-      ],
-      "substitutionHint": [
-        "kâğıt",
-        "çakıl ve mısır tanesi"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 4,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 3,
-        "explain": 5,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "Çağdaş Pueblo kaynaklı bir künye aranmalıdır."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "tant-fant",
-      "name": "Tant Fant",
-      "altNames": [
-        "Tant Fant"
-      ],
-      "culture": "Gujarati",
-      "region": "South Asia",
-      "countryOrArea": "Gujarat, India",
-      "period": "documented in 19th–20th century collections",
-      "family": "territory",
-      "taxonomyRationale": "Kendi başlangıç sırasında olmayan bir hiza kurma; alma yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "partial",
-        "verdict": "partial",
-        "unknownElements": [
-          "Berabere durumu tanımlı değil."
-        ]
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": false,
-        "terminationRisk": "loop-possible"
-      },
-      "playabilityStatus": "unresolved",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 15
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "3×3 ızgara",
-        "3 + 3 taş"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 2,
-        "playability": 3,
-        "cultural": 3,
-        "access": 5,
-        "distinct": 3,
-        "explain": 5,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "İkinci bağımsız kaynak gerekiyor."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "shisima",
-      "name": "Shisima",
-      "altNames": [
-        "Esisima"
-      ],
-      "culture": "Luhya",
-      "region": "East Africa",
-      "countryOrArea": "western Kenya",
-      "period": "documented in 20th-century collections",
-      "family": "territory",
-      "taxonomyRationale": "Sekizgen üzerinde üç taşlık hiza kurma; alma yoktur, kazanma dizilişin kendisidir.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Tekrar eden konum berabere sayılır."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 15
-      },
-      "ageMinEstimate": 5,
-      "materialsHint": [
-        "merkezli sekizgen çizim",
-        "3 + 3 taş"
-      ],
-      "substitutionHint": [
-        "kâğıda çizilmiş sekizgen",
-        "düğme"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram"
-      ],
-      "scores": {
-        "source": 2,
-        "playability": 4,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 4,
-        "explain": 5,
-        "visual": 4,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "İkinci bağımsız kaynak gerekiyor — tercihen Kenya kaynaklı."
-      ],
-      "culturalNotes": "Adı 'su kaynağı' anlamına gelir ve merkez nokta o kaynağı temsil eder; kitabın somut ayrıntı kotası için birinci sınıf bir dil detayı.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "achi",
-      "name": "Achi",
-      "altNames": [
-        "Achi (Ghana)"
-      ],
-      "culture": "Akan",
-      "region": "West Africa",
-      "countryOrArea": "Ghana",
-      "period": "documented in 20th-century collections",
-      "family": "territory",
-      "taxonomyRationale": "Üç taşlık hiza kurma; taşlar yerleştirilir sonra kaydırılır, alma yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Tekrar eden konum berabere sayılır."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 15
-      },
-      "ageMinEstimate": 5,
-      "materialsHint": [
-        "çapraz çizgili 3×3 ızgara",
-        "4 + 4 taş"
-      ],
-      "substitutionHint": [
-        "kâğıt",
-        "düğme"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 2,
-        "playability": 4,
-        "cultural": 3,
-        "access": 5,
-        "distinct": 2,
-        "explain": 5,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "İkinci bağımsız kaynak gerekiyor.",
-        "Üç-taş hiza oyunlarının sayısı bu ailede fazla; kitap en fazla dördünü basmalı."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "dara",
-      "name": "Dara",
-      "altNames": [
-        "Doki",
-        "Derrah"
-      ],
-      "culture": "Dakarkari",
-      "region": "West Africa",
-      "countryOrArea": "north-western Nigeria",
-      "period": "documented in 20th-century ethnographic literature",
-      "family": "territory",
-      "taxonomyRationale": "Üç taşlık hiza kurulunca rakip taş DÜŞER; alma bir hamle değil, dizilişin sonucudur.",
-      "secondaryFamily": "war-board",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        },
-        {
-          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 15,
-        "max": 30
-      },
-      "ageMinEstimate": 8,
-      "materialsHint": [
-        "5×6 çukur ızgarası",
-        "12 + 12 taş"
-      ],
-      "substitutionHint": [
-        "kâğıda çizilmiş ızgara",
-        "iki renk düğme"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 4,
-        "explain": 4,
-        "visual": 4,
-        "play": 4
-      },
-      "unresolvedQuestions": [],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "shax",
-      "name": "Shax",
-      "altNames": [
-        "Jare",
-        "Shantarad"
-      ],
-      "culture": "Somali",
-      "region": "Horn of Africa",
-      "countryOrArea": "Somalia · Somaliland · Djibouti",
-      "period": "documented in the 20th century; widely played today",
-      "family": "territory",
-      "taxonomyRationale": "Değirmen kurulunca taş düşer; alma dizilişin sonucudur.",
-      "secondaryFamily": "war-board",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        },
-        {
-          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Tekrar eden konum berabere sayılır."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 15,
-        "max": 35
-      },
-      "ageMinEstimate": 8,
-      "materialsHint": [
-        "morris tipi tahta",
-        "12 + 12 taş"
-      ],
-      "substitutionHint": [
-        "kâğıda çizilmiş tahta",
-        "iki renk düğme"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 3,
-        "explain": 4,
-        "visual": 4,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "Somali kaynaklı çağdaş bir künye aranmalıdır."
-      ],
-      "culturalNotes": "Shax kahvehane oyunudur ve seyirciyle oynanır; oyuna seyircinin karışması geleneğin parçasıdır — kitabın anlatacağı ender bir sosyal ayrıntı.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "morabaraba",
-      "name": "Morabaraba",
-      "altNames": [
-        "Umlabalaba",
-        "Mmela"
-      ],
-      "culture": "Sotho",
-      "region": "Southern Africa",
-      "countryOrArea": "Lesotho · South Africa",
-      "period": "documented in the 20th century; played competitively today",
-      "family": "territory",
-      "taxonomyRationale": "Çapraz çizgili morris tahtasında değirmen kurma; alma dizilişten doğar.",
-      "secondaryFamily": "war-board",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Sotho ve Zulu topluluklarında ayrı adlarla yaşayan bir oyundur; tek bir ulus adına bağlanamaz ve yerel adları korunur.",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
-          "type": "book"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Tekrar eden konum berabere sayılır."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 15,
-        "max": 30
-      },
-      "ageMinEstimate": 7,
-      "materialsHint": [
-        "çapraz çizgili morris tahtası",
-        "12 + 12 'inek'"
-      ],
-      "substitutionHint": [
-        "kâğıt",
-        "şişe kapağı"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 3,
-        "explain": 4,
-        "visual": 4,
-        "play": 4
-      },
-      "unresolvedQuestions": [],
-      "culturalNotes": "Taşlara 'inek' denir ve oyun çoban çocukların oyunu olarak anlatılır; şişe kapağıyla oynanması yaygındır ve kitabın malzeme vaadine tam oturur.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "mu-torere",
-      "name": "Mū Tōrere",
-      "altNames": [
-        "Mu Torere"
-      ],
-      "culture": "Māori",
-      "region": "Oceania",
-      "countryOrArea": "Aotearoa New Zealand",
-      "period": "recorded in the early 20th century; associated with the Ngāti Porou region",
-      "family": "territory",
-      "taxonomyRationale": "Alma YOKTUR; kazanma, rakibin hiçbir taşının hareket edememesidir — yani bir DİZİLİŞ durumudur.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Māori halkına aittir ve Elsdon Best'in kaydı bir Pākehā etnografyasıdır. Kitap oyunu te reo Māori adıyla basar, iwi bağlantısını anar ve 'Yeni Zelanda oyunu' gibi ulus temelli bir çerçeve kullanmaz.",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Best, Elsdon, Games and Pastimes of the Maori, Dominion Museum Bulletin No. 8 (Wellington, 1925)",
-          "type": "ethnography"
-        },
-        {
-          "ref": "Ascher, Marcia, 'Mu Torere: An Analysis of a Maori Game', Mathematics Magazine 60:2 (1987)",
-          "type": "journal"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Oyun kilitlenmeden sonsuza kadar sürebilir; kitap hamle sınırı koyar ve bunun modern bir ekleme olduğunu söyler."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 15
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "sekiz uçlu yıldız çizimi ve merkez",
-        "4 + 4 taş"
-      ],
-      "substitutionHint": [
-        "kâğıda çizilmiş yıldız",
-        "düğme"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram",
-        "setup-illustration",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 5,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 5,
-        "explain": 5,
-        "visual": 5,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "Çağdaş Māori kaynaklı bir künye ve mümkünse topluluk onayı aranmalıdır."
-      ],
-      "culturalNotes": "Kurallarının basitliğine rağmen matematiksel olarak incelenmiş ender geleneksel oyunlardan biridir; Ascher'ın çözümlemesi kitabın 'basit ≠ sığ' tezini kanıtlar.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "pong-hau-ki",
-      "name": "Pong Hau K'i",
-      "altNames": [
-        "Ou-moul-ko-no (Korean cognate)"
-      ],
-      "culture": "Cantonese",
-      "region": "East Asia",
-      "countryOrArea": "southern China",
-      "period": "recorded in the 1890s",
-      "family": "territory",
-      "taxonomyRationale": "Alma yoktur; kazanma rakibin hareketsiz kalmasıdır — bir konum ilişkisidir.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
-          "type": "ethnography",
-          "locator": "§ LXXVI 'Ou-moul-ko-no — Well Kono', ss. 100–101"
-        },
-        {
-          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "İki usta oyuncu arasında oyun sonsuza kadar sürer; kitap bunu bir KUSUR olarak değil, oyunun matematiksel gerçeği olarak anlatır ve hamle sınırı önerir."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 2,
-        "max": 10
-      },
-      "ageMinEstimate": 5,
-      "materialsHint": [
-        "beş noktalı küçük çizim",
-        "2 + 2 taş"
-      ],
-      "substitutionHint": [
-        "kâğıt",
-        "iki bozuk para ve iki düğme"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 5,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 4,
-        "explain": 5,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [],
-      "culturalNotes": "Kitabın en küçük oyunu: beş nokta, dört taş. Bir sayfada tamamı anlatılabilir ve çocuklar için giriş kapısıdır.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "luk-tsut-kei",
-      "name": "Luk Tsut K'i",
-      "altNames": [
-        "Six Men's Game"
-      ],
-      "culture": "Cantonese",
-      "region": "East Asia",
-      "countryOrArea": "southern China",
-      "period": "recorded in the 1890s",
-      "family": "territory",
-      "taxonomyRationale": "Hiza kurma oyunu; alma yine dizilişin sonucudur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
-          "type": "ethnography"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Küçük tahtada konum tekrarı kolaydır; kitap üç kez tekrar eden konumu berabere sayar ve bu kuralın modern bir ekleme olduğunu söyler."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 15
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "çizgili küçük tahta",
-        "6 + 6 taş"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 3,
-        "access": 5,
-        "distinct": 2,
-        "explain": 4,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "Morris ailesiyle tekrar riski yüksek."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "terhuchu",
-      "name": "Terhüchü",
-      "altNames": [
-        "Terhuchu"
-      ],
-      "culture": "Angami Naga",
-      "region": "South Asia",
-      "countryOrArea": "Nagaland, India",
-      "period": "documented in 20th-century ethnographic literature",
-      "family": "territory",
-      "taxonomyRationale": "Alquerque tipi ızgarada hiza/kuşatma; alma seçilen bir hamle değildir.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Angami Naga halkına aittir; kayıtlar sömürge dönemi idari etnografyasına dayanır ve bu bağlam görünür kılınmalıdır.",
-      "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Hutton, J. H., The Angami Nagas (London: Macmillan, 1921)",
-          "type": "ethnography"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "partial",
-        "turnLogic": "partial",
-        "objective": "known",
-        "endCondition": "unknown",
-        "verdict": "incomplete",
-        "unknownElements": [
-          "Hareket ve bitiş kuralları etnografik notta eksiktir."
-        ]
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": false,
-        "legalMoveDistinguishable": false,
-        "victoryDeterminable": false,
-        "tieDefined": false,
-        "terminationRisk": "unbounded"
-      },
-      "playabilityStatus": "unresolved",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 8,
-      "materialsHint": [
-        "ızgara çizim",
-        "taşlar"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 2,
-        "playability": 1,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 3,
-        "explain": 2,
-        "visual": 3,
-        "play": 2
-      },
-      "unresolvedQuestions": [
-        "Kural eksik; ikinci ve tercihen topluluk kaynaklı bir künye olmadan kitaba giremez."
-      ],
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "nerenchi",
-      "name": "Nerenchi",
-      "altNames": [
-        "Nerenchi Keliya"
-      ],
-      "culture": "Sinhalese",
-      "region": "South Asia",
-      "countryOrArea": "Sri Lanka",
-      "period": "recorded in early 20th-century Ceylon ethnography",
-      "family": "territory",
-      "taxonomyRationale": "Morris tipi değirmen kurma; alma dizilişin sonucudur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
-          "type": "ethnography",
-          "locator": "'The Indoor Games', ss. 577–580"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Morris ailesinin ortak kuralı uygulanır: üç kez tekrar eden konum berabere sayılır."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 15,
-        "max": 30
-      },
-      "ageMinEstimate": 7,
-      "materialsHint": [
-        "çapraz çizgili morris tahtası",
-        "12 + 12 taş"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 2,
-        "explain": 4,
-        "visual": 3,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "Morris ailesinde beşinci madde; kitap bu kümede seçici olmalı."
-      ],
-      "culturalNotes": "Parker, oyunun geleneksel olarak kadınlar arasında yaygın olduğunu kaydeder — kitabın oyuncu cinsiyeti üzerine söyleyebileceği ender belgelenmiş ayrıntılardan biri.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "nine-holes",
-      "name": "Nine Holes",
-      "altNames": [
-        "Nine Men's Morris (three-piece form)"
-      ],
-      "culture": "English",
-      "region": "Western Europe",
-      "countryOrArea": "England",
-      "period": "recorded in 16th–19th century sources",
-      "family": "territory",
-      "taxonomyRationale": "Üç taşlık hiza kurma; alma yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
-          "type": "ethnography"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Üç taşlık hiza oyunlarının ortak kuralı: tekrar eden konum berabere sayılır."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 3,
-        "max": 10
-      },
-      "ageMinEstimate": 5,
-      "materialsHint": [
-        "3×3 delik veya ızgara",
-        "3 + 3 taş"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 3,
-        "access": 5,
-        "distinct": 1,
-        "explain": 5,
-        "visual": 2,
-        "play": 2
-      },
-      "unresolvedQuestions": [
-        "Tapatan, Achi, Picaria ve Terni Lapilli ile aynı mekanik; kitapta en fazla üç üç-taş oyunu olmalı ve bu muhtemelen elenen olacaktır."
-      ],
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "renju",
-      "name": "Renju",
-      "altNames": [
-        "Professional gomoku"
-      ],
-      "culture": "Japanese",
-      "region": "East Asia",
-      "countryOrArea": "Japan",
-      "period": "codified in the late 19th century from older five-in-a-row play",
-      "family": "territory",
-      "taxonomyRationale": "Beş taşlık hiza kurma; ilk oyuncuya konan yasaklar dengeleme kurallarıdır ve hedefi değiştirmez.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        },
-        {
-          "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
-          "type": "ethnography"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 9,
-      "materialsHint": [
-        "15×15 kesişimli tahta",
-        "iki renk taş"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "move-diagram"
-      ],
-      "scores": {
-        "source": 3,
-        "playability": 4,
-        "cultural": 3,
-        "access": 4,
-        "distinct": 3,
-        "explain": 2,
-        "visual": 3,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "Yasaklı hamle listesi 650 kelimeye sığmayabilir; Gomoku maddesinin varyant kutusu daha uygun olabilir."
-      ],
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
+     "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
+     "type": "ethnography",
+     "locator": "§ LXXV 'Pa-tok — Pebble Game', ss. 91–92",
+     "note": "Faz 2 sayfa doğrulaması: Falkener'dan BAĞIMSIZ ikinci doğrulama. Kore (Pa-tok) · Çin (Wei ch'i) · Japonya (Go) aynı oyundur ve 19×19 = 361 kesişim burada da doğrulanmıştır."
     }
-  ]
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Ko kuralı döngüyü keser; kitap ko'yu bir kural olarak değil, bir SORUNUN ÇÖZÜMÜ olarak anlatır."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 20,
+    "max": 60
+   },
+   "ageMinEstimate": 8,
+   "materialsHint": [
+    "9×9 veya 19×19 kesişimli tahta",
+    "siyah ve beyaz taşlar"
+   ],
+   "substitutionHint": [
+    "kâğıda çizilmiş 9×9 ızgara",
+    "iki renk düğme"
+   ],
+   "childSuitable": true,
+   "supervision": "none",
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram",
+    "setup-illustration",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 5,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 5,
+    "explain": 3,
+    "visual": 5,
+    "play": 5
+   },
+   "unresolvedQuestions": [],
+   "adaptationNotes": "Kitap 9×9 tahtayı seçer: bir akşamda öğrenilip bitirilebilir ve kuralın tamamı değişmeden kalır. Bu bir kolaylaştırma değil, ÖLÇEK seçimidir ve prozada söylenir.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started",
+   "culturalNotes": "Murray § 4.7.1 künyeyi 'China: Wei-k'i; Korea: Patok; Japan: I-go' diye açar ve 19×19 tahtayı bir ÇİN kaydına (Chao Wu King, 970–1127) bağlar. Kapsamın HAN ÇİNLİSİ atfı böylece kaynakla desteklendi."
+  },
+  {
+   "gameId": "gomoku",
+   "name": "Gomoku",
+   "altNames": [
+    "Five in a Row",
+    "Gobang"
+   ],
+   "culture": "Japanese",
+   "region": "East Asia",
+   "countryOrArea": "Japan",
+   "period": "documented from the 19th century; earlier Chinese antecedents likely",
+   "family": "territory",
+   "taxonomyRationale": "Kazanma koşulu beş taşlık bir HİZADIR; alma yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+     "type": "ethnography"
+    },
+    {
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 20
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "kesişimli ızgara",
+    "iki renk taş"
+   ],
+   "substitutionHint": [
+    "kareli defter kâğıdı ve iki kalem"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram"
+   ],
+   "scores": {
+    "source": 3,
+    "playability": 5,
+    "cultural": 3,
+    "access": 5,
+    "distinct": 3,
+    "explain": 5,
+    "visual": 3,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "İlk oynayanın kazanma avantajı bilinmektedir; kitap bir dengeleme kuralı basmalı ve bunun modern bir düzeltme olduğunu söylemelidir."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "nine-mens-morris",
+   "name": "Nine Men's Morris",
+   "altNames": [
+    "Merels",
+    "Mühle",
+    "Dokuz Taş"
+   ],
+   "culture": "Medieval European",
+   "region": "Europe",
+   "countryOrArea": "Europe (widespread)",
+   "period": "boards cut into cathedral cloisters from the medieval period; a Roman antecedent is disputed",
+   "family": "territory",
+   "taxonomyRationale": "Hiçbir tur 'şu taşı al' hamlesi değildir: değirmen kurulur ve alma ondan DOĞAR. Ölçüt bu yüzden territory der.",
+   "secondaryFamily": "war-board",
+   "status": "researched",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    },
+    {
+     "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
+     "type": "ethnography",
+     "locator": "'Nine Men's Morris', cilt I, ss. 414–417"
+    },
+    {
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "İki oyuncu da 'uçma' aşamasındayken döngü olur; kitap tekrar eden konumu berabere sayar."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "üç iç içe kare ve bağlantı çizgileri",
+    "9 + 9 taş"
+   ],
+   "substitutionHint": [
+    "kâğıda çizilmiş tahta",
+    "düğme veya bozuk para"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram",
+    "setup-illustration",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 5,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 4,
+    "explain": 5,
+    "visual": 5,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "Kurna Tapınağı'ndaki tahta çiziminin MÖ 1400'e tarihlenmesi yaygın olarak tekrarlanır ama TARİHLENDİRİLEMEZ; kitap bu iddiayı basmamalıdır."
+   ],
+   "culturalNotes": "Shakespeare'in Bir Yaz Gecesi Rüyası'nda geçen 'the nine men's morris is fill'd up with mud' dizesi, oyunun 16. yüzyıl İngiltere'sinde açık havada oynandığının kanıtıdır.",
+   "editorialStatus": "shortlisted",
+   "playtestStatus": "scheduled"
+  },
+  {
+   "gameId": "twelve-mens-morris",
+   "name": "Twelve Men's Morris",
+   "altNames": [
+    "Morabaraba-type morris",
+    "Larger merels"
+   ],
+   "culture": "Medieval European",
+   "region": "Europe",
+   "countryOrArea": "Europe (widespread)",
+   "period": "boards with diagonals recorded from the medieval period",
+   "family": "territory",
+   "taxonomyRationale": "Dokuz Taş'ın çapraz çizgili biçimi; alma yine değirmenin sonucudur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    },
+    {
+     "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Dokuz Taş ile aynı kural."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 7,
+   "materialsHint": [
+    "çapraz çizgili morris tahtası",
+    "12 + 12 taş"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 3,
+    "access": 5,
+    "distinct": 2,
+    "explain": 5,
+    "visual": 3,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "Dokuz Taş maddesinin içinde varyant kutusu olarak mı verilmeli? Ayrı madde tekrar riski taşır."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "terni-lapilli",
+   "name": "Terni Lapilli",
+   "altNames": [
+    "Three-stone game (Roman)"
+   ],
+   "culture": "Roman",
+   "region": "Mediterranean",
+   "countryOrArea": "Roman Empire",
+   "period": "boards scratched into Roman pavements; the name appears in Ovid",
+   "family": "territory",
+   "taxonomyRationale": "Üç taşlık hiza kurma; alma yoktur ve kazanma bir dizilişten doğar.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "reconstructed",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Ovid, Ars Amatoria III (reference to a three-in-a-row game)",
+     "type": "archive"
+    },
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "partial",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "partial",
+    "unknownElements": [
+     "Taşların yerleştirmeden sonra kaydırılıp kaydırılmadığı kaynaklardan kesin çıkmaz."
+    ]
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "reconstructed",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 3,
+    "max": 10
+   },
+   "ageMinEstimate": 5,
+   "materialsHint": [
+    "3×3 ızgara",
+    "3 + 3 taş"
+   ],
+   "substitutionHint": [
+    "kâğıt ve düğme"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 3,
+    "playability": 4,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 3,
+    "explain": 5,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "Modern 'XOX' ile ilişkisi kesin değildir; kitap köken iddiası yapmamalı."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "tapatan",
+   "name": "Tapatan",
+   "altNames": [
+    "Three Men's Morris (Philippines)"
+   ],
+   "culture": "Tagalog",
+   "region": "Southeast Asia",
+   "countryOrArea": "Philippines",
+   "period": "recorded in 1900 fieldwork",
+   "family": "territory",
+   "taxonomyRationale": "Üç taşlık hiza kurma; taşlar yerleştirildikten sonra kaydırılır ve alma yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)",
+     "type": "journal"
+    },
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Kaydırma aşamasında döngü olabilir; kitap tekrar eden konumu berabere sayar."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 3,
+    "max": 10
+   },
+   "ageMinEstimate": 5,
+   "materialsHint": [
+    "3×3 çizgili tahta",
+    "3 + 3 taş"
+   ],
+   "substitutionHint": [
+    "kâğıt",
+    "üç bozuk para ve üç düğme"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 5,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 3,
+    "explain": 5,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "picaria",
+   "name": "Picaria",
+   "altNames": [
+    "Pitarilla"
+   ],
+   "culture": "Tewa Pueblo",
+   "region": "North America",
+   "countryOrArea": "New Mexico",
+   "period": "recorded in Bureau of American Ethnology fieldwork around 1900",
+   "family": "territory",
+   "taxonomyRationale": "Üç taşlık hiza kurma; genişletilmiş ızgarada kaydırma vardır, alma yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Tewa Pueblo topluluklarına aittir. Oyun İspanyol temasından sonra kaydedilmiştir ve kökeni tartışmalıdır; kitap köken iddiası yapmadan halk adını basar.",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
+     "type": "ethnography",
+     "locator": "s. 797, şekil 1099–1100 (Dozier'in Santa Clara tarifi aynı sayfada)"
+    },
+    {
+     "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Tekrar eden konum berabere sayılır."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 15
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "çapraz çizgili ızgara",
+    "3 + 3 taş"
+   ],
+   "substitutionHint": [
+    "kâğıt",
+    "çakıl ve mısır tanesi"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 4,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 3,
+    "explain": 5,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "Çağdaş Pueblo kaynaklı bir künye aranmalıdır."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "tant-fant",
+   "name": "Tant Fant",
+   "altNames": [
+    "Tant Fant"
+   ],
+   "culture": "Gujarati",
+   "region": "South Asia",
+   "countryOrArea": "Gujarat, India",
+   "period": "documented in 19th–20th century collections",
+   "family": "territory",
+   "taxonomyRationale": "Kendi başlangıç sırasında olmayan bir hiza kurma; alma yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "low",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "partial",
+    "verdict": "partial",
+    "unknownElements": [
+     "Berabere durumu tanımlı değil."
+    ]
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": false,
+    "terminationRisk": "loop-possible"
+   },
+   "playabilityStatus": "unresolved",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 15
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "3×3 ızgara",
+    "3 + 3 taş"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 2,
+    "playability": 3,
+    "cultural": 3,
+    "access": 5,
+    "distinct": 3,
+    "explain": 5,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "İkinci bağımsız kaynak gerekiyor."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "shisima",
+   "name": "Shisima",
+   "altNames": [
+    "Esisima"
+   ],
+   "culture": "Luhya",
+   "region": "East Africa",
+   "countryOrArea": "western Kenya",
+   "period": "documented in 20th-century collections",
+   "family": "territory",
+   "taxonomyRationale": "Sekizgen üzerinde üç taşlık hiza kurma; alma yoktur, kazanma dizilişin kendisidir.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "low",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Tekrar eden konum berabere sayılır."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 15
+   },
+   "ageMinEstimate": 5,
+   "materialsHint": [
+    "merkezli sekizgen çizim",
+    "3 + 3 taş"
+   ],
+   "substitutionHint": [
+    "kâğıda çizilmiş sekizgen",
+    "düğme"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram"
+   ],
+   "scores": {
+    "source": 2,
+    "playability": 4,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 4,
+    "explain": 5,
+    "visual": 4,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "İkinci bağımsız kaynak gerekiyor — tercihen Kenya kaynaklı."
+   ],
+   "culturalNotes": "Adı 'su kaynağı' anlamına gelir ve merkez nokta o kaynağı temsil eder; kitabın somut ayrıntı kotası için birinci sınıf bir dil detayı.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "achi",
+   "name": "Achi",
+   "altNames": [
+    "Achi (Ghana)"
+   ],
+   "culture": "Akan",
+   "region": "West Africa",
+   "countryOrArea": "Ghana",
+   "period": "documented in 20th-century collections",
+   "family": "territory",
+   "taxonomyRationale": "Üç taşlık hiza kurma; taşlar yerleştirilir sonra kaydırılır, alma yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "low",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Tekrar eden konum berabere sayılır."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 15
+   },
+   "ageMinEstimate": 5,
+   "materialsHint": [
+    "çapraz çizgili 3×3 ızgara",
+    "4 + 4 taş"
+   ],
+   "substitutionHint": [
+    "kâğıt",
+    "düğme"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 2,
+    "playability": 4,
+    "cultural": 3,
+    "access": 5,
+    "distinct": 2,
+    "explain": 5,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "İkinci bağımsız kaynak gerekiyor.",
+    "Üç-taş hiza oyunlarının sayısı bu ailede fazla; kitap en fazla dördünü basmalı."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "dara",
+   "name": "Dara",
+   "altNames": [
+    "Doki",
+    "Derrah"
+   ],
+   "culture": "Dakarkari",
+   "region": "West Africa",
+   "countryOrArea": "north-western Nigeria",
+   "period": "documented in 20th-century ethnographic literature",
+   "family": "territory",
+   "taxonomyRationale": "Üç taşlık hiza kurulunca rakip taş DÜŞER; alma bir hamle değil, dizilişin sonucudur.",
+   "secondaryFamily": "war-board",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    },
+    {
+     "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 15,
+    "max": 30
+   },
+   "ageMinEstimate": 8,
+   "materialsHint": [
+    "5×6 çukur ızgarası",
+    "12 + 12 taş"
+   ],
+   "substitutionHint": [
+    "kâğıda çizilmiş ızgara",
+    "iki renk düğme"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 4,
+    "explain": 4,
+    "visual": 4,
+    "play": 4
+   },
+   "unresolvedQuestions": [],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "shax",
+   "name": "Shax",
+   "altNames": [
+    "Jare",
+    "Shantarad"
+   ],
+   "culture": "Somali",
+   "region": "Horn of Africa",
+   "countryOrArea": "Somalia · Somaliland · Djibouti",
+   "period": "documented in the 20th century; widely played today",
+   "family": "territory",
+   "taxonomyRationale": "Değirmen kurulunca taş düşer; alma dizilişin sonucudur.",
+   "secondaryFamily": "war-board",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    },
+    {
+     "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Tekrar eden konum berabere sayılır."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 15,
+    "max": 35
+   },
+   "ageMinEstimate": 8,
+   "materialsHint": [
+    "morris tipi tahta",
+    "12 + 12 taş"
+   ],
+   "substitutionHint": [
+    "kâğıda çizilmiş tahta",
+    "iki renk düğme"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 3,
+    "explain": 4,
+    "visual": 4,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "Somali kaynaklı çağdaş bir künye aranmalıdır."
+   ],
+   "culturalNotes": "Shax kahvehane oyunudur ve seyirciyle oynanır; oyuna seyircinin karışması geleneğin parçasıdır — kitabın anlatacağı ender bir sosyal ayrıntı.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "morabaraba",
+   "name": "Morabaraba",
+   "altNames": [
+    "Umlabalaba",
+    "Mmela"
+   ],
+   "culture": "Sotho",
+   "region": "Southern Africa",
+   "countryOrArea": "Lesotho · South Africa",
+   "period": "documented in the 20th century; played competitively today",
+   "family": "territory",
+   "taxonomyRationale": "Çapraz çizgili morris tahtasında değirmen kurma; alma dizilişten doğar.",
+   "secondaryFamily": "war-board",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Sotho ve Zulu topluluklarında ayrı adlarla yaşayan bir oyundur; tek bir ulus adına bağlanamaz ve yerel adları korunur.",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)",
+     "type": "book"
+    },
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Tekrar eden konum berabere sayılır."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 15,
+    "max": 30
+   },
+   "ageMinEstimate": 7,
+   "materialsHint": [
+    "çapraz çizgili morris tahtası",
+    "12 + 12 'inek'"
+   ],
+   "substitutionHint": [
+    "kâğıt",
+    "şişe kapağı"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 3,
+    "explain": 4,
+    "visual": 4,
+    "play": 4
+   },
+   "unresolvedQuestions": [],
+   "culturalNotes": "Taşlara 'inek' denir ve oyun çoban çocukların oyunu olarak anlatılır; şişe kapağıyla oynanması yaygındır ve kitabın malzeme vaadine tam oturur.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "mu-torere",
+   "name": "Mū Tōrere",
+   "altNames": [
+    "Mu Torere"
+   ],
+   "culture": "Māori",
+   "region": "Oceania",
+   "countryOrArea": "Aotearoa New Zealand",
+   "period": "recorded in the early 20th century; associated with the Ngāti Porou region",
+   "family": "territory",
+   "taxonomyRationale": "Alma YOKTUR; kazanma, rakibin hiçbir taşının hareket edememesidir — yani bir DİZİLİŞ durumudur.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Māori halkına aittir ve Elsdon Best'in kaydı bir Pākehā etnografyasıdır. Kitap oyunu te reo Māori adıyla basar, iwi bağlantısını anar ve 'Yeni Zelanda oyunu' gibi ulus temelli bir çerçeve kullanmaz.",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Best, Elsdon, Games and Pastimes of the Maori, Dominion Museum Bulletin No. 8 (Wellington, 1925)",
+     "type": "ethnography"
+    },
+    {
+     "ref": "Ascher, Marcia, 'Mu Torere: An Analysis of a Maori Game', Mathematics Magazine 60:2 (1987)",
+     "type": "journal"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Oyun kilitlenmeden sonsuza kadar sürebilir; kitap hamle sınırı koyar ve bunun modern bir ekleme olduğunu söyler."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 15
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "sekiz uçlu yıldız çizimi ve merkez",
+    "4 + 4 taş"
+   ],
+   "substitutionHint": [
+    "kâğıda çizilmiş yıldız",
+    "düğme"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram",
+    "setup-illustration",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 5,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 5,
+    "explain": 5,
+    "visual": 5,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "Çağdaş Māori kaynaklı bir künye ve mümkünse topluluk onayı aranmalıdır."
+   ],
+   "culturalNotes": "Kurallarının basitliğine rağmen matematiksel olarak incelenmiş ender geleneksel oyunlardan biridir; Ascher'ın çözümlemesi kitabın 'basit ≠ sığ' tezini kanıtlar.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "pong-hau-ki",
+   "name": "Pong Hau K'i",
+   "altNames": [
+    "Ou-moul-ko-no (Korean cognate)"
+   ],
+   "culture": "Cantonese",
+   "region": "East Asia",
+   "countryOrArea": "southern China",
+   "period": "recorded in the 1890s",
+   "family": "territory",
+   "taxonomyRationale": "Alma yoktur; kazanma rakibin hareketsiz kalmasıdır — bir konum ilişkisidir.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+     "type": "ethnography",
+     "locator": "§ LXXVI 'Ou-moul-ko-no — Well Kono', ss. 100–101"
+    },
+    {
+     "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "İki usta oyuncu arasında oyun sonsuza kadar sürer; kitap bunu bir KUSUR olarak değil, oyunun matematiksel gerçeği olarak anlatır ve hamle sınırı önerir."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 2,
+    "max": 10
+   },
+   "ageMinEstimate": 5,
+   "materialsHint": [
+    "beş noktalı küçük çizim",
+    "2 + 2 taş"
+   ],
+   "substitutionHint": [
+    "kâğıt",
+    "iki bozuk para ve iki düğme"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 5,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 4,
+    "explain": 5,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [],
+   "culturalNotes": "Kitabın en küçük oyunu: beş nokta, dört taş. Bir sayfada tamamı anlatılabilir ve çocuklar için giriş kapısıdır.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "luk-tsut-kei",
+   "name": "Luk Tsut K'i",
+   "altNames": [
+    "Six Men's Game"
+   ],
+   "culture": "Cantonese",
+   "region": "East Asia",
+   "countryOrArea": "southern China",
+   "period": "recorded in the 1890s",
+   "family": "territory",
+   "taxonomyRationale": "Hiza kurma oyunu; alma yine dizilişin sonucudur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+     "type": "ethnography"
+    },
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Küçük tahtada konum tekrarı kolaydır; kitap üç kez tekrar eden konumu berabere sayar ve bu kuralın modern bir ekleme olduğunu söyler."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 15
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "çizgili küçük tahta",
+    "6 + 6 taş"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 3,
+    "access": 5,
+    "distinct": 2,
+    "explain": 4,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "Morris ailesiyle tekrar riski yüksek."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "terhuchu",
+   "name": "Terhüchü",
+   "altNames": [
+    "Terhuchu"
+   ],
+   "culture": "Angami Naga",
+   "region": "South Asia",
+   "countryOrArea": "Nagaland, India",
+   "period": "documented in 20th-century ethnographic literature",
+   "family": "territory",
+   "taxonomyRationale": "Alquerque tipi ızgarada hiza/kuşatma; alma seçilen bir hamle değildir.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Angami Naga halkına aittir; kayıtlar sömürge dönemi idari etnografyasına dayanır ve bu bağlam görünür kılınmalıdır.",
+   "sourceConfidence": "low",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Hutton, J. H., The Angami Nagas (London: Macmillan, 1921)",
+     "type": "ethnography"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "partial",
+    "turnLogic": "partial",
+    "objective": "known",
+    "endCondition": "unknown",
+    "verdict": "incomplete",
+    "unknownElements": [
+     "Hareket ve bitiş kuralları etnografik notta eksiktir."
+    ]
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": false,
+    "legalMoveDistinguishable": false,
+    "victoryDeterminable": false,
+    "tieDefined": false,
+    "terminationRisk": "unbounded"
+   },
+   "playabilityStatus": "unresolved",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 8,
+   "materialsHint": [
+    "ızgara çizim",
+    "taşlar"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 2,
+    "playability": 1,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 3,
+    "explain": 2,
+    "visual": 3,
+    "play": 2
+   },
+   "unresolvedQuestions": [
+    "Kural eksik; ikinci ve tercihen topluluk kaynaklı bir künye olmadan kitaba giremez."
+   ],
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "nerenchi",
+   "name": "Nerenchi",
+   "altNames": [
+    "Nerenchi Keliya"
+   ],
+   "culture": "Sinhalese",
+   "region": "South Asia",
+   "countryOrArea": "Sri Lanka",
+   "period": "recorded in early 20th-century Ceylon ethnography",
+   "family": "territory",
+   "taxonomyRationale": "Morris tipi değirmen kurma; alma dizilişin sonucudur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parker, H., Ancient Ceylon: An Account of the Aborigines and of Part of the Early Civilisation (London: Luzac, 1909)",
+     "type": "ethnography",
+     "locator": "'The Indoor Games', ss. 577–580"
+    },
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Morris ailesinin ortak kuralı uygulanır: üç kez tekrar eden konum berabere sayılır."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 15,
+    "max": 30
+   },
+   "ageMinEstimate": 7,
+   "materialsHint": [
+    "çapraz çizgili morris tahtası",
+    "12 + 12 taş"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 2,
+    "explain": 4,
+    "visual": 3,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "Morris ailesinde beşinci madde; kitap bu kümede seçici olmalı."
+   ],
+   "culturalNotes": "Parker, oyunun geleneksel olarak kadınlar arasında yaygın olduğunu kaydeder — kitabın oyuncu cinsiyeti üzerine söyleyebileceği ender belgelenmiş ayrıntılardan biri.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "nine-holes",
+   "name": "Nine Holes",
+   "altNames": [
+    "Nine Men's Morris (three-piece form)"
+   ],
+   "culture": "English",
+   "region": "Western Europe",
+   "countryOrArea": "England",
+   "period": "recorded in 16th–19th century sources",
+   "family": "territory",
+   "taxonomyRationale": "Üç taşlık hiza kurma; alma yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Gomme, Alice Bertha, The Traditional Games of England, Scotland, and Ireland (London: David Nutt, 1894–98)",
+     "type": "ethnography"
+    },
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Üç taşlık hiza oyunlarının ortak kuralı: tekrar eden konum berabere sayılır."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 3,
+    "max": 10
+   },
+   "ageMinEstimate": 5,
+   "materialsHint": [
+    "3×3 delik veya ızgara",
+    "3 + 3 taş"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 3,
+    "access": 5,
+    "distinct": 1,
+    "explain": 5,
+    "visual": 2,
+    "play": 2
+   },
+   "unresolvedQuestions": [
+    "Tapatan, Achi, Picaria ve Terni Lapilli ile aynı mekanik; kitapta en fazla üç üç-taş oyunu olmalı ve bu muhtemelen elenen olacaktır."
+   ],
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "renju",
+   "name": "Renju",
+   "altNames": [
+    "Professional gomoku"
+   ],
+   "culture": "Japanese",
+   "region": "East Asia",
+   "countryOrArea": "Japan",
+   "period": "codified in the late 19th century from older five-in-a-row play",
+   "family": "territory",
+   "taxonomyRationale": "Beş taşlık hiza kurma; ilk oyuncuya konan yasaklar dengeleme kurallarıdır ve hedefi değiştirmez.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
+    },
+    {
+     "ref": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia, 1895)",
+     "type": "ethnography"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 9,
+   "materialsHint": [
+    "15×15 kesişimli tahta",
+    "iki renk taş"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "move-diagram"
+   ],
+   "scores": {
+    "source": 3,
+    "playability": 4,
+    "cultural": 3,
+    "access": 4,
+    "distinct": 3,
+    "explain": 2,
+    "visual": 3,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "Yasaklı hamle listesi 650 kelimeye sığmayabilir; Gomoku maddesinin varyant kutusu daha uygun olabilir."
+   ],
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  }
+ ]
 }

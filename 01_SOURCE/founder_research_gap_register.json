@@ -18,27 +18,27 @@
   "version": "1.0",
   "generatedBy": "04_BUILD/build_gap_register.py",
   "scopeTarget": 100,
-  "written": 52,
-  "writableWithoutFounder": 7,
-  "founderResearchRequired": 41,
+  "written": 56,
+  "writableWithoutFounder": 6,
+  "founderResearchRequired": 38,
   "unattempted": 0,
   "statusCounts": {
-    "BLOCKED": 26,
+    "BLOCKED": 24,
     "SOURCE-PENDING": 13,
-    "UNRESOLVED": 2
+    "UNRESOLVED": 1
   },
   "blockerCounts": {
-    "P1": 18,
+    "P1": 16,
     "P2": 15,
     "P3": 2,
-    "P5": 2,
+    "P5": 1,
     "P6": 3,
     "P8": 1
   },
   "priorityCounts": {
-    "A": 16,
+    "A": 14,
     "B": 0,
-    "C": 12,
+    "C": 11,
     "D": 2,
     "E": 11
   },
@@ -52,31 +52,31 @@
     },
     "hunt-siege": {
       "target": 10,
-      "written": 5,
+      "written": 6,
       "writable": 0,
-      "blocked": 5,
-      "deficit": 5
+      "blocked": 4,
+      "deficit": 4
     },
     "race": {
       "target": 18,
-      "written": 11,
+      "written": 12,
       "writable": 2,
-      "blocked": 5,
-      "deficit": 7
+      "blocked": 4,
+      "deficit": 6
     },
     "territory": {
       "target": 17,
-      "written": 8,
+      "written": 9,
       "writable": 1,
-      "blocked": 8,
-      "deficit": 9
+      "blocked": 7,
+      "deficit": 8
     },
     "war-board": {
       "target": 21,
-      "written": 13,
-      "writable": 3,
+      "written": 14,
+      "writable": 2,
       "blocked": 5,
-      "deficit": 8
+      "deficit": 7
     },
     "chance": {
       "target": 4,
@@ -96,7 +96,6 @@
   "culturesLostIfUnresolved": [
     "Amazigh",
     "Amhara",
-    "Bengali",
     "Danish",
     "Ga",
     "German",
@@ -107,7 +106,6 @@
     "Kannada",
     "Kazakh",
     "Luhya",
-    "Malay",
     "Marathi",
     "Nama",
     "Ndyuka Maroon",
@@ -136,42 +134,23 @@
       "work": "murray-1952",
       "citation": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
       "attemptEvidence": "attempted-and-refused",
-      "unlocks": 18,
+      "unlocks": 15,
       "games": [
         "aadu-puli-attam",
-        "ashta-kashte",
         "bohnenspiel",
         "congklak",
-        "go",
         "halatafl",
         "hus",
         "ludus-duodecim-scriptorum",
         "luk-tsut-kei",
         "morabaraba",
         "nard",
-        "rimau-rimau",
         "shax",
         "sungka",
         "tapatan",
         "terni-lapilli",
         "twelve-mens-morris",
         "zamma"
-      ]
-    },
-    {
-      "work": "bell-1960",
-      "citation": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)",
-      "attemptEvidence": "attempted-and-refused",
-      "unlocks": 8,
-      "games": [
-        "aadu-puli-attam",
-        "ashta-kashte",
-        "bagh-chal",
-        "bohnenspiel",
-        "konane",
-        "len-choa",
-        "rimau-rimau",
-        "twelve-mens-morris"
       ]
     },
     {
@@ -219,6 +198,20 @@
         "gebeta",
         "ludus-duodecim-scriptorum",
         "mahjong"
+      ]
+    },
+    {
+      "work": "bell-1960",
+      "citation": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)",
+      "attemptEvidence": "attempted-and-refused",
+      "unlocks": 6,
+      "games": [
+        "aadu-puli-attam",
+        "bagh-chal",
+        "bohnenspiel",
+        "konane",
+        "len-choa",
+        "twelve-mens-morris"
       ]
     },
     {
@@ -318,45 +311,32 @@
       "games": [
         "makruk"
       ]
-    },
-    {
-      "work": "volpicelli-weiqi",
-      "citation": "Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society, N.S. XXVI (1894)",
-      "attemptEvidence": "never-attempted",
-      "unlocks": 1,
-      "games": [
-        "go"
-      ]
     }
   ],
   "writableNow": [
     {
-      "gameId": "alquerque",
-      "hit": "Fiske 1905"
-    },
-    {
       "gameId": "chaupar",
-      "hit": "Culin 1895 · 'Chausar' — ⚠ kültür tuzağı riski: isabet Culin'in KORE cildindedir, sayfa açılmadan yazılamaz"
+      "hit": "Culin 1895 · 'Chausar' — ⚠ kültür tuzağı riski: isabet Culin'in KORE cildindedir. Murray s. 134'te chaupar'a yalnızca ATIF verir, kural seti YOK. Kaynak elde değil."
     },
     {
       "gameId": "gilli-danda",
-      "hit": "Culin 1907 · 'Tipcat' — ⚠ kültür tuzağı riski: isabet İNGİLİZ/Kuzey Amerika kaydıdır, sayfa açılmadan yazılamaz"
+      "hit": "Culin 1907 · 'Tipcat' — ⚠ kültür tuzağı riski: isabet İNGİLİZ/Kuzey Amerika kaydıdır. Murray'de HİÇ geçmiyor (0 isabet). Kaynak elde değil."
     },
     {
       "gameId": "ludus-latrunculorum",
-      "hit": "Falkener 1892 — ⚠ yeniden kurgulama beyanı zorunlu"
+      "hit": "Falkener 1892 · ⛔ ÇÖZÜLEMEDİ: Murray ss. 33–35 oyunun OYNANIŞININ bilinmediğini yazar. Kaynağın kendisi 'kural yok' diyorsa yeniden kurgulama bir beyan değil bir uydurmadır."
     },
     {
       "gameId": "nine-holes",
-      "hit": "Gomme 1894"
+      "hit": "Gomme 1894 · Murray s. 39 § 3.1 TAM KURAL SETİ VERİR ve erişilebilir. YAZILMADI: envanterin kendi puanı `distinct: 1` ve kendi şerhi bu maddeyi kitabın beşinci üç-taş oyunu olarak ELENECEK aday sayıyor. Engel bir KAYNAK sorunu değil, bir EDİTORYAL karardır."
     },
     {
       "gameId": "tabula",
-      "hit": "Fiske 1905"
+      "hit": "Murray ss. 29–31 · ⛔ ÇÖZÜLEMEDİ: § 2.8.2'nin basılı metni taşların 'table D'den toplandığını söyler, ama aynı sayfadaki Fig. 16 (Ostia levhası) BEŞ tablo gösterir (A·B·C·D·E). Metin ve şekil izin SON çeyreğinde çelişir ve hangisinden toplandığı sayfadan çıkarılamaz. Tabula (§ 2.8.3) o oyunun bir sırası eksik hâlidir, yani aynı belirsizliği devralır. Bir yarış oyununun BİTİŞ çeyreği tahminle yazılamaz."
     },
     {
       "gameId": "tuknanavuhpi",
-      "hit": "Culin 1907"
+      "hit": "Culin 1907 · Murray s. 149–150'de Hopi totolospi'yi verir ama kural seti EKSİKTİR: Voth'un kaydı için Murray 'failed to ascertain why' der. Culin'in kendi cildi elde değil."
     }
   ],
   "deliveryRoot": "06_FOUNDER_DELIVERY/",
@@ -614,220 +594,16 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/bagh-chal/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 4,
-      "familyDeficitScore": 2.5,
+      "familyDeficitScore": 2.0,
       "culturalValue": 4,
       "mechanicalUniqueness": 5,
       "pageEconomy": 5,
-      "compositeScore": 20.5,
+      "compositeScore": 20.0,
       "priorityClass": "A",
       "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
       "sourceRefs": [
         "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
         "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
-      ],
-      "unresolvedQuestions": []
-    },
-    {
-      "gameId": "konane",
-      "title": "Kōnane",
-      "altNames": [
-        "Hawaiian checkers"
-      ],
-      "culture": "Hawaiian",
-      "region": "Oceania",
-      "countryOrArea": "Hawai'i",
-      "period": "recorded by European visitors from the late 18th century; stone boards survive",
-      "family": "war-board",
-      "restrictionStatus": "attributed",
-      "status": "BLOCKED",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        },
-        {
-          "code": "P5",
-          "name": "CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye KAMUSAL ALANDADIR ama yalnızca JSTOR nüshası bulundu ve tam metin indirilemedi; ikinci künye (Bell) engelli. Oyun `attributed` taranmıştır: Hawaii atfı ZORUNLUDUR ve kayıt ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye istiyor.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Culin 1899 · 'Hawaiian Games', American Anthropologist 1:2 — yalnızca JSTOR nüshası, tam metin indirilemedi (Batch 4 avı)",
-        "Culin 1898 · Chess and Playing-Cards AÇILDI (pachisi ve patolli buradan doğrulandı) — kōnane maddesi taranmadı",
-        "Bell proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)"
-      ],
-      "whatWasMissing": "Culin'in kōnane bölümü ve çağdaş Hawaii atfı.",
-      "founderMustFind": [
-        "Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranmalı — proje bu makalenin sayfa aralığını henüz görmedi)",
-        "Tahta ölçüsü, ilk iki taşın kaldırılması, YALNIZCA atlayarak alma, çoklu atlama kuralı ve hamlesiz kalanın kaybetmesi",
-        "ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye — atıf zorunluluğu için (Bishop Museum · Hawaiian kültür kurumları)"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "American Anthropologist cilt 1 (1899) taraması + Bishop Museum kaydı.",
-      "searchPatterns": [
-        "Culin \"Hawaiian Games\" American Anthropologist 1899 archive.org",
-        "American Anthropologist volume 1 1899 full text HathiTrust",
-        "konane Hawaiian checkers rules Bishop Museum"
-      ],
-      "works": [
-        "culin-1899-hawaiian",
-        "bell-1960"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/konane/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 1.9,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 5,
-      "compositeScore": 19.9,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Culin, Stewart, Chess and Playing-Cards (Washington: Smithsonian Institution, 1898)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
-      ],
-      "unresolvedQuestions": [
-        "Çağdaş Kānaka Maoli kaynaklı bir künye aranmalıdır."
-      ]
-    },
-    {
-      "gameId": "yote",
-      "title": "Yoté",
-      "altNames": [
-        "Yote",
-        "Choko (related)"
-      ],
-      "culture": "Wolof",
-      "region": "West Africa",
-      "countryOrArea": "Senegal · Gambia · Mali",
-      "period": "documented in mid-20th-century West African fieldwork",
-      "family": "war-board",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye Dakar basımı dar dağıtımlı bir eserdir ve HİÇ DENENMEDİ; ikinci künye (Zaslavsky) engelli.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Béart 1955 · Mémoires de l'IFAN 42 — HİÇ denenmedi",
-        "Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar: IFAN, 1955), 2 cilt",
-        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
-      ],
-      "whatWasMissing": "Béart'ın yoté kaydı — özellikle ÇİFT ALMA kuralı.",
-      "founderMustFind": [
-        "Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca)",
-        "5×6 ızgara, elde tutulan taşların sırayla girmesi, atlayarak alma ve ALINAN HER TAŞLA BİRLİKTE İKİNCİ BİR TAŞIN DA KALDIRILMASI kuralı — oyunun ayırt edici mekaniği budur (distinct=5)",
-        "Wolof atfını veren bir kaynak"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Béart 1955 — Batı Afrika oyunlarının en iyi saha kaydı; zamma ile AYNI kaynak, tek teslim iki oyun açar.",
-      "searchPatterns": [
-        "Béart \"Jeux et jouets de l'Ouest africain\" IFAN 1955 PDF",
-        "\"yoté\" OR \"yote\" Wolof Senegal game rules double capture",
-        "jeux ouest africain yoté règles IFAN Dakar"
-      ],
-      "works": [
-        "beart-1955",
-        "zaslavsky-1973"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/yote/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 1.9,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 5,
-      "compositeScore": 19.9,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar, 1955)",
-        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
       ],
       "unresolvedQuestions": []
     },
@@ -1016,6 +792,210 @@
       ]
     },
     {
+      "gameId": "konane",
+      "title": "Kōnane",
+      "altNames": [
+        "Hawaiian checkers"
+      ],
+      "culture": "Hawaiian",
+      "region": "Oceania",
+      "countryOrArea": "Hawai'i",
+      "period": "recorded by European visitors from the late 18th century; stone boards survive",
+      "family": "war-board",
+      "restrictionStatus": "attributed",
+      "status": "BLOCKED",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        },
+        {
+          "code": "P5",
+          "name": "CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Birincil künye KAMUSAL ALANDADIR ama yalnızca JSTOR nüshası bulundu ve tam metin indirilemedi; ikinci künye (Bell) engelli. Oyun `attributed` taranmıştır: Hawaii atfı ZORUNLUDUR ve kayıt ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye istiyor.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Culin 1899 · 'Hawaiian Games', American Anthropologist 1:2 — yalnızca JSTOR nüshası, tam metin indirilemedi (Batch 4 avı)",
+        "Culin 1898 · Chess and Playing-Cards AÇILDI (pachisi ve patolli buradan doğrulandı) — kōnane maddesi taranmadı",
+        "Bell proje genelinde DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899)",
+        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)"
+      ],
+      "whatWasMissing": "Culin'in kōnane bölümü ve çağdaş Hawaii atfı.",
+      "founderMustFind": [
+        "Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranmalı — proje bu makalenin sayfa aralığını henüz görmedi)",
+        "Tahta ölçüsü, ilk iki taşın kaldırılması, YALNIZCA atlayarak alma, çoklu atlama kuralı ve hamlesiz kalanın kaybetmesi",
+        "ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye — atıf zorunluluğu için (Bishop Museum · Hawaiian kültür kurumları)"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "region",
+          "attribution",
+          "historical context"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "American Anthropologist cilt 1 (1899) taraması + Bishop Museum kaydı.",
+      "searchPatterns": [
+        "Culin \"Hawaiian Games\" American Anthropologist 1899 archive.org",
+        "American Anthropologist volume 1 1899 full text HathiTrust",
+        "konane Hawaiian checkers rules Bishop Museum"
+      ],
+      "works": [
+        "culin-1899-hawaiian",
+        "bell-1960"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/konane/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 1.7,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 5,
+      "pageEconomy": 5,
+      "compositeScore": 19.7,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Culin, Stewart, Chess and Playing-Cards (Washington: Smithsonian Institution, 1898)",
+        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
+      ],
+      "unresolvedQuestions": [
+        "Çağdaş Kānaka Maoli kaynaklı bir künye aranmalıdır."
+      ]
+    },
+    {
+      "gameId": "yote",
+      "title": "Yoté",
+      "altNames": [
+        "Yote",
+        "Choko (related)"
+      ],
+      "culture": "Wolof",
+      "region": "West Africa",
+      "countryOrArea": "Senegal · Gambia · Mali",
+      "period": "documented in mid-20th-century West African fieldwork",
+      "family": "war-board",
+      "restrictionStatus": "open",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Birincil künye Dakar basımı dar dağıtımlı bir eserdir ve HİÇ DENENMEDİ; ikinci künye (Zaslavsky) engelli.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Béart 1955 · Mémoires de l'IFAN 42 — HİÇ denenmedi",
+        "Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar: IFAN, 1955), 2 cilt",
+        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
+      ],
+      "whatWasMissing": "Béart'ın yoté kaydı — özellikle ÇİFT ALMA kuralı.",
+      "founderMustFind": [
+        "Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca)",
+        "5×6 ızgara, elde tutulan taşların sırayla girmesi, atlayarak alma ve ALINAN HER TAŞLA BİRLİKTE İKİNCİ BİR TAŞIN DA KALDIRILMASI kuralı — oyunun ayırt edici mekaniği budur (distinct=5)",
+        "Wolof atfını veren bir kaynak"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "region",
+          "attribution",
+          "historical context"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Béart 1955 — Batı Afrika oyunlarının en iyi saha kaydı; zamma ile AYNI kaynak, tek teslim iki oyun açar.",
+      "searchPatterns": [
+        "Béart \"Jeux et jouets de l'Ouest africain\" IFAN 1955 PDF",
+        "\"yoté\" OR \"yote\" Wolof Senegal game rules double capture",
+        "jeux ouest africain yoté règles IFAN Dakar"
+      ],
+      "works": [
+        "beart-1955",
+        "zaslavsky-1973"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/yote/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 1.7,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 5,
+      "pageEconomy": 5,
+      "compositeScore": 19.7,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Béart, Charles, Jeux et jouets de l'Ouest africain, Mémoires de l'IFAN 42 (Dakar, 1955)",
+        "Zaslavsky, Claudia, Africa Counts: Number and Pattern in African Culture (Boston: Prindle, Weber & Schmidt, 1973)"
+      ],
+      "unresolvedQuestions": []
+    },
+    {
       "gameId": "shisima",
       "title": "Shisima",
       "altNames": [
@@ -1095,11 +1075,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/shisima/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 4,
-      "familyDeficitScore": 2.6,
+      "familyDeficitScore": 2.4,
       "culturalValue": 4,
       "mechanicalUniqueness": 4,
       "pageEconomy": 5,
-      "compositeScore": 19.6,
+      "compositeScore": 19.4,
       "priorityClass": "A",
       "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
       "sourceRefs": [
@@ -1107,102 +1087,6 @@
       ],
       "unresolvedQuestions": [
         "İkinci bağımsız kaynak gerekiyor — tercihen Kenya kaynaklı."
-      ]
-    },
-    {
-      "gameId": "aadu-puli-attam",
-      "title": "Aadu Puli Attam",
-      "altNames": [
-        "Puli Meka",
-        "Goats and Tigers"
-      ],
-      "culture": "Tamil",
-      "region": "South Asia",
-      "countryOrArea": "Tamil Nadu, India",
-      "period": "documented in 19th–20th century regional collections",
-      "family": "hunt-siege",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [
-        {
-          "code": "P4",
-          "name": "GAME IDENTITY UNRESOLVED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Bell ve Murray 1952 proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "whatWasMissing": "İki künyenin ikisi de engelli; kural metni elde yok.",
-      "founderMustFind": [
-        "Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi",
-        "Tahta çizimi (üçgen ızgara), keçi ve kaplan sayıları, yerleştirme aşaması, atlama-alma kuralı, kaplanın kilitlenme koşulu"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Bir madde ki hem tahtayı hem de KAPLAN KİLİTLENMESİ koşulunu versin — Bagh-Chal ile farkı buradadır ve kitap iki maddeyi ayırmak için bu farkı yazmak zorundadır.",
-      "searchPatterns": [
-        "\"aadu puli attam\" rules board tigers goats Tamil",
-        "\"puli meka\" game rules South India"
-      ],
-      "works": [
-        "bell-1960",
-        "murray-1952"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/aadu-puli-attam/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 4,
-      "familyDeficitScore": 2.5,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 4,
-      "pageEconomy": 5,
-      "compositeScore": 19.5,
-      "priorityClass": "A",
-      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
-      "sourceRefs": [
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "unresolvedQuestions": [
-        "Bagh-Chal ile aynı kitapta iki ayrı madde mi olmalı, yoksa biri varyant kutusu mu?"
       ]
     },
     {
@@ -1489,6 +1373,102 @@
       ]
     },
     {
+      "gameId": "aadu-puli-attam",
+      "title": "Aadu Puli Attam",
+      "altNames": [
+        "Puli Meka",
+        "Goats and Tigers"
+      ],
+      "culture": "Tamil",
+      "region": "South Asia",
+      "countryOrArea": "Tamil Nadu, India",
+      "period": "documented in 19th–20th century regional collections",
+      "family": "hunt-siege",
+      "restrictionStatus": "open",
+      "status": "BLOCKED",
+      "primaryBlocker": "P1",
+      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
+      "secondaryBlockers": [
+        {
+          "code": "P4",
+          "name": "GAME IDENTITY UNRESOLVED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Bell ve Murray 1952 proje genelinde DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "whatWasMissing": "İki künyenin ikisi de engelli; kural metni elde yok.",
+      "founderMustFind": [
+        "Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi",
+        "Tahta çizimi (üçgen ızgara), keçi ve kaplan sayıları, yerleştirme aşaması, atlama-alma kuralı, kaplanın kilitlenme koşulu"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Bir madde ki hem tahtayı hem de KAPLAN KİLİTLENMESİ koşulunu versin — Bagh-Chal ile farkı buradadır ve kitap iki maddeyi ayırmak için bu farkı yazmak zorundadır.",
+      "searchPatterns": [
+        "\"aadu puli attam\" rules board tigers goats Tamil",
+        "\"puli meka\" game rules South India"
+      ],
+      "works": [
+        "bell-1960",
+        "murray-1952"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/aadu-puli-attam/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 4,
+      "familyDeficitScore": 2.0,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 4,
+      "pageEconomy": 5,
+      "compositeScore": 19.0,
+      "priorityClass": "A",
+      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
+      "sourceRefs": [
+        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "unresolvedQuestions": [
+        "Bagh-Chal ile aynı kitapta iki ayrı madde mi olmalı, yoksa biri varyant kutusu mu?"
+      ]
+    },
+    {
       "gameId": "petanque",
       "title": "Pétanque",
       "altNames": [
@@ -1573,99 +1553,6 @@
       ]
     },
     {
-      "gameId": "go",
-      "title": "Go",
-      "altNames": [
-        "Weiqi",
-        "Baduk",
-        "Igo"
-      ],
-      "culture": "Han Chinese",
-      "region": "East Asia",
-      "countryOrArea": "China · Korea · Japan",
-      "period": "referred to in Chinese texts from the 1st millennium BCE; continuous play to the present",
-      "family": "territory",
-      "restrictionStatus": "open",
-      "status": "UNRESOLVED",
-      "primaryBlocker": "P5",
-      "primaryBlockerName": "CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED",
-      "secondaryBlockers": [
-        {
-          "code": "P7",
-          "name": "VARIANT CONFLICT"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "KAYNAK TAM AMA KÜLTÜR UYUŞMUYOR. Smith 1908 (ss. 24–26) EKSİKSİZ bir kural kitabıdır — sıra, yerleştirme, ko, taşların bir daha oynanmaması, toprak amacı — ama JAPON kodifikasyonunu ve JAPON SAYIMINI (alınan taşlarla toprağı doldurma) verir, Çin ALAN sayımını değil. Kapsam kaydı HAN ÇİNLİSİ der. § 9'un 'kaynak iddia edilen kültürü desteklemeli' şartı KARŞILANMIYOR.",
-      "alreadyChecked": [
-        "Smith 1908 'Rules of Play' ss. 24–26 AÇILDI ve TAM kural seti doğrulandı",
-        "Falkener 1892 Bölüm XXIII ss. 239–240 AÇILDI: 19×19, taşlar konduktan sonra hareket etmez, bağlantı yalnızca çizgi boyunca",
-        "Murray 1952 · Parlett 1999 · Shotwell 2003 — üçü de erişilemedi",
-        "Culin 1895 tarandı — Çin biçimi için kural seti yok"
-      ],
-      "sourcesAttempted": [
-        "Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society, N.S. XXVI (1894)",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "whatWasMissing": "ÇİN biçimini ve ÇİN ALAN SAYIMINI veren bir kaynak.",
-      "founderMustFind": [
-        "Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society N.S. XXVI (1894) — Smith'in KENDİ künyesinde geçiyor",
-        "Ya da: Çin alan sayımını (taş + çevrelenen boş kesişim) veren başka herhangi bir denetlenebilir kaynak",
-        "⚠ ALTERNATİF ÇÖZÜM — KURUCU KARARI: maddenin kültür künyesi JAPON olarak değiştirilirse Smith 1908 ZATEN YETERLİDİR ve oyun BUGÜN yazılır. Bu bir araştırma değil bir karardır.",
-        "KARAR MALZEMESİ: kitap 9×9 mı 19×19 mu basacak? 650 kelimede 19×19 öğretilemez; 9×9 seçimi EDİTORYALDİR ve gerekçesi yazılmalıdır"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "scoring"
-        ],
-        "source": [
-          "author",
-          "title",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Volpicelli makalesi — hem Çin biçimini hem Çin sayımını verir ve kültür uyuşmazlığını tek hamlede kapatır.",
-      "searchPatterns": [
-        "Volpicelli \"Wei-chi\" Journal China Branch Royal Asiatic Society 1894",
-        "weiqi Chinese area scoring rules 19th century source",
-        "wei-ch'i Chinese go rules historical article archive.org"
-      ],
-      "works": [
-        "volpicelli-weiqi",
-        "murray-1952"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/go/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 2.6,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 3,
-      "compositeScore": 18.6,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Shotwell, Peter, Go! More Than a Game (Boston: Tuttle, 2003)",
-        "Falkener, Edward, Games Ancient and Oriental and How to Play Them (London: Longmans, Green & Co., 1892)",
-        "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)"
-      ],
-      "unresolvedQuestions": [
-        "Kitap 9×9 mu 19×19 mu basacak? 650 kelimede 19×19 öğretilemez; 9×9 seçimi editoryaldir ve gerekçesi yazılmalıdır."
-      ]
-    },
-    {
       "gameId": "morabaraba",
       "title": "Morabaraba",
       "altNames": [
@@ -1745,11 +1632,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/morabaraba/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 4,
-      "familyDeficitScore": 2.6,
+      "familyDeficitScore": 2.4,
       "culturalValue": 5,
       "mechanicalUniqueness": 3,
       "pageEconomy": 4,
-      "compositeScore": 18.6,
+      "compositeScore": 18.4,
       "priorityClass": "A",
       "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
       "sourceRefs": [
@@ -1837,11 +1724,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/shax/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 4,
-      "familyDeficitScore": 2.6,
+      "familyDeficitScore": 2.4,
       "culturalValue": 5,
       "mechanicalUniqueness": 3,
       "pageEconomy": 4,
-      "compositeScore": 18.6,
+      "compositeScore": 18.4,
       "priorityClass": "A",
       "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
       "sourceRefs": [
@@ -1879,7 +1766,8 @@
         "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
         "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
         "Culin 1900 · 'Philippine Games' — açık nüsha bulunamadı; AYNI derginin 1899 sayısı denendi ve yalnızca JSTOR nüshası çıktı",
-        "Murray 1952 DENENDİ ve açılamadı"
+        "Murray 1952 DENENDİ ve açılamadı",
+        "FAZ 6 · MURRAY s. 42 AÇILDI: § 3.3.14 yalnızca 'Philippines: Tapatan (Culin, f, 648). Widely played.' der. KURAL SETİ YOK — bu bir künyedir, bir kaynak değil."
       ],
       "sourcesAttempted": [
         "Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900)",
@@ -1933,11 +1821,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/tapatan/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 4,
-      "familyDeficitScore": 2.6,
+      "familyDeficitScore": 2.4,
       "culturalValue": 4,
       "mechanicalUniqueness": 3,
       "pageEconomy": 5,
-      "compositeScore": 18.6,
+      "compositeScore": 18.4,
       "priorityClass": "A",
       "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
       "sourceRefs": [
@@ -2070,7 +1958,8 @@
         "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
         "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
         "Murray 1952 DENENDİ ve açılamadı",
-        "Townshend 1979 — HİÇ denenmedi"
+        "Townshend 1979 — HİÇ denenmedi",
+        "FAZ 6 · MURRAY ss. 207 ve 209 AÇILDI. § 8.2.4 diziyi ve dört açılış biçimini verir, ortak kurallar s. 207'dedir. YAZILMADI: 4×16 = 64 çukurluk tahta bu kitabın malzeme eşiğinin üstündedir ve Schultze'nin kaydıyla ILN çizimi tahta boyutunda ÇELİŞİR (4×16'ya karşı 4×8)."
       ],
       "sourcesAttempted": [
         "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -2239,94 +2128,6 @@
       ]
     },
     {
-      "gameId": "ashta-kashte",
-      "title": "Ashta Kashte",
-      "altNames": [
-        "Ashta-kashte"
-      ],
-      "culture": "Bengali",
-      "region": "South Asia",
-      "countryOrArea": "Bengal",
-      "period": "documented in 19th–20th century collections",
-      "family": "race",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)"
-      ],
-      "whatWasMissing": "İki künyenin ikisi de engelli.",
-      "founderMustFind": [
-        "Murray 1952 ya da Bell'de ashta-kashte maddesi",
-        "7×7 tahta, işaretli güvenli kareler, dört kavrukemik/deniz kabuğu atışı, iz yönü, alma, eve giriş koşulu"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).",
-      "searchPatterns": [
-        "\"ashta kashte\" Bengali race game rules board",
-        "ashtapada cowrie race game Bengal rules"
-      ],
-      "works": [
-        "murray-1952",
-        "bell-1960"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/ashta-kashte/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 4,
-      "familyDeficitScore": 1.9,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 5,
-      "compositeScore": 17.9,
-      "priorityClass": "A",
-      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
-      ],
-      "unresolvedQuestions": []
-    },
-    {
       "gameId": "daldos",
       "title": "Daldøs",
       "altNames": [
@@ -2409,11 +2210,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/daldos/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 1.9,
+      "familyDeficitScore": 1.7,
       "culturalValue": 5,
       "mechanicalUniqueness": 5,
       "pageEconomy": 3,
-      "compositeScore": 17.9,
+      "compositeScore": 17.7,
       "priorityClass": "C",
       "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [
@@ -2502,11 +2303,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/len-choa/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 4,
-      "familyDeficitScore": 2.5,
+      "familyDeficitScore": 2.0,
       "culturalValue": 3,
       "mechanicalUniqueness": 3,
       "pageEconomy": 5,
-      "compositeScore": 17.5,
+      "compositeScore": 17.0,
       "priorityClass": "A",
       "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
       "sourceRefs": [
@@ -2515,94 +2316,6 @@
       "unresolvedQuestions": [
         "İkinci bağımsız kaynak gerekiyor."
       ]
-    },
-    {
-      "gameId": "rimau-rimau",
-      "title": "Rimau-rimau",
-      "altNames": [
-        "Main Rimau"
-      ],
-      "culture": "Malay",
-      "region": "Southeast Asia",
-      "countryOrArea": "Malaysia",
-      "period": "documented in early 20th-century collections",
-      "family": "hunt-siege",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)"
-      ],
-      "whatWasMissing": "İki künyenin ikisi de engelli.",
-      "founderMustFind": [
-        "Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi",
-        "Tahta (alquerque temelli), kaplan sayısı, av taşı sayısı, çoklu alma kuralı"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Malezya kaynaklı çağdaş bir künye kültür atfını güçlendirir.",
-      "searchPatterns": [
-        "\"rimau rimau\" Malay tiger game rules",
-        "\"main rimau\" Malaysia traditional board game"
-      ],
-      "works": [
-        "murray-1952",
-        "bell-1960"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/rimau-rimau/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 4,
-      "familyDeficitScore": 2.5,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 4,
-      "compositeScore": 17.5,
-      "priorityClass": "A",
-      "priorityReason": "tek iyi kaynak maddeyi HEMEN yazılabilir yapar",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
-      ],
-      "unresolvedQuestions": []
     },
     {
       "gameId": "game-of-the-goose",
@@ -2683,11 +2396,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/game-of-the-goose/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 1.9,
+      "familyDeficitScore": 1.7,
       "culturalValue": 4,
       "mechanicalUniqueness": 3,
       "pageEconomy": 5,
-      "compositeScore": 16.9,
+      "compositeScore": 16.7,
       "priorityClass": "E",
       "priorityReason": "yararlı ama kritik değil",
       "sourceRefs": [
@@ -2782,11 +2495,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/nard/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 1.9,
+      "familyDeficitScore": 1.7,
       "culturalValue": 5,
       "mechanicalUniqueness": 3,
       "pageEconomy": 4,
-      "compositeScore": 16.9,
+      "compositeScore": 16.7,
       "priorityClass": "C",
       "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [
@@ -2829,7 +2542,8 @@
         "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
         "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
         "Murray 1952 DENENDİ ve açılamadı",
-        "Béart 1955 — HİÇ denenmedi"
+        "Béart 1955 — HİÇ denenmedi",
+        "FAZ 6 · MURRAY ss. 66 ve 69 AÇILDI. § 4.2.35 dörtlü alquerque tahtası üzerinde AYRI ve ZENGİN bir oyun verir: ileri-yalnız hareket, HER YÖNE sıçrama, zorunlu alma, huff ve karşı kenarda TERFİ. YAZILMADI çünkü Murray terfi etmiş taşın ALMA gücü için açıkça 'nothing is said' der — yani oyunun bitişini belirleyen taşın kuralı KAYNAKTA YOKTUR."
       ],
       "sourcesAttempted": [
         "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -2888,11 +2602,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/zamma/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 1.9,
+      "familyDeficitScore": 1.7,
       "culturalValue": 5,
       "mechanicalUniqueness": 4,
       "pageEconomy": 3,
-      "compositeScore": 16.9,
+      "compositeScore": 16.7,
       "priorityClass": "C",
       "priorityReason": "kaybedilen bir kültürü geri getirir",
       "sourceRefs": [
@@ -2901,107 +2615,6 @@
       ],
       "unresolvedQuestions": [
         "Taş sayısı kaynaklara göre değişiyor; kitap bir sayı seçmeli ve gerekçesini yazmalı."
-      ]
-    },
-    {
-      "gameId": "halatafl",
-      "title": "Halatafl",
-      "altNames": [
-        "Fox game (Icelandic)"
-      ],
-      "culture": "Icelandic",
-      "region": "Northern Europe",
-      "countryOrArea": "Iceland",
-      "period": "named in Grettis saga (13th-century manuscript tradition)",
-      "family": "hunt-siege",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P3",
-      "primaryBlockerName": "RULES INCOMPLETE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        },
-        {
-          "code": "P4",
-          "name": "GAME IDENTITY UNRESOLVED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Erişilebilir kaynak AÇILDI ve oyunun yalnızca ADINI verdi: Fiske 1905'te halatafl bir SÖZLÜK GÖNDERMESİDİR, kural değil. Ayrıca oyunun fox-and-geese'ten AYRI bir madde olup olmadığı çözülmemiştir — fox-and-geese ZATEN YAZILDI ve tekrar riski gerçektir.",
-      "alreadyChecked": [
-        "Fiske 1905 'Stray Notes', s. 59 AÇILDI: terimin VARLIĞI doğrulandı, kural yok (source_verification.json, 2026-08-14)",
-        "Fiske'in kitabındaki TEK belgelenmiş tafl oyunu tablut'tur ve o yazıldı",
-        "Murray 1952 DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "whatWasMissing": "Kural metninin tamamı ve halatafl'ın fox-and-geese'ten farkı.",
-      "founderMustFind": [
-        "Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma",
-        "İzlanda saga/sözlük geleneğinde halatafl'ın ne olduğunu söyleyen bir çalışma",
-        "KARAR MALZEMESİ: halatafl fox-and-geese'ten AYRI bir oyun mu? Ayrı değilse kapsam kaydı bir yedekle değiştirilmelidir"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Bir İskandinav oyun tarihi çalışması ki halatafl ile fox-and-geese ilişkisini AÇIKÇA tartışsın.",
-      "searchPatterns": [
-        "\"halatafl\" Icelandic fox game rules",
-        "halatafl saga reference fox and geese Iceland",
-        "Icelandic board games hnefatafl halatafl scholarship"
-      ],
-      "works": [
-        "murray-1952"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/halatafl/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 2,
-      "familyDeficitScore": 2.5,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 5,
-      "compositeScore": 16.5,
-      "priorityClass": "E",
-      "priorityReason": "yararlı ama kritik değil",
-      "sourceRefs": [
-        "Fiske, Willard, Chess in Iceland and in Icelandic Literature (Florence: Florentine Typographical Society, 1905)",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "unresolvedQuestions": [
-        "Fox and Geese ile aynı oyun mu? Ad ve kaynak ayrıdır; kitap ikisini tek maddede birleştirebilir."
       ]
     },
     {
@@ -3197,119 +2810,20 @@
       "unresolvedQuestions": []
     },
     {
-      "gameId": "makruk",
-      "title": "Makruk",
+      "gameId": "halatafl",
+      "title": "Halatafl",
       "altNames": [
-        "Thai chess"
+        "Fox game (Icelandic)"
       ],
-      "culture": "Thai",
-      "region": "Southeast Asia",
-      "countryOrArea": "Thailand",
-      "period": "documented from the 18th century; retains features of older shatranj-type play",
-      "family": "war-board",
+      "culture": "Icelandic",
+      "region": "Northern Europe",
+      "countryOrArea": "Iceland",
+      "period": "named in Grettis saga (13th-century manuscript tradition)",
+      "family": "hunt-siege",
       "restrictionStatus": "open",
       "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [
-        {
-          "code": "P3",
-          "name": "RULES INCOMPLETE"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz. Ayrıca SAYMA (nap) kuralları karmaşıktır ve tam basılırsa sayfa bütçesini zorlar (§ K19).",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1913 DENENDİ — archive.org HTTP 401 (ödünç kısıtı). Eser KAMUSAL ALANDADIR; engel telif değil DAĞITIMDIR",
-        "Parlett proje genelinde DENENDİ ve açılamadı",
-        "Falkener 1892 Burma satrancı bölümü AÇILDI (sittuyin yazıldı) — Siyam biçimi için ayrı kural seti vermiyor"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Chess (Oxford: Clarendon Press, 1913)",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
-      ],
-      "whatWasMissing": "Murray 1913'ün Siyam satrancı bölümü ve sayma kurallarının basılabilir biçimi.",
-      "founderMustFind": [
-        "Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır)",
-        "Taşların adı ve hareketi, ERLERİN ÜÇÜNCÜ SIRADAN başlaması, erin terfi karesi, med (vezir) hareketi",
-        "Sayma (nap) kurallarının SADELEŞTİRİLEBİLİR bir özeti — kitap iki sayfaya sığmalı"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Murray 1913 kamusal alan tam görünümü — HathiTrust bu sınıf eserde en yüksek başarı şansını veriyor.",
-      "searchPatterns": [
-        "Murray \"A History of Chess\" 1913 HathiTrust full view Siamese",
-        "makruk Thai chess rules counting nap",
-        "makruk rules promotion third rank"
-      ],
-      "works": [
-        "murray-1913",
-        "parlett-1999"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/makruk/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 1.9,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 4,
-      "compositeScore": 15.9,
-      "priorityClass": "E",
-      "priorityReason": "yararlı ama kritik değil",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Chess (Oxford: Clarendon Press, 1913)",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
-      ],
-      "unresolvedQuestions": [
-        "Sayma kuralları (nap) karmaşıktır ve tam basılırsa sayfa bütçesini zorlar."
-      ]
-    },
-    {
-      "gameId": "surakarta",
-      "title": "Surakarta",
-      "altNames": [
-        "Permainan"
-      ],
-      "culture": "Javanese",
-      "region": "Southeast Asia",
-      "countryOrArea": "Indonesia",
-      "period": "documented in the 20th century; named after the Javanese city",
-      "family": "war-board",
-      "restrictionStatus": "open",
-      "status": "UNRESOLVED",
-      "primaryBlocker": "P5",
-      "primaryBlockerName": "CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED",
+      "primaryBlocker": "P3",
+      "primaryBlockerName": "RULES INCOMPLETE",
       "secondaryBlockers": [
         {
           "code": "P1",
@@ -3321,22 +2835,20 @@
         }
       ],
       "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "OYUNUN GELENEKSEL Mİ YOKSA 20. YÜZYIL İCADI MI OLDUĞU KESİN DEĞİLDİR. Kayıt bunu açıkça yazıyor: bu netleşmeden madde kitaba 'geleneksel' diye GİREMEZ. Ayrıca tek künyesi (Parlett) engellidir ve ikinci bağımsız kaynağı yoktur — yani hem kimlik hem kaynak açıktır.",
+      "whyAgentCannotWrite": "Erişilebilir kaynak AÇILDI ve oyunun yalnızca ADINI verdi: Fiske 1905'te halatafl bir SÖZLÜK GÖNDERMESİDİR, kural değil. Ayrıca oyunun fox-and-geese'ten AYRI bir madde olup olmadığı çözülmemiştir — fox-and-geese ZATEN YAZILDI ve tekrar riski gerçektir.",
       "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Parlett proje genelinde DENENDİ ve açılamadı",
-        "İkinci bağımsız kaynak Faz 1'den beri aranıyor ve bulunamadı"
+        "Fiske 1905 'Stray Notes', s. 59 AÇILDI: terimin VARLIĞI doğrulandı, kural yok (source_verification.json, 2026-08-14)",
+        "Fiske'in kitabındaki TEK belgelenmiş tafl oyunu tablut'tur ve o yazıldı",
+        "Murray 1952 DENENDİ ve açılamadı"
       ],
       "sourcesAttempted": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
       ],
-      "whatWasMissing": "Oyunun Java'daki geleneksel varlığına dair BİR KANIT — ya da tersi.",
+      "whatWasMissing": "Kural metninin tamamı ve halatafl'ın fox-and-geese'ten farkı.",
       "founderMustFind": [
-        "Surakarta'nın Java'daki geleneksel varlığını gösteren bir DÖNEM kaydı (20. yy öncesi ya da erken 20. yy saha kaydı)",
-        "Ya da tersi: oyunun modern bir icat/ticari yayın olduğunu gösteren bir kayıt",
-        "Kural metni: 8×8 ızgara, köşe halkaları, HALKADAN GEÇEREK ALMA kuralı",
-        "⚠ ALTERNATİF ÇÖZÜM — KURUCU KARARI: kimlik netleşmezse madde kapsamdan çıkarılıp yedekle değiştirilebilir. Kayıt source=2 veriyor: bu kapsamın EN ZAYIF kaynak puanlarından biridir"
+        "Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma",
+        "İzlanda saga/sözlük geleneğinde halatafl'ın ne olduğunu söyleyen bir çalışma",
+        "KARAR MALZEMESİ: halatafl fox-and-geese'ten AYRI bir oyun mu? Ayrı değilse kapsam kaydı bir yedekle değiştirilmelidir"
       ],
       "minimumEvidence": {
         "rule": [
@@ -3370,32 +2882,32 @@
         ],
         "reconstruction": []
       },
-      "idealEvidence": "Java kaynaklı bir dönem saha kaydı — oyunun geleneksel olduğunu ya da OLMADIĞINI kesin söyleyen herhangi bir kanıt.",
+      "idealEvidence": "Bir İskandinav oyun tarihi çalışması ki halatafl ile fox-and-geese ilişkisini AÇIKÇA tartışsın.",
       "searchPatterns": [
-        "surakarta game origin traditional Javanese evidence",
-        "permainan surakarta Jawa asal usul permainan tradisional",
-        "surakarta board game history invented 20th century"
+        "\"halatafl\" Icelandic fox game rules",
+        "halatafl saga reference fox and geese Iceland",
+        "Icelandic board games hnefatafl halatafl scholarship"
       ],
       "works": [
-        "parlett-1999"
+        "murray-1952"
       ],
       "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/surakarta/",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/halatafl/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 2,
-      "familyDeficitScore": 1.9,
-      "culturalValue": 3,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 4,
-      "compositeScore": 15.9,
-      "priorityClass": "D",
-      "priorityReason": "portföyde eşi olmayan bir mekanik taşır",
+      "familyDeficitScore": 2.0,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 3,
+      "pageEconomy": 5,
+      "compositeScore": 16.0,
+      "priorityClass": "E",
+      "priorityReason": "yararlı ama kritik değil",
       "sourceRefs": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+        "Fiske, Willard, Chess in Iceland and in Icelandic Literature (Florence: Florentine Typographical Society, 1905)",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
       ],
       "unresolvedQuestions": [
-        "İkinci bağımsız kaynak gerekiyor.",
-        "Oyunun geleneksel mi yoksa 20. yüzyıl icadı mı olduğu KESİN DEĞİLDİR; bu netleşmeden kitaba 'geleneksel' diye giremez."
+        "Fox and Geese ile aynı oyun mu? Ad ve kaynak ayrıdır; kitap ikisini tek maddede birleştirebilir."
       ]
     },
     {
@@ -3678,6 +3190,208 @@
       ]
     },
     {
+      "gameId": "makruk",
+      "title": "Makruk",
+      "altNames": [
+        "Thai chess"
+      ],
+      "culture": "Thai",
+      "region": "Southeast Asia",
+      "countryOrArea": "Thailand",
+      "period": "documented from the 18th century; retains features of older shatranj-type play",
+      "family": "war-board",
+      "restrictionStatus": "open",
+      "status": "BLOCKED",
+      "primaryBlocker": "P1",
+      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
+      "secondaryBlockers": [
+        {
+          "code": "P3",
+          "name": "RULES INCOMPLETE"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Kural metni elde YOKTUR. Envanterdeki `rules-complete` yargısı KÜNYE seviyesindedir (`sourceVerification: bibliographic`): kuralların o eserlerde DURDUĞU bilinir, metni okunmamıştır. § 5 uyarınca doğrulanmamış araştırmadan tek cümle bile yazılamaz. Ayrıca SAYMA (nap) kuralları karmaşıktır ve tam basılırsa sayfa bütçesini zorlar (§ K19).",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Murray 1913 DENENDİ — archive.org HTTP 401 (ödünç kısıtı). Eser KAMUSAL ALANDADIR; engel telif değil DAĞITIMDIR",
+        "Parlett proje genelinde DENENDİ ve açılamadı",
+        "Falkener 1892 Burma satrancı bölümü AÇILDI (sittuyin yazıldı) — Siyam biçimi için ayrı kural seti vermiyor"
+      ],
+      "sourcesAttempted": [
+        "Murray, H. J. R., A History of Chess (Oxford: Clarendon Press, 1913)",
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "whatWasMissing": "Murray 1913'ün Siyam satrancı bölümü ve sayma kurallarının basılabilir biçimi.",
+      "founderMustFind": [
+        "Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır)",
+        "Taşların adı ve hareketi, ERLERİN ÜÇÜNCÜ SIRADAN başlaması, erin terfi karesi, med (vezir) hareketi",
+        "Sayma (nap) kurallarının SADELEŞTİRİLEBİLİR bir özeti — kitap iki sayfaya sığmalı"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Murray 1913 kamusal alan tam görünümü — HathiTrust bu sınıf eserde en yüksek başarı şansını veriyor.",
+      "searchPatterns": [
+        "Murray \"A History of Chess\" 1913 HathiTrust full view Siamese",
+        "makruk Thai chess rules counting nap",
+        "makruk rules promotion third rank"
+      ],
+      "works": [
+        "murray-1913",
+        "parlett-1999"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/makruk/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 1.7,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 3,
+      "pageEconomy": 4,
+      "compositeScore": 15.7,
+      "priorityClass": "E",
+      "priorityReason": "yararlı ama kritik değil",
+      "sourceRefs": [
+        "Murray, H. J. R., A History of Chess (Oxford: Clarendon Press, 1913)",
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "unresolvedQuestions": [
+        "Sayma kuralları (nap) karmaşıktır ve tam basılırsa sayfa bütçesini zorlar."
+      ]
+    },
+    {
+      "gameId": "surakarta",
+      "title": "Surakarta",
+      "altNames": [
+        "Permainan"
+      ],
+      "culture": "Javanese",
+      "region": "Southeast Asia",
+      "countryOrArea": "Indonesia",
+      "period": "documented in the 20th century; named after the Javanese city",
+      "family": "war-board",
+      "restrictionStatus": "open",
+      "status": "UNRESOLVED",
+      "primaryBlocker": "P5",
+      "primaryBlockerName": "CULTURAL IDENTITY / ATTRIBUTION UNRESOLVED",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        },
+        {
+          "code": "P4",
+          "name": "GAME IDENTITY UNRESOLVED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "OYUNUN GELENEKSEL Mİ YOKSA 20. YÜZYIL İCADI MI OLDUĞU KESİN DEĞİLDİR. Kayıt bunu açıkça yazıyor: bu netleşmeden madde kitaba 'geleneksel' diye GİREMEZ. Ayrıca tek künyesi (Parlett) engellidir ve ikinci bağımsız kaynağı yoktur — yani hem kimlik hem kaynak açıktır.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Parlett proje genelinde DENENDİ ve açılamadı",
+        "İkinci bağımsız kaynak Faz 1'den beri aranıyor ve bulunamadı"
+      ],
+      "sourcesAttempted": [
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "whatWasMissing": "Oyunun Java'daki geleneksel varlığına dair BİR KANIT — ya da tersi.",
+      "founderMustFind": [
+        "Surakarta'nın Java'daki geleneksel varlığını gösteren bir DÖNEM kaydı (20. yy öncesi ya da erken 20. yy saha kaydı)",
+        "Ya da tersi: oyunun modern bir icat/ticari yayın olduğunu gösteren bir kayıt",
+        "Kural metni: 8×8 ızgara, köşe halkaları, HALKADAN GEÇEREK ALMA kuralı",
+        "⚠ ALTERNATİF ÇÖZÜM — KURUCU KARARI: kimlik netleşmezse madde kapsamdan çıkarılıp yedekle değiştirilebilir. Kayıt source=2 veriyor: bu kapsamın EN ZAYIF kaynak puanlarından biridir"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "region",
+          "attribution",
+          "historical context"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Java kaynaklı bir dönem saha kaydı — oyunun geleneksel olduğunu ya da OLMADIĞINI kesin söyleyen herhangi bir kanıt.",
+      "searchPatterns": [
+        "surakarta game origin traditional Javanese evidence",
+        "permainan surakarta Jawa asal usul permainan tradisional",
+        "surakarta board game history invented 20th century"
+      ],
+      "works": [
+        "parlett-1999"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/surakarta/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 2,
+      "familyDeficitScore": 1.7,
+      "culturalValue": 3,
+      "mechanicalUniqueness": 5,
+      "pageEconomy": 4,
+      "compositeScore": 15.7,
+      "priorityClass": "D",
+      "priorityReason": "portföyde eşi olmayan bir mekanik taşır",
+      "sourceRefs": [
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "unresolvedQuestions": [
+        "İkinci bağımsız kaynak gerekiyor.",
+        "Oyunun geleneksel mi yoksa 20. yüzyıl icadı mı olduğu KESİN DEĞİLDİR; bu netleşmeden kitaba 'geleneksel' diye giremez."
+      ]
+    },
+    {
       "gameId": "twelve-mens-morris",
       "title": "Twelve Men's Morris",
       "altNames": [
@@ -3709,7 +3423,8 @@
         "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
         "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
         "Gomme 1894 cilt I § Nine Men's Morris AÇILDI: dokuz taşlı biçim var (yazıldı), ON İKİ taşlı biçim için ayrı kayıt YOK (Batch 4 kaynak avı)",
-        "Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"
+        "Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı",
+        "FAZ 6 · MURRAY s. 43 AÇILDI ve KURAL SETİ TAMDIR. YAZILMADI: madde zaten `nine-mens-morris`in 'Twelve men' VARYANTI olarak basılıdır. Envanterin kendi şerhi ve Faz 4'ün diyagram altyazısı aynı kararı veriyordu. Engel bir KAYNAK sorunu değil, bir TEKRAR sorunudur."
       ],
       "sourcesAttempted": [
         "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
@@ -3764,11 +3479,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/twelve-mens-morris/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 2.6,
+      "familyDeficitScore": 2.4,
       "culturalValue": 3,
       "mechanicalUniqueness": 2,
       "pageEconomy": 5,
-      "compositeScore": 15.6,
+      "compositeScore": 15.4,
       "priorityClass": "E",
       "priorityReason": "yararlı ama kritik değil",
       "sourceRefs": [
@@ -3777,108 +3492,6 @@
       ],
       "unresolvedQuestions": [
         "Dokuz Taş maddesinin içinde varyant kutusu olarak mı verilmeli? Ayrı madde tekrar riski taşır."
-      ]
-    },
-    {
-      "gameId": "ludus-duodecim-scriptorum",
-      "title": "Ludus Duodecim Scriptorum",
-      "altNames": [
-        "XII scripta",
-        "Twelve-line game"
-      ],
-      "culture": "Roman",
-      "region": "Mediterranean",
-      "countryOrArea": "Roman Empire",
-      "period": "attested from the 1st century BCE; boards and graffiti survive widely",
-      "family": "race",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P6",
-      "primaryBlockerName": "RECONSTRUCTION TOO UNCERTAIN",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "reconstructed",
-      "whyAgentCannotWrite": "Yeniden kurgulama BELİRSİZDİR: taşların iz üzerindeki YÖNÜ ve başlangıç yerleşimi kesin bilinmiyor. Tahta yazıtları kural değil, SÖZ OYUNUDUR — yani en çok bulunan kanıt en az kural taşıyan kanıttır.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 DENENDİ ve açılamadı",
-        "Schädler · Board Game Studies — HİÇ denenmedi"
-      ],
-      "sourcesAttempted": [
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "whatWasMissing": "İz yönü, başlangıç yerleşimi ve alma kuralı — hiçbiri kesin değil.",
-      "founderMustFind": [
-        "Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması",
-        "XII scripta için önerilmiş yeniden kurgulamalar ve ARALARINDAKİ FARK",
-        "Tabula ile XII scripta arasındaki tarihsel geçişi veren bir kaynak"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": [
-          "reconstruction source",
-          "uncertainty statement",
-          "competing interpretation"
-        ]
-      },
-      "idealEvidence": "Rakip yeniden kurgulamaları KARŞILAŞTIRAN bir çalışma — kitap tek yorum seçecek ve seçtiğini beyan edecek.",
-      "searchPatterns": [
-        "Schädler ludus duodecim scriptorum reconstruction Board Game Studies",
-        "XII scripta Roman game reconstruction rules scholarship"
-      ],
-      "works": [
-        "specialist-articles",
-        "murray-1952"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 1,
-      "familyDeficitScore": 1.9,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 4,
-      "pageEconomy": 3,
-      "compositeScore": 14.9,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Schädler, Ulrich, studies on Roman board games, in Board Game Studies"
-      ],
-      "unresolvedQuestions": [
-        "Tabula ile aynı maddede mi anlatılmalı? İkisi arasındaki tarihsel geçiş kitabın en iyi anlatı fırsatlarından biridir."
       ]
     },
     {
@@ -3971,6 +3584,108 @@
       ]
     },
     {
+      "gameId": "ludus-duodecim-scriptorum",
+      "title": "Ludus Duodecim Scriptorum",
+      "altNames": [
+        "XII scripta",
+        "Twelve-line game"
+      ],
+      "culture": "Roman",
+      "region": "Mediterranean",
+      "countryOrArea": "Roman Empire",
+      "period": "attested from the 1st century BCE; boards and graffiti survive widely",
+      "family": "race",
+      "restrictionStatus": "open",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P6",
+      "primaryBlockerName": "RECONSTRUCTION TOO UNCERTAIN",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
+      "currentStatusNote": "reconstructed",
+      "whyAgentCannotWrite": "Yeniden kurgulama BELİRSİZDİR: taşların iz üzerindeki YÖNÜ ve başlangıç yerleşimi kesin bilinmiyor. Tahta yazıtları kural değil, SÖZ OYUNUDUR — yani en çok bulunan kanıt en az kural taşıyan kanıttır.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Murray 1952 FAZ 6'DA AÇILDI (ss. 29–31) ve ÇELİŞKİLİ ÇIKTI: basılı metin taşların 'table D'den toplandığını söyler, aynı sayfadaki Fig. 16 (Ostia levhası) BEŞ tablo gösterir (A·B·C·D·E). İzin SON çeyreği sayfadan çıkarılamıyor.",
+        "Schädler · Board Game Studies — HİÇ denenmedi"
+      ],
+      "sourcesAttempted": [
+        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "whatWasMissing": "İzin son çeyreği (nereden toplanır) — Murray'in metni ve şekli çelişiyor. Başlangıç yerleşimi ve alma kuralı Murray s. 31'de VARDIR.",
+      "founderMustFind": [
+        "Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması",
+        "XII scripta için önerilmiş yeniden kurgulamalar ve ARALARINDAKİ FARK",
+        "Tabula ile XII scripta arasındaki tarihsel geçişi veren bir kaynak"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": [
+          "reconstruction source",
+          "uncertainty statement",
+          "competing interpretation"
+        ]
+      },
+      "idealEvidence": "Rakip yeniden kurgulamaları KARŞILAŞTIRAN bir çalışma — kitap tek yorum seçecek ve seçtiğini beyan edecek.",
+      "searchPatterns": [
+        "Schädler ludus duodecim scriptorum reconstruction Board Game Studies",
+        "XII scripta Roman game reconstruction rules scholarship"
+      ],
+      "works": [
+        "specialist-articles",
+        "murray-1952"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 1,
+      "familyDeficitScore": 1.7,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 4,
+      "pageEconomy": 3,
+      "compositeScore": 14.7,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Schädler, Ulrich, studies on Roman board games, in Board Game Studies"
+      ],
+      "unresolvedQuestions": [
+        "Tabula ile aynı maddede mi anlatılmalı? İkisi arasındaki tarihsel geçiş kitabın en iyi anlatı fırsatlarından biridir."
+      ]
+    },
+    {
       "gameId": "luk-tsut-kei",
       "title": "Luk Tsut K'i",
       "altNames": [
@@ -3997,7 +3712,8 @@
         "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
         "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
         "Culin 1895 · Korean Games tarandı — Kanton biçimi için kullanılabilir kural seti bulunamadı",
-        "Murray 1952 DENENDİ ve açılamadı"
+        "Murray 1952 DENENDİ ve açılamadı",
+        "FAZ 6 · MURRAY s. 42 AÇILDI: § 3.3.13 oyunun TARİHİNİ verir (Konfüçyüs dönemi, Swei hanedanı, kiu kung adı) ama oyuna ÖZEL kural vermez; § 3.3'ün ortak kurallarına havale eder. Kitabın beşinci üç-taş oyunu olurdu ve ayırt edici bir kuralı YOK."
       ],
       "sourcesAttempted": [
         "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
@@ -4052,11 +3768,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/luk-tsut-kei/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 3,
-      "familyDeficitScore": 2.6,
+      "familyDeficitScore": 2.4,
       "culturalValue": 3,
       "mechanicalUniqueness": 2,
       "pageEconomy": 4,
-      "compositeScore": 14.6,
+      "compositeScore": 14.4,
       "priorityClass": "E",
       "priorityReason": "yararlı ama kritik değil",
       "sourceRefs": [
@@ -4156,11 +3872,11 @@
       "expectedSourceLocation": "06_FOUNDER_DELIVERY/terni-lapilli/",
       "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
       "unlockEase": 0,
-      "familyDeficitScore": 2.6,
+      "familyDeficitScore": 2.4,
       "culturalValue": 4,
       "mechanicalUniqueness": 3,
       "pageEconomy": 5,
-      "compositeScore": 14.6,
+      "compositeScore": 14.4,
       "priorityClass": "E",
       "priorityReason": "yararlı ama kritik değil",
       "sourceRefs": [

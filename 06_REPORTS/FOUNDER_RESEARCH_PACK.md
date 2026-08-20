@@ -14,7 +14,7 @@ ve o kitap masaya oturduğunda içinden birden çok madde çıkar.
 
 ## 0 · ÖNCE BUNU OKUYUN — ÜÇ SATIRLIK ÖZET
 
-1. **Murray 1952'yi bulun.** Tek başına 41 maddenin **24'ünü** açar.
+1. **Murray 1952'yi bulun.** Tek başına 38 maddenin **24'ünü** açar.
 2. Sonra **Parlett 1999 · Zaslavsky 1973 · Bell 1960–69 · Russ 2000**.
    Beşi birlikte **46 madde** açar.
 3. Geri kalan altı madde tek tek avlanır ve § 3'te ayrı listelenmiştir.
@@ -68,7 +68,7 @@ yinelenen dosyayı tanır.
 
 | | |
 |---|---|
-| **AÇTIĞI MADDE** | **18** |
+| **AÇTIĞI MADDE** | **15** |
 | **DURUM** | ⛔ **DENENDİ ve açılamadı** |
 | **KANIT** | archive.org nüshası yalnızca ÖDÜNÇ erişimine açık — HTTP 401 (source_verification.json · tablut kaydı, 2026-08-13) |
 | **NEDEN** | 1952 tarihli ve telif altındadır; tam metin indirilemez. |
@@ -90,50 +90,44 @@ Aşağıdaki oyunların GEÇTİĞİ sayfaların taraması ya da fotoğrafı. Mur
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
 | `bohnenspiel` | The Sowing Games | German | A | 21.2 | Murray 1952 ya da Bell'de Bohnenspiel maddesi — 2×6 çukur, 6'şar tohum, ekim yönü, 2/4/6 alma kuralı, zincirli alma |
-| `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | 19.5 | Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi |
 | `congklak` | The Sowing Games | Javanese | A | 19.2 | Murray 1952 ya da Russ 2000'de congklak/congkak/dakon maddesi |
 | `sungka` | The Sowing Games | Visayan | A | 19.2 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — sungka bölümü, SAYFA NUMARASIYLA (proje bu makalenin sayfa aralığını henüz… |
-| `go` | The Line and the Territory | Han Chinese | C | 18.6 | Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society N.S. XXVI (1894) — Smith'in KENDİ künyesinde geçiyor |
-| `morabaraba` | The Line and the Territory | Sotho | A | 18.6 | Zaslavsky 1973 ya da Murray 1952'de morabaraba/umlabalaba maddesi |
-| `shax` | The Line and the Territory | Somali | A | 18.6 | Murray 1952 ya da Zaslavsky 1973'te shax/jare maddesi |
-| `tapatan` | The Line and the Territory | Tagalog | A | 18.6 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — tapatan bölümü, sayfa numarasıyla |
+| `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | 19.0 | Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi |
+| `morabaraba` | The Line and the Territory | Sotho | A | 18.4 | Zaslavsky 1973 ya da Murray 1952'de morabaraba/umlabalaba maddesi |
+| `shax` | The Line and the Territory | Somali | A | 18.4 | Murray 1952 ya da Zaslavsky 1973'te shax/jare maddesi |
+| `tapatan` | The Line and the Territory | Tagalog | A | 18.4 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — tapatan bölümü, sayfa numarasıyla |
 | `hus` | The Sowing Games | Nama | C | 18.2 | Murray 1952 ya da Townshend 1979'da hus/ǁhus maddesi — dört sıra, ekim yönü, alma koşulu, bitiş |
-| `ashta-kashte` | The Race Home | Bengali | A | 17.9 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
-| `rimau-rimau` | The Hunt and the Siege | Malay | A | 17.5 | Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi |
-| `nard` | The Race Home | Persian | C | 16.9 | Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma |
-| `zamma` | The War Board | Amazigh | C | 16.9 | Murray 1952 ya da Béart 1955'te zamma/sig maddesi |
-| `halatafl` | The Hunt and the Siege | Icelandic | E | 16.5 | Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma |
-| `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.6 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
-| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 14.9 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
-| `luk-tsut-kei` | The Line and the Territory | Cantonese | E | 14.6 | Murray 1952'de luk tsut k'i maddesi |
-| `terni-lapilli` | The Line and the Territory | Roman | E | 14.6 | Roma üç-taş oyununun MEKANİĞİNİ tartışan bir arkeoloji/klasik filoloji çalışması |
+| `nard` | The Race Home | Persian | C | 16.7 | Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma |
+| `zamma` | The War Board | Amazigh | C | 16.7 | Murray 1952 ya da Béart 1955'te zamma/sig maddesi |
+| `halatafl` | The Hunt and the Siege | Icelandic | E | 16.0 | Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma |
+| `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.4 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
+| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 14.7 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
+| `luk-tsut-kei` | The Line and the Territory | Cantonese | E | 14.4 | Murray 1952'de luk tsut k'i maddesi |
+| `terni-lapilli` | The Line and the Territory | Roman | E | 14.4 | Roma üç-taş oyununun MEKANİĞİNİ tartışan bir arkeoloji/klasik filoloji çalışması |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
 var olduğu iddia edilmez*
 
 - `"Bohnenspiel" German mancala rules Murray`
 - `das Bohnenspiel Regeln historisch Saatspiel`
-- `"aadu puli attam" rules board tigers goats Tamil`
-- `"puli meka" game rules South India`
 - `"congklak" OR "congkak" OR "dakon" Javanese mancala rules`
 - `congkak Malay Indonesian sowing game rules ethnography`
 - `Culin "Philippine Games" American Anthropologist 1900 archive.org`
 - `American Anthropologist volume 2 1900 full text archive`
+- `"sungka" Visayan Philippine mancala rules Culin`
+- `"aadu puli attam" rules board tigers goats Tamil`
 
 **BUNLARI ŞURAYA BIRAKIN**
 
 ```
 06_FOUNDER_DELIVERY/bohnenspiel/
-06_FOUNDER_DELIVERY/aadu-puli-attam/
 06_FOUNDER_DELIVERY/congklak/
 06_FOUNDER_DELIVERY/sungka/
-06_FOUNDER_DELIVERY/go/
+06_FOUNDER_DELIVERY/aadu-puli-attam/
 06_FOUNDER_DELIVERY/morabaraba/
 06_FOUNDER_DELIVERY/shax/
 06_FOUNDER_DELIVERY/tapatan/
 06_FOUNDER_DELIVERY/hus/
-06_FOUNDER_DELIVERY/ashta-kashte/
-06_FOUNDER_DELIVERY/rimau-rimau/
 06_FOUNDER_DELIVERY/nard/
 06_FOUNDER_DELIVERY/zamma/
 06_FOUNDER_DELIVERY/halatafl/
@@ -141,67 +135,6 @@ var olduğu iddia edilmez*
 06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/
 06_FOUNDER_DELIVERY/luk-tsut-kei/
 06_FOUNDER_DELIVERY/terni-lapilli/
-```
-
----
-
-### ▸ Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
-
-| | |
-|---|---|
-| **AÇTIĞI MADDE** | **8** |
-| **DURUM** | ⛔ **DENENDİ ve açılamadı** |
-| **KANIT** | telif altında — açık tam metin yok (blockedSources kaydı) |
-| **NEDEN** | Telif altındadır. Dover tıpkıbasımı yaygın ve ucuzdur. |
-
-**NEREDE ARANIR**
-
-- Dover 1979 tıpkıbasımı — ikinci el piyasada bol ve ucuz
-- Üniversite kütüphanesi
-- archive.org ödünç hesabı
-
-**NE İSTİYORUZ**
-
-İlgili oyunların maddeleri. Bell her oyunu tahta diyagramıyla ve kısa kural metniyle verir; madde + diyagram birlikte gerekir.
-
-> EN UCUZ ÇÖZÜM. Dover tıpkıbasımı hâlâ basılıyor.
-
-**AÇTIĞI MADDELER**
-
-| oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
-|---|---|---|:---:|---:|---|
-| `bohnenspiel` | The Sowing Games | German | A | 21.2 | Murray 1952 ya da Bell'de Bohnenspiel maddesi — 2×6 çukur, 6'şar tohum, ekim yönü, 2/4/6 alma kuralı, zincirli alma |
-| `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.5 | Bell ya da Parlett'te bagh-chal maddesi |
-| `konane` | The War Board | Hawaiian | C | 19.9 | Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranma… |
-| `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | 19.5 | Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi |
-| `ashta-kashte` | The Race Home | Bengali | A | 17.9 | Murray 1952 ya da Bell'de ashta-kashte maddesi |
-| `len-choa` | The Hunt and the Siege | Thai | A | 17.5 | Bell'de len choa maddesi — tahta, leopar/hayvan sayıları, hareket, alma, bitiş |
-| `rimau-rimau` | The Hunt and the Siege | Malay | A | 17.5 | Murray 1952 ya da Bell'de rimau-rimau / main rimau maddesi |
-| `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.6 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
-
-**ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
-var olduğu iddia edilmez*
-
-- `"Bohnenspiel" German mancala rules Murray`
-- `das Bohnenspiel Regeln historisch Saatspiel`
-- `"bagh chal" rules tigers goats Nepal board game`
-- `bagh-chal Nepali traditional game rules ethnography`
-- `Culin "Hawaiian Games" American Anthropologist 1899 archive.org`
-- `American Anthropologist volume 1 1899 full text HathiTrust`
-- `konane Hawaiian checkers rules Bishop Museum`
-- `"aadu puli attam" rules board tigers goats Tamil`
-
-**BUNLARI ŞURAYA BIRAKIN**
-
-```
-06_FOUNDER_DELIVERY/bohnenspiel/
-06_FOUNDER_DELIVERY/bagh-chal/
-06_FOUNDER_DELIVERY/konane/
-06_FOUNDER_DELIVERY/aadu-puli-attam/
-06_FOUNDER_DELIVERY/ashta-kashte/
-06_FOUNDER_DELIVERY/len-choa/
-06_FOUNDER_DELIVERY/rimau-rimau/
-06_FOUNDER_DELIVERY/twelve-mens-morris/
 ```
 
 ---
@@ -232,12 +165,12 @@ var olduğu iddia edilmez*
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
 | `morra` | Games Without a Board | Italian | A | 21.8 | Morra'nın PUANLAMASINI ve KAZANMA koşulunu veren herhangi bir künye |
-| `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.5 | Bell ya da Parlett'te bagh-chal maddesi |
+| `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.0 | Bell ya da Parlett'te bagh-chal maddesi |
 | `petanque` | Games Without a Board | Provençal | A | 18.8 | FIPJP resmî kural kitabı — SÜRÜM, yürürlük tarihi ve madde numaraları |
-| `daldos` | The Race Home | Danish | C | 17.9 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
-| `game-of-the-goose` | The Race Home | Italian | E | 16.9 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
-| `makruk` | The War Board | Thai | E | 15.9 | Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır) |
-| `surakarta` | The War Board | Javanese | D | 15.9 | Surakarta'nın Java'daki geleneksel varlığını gösteren bir DÖNEM kaydı (20. yy öncesi ya da erken 20. yy saha kaydı) |
+| `daldos` | The Race Home | Danish | C | 17.7 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
+| `game-of-the-goose` | The Race Home | Italian | E | 16.7 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
+| `makruk` | The War Board | Thai | E | 15.7 | Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır) |
+| `surakarta` | The War Board | Javanese | D | 15.7 | Surakarta'nın Java'daki geleneksel varlığını gösteren bir DÖNEM kaydı (20. yy öncesi ya da erken 20. yy saha kaydı) |
 | `mahjong` | Chance and Nerve | Han Chinese | C | 14.2 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
@@ -292,33 +225,33 @@ Oyun bölümleri (kitabın oyunlara ayrılmış kısmı). Ampe, pilolo ve shisim
 
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
-| `yote` | The War Board | Wolof | C | 19.9 | Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca) |
 | `ampe` | Games Without a Board | Akan | A | 19.8 | Zaslavsky 1973'te ampe maddesi — sıçrama/ayak biçimi, puanlama, tur, bitiş |
 | `pilolo` | Games Without a Board | Ga | A | 19.8 | Zaslavsky 1973'te pilolo maddesi — saklama/arama sırası, puanlama, bitiş |
-| `shisima` | The Line and the Territory | Luhya | A | 19.6 | Zaslavsky 1973'te shisima maddesi — sekizgen tahta, 3'er taş, hareket kısıtı, üçlü sıra, bitiş |
-| `morabaraba` | The Line and the Territory | Sotho | A | 18.6 | Zaslavsky 1973 ya da Murray 1952'de morabaraba/umlabalaba maddesi |
-| `shax` | The Line and the Territory | Somali | A | 18.6 | Murray 1952 ya da Zaslavsky 1973'te shax/jare maddesi |
+| `yote` | The War Board | Wolof | C | 19.7 | Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca) |
+| `shisima` | The Line and the Territory | Luhya | A | 19.4 | Zaslavsky 1973'te shisima maddesi — sekizgen tahta, 3'er taş, hareket kısıtı, üçlü sıra, bitiş |
+| `morabaraba` | The Line and the Territory | Sotho | A | 18.4 | Zaslavsky 1973 ya da Murray 1952'de morabaraba/umlabalaba maddesi |
+| `shax` | The Line and the Territory | Somali | A | 18.4 | Murray 1952 ya da Zaslavsky 1973'te shax/jare maddesi |
 | `ayoayo` | The Sowing Games | Yoruba | E | 16.2 | Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977) — kural bölümü |
 | `mefuvha` | The Sowing Games | Venda | E | 16.2 | Zaslavsky 1973 ya da Townshend 1979'da mefuvha/muravharavha maddesi |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
 var olduğu iddia edilmez*
 
-- `Béart "Jeux et jouets de l'Ouest africain" IFAN 1955 PDF`
-- `"yoté" OR "yote" Wolof Senegal game rules double capture`
-- `jeux ouest africain yoté règles IFAN Dakar`
 - `"ampe" Ghana game rules`
 - `"ampe" Akan children's game ethnography`
 - `"pilolo" Ghana Ga children's game rules`
 - `Ga people traditional children games Ghana ethnography`
+- `Béart "Jeux et jouets de l'Ouest africain" IFAN 1955 PDF`
+- `"yoté" OR "yote" Wolof Senegal game rules double capture`
+- `jeux ouest africain yoté règles IFAN Dakar`
 - `"shisima" Luhya Kenya game rules octagon`
 
 **BUNLARI ŞURAYA BIRAKIN**
 
 ```
-06_FOUNDER_DELIVERY/yote/
 06_FOUNDER_DELIVERY/ampe/
 06_FOUNDER_DELIVERY/pilolo/
+06_FOUNDER_DELIVERY/yote/
 06_FOUNDER_DELIVERY/shisima/
 06_FOUNDER_DELIVERY/morabaraba/
 06_FOUNDER_DELIVERY/shax/
@@ -368,10 +301,10 @@ Aşağıdaki her künye TEK bir oyunu açar:
 |---|---|---|:---:|---:|---|
 | `adji-boto` | The Sowing Games | Ndyuka Maroon | C | 19.2 | Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) — makalenin tamamı |
 | `gebeta` | The Sowing Games | Amhara | C | 18.2 | Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the Horn of Africa', Ethiopia Observer 14 (1971) — makalenin tamamı |
-| `daldos` | The Race Home | Danish | C | 17.9 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
-| `game-of-the-goose` | The Race Home | Italian | E | 16.9 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
+| `daldos` | The Race Home | Danish | C | 17.7 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
+| `game-of-the-goose` | The Race Home | Italian | E | 16.7 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
 | `ayoayo` | The Sowing Games | Yoruba | E | 16.2 | Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University Press Nigeria, 1977) — kural bölümü |
-| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 14.9 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
+| `ludus-duodecim-scriptorum` | The Race Home | Roman | C | 14.7 | Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması |
 | `mahjong` | Chance and Nerve | Han Chinese | C | 14.2 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
@@ -396,6 +329,63 @@ var olduğu iddia edilmez*
 06_FOUNDER_DELIVERY/ayoayo/
 06_FOUNDER_DELIVERY/ludus-duodecim-scriptorum/
 06_FOUNDER_DELIVERY/mahjong/
+```
+
+---
+
+### ▸ Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–1969; Dover tıpkıbasımı 1979)
+
+| | |
+|---|---|
+| **AÇTIĞI MADDE** | **6** |
+| **DURUM** | ⛔ **DENENDİ ve açılamadı** |
+| **KANIT** | telif altında — açık tam metin yok (blockedSources kaydı) |
+| **NEDEN** | Telif altındadır. Dover tıpkıbasımı yaygın ve ucuzdur. |
+
+**NEREDE ARANIR**
+
+- Dover 1979 tıpkıbasımı — ikinci el piyasada bol ve ucuz
+- Üniversite kütüphanesi
+- archive.org ödünç hesabı
+
+**NE İSTİYORUZ**
+
+İlgili oyunların maddeleri. Bell her oyunu tahta diyagramıyla ve kısa kural metniyle verir; madde + diyagram birlikte gerekir.
+
+> EN UCUZ ÇÖZÜM. Dover tıpkıbasımı hâlâ basılıyor.
+
+**AÇTIĞI MADDELER**
+
+| oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
+|---|---|---|:---:|---:|---|
+| `bohnenspiel` | The Sowing Games | German | A | 21.2 | Murray 1952 ya da Bell'de Bohnenspiel maddesi — 2×6 çukur, 6'şar tohum, ekim yönü, 2/4/6 alma kuralı, zincirli alma |
+| `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.0 | Bell ya da Parlett'te bagh-chal maddesi |
+| `konane` | The War Board | Hawaiian | C | 19.7 | Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranma… |
+| `aadu-puli-attam` | The Hunt and the Siege | Tamil | A | 19.0 | Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi |
+| `len-choa` | The Hunt and the Siege | Thai | A | 17.0 | Bell'de len choa maddesi — tahta, leopar/hayvan sayıları, hareket, alma, bitiş |
+| `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.4 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
+
+**ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
+var olduğu iddia edilmez*
+
+- `"Bohnenspiel" German mancala rules Murray`
+- `das Bohnenspiel Regeln historisch Saatspiel`
+- `"bagh chal" rules tigers goats Nepal board game`
+- `bagh-chal Nepali traditional game rules ethnography`
+- `Culin "Hawaiian Games" American Anthropologist 1899 archive.org`
+- `American Anthropologist volume 1 1899 full text HathiTrust`
+- `konane Hawaiian checkers rules Bishop Museum`
+- `"aadu puli attam" rules board tigers goats Tamil`
+
+**BUNLARI ŞURAYA BIRAKIN**
+
+```
+06_FOUNDER_DELIVERY/bohnenspiel/
+06_FOUNDER_DELIVERY/bagh-chal/
+06_FOUNDER_DELIVERY/konane/
+06_FOUNDER_DELIVERY/aadu-puli-attam/
+06_FOUNDER_DELIVERY/len-choa/
+06_FOUNDER_DELIVERY/twelve-mens-morris/
 ```
 
 ---
@@ -523,8 +513,8 @@ yoté ve zamma/sig maddeleri. Béart oyunları saha kaydı olarak verir.
 
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
-| `yote` | The War Board | Wolof | C | 19.9 | Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca) |
-| `zamma` | The War Board | Amazigh | C | 16.9 | Murray 1952 ya da Béart 1955'te zamma/sig maddesi |
+| `yote` | The War Board | Wolof | C | 19.7 | Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca) |
+| `zamma` | The War Board | Amazigh | C | 16.7 | Murray 1952 ya da Béart 1955'te zamma/sig maddesi |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
 var olduğu iddia edilmez*
@@ -571,7 +561,7 @@ sungka ve tapatan bölümleri, sayfa numaralarıyla.
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
 | `sungka` | The Sowing Games | Visayan | A | 19.2 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — sungka bölümü, SAYFA NUMARASIYLA (proje bu makalenin sayfa aralığını henüz… |
-| `tapatan` | The Line and the Territory | Tagalog | A | 18.6 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — tapatan bölümü, sayfa numarasıyla |
+| `tapatan` | The Line and the Territory | Tagalog | A | 18.4 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — tapatan bölümü, sayfa numarasıyla |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
 var olduğu iddia edilmez*
@@ -711,7 +701,7 @@ kōnane bölümü, sayfa numarasıyla.
 
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
-| `konane` | The War Board | Hawaiian | C | 19.9 | Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranma… |
+| `konane` | The War Board | Hawaiian | C | 19.7 | Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranma… |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
 var olduğu iddia edilmez*
@@ -834,7 +824,7 @@ makruk (Siyam satrancı) bölümü — taşlar, kurulum, sayma (nap) kuralları.
 
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
-| `makruk` | The War Board | Thai | E | 15.9 | Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır) |
+| `makruk` | The War Board | Thai | E | 15.7 | Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır) |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
 var olduğu iddia edilmez*
@@ -847,48 +837,6 @@ var olduğu iddia edilmez*
 
 ```
 06_FOUNDER_DELIVERY/makruk/
-```
-
----
-
-### ▸ Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society, N.S. XXVI (1894)
-
-| | |
-|---|---|
-| **AÇTIĞI MADDE** | **1** |
-| **DURUM** | ◻ **HİÇ DENENMEDİ** — engelli değil, sırası gelmedi |
-| **KANIT** | Smith 1908'in KENDİ künyesinde geçiyor; proje henüz aramadı |
-| **NEDEN** | Eski dergi cildi; dijital nüshası aranmadı. |
-
-**NEREDE ARANIR**
-
-- archive.org — JCBRAS cilt XXVI
-- HathiTrust
-- Royal Asiatic Society China arşivi
-
-**NE İSTİYORUZ**
-
-Makalenin tamamı — ÇİN biçimini ve ÇİN alan sayımını veren bölüm.
-
-> go'nun kültür uyuşmazlığını çözecek TEK adaydır: Smith 1908 tam bir kural kitabıdır ama JAPON kodifikasyonunu ve JAPON sayımını verir.
-
-**AÇTIĞI MADDELER**
-
-| oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
-|---|---|---|:---:|---:|---|
-| `go` | The Line and the Territory | Han Chinese | C | 18.6 | Volpicelli, Z., 'Wei-ch'i', Journal of the China Branch of the Royal Asiatic Society N.S. XXVI (1894) — Smith'in KENDİ künyesinde geçiyor |
-
-**ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
-var olduğu iddia edilmez*
-
-- `Volpicelli "Wei-chi" Journal China Branch Royal Asiatic Society 1894`
-- `weiqi Chinese area scoring rules 19th century source`
-- `wei-ch'i Chinese go rules historical article archive.org`
-
-**BUNLARI ŞURAYA BIRAKIN**
-
-```
-06_FOUNDER_DELIVERY/go/
 ```
 
 ---
@@ -991,7 +939,7 @@ kısa bir kural özeti
 GAME     : Bagh-Chal (bagh-chal)
 CULTURE  : Nepali · South Asia
 FAMILY   : The Hunt and the Siege
-PRIORITY : A · composite 20.5
+PRIORITY : A · composite 20.0
 BLOCKER  : P1 — SOURCE ACCESS BLOCKED
 ```
 
@@ -1026,94 +974,6 @@ kısa bir kural özeti
 ```
 06_FOUNDER_DELIVERY/bagh-chal/source.pdf
 06_FOUNDER_DELIVERY/bagh-chal/bibliography.md
-```
-
----
-
-```
-GAME     : Kōnane (konane)
-CULTURE  : Hawaiian · Oceania
-FAMILY   : The War Board
-PRIORITY : C · composite 19.9
-BLOCKER  : P2 — SOURCE TEXT UNAVAILABLE
-```
-
-**SEARCH FOR:**
-
-1. Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranmalı — proje bu makalenin sayfa aralığını henüz görmedi)
-2. Tahta ölçüsü, ilk iki taşın kaldırılması, YALNIZCA atlayarak alma, çoklu atlama kuralı ve hamlesiz kalanın kaybetmesi
-3. ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye — atıf zorunluluğu için (Bishop Museum · Hawaiian kültür kurumları)
-
-**MINIMUM ACCEPTABLE SOURCE:**
-
-Kanıt listesi aşağıdadır; hepsi tek bir kaynaktan gelmek zorunda
-değildir. `bibliography.md` hangi kanıtın hangi kaynaktan geldiğini
-söylediği sürece iki ayrı kaynak birleştirilebilir.
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**PREFERRED SOURCE:** American Anthropologist cilt 1 (1899) taraması + Bishop Museum kaydı.
-
-**WHAT TO RETURN:** PDF · tarama · kararlı URL · künye (yazar ·
-başlık · baskı · yıl · **sayfa**) · ilgili sayfa aralığı · gerekirse
-kısa bir kural özeti
-
-**SAVE AS / DROP INTO:**
-
-```
-06_FOUNDER_DELIVERY/konane/source.pdf
-06_FOUNDER_DELIVERY/konane/bibliography.md
-```
-
----
-
-```
-GAME     : Yoté (yote)
-CULTURE  : Wolof · West Africa
-FAMILY   : The War Board
-PRIORITY : C · composite 19.9
-BLOCKER  : P2 — SOURCE TEXT UNAVAILABLE
-```
-
-**SEARCH FOR:**
-
-1. Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca)
-2. 5×6 ızgara, elde tutulan taşların sırayla girmesi, atlayarak alma ve ALINAN HER TAŞLA BİRLİKTE İKİNCİ BİR TAŞIN DA KALDIRILMASI kuralı — oyunun ayırt edici mekaniği budur (distinct=5)
-3. Wolof atfını veren bir kaynak
-
-**MINIMUM ACCEPTABLE SOURCE:**
-
-Kanıt listesi aşağıdadır; hepsi tek bir kaynaktan gelmek zorunda
-değildir. `bibliography.md` hangi kanıtın hangi kaynaktan geldiğini
-söylediği sürece iki ayrı kaynak birleştirilebilir.
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**PREFERRED SOURCE:** Béart 1955 — Batı Afrika oyunlarının en iyi saha kaydı; zamma ile AYNI kaynak, tek teslim iki oyun açar.
-
-**WHAT TO RETURN:** PDF · tarama · kararlı URL · künye (yazar ·
-başlık · baskı · yıl · **sayfa**) · ilgili sayfa aralığı · gerekirse
-kısa bir kural özeti
-
-**SAVE AS / DROP INTO:**
-
-```
-06_FOUNDER_DELIVERY/yote/source.pdf
-06_FOUNDER_DELIVERY/yote/bibliography.md
 ```
 
 ---
@@ -1205,10 +1065,98 @@ kısa bir kural özeti
 ---
 
 ```
+GAME     : Kōnane (konane)
+CULTURE  : Hawaiian · Oceania
+FAMILY   : The War Board
+PRIORITY : C · composite 19.7
+BLOCKER  : P2 — SOURCE TEXT UNAVAILABLE
+```
+
+**SEARCH FOR:**
+
+1. Culin, Stewart, 'Hawaiian Games', American Anthropologist 1:2 (1899) — kōnane bölümü, SAYFA NUMARASIYLA (KAMUSAL ALAN; ciltli dergi taraması aranmalı — proje bu makalenin sayfa aralığını henüz görmedi)
+2. Tahta ölçüsü, ilk iki taşın kaldırılması, YALNIZCA atlayarak alma, çoklu atlama kuralı ve hamlesiz kalanın kaybetmesi
+3. ÇAĞDAŞ Kānaka Maoli kaynaklı bir künye — atıf zorunluluğu için (Bishop Museum · Hawaiian kültür kurumları)
+
+**MINIMUM ACCEPTABLE SOURCE:**
+
+Kanıt listesi aşağıdadır; hepsi tek bir kaynaktan gelmek zorunda
+değildir. `bibliography.md` hangi kanıtın hangi kaynaktan geldiğini
+söylediği sürece iki ayrı kaynak birleştirilebilir.
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
+```
+
+**PREFERRED SOURCE:** American Anthropologist cilt 1 (1899) taraması + Bishop Museum kaydı.
+
+**WHAT TO RETURN:** PDF · tarama · kararlı URL · künye (yazar ·
+başlık · baskı · yıl · **sayfa**) · ilgili sayfa aralığı · gerekirse
+kısa bir kural özeti
+
+**SAVE AS / DROP INTO:**
+
+```
+06_FOUNDER_DELIVERY/konane/source.pdf
+06_FOUNDER_DELIVERY/konane/bibliography.md
+```
+
+---
+
+```
+GAME     : Yoté (yote)
+CULTURE  : Wolof · West Africa
+FAMILY   : The War Board
+PRIORITY : C · composite 19.7
+BLOCKER  : P2 — SOURCE TEXT UNAVAILABLE
+```
+
+**SEARCH FOR:**
+
+1. Béart, Charles, Jeux et jouets de l'Ouest africain (Dakar: IFAN, 1955) — yoté bölümü (Fransızca)
+2. 5×6 ızgara, elde tutulan taşların sırayla girmesi, atlayarak alma ve ALINAN HER TAŞLA BİRLİKTE İKİNCİ BİR TAŞIN DA KALDIRILMASI kuralı — oyunun ayırt edici mekaniği budur (distinct=5)
+3. Wolof atfını veren bir kaynak
+
+**MINIMUM ACCEPTABLE SOURCE:**
+
+Kanıt listesi aşağıdadır; hepsi tek bir kaynaktan gelmek zorunda
+değildir. `bibliography.md` hangi kanıtın hangi kaynaktan geldiğini
+söylediği sürece iki ayrı kaynak birleştirilebilir.
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
+```
+
+**PREFERRED SOURCE:** Béart 1955 — Batı Afrika oyunlarının en iyi saha kaydı; zamma ile AYNI kaynak, tek teslim iki oyun açar.
+
+**WHAT TO RETURN:** PDF · tarama · kararlı URL · künye (yazar ·
+başlık · baskı · yıl · **sayfa**) · ilgili sayfa aralığı · gerekirse
+kısa bir kural özeti
+
+**SAVE AS / DROP INTO:**
+
+```
+06_FOUNDER_DELIVERY/yote/source.pdf
+06_FOUNDER_DELIVERY/yote/bibliography.md
+```
+
+---
+
+```
 GAME     : Shisima (shisima)
 CULTURE  : Luhya · East Africa
 FAMILY   : The Line and the Territory
-PRIORITY : A · composite 19.6
+PRIORITY : A · composite 19.4
 BLOCKER  : P1 — SOURCE ACCESS BLOCKED
 ```
 
@@ -1243,49 +1191,6 @@ kısa bir kural özeti
 ```
 06_FOUNDER_DELIVERY/shisima/source.pdf
 06_FOUNDER_DELIVERY/shisima/bibliography.md
-```
-
----
-
-```
-GAME     : Aadu Puli Attam (aadu-puli-attam)
-CULTURE  : Tamil · South Asia
-FAMILY   : The Hunt and the Siege
-PRIORITY : A · composite 19.5
-BLOCKER  : P1 — SOURCE ACCESS BLOCKED
-```
-
-**SEARCH FOR:**
-
-1. Bell ya da Murray 1952'de aadu puli attam / puli meka maddesi
-2. Tahta çizimi (üçgen ızgara), keçi ve kaplan sayıları, yerleştirme aşaması, atlama-alma kuralı, kaplanın kilitlenme koşulu
-
-**MINIMUM ACCEPTABLE SOURCE:**
-
-Kanıt listesi aşağıdadır; hepsi tek bir kaynaktan gelmek zorunda
-değildir. `bibliography.md` hangi kanıtın hangi kaynaktan geldiğini
-söylediği sürece iki ayrı kaynak birleştirilebilir.
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**PREFERRED SOURCE:** Bir madde ki hem tahtayı hem de KAPLAN KİLİTLENMESİ koşulunu versin — Bagh-Chal ile farkı buradadır ve kitap iki maddeyi ayırmak için bu farkı yazmak zorundadır.
-
-**WHAT TO RETURN:** PDF · tarama · kararlı URL · künye (yazar ·
-başlık · baskı · yıl · **sayfa**) · ilgili sayfa aralığı · gerekirse
-kısa bir kural özeti
-
-**SAVE AS / DROP INTO:**
-
-```
-06_FOUNDER_DELIVERY/aadu-puli-attam/source.pdf
-06_FOUNDER_DELIVERY/aadu-puli-attam/bibliography.md
 ```
 
 ---
@@ -1329,6 +1234,50 @@ kısa bir kural özeti
 ```
 06_FOUNDER_DELIVERY/adji-boto/source.pdf
 06_FOUNDER_DELIVERY/adji-boto/bibliography.md
+```
+
+---
+
+```
+GAME     : Congklak (congklak)
+CULTURE  : Javanese · Southeast Asia
+FAMILY   : The Sowing Games
+PRIORITY : A · composite 19.2
+BLOCKER  : P1 — SOURCE ACCESS BLOCKED
+```
+
+**SEARCH FOR:**
+
+1. Murray 1952 ya da Russ 2000'de congklak/congkak/dakon maddesi
+2. Çukur sayısı, depo (rumah) kuralı, eş zamanlı başlangıç olup olmadığı, ekim yönü, alma, tur sonu ve yeniden dizme kuralı
+3. KARAR MALZEMESİ: sungka ile mekanik farkı — kitap ikisini ayrı madde yapacaksa farkı yazmalı
+
+**MINIMUM ACCEPTABLE SOURCE:**
+
+Kanıt listesi aşağıdadır; hepsi tek bir kaynaktan gelmek zorunda
+değildir. `bibliography.md` hangi kanıtın hangi kaynaktan geldiğini
+söylediği sürece iki ayrı kaynak birleştirilebilir.
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+```
+
+**PREFERRED SOURCE:** Sayfa-doğrulanmış tarama ya da kararlı kamusal adres; künye tam (yazar · başlık · baskı · yıl · sayfa).
+
+**WHAT TO RETURN:** PDF · tarama · kararlı URL · künye (yazar ·
+başlık · baskı · yıl · **sayfa**) · ilgili sayfa aralığı · gerekirse
+kısa bir kural özeti
+
+**SAVE AS / DROP INTO:**
+
+```
+06_FOUNDER_DELIVERY/congklak/source.pdf
+06_FOUNDER_DELIVERY/congklak/bibliography.md
 ```
 
 ---

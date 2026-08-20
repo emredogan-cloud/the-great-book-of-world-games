@@ -1,594 +1,594 @@
 {
-  "$comment": [
-    "FAZ 2 PİLOT DİYAGRAM TANIMLAYICILARI — DOĞRULAMA AMAÇLIDIR.",
-    "",
-    "⚠ BUNLAR ÜRETİM VARLIĞI DEĞİLDİR. Nihai gravür levhalar Faz 5'te",
-    "üretilir. Buradaki sekiz tanımlayıcı tek bir soruyu cevaplamak için",
-    "vardır: DİYAGRAM DİLİ BEŞ TAHTA SINIFINI DA TAŞIYOR MU?",
-    "",
-    "Sekizi birden 07_ASSETS/diagrams/*.svg olarak render edilir",
-    "(04_BUILD/render_diagrams.py) ve dizgi ölçümüne gerçek alan verir.",
-    "Diyagramın kapladığı alan bir tahmin değil, bir ÖLÇÜMDÜR."
-  ],
-  "version": "1.0",
-  "phase": "phase2",
-  "purpose": "validation-only",
-  "diagrams": [
+ "$comment": [
+  "FAZ 2 PİLOT DİYAGRAM TANIMLAYICILARI — DOĞRULAMA AMAÇLIDIR.",
+  "",
+  "⚠ BUNLAR ÜRETİM VARLIĞI DEĞİLDİR. Nihai gravür levhalar Faz 5'te",
+  "üretilir. Buradaki sekiz tanımlayıcı tek bir soruyu cevaplamak için",
+  "vardır: DİYAGRAM DİLİ BEŞ TAHTA SINIFINI DA TAŞIYOR MU?",
+  "",
+  "Sekizi birden 07_ASSETS/diagrams/*.svg olarak render edilir",
+  "(04_BUILD/render_diagrams.py) ve dizgi ölçümüne gerçek alan verir.",
+  "Diyagramın kapladığı alan bir tahmin değil, bir ÖLÇÜMDÜR."
+ ],
+ "version": "1.0",
+ "phase": "phase2",
+ "purpose": "validation-only",
+ "diagrams": [
+  {
+   "diagramId": "tablut-setup",
+   "gameId": "tablut",
+   "type": "setup-illustration",
+   "boardClass": "cell",
+   "size": {
+    "cols": 9,
+    "rows": 9
+   },
+   "panels": 1,
+   "reconstructed": true,
+   "caption": "Bu diyagram Linnaeus'un 1732 tarihli günlüğüne (1811 çevirisi, c. II, ss. 55–58) dayanarak yeniden kurgulanmıştır; kaydın kendi harflendirmesi (a–m) korunmamış, kitabın koordinat sistemi kullanılmıştır.",
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
     {
-      "diagramId": "tablut-setup",
-      "gameId": "tablut",
-      "type": "setup-illustration",
-      "boardClass": "cell",
-      "size": {
-        "cols": 9,
-        "rows": 9
-      },
-      "panels": 1,
-      "reconstructed": true,
-      "caption": "Bu diyagram Linnaeus'un 1732 tarihli günlüğüne (1811 çevirisi, c. II, ss. 55–58) dayanarak yeniden kurgulanmıştır; kaydın kendi harflendirmesi (a–m) korunmamış, kitabın koordinat sistemi kullanılmıştır.",
-      "greyLevels": [
-        0,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "e5",
-          "glyph": "king"
-        },
-        {
-          "at": "d5",
-          "glyph": "light"
-        },
-        {
-          "at": "f5",
-          "glyph": "light"
-        },
-        {
-          "at": "e4",
-          "glyph": "light"
-        },
-        {
-          "at": "e6",
-          "glyph": "light"
-        },
-        {
-          "at": "c5",
-          "glyph": "light"
-        },
-        {
-          "at": "g5",
-          "glyph": "light"
-        },
-        {
-          "at": "e3",
-          "glyph": "light"
-        },
-        {
-          "at": "e7",
-          "glyph": "light"
-        },
-        {
-          "at": "d1",
-          "glyph": "dark"
-        },
-        {
-          "at": "e1",
-          "glyph": "dark"
-        },
-        {
-          "at": "f1",
-          "glyph": "dark"
-        },
-        {
-          "at": "e2",
-          "glyph": "dark"
-        },
-        {
-          "at": "d9",
-          "glyph": "dark"
-        },
-        {
-          "at": "e9",
-          "glyph": "dark"
-        },
-        {
-          "at": "f9",
-          "glyph": "dark"
-        },
-        {
-          "at": "e8",
-          "glyph": "dark"
-        },
-        {
-          "at": "a4",
-          "glyph": "dark"
-        },
-        {
-          "at": "a5",
-          "glyph": "dark"
-        },
-        {
-          "at": "a6",
-          "glyph": "dark"
-        },
-        {
-          "at": "b5",
-          "glyph": "dark"
-        },
-        {
-          "at": "i4",
-          "glyph": "dark"
-        },
-        {
-          "at": "i5",
-          "glyph": "dark"
-        },
-        {
-          "at": "i6",
-          "glyph": "dark"
-        },
-        {
-          "at": "h5",
-          "glyph": "dark"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "king",
-          "label": "kral — yalnız o merkez kareye girebilir"
-        },
-        {
-          "glyph": "light",
-          "label": "savunan (sekiz)"
-        },
-        {
-          "glyph": "dark",
-          "label": "kuşatan (on altı)"
-        }
-      ]
+     "at": "e5",
+     "glyph": "king"
     },
     {
-      "diagramId": "tablut-capture",
-      "gameId": "tablut",
-      "type": "move-diagram",
-      "boardClass": "cell",
-      "size": {
-        "cols": 3,
-        "rows": 3
-      },
-      "panels": 1,
-      "reconstructed": true,
-      "caption": "Üç kareye üçlük bir AYRINTI — tahtanın tamamı değil. Alma kuralı Linnaeus'un 9. maddesine dayanır: 'iki düşman karesi arasına giren taş öldürülür ve kaldırılır.' Kralın bu kuraldan muaf olduğu da aynı maddededir.",
-      "greyLevels": [
-        0,
-        55,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "a1",
-          "glyph": "light"
-        },
-        {
-          "at": "b1",
-          "glyph": "dark",
-          "captured": true
-        },
-        {
-          "at": "c1",
-          "glyph": "king"
-        },
-        {
-          "at": "a3",
-          "glyph": "light"
-        }
-      ],
-      "arrows": [
-        {
-          "kind": "move",
-          "from": "a3",
-          "to": "a1"
-        }
-      ],
-      "markers": [],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "savunan"
-        },
-        {
-          "glyph": "dark",
-          "label": "kuşatan"
-        },
-        {
-          "glyph": "king",
-          "label": "kral — alınmaz"
-        },
-        {
-          "glyph": "move",
-          "label": "gösterilen hamle"
-        },
-        {
-          "glyph": "captured",
-          "label": "bu hamlede alındı"
-        }
-      ]
+     "at": "d5",
+     "glyph": "light"
     },
     {
-      "diagramId": "bao-setup",
-      "gameId": "bao-la-kiswahili",
-      "type": "board-diagram",
-      "boardClass": "pit",
-      "size": {
-        "pitsPerRow": 8,
-        "rows": 4,
-        "stores": false
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "A'5",
-          "glyph": "seedCount",
-          "value": 6
-        },
-        {
-          "at": "A'6",
-          "glyph": "seedCount",
-          "value": 2
-        },
-        {
-          "at": "B'4",
-          "glyph": "seedCount",
-          "value": 2
-        },
-        {
-          "at": "B'3",
-          "glyph": "seedCount",
-          "value": 6
-        }
-      ],
-      "arrows": [
-        {
-          "kind": "flow",
-          "from": "B'3",
-          "to": "B'8"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "seedCount",
-          "label": "çukurdaki tohum sayısı"
-        },
-        {
-          "glyph": "flow",
-          "label": "ekim yönü"
-        }
-      ]
+     "at": "f5",
+     "glyph": "light"
     },
     {
-      "diagramId": "go-9x9-capture",
-      "gameId": "go",
-      "type": "move-diagram",
-      "boardClass": "point",
-      "size": {
-        "cols": 9,
-        "rows": 9
-      },
-      "panels": 2,
-      "reconstructed": false,
-      "adaptedFrom": "19×19",
-      "caption": "Go — 9×9 (uyarlama) · özgün tahta 19×19'dur (Falkener 1892, s. 239; Culin 1895, s. 91). Dokuz kesişimli tahta kitabın editoryal kararıdır: on dokuzluk tahta iki sayfada öğretilemez.",
-      "greyLevels": [
-        0,
-        55,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "e5",
-          "glyph": "light",
-          "captured": true
-        },
-        {
-          "at": "d5",
-          "glyph": "dark"
-        },
-        {
-          "at": "f5",
-          "glyph": "dark"
-        },
-        {
-          "at": "e4",
-          "glyph": "dark"
-        },
-        {
-          "at": "e6",
-          "glyph": "dark"
-        }
-      ],
-      "arrows": [
-        {
-          "kind": "move",
-          "from": "e7",
-          "to": "e6"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "beyaz taş"
-        },
-        {
-          "glyph": "dark",
-          "label": "siyah taş"
-        },
-        {
-          "glyph": "move",
-          "label": "gösterilen hamle"
-        },
-        {
-          "glyph": "captured",
-          "label": "bu hamlede alındı"
-        }
-      ]
+     "at": "e4",
+     "glyph": "light"
     },
     {
-      "diagramId": "fanorona-withdrawal",
-      "gameId": "fanorona",
-      "type": "move-diagram",
-      "boardClass": "point",
-      "size": {
-        "cols": 9,
-        "rows": 5
-      },
-      "panels": 2,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        55,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "e3",
-          "glyph": "light"
-        },
-        {
-          "at": "f3",
-          "glyph": "dark",
-          "captured": true
-        },
-        {
-          "at": "g3",
-          "glyph": "dark",
-          "captured": true
-        },
-        {
-          "at": "h3",
-          "glyph": "dark",
-          "captured": true
-        }
-      ],
-      "arrows": [
-        {
-          "kind": "move",
-          "from": "e3",
-          "to": "d3"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "hamleyi yapan taş"
-        },
-        {
-          "glyph": "dark",
-          "label": "çekilmeyle alınan taşlar"
-        },
-        {
-          "glyph": "move",
-          "label": "çekilme yönü — alınanlar okun ARKASINDADIR"
-        },
-        {
-          "glyph": "captured",
-          "label": "bu hamlede alındı"
-        }
-      ]
+     "at": "e6",
+     "glyph": "light"
     },
     {
-      "diagramId": "yut-track",
-      "gameId": "yut-nori",
-      "type": "board-diagram",
-      "boardClass": "track",
-      "size": {
-        "stations": 29
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "0",
-          "glyph": "light"
-        },
-        {
-          "at": "5",
-          "glyph": "dark"
-        }
-      ],
-      "arrows": [
-        {
-          "kind": "flow",
-          "from": "0",
-          "to": "20"
-        },
-        {
-          "kind": "alternate",
-          "from": "5",
-          "to": "21a"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "birinci oyuncunun atı"
-        },
-        {
-          "glyph": "dark",
-          "label": "ikinci oyuncunun atı"
-        },
-        {
-          "kind": "flow",
-          "glyph": "flow",
-          "label": "ana çember, saat yönünün tersine"
-        },
-        {
-          "glyph": "alternate",
-          "label": "kısayol — köşe durağında açılır"
-        }
-      ]
+     "at": "c5",
+     "glyph": "light"
     },
     {
-      "diagramId": "mbube-formation",
-      "gameId": "mbube-mbube",
-      "type": "setup-illustration",
-      "boardClass": "bodily",
-      "frame": "formation",
-      "size": {},
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        25,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "ring",
-          "glyph": "light"
-        },
-        {
-          "at": "centre",
-          "glyph": "blindfolded"
-        },
-        {
-          "at": "role1",
-          "glyph": "blindfolded"
-        }
-      ],
-      "markers": [
-        {
-          "kind": "ring"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "çemberi kuran oyuncular — sayı künyede yazar"
-        },
-        {
-          "glyph": "blindfolded",
-          "label": "gözü bağlı iki oyuncu: aslan ve manda"
-        },
-        {
-          "glyph": "ring",
-          "label": "çember — altı ile yirmi kişi arasında"
-        }
-      ]
+     "at": "g5",
+     "glyph": "light"
     },
     {
-      "diagramId": "catscradle-cradle",
-      "gameId": "cats-cradle",
-      "type": "move-diagram",
-      "boardClass": "bodily",
-      "frame": "figure",
-      "size": {
-        "spanMm": 58.0,
-        "aspect": 0.66
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "nodes": {
-        "lt": [
-          0.1,
-          0.14
-        ],
-        "rt": [
-          0.9,
-          0.14
-        ],
-        "lb": [
-          0.1,
-          0.86
-        ],
-        "rb": [
-          0.9,
-          0.86
-        ],
-        "ln": [
-          0.12,
-          0.62
-        ],
-        "lf": [
-          0.12,
-          0.38
-        ],
-        "rn": [
-          0.88,
-          0.62
-        ],
-        "rf": [
-          0.88,
-          0.38
-        ]
-      },
-      "strings": [
-        [
-          "lt",
-          "rt"
-        ],
-        [
-          "lb",
-          "rb"
-        ],
-        [
-          "ln",
-          "rf"
-        ],
-        [
-          "lf",
-          "rn"
-        ]
-      ],
-      "pieces": [
-        {
-          "at": "lf",
-          "glyph": "light"
-        },
-        {
-          "at": "rf",
-          "glyph": "light"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "orta parmak — ilmeği taşıyan"
-        }
-      ],
-      "caption": "BEŞİK. Üstte ve altta iki düz ip; ortada orta parmak ilmekleri ÇAPRAZLANIR. İkinci oyuncu bu iki çaprazı çimdikleyip dışarıdan dolaştırarak ortadan yukarı alır ve Asker Yatağı'nı çıkarır."
+     "at": "e3",
+     "glyph": "light"
+    },
+    {
+     "at": "e7",
+     "glyph": "light"
+    },
+    {
+     "at": "d1",
+     "glyph": "dark"
+    },
+    {
+     "at": "e1",
+     "glyph": "dark"
+    },
+    {
+     "at": "f1",
+     "glyph": "dark"
+    },
+    {
+     "at": "e2",
+     "glyph": "dark"
+    },
+    {
+     "at": "d9",
+     "glyph": "dark"
+    },
+    {
+     "at": "e9",
+     "glyph": "dark"
+    },
+    {
+     "at": "f9",
+     "glyph": "dark"
+    },
+    {
+     "at": "e8",
+     "glyph": "dark"
+    },
+    {
+     "at": "a4",
+     "glyph": "dark"
+    },
+    {
+     "at": "a5",
+     "glyph": "dark"
+    },
+    {
+     "at": "a6",
+     "glyph": "dark"
+    },
+    {
+     "at": "b5",
+     "glyph": "dark"
+    },
+    {
+     "at": "i4",
+     "glyph": "dark"
+    },
+    {
+     "at": "i5",
+     "glyph": "dark"
+    },
+    {
+     "at": "i6",
+     "glyph": "dark"
+    },
+    {
+     "at": "h5",
+     "glyph": "dark"
     }
-  ]
+   ],
+   "legend": [
+    {
+     "glyph": "king",
+     "label": "the king — only he enters the castle"
+    },
+    {
+     "glyph": "light",
+     "label": "the defenders (eight)"
+    },
+    {
+     "glyph": "dark",
+     "label": "the besiegers (sixteen)"
+    }
+   ]
+  },
+  {
+   "diagramId": "tablut-capture",
+   "gameId": "tablut",
+   "type": "move-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 3,
+    "rows": 3
+   },
+   "panels": 1,
+   "reconstructed": true,
+   "caption": "Üç kareye üçlük bir AYRINTI — tahtanın tamamı değil. Alma kuralı Linnaeus'un 9. maddesine dayanır: 'iki düşman karesi arasına giren taş öldürülür ve kaldırılır.' Kralın bu kuraldan muaf olduğu da aynı maddededir.",
+   "greyLevels": [
+    0,
+    55,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "a1",
+     "glyph": "light"
+    },
+    {
+     "at": "b1",
+     "glyph": "dark",
+     "captured": true
+    },
+    {
+     "at": "c1",
+     "glyph": "king"
+    },
+    {
+     "at": "a3",
+     "glyph": "light"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "a3",
+     "to": "a1"
+    }
+   ],
+   "markers": [],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "defenders"
+    },
+    {
+     "glyph": "dark",
+     "label": "besiegers"
+    },
+    {
+     "glyph": "king",
+     "label": "the king — safe here"
+    },
+    {
+     "glyph": "move",
+     "label": "the move"
+    },
+    {
+     "glyph": "captured",
+     "label": "taken"
+    }
+   ]
+  },
+  {
+   "diagramId": "bao-setup",
+   "gameId": "bao-la-kiswahili",
+   "type": "board-diagram",
+   "boardClass": "pit",
+   "size": {
+    "pitsPerRow": 8,
+    "rows": 4,
+    "stores": false
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "A'5",
+     "glyph": "seedCount",
+     "value": 6
+    },
+    {
+     "at": "A'6",
+     "glyph": "seedCount",
+     "value": 2
+    },
+    {
+     "at": "B'4",
+     "glyph": "seedCount",
+     "value": 2
+    },
+    {
+     "at": "B'3",
+     "glyph": "seedCount",
+     "value": 6
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "flow",
+     "from": "B'3",
+     "to": "B'8"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "seedCount",
+     "label": "seeds in each hollow"
+    },
+    {
+     "glyph": "flow",
+     "label": "the sowing direction"
+    }
+   ]
+  },
+  {
+   "diagramId": "go-9x9-capture",
+   "gameId": "go",
+   "type": "move-diagram",
+   "boardClass": "point",
+   "size": {
+    "cols": 9,
+    "rows": 9
+   },
+   "panels": 2,
+   "reconstructed": false,
+   "adaptedFrom": "19×19",
+   "caption": "Go — 9×9 (uyarlama) · özgün tahta 19×19'dur (Falkener 1892, s. 239; Culin 1895, s. 91). Dokuz kesişimli tahta kitabın editoryal kararıdır: on dokuzluk tahta iki sayfada öğretilemez.",
+   "greyLevels": [
+    0,
+    55,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "e5",
+     "glyph": "light",
+     "captured": true
+    },
+    {
+     "at": "d5",
+     "glyph": "dark"
+    },
+    {
+     "at": "f5",
+     "glyph": "dark"
+    },
+    {
+     "at": "e4",
+     "glyph": "dark"
+    },
+    {
+     "at": "e6",
+     "glyph": "dark"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "e7",
+     "to": "e6"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "a white stone"
+    },
+    {
+     "glyph": "dark",
+     "label": "a black stone"
+    },
+    {
+     "glyph": "move",
+     "label": "the move shown"
+    },
+    {
+     "glyph": "captured",
+     "label": "taken on this move"
+    }
+   ]
+  },
+  {
+   "diagramId": "fanorona-withdrawal",
+   "gameId": "fanorona",
+   "type": "move-diagram",
+   "boardClass": "point",
+   "size": {
+    "cols": 9,
+    "rows": 5
+   },
+   "panels": 2,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    55,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "e3",
+     "glyph": "light"
+    },
+    {
+     "at": "f3",
+     "glyph": "dark",
+     "captured": true
+    },
+    {
+     "at": "g3",
+     "glyph": "dark",
+     "captured": true
+    },
+    {
+     "at": "h3",
+     "glyph": "dark",
+     "captured": true
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "e3",
+     "to": "d3"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the piece that moves"
+    },
+    {
+     "glyph": "dark",
+     "label": "the pieces taken by withdrawal"
+    },
+    {
+     "glyph": "move",
+     "label": "withdrawal — the taken lie BEHIND the arrow"
+    },
+    {
+     "glyph": "captured",
+     "label": "taken on this move"
+    }
+   ]
+  },
+  {
+   "diagramId": "yut-track",
+   "gameId": "yut-nori",
+   "type": "board-diagram",
+   "boardClass": "track",
+   "size": {
+    "stations": 29
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "0",
+     "glyph": "light"
+    },
+    {
+     "at": "5",
+     "glyph": "dark"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "flow",
+     "from": "0",
+     "to": "20"
+    },
+    {
+     "kind": "alternate",
+     "from": "5",
+     "to": "21a"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the first player's horse"
+    },
+    {
+     "glyph": "dark",
+     "label": "the second player's horse"
+    },
+    {
+     "kind": "flow",
+     "glyph": "flow",
+     "label": "the main circuit, anticlockwise"
+    },
+    {
+     "glyph": "alternate",
+     "label": "the short cut — opens at a corner"
+    }
+   ]
+  },
+  {
+   "diagramId": "mbube-formation",
+   "gameId": "mbube-mbube",
+   "type": "setup-illustration",
+   "boardClass": "bodily",
+   "frame": "formation",
+   "size": {},
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    25,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "ring",
+     "glyph": "light"
+    },
+    {
+     "at": "centre",
+     "glyph": "blindfolded"
+    },
+    {
+     "at": "role1",
+     "glyph": "blindfolded"
+    }
+   ],
+   "markers": [
+    {
+     "kind": "ring"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the players forming the ring"
+    },
+    {
+     "glyph": "blindfolded",
+     "label": "the two blindfolded: lion and buffalo"
+    },
+    {
+     "glyph": "ring",
+     "label": "the ring — six to twenty players"
+    }
+   ]
+  },
+  {
+   "diagramId": "catscradle-cradle",
+   "gameId": "cats-cradle",
+   "type": "move-diagram",
+   "boardClass": "bodily",
+   "frame": "figure",
+   "size": {
+    "spanMm": 58.0,
+    "aspect": 0.66
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "lt": [
+     0.1,
+     0.14
+    ],
+    "rt": [
+     0.9,
+     0.14
+    ],
+    "lb": [
+     0.1,
+     0.86
+    ],
+    "rb": [
+     0.9,
+     0.86
+    ],
+    "ln": [
+     0.12,
+     0.62
+    ],
+    "lf": [
+     0.12,
+     0.38
+    ],
+    "rn": [
+     0.88,
+     0.62
+    ],
+    "rf": [
+     0.88,
+     0.38
+    ]
+   },
+   "strings": [
+    [
+     "lt",
+     "rt"
+    ],
+    [
+     "lb",
+     "rb"
+    ],
+    [
+     "ln",
+     "rf"
+    ],
+    [
+     "lf",
+     "rn"
+    ]
+   ],
+   "pieces": [
+    {
+     "at": "lf",
+     "glyph": "light"
+    },
+    {
+     "at": "rf",
+     "glyph": "light"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the middle finger — it carries the loop"
+    }
+   ],
+   "caption": "BEŞİK. Üstte ve altta iki düz ip; ortada orta parmak ilmekleri ÇAPRAZLANIR. İkinci oyuncu bu iki çaprazı çimdikleyip dışarıdan dolaştırarak ortadan yukarı alır ve Asker Yatağı'nı çıkarır."
+  }
+ ]
 }

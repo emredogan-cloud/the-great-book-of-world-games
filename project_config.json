@@ -431,26 +431,26 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 467,
+        "wordsPerTypesetPage": 470.3,
         "wordsPerGame": 730,
         "textPagesPerGame": 1.303,
         "diagramPagesPerGame": 0.259,
-        "measuredPagesPerGame": 1.562,
-        "billedPagesPerGame": 2.049,
-        "spreadOverflowRate": 0.024,
+        "measuredPagesPerGame": 1.564,
+        "billedPagesPerGame": 2.036,
+        "spreadOverflowRate": 0.018,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 52,
+        "sampleSize": 56,
         "projectedTotalPages": 254,
         "deviationPct": -0.78,
         "withinTolerance": true,
-        "measuredAtPhase": "phase5",
+        "measuredAtPhase": "phase6",
         "measuredAtGate": "phase1",
         "overflowDriver": "both",
-        "textSpreadPages": 0.686,
-        "diagramSpreadPages": 0.628,
-        "report": "06_REPORTS/phase5-batch8-typeset-measurement.json",
+        "textSpreadPages": 0.696,
+        "diagramSpreadPages": 0.632,
+        "report": "06_REPORTS/phase6-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -571,7 +571,21 @@
           "  maddeler kisa metinli ve kucuk diyagramlidir.",
           "",
           "FAZ 5 · BATCH 6 (40 oyun): 254 sayfa · sapma -0.8%",
-          "  batch 6b (41 oyun): 254 sayfa · -0.8%"
+          "  batch 6b (41 oyun): 254 sayfa · -0.8%",
+          "",
+          "FAZ 6 · DORT OYUN EKLENDI VE MODEL YENIDEN OLCULDU.",
+          "",
+          "                     Faz 5 (52)   Faz 6 (56)",
+          "  kelime/sayfa           467          470.3",
+          "  kelime/oyun            730          None",
+          "  olculen sayfa/oyun     1.562        1.564",
+          "  faturalanan            2.049        2.036",
+          "  tasan madde            1/52         ['tablut']",
+          "",
+          "⚠ 'projectedTotalPages' 100 OYUNLUK KAPSAMIN izdüşümüdür ve öyle kalır:",
+          "kapsam kilitlidir ve sessizce yeniden yazılmaz. KİTABIN GERÇEK sayfa",
+          "sayısı 56 maddeden ÜRETİLİR ve 04_BUILD/interior.py onu SAYAR —",
+          "tahmin etmez. Kapak sırtı o SAYILAN değerden hesaplanır."
         ]
       },
       "$comment": [
