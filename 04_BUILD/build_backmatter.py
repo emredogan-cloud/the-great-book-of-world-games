@@ -567,10 +567,13 @@ def printed_view(payload: dict, written: set) -> dict:
 
     gloss = []
     for t in payload["glossary"]:
+        pres = [g for g in (t.get("presentIn") or t.get("attestedIn") or [])
+                if g in written]
+        if not pres:
+            continue          # kitabın hiç kullanmadığı kelime BASILMAZ
         att = [g for g in (t.get("attestedIn") or []) if g in written]
-        if not att:
-            continue
-        gloss.append(dict(t, attestedIn=att, attestedCount=len(att)))
+        gloss.append(dict(t, presentIn=pres, presentCount=len(pres),
+                          attestedIn=att, attestedCount=len(att)))
     out["glossary"] = gloss
 
     idx = {}
@@ -680,18 +683,69 @@ def build(root: str, args) -> int:
 
     # ── ③ SÖZLÜK ─────────────────────────────────────────────────────
     # `attestedIn` ÖLÇÜLÜR, iddia edilmez: terim yazılmış prozada geçiyor mu.
+    # ⚠ TANIKLIK BASILAN METİNDE ARANIR.
+    # İlk sürüm `json.dumps(g)` ile KAYDIN TAMAMINDA arıyordu — Türkçe
+    # `englishValidation` notları ve `statusNote` dahil. Sonuç basılı
+    # sayfada duruyordu: sözlük "eye" teriminin cat's cradle ve hopscotch'ta
+    # geçtiğini söylüyordu, çünkü o kelime BAŞKA bir alanda geçiyordu.
+    # Sözlüğün kendi cümlesi "games in which the thing actually happens"
+    # der; yanlış bir tanıklık o cümleyi yalanlar.
+    # Arama KURAL bloklarında yapılır, kültürel hikâyede değil: teknik
+    # kullanım kuralın içindedir, sıradan kullanım anlatının. "eye" go'nun
+    # kuralında bir terimdir; bir hikâyede sadece bir kelimedir.
+    PRINTED = ("materialsAndSubstitution", "setup",
+               "placement", "turnSequence", "capture", "movement",
+               "legalMoves", "throwValues", "stages", "figures", "scoring",
+               "stackingAndSending", "chain", "firstMove", "winCondition",
+               "kingCapture", "endCondition")
+
+    def printed_blob(g):
+        parts = []
+        for k in PRINTED:
+            v = g.get(k)
+            if isinstance(v, str):
+                parts.append(v)
+            elif isinstance(v, list):
+                parts.extend(x for x in v if isinstance(x, str))
+        parts.extend((g.get("edgeCases") or {}).values())
+        return " ".join(parts)
+
+    # Kitabın KENDİ sözcükleri ("family", "draw", "first move", "board")
+    # her maddede geçer ve bir OYUN MEKANİĞİ değildir; onlara oyun listesi
+    # iliştirmek okura hiçbir şey söylemez.
+    BOOK_TERMS = {"family", "draw", "first move", "board", "piece", "turn",
+                  "setup", "variant", "reconstructed"}
+    # İKİ AYRI SORU, İKİ AYRI ÖLÇÜM:
+    #   `presentIn`  — terim kitapta HİÇ geçiyor mu (anlatı dahil).
+    #                  Geçmiyorsa okurun tanımına ihtiyacı yoktur ve terim
+    #                  basılmaz: bir sözlük, kitabın kullanmadığı kelimeleri
+    #                  tanımlıyorsa bir kelime listesidir.
+    #   `attestedIn` — terim hangi oyunun KURALINDA teknik olarak kullanılır.
+    #                  Sayfada oyun adı olarak basılan budur.
+    def story_blob(g):
+        parts = [g.get("culturalStory") or "", g.get("exampleTurn") or "",
+                 g.get("firstGame") or ""]
+        parts += [v.get("note", "") for v in (g.get("variants") or [])]
+        return " ".join(parts)
+
     glossary = []
     for term, family, definition in GLOSSARY:
-        attested = []
-        pat = re.compile(r"\b%s\b" % re.escape(term), re.I)
+        attested, present = [], []
+        pat = re.compile(r"\b%ss?\b" % re.escape(term), re.I)
         for gid, g in written.items():
-            blob = json.dumps(g, ensure_ascii=False)
-            if pat.search(blob):
+            in_rules = bool(pat.search(printed_blob(g)))
+            if in_rules:
                 attested.append(gid)
+            if in_rules or pat.search(story_blob(g)):
+                present.append(gid)
+        if term.lower() in BOOK_TERMS:
+            attested = []
         glossary.append({
             "term": term,
             "family": family,
             "definition": definition,
+            "presentIn": sorted(present),
+            "presentCount": len(present),
             "attestedIn": sorted(attested),
             "attestedCount": len(attested),
         })

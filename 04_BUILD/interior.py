@@ -105,9 +105,26 @@ def gutter_in(pages: int) -> float:
 
 
 def esc(s: str) -> str:
-    """Paragraph mini-HTML'i için kaçış. `&` ilk sırada olmak ZORUNDA."""
-    return (str(s).replace("&", "&amp;").replace("<", "&lt;")
-            .replace(">", "&gt;"))
+    """Paragraph mini-HTML'i için kaçış + tipografik kesme işareti.
+
+    `&` ilk sırada olmak ZORUNDA.
+
+    ⚠ KESME İŞARETİ DİZGİ ANINDA DÖNÜŞTÜRÜLÜR, VERİDE DEĞİL. Manuscript
+    düz ASCII kesme işareti taşır ve öyle kalmalıdır: JSON'da arama,
+    karşılaştırma ve diff düz karakterle çalışır. Sayfada ise düz kesme
+    işareti daktilo işidir — "Nine Men's Morris" ile "Nine Men’s Morris"
+    arasındaki fark, kitabın premium görünüp görünmemesidir. Ligatür gibi:
+    bir DİZGİ dönüşümü.
+    """
+    t = (str(s).replace("&", "&amp;").replace("<", "&lt;")
+         .replace(">", "&gt;"))
+    # AÇILIŞ tırnağı da dönüşür. İlk sürüm yalnızca kapanışı dönüştürdü ve
+    # sayfada "'to surround the hare’" çıktı: bir tarafı daktilo, öteki
+    # tarafı dizgi. Karışık tırnak, hiç dönüştürmemekten daha kötüdür.
+    t = re.sub(r"(?<![A-Za-zÀ-ÿ0-9])'(?=[A-Za-zÀ-ÿ])", "\u2018", t)
+    t = re.sub(r"(?<=[A-Za-zÀ-ÿ])'(?=[A-Za-zÀ-ÿ])", "\u2019", t)   # don’t
+    t = re.sub(r"(?<=[A-Za-zÀ-ÿ])'(?=\s|$|[,.;:!?])", "\u2019", t)  # pieces’
+    return t
 
 
 def register_fonts() -> str:
@@ -198,7 +215,8 @@ def styles(body_pt: float, lead_pt: float):
 class Page:
     """Bir sayfa: akış çerçevesi + üstbilgi/altbilgi bilgisi."""
 
-    __slots__ = ("items", "runHead", "folio", "blank", "kind", "anchor")
+    __slots__ = ("items", "runHead", "folio", "blank", "kind", "anchor",
+                 "opensSection")
 
     def __init__(self, kind="body"):
         self.items = []     # (flowable, x, y, w, h) — çizim emirleri
@@ -207,6 +225,7 @@ class Page:
         self.blank = False
         self.kind = kind
         self.anchor = None  # bu sayfada başlayan madde
+        self.opensSection = False
 
 
 class Layout:
@@ -572,6 +591,7 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
     lay.pad_to_recto()
     toc_pages_start = lay.n + 1
     lay.flow(_toc_flowables(fm, sty, None, None), "front", run_head="Contents")
+    lay.pages[toc_pages_start - 1].opensSection = True
     toc_flow_pages = lay.n - toc_pages_start + 1
 
     # ⑤ ön madde denemeleri -------------------------------------------------
@@ -591,7 +611,9 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
                                                esc(row["test"])), "body"))
         if sec.get("closing"):
             fls.append(P(esc(sec["closing"]), "body"))
+        first_sec = lay.n + 1
         lay.flow(fls, "front", run_head=sec["title"])
+        lay.pages[first_sec - 1].opensSection = True
 
     front_pages = lay.n
 
@@ -622,8 +644,10 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
                          % esc(", ".join(g["title"] for g in book["games"]
                                          if g["family"] == item["family"])),
                          "small"))
+            first_op = lay.n + 1
             used, rest = lay.flow(fls, "opener", run_head=o["title"],
                                   max_pages=1)
+            lay.pages[first_op - 1].opensSection = True
             if rest:
                 overflow.append("family-opener:%s" % item["family"])
             continue
@@ -692,7 +716,8 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
 
     # ⑦ ARKA MADDE ---------------------------------------------------------
     back_start = lay.n + 1
-    _back_matter(lay, bm, sty, pagemap)
+    _back_matter(lay, bm, sty, pagemap,
+                 {g["gameId"]: g["title"] for g in book["games"]})
 
     # ⑧ İÇİNDEKİLER'İ GERÇEK SAYFALARLA DOLDUR ------------------------------
     # İçindekiler ÖNCE yer tutar, SONRA gerçek numaralarla doldurulur:
@@ -739,10 +764,17 @@ def _refill(lay, start_page, npages, flowables, sty):
     return len(queue) == 0
 
 
-def _back_matter(lay, bm, sty, pagemap):
+def _back_matter(lay, bm, sty, pagemap, titles=None):
     from reportlab.platypus import Paragraph
     P = lambda t, s: Paragraph(t, sty[s])  # noqa: E731
     lay.back_pages = {}
+    # ⚠ OKUR `gameId` GÖRMEZ. Malzeme rehberi ve sözlük oyunları iç
+    # kimlikleriyle listeliyordu ("li-b-el-merafib", "bao-la-kiswahili");
+    # kitapta o adlar hiçbir yerde geçmez ve okur onları arayamaz.
+    titles = titles or {}
+
+    def names(ids):
+        return ", ".join(titles.get(i, i) for i in ids)
 
     def section(key, heading, flowables, standfirst=None):
         lay.pad_to_recto()
@@ -751,11 +783,17 @@ def _back_matter(lay, bm, sty, pagemap):
         if standfirst:
             fls.append(P(esc(standfirst), "stand"))
         fls += flowables
+        first_bk = lay.n + 1
         lay.flow(fls, "back", run_head=heading)
+        lay.pages[first_bk - 1].opensSection = True
 
     # ① tahta şablonları — fotokopiye uygun, TAM ÖLÇEK
     tpl = []
-    for t in bm["boardTemplates"]:
+    # Şablonlar SAYFA SIRASINDA. İlk sürümde tanımlayıcı dosyalarının
+    # sırasındaydılar, yani okura RASTGELE görünüyorlardı.
+    for t in sorted(bm["boardTemplates"],
+                    key=lambda x: (pagemap.get(x["gameId"]) or 9999,
+                                   x["title"])):
         pg = pagemap.get(t["gameId"])
         tpl.append(P("<b>%s</b> &nbsp; <font size=8>%s%s</font>"
                      % (esc(t["title"]),
@@ -771,9 +809,10 @@ def _back_matter(lay, bm, sty, pagemap):
     # ② malzeme rehberi
     mat = []
     for m in sorted(bm["materialsGuide"], key=lambda x: -x["count"]):
-        mat.append(P("<b>%s</b> <font size=8>— used by %d games</font>"
-                     % (esc(m["substitute"]), m["count"]), "idxh"))
-        mat.append(P(esc(", ".join(m["usedBy"])), "idx"))
+        mat.append(P("<b>%s</b> <font size=8>— used by %d game%s</font>"
+                     % (esc(m["substitute"]), m["count"],
+                        "" if m["count"] == 1 else "s"), "idxh"))
+        mat.append(P(esc(names(m["usedBy"])), "idx"))
     section("materialsGuide", "Materials and Substitutions", mat,
             "What to use instead of what. Nothing in this book needs to be "
             "bought.")
@@ -781,12 +820,13 @@ def _back_matter(lay, bm, sty, pagemap):
     # ③ sözlük
     gl = []
     for t in sorted(bm["glossary"], key=lambda x: x["term"]):
-        gl.append(P("<b>%s</b> &nbsp;%s <font size=7.5>(%s)</font>"
-                    % (esc(t["term"]), esc(t["definition"]),
-                       esc(", ".join(t["attestedIn"][:6]))), "idx"))
+        att = (" <font size=7.5>(%s)</font>"
+               % esc(names(t["attestedIn"][:6]))) if t["attestedIn"] else ""
+        gl.append(P("<b>%s</b> &nbsp;%s%s"
+                    % (esc(t["term"]), esc(t["definition"]), att), "idx"))
     section("glossary", "Glossary", gl,
-            "The words this book uses for mechanics. Each entry names games "
-            "in which the thing actually happens.")
+            "The words this book uses for mechanics. Where a term is used in "
+            "the rules of particular games, those games are named after it.")
 
     # ④ kaynakça
     bib = []
@@ -858,6 +898,12 @@ def _furniture(c, lay, i, p, geom, title):
     c.setFont("GBSerif-I", 8.5)
     c.setFillColorRGB(0, 0, 0)
     head = p.runHead or title
+    # Bölümün AÇILIŞ sayfasında üstbilgi başlığı TEKRARLAR ve bu bir
+    # dizgi hatasıdır: "Contents" bir kez üstbilgide, bir kez H1'de
+    # basılıyordu. Standart uygulama açılış sayfasında üstbilgiyi
+    # bastırmaktır.
+    if p.opensSection:
+        return
     if p.kind != "front" or p.runHead:
         hy = geom["hPt"] - geom["topPt"] + 13
         if verso:

@@ -212,8 +212,11 @@ def run(root: str, args) -> tuple:
     for t in gl:
         for gid in t.get("attestedIn") or []:
             blob = written.get(gid)
+            # ÇOĞUL DA TERİMİN KENDİSİDİR. Metin "seeds" diyorsa "seed"
+            # terimi o oyunda KULLANILMIŞTIR; doğrulayıcı yalnızca tekile
+            # bakarsa üreteci meşru bir tanıklık için yalancı çıkarır.
             if blob is None or not re.search(
-                    r"\b%s\b" % re.escape(t["term"]), blob, re.I):
+                    r"\b%ss?\b" % re.escape(t["term"]), blob, re.I):
                 false_claim.append("%s→%s" % (t["term"], gid))
     rep.check(not false_claim,
               "sözlüğün 'prozada geçiyor' iddiaları DOĞRU" + brief(false_claim))

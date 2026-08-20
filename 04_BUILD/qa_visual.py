@@ -47,10 +47,19 @@ sys.path.insert(0, HERE)
 # yüksek frekanslı Türkçe kelimeler. Tek bir işaret yeter: çizilmiş metin
 # ticari çıktıdır ve orada belge dili BULUNAMAZ.
 TR_CHARS = set("ışğçöüİŞĞÇÖÜ")
+# ⚠ HARFE GÜVENİLMEZ. `qa_lineedit.py` iki etiketi bu kapının GÖREMEDİĞİ
+# yerde buldu: "alttaki oyuncunun generali" ve "alttaki oyuncunun eri" —
+# ikisinde de Türkçeye özgü TEK BİR HARF yok, hepsi ASCII. Bir dil kapısı
+# yalnızca aksana bakıyorsa, aksansız yazılmış bir sızıntıyı geçirir.
+# Bu yüzden KÖK listesi de var ve tek isabet yeter.
 TR_WORDS = {"ve", "bir", "bu", "için", "ile", "olan", "taş", "oyuncu",
             "yön", "kare", "sayısı", "gidiş", "hamle", "alınan", "üstteki",
             "alttaki", "öteki", "yasak", "kazanır", "zorunlu", "merkez",
             "buradaki", "yalnız", "çember", "kişi", "arasında", "değil"}
+TR_STEMS = ("oyuncunun", "oyuncular", "alttaki", "ustteki", "üstteki",
+            "tasi", "taşı", "generali", "sayisi", "sayısı", "gidis",
+            "hamlesi", "karesi", "cukur", "çukur", "tohum", "kisi",
+            "cember", "yalniz", "birinci", "ikinci", "oteki", "ayni")
 
 
 def load(p):
@@ -84,7 +93,10 @@ def brief(items, k=6):
 def looks_turkish(s: str) -> bool:
     if any(ch in TR_CHARS for ch in s):
         return True
-    words = re.findall(r"[A-Za-zÀ-ÿ]+", s.lower())
+    low = s.lower()
+    if any(st in low for st in TR_STEMS):
+        return True
+    words = re.findall(r"[A-Za-zÀ-ÿ]+", low)
     return sum(1 for w in words if w in TR_WORDS) >= 2
 
 

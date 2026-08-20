@@ -72,7 +72,18 @@ def sha256(p):
 
 
 def E(s):
-    return html.escape(str(s), quote=False)
+    """XHTML kaçışı + tipografik kesme işareti (interior.py ile AYNI kural).
+
+    İki çıktı aynı kitaptır; birinde eğri birinde düz kesme işareti olması
+    aynı cümlenin iki farklı biçimde basılması demektir."""
+    t = html.escape(str(s), quote=False)
+    # AÇILIŞ tırnağı da dönüşür. İlk sürüm yalnızca kapanışı dönüştürdü ve
+    # sayfada "'to surround the hare’" çıktı: bir tarafı daktilo, öteki
+    # tarafı dizgi. Karışık tırnak, hiç dönüştürmemekten daha kötüdür.
+    t = re.sub(r"(?<![A-Za-zÀ-ÿ0-9])'(?=[A-Za-zÀ-ÿ])", "\u2018", t)
+    t = re.sub(r"(?<=[A-Za-zÀ-ÿ])'(?=[A-Za-zÀ-ÿ])", "\u2019", t)
+    t = re.sub(r"(?<=[A-Za-zÀ-ÿ])'(?=\s|$|[,.;:!?])", "\u2019", t)
+    return t
 
 
 CSS = """@charset "utf-8";

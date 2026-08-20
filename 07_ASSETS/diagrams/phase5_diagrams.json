@@ -540,7 +540,7 @@
     },
     {
      "glyph": "king",
-     "label": "alttaki oyuncunun generali"
+     "label": "the near player's general"
     },
     {
      "glyph": "darkSpecial",
@@ -639,11 +639,11 @@
    "legend": [
     {
      "glyph": "light",
-     "label": "alttaki oyuncunun eri"
+     "label": "the near player's pawn"
     },
     {
      "glyph": "dark",
-     "label": "the far player's foot soldier"
+     "label": "the far player's pawn"
     }
    ],
    "caption": "YALNIZCA erler sabittir; kalan sekiz taş erlerin ARKASINA istendiği gibi dizilir ve iki taraf farklı diziler. Köşegen TERFİ ÇİZGİSİDİR: er ona varınca vezir olur, tahtanın öbür ucuna değil."
@@ -1354,7 +1354,7 @@
    "legend": [
     {
      "glyph": "light",
-     "label": "the pincering pieces"
+     "label": "the trapping pieces"
     },
     {
      "glyph": "dark",
@@ -1366,7 +1366,7 @@
     },
     {
      "glyph": "move",
-     "label": "the move that closes the pincer"
+     "label": "the move that closes the trap"
     }
    ],
    "caption": "Kıskaç MOVING ile kapanır: sağdaki taş yukarı gelince ortadaki alınır. Tersi geçerli DEĞİLDİR — kendi isteğiyle iki düşman arasına giren taş GÜVENLİDİR ve alınmaz."

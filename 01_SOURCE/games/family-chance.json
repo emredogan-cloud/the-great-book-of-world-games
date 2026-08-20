@@ -1,1799 +1,1799 @@
 {
-  "$comment": [
-    "AİLE VI · chance — Chance and Nerve",
-    "AYIRICI NESNEDİR: bu ailede bir ÇEKİLİŞ ALETİ vardır (zar · aşık kemiği ·",
-    "çubuk · kabuk · kart · tile). İz üzerinde taş yürüyorsa oyun race'e gider.",
-    "",
-    "K5 UYARISI: bu ailenin maddelerinin çoğu bahisle oynanmıştır. Kitap bahsi",
-    "SİLMEZ — tarih olarak anlatır — ama mekaniği PUANLA yeniden yazar ve bunu",
-    "prozada açıkça söyler. gamblingReframed alanı bu kararın kaydıdır."
-  ],
-  "family": "chance",
-  "games": [
+ "$comment": [
+  "AİLE VI · chance — Chance and Nerve",
+  "AYIRICI NESNEDİR: bu ailede bir ÇEKİLİŞ ALETİ vardır (zar · aşık kemiği ·",
+  "çubuk · kabuk · kart · tile). İz üzerinde taş yürüyorsa oyun race'e gider.",
+  "",
+  "K5 UYARISI: bu ailenin maddelerinin çoğu bahisle oynanmıştır. Kitap bahsi",
+  "SİLMEZ — tarih olarak anlatır — ama mekaniği PUANLA yeniden yazar ve bunu",
+  "prozada açıkça söyler. gamblingReframed alanı bu kararın kaydıdır."
+ ],
+ "family": "chance",
+ "games": [
+  {
+   "gameId": "astragaloi",
+   "name": "Astragaloi",
+   "altNames": [
+    "Knucklebones (Greek)",
+    "Astragalomancy is NOT this"
+   ],
+   "culture": "Ancient Greek",
+   "region": "Mediterranean",
+   "countryOrArea": "Greece",
+   "period": "played from at least the 6th century BCE; depicted on vases and named by Pollux",
+   "family": "chance",
+   "taxonomyRationale": "Aşık kemiği bir çekiliş aletidir ve sonucu doğrudan atış belirler; iz ve taş yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Aynı aşık kemikleri KEHANET için de kullanılmıştır (astragalomancy). Kitap oyun ile kehaneti karıştırmaz ve kehanet uygulamalarını eğlenceye çevirmez; yalnızca oyun biçimini basar ve ayrımı söyler.",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
     {
-      "gameId": "astragaloi",
-      "name": "Astragaloi",
-      "altNames": [
-        "Knucklebones (Greek)",
-        "Astragalomancy is NOT this"
-      ],
-      "culture": "Ancient Greek",
-      "region": "Mediterranean",
-      "countryOrArea": "Greece",
-      "period": "played from at least the 6th century BCE; depicted on vases and named by Pollux",
-      "family": "chance",
-      "taxonomyRationale": "Aşık kemiği bir çekiliş aletidir ve sonucu doğrudan atış belirler; iz ve taş yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Aynı aşık kemikleri KEHANET için de kullanılmıştır (astragalomancy). Kitap oyun ile kehaneti karıştırmaz ve kehanet uygulamalarını eğlenceye çevirmez; yalnızca oyun biçimini basar ve ayrımı söyler.",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Pollux, Onomasticon IX (list and description of Greek games)",
-          "type": "archive"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        },
-        {
-          "ref": "British Museum — Greek astragaloi and vase paintings of knucklebone play",
-          "type": "museum"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 6
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "dört veya beş aşık kemiği"
-      ],
-      "substitutionHint": [
-        "dört köşeli düğme veya dört yassı taş; her yüz farklı işaretlenir"
-      ],
-      "safetyNotes": "Küçük parçalar — 3 yaş altı için uygun değil.",
-      "childSuitable": true,
-      "supervision": "none",
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 4,
-        "cultural": 5,
-        "access": 4,
-        "distinct": 4,
-        "explain": 4,
-        "visual": 5,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "Puan değerlerinin (Venüs, köpek vb.) tam listesi kaynaklar arasında değişir."
-      ],
-      "gamblingReframed": true,
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+     "ref": "Pollux, Onomasticon IX (list and description of Greek games)",
+     "type": "archive"
     },
     {
-      "gameId": "tali",
-      "name": "Tali",
-      "altNames": [
-        "Roman knucklebones",
-        "Tesserae (six-sided)"
-      ],
-      "culture": "Roman",
-      "region": "Mediterranean",
-      "countryOrArea": "Roman Empire",
-      "period": "attested throughout the Republic and Empire; regulated by law",
-      "family": "chance",
-      "taxonomyRationale": "Dört yüzlü aşık kemikleri atılır ve puan doğrudan atıştan çıkar.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Suetonius, Divus Augustus 71 (Augustus' letters describing play with tali)",
-          "type": "archive"
-        },
-        {
-          "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 6
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 20
-      },
-      "ageMinEstimate": 7,
-      "materialsHint": [
-        "dört aşık kemiği"
-      ],
-      "substitutionHint": [
-        "dört yüzü işaretli dört yassı nesne"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 4,
-        "cultural": 5,
-        "access": 4,
-        "distinct": 2,
-        "explain": 5,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "Astragaloi ile aynı maddede mi? İkisi aynı nesne, farklı puanlamadır."
-      ],
-      "gamblingReframed": true,
-      "culturalNotes": "Augustus'un mektuplarında kendi kayıplarını anlatması, oyunun imparatorluk masasındaki yerini birinci elden gösterir.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
     },
     {
-      "gameId": "shagai",
-      "name": "Shagai",
-      "altNames": [
-        "Mongolian anklebones",
-        "Alchi"
-      ],
-      "culture": "Mongolian",
-      "region": "Central Asia",
-      "countryOrArea": "Mongolia",
-      "period": "long-standing; documented in modern ethnography and still played",
-      "family": "chance",
-      "taxonomyRationale": "Koyun aşık kemiği bir çekiliş aletidir; dört yüzün her biri bir hayvana karşılık gelir ve sonuç atıştan çıkar.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Shagai, Mongol kültüründe oyunun yanı sıra fal ve uğur bağlamı taşır. Kitap oyun biçimini basar, fal uygulamasını eğlenceye çevirmez ve ayrımı açıkça söyler.",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-          "type": "book"
-        },
-        {
-          "ref": "Kabzińska-Stawarz, Iwona, Games of Mongolian Shepherds (Warsaw: Institute of the History of Material Culture, 1991)",
-          "type": "ethnography"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 6
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 5,
-      "materialsHint": [
-        "dört veya daha fazla koyun aşık kemiği"
-      ],
-      "substitutionHint": [
-        "dört yüzü at/deve/koyun/keçi diye işaretlenmiş dört yassı nesne"
-      ],
-      "safetyNotes": "Küçük parçalar — 3 yaş altı için uygun değil.",
-      "childSuitable": true,
-      "environment": "floor",
-      "visualNeeds": [
-        "piece-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 5,
-        "access": 4,
-        "distinct": 5,
-        "explain": 5,
-        "visual": 5,
-        "play": 4
-      },
-      "unresolvedQuestions": [],
-      "culturalNotes": "Aşık kemiğinin dört yüzü at, deve, koyun ve keçiye karşılık gelir — bozkır ekonomisinin tamamı tek bir kemikte durur.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "sho",
-      "name": "Sho",
-      "altNames": [
-        "Tibetan dice game"
-      ],
-      "culture": "Tibetan",
-      "region": "Inner Asia",
-      "countryOrArea": "Tibet",
-      "period": "documented in 20th-century ethnography",
-      "family": "chance",
-      "taxonomyRationale": "İki zar bir kâseye atılır ve sonuç doğrudan atıştan çıkar; kabuk sayaçları puan tutar.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "partial",
-        "verdict": "partial",
-        "unknownElements": [
-          "Sayaç dağıtım kuralları tek kaynaktan kesinleşmiyor."
-        ]
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": false,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "unresolved",
-      "players": {
-        "min": 2,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 15,
-        "max": 30
-      },
-      "ageMinEstimate": 8,
-      "materialsHint": [
-        "iki zar",
-        "deri altlık ve kâse",
-        "64 kabuk sayaç"
-      ],
-      "childSuitable": true,
-      "environment": "floor",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 2,
-        "playability": 2,
-        "cultural": 4,
-        "access": 4,
-        "distinct": 4,
-        "explain": 3,
-        "visual": 4,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "İkinci bağımsız kaynak gerekiyor."
-      ],
-      "gamblingReframed": true,
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "set-dilth",
-      "name": "Set-dilth",
-      "altNames": [
-        "Apache stave dice"
-      ],
-      "culture": "Apache",
-      "region": "North America",
-      "countryOrArea": "Arizona · New Mexico",
-      "period": "recorded in Bureau of American Ethnology fieldwork around 1900",
-      "family": "chance",
-      "taxonomyRationale": "Üç atma çubuğu bir çekiliş aletidir ve puan doğrudan atıştan çıkar.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Apache topluluklarına aittir; kayıt sömürge dönemi etnografyasıdır ve kitap bu bağlamı görünür kılar.",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
-          "type": "ethnography",
-          "locator": "'Dice games: White Mountain Apache', ss. 88–89, şekil 86–87"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 15,
-        "max": 30
-      },
-      "ageMinEstimate": 7,
-      "materialsHint": [
-        "üç atma çubuğu",
-        "sayaç taşları"
-      ],
-      "substitutionHint": [
-        "üç yassı çubuk; bir yüzü boyalı"
-      ],
-      "childSuitable": true,
-      "environment": "floor",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 3,
-        "explain": 4,
-        "visual": 3,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "Tek kaynak; ikinci bağımsız künye ve çağdaş Apache kaynağı aranmalıdır."
-      ],
-      "gamblingReframed": true,
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "hanafuda-koi-koi",
-      "name": "Koi-Koi",
-      "altNames": [
-        "Hanafuda"
-      ],
-      "culture": "Japanese",
-      "region": "East Asia",
-      "countryOrArea": "Japan",
-      "period": "the flower-card pack dates from the late 18th century, created under card prohibitions",
-      "family": "chance",
-      "taxonomyRationale": "Çekme aleti karttır; kalıcı tahta konumu yoktur ve her turun kararı 'devam edeyim mi'dir.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
-          "type": "book"
-        },
-        {
-          "ref": "Pakarnian, John / Depaulis, Thierry, studies on Japanese card packs in The Playing-Card (IPCS)",
-          "type": "journal"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 2
-      },
-      "durationMinutes": {
-        "min": 15,
-        "max": 30
-      },
-      "ageMinEstimate": 8,
-      "materialsHint": [
-        "48 kartlık hanafuda destesi"
-      ],
-      "substitutionHint": [
-        "standart deste ile eşleştirme biçimi; kitap bir dönüşüm tablosu verir"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 4,
-        "cultural": 5,
-        "access": 3,
-        "distinct": 5,
-        "explain": 3,
-        "visual": 5,
-        "play": 5
-      },
-      "unresolvedQuestions": [
-        "Hanafuda destesi her evde yoktur; kitap ya destesiz bir uyarlama vermeli ya da maddeyi 'malzeme gerekir' diye işaretlemelidir."
-      ],
-      "gamblingReframed": true,
-      "culturalNotes": "Deste, kart yasaklarını aşmak için sayı yerine çiçek kullanacak biçimde tasarlanmıştır — yasak, tasarımı doğurmuştur.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "ganjifa",
-      "name": "Ganjifa",
-      "altNames": [
-        "Ganjapa",
-        "Dashavatara ganjifa"
-      ],
-      "culture": "Hindustani",
-      "region": "South Asia",
-      "countryOrArea": "India · Iran",
-      "period": "recorded at Mughal courts from the 16th century; painted packs survive",
-      "family": "chance",
-      "taxonomyRationale": "Yuvarlak kartlarla oynanır; çekme aleti karttır ve tahta konumu yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Dashavatara ganjifa desteleri Vishnu'nun on avatarını resmeder ve dinî imge taşır. Kitap desteyi anlatabilir; dinî imgeyi süs olarak kullanamaz ve bağlamı söyler.",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
-          "type": "book"
-        },
-        {
-          "ref": "von Leyden, Rudolf, Ganjifa: The Playing Cards of India (London: Victoria and Albert Museum, 1982)",
-          "type": "museum"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "partial",
-        "verdict": "partial",
-        "unknownElements": [
-          "Bölgesel kural setleri çok farklıdır ve tek bir 'ganjifa oyunu' yoktur."
-        ]
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": false,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "unresolved",
-      "players": {
-        "min": 3,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 30,
-        "max": 60
-      },
-      "ageMinEstimate": 10,
-      "materialsHint": [
-        "96 veya 120 kartlık yuvarlak deste"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 2,
-        "cultural": 5,
-        "access": 2,
-        "distinct": 5,
-        "explain": 2,
-        "visual": 5,
-        "play": 3
-      },
-      "unresolvedQuestions": [
-        "Deste bulunamaz; oyun oynanamaz. Kitaba ancak 'kart destesi' bölümünde bir kültürel madde olarak girebilir."
-      ],
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "madiao",
-      "name": "Madiao",
-      "altNames": [
-        "Ma Diao",
-        "Chinese money-suited cards"
-      ],
-      "culture": "Han Chinese",
-      "region": "East Asia",
-      "countryOrArea": "China",
-      "period": "described in Ming-dynasty texts from the 16th century",
-      "family": "chance",
-      "taxonomyRationale": "Para desenli kart destesiyle oynanır; çekme aleti karttır.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
-          "type": "book"
-        },
-        {
-          "ref": "Lo, Andrew, studies on early Chinese card games, in The Playing-Card / Journal of the Royal Asiatic Society",
-          "type": "journal"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "partial",
-        "turnLogic": "partial",
-        "objective": "known",
-        "endCondition": "partial",
-        "verdict": "partial",
-        "unknownElements": [
-          "Ming metinleri oyunu anar ama tam kural vermez."
-        ]
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": false,
-        "legalMoveDistinguishable": false,
-        "victoryDeterminable": true,
-        "tieDefined": false,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "unresolved",
-      "players": {
-        "min": 4,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 30,
-        "max": 60
-      },
-      "ageMinEstimate": 11,
-      "materialsHint": [
-        "40 kartlık para desenli deste"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 3,
-        "playability": 1,
-        "cultural": 5,
-        "access": 2,
-        "distinct": 5,
-        "explain": 2,
-        "visual": 5,
-        "play": 2
-      },
-      "unresolvedQuestions": [
-        "Kural eksik ve deste bulunamaz; kitaba 'kartın tarihi' notu olarak girer."
-      ],
-      "culturalNotes": "Kart oyununun bilinen en eski izleri Çin'dedir; madiao, kartın Batı'ya yolculuğunun başlangıç noktasıdır.",
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "tien-gow",
-      "name": "Tien Gow",
-      "altNames": [
-        "Heaven and Nine",
-        "Chinese dominoes"
-      ],
-      "culture": "Cantonese",
-      "region": "East Asia",
-      "countryOrArea": "southern China",
-      "period": "documented from the 19th century; the tile pack is older",
-      "family": "chance",
-      "taxonomyRationale": "Çekme aleti tiledir; kalıcı tahta konumu yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Culin, Stewart, Chess and Playing-Cards (Washington: Smithsonian Institution, 1898)",
-          "type": "ethnography"
-        },
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 4,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 20,
-        "max": 45
-      },
-      "ageMinEstimate": 10,
-      "materialsHint": [
-        "32 taşlık Çin domino destesi"
-      ],
-      "substitutionHint": [
-        "standart domino takımından 32 taş seçilir; kitap bir eşleştirme tablosu verir"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 4,
-        "cultural": 4,
-        "access": 3,
-        "distinct": 4,
-        "explain": 3,
-        "visual": 4,
-        "play": 4
-      },
-      "unresolvedQuestions": [],
-      "gamblingReframed": true,
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "mahjong",
-      "name": "Mahjong",
-      "altNames": [
-        "Majiang"
-      ],
-      "culture": "Han Chinese",
-      "region": "East Asia",
-      "countryOrArea": "China",
-      "period": "in its recognisable form from the mid-19th century",
-      "family": "chance",
-      "taxonomyRationale": "Çekme aleti tiledir; el yapılır ve kalıcı tahta konumu yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        },
-        {
-          "ref": "Stanwick, Michael, studies on the origins of mahjong, in The Playing-Card (IPCS)",
-          "type": "journal"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 4,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 45,
-        "max": 90
-      },
-      "ageMinEstimate": 10,
-      "materialsHint": [
-        "144 taşlık mahjong takımı"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 3,
-        "cultural": 5,
-        "access": 2,
-        "distinct": 5,
-        "explain": 1,
-        "visual": 5,
-        "play": 5
-      },
-      "unresolvedQuestions": [
-        "Puanlama sistemleri bölgeye göre tamamen farklıdır ve 650 kelimeye SIĞMAZ. Kitap ya maddeyi almamalı ya da iki sayfa yerine dört sayfa ayırmalıdır — bu bir sayfa bütçesi kararıdır."
-      ],
-      "gamblingReframed": true,
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "tarocchini",
-      "name": "Tarocchini",
-      "altNames": [
-        "Bolognese tarot"
-      ],
-      "culture": "Italian",
-      "region": "Southern Europe",
-      "countryOrArea": "Bologna, Italy",
-      "period": "the tarot pack appears in the 15th century; tarocchini rules recorded from the 17th",
-      "family": "chance",
-      "taxonomyRationale": "Kart destesiyle el alma oyunu; çekme aleti karttır.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Tarot destesi bir OYUN destesidir; 18. yüzyıl sonunda ona eklenen fal anlamları sonradan icat edilmiştir. Kitap bu tarihi düzeltmeyi AÇIKÇA yapar — bu, en yaygın oyun tarihi yanlış bilgilerinden biridir.",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
-          "type": "book"
-        },
-        {
-          "ref": "Dummett, Michael, The Game of Tarot (London: Duckworth, 1980)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 4,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 30,
-        "max": 60
-      },
-      "ageMinEstimate": 11,
-      "materialsHint": [
-        "62 kartlık tarocchini destesi"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 3,
-        "cultural": 5,
-        "access": 2,
-        "distinct": 5,
-        "explain": 2,
-        "visual": 5,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "Deste bulunması zordur; kitap oyunu basacaksa standart desteyle bir uyarlama vermelidir."
-      ],
-      "culturalNotes": "Tarot beş yüzyıl boyunca yalnızca bir kart oyunuydu; fal anlamları 1780'lerde Fransa'da eklendi. Kitabın söyleyebileceği en değerli düzeltmelerden biri budur.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "karnoffel",
-      "name": "Karnöffel",
-      "altNames": [
-        "Kaiserspiel"
-      ],
-      "culture": "German",
-      "region": "Central Europe",
-      "countryOrArea": "Germany · Switzerland",
-      "period": "named in a 1426 document; the oldest European card game with identifiable surviving rules",
-      "family": "chance",
-      "taxonomyRationale": "Kart destesiyle el alma; çekme aleti karttır.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "high",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
-          "type": "book"
-        },
-        {
-          "ref": "Dummett, Michael & McLeod, John, studies on early European card games",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 4,
-        "max": 6
-      },
-      "durationMinutes": {
-        "min": 20,
-        "max": 40
-      },
-      "ageMinEstimate": 10,
-      "materialsHint": [
-        "standart deste (uyarlanmış)"
-      ],
-      "substitutionHint": [
-        "48 kartlık standart destenin bir bölümü"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 5,
-        "playability": 4,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 5,
-        "explain": 3,
-        "visual": 3,
-        "play": 4
-      },
-      "unresolvedQuestions": [],
-      "culturalNotes": "Kartların gücü sabit değildir: seçilen bir renk sıradüzeni tersine çevirir. Altı yüz yıllık bir oyunun bu kadar sıra dışı olması kitabın anlatacağı iyi bir sürprizdir.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "mus",
-      "name": "Mus",
-      "altNames": [
-        "Musa"
-      ],
-      "culture": "Basque",
-      "region": "Western Europe",
-      "countryOrArea": "Basque Country (Spain · France)",
-      "period": "first described in the 18th century; widely played today",
-      "family": "chance",
-      "taxonomyRationale": "Kart destesiyle blöf ve pazarlık; çekme aleti karttır ve turun kararı riski almaktır.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-          "type": "book"
-        },
-        {
-          "ref": "Larramendi, Manuel de, Diccionario trilingüe (1745) — earliest known reference to mus",
-          "type": "archive"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 4,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 25,
-        "max": 50
-      },
-      "ageMinEstimate": 10,
-      "materialsHint": [
-        "40 kartlık İspanyol destesi"
-      ],
-      "substitutionHint": [
-        "standart desteden 8, 9 ve 10'lar çıkarılır"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 5,
-        "explain": 2,
-        "visual": 3,
-        "play": 5
-      },
-      "unresolvedQuestions": [
-        "Eş oyuncular arasındaki işaretleşme (keinuak) oyunun parçasıdır ama kurallara yazılması zordur."
-      ],
-      "gamblingReframed": true,
-      "culturalNotes": "Eşinize yüz işaretiyle haber vermek kuralın PARÇASIDIR ve hile sayılmaz; bilinen çok az oyunda işaretleşme yasal bir eylemdir.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "truco",
-      "name": "Truco",
-      "altNames": [
-        "Truc",
-        "Truco argentino"
-      ],
-      "culture": "Río de la Plata",
-      "region": "South America",
-      "countryOrArea": "Argentina · Uruguay",
-      "period": "derived from Spanish truc; documented in the region from the 19th century",
-      "family": "chance",
-      "taxonomyRationale": "Kartla blöf ve yükseltme; çekme aleti karttır ve karar riski almaktır.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-          "type": "book"
-        },
-        {
-          "ref": "Depaulis, Thierry, studies on Iberian and Latin American card games, in The Playing-Card (IPCS)",
-          "type": "journal"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 6
-      },
-      "durationMinutes": {
-        "min": 20,
-        "max": 40
-      },
-      "ageMinEstimate": 10,
-      "materialsHint": [
-        "40 kartlık İspanyol destesi"
-      ],
-      "substitutionHint": [
-        "standart desteden 8, 9 ve 10'lar çıkarılır"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 4,
-        "explain": 3,
-        "visual": 3,
-        "play": 5
-      },
-      "unresolvedQuestions": [
-        "Mus ile aynı kitapta iki blöf oyunu olması tekrar riski taşır."
-      ],
-      "gamblingReframed": true,
-      "culturalNotes": "Oyuncular blöfü şiirle yapar; doğaçlama beyitler oyunun tanınmış bir parçasıdır.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "durak",
-      "name": "Durak",
-      "altNames": [
-        "The Fool"
-      ],
-      "culture": "Russian",
-      "region": "Eastern Europe",
-      "countryOrArea": "Russia and neighbouring countries",
-      "period": "documented from the 19th century; the most widely played card game in the region",
-      "family": "chance",
-      "taxonomyRationale": "Kart destesiyle saldırı-savunma; çekme aleti karttır.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-          "type": "book"
-        },
-        {
-          "ref": "McLeod, John, Pagat card game rules archive (documentary collection of played rules)",
-          "type": "field-record"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 6
-      },
-      "durationMinutes": {
-        "min": 15,
-        "max": 30
-      },
-      "ageMinEstimate": 8,
-      "materialsHint": [
-        "36 kartlık deste"
-      ],
-      "substitutionHint": [
-        "standart desteden 2–5 arası çıkarılır"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 5,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 4,
-        "explain": 4,
-        "visual": 3,
-        "play": 5
-      },
-      "unresolvedQuestions": [],
-      "culturalNotes": "Kazanan yoktur; yalnızca KAYBEDEN vardır — eli son kalan oyuncu 'aptal' olur. Hedefin tersine çevrilmesi bu ailenin en ilginç yapısal farkıdır.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "schafkopf",
-      "name": "Schafkopf",
-      "altNames": [
-        "Sheepshead"
-      ],
-      "culture": "Bavarian",
-      "region": "Central Europe",
-      "countryOrArea": "Bavaria, Germany",
-      "period": "documented from the early 19th century",
-      "family": "chance",
-      "taxonomyRationale": "Kartla el alma ve ortaklık kurma; çekme aleti karttır.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-          "type": "book"
-        },
-        {
-          "ref": "McLeod, John, Pagat card game rules archive (documentary collection of played rules)",
-          "type": "field-record"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 4,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 25,
-        "max": 50
-      },
-      "ageMinEstimate": 11,
-      "materialsHint": [
-        "32 kartlık Bavyera destesi"
-      ],
-      "substitutionHint": [
-        "standart desteden 2–6 arası çıkarılır"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 4,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 3,
-        "explain": 2,
-        "visual": 3,
-        "play": 5
-      },
-      "unresolvedQuestions": [
-        "Kart oyunu maddelerinin sayısı fazlalaşıyor; kitap bu kümede en fazla altı madde tutmalı."
-      ],
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "cuarenta",
-      "name": "Cuarenta",
-      "altNames": [
-        "Forty"
-      ],
-      "culture": "Ecuadorian",
-      "region": "South America",
-      "countryOrArea": "Ecuador",
-      "period": "documented from the 19th century; regarded as a national game",
-      "family": "chance",
-      "taxonomyRationale": "Kartla eşleştirme ve toplama; çekme aleti karttır.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "McLeod, John, Pagat card game rules archive (documentary collection of played rules)",
-          "type": "field-record"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 4,
-        "max": 4
-      },
-      "durationMinutes": {
-        "min": 20,
-        "max": 40
-      },
-      "ageMinEstimate": 9,
-      "materialsHint": [
-        "40 kartlık İspanyol destesi"
-      ],
-      "substitutionHint": [
-        "standart desteden 8, 9 ve 10'lar çıkarılır"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 2,
-        "playability": 4,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 3,
-        "explain": 4,
-        "visual": 3,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "İkinci bağımsız kaynak — tercihen Ekvador kaynaklı — gerekiyor."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "dreidel",
-      "name": "Dreidel",
-      "altNames": [
-        "Sevivon"
-      ],
-      "culture": "Ashkenazi Jewish",
-      "region": "Central and Eastern Europe",
-      "countryOrArea": "Ashkenazi diaspora",
-      "period": "the four-sided spinning top is documented in Europe from the medieval period; the Hanukkah association is later",
-      "family": "chance",
-      "taxonomyRationale": "Dört yüzlü topaç bir çekiliş aletidir ve sonuç doğrudan dönüşten çıkar.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Oyun Hanuka bayramına bağlıdır ve dinî bir takvim bağlamı taşır. Kitap oyunu anlatabilir; bayram bağlamını atlayamaz ve harflerin dinî anlamını süs olarak kullanamaz.",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        },
-        {
-          "ref": "Encyclopaedia Judaica, entry on dreidel / trendel and the European teetotum",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "loop-possible",
-        "terminationRule": "Oyun teorik olarak bitmeyebilir; kitap tur sınırı koyar."
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 8
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 4,
-      "materialsHint": [
-        "dört yüzlü topaç",
-        "sayaç (fındık, fasulye, jeton)"
-      ],
-      "substitutionHint": [
-        "kare kâğıt ve kürdanla yapılmış topaç"
-      ],
-      "safetyNotes": "Sayaç olarak fındık kullanılıyorsa alerji uyarısı; küçük parçalar 3 yaş altı için uygun değil.",
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram",
-        "cultural-plate"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 5,
-        "cultural": 5,
-        "access": 5,
-        "distinct": 4,
-        "explain": 5,
-        "visual": 4,
-        "play": 2
-      },
-      "unresolvedQuestions": [
-        "Oyunda karar yoktur; 'oyun kalitesi' düşüktür ve kitaba girmesi kültürel gerekçeyledir. Bu açıkça yazılmalıdır."
-      ],
-      "gamblingReframed": true,
-      "culturalNotes": "Topacın Avrupa'daki teetotum ile ortak kökeni belgelidir; Hanuka anlatısı sonradan eklenmiştir ve kitap bu ayrımı yapar.",
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "passe-dix",
-      "name": "Passe-dix",
-      "altNames": [
-        "Pass ten"
-      ],
-      "culture": "French",
-      "region": "Western Europe",
-      "countryOrArea": "France",
-      "period": "documented from the medieval period; one of the oldest recorded dice games",
-      "family": "chance",
-      "taxonomyRationale": "Üç zar atılır ve sonuç doğrudan toplamdan çıkar; iz ve taş yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        },
-        {
-          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 8
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 20
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "üç zar",
-        "sayaç"
-      ],
-      "substitutionHint": [
-        "üç zar ve kuru fasulye"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "none"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 5,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 2,
-        "explain": 5,
-        "visual": 1,
-        "play": 2
-      },
-      "unresolvedQuestions": [
-        "Kararsız bir şans oyunudur; kitaba girmesi ancak zar tarihini anlatmak içinse anlamlıdır."
-      ],
-      "gamblingReframed": true,
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "cho-han",
-      "name": "Chō-Han",
-      "altNames": [
-        "Even-Odd"
-      ],
-      "culture": "Japanese",
-      "region": "East Asia",
-      "countryOrArea": "Japan",
-      "period": "documented from the Edo period",
-      "family": "chance",
-      "taxonomyRationale": "İki zar atılır ve tek sonuç tek/çift tahminidir; iz yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "attributed",
-      "restrictionNote": "Chō-han tarihsel olarak yeraltı kumar salonlarının oyunudur ve bu bağlam popüler kültürde romantikleştirilmiştir. Kitap oyunu ancak bahis mekaniği PUANLA yeniden yazılarak ve bu bağlam açıkça anlatılarak basabilir (K5).",
-      "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 3,
-        "max": 10
-      },
-      "durationMinutes": {
-        "min": 5,
-        "max": 15
-      },
-      "ageMinEstimate": 7,
-      "materialsHint": [
-        "iki zar",
-        "bir kâse veya kap"
-      ],
-      "childSuitable": true,
-      "environment": "floor",
-      "visualNeeds": [
-        "none"
-      ],
-      "scores": {
-        "source": 2,
-        "playability": 5,
-        "cultural": 3,
-        "access": 5,
-        "distinct": 2,
-        "explain": 5,
-        "visual": 2,
-        "play": 2
-      },
-      "unresolvedQuestions": [
-        "Puanla yeniden yazıldığında geriye ne kalıyor? Bu maddede K5 kararı oyunu neredeyse tümüyle boşaltıyor; muhtemelen ELENMELİ."
-      ],
-      "gamblingReframed": true,
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "crown-and-anchor",
-      "name": "Crown and Anchor",
-      "altNames": [
-        "Crown and Anchor (naval)"
-      ],
-      "culture": "English",
-      "region": "Western Europe · maritime",
-      "countryOrArea": "British naval and merchant service",
-      "period": "documented from the 18th–19th centuries aboard ships",
-      "family": "chance",
-      "taxonomyRationale": "Üç sembollü zar atılır ve sonuç doğrudan atıştan çıkar.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "low",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-          "type": "book"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 10
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 6,
-      "materialsHint": [
-        "altı sembollü üç zar",
-        "sembollü bez"
-      ],
-      "substitutionHint": [
-        "kâğıda çizilmiş altı hane",
-        "üzerine sembol yazılmış üç zar"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "board-diagram",
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 2,
-        "playability": 5,
-        "cultural": 3,
-        "access": 4,
-        "distinct": 3,
-        "explain": 5,
-        "visual": 4,
-        "play": 2
-      },
-      "unresolvedQuestions": [
-        "Oyun özünde bir bahis düzeneğidir; K5 uygulandığında geriye çok az kalır.",
-        "İkinci bağımsız kaynak gerekiyor."
-      ],
-      "gamblingReframed": true,
-      "editorialStatus": "reserve",
-      "playtestStatus": "not-started"
-    },
-    {
-      "gameId": "briscola",
-      "name": "Briscola",
-      "altNames": [
-        "Brisca"
-      ],
-      "culture": "Italian",
-      "region": "Southern Europe",
-      "countryOrArea": "Italy",
-      "period": "documented from the 19th century; widely played today",
-      "family": "chance",
-      "taxonomyRationale": "Kartla el alma; çekme aleti karttır ve tahta konumu yoktur.",
-      "status": "candidate",
-      "restrictionStatus": "open",
-      "sourceConfidence": "medium",
-      "sourceVerification": "bibliographic",
-      "sources": [
-        {
-          "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
-          "type": "book"
-        },
-        {
-          "ref": "McLeod, John, Pagat card game rules archive (documentary collection of played rules)",
-          "type": "field-record"
-        }
-      ],
-      "ruleCompleteness": {
-        "setup": "known",
-        "play": "known",
-        "turnLogic": "known",
-        "objective": "known",
-        "endCondition": "known",
-        "verdict": "complete",
-        "unknownElements": []
-      },
-      "clarity": {
-        "setupPerformable": true,
-        "firstTurnTakeable": true,
-        "legalMoveDistinguishable": true,
-        "victoryDeterminable": true,
-        "tieDefined": true,
-        "terminationRisk": "finite"
-      },
-      "playabilityStatus": "rules-complete",
-      "players": {
-        "min": 2,
-        "max": 6
-      },
-      "durationMinutes": {
-        "min": 10,
-        "max": 25
-      },
-      "ageMinEstimate": 7,
-      "materialsHint": [
-        "40 kartlık İtalyan destesi"
-      ],
-      "substitutionHint": [
-        "standart desteden 8, 9 ve 10'lar çıkarılır"
-      ],
-      "childSuitable": true,
-      "environment": "table",
-      "visualNeeds": [
-        "piece-diagram"
-      ],
-      "scores": {
-        "source": 4,
-        "playability": 5,
-        "cultural": 4,
-        "access": 5,
-        "distinct": 2,
-        "explain": 5,
-        "visual": 3,
-        "play": 4
-      },
-      "unresolvedQuestions": [
-        "Kart maddeleri arasında en kolay öğretilenidir; kitap kart bölümüne bir GİRİŞ maddesi olarak koyabilir."
-      ],
-      "editorialStatus": "inventory",
-      "playtestStatus": "not-started"
+     "ref": "British Museum — Greek astragaloi and vase paintings of knucklebone play",
+     "type": "museum"
     }
-  ]
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 6
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "dört veya beş aşık kemiği"
+   ],
+   "substitutionHint": [
+    "dört köşeli düğme veya dört yassı taş; her yüz farklı işaretlenir"
+   ],
+   "safetyNotes": "Küçük parçalar — 3 yaş altı için uygun değil.",
+   "childSuitable": true,
+   "supervision": "none",
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 4,
+    "cultural": 5,
+    "access": 4,
+    "distinct": 4,
+    "explain": 4,
+    "visual": 5,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "Puan değerlerinin (Venüs, köpek vb.) tam listesi kaynaklar arasında değişir."
+   ],
+   "gamblingReframed": true,
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "tali",
+   "name": "Tali",
+   "altNames": [
+    "Roman knucklebones",
+    "Tesserae (six-sided)"
+   ],
+   "culture": "Roman",
+   "region": "Mediterranean",
+   "countryOrArea": "Roman Empire",
+   "period": "attested throughout the Republic and Empire; regulated by law",
+   "family": "chance",
+   "taxonomyRationale": "Dört yüzlü aşık kemikleri atılır ve puan doğrudan atıştan çıkar.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Suetonius, Divus Augustus 71 (Augustus' letters describing play with tali)",
+     "type": "archive"
+    },
+    {
+     "ref": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 6
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 20
+   },
+   "ageMinEstimate": 7,
+   "materialsHint": [
+    "dört aşık kemiği"
+   ],
+   "substitutionHint": [
+    "dört yüzü işaretli dört yassı nesne"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 4,
+    "cultural": 5,
+    "access": 4,
+    "distinct": 2,
+    "explain": 5,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "Astragaloi ile aynı maddede mi? İkisi aynı nesne, farklı puanlamadır."
+   ],
+   "gamblingReframed": true,
+   "culturalNotes": "Augustus'un mektuplarında kendi kayıplarını anlatması, oyunun imparatorluk masasındaki yerini birinci elden gösterir.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "shagai",
+   "name": "Shagai",
+   "altNames": [
+    "Mongolian anklebones",
+    "Alchi"
+   ],
+   "culture": "Mongolian",
+   "region": "Central Asia",
+   "countryOrArea": "Mongolia",
+   "period": "long-standing; documented in modern ethnography and still played",
+   "family": "chance",
+   "taxonomyRationale": "Koyun aşık kemiği bir çekiliş aletidir; dört yüzün her biri bir hayvana karşılık gelir ve sonuç atıştan çıkar.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Shagai, Mongol kültüründe oyunun yanı sıra fal ve uğur bağlamı taşır. Kitap oyun biçimini basar, fal uygulamasını eğlenceye çevirmez ve ayrımı açıkça söyler.",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+     "type": "book"
+    },
+    {
+     "ref": "Kabzińska-Stawarz, Iwona, Games of Mongolian Shepherds (Warsaw: Institute of the History of Material Culture, 1991)",
+     "type": "ethnography"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 6
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 5,
+   "materialsHint": [
+    "dört veya daha fazla koyun aşık kemiği"
+   ],
+   "substitutionHint": [
+    "dört yüzü at/deve/koyun/keçi diye işaretlenmiş dört yassı nesne"
+   ],
+   "safetyNotes": "Küçük parçalar — 3 yaş altı için uygun değil.",
+   "childSuitable": true,
+   "environment": "floor",
+   "visualNeeds": [
+    "piece-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 5,
+    "access": 4,
+    "distinct": 5,
+    "explain": 5,
+    "visual": 5,
+    "play": 4
+   },
+   "unresolvedQuestions": [],
+   "culturalNotes": "Aşık kemiğinin dört yüzü at, deve, koyun ve keçiye karşılık gelir — bozkır ekonomisinin tamamı tek bir kemikte durur.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "sho",
+   "name": "Sho",
+   "altNames": [
+    "Tibetan dice game"
+   ],
+   "culture": "Tibetan",
+   "region": "Inner Asia",
+   "countryOrArea": "Tibet",
+   "period": "documented in 20th-century ethnography",
+   "family": "chance",
+   "taxonomyRationale": "İki zar bir kâseye atılır ve sonuç doğrudan atıştan çıkar; kabuk sayaçları puan tutar.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "low",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "partial",
+    "verdict": "partial",
+    "unknownElements": [
+     "Sayaç dağıtım kuralları tek kaynaktan kesinleşmiyor."
+    ]
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": false,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "unresolved",
+   "players": {
+    "min": 2,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 15,
+    "max": 30
+   },
+   "ageMinEstimate": 8,
+   "materialsHint": [
+    "iki zar",
+    "deri altlık ve kâse",
+    "64 kabuk sayaç"
+   ],
+   "childSuitable": true,
+   "environment": "floor",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 2,
+    "playability": 2,
+    "cultural": 4,
+    "access": 4,
+    "distinct": 4,
+    "explain": 3,
+    "visual": 4,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "İkinci bağımsız kaynak gerekiyor."
+   ],
+   "gamblingReframed": true,
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "set-dilth",
+   "name": "Set-dilth",
+   "altNames": [
+    "Apache stave dice"
+   ],
+   "culture": "White Mountain Apache",
+   "region": "North America",
+   "countryOrArea": "Arizona · New Mexico",
+   "period": "recorded in Bureau of American Ethnology fieldwork around 1900",
+   "family": "chance",
+   "taxonomyRationale": "Üç atma çubuğu bir çekiliş aletidir ve puan doğrudan atıştan çıkar.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Apache topluluklarına aittir; kayıt sömürge dönemi etnografyasıdır ve kitap bu bağlamı görünür kılar.",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
+     "type": "ethnography",
+     "locator": "'Dice games: White Mountain Apache', ss. 88–89, şekil 86–87"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 15,
+    "max": 30
+   },
+   "ageMinEstimate": 7,
+   "materialsHint": [
+    "üç atma çubuğu",
+    "sayaç taşları"
+   ],
+   "substitutionHint": [
+    "üç yassı çubuk; bir yüzü boyalı"
+   ],
+   "childSuitable": true,
+   "environment": "floor",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 3,
+    "explain": 4,
+    "visual": 3,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "Tek kaynak; ikinci bağımsız künye ve çağdaş Apache kaynağı aranmalıdır."
+   ],
+   "gamblingReframed": true,
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "hanafuda-koi-koi",
+   "name": "Koi-Koi",
+   "altNames": [
+    "Hanafuda"
+   ],
+   "culture": "Japanese",
+   "region": "East Asia",
+   "countryOrArea": "Japan",
+   "period": "the flower-card pack dates from the late 18th century, created under card prohibitions",
+   "family": "chance",
+   "taxonomyRationale": "Çekme aleti karttır; kalıcı tahta konumu yoktur ve her turun kararı 'devam edeyim mi'dir.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
+     "type": "book"
+    },
+    {
+     "ref": "Pakarnian, John / Depaulis, Thierry, studies on Japanese card packs in The Playing-Card (IPCS)",
+     "type": "journal"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 2
+   },
+   "durationMinutes": {
+    "min": 15,
+    "max": 30
+   },
+   "ageMinEstimate": 8,
+   "materialsHint": [
+    "48 kartlık hanafuda destesi"
+   ],
+   "substitutionHint": [
+    "standart deste ile eşleştirme biçimi; kitap bir dönüşüm tablosu verir"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 4,
+    "cultural": 5,
+    "access": 3,
+    "distinct": 5,
+    "explain": 3,
+    "visual": 5,
+    "play": 5
+   },
+   "unresolvedQuestions": [
+    "Hanafuda destesi her evde yoktur; kitap ya destesiz bir uyarlama vermeli ya da maddeyi 'malzeme gerekir' diye işaretlemelidir."
+   ],
+   "gamblingReframed": true,
+   "culturalNotes": "Deste, kart yasaklarını aşmak için sayı yerine çiçek kullanacak biçimde tasarlanmıştır — yasak, tasarımı doğurmuştur.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "ganjifa",
+   "name": "Ganjifa",
+   "altNames": [
+    "Ganjapa",
+    "Dashavatara ganjifa"
+   ],
+   "culture": "Hindustani",
+   "region": "South Asia",
+   "countryOrArea": "India · Iran",
+   "period": "recorded at Mughal courts from the 16th century; painted packs survive",
+   "family": "chance",
+   "taxonomyRationale": "Yuvarlak kartlarla oynanır; çekme aleti karttır ve tahta konumu yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Dashavatara ganjifa desteleri Vishnu'nun on avatarını resmeder ve dinî imge taşır. Kitap desteyi anlatabilir; dinî imgeyi süs olarak kullanamaz ve bağlamı söyler.",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
+     "type": "book"
+    },
+    {
+     "ref": "von Leyden, Rudolf, Ganjifa: The Playing Cards of India (London: Victoria and Albert Museum, 1982)",
+     "type": "museum"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "partial",
+    "verdict": "partial",
+    "unknownElements": [
+     "Bölgesel kural setleri çok farklıdır ve tek bir 'ganjifa oyunu' yoktur."
+    ]
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": false,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "unresolved",
+   "players": {
+    "min": 3,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 30,
+    "max": 60
+   },
+   "ageMinEstimate": 10,
+   "materialsHint": [
+    "96 veya 120 kartlık yuvarlak deste"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 2,
+    "cultural": 5,
+    "access": 2,
+    "distinct": 5,
+    "explain": 2,
+    "visual": 5,
+    "play": 3
+   },
+   "unresolvedQuestions": [
+    "Deste bulunamaz; oyun oynanamaz. Kitaba ancak 'kart destesi' bölümünde bir kültürel madde olarak girebilir."
+   ],
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "madiao",
+   "name": "Madiao",
+   "altNames": [
+    "Ma Diao",
+    "Chinese money-suited cards"
+   ],
+   "culture": "Han Chinese",
+   "region": "East Asia",
+   "countryOrArea": "China",
+   "period": "described in Ming-dynasty texts from the 16th century",
+   "family": "chance",
+   "taxonomyRationale": "Para desenli kart destesiyle oynanır; çekme aleti karttır.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
+     "type": "book"
+    },
+    {
+     "ref": "Lo, Andrew, studies on early Chinese card games, in The Playing-Card / Journal of the Royal Asiatic Society",
+     "type": "journal"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "partial",
+    "turnLogic": "partial",
+    "objective": "known",
+    "endCondition": "partial",
+    "verdict": "partial",
+    "unknownElements": [
+     "Ming metinleri oyunu anar ama tam kural vermez."
+    ]
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": false,
+    "legalMoveDistinguishable": false,
+    "victoryDeterminable": true,
+    "tieDefined": false,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "unresolved",
+   "players": {
+    "min": 4,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 30,
+    "max": 60
+   },
+   "ageMinEstimate": 11,
+   "materialsHint": [
+    "40 kartlık para desenli deste"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 3,
+    "playability": 1,
+    "cultural": 5,
+    "access": 2,
+    "distinct": 5,
+    "explain": 2,
+    "visual": 5,
+    "play": 2
+   },
+   "unresolvedQuestions": [
+    "Kural eksik ve deste bulunamaz; kitaba 'kartın tarihi' notu olarak girer."
+   ],
+   "culturalNotes": "Kart oyununun bilinen en eski izleri Çin'dedir; madiao, kartın Batı'ya yolculuğunun başlangıç noktasıdır.",
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "tien-gow",
+   "name": "Tien Gow",
+   "altNames": [
+    "Heaven and Nine",
+    "Chinese dominoes"
+   ],
+   "culture": "Cantonese",
+   "region": "East Asia",
+   "countryOrArea": "southern China",
+   "period": "documented from the 19th century; the tile pack is older",
+   "family": "chance",
+   "taxonomyRationale": "Çekme aleti tiledir; kalıcı tahta konumu yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Culin, Stewart, Chess and Playing-Cards (Washington: Smithsonian Institution, 1898)",
+     "type": "ethnography"
+    },
+    {
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 4,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 20,
+    "max": 45
+   },
+   "ageMinEstimate": 10,
+   "materialsHint": [
+    "32 taşlık Çin domino destesi"
+   ],
+   "substitutionHint": [
+    "standart domino takımından 32 taş seçilir; kitap bir eşleştirme tablosu verir"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 4,
+    "cultural": 4,
+    "access": 3,
+    "distinct": 4,
+    "explain": 3,
+    "visual": 4,
+    "play": 4
+   },
+   "unresolvedQuestions": [],
+   "gamblingReframed": true,
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "mahjong",
+   "name": "Mahjong",
+   "altNames": [
+    "Majiang"
+   ],
+   "culture": "Han Chinese",
+   "region": "East Asia",
+   "countryOrArea": "China",
+   "period": "in its recognisable form from the mid-19th century",
+   "family": "chance",
+   "taxonomyRationale": "Çekme aleti tiledir; el yapılır ve kalıcı tahta konumu yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
+    },
+    {
+     "ref": "Stanwick, Michael, studies on the origins of mahjong, in The Playing-Card (IPCS)",
+     "type": "journal"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 4,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 45,
+    "max": 90
+   },
+   "ageMinEstimate": 10,
+   "materialsHint": [
+    "144 taşlık mahjong takımı"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 3,
+    "cultural": 5,
+    "access": 2,
+    "distinct": 5,
+    "explain": 1,
+    "visual": 5,
+    "play": 5
+   },
+   "unresolvedQuestions": [
+    "Puanlama sistemleri bölgeye göre tamamen farklıdır ve 650 kelimeye SIĞMAZ. Kitap ya maddeyi almamalı ya da iki sayfa yerine dört sayfa ayırmalıdır — bu bir sayfa bütçesi kararıdır."
+   ],
+   "gamblingReframed": true,
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "tarocchini",
+   "name": "Tarocchini",
+   "altNames": [
+    "Bolognese tarot"
+   ],
+   "culture": "Italian",
+   "region": "Southern Europe",
+   "countryOrArea": "Bologna, Italy",
+   "period": "the tarot pack appears in the 15th century; tarocchini rules recorded from the 17th",
+   "family": "chance",
+   "taxonomyRationale": "Kart destesiyle el alma oyunu; çekme aleti karttır.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Tarot destesi bir OYUN destesidir; 18. yüzyıl sonunda ona eklenen fal anlamları sonradan icat edilmiştir. Kitap bu tarihi düzeltmeyi AÇIKÇA yapar — bu, en yaygın oyun tarihi yanlış bilgilerinden biridir.",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
+     "type": "book"
+    },
+    {
+     "ref": "Dummett, Michael, The Game of Tarot (London: Duckworth, 1980)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 4,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 30,
+    "max": 60
+   },
+   "ageMinEstimate": 11,
+   "materialsHint": [
+    "62 kartlık tarocchini destesi"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 3,
+    "cultural": 5,
+    "access": 2,
+    "distinct": 5,
+    "explain": 2,
+    "visual": 5,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "Deste bulunması zordur; kitap oyunu basacaksa standart desteyle bir uyarlama vermelidir."
+   ],
+   "culturalNotes": "Tarot beş yüzyıl boyunca yalnızca bir kart oyunuydu; fal anlamları 1780'lerde Fransa'da eklendi. Kitabın söyleyebileceği en değerli düzeltmelerden biri budur.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "karnoffel",
+   "name": "Karnöffel",
+   "altNames": [
+    "Kaiserspiel"
+   ],
+   "culture": "German",
+   "region": "Central Europe",
+   "countryOrArea": "Germany · Switzerland",
+   "period": "named in a 1426 document; the oldest European card game with identifiable surviving rules",
+   "family": "chance",
+   "taxonomyRationale": "Kart destesiyle el alma; çekme aleti karttır.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "high",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, A History of Card Games (Oxford: Oxford University Press, 1991)",
+     "type": "book"
+    },
+    {
+     "ref": "Dummett, Michael & McLeod, John, studies on early European card games",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 4,
+    "max": 6
+   },
+   "durationMinutes": {
+    "min": 20,
+    "max": 40
+   },
+   "ageMinEstimate": 10,
+   "materialsHint": [
+    "standart deste (uyarlanmış)"
+   ],
+   "substitutionHint": [
+    "48 kartlık standart destenin bir bölümü"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 5,
+    "playability": 4,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 5,
+    "explain": 3,
+    "visual": 3,
+    "play": 4
+   },
+   "unresolvedQuestions": [],
+   "culturalNotes": "Kartların gücü sabit değildir: seçilen bir renk sıradüzeni tersine çevirir. Altı yüz yıllık bir oyunun bu kadar sıra dışı olması kitabın anlatacağı iyi bir sürprizdir.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "mus",
+   "name": "Mus",
+   "altNames": [
+    "Musa"
+   ],
+   "culture": "Basque",
+   "region": "Western Europe",
+   "countryOrArea": "Basque Country (Spain · France)",
+   "period": "first described in the 18th century; widely played today",
+   "family": "chance",
+   "taxonomyRationale": "Kart destesiyle blöf ve pazarlık; çekme aleti karttır ve turun kararı riski almaktır.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
+     "type": "book"
+    },
+    {
+     "ref": "Larramendi, Manuel de, Diccionario trilingüe (1745) — earliest known reference to mus",
+     "type": "archive"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 4,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 25,
+    "max": 50
+   },
+   "ageMinEstimate": 10,
+   "materialsHint": [
+    "40 kartlık İspanyol destesi"
+   ],
+   "substitutionHint": [
+    "standart desteden 8, 9 ve 10'lar çıkarılır"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 5,
+    "explain": 2,
+    "visual": 3,
+    "play": 5
+   },
+   "unresolvedQuestions": [
+    "Eş oyuncular arasındaki işaretleşme (keinuak) oyunun parçasıdır ama kurallara yazılması zordur."
+   ],
+   "gamblingReframed": true,
+   "culturalNotes": "Eşinize yüz işaretiyle haber vermek kuralın PARÇASIDIR ve hile sayılmaz; bilinen çok az oyunda işaretleşme yasal bir eylemdir.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "truco",
+   "name": "Truco",
+   "altNames": [
+    "Truc",
+    "Truco argentino"
+   ],
+   "culture": "Río de la Plata",
+   "region": "South America",
+   "countryOrArea": "Argentina · Uruguay",
+   "period": "derived from Spanish truc; documented in the region from the 19th century",
+   "family": "chance",
+   "taxonomyRationale": "Kartla blöf ve yükseltme; çekme aleti karttır ve karar riski almaktır.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
+     "type": "book"
+    },
+    {
+     "ref": "Depaulis, Thierry, studies on Iberian and Latin American card games, in The Playing-Card (IPCS)",
+     "type": "journal"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 6
+   },
+   "durationMinutes": {
+    "min": 20,
+    "max": 40
+   },
+   "ageMinEstimate": 10,
+   "materialsHint": [
+    "40 kartlık İspanyol destesi"
+   ],
+   "substitutionHint": [
+    "standart desteden 8, 9 ve 10'lar çıkarılır"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 4,
+    "explain": 3,
+    "visual": 3,
+    "play": 5
+   },
+   "unresolvedQuestions": [
+    "Mus ile aynı kitapta iki blöf oyunu olması tekrar riski taşır."
+   ],
+   "gamblingReframed": true,
+   "culturalNotes": "Oyuncular blöfü şiirle yapar; doğaçlama beyitler oyunun tanınmış bir parçasıdır.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "durak",
+   "name": "Durak",
+   "altNames": [
+    "The Fool"
+   ],
+   "culture": "Russian",
+   "region": "Eastern Europe",
+   "countryOrArea": "Russia and neighbouring countries",
+   "period": "documented from the 19th century; the most widely played card game in the region",
+   "family": "chance",
+   "taxonomyRationale": "Kart destesiyle saldırı-savunma; çekme aleti karttır.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
+     "type": "book"
+    },
+    {
+     "ref": "McLeod, John, Pagat card game rules archive (documentary collection of played rules)",
+     "type": "field-record"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 6
+   },
+   "durationMinutes": {
+    "min": 15,
+    "max": 30
+   },
+   "ageMinEstimate": 8,
+   "materialsHint": [
+    "36 kartlık deste"
+   ],
+   "substitutionHint": [
+    "standart desteden 2–5 arası çıkarılır"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 5,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 4,
+    "explain": 4,
+    "visual": 3,
+    "play": 5
+   },
+   "unresolvedQuestions": [],
+   "culturalNotes": "Kazanan yoktur; yalnızca KAYBEDEN vardır — eli son kalan oyuncu 'aptal' olur. Hedefin tersine çevrilmesi bu ailenin en ilginç yapısal farkıdır.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "schafkopf",
+   "name": "Schafkopf",
+   "altNames": [
+    "Sheepshead"
+   ],
+   "culture": "Bavarian",
+   "region": "Central Europe",
+   "countryOrArea": "Bavaria, Germany",
+   "period": "documented from the early 19th century",
+   "family": "chance",
+   "taxonomyRationale": "Kartla el alma ve ortaklık kurma; çekme aleti karttır.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
+     "type": "book"
+    },
+    {
+     "ref": "McLeod, John, Pagat card game rules archive (documentary collection of played rules)",
+     "type": "field-record"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 4,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 25,
+    "max": 50
+   },
+   "ageMinEstimate": 11,
+   "materialsHint": [
+    "32 kartlık Bavyera destesi"
+   ],
+   "substitutionHint": [
+    "standart desteden 2–6 arası çıkarılır"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 4,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 3,
+    "explain": 2,
+    "visual": 3,
+    "play": 5
+   },
+   "unresolvedQuestions": [
+    "Kart oyunu maddelerinin sayısı fazlalaşıyor; kitap bu kümede en fazla altı madde tutmalı."
+   ],
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "cuarenta",
+   "name": "Cuarenta",
+   "altNames": [
+    "Forty"
+   ],
+   "culture": "Ecuadorian",
+   "region": "South America",
+   "countryOrArea": "Ecuador",
+   "period": "documented from the 19th century; regarded as a national game",
+   "family": "chance",
+   "taxonomyRationale": "Kartla eşleştirme ve toplama; çekme aleti karttır.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "low",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "McLeod, John, Pagat card game rules archive (documentary collection of played rules)",
+     "type": "field-record"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 4,
+    "max": 4
+   },
+   "durationMinutes": {
+    "min": 20,
+    "max": 40
+   },
+   "ageMinEstimate": 9,
+   "materialsHint": [
+    "40 kartlık İspanyol destesi"
+   ],
+   "substitutionHint": [
+    "standart desteden 8, 9 ve 10'lar çıkarılır"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 2,
+    "playability": 4,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 3,
+    "explain": 4,
+    "visual": 3,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "İkinci bağımsız kaynak — tercihen Ekvador kaynaklı — gerekiyor."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "dreidel",
+   "name": "Dreidel",
+   "altNames": [
+    "Sevivon"
+   ],
+   "culture": "Ashkenazi Jewish",
+   "region": "Central and Eastern Europe",
+   "countryOrArea": "Ashkenazi diaspora",
+   "period": "the four-sided spinning top is documented in Europe from the medieval period; the Hanukkah association is later",
+   "family": "chance",
+   "taxonomyRationale": "Dört yüzlü topaç bir çekiliş aletidir ve sonuç doğrudan dönüşten çıkar.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Oyun Hanuka bayramına bağlıdır ve dinî bir takvim bağlamı taşır. Kitap oyunu anlatabilir; bayram bağlamını atlayamaz ve harflerin dinî anlamını süs olarak kullanamaz.",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
+    },
+    {
+     "ref": "Encyclopaedia Judaica, entry on dreidel / trendel and the European teetotum",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "loop-possible",
+    "terminationRule": "Oyun teorik olarak bitmeyebilir; kitap tur sınırı koyar."
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 8
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 4,
+   "materialsHint": [
+    "dört yüzlü topaç",
+    "sayaç (fındık, fasulye, jeton)"
+   ],
+   "substitutionHint": [
+    "kare kâğıt ve kürdanla yapılmış topaç"
+   ],
+   "safetyNotes": "Sayaç olarak fındık kullanılıyorsa alerji uyarısı; küçük parçalar 3 yaş altı için uygun değil.",
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram",
+    "cultural-plate"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 5,
+    "cultural": 5,
+    "access": 5,
+    "distinct": 4,
+    "explain": 5,
+    "visual": 4,
+    "play": 2
+   },
+   "unresolvedQuestions": [
+    "Oyunda karar yoktur; 'oyun kalitesi' düşüktür ve kitaba girmesi kültürel gerekçeyledir. Bu açıkça yazılmalıdır."
+   ],
+   "gamblingReframed": true,
+   "culturalNotes": "Topacın Avrupa'daki teetotum ile ortak kökeni belgelidir; Hanuka anlatısı sonradan eklenmiştir ve kitap bu ayrımı yapar.",
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "passe-dix",
+   "name": "Passe-dix",
+   "altNames": [
+    "Pass ten"
+   ],
+   "culture": "French",
+   "region": "Western Europe",
+   "countryOrArea": "France",
+   "period": "documented from the medieval period; one of the oldest recorded dice games",
+   "family": "chance",
+   "taxonomyRationale": "Üç zar atılır ve sonuç doğrudan toplamdan çıkar; iz ve taş yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
+    },
+    {
+     "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 8
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 20
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "üç zar",
+    "sayaç"
+   ],
+   "substitutionHint": [
+    "üç zar ve kuru fasulye"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "none"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 5,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 2,
+    "explain": 5,
+    "visual": 1,
+    "play": 2
+   },
+   "unresolvedQuestions": [
+    "Kararsız bir şans oyunudur; kitaba girmesi ancak zar tarihini anlatmak içinse anlamlıdır."
+   ],
+   "gamblingReframed": true,
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "cho-han",
+   "name": "Chō-Han",
+   "altNames": [
+    "Even-Odd"
+   ],
+   "culture": "Japanese",
+   "region": "East Asia",
+   "countryOrArea": "Japan",
+   "period": "documented from the Edo period",
+   "family": "chance",
+   "taxonomyRationale": "İki zar atılır ve tek sonuç tek/çift tahminidir; iz yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "attributed",
+   "restrictionNote": "Chō-han tarihsel olarak yeraltı kumar salonlarının oyunudur ve bu bağlam popüler kültürde romantikleştirilmiştir. Kitap oyunu ancak bahis mekaniği PUANLA yeniden yazılarak ve bu bağlam açıkça anlatılarak basabilir (K5).",
+   "sourceConfidence": "low",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 3,
+    "max": 10
+   },
+   "durationMinutes": {
+    "min": 5,
+    "max": 15
+   },
+   "ageMinEstimate": 7,
+   "materialsHint": [
+    "iki zar",
+    "bir kâse veya kap"
+   ],
+   "childSuitable": true,
+   "environment": "floor",
+   "visualNeeds": [
+    "none"
+   ],
+   "scores": {
+    "source": 2,
+    "playability": 5,
+    "cultural": 3,
+    "access": 5,
+    "distinct": 2,
+    "explain": 5,
+    "visual": 2,
+    "play": 2
+   },
+   "unresolvedQuestions": [
+    "Puanla yeniden yazıldığında geriye ne kalıyor? Bu maddede K5 kararı oyunu neredeyse tümüyle boşaltıyor; muhtemelen ELENMELİ."
+   ],
+   "gamblingReframed": true,
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "crown-and-anchor",
+   "name": "Crown and Anchor",
+   "altNames": [
+    "Crown and Anchor (naval)"
+   ],
+   "culture": "English",
+   "region": "Western Europe · maritime",
+   "countryOrArea": "British naval and merchant service",
+   "period": "documented from the 18th–19th centuries aboard ships",
+   "family": "chance",
+   "taxonomyRationale": "Üç sembollü zar atılır ve sonuç doğrudan atıştan çıkar.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "low",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+     "type": "book"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 10
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 6,
+   "materialsHint": [
+    "altı sembollü üç zar",
+    "sembollü bez"
+   ],
+   "substitutionHint": [
+    "kâğıda çizilmiş altı hane",
+    "üzerine sembol yazılmış üç zar"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "board-diagram",
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 2,
+    "playability": 5,
+    "cultural": 3,
+    "access": 4,
+    "distinct": 3,
+    "explain": 5,
+    "visual": 4,
+    "play": 2
+   },
+   "unresolvedQuestions": [
+    "Oyun özünde bir bahis düzeneğidir; K5 uygulandığında geriye çok az kalır.",
+    "İkinci bağımsız kaynak gerekiyor."
+   ],
+   "gamblingReframed": true,
+   "editorialStatus": "reserve",
+   "playtestStatus": "not-started"
+  },
+  {
+   "gameId": "briscola",
+   "name": "Briscola",
+   "altNames": [
+    "Brisca"
+   ],
+   "culture": "Italian",
+   "region": "Southern Europe",
+   "countryOrArea": "Italy",
+   "period": "documented from the 19th century; widely played today",
+   "family": "chance",
+   "taxonomyRationale": "Kartla el alma; çekme aleti karttır ve tahta konumu yoktur.",
+   "status": "candidate",
+   "restrictionStatus": "open",
+   "sourceConfidence": "medium",
+   "sourceVerification": "bibliographic",
+   "sources": [
+    {
+     "ref": "Parlett, David, The Penguin Book of Card Games (London: Penguin, 2008 edition)",
+     "type": "book"
+    },
+    {
+     "ref": "McLeod, John, Pagat card game rules archive (documentary collection of played rules)",
+     "type": "field-record"
+    }
+   ],
+   "ruleCompleteness": {
+    "setup": "known",
+    "play": "known",
+    "turnLogic": "known",
+    "objective": "known",
+    "endCondition": "known",
+    "verdict": "complete",
+    "unknownElements": []
+   },
+   "clarity": {
+    "setupPerformable": true,
+    "firstTurnTakeable": true,
+    "legalMoveDistinguishable": true,
+    "victoryDeterminable": true,
+    "tieDefined": true,
+    "terminationRisk": "finite"
+   },
+   "playabilityStatus": "rules-complete",
+   "players": {
+    "min": 2,
+    "max": 6
+   },
+   "durationMinutes": {
+    "min": 10,
+    "max": 25
+   },
+   "ageMinEstimate": 7,
+   "materialsHint": [
+    "40 kartlık İtalyan destesi"
+   ],
+   "substitutionHint": [
+    "standart desteden 8, 9 ve 10'lar çıkarılır"
+   ],
+   "childSuitable": true,
+   "environment": "table",
+   "visualNeeds": [
+    "piece-diagram"
+   ],
+   "scores": {
+    "source": 4,
+    "playability": 5,
+    "cultural": 4,
+    "access": 5,
+    "distinct": 2,
+    "explain": 5,
+    "visual": 3,
+    "play": 4
+   },
+   "unresolvedQuestions": [
+    "Kart maddeleri arasında en kolay öğretilenidir; kitap kart bölümüne bir GİRİŞ maddesi olarak koyabilir."
+   ],
+   "editorialStatus": "inventory",
+   "playtestStatus": "not-started"
+  }
+ ]
 }

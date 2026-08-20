@@ -160,7 +160,7 @@ FAMILIES_MAP = {
            "cast decides how far.",
    "test": "One piece moves, and the distance is not chosen."},
   {"n": "IV", "name": "The Line and the Territory",
-   "idea": "You win by an arrangement: a line of three, an enclosed area, a "
+   "idea": "You win by an arrangement: a row of three, an enclosed area, a "
            "completed connection.",
    "test": "Capture is a consequence of the arrangement, not the aim."},
   {"n": "V", "name": "The War Board",
