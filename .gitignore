@@ -96,6 +96,14 @@ __pycache__/
 !07_ASSETS/diagrams/diagram_language.json
 !07_ASSETS/diagrams/pilot_diagrams.json
 !07_ASSETS/diagrams/phase3_diagrams.json
+# ⚠ FAZ 6 DÜZELTMESİ — CI KÖRDÜ.
+# Faz 4 ve Faz 5 kendi tanımlayıcılarını bu listeye EKLEMEDİ. Sonuç: CI'da
+# 51 diyagramın 18'i denetleniyordu, 33'ü hiç görülmedi. Kapı yeşil yanıyordu
+# çünkü bakacak dosya yoktu — bir kapının VARLIĞI değil, DOSYAYI GÖRMESİ
+# gerekir (World Myths K18'in diyagram biçimi).
+!07_ASSETS/diagrams/phase4_diagrams.json
+!07_ASSETS/diagrams/phase5_diagrams.json
+!07_ASSETS/diagrams/phase6_diagrams.json
 
 # ── KURUCU HAM TESLİMİ · karar K12 ile AYNI GEREKÇE ────────────────────────
 # 06_FOUNDER_DELIVERY/ kurucunun bulduğu KAYNAKLARIN bırakıldığı yerdir ve

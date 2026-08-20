@@ -140,12 +140,16 @@ def parse(path: str) -> dict:
 
 # ── REPORTLAB ────────────────────────────────────────────────────────────
 def draw_reportlab(canvas, doc_ops: dict, x_pt: float, y_pt: float,
-                   width_pt: float, skip_background: bool = True) -> float:
+                   width_pt: float, skip_background: bool = True,
+                   font: str = "Times-Roman") -> float:
     """Emirleri bir reportlab canvas'ına çizer ve KULLANILAN YÜKSEKLİĞİ döner.
 
     `x_pt`,`y_pt` diyagramın SOL ÜST köşesidir (PDF'in alt-sol origin'inde
     y aşağı doğru sayılmaz; burada dönüşüm yapılır). `width_pt` verilen
     genişliğe ORANTILI ölçeklenir.
+
+    `font` diyagram efsanesinin fontudur ve GÖMÜLÜ bir font olmak
+    zorundadır (interior.py "GBSerif" geçer).
 
     `skip_background=True` beyaz tam-tuval dikdörtgenini atlar: PDF'te beyaz
     bir kutu basmanın anlamı yoktur ve sayfa arkaplanını gizlerse dizgi
@@ -193,7 +197,10 @@ def draw_reportlab(canvas, doc_ops: dict, x_pt: float, y_pt: float,
         elif o["op"] == "text":
             canvas.setDash()
             canvas.setFillColorRGB(*[c / 255.0 for c in (o["fill"] or (0, 0, 0))])
-            canvas.setFont("Times-Roman", o["size"] * s)
+            # ⚠ FONT ADI PARAMETREDİR. Sabit "Times-Roman" reportlab'ın
+            # GÖMÜLMEYEN taban fontudur ve KDP gömülmemiş font kabul
+            # etmez: efsanedeki tek satır bütün iç bloğu reddettirirdi.
+            canvas.setFont(font, o["size"] * s)
             draw = {"start": canvas.drawString,
                     "middle": canvas.drawCentredString,
                     "end": canvas.drawRightString}[o["anchor"]]

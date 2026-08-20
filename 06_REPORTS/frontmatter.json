@@ -1,0 +1,83 @@
+{
+ "$comment": "PUBLIC KATMAN — yapısal özet. Metin YOKTUR (K12).",
+ "generatedAtPhase": "phase6",
+ "measured": {
+  "games": 56,
+  "cultures": 39,
+  "families": 7,
+  "reconstructed": 7,
+  "oldestGameBCE": 2600,
+  "oldestGameAgeYears": 4600,
+  "publicationYear": 2026,
+  "subtitleMeasured": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
+  "frontMatterWords": 2039,
+  "familyOpenerWords": 2415
+ },
+ "sectionIds": [
+  "introduction",
+  "how-to-use",
+  "seven-families",
+  "on-sources"
+ ],
+ "familyOpeners": [
+  {
+   "family": "sowing",
+   "numeral": "I",
+   "gameCount": 5,
+   "targetGames": 14,
+   "cultures": 5,
+   "words": 389
+  },
+  {
+   "family": "hunt-siege",
+   "numeral": "II",
+   "gameCount": 6,
+   "targetGames": 10,
+   "cultures": 6,
+   "words": 350
+  },
+  {
+   "family": "race",
+   "numeral": "III",
+   "gameCount": 12,
+   "targetGames": 18,
+   "cultures": 12,
+   "words": 361
+  },
+  {
+   "family": "territory",
+   "numeral": "IV",
+   "gameCount": 9,
+   "targetGames": 17,
+   "cultures": 9,
+   "words": 352
+  },
+  {
+   "family": "war-board",
+   "numeral": "V",
+   "gameCount": 14,
+   "targetGames": 21,
+   "cultures": 13,
+   "words": 339
+  },
+  {
+   "family": "chance",
+   "numeral": "VI",
+   "gameCount": 3,
+   "targetGames": 4,
+   "cultures": 3,
+   "words": 305
+  },
+  {
+   "family": "boardless",
+   "numeral": "VII",
+   "gameCount": 7,
+   "targetGames": 16,
+   "cultures": 5,
+   "words": 319
+  }
+ ],
+ "contentsLength": 63,
+ "authorBioPresent": false
+}

@@ -1,0 +1,137 @@
+{
+ "checks": 18,
+ "failed": [],
+ "warnings": [],
+ "editions": {
+  "paperback": {
+   "fonts": [
+    {
+     "name": "AAAAAA+LiberationSerif-Bold",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif-Italic",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif-BoldItalic",
+     "embedded": true
+    }
+   ],
+   "geometry": {
+    "pages": 160,
+    "sizes": [
+     [
+      612.0,
+      792.0
+     ]
+    ]
+   },
+   "ink": {
+    "worstMarginIn": {
+     "leftIn": 0.486,
+     "rightIn": 0.486,
+     "topIn": 0.361,
+     "bottomIn": 0.333
+    },
+    "blankPages": [
+     2,
+     8,
+     10,
+     12,
+     14,
+     26,
+     40,
+     66,
+     86,
+     116,
+     124,
+     140,
+     142,
+     146,
+     152,
+     156,
+     158,
+     160
+    ]
+   },
+   "language": {
+    "extractedWords": 65299,
+    "turkishHits": []
+   },
+   "images": {
+    "rasterImages": 0
+   },
+   "pageCount": 160
+  },
+  "hardcover": {
+   "fonts": [
+    {
+     "name": "AAAAAA+LiberationSerif-Bold",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif-Italic",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif-BoldItalic",
+     "embedded": true
+    }
+   ],
+   "geometry": {
+    "pages": 160,
+    "sizes": [
+     [
+      594.0,
+      792.0
+     ]
+    ]
+   },
+   "ink": {
+    "worstMarginIn": {
+     "leftIn": 0.486,
+     "rightIn": 0.5,
+     "topIn": 0.361,
+     "bottomIn": 0.333
+    },
+    "blankPages": [
+     2,
+     8,
+     10,
+     12,
+     14,
+     26,
+     40,
+     66,
+     86,
+     116,
+     124,
+     140,
+     142,
+     146,
+     152,
+     156,
+     158,
+     160
+    ]
+   },
+   "language": {
+    "extractedWords": 65299,
+    "turkishHits": []
+   },
+   "images": {
+    "rasterImages": 0
+   },
+   "pageCount": 160
+  }
+ }
+}

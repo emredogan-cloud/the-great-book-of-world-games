@@ -1,0 +1,1779 @@
+{
+  "$comment": [
+    "FAZ 4 · BATCH 1 DİYAGRAM TANIMLAYICILARI.",
+    "",
+    "Düğüm koordinatları TÜRETİLMİŞTİR (bkz. üretim betiği): bir haçın 33",
+    "çukurunu ya da bir çemberin 40 taşını elle yazmak, kaynakla uyuşmayan",
+    "bir tahtayı sessizce üretmenin en kolay yoludur.",
+    "",
+    "Bir yeni çerçeve kullanıldı: `bodily/bed` (dil v1.4). Seksek yatağı",
+    "bir ızgara DEĞİLDİR ve ızgarayla çizilmedi.",
+    "",
+    "Hiçbiri `reconstructed` değildir: sekiz tahtanın sekizi de kaynakta",
+    "TARİF EDİLMİŞTİR. Editoryal olan yerler altyazıda durur."
+  ],
+  "version": "1.0",
+  "phase": "phase4",
+  "purpose": "kalibrasyon ölçümü ve kural ↔ diyagram uyum denetimi",
+  "diagrams": [
+    {
+      "diagramId": "seega-board",
+      "gameId": "seega",
+      "type": "setup-illustration",
+      "boardClass": "point",
+      "size": {
+        "cols": 5,
+        "rows": 5
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "caption": "The board full and the centre empty — the position from which every game of seega starts. Lane's own figure marks a starting pair for each player, but the digitised plate does not preserve which holes they are; since he also records that the pieces go down freely, one possible filling is shown.",
+      "greyLevels": [
+        0,
+        100
+      ],
+      "pieces": [
+        {
+          "at": "a1",
+          "glyph": "dark"
+        },
+        {
+          "at": "a2",
+          "glyph": "light"
+        },
+        {
+          "at": "a3",
+          "glyph": "dark"
+        },
+        {
+          "at": "a4",
+          "glyph": "light"
+        },
+        {
+          "at": "a5",
+          "glyph": "dark"
+        },
+        {
+          "at": "b1",
+          "glyph": "light"
+        },
+        {
+          "at": "b2",
+          "glyph": "dark"
+        },
+        {
+          "at": "b3",
+          "glyph": "light"
+        },
+        {
+          "at": "b4",
+          "glyph": "dark"
+        },
+        {
+          "at": "b5",
+          "glyph": "light"
+        },
+        {
+          "at": "c1",
+          "glyph": "dark"
+        },
+        {
+          "at": "c2",
+          "glyph": "light"
+        },
+        {
+          "at": "c4",
+          "glyph": "light"
+        },
+        {
+          "at": "c5",
+          "glyph": "dark"
+        },
+        {
+          "at": "d1",
+          "glyph": "light"
+        },
+        {
+          "at": "d2",
+          "glyph": "dark"
+        },
+        {
+          "at": "d3",
+          "glyph": "light"
+        },
+        {
+          "at": "d4",
+          "glyph": "dark"
+        },
+        {
+          "at": "d5",
+          "glyph": "light"
+        },
+        {
+          "at": "e1",
+          "glyph": "dark"
+        },
+        {
+          "at": "e2",
+          "glyph": "light"
+        },
+        {
+          "at": "e3",
+          "glyph": "dark"
+        },
+        {
+          "at": "e4",
+          "glyph": "light"
+        },
+        {
+          "at": "e5",
+          "glyph": "dark"
+        }
+      ],
+      "arrows": [],
+      "markers": [],
+      "legend": [
+        {
+          "glyph": "dark",
+          "label": "first player"
+        },
+        {
+          "glyph": "light",
+          "label": "second player"
+        }
+      ]
+    },
+    {
+      "diagramId": "seega-capture",
+      "gameId": "seega",
+      "type": "move-diagram",
+      "boardClass": "point",
+      "size": {
+        "cols": 5,
+        "rows": 5
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "caption": "Capture is by closing in, not by jumping. The dark piece slides down the file and shuts the light piece in between two of its own; the light piece is lifted off. A piece that moves into the gap by itself is safe.",
+      "greyLevels": [
+        0,
+        100
+      ],
+      "pieces": [
+        {
+          "at": "c1",
+          "glyph": "dark"
+        },
+        {
+          "at": "c2",
+          "glyph": "light",
+          "captured": true
+        },
+        {
+          "at": "c4",
+          "glyph": "dark"
+        },
+        {
+          "at": "e4",
+          "glyph": "dark"
+        }
+      ],
+      "arrows": [
+        {
+          "kind": "move",
+          "from": "e4",
+          "to": "c4"
+        }
+      ],
+      "markers": [],
+      "legend": [
+        {
+          "glyph": "dark",
+          "label": "moving side"
+        },
+        {
+          "glyph": "light",
+          "label": "shut in and taken"
+        },
+        {
+          "glyph": "move",
+          "label": "the move shown"
+        },
+        {
+          "glyph": "captured",
+          "label": "taken on this move"
+        }
+      ]
+    },
+    {
+      "diagramId": "tab-board",
+      "gameId": "tab",
+      "type": "setup-illustration",
+      "boardClass": "cell",
+      "size": {
+        "cols": 9,
+        "rows": 4
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "caption": "Four rows of nine, the size Lane uses to explain the game. Each player fills their own outer row. The two middle rows belong to nobody and are read in opposite directions, so a piece that leaves the end of its own row runs the circuit anticlockwise.",
+      "greyLevels": [
+        0,
+        100
+      ],
+      "pieces": [
+        {
+          "at": "a1",
+          "glyph": "dark"
+        },
+        {
+          "at": "b1",
+          "glyph": "dark"
+        },
+        {
+          "at": "c1",
+          "glyph": "dark"
+        },
+        {
+          "at": "d1",
+          "glyph": "dark"
+        },
+        {
+          "at": "e1",
+          "glyph": "dark"
+        },
+        {
+          "at": "f1",
+          "glyph": "dark"
+        },
+        {
+          "at": "g1",
+          "glyph": "dark"
+        },
+        {
+          "at": "h1",
+          "glyph": "dark"
+        },
+        {
+          "at": "i1",
+          "glyph": "dark"
+        },
+        {
+          "at": "a4",
+          "glyph": "light"
+        },
+        {
+          "at": "b4",
+          "glyph": "light"
+        },
+        {
+          "at": "c4",
+          "glyph": "light"
+        },
+        {
+          "at": "d4",
+          "glyph": "light"
+        },
+        {
+          "at": "e4",
+          "glyph": "light"
+        },
+        {
+          "at": "f4",
+          "glyph": "light"
+        },
+        {
+          "at": "g4",
+          "glyph": "light"
+        },
+        {
+          "at": "h4",
+          "glyph": "light"
+        },
+        {
+          "at": "i4",
+          "glyph": "light"
+        }
+      ],
+      "arrows": [
+        {
+          "kind": "flow",
+          "from": "i2",
+          "to": "a2"
+        },
+        {
+          "kind": "flow",
+          "from": "a3",
+          "to": "i3"
+        }
+      ],
+      "markers": [],
+      "legend": [
+        {
+          "glyph": "dark",
+          "label": "first player's row"
+        },
+        {
+          "glyph": "light",
+          "label": "second player's row"
+        },
+        {
+          "glyph": "flow",
+          "label": "direction of travel"
+        }
+      ]
+    },
+    {
+      "diagramId": "morris-board",
+      "gameId": "nine-mens-morris",
+      "type": "board-diagram",
+      "boardClass": "point",
+      "size": {
+        "spanMm": 46,
+        "aspect": 1.0
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "caption": "Twenty-four points: the corners and the mid-sides of three squares, joined across the middle of each side. There are no diagonals — Gomme's nine-piece game does not use them, and the twelve-piece game that does is given as a variant.",
+      "greyLevels": [
+        0
+      ],
+      "nodes": {
+        "o1": [
+          0.0,
+          0.0
+        ],
+        "o2": [
+          0.5,
+          0.0
+        ],
+        "o3": [
+          1.0,
+          0.0
+        ],
+        "o4": [
+          1.0,
+          0.5
+        ],
+        "o5": [
+          1.0,
+          1.0
+        ],
+        "o6": [
+          0.5,
+          1.0
+        ],
+        "o7": [
+          0.0,
+          1.0
+        ],
+        "o8": [
+          0.0,
+          0.5
+        ],
+        "m1": [
+          0.1667,
+          0.1667
+        ],
+        "m2": [
+          0.5,
+          0.1667
+        ],
+        "m3": [
+          0.8333,
+          0.1667
+        ],
+        "m4": [
+          0.8333,
+          0.5
+        ],
+        "m5": [
+          0.8333,
+          0.8333
+        ],
+        "m6": [
+          0.5,
+          0.8333
+        ],
+        "m7": [
+          0.1667,
+          0.8333
+        ],
+        "m8": [
+          0.1667,
+          0.5
+        ],
+        "i1": [
+          0.3333,
+          0.3333
+        ],
+        "i2": [
+          0.5,
+          0.3333
+        ],
+        "i3": [
+          0.6667,
+          0.3333
+        ],
+        "i4": [
+          0.6667,
+          0.5
+        ],
+        "i5": [
+          0.6667,
+          0.6667
+        ],
+        "i6": [
+          0.5,
+          0.6667
+        ],
+        "i7": [
+          0.3333,
+          0.6667
+        ],
+        "i8": [
+          0.3333,
+          0.5
+        ]
+      },
+      "edges": [
+        [
+          "o1",
+          "o2"
+        ],
+        [
+          "o2",
+          "o3"
+        ],
+        [
+          "o3",
+          "o4"
+        ],
+        [
+          "o4",
+          "o5"
+        ],
+        [
+          "o5",
+          "o6"
+        ],
+        [
+          "o6",
+          "o7"
+        ],
+        [
+          "o7",
+          "o8"
+        ],
+        [
+          "o8",
+          "o1"
+        ],
+        [
+          "m1",
+          "m2"
+        ],
+        [
+          "m2",
+          "m3"
+        ],
+        [
+          "m3",
+          "m4"
+        ],
+        [
+          "m4",
+          "m5"
+        ],
+        [
+          "m5",
+          "m6"
+        ],
+        [
+          "m6",
+          "m7"
+        ],
+        [
+          "m7",
+          "m8"
+        ],
+        [
+          "m8",
+          "m1"
+        ],
+        [
+          "i1",
+          "i2"
+        ],
+        [
+          "i2",
+          "i3"
+        ],
+        [
+          "i3",
+          "i4"
+        ],
+        [
+          "i4",
+          "i5"
+        ],
+        [
+          "i5",
+          "i6"
+        ],
+        [
+          "i6",
+          "i7"
+        ],
+        [
+          "i7",
+          "i8"
+        ],
+        [
+          "i8",
+          "i1"
+        ],
+        [
+          "o2",
+          "m2"
+        ],
+        [
+          "m2",
+          "i2"
+        ],
+        [
+          "o4",
+          "m4"
+        ],
+        [
+          "m4",
+          "i4"
+        ],
+        [
+          "o6",
+          "m6"
+        ],
+        [
+          "m6",
+          "i6"
+        ],
+        [
+          "o8",
+          "m8"
+        ],
+        [
+          "m8",
+          "i8"
+        ]
+      ],
+      "pieces": [],
+      "arrows": [],
+      "markers": [],
+      "legend": []
+    },
+    {
+      "diagramId": "morris-mill",
+      "gameId": "nine-mens-morris",
+      "type": "move-diagram",
+      "boardClass": "point",
+      "size": {
+        "spanMm": 46,
+        "aspect": 1.0
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "caption": "A mill is three pieces in a row along one marked line. Sliding the dark piece onto the middle point closes the mill on the outer square, and one light piece comes off the board. The light piece standing in a mill of its own may not be the one taken.",
+      "greyLevels": [
+        0,
+        100
+      ],
+      "nodes": {
+        "o1": [
+          0.0,
+          0.0
+        ],
+        "o2": [
+          0.5,
+          0.0
+        ],
+        "o3": [
+          1.0,
+          0.0
+        ],
+        "o4": [
+          1.0,
+          0.5
+        ],
+        "o5": [
+          1.0,
+          1.0
+        ],
+        "o6": [
+          0.5,
+          1.0
+        ],
+        "o7": [
+          0.0,
+          1.0
+        ],
+        "o8": [
+          0.0,
+          0.5
+        ],
+        "m1": [
+          0.1667,
+          0.1667
+        ],
+        "m2": [
+          0.5,
+          0.1667
+        ],
+        "m3": [
+          0.8333,
+          0.1667
+        ],
+        "m4": [
+          0.8333,
+          0.5
+        ],
+        "m5": [
+          0.8333,
+          0.8333
+        ],
+        "m6": [
+          0.5,
+          0.8333
+        ],
+        "m7": [
+          0.1667,
+          0.8333
+        ],
+        "m8": [
+          0.1667,
+          0.5
+        ],
+        "i1": [
+          0.3333,
+          0.3333
+        ],
+        "i2": [
+          0.5,
+          0.3333
+        ],
+        "i3": [
+          0.6667,
+          0.3333
+        ],
+        "i4": [
+          0.6667,
+          0.5
+        ],
+        "i5": [
+          0.6667,
+          0.6667
+        ],
+        "i6": [
+          0.5,
+          0.6667
+        ],
+        "i7": [
+          0.3333,
+          0.6667
+        ],
+        "i8": [
+          0.3333,
+          0.5
+        ]
+      },
+      "edges": [
+        [
+          "o1",
+          "o2"
+        ],
+        [
+          "o2",
+          "o3"
+        ],
+        [
+          "o3",
+          "o4"
+        ],
+        [
+          "o4",
+          "o5"
+        ],
+        [
+          "o5",
+          "o6"
+        ],
+        [
+          "o6",
+          "o7"
+        ],
+        [
+          "o7",
+          "o8"
+        ],
+        [
+          "o8",
+          "o1"
+        ],
+        [
+          "m1",
+          "m2"
+        ],
+        [
+          "m2",
+          "m3"
+        ],
+        [
+          "m3",
+          "m4"
+        ],
+        [
+          "m4",
+          "m5"
+        ],
+        [
+          "m5",
+          "m6"
+        ],
+        [
+          "m6",
+          "m7"
+        ],
+        [
+          "m7",
+          "m8"
+        ],
+        [
+          "m8",
+          "m1"
+        ],
+        [
+          "i1",
+          "i2"
+        ],
+        [
+          "i2",
+          "i3"
+        ],
+        [
+          "i3",
+          "i4"
+        ],
+        [
+          "i4",
+          "i5"
+        ],
+        [
+          "i5",
+          "i6"
+        ],
+        [
+          "i6",
+          "i7"
+        ],
+        [
+          "i7",
+          "i8"
+        ],
+        [
+          "i8",
+          "i1"
+        ],
+        [
+          "o2",
+          "m2"
+        ],
+        [
+          "m2",
+          "i2"
+        ],
+        [
+          "o4",
+          "m4"
+        ],
+        [
+          "m4",
+          "i4"
+        ],
+        [
+          "o6",
+          "m6"
+        ],
+        [
+          "m6",
+          "i6"
+        ],
+        [
+          "o8",
+          "m8"
+        ],
+        [
+          "m8",
+          "i8"
+        ]
+      ],
+      "pieces": [
+        {
+          "at": "o1",
+          "glyph": "dark"
+        },
+        {
+          "at": "o3",
+          "glyph": "dark"
+        },
+        {
+          "at": "m2",
+          "glyph": "dark"
+        },
+        {
+          "at": "i1",
+          "glyph": "light"
+        },
+        {
+          "at": "i2",
+          "glyph": "light"
+        },
+        {
+          "at": "i3",
+          "glyph": "light"
+        },
+        {
+          "at": "m6",
+          "glyph": "light",
+          "captured": true
+        }
+      ],
+      "arrows": [
+        {
+          "kind": "move",
+          "from": "m2",
+          "to": "o2"
+        }
+      ],
+      "markers": [],
+      "legend": [
+        {
+          "glyph": "dark",
+          "label": "closing the mill"
+        },
+        {
+          "glyph": "light",
+          "label": "taken off the board"
+        },
+        {
+          "glyph": "move",
+          "label": "the move shown"
+        },
+        {
+          "glyph": "captured",
+          "label": "taken on this move"
+        }
+      ]
+    },
+    {
+      "diagramId": "foxgeese-setup",
+      "gameId": "fox-and-geese",
+      "type": "setup-illustration",
+      "boardClass": "point",
+      "size": {
+        "spanMm": 58,
+        "aspect": 1.0
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "caption": "Gomme's arrangement: thirty-three holes, the fox in the centre, nine geese in the arm in front of him and four on each side. The arm behind is left empty — that is the ground both sides are playing for.",
+      "greyLevels": [
+        0,
+        100
+      ],
+      "nodes": {
+        "n0": [
+          0.3333,
+          0.0
+        ],
+        "n1": [
+          0.5,
+          0.0
+        ],
+        "n2": [
+          0.6667,
+          0.0
+        ],
+        "n3": [
+          0.3333,
+          0.1667
+        ],
+        "n4": [
+          0.5,
+          0.1667
+        ],
+        "n5": [
+          0.6667,
+          0.1667
+        ],
+        "n6": [
+          0.0,
+          0.3333
+        ],
+        "n7": [
+          0.1667,
+          0.3333
+        ],
+        "n8": [
+          0.3333,
+          0.3333
+        ],
+        "n9": [
+          0.5,
+          0.3333
+        ],
+        "n10": [
+          0.6667,
+          0.3333
+        ],
+        "n11": [
+          0.8333,
+          0.3333
+        ],
+        "n12": [
+          1.0,
+          0.3333
+        ],
+        "n13": [
+          0.0,
+          0.5
+        ],
+        "n14": [
+          0.1667,
+          0.5
+        ],
+        "n15": [
+          0.3333,
+          0.5
+        ],
+        "n16": [
+          0.5,
+          0.5
+        ],
+        "n17": [
+          0.6667,
+          0.5
+        ],
+        "n18": [
+          0.8333,
+          0.5
+        ],
+        "n19": [
+          1.0,
+          0.5
+        ],
+        "n20": [
+          0.0,
+          0.6667
+        ],
+        "n21": [
+          0.1667,
+          0.6667
+        ],
+        "n22": [
+          0.3333,
+          0.6667
+        ],
+        "n23": [
+          0.5,
+          0.6667
+        ],
+        "n24": [
+          0.6667,
+          0.6667
+        ],
+        "n25": [
+          0.8333,
+          0.6667
+        ],
+        "n26": [
+          1.0,
+          0.6667
+        ],
+        "n27": [
+          0.3333,
+          0.8333
+        ],
+        "n28": [
+          0.5,
+          0.8333
+        ],
+        "n29": [
+          0.6667,
+          0.8333
+        ],
+        "n30": [
+          0.3333,
+          1.0
+        ],
+        "n31": [
+          0.5,
+          1.0
+        ],
+        "n32": [
+          0.6667,
+          1.0
+        ]
+      },
+      "edges": [
+        [
+          "n0",
+          "n1"
+        ],
+        [
+          "n0",
+          "n3"
+        ],
+        [
+          "n1",
+          "n2"
+        ],
+        [
+          "n1",
+          "n4"
+        ],
+        [
+          "n2",
+          "n5"
+        ],
+        [
+          "n3",
+          "n4"
+        ],
+        [
+          "n3",
+          "n8"
+        ],
+        [
+          "n4",
+          "n5"
+        ],
+        [
+          "n4",
+          "n9"
+        ],
+        [
+          "n5",
+          "n10"
+        ],
+        [
+          "n6",
+          "n7"
+        ],
+        [
+          "n6",
+          "n13"
+        ],
+        [
+          "n7",
+          "n8"
+        ],
+        [
+          "n7",
+          "n14"
+        ],
+        [
+          "n8",
+          "n9"
+        ],
+        [
+          "n8",
+          "n15"
+        ],
+        [
+          "n9",
+          "n10"
+        ],
+        [
+          "n9",
+          "n16"
+        ],
+        [
+          "n10",
+          "n11"
+        ],
+        [
+          "n10",
+          "n17"
+        ],
+        [
+          "n11",
+          "n12"
+        ],
+        [
+          "n11",
+          "n18"
+        ],
+        [
+          "n12",
+          "n19"
+        ],
+        [
+          "n13",
+          "n14"
+        ],
+        [
+          "n13",
+          "n20"
+        ],
+        [
+          "n14",
+          "n15"
+        ],
+        [
+          "n14",
+          "n21"
+        ],
+        [
+          "n15",
+          "n16"
+        ],
+        [
+          "n15",
+          "n22"
+        ],
+        [
+          "n16",
+          "n17"
+        ],
+        [
+          "n16",
+          "n23"
+        ],
+        [
+          "n17",
+          "n18"
+        ],
+        [
+          "n17",
+          "n24"
+        ],
+        [
+          "n18",
+          "n19"
+        ],
+        [
+          "n18",
+          "n25"
+        ],
+        [
+          "n19",
+          "n26"
+        ],
+        [
+          "n20",
+          "n21"
+        ],
+        [
+          "n21",
+          "n22"
+        ],
+        [
+          "n22",
+          "n23"
+        ],
+        [
+          "n22",
+          "n27"
+        ],
+        [
+          "n23",
+          "n24"
+        ],
+        [
+          "n23",
+          "n28"
+        ],
+        [
+          "n24",
+          "n25"
+        ],
+        [
+          "n24",
+          "n29"
+        ],
+        [
+          "n25",
+          "n26"
+        ],
+        [
+          "n27",
+          "n28"
+        ],
+        [
+          "n27",
+          "n30"
+        ],
+        [
+          "n28",
+          "n29"
+        ],
+        [
+          "n28",
+          "n31"
+        ],
+        [
+          "n29",
+          "n32"
+        ],
+        [
+          "n30",
+          "n31"
+        ],
+        [
+          "n31",
+          "n32"
+        ]
+      ],
+      "pieces": [
+        {
+          "at": "n0",
+          "glyph": "light"
+        },
+        {
+          "at": "n1",
+          "glyph": "light"
+        },
+        {
+          "at": "n2",
+          "glyph": "light"
+        },
+        {
+          "at": "n3",
+          "glyph": "light"
+        },
+        {
+          "at": "n4",
+          "glyph": "light"
+        },
+        {
+          "at": "n5",
+          "glyph": "light"
+        },
+        {
+          "at": "n6",
+          "glyph": "light"
+        },
+        {
+          "at": "n7",
+          "glyph": "light"
+        },
+        {
+          "at": "n8",
+          "glyph": "light"
+        },
+        {
+          "at": "n9",
+          "glyph": "light"
+        },
+        {
+          "at": "n10",
+          "glyph": "light"
+        },
+        {
+          "at": "n11",
+          "glyph": "light"
+        },
+        {
+          "at": "n12",
+          "glyph": "light"
+        },
+        {
+          "at": "n13",
+          "glyph": "light"
+        },
+        {
+          "at": "n14",
+          "glyph": "light"
+        },
+        {
+          "at": "n18",
+          "glyph": "light"
+        },
+        {
+          "at": "n19",
+          "glyph": "light"
+        },
+        {
+          "at": "n16",
+          "glyph": "darkSpecial"
+        }
+      ],
+      "arrows": [],
+      "markers": [],
+      "legend": [
+        {
+          "glyph": "light",
+          "label": "goose — cannot capture"
+        },
+        {
+          "glyph": "darkSpecial",
+          "label": "the fox — jumps and takes"
+        }
+      ]
+    },
+    {
+      "diagramId": "hopscotch-bed",
+      "gameId": "hopscotch",
+      "type": "board-diagram",
+      "boardClass": "bodily",
+      "frame": "bed",
+      "size": {
+        "spanMm": 40,
+        "aspect": 1.15
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "divisions": [
+        {
+          "id": "d1",
+          "x": 0.25,
+          "y": 0.875,
+          "w": 0.5,
+          "h": 0.125,
+          "label": "1"
+        },
+        {
+          "id": "d2",
+          "x": 0.25,
+          "y": 0.75,
+          "w": 0.5,
+          "h": 0.125,
+          "label": "2"
+        },
+        {
+          "id": "d3",
+          "x": 0.0,
+          "y": 0.625,
+          "w": 0.5,
+          "h": 0.125,
+          "label": "3"
+        },
+        {
+          "id": "d4",
+          "x": 0.5,
+          "y": 0.625,
+          "w": 0.5,
+          "h": 0.125,
+          "label": "4"
+        },
+        {
+          "id": "d5",
+          "x": 0.25,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.125,
+          "label": "5"
+        },
+        {
+          "id": "d6",
+          "x": 0.0,
+          "y": 0.375,
+          "w": 0.5,
+          "h": 0.125,
+          "label": "6"
+        },
+        {
+          "id": "d7",
+          "x": 0.5,
+          "y": 0.375,
+          "w": 0.5,
+          "h": 0.125,
+          "label": "7"
+        },
+        {
+          "id": "d8",
+          "x": 0.25,
+          "y": 0.25,
+          "w": 0.5,
+          "h": 0.125,
+          "label": "8"
+        }
+      ],
+      "caption": "One bed out of many. Gomme's correspondents drew a dozen different beds within a single country and no two agree; this is the eight-division form from Crockham Hill and Roxton. Single divisions take one foot, side-by-side pairs take two. The stone is shown in division 1, where the first round begins.",
+      "greyLevels": [
+        0,
+        100
+      ],
+      "pieces": [
+        {
+          "at": "d1",
+          "glyph": "dark"
+        }
+      ],
+      "arrows": [],
+      "markers": [],
+      "legend": [
+        {
+          "glyph": "dark",
+          "label": "the stone"
+        }
+      ]
+    },
+    {
+      "diagramId": "totolospi-board",
+      "gameId": "totolospi",
+      "type": "board-diagram",
+      "boardClass": "point",
+      "size": {
+        "spanMm": 76,
+        "aspect": 0.22
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "caption": "Culin's slabs cut an ellipse with five transverse lines on each side and a circle at each end. Drawn here as the line of positions a marker actually crosses: start circle, ten lines, finish. Two markers start at opposite ends and race past each other.",
+      "greyLevels": [
+        0,
+        100
+      ],
+      "nodes": {
+        "p0": [
+          0.0,
+          0.5
+        ],
+        "p1": [
+          0.0909,
+          0.5
+        ],
+        "p2": [
+          0.1818,
+          0.5
+        ],
+        "p3": [
+          0.2727,
+          0.5
+        ],
+        "p4": [
+          0.3636,
+          0.5
+        ],
+        "p5": [
+          0.4545,
+          0.5
+        ],
+        "p6": [
+          0.5455,
+          0.5
+        ],
+        "p7": [
+          0.6364,
+          0.5
+        ],
+        "p8": [
+          0.7273,
+          0.5
+        ],
+        "p9": [
+          0.8182,
+          0.5
+        ],
+        "p10": [
+          0.9091,
+          0.5
+        ],
+        "p11": [
+          1.0,
+          0.5
+        ]
+      },
+      "edges": [
+        [
+          "p0",
+          "p1"
+        ],
+        [
+          "p1",
+          "p2"
+        ],
+        [
+          "p2",
+          "p3"
+        ],
+        [
+          "p3",
+          "p4"
+        ],
+        [
+          "p4",
+          "p5"
+        ],
+        [
+          "p5",
+          "p6"
+        ],
+        [
+          "p6",
+          "p7"
+        ],
+        [
+          "p7",
+          "p8"
+        ],
+        [
+          "p8",
+          "p9"
+        ],
+        [
+          "p9",
+          "p10"
+        ],
+        [
+          "p10",
+          "p11"
+        ]
+      ],
+      "pieces": [
+        {
+          "at": "p0",
+          "glyph": "dark"
+        },
+        {
+          "at": "p11",
+          "glyph": "light"
+        }
+      ],
+      "arrows": [],
+      "markers": [],
+      "legend": [
+        {
+          "glyph": "dark",
+          "label": "first player's marker"
+        },
+        {
+          "glyph": "light",
+          "label": "second player's marker"
+        }
+      ]
+    },
+    {
+      "diagramId": "setdilth-circle",
+      "gameId": "set-dilth",
+      "type": "board-diagram",
+      "boardClass": "point",
+      "size": {
+        "spanMm": 40,
+        "aspect": 1.0
+      },
+      "panels": 1,
+      "reconstructed": false,
+      "caption": "Reagan's field: forty stones laid in a circle with four gaps, ten stones to a quarter, and the flat throwing stone in the middle. The stones are whatever is lying nearby, so no two circles are the same size. Markers stand in the spaces between stones, never on them; two are shown in opposite openings. The single stone at the centre is the one the sticks are thrown against.",
+      "greyLevels": [
+        0,
+        100
+      ],
+      "nodes": {
+        "s01": [
+          1.0,
+          0.5
+        ],
+        "s02": [
+          0.9946,
+          0.573
+        ],
+        "s03": [
+          0.9787,
+          0.6445
+        ],
+        "s04": [
+          0.9524,
+          0.7129
+        ],
+        "s05": [
+          0.9165,
+          0.7767
+        ],
+        "s06": [
+          0.8716,
+          0.8346
+        ],
+        "s07": [
+          0.8187,
+          0.8853
+        ],
+        "s08": [
+          0.759,
+          0.9277
+        ],
+        "s09": [
+          0.6938,
+          0.9609
+        ],
+        "s10": [
+          0.6243,
+          0.9843
+        ],
+        "s11": [
+          0.5,
+          1.0
+        ],
+        "s12": [
+          0.427,
+          0.9946
+        ],
+        "s13": [
+          0.3555,
+          0.9787
+        ],
+        "s14": [
+          0.2871,
+          0.9524
+        ],
+        "s15": [
+          0.2233,
+          0.9165
+        ],
+        "s16": [
+          0.1654,
+          0.8716
+        ],
+        "s17": [
+          0.1147,
+          0.8187
+        ],
+        "s18": [
+          0.0723,
+          0.759
+        ],
+        "s19": [
+          0.0391,
+          0.6938
+        ],
+        "s20": [
+          0.0157,
+          0.6243
+        ],
+        "s21": [
+          0.0,
+          0.5
+        ],
+        "s22": [
+          0.0054,
+          0.427
+        ],
+        "s23": [
+          0.0213,
+          0.3555
+        ],
+        "s24": [
+          0.0476,
+          0.2871
+        ],
+        "s25": [
+          0.0835,
+          0.2233
+        ],
+        "s26": [
+          0.1284,
+          0.1654
+        ],
+        "s27": [
+          0.1813,
+          0.1147
+        ],
+        "s28": [
+          0.241,
+          0.0723
+        ],
+        "s29": [
+          0.3062,
+          0.0391
+        ],
+        "s30": [
+          0.3757,
+          0.0157
+        ],
+        "s31": [
+          0.5,
+          0.0
+        ],
+        "s32": [
+          0.573,
+          0.0054
+        ],
+        "s33": [
+          0.6445,
+          0.0213
+        ],
+        "s34": [
+          0.7129,
+          0.0476
+        ],
+        "s35": [
+          0.7767,
+          0.0835
+        ],
+        "s36": [
+          0.8346,
+          0.1284
+        ],
+        "s37": [
+          0.8853,
+          0.1813
+        ],
+        "s38": [
+          0.9277,
+          0.241
+        ],
+        "s39": [
+          0.9609,
+          0.3062
+        ],
+        "s40": [
+          0.9843,
+          0.3757
+        ],
+        "mid": [
+          0.5,
+          0.5
+        ],
+        "gap1": [
+          0.9961,
+          0.4373
+        ],
+        "gap2": [
+          0.5627,
+          0.9961
+        ],
+        "gap3": [
+          0.0039,
+          0.5627
+        ],
+        "gap4": [
+          0.4373,
+          0.0039
+        ]
+      },
+      "edges": [],
+      "pieces": [
+        {
+          "at": "gap1",
+          "glyph": "dark"
+        },
+        {
+          "at": "gap3",
+          "glyph": "light"
+        }
+      ],
+      "arrows": [],
+      "markers": [],
+      "legend": [
+        {
+          "glyph": "dark",
+          "label": "first player's marker"
+        },
+        {
+          "glyph": "light",
+          "label": "second player's marker"
+        }
+      ]
+    }
+  ]
+}

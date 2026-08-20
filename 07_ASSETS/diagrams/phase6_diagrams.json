@@ -1,0 +1,1451 @@
+{
+ "$comment": [
+  "FAZ 6 DİYAGRAMLARI — üç yeni oyun (alquerque · rimau-rimau · ashta-kashte).",
+  "",
+  "Üç tahtanın üçü de Murray 1952'nin ŞEKİLLERİNDEN okundu; şekiller",
+  "PDF sayfası RENDER EDİLEREK GÖZLE incelendi, metin katmanından",
+  "TAHMİN EDİLMEDİ. Metin katmanı bir şeklin içindekini vermez ve",
+  "K32'nin dersi tam olarak budur: ölçülen bir diyagram, doğru bir",
+  "diyagram değildir.",
+  "",
+  "Alquerque köşegen kuralı: köşegenler YALNIZCA (sütun+satır) çift",
+  "olan noktaları birleştirir. Fig. 27'de her hücrede TEK köşegen",
+  "vardır ve yönleri dönüşümlüdür. Her hücreye X çizen bir tahta",
+  "BAŞKA bir oyundur ve o oyunun kuralları bu değildir."
+ ],
+ "version": "1.0",
+ "phase": "phase6",
+ "purpose": "Faz 6'da yazılan üç oyunun tahtaları ve bir hamle diyagramı.",
+ "diagrams": [
+  {
+   "diagramId": "alquerque-setup",
+   "gameId": "alquerque",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 50.0,
+    "aspect": 1.0
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "a1": [
+     0.0,
+     1.0
+    ],
+    "a2": [
+     0.0,
+     0.75
+    ],
+    "a3": [
+     0.0,
+     0.5
+    ],
+    "a4": [
+     0.0,
+     0.25
+    ],
+    "a5": [
+     0.0,
+     0.0
+    ],
+    "b1": [
+     0.25,
+     1.0
+    ],
+    "b2": [
+     0.25,
+     0.75
+    ],
+    "b3": [
+     0.25,
+     0.5
+    ],
+    "b4": [
+     0.25,
+     0.25
+    ],
+    "b5": [
+     0.25,
+     0.0
+    ],
+    "c1": [
+     0.5,
+     1.0
+    ],
+    "c2": [
+     0.5,
+     0.75
+    ],
+    "c3": [
+     0.5,
+     0.5
+    ],
+    "c4": [
+     0.5,
+     0.25
+    ],
+    "c5": [
+     0.5,
+     0.0
+    ],
+    "d1": [
+     0.75,
+     1.0
+    ],
+    "d2": [
+     0.75,
+     0.75
+    ],
+    "d3": [
+     0.75,
+     0.5
+    ],
+    "d4": [
+     0.75,
+     0.25
+    ],
+    "d5": [
+     0.75,
+     0.0
+    ],
+    "e1": [
+     1.0,
+     1.0
+    ],
+    "e2": [
+     1.0,
+     0.75
+    ],
+    "e3": [
+     1.0,
+     0.5
+    ],
+    "e4": [
+     1.0,
+     0.25
+    ],
+    "e5": [
+     1.0,
+     0.0
+    ]
+   },
+   "edges": [
+    [
+     "a1",
+     "b1"
+    ],
+    [
+     "a1",
+     "a2"
+    ],
+    [
+     "a1",
+     "b2"
+    ],
+    [
+     "a2",
+     "b2"
+    ],
+    [
+     "a2",
+     "a3"
+    ],
+    [
+     "a3",
+     "b3"
+    ],
+    [
+     "a3",
+     "a4"
+    ],
+    [
+     "a3",
+     "b4"
+    ],
+    [
+     "a3",
+     "b2"
+    ],
+    [
+     "a4",
+     "b4"
+    ],
+    [
+     "a4",
+     "a5"
+    ],
+    [
+     "a5",
+     "b5"
+    ],
+    [
+     "a5",
+     "b4"
+    ],
+    [
+     "b1",
+     "c1"
+    ],
+    [
+     "b1",
+     "b2"
+    ],
+    [
+     "b2",
+     "c2"
+    ],
+    [
+     "b2",
+     "b3"
+    ],
+    [
+     "b2",
+     "c3"
+    ],
+    [
+     "b2",
+     "c1"
+    ],
+    [
+     "b3",
+     "c3"
+    ],
+    [
+     "b3",
+     "b4"
+    ],
+    [
+     "b4",
+     "c4"
+    ],
+    [
+     "b4",
+     "b5"
+    ],
+    [
+     "b4",
+     "c5"
+    ],
+    [
+     "b4",
+     "c3"
+    ],
+    [
+     "b5",
+     "c5"
+    ],
+    [
+     "c1",
+     "d1"
+    ],
+    [
+     "c1",
+     "c2"
+    ],
+    [
+     "c1",
+     "d2"
+    ],
+    [
+     "c2",
+     "d2"
+    ],
+    [
+     "c2",
+     "c3"
+    ],
+    [
+     "c3",
+     "d3"
+    ],
+    [
+     "c3",
+     "c4"
+    ],
+    [
+     "c3",
+     "d4"
+    ],
+    [
+     "c3",
+     "d2"
+    ],
+    [
+     "c4",
+     "d4"
+    ],
+    [
+     "c4",
+     "c5"
+    ],
+    [
+     "c5",
+     "d5"
+    ],
+    [
+     "c5",
+     "d4"
+    ],
+    [
+     "d1",
+     "e1"
+    ],
+    [
+     "d1",
+     "d2"
+    ],
+    [
+     "d2",
+     "e2"
+    ],
+    [
+     "d2",
+     "d3"
+    ],
+    [
+     "d2",
+     "e3"
+    ],
+    [
+     "d2",
+     "e1"
+    ],
+    [
+     "d3",
+     "e3"
+    ],
+    [
+     "d3",
+     "d4"
+    ],
+    [
+     "d4",
+     "e4"
+    ],
+    [
+     "d4",
+     "d5"
+    ],
+    [
+     "d4",
+     "e5"
+    ],
+    [
+     "d4",
+     "e3"
+    ],
+    [
+     "d5",
+     "e5"
+    ],
+    [
+     "e1",
+     "e2"
+    ],
+    [
+     "e2",
+     "e3"
+    ],
+    [
+     "e3",
+     "e4"
+    ],
+    [
+     "e4",
+     "e5"
+    ]
+   ],
+   "pieces": [
+    {
+     "at": "a5",
+     "glyph": "dark"
+    },
+    {
+     "at": "b5",
+     "glyph": "dark"
+    },
+    {
+     "at": "c5",
+     "glyph": "dark"
+    },
+    {
+     "at": "d5",
+     "glyph": "dark"
+    },
+    {
+     "at": "e5",
+     "glyph": "dark"
+    },
+    {
+     "at": "a4",
+     "glyph": "dark"
+    },
+    {
+     "at": "b4",
+     "glyph": "dark"
+    },
+    {
+     "at": "c4",
+     "glyph": "dark"
+    },
+    {
+     "at": "d4",
+     "glyph": "dark"
+    },
+    {
+     "at": "e4",
+     "glyph": "dark"
+    },
+    {
+     "at": "a3",
+     "glyph": "dark"
+    },
+    {
+     "at": "b3",
+     "glyph": "dark"
+    },
+    {
+     "at": "a1",
+     "glyph": "light"
+    },
+    {
+     "at": "b1",
+     "glyph": "light"
+    },
+    {
+     "at": "c1",
+     "glyph": "light"
+    },
+    {
+     "at": "d1",
+     "glyph": "light"
+    },
+    {
+     "at": "e1",
+     "glyph": "light"
+    },
+    {
+     "at": "a2",
+     "glyph": "light"
+    },
+    {
+     "at": "b2",
+     "glyph": "light"
+    },
+    {
+     "at": "c2",
+     "glyph": "light"
+    },
+    {
+     "at": "d2",
+     "glyph": "light"
+    },
+    {
+     "at": "e2",
+     "glyph": "light"
+    },
+    {
+     "at": "d3",
+     "glyph": "light"
+    },
+    {
+     "at": "e3",
+     "glyph": "light"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "dark",
+     "label": "one player's twelve pieces"
+    },
+    {
+     "glyph": "light",
+     "label": "the other player's twelve"
+    }
+   ],
+   "caption": "Yirmi beş nokta, TEK boş nokta merkezdedir. Köşegenler yalnızca çift parite noktalarını birleştirir: satranç tahtası gibi gölgelenirse köşegenler koyu noktalar arasındadır. Murray Fig. 27."
+  },
+  {
+   "diagramId": "alquerque-leap",
+   "gameId": "alquerque",
+   "type": "move-diagram",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 44.0,
+    "aspect": 1.0
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "a1": [
+     0.0,
+     1.0
+    ],
+    "a2": [
+     0.0,
+     0.75
+    ],
+    "a3": [
+     0.0,
+     0.5
+    ],
+    "a4": [
+     0.0,
+     0.25
+    ],
+    "a5": [
+     0.0,
+     0.0
+    ],
+    "b1": [
+     0.25,
+     1.0
+    ],
+    "b2": [
+     0.25,
+     0.75
+    ],
+    "b3": [
+     0.25,
+     0.5
+    ],
+    "b4": [
+     0.25,
+     0.25
+    ],
+    "b5": [
+     0.25,
+     0.0
+    ],
+    "c1": [
+     0.5,
+     1.0
+    ],
+    "c2": [
+     0.5,
+     0.75
+    ],
+    "c3": [
+     0.5,
+     0.5
+    ],
+    "c4": [
+     0.5,
+     0.25
+    ],
+    "c5": [
+     0.5,
+     0.0
+    ],
+    "d1": [
+     0.75,
+     1.0
+    ],
+    "d2": [
+     0.75,
+     0.75
+    ],
+    "d3": [
+     0.75,
+     0.5
+    ],
+    "d4": [
+     0.75,
+     0.25
+    ],
+    "d5": [
+     0.75,
+     0.0
+    ],
+    "e1": [
+     1.0,
+     1.0
+    ],
+    "e2": [
+     1.0,
+     0.75
+    ],
+    "e3": [
+     1.0,
+     0.5
+    ],
+    "e4": [
+     1.0,
+     0.25
+    ],
+    "e5": [
+     1.0,
+     0.0
+    ]
+   },
+   "edges": [
+    [
+     "a1",
+     "b1"
+    ],
+    [
+     "a1",
+     "a2"
+    ],
+    [
+     "a1",
+     "b2"
+    ],
+    [
+     "a2",
+     "b2"
+    ],
+    [
+     "a2",
+     "a3"
+    ],
+    [
+     "a3",
+     "b3"
+    ],
+    [
+     "a3",
+     "a4"
+    ],
+    [
+     "a3",
+     "b4"
+    ],
+    [
+     "a3",
+     "b2"
+    ],
+    [
+     "a4",
+     "b4"
+    ],
+    [
+     "a4",
+     "a5"
+    ],
+    [
+     "a5",
+     "b5"
+    ],
+    [
+     "a5",
+     "b4"
+    ],
+    [
+     "b1",
+     "c1"
+    ],
+    [
+     "b1",
+     "b2"
+    ],
+    [
+     "b2",
+     "c2"
+    ],
+    [
+     "b2",
+     "b3"
+    ],
+    [
+     "b2",
+     "c3"
+    ],
+    [
+     "b2",
+     "c1"
+    ],
+    [
+     "b3",
+     "c3"
+    ],
+    [
+     "b3",
+     "b4"
+    ],
+    [
+     "b4",
+     "c4"
+    ],
+    [
+     "b4",
+     "b5"
+    ],
+    [
+     "b4",
+     "c5"
+    ],
+    [
+     "b4",
+     "c3"
+    ],
+    [
+     "b5",
+     "c5"
+    ],
+    [
+     "c1",
+     "d1"
+    ],
+    [
+     "c1",
+     "c2"
+    ],
+    [
+     "c1",
+     "d2"
+    ],
+    [
+     "c2",
+     "d2"
+    ],
+    [
+     "c2",
+     "c3"
+    ],
+    [
+     "c3",
+     "d3"
+    ],
+    [
+     "c3",
+     "c4"
+    ],
+    [
+     "c3",
+     "d4"
+    ],
+    [
+     "c3",
+     "d2"
+    ],
+    [
+     "c4",
+     "d4"
+    ],
+    [
+     "c4",
+     "c5"
+    ],
+    [
+     "c5",
+     "d5"
+    ],
+    [
+     "c5",
+     "d4"
+    ],
+    [
+     "d1",
+     "e1"
+    ],
+    [
+     "d1",
+     "d2"
+    ],
+    [
+     "d2",
+     "e2"
+    ],
+    [
+     "d2",
+     "d3"
+    ],
+    [
+     "d2",
+     "e3"
+    ],
+    [
+     "d2",
+     "e1"
+    ],
+    [
+     "d3",
+     "e3"
+    ],
+    [
+     "d3",
+     "d4"
+    ],
+    [
+     "d4",
+     "e4"
+    ],
+    [
+     "d4",
+     "d5"
+    ],
+    [
+     "d4",
+     "e5"
+    ],
+    [
+     "d4",
+     "e3"
+    ],
+    [
+     "d5",
+     "e5"
+    ],
+    [
+     "e1",
+     "e2"
+    ],
+    [
+     "e2",
+     "e3"
+    ],
+    [
+     "e3",
+     "e4"
+    ],
+    [
+     "e4",
+     "e5"
+    ]
+   ],
+   "pieces": [
+    {
+     "at": "a1",
+     "glyph": "dark"
+    },
+    {
+     "at": "b2",
+     "glyph": "light",
+     "captured": true
+    },
+    {
+     "at": "c4",
+     "glyph": "light",
+     "captured": true
+    }
+   ],
+   "arrows": [
+    {
+     "from": "a1",
+     "to": "c3",
+     "kind": "move"
+    },
+    {
+     "from": "c3",
+     "to": "c5",
+     "kind": "move"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "dark",
+     "label": "the leaping piece"
+    },
+    {
+     "glyph": "light",
+     "label": "the pieces it leaps"
+    },
+    {
+     "glyph": "captured",
+     "label": "taken on this move"
+    },
+    {
+     "glyph": "move",
+     "label": "both leaps, one turn"
+    }
+   ],
+   "caption": "Zincir sıçrama YÖN DEĞİŞTİRİR: önce köşegen (a1→c3), sonra dikey (c3→c5). Alma ZORUNLUDUR ve zincir bitene kadar sürer."
+  },
+  {
+   "diagramId": "rimau-board",
+   "gameId": "rimau-rimau",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 56.0,
+    "aspect": 1.538
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "c1": [
+     0.11538,
+     0.25
+    ],
+    "d1": [
+     0.11538,
+     0.375
+    ],
+    "e1": [
+     0.11538,
+     0.5
+    ],
+    "f1": [
+     0.11538,
+     0.625
+    ],
+    "g1": [
+     0.11538,
+     0.75
+    ],
+    "c2": [
+     0.30769,
+     0.25
+    ],
+    "d2": [
+     0.30769,
+     0.375
+    ],
+    "e2": [
+     0.30769,
+     0.5
+    ],
+    "f2": [
+     0.30769,
+     0.625
+    ],
+    "g2": [
+     0.30769,
+     0.75
+    ],
+    "c3": [
+     0.5,
+     0.25
+    ],
+    "d3": [
+     0.5,
+     0.375
+    ],
+    "e3": [
+     0.5,
+     0.5
+    ],
+    "f3": [
+     0.5,
+     0.625
+    ],
+    "g3": [
+     0.5,
+     0.75
+    ],
+    "c4": [
+     0.69231,
+     0.25
+    ],
+    "d4": [
+     0.69231,
+     0.375
+    ],
+    "e4": [
+     0.69231,
+     0.5
+    ],
+    "f4": [
+     0.69231,
+     0.625
+    ],
+    "g4": [
+     0.69231,
+     0.75
+    ],
+    "c5": [
+     0.88462,
+     0.25
+    ],
+    "d5": [
+     0.88462,
+     0.375
+    ],
+    "e5": [
+     0.88462,
+     0.5
+    ],
+    "f5": [
+     0.88462,
+     0.625
+    ],
+    "g5": [
+     0.88462,
+     0.75
+    ],
+    "a": [
+     0.0,
+     0.0
+    ],
+    "a3": [
+     0.5,
+     0.0
+    ],
+    "aa": [
+     1.0,
+     0.0
+    ],
+    "b": [
+     0.25,
+     0.125
+    ],
+    "b3": [
+     0.5,
+     0.125
+    ],
+    "bb": [
+     0.75,
+     0.125
+    ],
+    "h": [
+     0.25,
+     0.875
+    ],
+    "h3": [
+     0.5,
+     0.875
+    ],
+    "hh": [
+     0.75,
+     0.875
+    ],
+    "k": [
+     0.0,
+     1.0
+    ],
+    "k3": [
+     0.5,
+     1.0
+    ],
+    "kk": [
+     1.0,
+     1.0
+    ]
+   },
+   "edges": [
+    [
+     "c1",
+     "c2"
+    ],
+    [
+     "c1",
+     "d1"
+    ],
+    [
+     "c1",
+     "d2"
+    ],
+    [
+     "d1",
+     "d2"
+    ],
+    [
+     "d1",
+     "e1"
+    ],
+    [
+     "e1",
+     "e2"
+    ],
+    [
+     "e1",
+     "f1"
+    ],
+    [
+     "e1",
+     "f2"
+    ],
+    [
+     "e1",
+     "d2"
+    ],
+    [
+     "f1",
+     "f2"
+    ],
+    [
+     "f1",
+     "g1"
+    ],
+    [
+     "g1",
+     "g2"
+    ],
+    [
+     "g1",
+     "f2"
+    ],
+    [
+     "c2",
+     "c3"
+    ],
+    [
+     "c2",
+     "d2"
+    ],
+    [
+     "d2",
+     "d3"
+    ],
+    [
+     "d2",
+     "e2"
+    ],
+    [
+     "d2",
+     "e3"
+    ],
+    [
+     "d2",
+     "c3"
+    ],
+    [
+     "e2",
+     "e3"
+    ],
+    [
+     "e2",
+     "f2"
+    ],
+    [
+     "f2",
+     "f3"
+    ],
+    [
+     "f2",
+     "g2"
+    ],
+    [
+     "f2",
+     "g3"
+    ],
+    [
+     "f2",
+     "e3"
+    ],
+    [
+     "g2",
+     "g3"
+    ],
+    [
+     "c3",
+     "c4"
+    ],
+    [
+     "c3",
+     "d3"
+    ],
+    [
+     "c3",
+     "d4"
+    ],
+    [
+     "d3",
+     "d4"
+    ],
+    [
+     "d3",
+     "e3"
+    ],
+    [
+     "e3",
+     "e4"
+    ],
+    [
+     "e3",
+     "f3"
+    ],
+    [
+     "e3",
+     "f4"
+    ],
+    [
+     "e3",
+     "d4"
+    ],
+    [
+     "f3",
+     "f4"
+    ],
+    [
+     "f3",
+     "g3"
+    ],
+    [
+     "g3",
+     "g4"
+    ],
+    [
+     "g3",
+     "f4"
+    ],
+    [
+     "c4",
+     "c5"
+    ],
+    [
+     "c4",
+     "d4"
+    ],
+    [
+     "d4",
+     "d5"
+    ],
+    [
+     "d4",
+     "e4"
+    ],
+    [
+     "d4",
+     "e5"
+    ],
+    [
+     "d4",
+     "c5"
+    ],
+    [
+     "e4",
+     "e5"
+    ],
+    [
+     "e4",
+     "f4"
+    ],
+    [
+     "f4",
+     "f5"
+    ],
+    [
+     "f4",
+     "g4"
+    ],
+    [
+     "f4",
+     "g5"
+    ],
+    [
+     "f4",
+     "e5"
+    ],
+    [
+     "g4",
+     "g5"
+    ],
+    [
+     "c5",
+     "d5"
+    ],
+    [
+     "d5",
+     "e5"
+    ],
+    [
+     "e5",
+     "f5"
+    ],
+    [
+     "f5",
+     "g5"
+    ],
+    [
+     "a",
+     "b"
+    ],
+    [
+     "b",
+     "c3"
+    ],
+    [
+     "aa",
+     "bb"
+    ],
+    [
+     "bb",
+     "c3"
+    ],
+    [
+     "a",
+     "a3"
+    ],
+    [
+     "a3",
+     "aa"
+    ],
+    [
+     "b",
+     "b3"
+    ],
+    [
+     "b3",
+     "bb"
+    ],
+    [
+     "c3",
+     "b3"
+    ],
+    [
+     "b3",
+     "a3"
+    ],
+    [
+     "k",
+     "h"
+    ],
+    [
+     "h",
+     "g3"
+    ],
+    [
+     "kk",
+     "hh"
+    ],
+    [
+     "hh",
+     "g3"
+    ],
+    [
+     "k",
+     "k3"
+    ],
+    [
+     "k3",
+     "kk"
+    ],
+    [
+     "h",
+     "h3"
+    ],
+    [
+     "h3",
+     "hh"
+    ],
+    [
+     "g3",
+     "h3"
+    ],
+    [
+     "h3",
+     "k3"
+    ]
+   ],
+   "pieces": [
+    {
+     "at": "c3",
+     "glyph": "darkSpecial"
+    },
+    {
+     "at": "d2",
+     "glyph": "light"
+    },
+    {
+     "at": "d3",
+     "glyph": "light"
+    },
+    {
+     "at": "d4",
+     "glyph": "light"
+    },
+    {
+     "at": "e2",
+     "glyph": "light"
+    },
+    {
+     "at": "e3",
+     "glyph": "light"
+    },
+    {
+     "at": "e4",
+     "glyph": "light"
+    },
+    {
+     "at": "f2",
+     "glyph": "light"
+    },
+    {
+     "at": "f3",
+     "glyph": "light"
+    },
+    {
+     "at": "f4",
+     "glyph": "light"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "darkSpecial",
+     "label": "the tiger — it alone takes"
+    },
+    {
+     "glyph": "light",
+     "label": "nine men; fifteen more wait in hand"
+    }
+   ],
+   "caption": "Kare + iki gunung = otuz yedi nokta. Kaplan üçgenin tepesinde durur ve o tepe KARENİN orta noktasıdır. Açılışta kaplan üç adam alır ve boş bir noktaya yerleşir. Murray Fig. 52."
+  },
+  {
+   "diagramId": "ashta-kashte-board",
+   "gameId": "ashta-kashte",
+   "type": "board-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 7,
+    "rows": 7
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "d1",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "a4",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "g4",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "d7",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "d4",
+     "glyph": "lightSpecial"
+    }
+   ],
+   "arrows": [
+    {
+     "from": "d1",
+     "to": "f1",
+     "kind": "flow"
+    },
+    {
+     "from": "f2",
+     "to": "d2",
+     "kind": "flow"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "lightSpecial",
+     "label": "a crossed square — safe"
+    },
+    {
+     "glyph": "flow",
+     "label": "border one way, inside the other"
+    }
+   ],
+   "caption": "Yedi kere yedi. BEŞ işaretli kare: her kenarın ortası bir KAPIDIR ve merkez EVDİR. Dış halka anti-saat, iç halkalar saat yönünde yürünür. Murray Fig. 56."
+  }
+ ]
+}

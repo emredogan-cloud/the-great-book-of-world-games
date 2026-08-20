@@ -142,6 +142,12 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/qa_diagram.py ] && \
   run "diyagram ↔ kural uyumu"  $PY 04_BUILD/qa_diagram.py \
                                    --json 06_REPORTS/qa-diagram.json
+# GÖRSEL KAPI: tanımlayıcıyı değil RENDER EDİLMİŞ SVG'yi denetler.
+# Faz 6'da 63 Türkçe efsane etiketi bu kapıyla bulundu; bütün sayısal
+# kapılar o sırada yeşildi.
+[ -f 04_BUILD/qa_visual.py ] && \
+  run_optional "GÖRSEL KAPI (render)"  $VENV_PY 04_BUILD/qa_visual.py \
+                                   --json 06_REPORTS/qa-visual.json
 
 # ── FAZ 4 KAPILARI ─────────────────────────────────────────────────────────
 # Kuyruk SIRASI bir kapıdır: engelli bir oyun erişilebilir bir oyunun önüne
@@ -172,6 +178,8 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 # Arka madde ÜRETİLİR (build_backmatter.py) ve burada DENETLENİR. Üretilmiş
 # bir dosya, denetlenmedikçe elle yazılmış bir dosyadan güvenli değildir:
 # üreteç yanlış kova hesaplarsa çıktı kendi içinde TUTARLI görünür.
+[ -f 04_BUILD/build_frontmatter.py ] && \
+  run "ön madde üretimi"        $PY 04_BUILD/build_frontmatter.py
 [ -f 04_BUILD/build_backmatter.py ] && \
   run "arka madde üretimi"      $PY 04_BUILD/build_backmatter.py
 [ -f 04_BUILD/qa_index.py ] && \
@@ -195,8 +203,17 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
   run_optional "Kindle EPUB güncel"     $VENV_PY 04_BUILD/epub.py --check
 [ -f 04_BUILD/covers.py ] && \
   run_optional "kapak üretimi güncel"   $VENV_PY 04_BUILD/covers.py --check
+[ -f 04_BUILD/aplus.py ] && \
+  run_optional "A+ paketi güncel"       $VENV_PY 04_BUILD/aplus.py --check
 [ -f 04_BUILD/metadata.py ] && \
   run "KDP metadata paketi"     $PY 04_BUILD/metadata.py --check
+# KDP ÖN DENETİMİ: Amazon'un yükleme denetimlerinin yerel karşılığı.
+# Previewer'ın YERİNE GEÇMEZ; onun reddedeceklerinin çoğunu önce bulur.
+[ -f 04_BUILD/kdp_preflight.py ] && \
+  run_optional "KDP ÖN DENETİMİ"        $VENV_PY 04_BUILD/kdp_preflight.py \
+                                   --json 06_REPORTS/kdp-preflight.json
+[ -f 05_TESTS/package_selftest.py ] && \
+  run "PAKET KAPILARININ TESTİ" $PY 05_TESTS/package_selftest.py
 
 # ── ÜRETİLEN BELGELER BAYAT MI ─────────────────────────────────────────────
 [ -f 04_BUILD/update_docs.py ] && \

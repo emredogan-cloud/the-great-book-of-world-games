@@ -1,0 +1,2358 @@
+{
+ "$comment": [
+  "FAZ 5 DİYAGRAMLARI — diyagram dili v1.4.",
+  "",
+  "FAZ 5 BATCH 7: kurucu teslimi (Murray 1952 · Bell) ile açılan altı oyunun diyagramları eklendi. mutorere-star `nodes`/`edges` grafiğidir — sekiz ışınlı yıldız bir ızgarayla YAKLAŞTIRILAMAZ (§13).",
+  "FAZ 5 BATCH 7 BULGUSU: `track` sınıfının render'ı yut-nori devresini SABİT çizer ve `size.stations` alanını OKUMAZ. li-b-el-merafib'in SARMAL izi bu sınıfla çizilemez ve madde DİYAGRAMSIZ basıldı — genel bir tahtayla yaklaştırmak (§13) kitaba yanlış bir tahta koyardı.",
+  "FAZ 5 BATCH 8 BULGUSU: `pit` sınıfının koordinatı (row-pit) YALNIZCA A ve B sırasını tanır; DÖRT sıralı omweso tahtası adreslenemez ve madde diyagramsız basıldı. Ayrıca `forbidden` oku `move` ile aynı çizilmektedir — yasak bir hamleyi göstermek için KULLANILAMAZ."
+ ],
+ "version": "1.0",
+ "phase": "phase5",
+ "purpose": "Faz 5 üretim batch'lerinin diyagram tanımları",
+ "diagrams": [
+  {
+   "diagramId": "shogi-setup",
+   "gameId": "shogi",
+   "type": "setup-illustration",
+   "boardClass": "cell",
+   "size": {
+    "cols": 9,
+    "rows": 9
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "a1",
+     "glyph": "light"
+    },
+    {
+     "at": "b1",
+     "glyph": "light"
+    },
+    {
+     "at": "c1",
+     "glyph": "light"
+    },
+    {
+     "at": "d1",
+     "glyph": "light"
+    },
+    {
+     "at": "f1",
+     "glyph": "light"
+    },
+    {
+     "at": "g1",
+     "glyph": "light"
+    },
+    {
+     "at": "h1",
+     "glyph": "light"
+    },
+    {
+     "at": "i1",
+     "glyph": "light"
+    },
+    {
+     "at": "a3",
+     "glyph": "light"
+    },
+    {
+     "at": "b3",
+     "glyph": "light"
+    },
+    {
+     "at": "c3",
+     "glyph": "light"
+    },
+    {
+     "at": "d3",
+     "glyph": "light"
+    },
+    {
+     "at": "e3",
+     "glyph": "light"
+    },
+    {
+     "at": "f3",
+     "glyph": "light"
+    },
+    {
+     "at": "g3",
+     "glyph": "light"
+    },
+    {
+     "at": "h3",
+     "glyph": "light"
+    },
+    {
+     "at": "i3",
+     "glyph": "light"
+    },
+    {
+     "at": "a7",
+     "glyph": "dark"
+    },
+    {
+     "at": "b7",
+     "glyph": "dark"
+    },
+    {
+     "at": "c7",
+     "glyph": "dark"
+    },
+    {
+     "at": "d7",
+     "glyph": "dark"
+    },
+    {
+     "at": "e7",
+     "glyph": "dark"
+    },
+    {
+     "at": "f7",
+     "glyph": "dark"
+    },
+    {
+     "at": "g7",
+     "glyph": "dark"
+    },
+    {
+     "at": "h7",
+     "glyph": "dark"
+    },
+    {
+     "at": "i7",
+     "glyph": "dark"
+    },
+    {
+     "at": "a9",
+     "glyph": "dark"
+    },
+    {
+     "at": "b9",
+     "glyph": "dark"
+    },
+    {
+     "at": "c9",
+     "glyph": "dark"
+    },
+    {
+     "at": "d9",
+     "glyph": "dark"
+    },
+    {
+     "at": "f9",
+     "glyph": "dark"
+    },
+    {
+     "at": "g9",
+     "glyph": "dark"
+    },
+    {
+     "at": "h9",
+     "glyph": "dark"
+    },
+    {
+     "at": "i9",
+     "glyph": "dark"
+    },
+    {
+     "at": "b2",
+     "glyph": "light"
+    },
+    {
+     "at": "h2",
+     "glyph": "light"
+    },
+    {
+     "at": "b8",
+     "glyph": "dark"
+    },
+    {
+     "at": "h8",
+     "glyph": "dark"
+    },
+    {
+     "at": "e1",
+     "glyph": "king"
+    },
+    {
+     "at": "e9",
+     "glyph": "darkSpecial"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the near player's pieces"
+    },
+    {
+     "glyph": "dark",
+     "label": "the far player's pieces"
+    },
+    {
+     "glyph": "king",
+     "label": "the near player's king"
+    },
+    {
+     "glyph": "darkSpecial",
+     "label": "the far player's king"
+    }
+   ],
+   "caption": "Diyagram taşların NEREDE durduğunu gösterir, HANGİSİ olduğunu değil: şahlar dışında bütün taşlar aynı çizilir ve hangi karede hangi taşın durduğu kurulum listesindedir. Gerçek oyunda taşların hepsi aynı renktedir; sahibini taşın baktığı yön belirler."
+  },
+  {
+   "diagramId": "pachisi-board",
+   "gameId": "pachisi",
+   "type": "board-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 11,
+    "rows": 11
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "omitCells": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a8",
+    "a9",
+    "a10",
+    "a11",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b8",
+    "b9",
+    "b10",
+    "b11",
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c8",
+    "c9",
+    "c10",
+    "c11",
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "d8",
+    "d9",
+    "d10",
+    "d11",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h8",
+    "h9",
+    "h10",
+    "h11",
+    "i1",
+    "i2",
+    "i3",
+    "i4",
+    "i8",
+    "i9",
+    "i10",
+    "i11",
+    "j1",
+    "j2",
+    "j3",
+    "j4",
+    "j8",
+    "j9",
+    "j10",
+    "j11",
+    "k1",
+    "k2",
+    "k3",
+    "k4",
+    "k8",
+    "k9",
+    "k10",
+    "k11"
+   ],
+   "pieces": [
+    {
+     "at": "e2",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "f2",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "g2",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "e10",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "f10",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "g10",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "b5",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "b6",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "b7",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "j5",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "j6",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "j7",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "f6",
+     "glyph": "empty"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "d7",
+     "to": "a7"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "lightSpecial",
+     "label": "a castle — safe from capture"
+    },
+    {
+     "glyph": "empty",
+     "label": "the centre — home"
+    },
+    {
+     "glyph": "move",
+     "label": "the way round (anticlockwise)"
+    }
+   ],
+   "caption": "Haçın dört kolu üçer sıra ve sekizer karedir; köşeler tahtaya AİT DEĞİLDİR. On iki kale — her kolun her sırasında bir tane — çarpıyla işaretlidir ve kaynaklara göre dördüncü ya da beşinci karede durur. Ok izin bir ayağını gösterir: tur saat yönünün tersinedir."
+  },
+  {
+   "diagramId": "xiangqi-board",
+   "gameId": "xiangqi",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "cols": 9,
+    "rows": 10
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "gapAfterRow": 5,
+   "lines": [
+    {
+     "from": "d1",
+     "to": "f3"
+    },
+    {
+     "from": "f1",
+     "to": "d3"
+    },
+    {
+     "from": "d8",
+     "to": "f10"
+    },
+    {
+     "from": "f8",
+     "to": "d10"
+    }
+   ],
+   "pieces": [
+    {
+     "at": "a1",
+     "glyph": "light"
+    },
+    {
+     "at": "b1",
+     "glyph": "light"
+    },
+    {
+     "at": "c1",
+     "glyph": "light"
+    },
+    {
+     "at": "d1",
+     "glyph": "light"
+    },
+    {
+     "at": "f1",
+     "glyph": "light"
+    },
+    {
+     "at": "g1",
+     "glyph": "light"
+    },
+    {
+     "at": "h1",
+     "glyph": "light"
+    },
+    {
+     "at": "i1",
+     "glyph": "light"
+    },
+    {
+     "at": "b3",
+     "glyph": "light"
+    },
+    {
+     "at": "h3",
+     "glyph": "light"
+    },
+    {
+     "at": "a4",
+     "glyph": "light"
+    },
+    {
+     "at": "c4",
+     "glyph": "light"
+    },
+    {
+     "at": "e4",
+     "glyph": "light"
+    },
+    {
+     "at": "g4",
+     "glyph": "light"
+    },
+    {
+     "at": "i4",
+     "glyph": "light"
+    },
+    {
+     "at": "a10",
+     "glyph": "dark"
+    },
+    {
+     "at": "b10",
+     "glyph": "dark"
+    },
+    {
+     "at": "c10",
+     "glyph": "dark"
+    },
+    {
+     "at": "d10",
+     "glyph": "dark"
+    },
+    {
+     "at": "f10",
+     "glyph": "dark"
+    },
+    {
+     "at": "g10",
+     "glyph": "dark"
+    },
+    {
+     "at": "h10",
+     "glyph": "dark"
+    },
+    {
+     "at": "i10",
+     "glyph": "dark"
+    },
+    {
+     "at": "b8",
+     "glyph": "dark"
+    },
+    {
+     "at": "h8",
+     "glyph": "dark"
+    },
+    {
+     "at": "a7",
+     "glyph": "dark"
+    },
+    {
+     "at": "c7",
+     "glyph": "dark"
+    },
+    {
+     "at": "e7",
+     "glyph": "dark"
+    },
+    {
+     "at": "g7",
+     "glyph": "dark"
+    },
+    {
+     "at": "i7",
+     "glyph": "dark"
+    },
+    {
+     "at": "e1",
+     "glyph": "king"
+    },
+    {
+     "at": "e10",
+     "glyph": "darkSpecial"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the near player's pieces"
+    },
+    {
+     "glyph": "dark",
+     "label": "the far player's pieces"
+    },
+    {
+     "glyph": "king",
+     "label": "alttaki oyuncunun generali"
+    },
+    {
+     "glyph": "darkSpecial",
+     "label": "the far player's general"
+    }
+   ],
+   "caption": "Taşlar kesişimlerde durur. Ortadaki boşluk NEHİRDİR: fil onu geçemez, er geçtikten sonra yana da gidebilir. İki uçtaki köşegenli dokuz nokta HİSARDIR; general ve korumaları oradan çıkamaz. Taşın hangisi olduğu kurulum listesindedir."
+  },
+  {
+   "diagramId": "sittuyin-board",
+   "gameId": "sittuyin",
+   "type": "board-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 8,
+    "rows": 8
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "lines": [
+    {
+     "from": "a1",
+     "to": "h8"
+    }
+   ],
+   "pieces": [
+    {
+     "at": "a4",
+     "glyph": "light"
+    },
+    {
+     "at": "b4",
+     "glyph": "light"
+    },
+    {
+     "at": "c4",
+     "glyph": "light"
+    },
+    {
+     "at": "d4",
+     "glyph": "light"
+    },
+    {
+     "at": "e4",
+     "glyph": "light"
+    },
+    {
+     "at": "f4",
+     "glyph": "light"
+    },
+    {
+     "at": "g4",
+     "glyph": "light"
+    },
+    {
+     "at": "h4",
+     "glyph": "light"
+    },
+    {
+     "at": "a5",
+     "glyph": "dark"
+    },
+    {
+     "at": "b5",
+     "glyph": "dark"
+    },
+    {
+     "at": "c5",
+     "glyph": "dark"
+    },
+    {
+     "at": "d5",
+     "glyph": "dark"
+    },
+    {
+     "at": "e5",
+     "glyph": "dark"
+    },
+    {
+     "at": "f5",
+     "glyph": "dark"
+    },
+    {
+     "at": "g5",
+     "glyph": "dark"
+    },
+    {
+     "at": "h5",
+     "glyph": "dark"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "alttaki oyuncunun eri"
+    },
+    {
+     "glyph": "dark",
+     "label": "the far player's foot soldier"
+    }
+   ],
+   "caption": "YALNIZCA erler sabittir; kalan sekiz taş erlerin ARKASINA istendiği gibi dizilir ve iki taraf farklı diziler. Köşegen TERFİ ÇİZGİSİDİR: er ona varınca vezir olur, tahtanın öbür ucuna değil."
+  },
+  {
+   "diagramId": "hnefatafl-setup",
+   "gameId": "hnefatafl",
+   "type": "setup-illustration",
+   "boardClass": "cell",
+   "size": {
+    "cols": 9,
+    "rows": 9
+   },
+   "panels": 1,
+   "reconstructed": true,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "lines": [
+    {
+     "from": "a1",
+     "to": "b2"
+    },
+    {
+     "from": "a9",
+     "to": "b8"
+    },
+    {
+     "from": "i1",
+     "to": "h2"
+    },
+    {
+     "from": "i9",
+     "to": "h8"
+    }
+   ],
+   "pieces": [
+    {
+     "at": "e5",
+     "glyph": "king"
+    },
+    {
+     "at": "e4",
+     "glyph": "light"
+    },
+    {
+     "at": "e6",
+     "glyph": "light"
+    },
+    {
+     "at": "d5",
+     "glyph": "light"
+    },
+    {
+     "at": "f5",
+     "glyph": "light"
+    },
+    {
+     "at": "e3",
+     "glyph": "light"
+    },
+    {
+     "at": "e7",
+     "glyph": "light"
+    },
+    {
+     "at": "c5",
+     "glyph": "light"
+    },
+    {
+     "at": "g5",
+     "glyph": "light"
+    },
+    {
+     "at": "a4",
+     "glyph": "dark"
+    },
+    {
+     "at": "a5",
+     "glyph": "dark"
+    },
+    {
+     "at": "a6",
+     "glyph": "dark"
+    },
+    {
+     "at": "b5",
+     "glyph": "dark"
+    },
+    {
+     "at": "i4",
+     "glyph": "dark"
+    },
+    {
+     "at": "i5",
+     "glyph": "dark"
+    },
+    {
+     "at": "i6",
+     "glyph": "dark"
+    },
+    {
+     "at": "h5",
+     "glyph": "dark"
+    },
+    {
+     "at": "d1",
+     "glyph": "dark"
+    },
+    {
+     "at": "e1",
+     "glyph": "dark"
+    },
+    {
+     "at": "f1",
+     "glyph": "dark"
+    },
+    {
+     "at": "e2",
+     "glyph": "dark"
+    },
+    {
+     "at": "d9",
+     "glyph": "dark"
+    },
+    {
+     "at": "e9",
+     "glyph": "dark"
+    },
+    {
+     "at": "f9",
+     "glyph": "dark"
+    },
+    {
+     "at": "e8",
+     "glyph": "dark"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "king",
+     "label": "the king — he escapes to a corner"
+    },
+    {
+     "glyph": "light",
+     "label": "the defenders (eight)"
+    },
+    {
+     "glyph": "dark",
+     "label": "the besiegers (sixteen)"
+    }
+   ],
+   "caption": "YENİDEN KURGULANMIŞ kurulum. Dizilim Linnaeus'un 1732 tablut kaydından aktarılmıştır; hnefatafl için böyle bir kayıt YOKTUR. Kral merkezde, sekiz savunan haç biçiminde, on altı kuşatan dört kenar ortasında. Dört köşe ve merkez kaçış/dayanak kareleridir."
+  },
+  {
+   "diagramId": "patolli-cross",
+   "gameId": "patolli",
+   "type": "board-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 10,
+    "rows": 10
+   },
+   "panels": 1,
+   "reconstructed": true,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "omitCells": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a7",
+    "a8",
+    "a9",
+    "a10",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b7",
+    "b8",
+    "b9",
+    "b10",
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c7",
+    "c8",
+    "c9",
+    "c10",
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "d7",
+    "d8",
+    "d9",
+    "d10",
+    "g1",
+    "g2",
+    "g3",
+    "g4",
+    "g7",
+    "g8",
+    "g9",
+    "g10",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h7",
+    "h8",
+    "h9",
+    "h10",
+    "i1",
+    "i2",
+    "i3",
+    "i4",
+    "i7",
+    "i8",
+    "i9",
+    "i10",
+    "j1",
+    "j2",
+    "j3",
+    "j4",
+    "j7",
+    "j8",
+    "j9",
+    "j10"
+   ],
+   "pieces": [
+    {
+     "at": "e5",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "e1",
+     "glyph": "light"
+    },
+    {
+     "at": "f10",
+     "glyph": "dark"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "e2",
+     "to": "e4"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "lightSpecial",
+     "label": "the centre — home"
+    },
+    {
+     "glyph": "light",
+     "label": "one player's entry square"
+    },
+    {
+     "glyph": "dark",
+     "label": "the other player's entry square"
+    },
+    {
+     "glyph": "move",
+     "label": "the way round"
+    }
+   ],
+   "caption": "YENİDEN KURGULANMIŞ iz. Kronikler boyalı bir hasır ve haç biçimli bir iz anlatır; kare sayısı ve tur yönü kitabın kararıdır. Bu tahta pachisi'ninkinden AYRI çizilmiştir ve iki oyun arasında hiçbir kural aktarılmamıştır."
+  },
+  {
+   "diagramId": "ur-board",
+   "gameId": "royal-game-of-ur",
+   "type": "board-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 8,
+    "rows": 3
+   },
+   "panels": 1,
+   "reconstructed": true,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "omitCells": [
+    "e1",
+    "e3",
+    "f1",
+    "f3"
+   ],
+   "pieces": [
+    {
+     "at": "d1",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "a1",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "d3",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "a3",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "d2",
+     "glyph": "darkSpecial"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "a2",
+     "to": "d2"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "lightSpecial",
+     "label": "a rosette — throw again"
+    },
+    {
+     "glyph": "darkSpecial",
+     "label": "middle rosette — also safe"
+    },
+    {
+     "glyph": "move",
+     "label": "the way along the shared lane"
+    }
+   ],
+   "caption": "Yirmi kare üç bölümdür: her oyuncunun kendi 4×... girişi (alt ve üst uçlar), ortadaki SEKİZ karelik ortak şerit, ve yine kendine ait çıkış. Köşelerdeki boşluklar tahtaya ait değildir. Alma YALNIZCA ortak şeritte olur; ortadaki rozet dokunulmazdır."
+  },
+  {
+   "diagramId": "gomoku-fouls",
+   "gameId": "gomoku",
+   "type": "move-diagram",
+   "boardClass": "point",
+   "size": {
+    "cols": 11,
+    "rows": 11
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "b9",
+     "glyph": "dark"
+    },
+    {
+     "at": "c9",
+     "glyph": "dark"
+    },
+    {
+     "at": "d9",
+     "glyph": "dark"
+    },
+    {
+     "at": "c8",
+     "glyph": "dark"
+    },
+    {
+     "at": "c10",
+     "glyph": "dark"
+    },
+    {
+     "at": "c2",
+     "glyph": "dark"
+    },
+    {
+     "at": "d2",
+     "glyph": "dark"
+    },
+    {
+     "at": "e2",
+     "glyph": "dark"
+    },
+    {
+     "at": "f2",
+     "glyph": "dark"
+    },
+    {
+     "at": "g2",
+     "glyph": "dark"
+    },
+    {
+     "at": "h2",
+     "glyph": "dark"
+    },
+    {
+     "at": "g6",
+     "glyph": "light"
+    },
+    {
+     "at": "h6",
+     "glyph": "light"
+    },
+    {
+     "at": "i6",
+     "glyph": "light"
+    },
+    {
+     "at": "j6",
+     "glyph": "light"
+    },
+    {
+     "at": "k6",
+     "glyph": "light"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "dark",
+     "label": "black — the double three and the six are fouls"
+    },
+    {
+     "glyph": "light",
+     "label": "white — wins on five, and has no fouls"
+    }
+   ],
+   "caption": "Siyahın iki yasağı: üstte tek bir taşla kurulan ÇİFT AÇIK ÜÇLÜ, altta kesintisiz ALTILI. İkisi de Siyah için anında kayıptır; Beyaz ikisini de yapabilir. Taşlar kesişimlerde durur."
+  },
+  {
+   "diagramId": "bao-board",
+   "gameId": "bao-la-kiswahili",
+   "type": "board-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 8,
+    "rows": 4
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "e2",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "d3",
+     "glyph": "darkSpecial"
+    },
+    {
+     "at": "a2",
+     "glyph": "light"
+    },
+    {
+     "at": "h2",
+     "glyph": "light"
+    },
+    {
+     "at": "a3",
+     "glyph": "dark"
+    },
+    {
+     "at": "h3",
+     "glyph": "dark"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "lightSpecial",
+     "label": "the near player's nyumba (house)"
+    },
+    {
+     "glyph": "darkSpecial",
+     "label": "the far player's nyumba"
+    },
+    {
+     "glyph": "light",
+     "label": "the near player's two kichwa (heads)"
+    },
+    {
+     "glyph": "dark",
+     "label": "the far player's two kichwa"
+    }
+   ],
+   "caption": "Dört sıra, sekizer oyuk. Her oyuncunun ÖN (iç) sırası ortadadır; nyumba ön sıranın sağdan dördüncü oyuğudur ve kichwa'lar ön sıranın iki ucudur. Esir alınan tohumlar bir kichwa'dan ekilmeye başlanır."
+  },
+  {
+   "diagramId": "achi-wheel",
+   "gameId": "achi",
+   "type": "board-diagram",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 56.0,
+    "aspect": 1.0
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "nw": [
+     0.0,
+     0.0
+    ],
+    "n": [
+     0.5,
+     0.0
+    ],
+    "ne": [
+     1.0,
+     0.0
+    ],
+    "w": [
+     0.0,
+     0.5
+    ],
+    "c": [
+     0.5,
+     0.5
+    ],
+    "e": [
+     1.0,
+     0.5
+    ],
+    "sw": [
+     0.0,
+     1.0
+    ],
+    "s": [
+     0.5,
+     1.0
+    ],
+    "se": [
+     1.0,
+     1.0
+    ]
+   },
+   "edges": [
+    [
+     "nw",
+     "n"
+    ],
+    [
+     "n",
+     "ne"
+    ],
+    [
+     "w",
+     "c"
+    ],
+    [
+     "c",
+     "e"
+    ],
+    [
+     "sw",
+     "s"
+    ],
+    [
+     "s",
+     "se"
+    ],
+    [
+     "nw",
+     "w"
+    ],
+    [
+     "w",
+     "sw"
+    ],
+    [
+     "n",
+     "c"
+    ],
+    [
+     "c",
+     "s"
+    ],
+    [
+     "ne",
+     "e"
+    ],
+    [
+     "e",
+     "se"
+    ],
+    [
+     "nw",
+     "c"
+    ],
+    [
+     "c",
+     "se"
+    ],
+    [
+     "ne",
+     "c"
+    ],
+    [
+     "c",
+     "sw"
+    ]
+   ],
+   "pieces": [
+    {
+     "at": "c",
+     "glyph": "dark"
+    },
+    {
+     "at": "nw",
+     "glyph": "dark"
+    },
+    {
+     "at": "se",
+     "glyph": "dark"
+    },
+    {
+     "at": "n",
+     "glyph": "dark"
+    },
+    {
+     "at": "w",
+     "glyph": "light"
+    },
+    {
+     "at": "e",
+     "glyph": "light"
+    },
+    {
+     "at": "sw",
+     "glyph": "light"
+    },
+    {
+     "at": "ne",
+     "glyph": "light"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "dark",
+     "label": "one player's four pieces"
+    },
+    {
+     "glyph": "light",
+     "label": "the other player's four"
+    }
+   ],
+   "caption": "DOKUZ nokta ve merkezden geçen SEKİZ çizgi. Sekiz taş yerleştirildiğinde TEK bir nokta boş kalır (burada 's') ve oyun o boşluğun etrafında kaydırmaya döner. Bu bir 3×3 ızgara DEĞİLDİR: köşegenler ve orta çizgiler tahtanın parçasıdır."
+  },
+  {
+   "diagramId": "polis-capture",
+   "gameId": "polis",
+   "type": "move-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 5,
+    "rows": 3
+   },
+   "panels": 1,
+   "reconstructed": true,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "b2",
+     "glyph": "light"
+    },
+    {
+     "at": "c2",
+     "glyph": "dark",
+     "captured": true
+    },
+    {
+     "at": "d2",
+     "glyph": "light"
+    },
+    {
+     "at": "b1",
+     "glyph": "light"
+    },
+    {
+     "at": "d1",
+     "glyph": "light"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "d1",
+     "to": "d2"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the pincering pieces"
+    },
+    {
+     "glyph": "dark",
+     "label": "the piece taken"
+    },
+    {
+     "glyph": "captured",
+     "label": "taken on this move"
+    },
+    {
+     "glyph": "move",
+     "label": "the move that closes the pincer"
+    }
+   ],
+   "caption": "Kıskaç MOVING ile kapanır: sağdaki taş yukarı gelince ortadaki alınır. Tersi geçerli DEĞİLDİR — kendi isteğiyle iki düşman arasına giren taş GÜVENLİDİR ve alınmaz."
+  },
+  {
+   "diagramId": "senet-board",
+   "gameId": "senet",
+   "type": "board-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 10,
+    "rows": 3
+   },
+   "panels": 1,
+   "reconstructed": true,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "f1",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "g1",
+     "glyph": "darkSpecial"
+    },
+    {
+     "at": "e2",
+     "glyph": "light"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "a3",
+     "to": "j3"
+    },
+    {
+     "kind": "move",
+     "from": "j2",
+     "to": "a2"
+    },
+    {
+     "kind": "move",
+     "from": "a1",
+     "to": "j1"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "lightSpecial",
+     "label": "26 · House of Happiness — land exactly"
+    },
+    {
+     "glyph": "darkSpecial",
+     "label": "27 · House of Water — sends you back to 15"
+    },
+    {
+     "glyph": "light",
+     "label": "15 · House of Rebirth"
+    },
+    {
+     "glyph": "move",
+     "label": "the way the path runs"
+    }
+   ],
+   "caption": "YENİDEN KURGULANMIŞ tahta. Otuz kare üç sırada YILAN gibi ilerler: üst sıra soldan sağa, orta sıra sağdan sola, alt sıra yine soldan sağa. Son beş kare hiyerogliflidir ve kural taşır; yol yönü olmadan tahta okunamaz."
+  },
+  {
+   "diagramId": "janggi-camp",
+   "gameId": "janggi",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "cols": 9,
+    "rows": 10
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "lines": [
+    {
+     "from": "d1",
+     "to": "f3"
+    },
+    {
+     "from": "f1",
+     "to": "d3"
+    }
+   ],
+   "pieces": [
+    {
+     "at": "a1",
+     "glyph": "light"
+    },
+    {
+     "at": "b1",
+     "glyph": "light"
+    },
+    {
+     "at": "c1",
+     "glyph": "light"
+    },
+    {
+     "at": "g1",
+     "glyph": "light"
+    },
+    {
+     "at": "h1",
+     "glyph": "light"
+    },
+    {
+     "at": "i1",
+     "glyph": "light"
+    },
+    {
+     "at": "b3",
+     "glyph": "light"
+    },
+    {
+     "at": "h3",
+     "glyph": "light"
+    },
+    {
+     "at": "a4",
+     "glyph": "light"
+    },
+    {
+     "at": "c4",
+     "glyph": "light"
+    },
+    {
+     "at": "e4",
+     "glyph": "light"
+    },
+    {
+     "at": "g4",
+     "glyph": "light"
+    },
+    {
+     "at": "i4",
+     "glyph": "light"
+    },
+    {
+     "at": "d1",
+     "glyph": "light"
+    },
+    {
+     "at": "f1",
+     "glyph": "light"
+    },
+    {
+     "at": "e2",
+     "glyph": "king"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "pieces stand on the intersections"
+    },
+    {
+     "glyph": "king",
+     "label": "the general — starts in the palace centre"
+    }
+   ],
+   "caption": "Alt oyuncunun hisarı ve KÖŞEGENLERİ. Köşegenler Kore tahtasından ÇIKARILAMAZ: bir taş çizili olan HER çizgi boyunca gidebilir, yani araba köşeden merkeze ve karşı köşeye geçebilir. Şah geri sırada değil, hisarın ortasında başlar."
+  },
+  {
+   "diagramId": "oware-capture",
+   "gameId": "oware",
+   "type": "move-diagram",
+   "boardClass": "pit",
+   "size": {
+    "pitsPerRow": 6,
+    "rows": 2,
+    "stores": true
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "A1",
+     "glyph": "seedCount",
+     "value": 3
+    },
+    {
+     "at": "A2",
+     "glyph": "seedCount",
+     "value": 2
+    },
+    {
+     "at": "A3",
+     "glyph": "seedCount",
+     "value": 3
+    },
+    {
+     "at": "A4",
+     "glyph": "seedCount",
+     "value": 5
+    },
+    {
+     "at": "A5",
+     "glyph": "seedCount",
+     "value": 1
+    },
+    {
+     "at": "A6",
+     "glyph": "seedCount",
+     "value": 1
+    },
+    {
+     "at": "B1",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B2",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B3",
+     "glyph": "seedCount",
+     "value": 0
+    },
+    {
+     "at": "B4",
+     "glyph": "seedCount",
+     "value": 1
+    },
+    {
+     "at": "B5",
+     "glyph": "seedCount",
+     "value": 1
+    },
+    {
+     "at": "B6",
+     "glyph": "seedCount",
+     "value": 1
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "seedCount",
+     "label": "seeds in each hollow"
+    }
+   ],
+   "caption": "Son tohum RAKİP sırasındaki A3'e düşer ve orayı ÜÇE getirir: A3 alınır. Sonra AYNI SIRADA geriye bakılır — A2 iki, A1 üç, ikisi de alınır. A4 BEŞ olduğu için dizi orada DURUR. Toplam sekiz tohum. Geri bakma yönü, ekimin GELDİĞİ yöndür."
+  },
+  {
+   "diagramId": "pallanguzhi-relay",
+   "gameId": "pallanguzhi",
+   "type": "move-diagram",
+   "boardClass": "pit",
+   "size": {
+    "pitsPerRow": 7,
+    "rows": 2,
+    "stores": true
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "A1",
+     "glyph": "seedCount",
+     "value": 2
+    },
+    {
+     "at": "A2",
+     "glyph": "seedCount",
+     "value": 1
+    },
+    {
+     "at": "A3",
+     "glyph": "seedCount",
+     "value": 0
+    },
+    {
+     "at": "A4",
+     "glyph": "seedCount",
+     "value": 6
+    },
+    {
+     "at": "A5",
+     "glyph": "seedCount",
+     "value": 3
+    },
+    {
+     "at": "A6",
+     "glyph": "seedCount",
+     "value": 2
+    },
+    {
+     "at": "A7",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B1",
+     "glyph": "seedCount",
+     "value": 5
+    },
+    {
+     "at": "B2",
+     "glyph": "seedCount",
+     "value": 2
+    },
+    {
+     "at": "B3",
+     "glyph": "seedCount",
+     "value": 1
+    },
+    {
+     "at": "B4",
+     "glyph": "seedCount",
+     "value": 3
+    },
+    {
+     "at": "B5",
+     "glyph": "seedCount",
+     "value": 2
+    },
+    {
+     "at": "B6",
+     "glyph": "seedCount",
+     "value": 1
+    },
+    {
+     "at": "B7",
+     "glyph": "seedCount",
+     "value": 2
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "seedCount",
+     "label": "seeds in each hollow"
+    }
+   ],
+   "caption": "Son tohum A2'ye düştü; SONRAKİ çukur A3 BOŞ. Bir boş çukur ALMA demektir: boşluğun ÖTESİNDEKİ A4 (altı tohum) alınır ve sıra ondan sonraki dolu çukurdan sürer. A7 dört tohumdadır — 'inek'tir ve ÇUKUR SAHİBİNİN haznesine gider. İKİ boş çukur olsaydı tur biterdi."
+  },
+  {
+   "diagramId": "dara-three",
+   "gameId": "dara",
+   "type": "move-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 6,
+    "rows": 5
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "b2",
+     "glyph": "darkSpecial"
+    },
+    {
+     "at": "c2",
+     "glyph": "darkSpecial"
+    },
+    {
+     "at": "d2",
+     "glyph": "darkSpecial"
+    },
+    {
+     "at": "a4",
+     "glyph": "light"
+    },
+    {
+     "at": "c4",
+     "glyph": "light"
+    },
+    {
+     "at": "e3",
+     "glyph": "light"
+    },
+    {
+     "at": "f2",
+     "glyph": "light"
+    },
+    {
+     "at": "a5",
+     "glyph": "dark"
+    },
+    {
+     "at": "f4",
+     "glyph": "dark"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "d3",
+     "to": "d2"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "darkSpecial",
+     "label": "the line of three"
+    },
+    {
+     "glyph": "dark",
+     "label": "its other pieces"
+    },
+    {
+     "glyph": "light",
+     "label": "the other player"
+    },
+    {
+     "glyph": "move",
+     "label": "the move that made it"
+    }
+   ],
+   "caption": "Üçlü YALNIZCA satır ya da sütun boyunca ve ARDIŞIK çukurlarda sayılır. d3'ten d2'ye inen taş b2-c2-d2 üçlüsünü tamamlar ve rakipten bir taş aldırır. KÖŞEGEN diziliş SAYILMAZ, DÖRTLÜ de sayılmaz: değeri olan şey tam ÜÇTÜR."
+  },
+  {
+   "diagramId": "mutorere-star",
+   "gameId": "mu-torere",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 58.0,
+    "aspect": 1.0
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "k1": [
+     0.5,
+     0.0
+    ],
+    "k2": [
+     0.854,
+     0.146
+    ],
+    "k3": [
+     1.0,
+     0.5
+    ],
+    "k4": [
+     0.854,
+     0.854
+    ],
+    "k5": [
+     0.5,
+     1.0
+    ],
+    "k6": [
+     0.146,
+     0.854
+    ],
+    "k7": [
+     0.0,
+     0.5
+    ],
+    "k8": [
+     0.146,
+     0.146
+    ],
+    "c": [
+     0.5,
+     0.5
+    ]
+   },
+   "edges": [
+    [
+     "k1",
+     "k2"
+    ],
+    [
+     "k2",
+     "k3"
+    ],
+    [
+     "k3",
+     "k4"
+    ],
+    [
+     "k4",
+     "k5"
+    ],
+    [
+     "k5",
+     "k6"
+    ],
+    [
+     "k6",
+     "k7"
+    ],
+    [
+     "k7",
+     "k8"
+    ],
+    [
+     "k8",
+     "k1"
+    ],
+    [
+     "k1",
+     "c"
+    ],
+    [
+     "k2",
+     "c"
+    ],
+    [
+     "k3",
+     "c"
+    ],
+    [
+     "k4",
+     "c"
+    ],
+    [
+     "k5",
+     "c"
+    ],
+    [
+     "k6",
+     "c"
+    ],
+    [
+     "k7",
+     "c"
+    ],
+    [
+     "k8",
+     "c"
+    ]
+   ],
+   "pieces": [
+    {
+     "at": "k1",
+     "glyph": "dark"
+    },
+    {
+     "at": "k2",
+     "glyph": "dark"
+    },
+    {
+     "at": "k3",
+     "glyph": "dark"
+    },
+    {
+     "at": "k4",
+     "glyph": "dark"
+    },
+    {
+     "at": "k5",
+     "glyph": "light"
+    },
+    {
+     "at": "k6",
+     "glyph": "light"
+    },
+    {
+     "at": "k7",
+     "glyph": "light"
+    },
+    {
+     "at": "k8",
+     "glyph": "light"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "dark",
+     "label": "one player's four pieces, on points 1–4"
+    },
+    {
+     "glyph": "light",
+     "label": "the other player's four pieces, on points 5–8"
+    }
+   ],
+   "caption": "SEKİZ IŞINLI YILDIZ: ışın uçlarında sekiz hücre (kewai) ve merkezde bir hücre (putahi). Merkez BOŞ başlar ve tahtadaki TEK boş noktadır. Bir taş yalnızca merkeze ya da KOMŞU ışın ucuna gider. Bu topoloji genel bir ızgarayla çizilemez: merkez sekiz ucun HEPSİNE komşudur, uçlar ise yalnızca ikisine."
+  },
+  {
+   "diagramId": "hare-board",
+   "gameId": "catch-the-hare",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "cols": 5,
+    "rows": 5
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "lines": [
+    {
+     "from": "a1",
+     "to": "c3"
+    },
+    {
+     "from": "c1",
+     "to": "a3"
+    },
+    {
+     "from": "c1",
+     "to": "e3"
+    },
+    {
+     "from": "e1",
+     "to": "c3"
+    },
+    {
+     "from": "a3",
+     "to": "c5"
+    },
+    {
+     "from": "c3",
+     "to": "a5"
+    },
+    {
+     "from": "c3",
+     "to": "e5"
+    },
+    {
+     "from": "e3",
+     "to": "c5"
+    }
+   ],
+   "pieces": [
+    {
+     "at": "a1",
+     "glyph": "light"
+    },
+    {
+     "at": "b1",
+     "glyph": "light"
+    },
+    {
+     "at": "c1",
+     "glyph": "light"
+    },
+    {
+     "at": "d1",
+     "glyph": "light"
+    },
+    {
+     "at": "e1",
+     "glyph": "light"
+    },
+    {
+     "at": "a2",
+     "glyph": "light"
+    },
+    {
+     "at": "b2",
+     "glyph": "light"
+    },
+    {
+     "at": "c2",
+     "glyph": "light"
+    },
+    {
+     "at": "d2",
+     "glyph": "light"
+    },
+    {
+     "at": "e2",
+     "glyph": "light"
+    },
+    {
+     "at": "a3",
+     "glyph": "light"
+    },
+    {
+     "at": "e3",
+     "glyph": "light"
+    },
+    {
+     "at": "c3",
+     "glyph": "darkSpecial"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the twelve hunters"
+    },
+    {
+     "glyph": "darkSpecial",
+     "label": "the hare — it alone takes"
+    }
+   ],
+   "caption": "Tahta alquerque tipidir ve KÖŞEGENLER ÇİZİLİDİR: bir taş yalnızca ÇİZİLİ bir çizgi boyunca gidebilir, yani hareket gücü noktadan noktaya DEĞİŞİR. On iki avcı birinci ve ikinci sırada ve üçüncü sıranın iki ucundadır; tavşan merkezdedir. Köşegenler silinirse tahta başka bir oyunun tahtası olur."
+  },
+  {
+   "diagramId": "hasami-sandwich",
+   "gameId": "hasami-shogi",
+   "type": "move-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 9,
+    "rows": 9
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "d5",
+     "glyph": "light"
+    },
+    {
+     "at": "e5",
+     "glyph": "dark",
+     "captured": true
+    },
+    {
+     "at": "f5",
+     "glyph": "light"
+    },
+    {
+     "at": "g5",
+     "glyph": "dark"
+    },
+    {
+     "at": "e7",
+     "glyph": "dark"
+    },
+    {
+     "at": "c7",
+     "glyph": "light"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "f7",
+     "to": "f5"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the capturing player"
+    },
+    {
+     "glyph": "dark",
+     "label": "the other player"
+    },
+    {
+     "glyph": "captured",
+     "label": "taken — trapped on a file"
+    },
+    {
+     "glyph": "move",
+     "label": "the move that closes it"
+    }
+   ],
+   "caption": "KISTIRARAK ALMA: bir taş satır ya da sütun boyunca İKİ düşman taşının arasında kalırsa alınır — ama YALNIZCA ikinci tarafı KAPATAN hamleyle. g7'den f5'e inen taş e5'i d5 ile arasına alır. Kendi isteğiyle iki düşmanın arasına GİREN taş güvendedir; köşegen kıstırma ALMAZ."
+  },
+  {
+   "diagramId": "dama-orthogonal",
+   "gameId": "turkish-dama",
+   "type": "move-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 8,
+    "rows": 8
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "d4",
+     "glyph": "light"
+    },
+    {
+     "at": "d5",
+     "glyph": "dark",
+     "captured": true
+    },
+    {
+     "at": "c4",
+     "glyph": "dark"
+    },
+    {
+     "at": "f6",
+     "glyph": "dark"
+    },
+    {
+     "at": "b2",
+     "glyph": "light"
+    },
+    {
+     "at": "g3",
+     "glyph": "light"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "d4",
+     "to": "d6"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the capturing player"
+    },
+    {
+     "glyph": "dark",
+     "label": "the other player"
+    },
+    {
+     "glyph": "captured",
+     "label": "jumped and removed at once"
+    },
+    {
+     "glyph": "move",
+     "label": "forward or sideways only"
+    }
+   ],
+   "caption": "Türk daması KÖŞEGEN TANIMAZ. Taş ileri ve yana gider, ileri ve yana alır; köşegen hamle de köşegen alma da YOKTUR. Alınan taş hamlenin sonunda değil ALINDIĞI ANDA kaldırılır — Polonya damasının tersi — ve aynı taş almaya devam edebildiği sürece tur sürer."
+  },
+  {
+   "diagramId": "dames-maxcapture",
+   "gameId": "jeu-de-dames",
+   "type": "move-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 10,
+    "rows": 10
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "c3",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "e5",
+     "glyph": "dark",
+     "captured": true
+    },
+    {
+     "at": "g7",
+     "glyph": "dark",
+     "captured": true
+    },
+    {
+     "at": "d6",
+     "glyph": "dark"
+    },
+    {
+     "at": "h4",
+     "glyph": "dark"
+    },
+    {
+     "at": "b8",
+     "glyph": "light"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "c3",
+     "to": "h8"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "lightSpecial",
+     "label": "a king on the long diagonal"
+    },
+    {
+     "glyph": "light",
+     "label": "its other pieces"
+    },
+    {
+     "glyph": "dark",
+     "label": "the other player"
+    },
+    {
+     "glyph": "captured",
+     "label": "taken — but not lifted until the move ends"
+    },
+    {
+     "glyph": "move",
+     "label": "the largest capture, which is compulsory"
+    }
+   ],
+   "caption": "AZAMİ ALMA ZORUNLUDUR: birden çok alma yolu varsa EN ÇOK taş alan seçilmek zorundadır. Alınan taşlar hamle BİTENE KADAR tahtada durur ve GEÇİLMEZ bir engeldir — aynı taş iki kez atlanamaz ve içinden geçilemez. Bu yüzden hamle, taşa dokunmadan ÖNCE sonuna kadar okunmalıdır."
+  },
+  {
+   "diagramId": "bul-stack",
+   "gameId": "bul",
+   "type": "move-diagram",
+   "boardClass": "cell",
+   "size": {
+    "cols": 10,
+    "rows": 1
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "b1",
+     "glyph": "light"
+    },
+    {
+     "at": "e1",
+     "glyph": "lightSpecial"
+    },
+    {
+     "at": "h1",
+     "glyph": "dark"
+    },
+    {
+     "at": "j1",
+     "glyph": "dark"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "h1",
+     "to": "e1"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "one player, travelling right"
+    },
+    {
+     "glyph": "dark",
+     "label": "the other, travelling left"
+    },
+    {
+     "glyph": "lightSpecial",
+     "label": "a stack — an enemy is held beneath"
+    },
+    {
+     "glyph": "move",
+     "label": "landing on a stack reverses it"
+    }
+   ],
+   "caption": "ON BASAMAKLI YOL. Oyuncular iki UÇTA oturur ve ZIT yönlerde ilerler. e1'deki taş bir tutsağı ALTINDA taşıyor ve sağa gidiyor; h1'deki rakip taş onun üstüne konarsa YIĞININ TAMAMI yön değiştirir ve sola yürümeye başlar. Tutsak ancak yığın bir UCA vardığında ölür — o yüzden alma, oyundan çıkarmaz."
+  }
+ ]
+}

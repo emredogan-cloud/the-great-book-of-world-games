@@ -507,6 +507,17 @@ def page_map(root: str) -> dict:
     olarak türetilir; ölçülmemiş bir oyun haritada YOKTUR ve indekste
     `null` görünür. Uydurulmuş bir sayfa numarası, test edilemeyen bir
     iddiadır (kurucu § 27)."""
+    # ⚠ GERÇEK DİZGİ VARSA O KAZANIR.
+    # Kurucunun § 27 şartı — *"page references must be tested against actual
+    # rendered output"* — ancak GERÇEKTEN basılmış sayfadan karşılanabilir.
+    # `interior.py` her maddenin başladığı sayfayı SAYAR; model ise onu
+    # TAHMİN eder. Model, iç blok üretilmeden önceki dönem içindir.
+    real = os.path.join(root, "06_REPORTS", "interior-paperback.json")
+    if os.path.exists(real):
+        pm = load(real).get("pagemap") or {}
+        if pm:
+            return {k: int(v) for k, v in pm.items()}
+
     p = os.path.join(root, "06_REPORTS", "phase2-typeset-measurement.json")
     if not os.path.exists(p):
         return {}
@@ -519,6 +530,62 @@ def page_map(root: str) -> dict:
         billed = int(r.get("billedPages") or 2)
         out[r["gameId"]] = cursor
         cursor += billed
+    return out
+
+
+
+def printed_view(payload: dict, written: set) -> dict:
+    """Arka maddeyi YAZILMIŞ kümeye daraltır — basılan görünüm (Faz 6).
+
+    Daraltma bir filtredir, bir yeniden yazım DEĞİLDİR: hiçbir metin
+    değişmez, yalnızca kitapta bulunmayan maddeler düşer. Sözlük terimi
+    prozada hiç geçmiyorsa da düşer — okurun kitapta bulamayacağı bir
+    terimi tanımlamak, sözlüğü bir kelime listesine çevirir.
+    """
+    out = dict(payload)
+    out["$comment"] = [
+        "BASILAN ARKA MADDE — ÜRETİLMİŞ DOSYA (04_BUILD/build_backmatter.py).",
+        "backmatter.json KAPSAMIN (100 oyun) arka maddesidir; bu dosya",
+        "KİTABIN (yazılmış oyunlar) arka maddesidir ve BASILAN budur.",
+        "Filtre uygulanır, metin DEĞİŞMEZ.",
+    ]
+    out["view"] = "printed"
+    out["printedGames"] = len(written)
+
+    out["boardTemplates"] = [t for t in payload["boardTemplates"]
+                             if t["gameId"] in written]
+    out["bibliography"] = [b for b in payload["bibliography"]
+                           if b["gameId"] in written]
+
+    mats = []
+    for m in payload["materialsGuide"]:
+        used = [g for g in m["usedBy"] if g in written]
+        if not used:
+            continue
+        mats.append(dict(m, usedBy=used, count=len(used)))
+    out["materialsGuide"] = mats
+
+    gloss = []
+    for t in payload["glossary"]:
+        att = [g for g in (t.get("attestedIn") or []) if g in written]
+        if not att:
+            continue
+        gloss.append(dict(t, attestedIn=att, attestedCount=len(att)))
+    out["glossary"] = gloss
+
+    idx = {}
+    for key, block in payload["indexes"].items():
+        nb = {}
+        for bucket, rows in block["buckets"].items():
+            keep = [r for r in rows if r["gameId"] in written]
+            if keep:
+                nb[bucket] = keep
+        idx[key] = dict(block, buckets=nb)
+    out["indexes"] = idx
+
+    out["inventedTraditions"] = [t for t in payload["inventedTraditions"]
+                                 if not t.get("gameId")
+                                 or t["gameId"] in written]
     return out
 
 
@@ -736,6 +803,21 @@ def build(root: str, args) -> int:
         "inventedTraditions": INVENTED_TRADITIONS,
     }
     dump(os.path.join(root, "02_MANUSCRIPT", "backmatter.json"), payload)
+
+    # ── BASILAN ARKA MADDE — FAZ 6 ───────────────────────────────────
+    # Yukarıdaki payload KAPSAMIN (100 oyun) arka maddesidir ve projenin
+    # kaydı olarak öyle KALIR: hangi oyunun sayfası neden yok, orada durur.
+    #
+    # ⛔ AMA BASILAMAZ. Kitapta 56 madde vardır; kapsamın kaynakçası okura
+    # basılmayan 44 oyunun künyesini verir ve üç indeks onu var olmayan
+    # sayfalara gönderir. Bir indeks, kitapta bulunmayan bir oyunu
+    # listelediği anda kitabın EN ÇOK KULLANILAN sayfası bozulur
+    # (EDITORIAL_ARCHITECTURE § 5).
+    #
+    # Bu yüzden ikinci bir görünüm üretilir: YAZILMIŞ kümeye daraltılmış.
+    # Basılan budur; kapsam görünümü denetlenmeye devam eder.
+    printed = printed_view(payload, set(written))
+    dump(os.path.join(root, "02_MANUSCRIPT", "backmatter_printed.json"), printed)
 
     # ── PUBLIC ÖZET — proza taşımaz, yalnızca YAPI ────────────────────
     public = {
