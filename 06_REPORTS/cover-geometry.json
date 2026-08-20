@@ -77,7 +77,7 @@
     "frontOnlyWidthPx": 2588,
     "frontOnlyHeightPx": 3375
    },
-   "interiorSha256": "f117284fbc4cb35b9cfc8ffdfd92d7d6880cce8dc2592ae26917fa02e7bc6687",
+   "interiorSha256": "474eda034194508ce6db8a079884c597c32f27665f394130bc2d594e73ba2989",
    "interiorFile": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf"
   },
   "hardcover": {
@@ -152,7 +152,7 @@
    },
    "$hardcoverWarning": "CİLTLİ GEOMETRİ HİPOTEZDİR. KDP ciltli kapak şablonunu bir üreteçle verir; kalıp payı, menteşe ve tahta kalınlığı oradan okunur. KURUCU EYLEMİ: şablonu indir, buradaki sırt ve sarım ölçüleriyle KARŞILAŞTIR, farklıysa project_config.json içine gerçek değerleri yaz.",
    "founderConfirmedTemplate": false,
-   "interiorSha256": "5c53a429828431e03bbd89535ab7809c7a4a79b69e9a02c283b6bb19bb7ea81c",
+   "interiorSha256": "855adcacf16b318c03af03a55e0b7e4e4e259b72082ff2f7160cdbe73cdd5d60",
    "interiorFile": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf"
   }
  },

@@ -1760,6 +1760,56 @@ def part10_founder_gap_register(rep, tmp: str) -> None:
             shutil.rmtree(ghost_dir, ignore_errors=True)
 
 
+# ---------------------------------------------------------------------------
+def part11_typography(rep: Report, tmp: str) -> None:
+    """Dizgi tırnağı — ÜÇ metin yolu, TEK kural.
+
+    Bu bölüm faz 6'da eklendi. Nedeni: kural üç yerde ayrı ayrı duruyordu
+    (Paragraph, SVG etiketi, doğrudan tuval üstbilgisi) ve üçünden ikisi
+    düzeltildiğinde üçüncüsü sessizce daktilo kesme işaretiyle basmaya
+    devam etti. Aynı sayfada "Nine Men's Morris" ile "Nine Men’s Morris"
+    yan yana basıldı ve bunu ne göz ne de o günkü kapılar gördü.
+    """
+    print("\n⑪ dizgi tırnağı tek noktadan geçer")
+    sys.path.insert(0, os.path.join(ROOT, "04_BUILD"))
+    import typo
+
+    cases = [
+        ("don't", "don’t"),
+        ("Nine Men's Morris", "Nine Men’s Morris"),
+        ("the pieces' owner", "the pieces’ owner"),
+        # kapanış NOKTALAMANIN ardından — faz 6'da bulunan kusur
+        ("'These are the only rules of the game.' Two",
+         "‘These are the only rules of the game.’ Two"),
+        ("Cultures, 'Rules for Playing Omweso (Mweso)', pp. 133",
+         "Cultures, ‘Rules for Playing Omweso (Mweso)’, pp. 133"),
+        ("Li'b el-Merafib", "Li’b el-Merafib"),
+        ('He said "go" then left.', "He said “go” then left."),
+    ]
+    for src, want in cases:
+        got = typo.smart(src)
+        rep.check(got == want, "dizgi: %r" % src[:44], "beklenen %r · gelen %r"
+                  % (want, got))
+
+    # XML kaçışı dizgiden ÖNCE gelmeli
+    rep.check(typo.xml_text("A & B's <t>") == "A &amp; B’s &lt;t&gt;",
+              "xml_text önce kaçırır sonra dizer")
+
+    # Dönüşemeyen düz tırnak SESSİZ KALMAMALI
+    try:
+        typo.smart("orphan ' quote")
+        rep.check(False, "dönüşemeyen düz tırnak YÜKSELTİR")
+    except ValueError:
+        rep.check(True, "dönüşemeyen düz tırnak YÜKSELTİR")
+
+    # Üç yolun üçü de aynı modülü kullanmalı — kopya kural YASAK
+    for mod in ("interior.py", "epub.py", "render_diagrams.py"):
+        src = open(os.path.join(ROOT, "04_BUILD", mod),
+                   encoding="utf-8").read()
+        rep.check("import typo" in src and "\\u2019" not in src,
+                  "%s dizgiyi typo'dan alır (kopya kural yok)" % mod)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1782,6 +1832,7 @@ def main() -> int:
         part8_phase4_gates(rep, tmp)
         part9_phase5_gates(rep, tmp)
         part10_founder_gap_register(rep, tmp)
+        part11_typography(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:

@@ -183,7 +183,21 @@ def check_language(pdf: str, rep: Report) -> dict:
     hits = sorted({w for w in re.findall(r"[^\s]+", out) if looks_turkish(w)})
     rep.check(not hits, "basılan metinde belge dili YOK" + brief(hits))
     words = len(re.findall(r"\S+", out))
-    return {"extractedWords": words, "turkishHits": hits}
+
+    # ── DAKTİLO TIRNAĞI ──────────────────────────────────────────────────
+    # Manuscript düz ASCII kesme işareti taşır; dizgi tırnağına dönüşüm
+    # RENDER anında olur. Üç ayrı metin yolu vardır (Paragraph, SVG etiketi,
+    # doğrudan tuval üstbilgisi) ve her biri dönüşümü ayrı ayrı kaçırabilir.
+    # Kaçırdığında sayfada "Nine Men's Morris" ile "Nine Men’s Morris" yan
+    # yana basılır. GÖZLE GÖRÜNMEZ; ancak basılmış PDF'in metni taranınca
+    # çıkar — bu yüzden denetim KAYNAKTA değil ÇIKTIDA durur.
+    typewriter = sorted({ln.strip()[:70] for ln in out.splitlines()
+                         if "'" in ln or '"' in ln})
+    rep.check(not typewriter,
+              "basılan metinde daktilo tırnağı YOK" + brief(typewriter, 4))
+
+    return {"extractedWords": words, "turkishHits": hits,
+            "typewriterQuotes": typewriter}
 
 
 def check_images(pdf: str, rep: Report) -> dict:

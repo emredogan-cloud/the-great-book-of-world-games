@@ -51,6 +51,8 @@ import hashlib
 import json
 import os
 import re
+
+import typo
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -116,15 +118,7 @@ def esc(s: str) -> str:
     arasındaki fark, kitabın premium görünüp görünmemesidir. Ligatür gibi:
     bir DİZGİ dönüşümü.
     """
-    t = (str(s).replace("&", "&amp;").replace("<", "&lt;")
-         .replace(">", "&gt;"))
-    # AÇILIŞ tırnağı da dönüşür. İlk sürüm yalnızca kapanışı dönüştürdü ve
-    # sayfada "'to surround the hare’" çıktı: bir tarafı daktilo, öteki
-    # tarafı dizgi. Karışık tırnak, hiç dönüştürmemekten daha kötüdür.
-    t = re.sub(r"(?<![A-Za-zÀ-ÿ0-9])'(?=[A-Za-zÀ-ÿ])", "\u2018", t)
-    t = re.sub(r"(?<=[A-Za-zÀ-ÿ])'(?=[A-Za-zÀ-ÿ])", "\u2019", t)   # don’t
-    t = re.sub(r"(?<=[A-Za-zÀ-ÿ])'(?=\s|$|[,.;:!?])", "\u2019", t)  # pieces’
-    return t
+    return typo.xml_text(s)
 
 
 def register_fonts() -> str:
@@ -897,7 +891,13 @@ def _furniture(c, lay, i, p, geom, title):
     x_in, y_top, w, h = lay.frame(i)
     c.setFont("GBSerif-I", 8.5)
     c.setFillColorRGB(0, 0, 0)
-    head = p.runHead or title
+    # Üstbilgi Paragraph'tan değil DOĞRUDAN tuvalden geçer, yani esc()'i
+    # görmez. Dizgi tırnağını burada ayrıca uygulamak ZORUNLU: aksi
+    # halde gövdede "Nine Men’s Morris", üstbilgide "Nine Men's
+    # Morris" basılır — aynı sayfada iki farklı kesme işareti.
+    # xml_text() DEĞİL smart(): tuval XML kaçışı beklemez, `&amp;`
+    # sayfaya harfi harfine basılırdı.
+    head = typo.smart(p.runHead or title)
     # Bölümün AÇILIŞ sayfasında üstbilgi başlığı TEKRARLAR ve bu bir
     # dizgi hatasıdır: "Contents" bir kez üstbilgide, bir kez H1'de
     # basılıyordu. Standart uygulama açılış sayfasında üstbilgiyi

@@ -24,6 +24,8 @@ from __future__ import annotations
 import argparse
 import json
 import math
+
+import typo
 import os
 import sys
 
@@ -67,10 +69,13 @@ class Canvas:
                 % (cx, cy, r * 0.55, grey(0) if fill == 100 else "#000", self.sw))
 
     def text(self, x, y, s, pt, anchor="middle"):
+        # XML kaçışı + dizgi tırnağı. Bu satır uzun süre kaçışsızdı:
+        # etiketteki bir `&` geçersiz SVG üretirdi ve etiketteki düz kesme
+        # işareti — iç metin düzeltildikten SONRA bile — daktilo kalırdı.
         self.parts.append(
             '<text x="%.2f" y="%.2f" font-family="serif" font-size="%.2f" '
             'text-anchor="%s" fill="#000">%s</text>'
-            % (x, y, pt * 96.0 / 72.0, anchor, s))
+            % (x, y, pt * 96.0 / 72.0, anchor, typo.xml_text(s)))
 
     def arrow(self, x1, y1, x2, y2, w, dash=None):
         self.line(x1, y1, x2, y2, w, dash)

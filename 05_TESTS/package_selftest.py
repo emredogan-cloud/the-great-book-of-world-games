@@ -227,6 +227,27 @@ def main() -> int:
     s.case("kanonik biyografi DEĞİŞİRSE künye bayatlar (bilgi)",
            MD, lambda w: None, expect_red=False)
 
+    # ── DİZGİ TIRNAĞI ──────────────────────────────────────────────────
+    # Kusur KAYNAKTA değil ÇIKTIDA aranır. `typo.smart` etkisizleştirilir,
+    # iç blok YENİDEN üretilir ve KDP ön denetiminin basılmış PDF'te daktilo
+    # tırnağını gördüğü doğrulanır. Faz 6'da bu kapı yoktu ve kitap 36
+    # daktilo kesme işaretiyle basılmaya hazırdı.
+    print("\n── dizgi tırnağı (kdp_preflight.py) ──")
+
+    def neuter_typo(w):
+        tp = os.path.join(w, "04_BUILD", "typo.py")
+        src = open(tp, encoding="utf-8").read()
+        src = src.replace("def smart(t):", "def smart(t):\n    return str(t)")
+        open(tp, "w", encoding="utf-8").write(src)
+        r = subprocess.run([PY, "04_BUILD/interior.py", "--root", w],
+                           cwd=w, capture_output=True, text=True)
+        if r.returncode != 0:
+            raise RuntimeError("iç blok yeniden üretilemedi: %s"
+                               % r.stderr.strip()[-300:])
+
+    s.case("basılan PDF'te daktilo tırnağı KIRMIZI",
+           ["04_BUILD/kdp_preflight.py", "--root", "{root}"], neuter_typo)
+
     # ── EPUB ───────────────────────────────────────────────────────────
     print("\n── EPUB (epub.py --check) ──")
     EP = ["04_BUILD/epub.py", "--root", "{root}", "--check"]

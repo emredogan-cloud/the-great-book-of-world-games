@@ -42,6 +42,8 @@ import html
 import json
 import os
 import re
+
+import typo
 import sys
 import zipfile
 
@@ -76,14 +78,7 @@ def E(s):
 
     İki çıktı aynı kitaptır; birinde eğri birinde düz kesme işareti olması
     aynı cümlenin iki farklı biçimde basılması demektir."""
-    t = html.escape(str(s), quote=False)
-    # AÇILIŞ tırnağı da dönüşür. İlk sürüm yalnızca kapanışı dönüştürdü ve
-    # sayfada "'to surround the hare’" çıktı: bir tarafı daktilo, öteki
-    # tarafı dizgi. Karışık tırnak, hiç dönüştürmemekten daha kötüdür.
-    t = re.sub(r"(?<![A-Za-zÀ-ÿ0-9])'(?=[A-Za-zÀ-ÿ])", "\u2018", t)
-    t = re.sub(r"(?<=[A-Za-zÀ-ÿ])'(?=[A-Za-zÀ-ÿ])", "\u2019", t)
-    t = re.sub(r"(?<=[A-Za-zÀ-ÿ])'(?=\s|$|[,.;:!?])", "\u2019", t)
-    return t
+    return typo.xml_text(s)
 
 
 CSS = """@charset "utf-8";
@@ -206,6 +201,17 @@ def build(root: str) -> int:
     games = {g["gameId"]: g for g in book["games"]}
     tp, im, m = fm["titlePage"], fm["imprint"], fm["measured"]
 
+    # ── KAPAK ──────────────────────────────────────────────────────────
+    # Kindle kapağı KDP formunda ayrıca yüklenir; ama EPUB'ın KENDİSİ de
+    # bir kapak taşımalıdır — dosya Kindle dışında bir okuyucuda açıldığında
+    # kapaksız kalmasın diye.
+    cover_img = None
+    cbp = os.path.join(root, "06_REPORTS", "cover-build.json")
+    if os.path.exists(cbp):
+        kc = (load(cbp).get("kindle") or {}).get("file")
+        if kc and os.path.exists(os.path.join(root, kc)):
+            cover_img = os.path.join(root, kc)
+
     files, spine, nav_items = [], [], []
 
     def add(name, title, body, cls="", in_spine=True, in_nav=None):
@@ -216,6 +222,12 @@ def build(root: str) -> int:
             nav_items.append((name, in_nav[0], in_nav[1]))
 
     # ── ön madde ──────────────────────────────────────────────────────
+    if cover_img:
+        add("cover.xhtml", "Cover",
+            '<div style="text-align:center;margin:0;padding:0">'
+            '<img src="../images/cover.jpg" alt="%s" '
+            'style="max-width:100%%;height:auto"/></div>' % E(tp["title"]),
+            "frontmatter", in_nav=("Cover", 0))
     add("title.xhtml", tp["title"],
         '<h1>%s</h1><p class="standfirst">%s</p><p>%s</p><p>%s</p>'
         % (E(tp["title"]), E(tp["subtitle"]), E(tp["author"]),
@@ -336,6 +348,9 @@ def build(root: str) -> int:
     manifest = ['<item id="nav" href="nav.xhtml" '
                 'media-type="application/xhtml+xml" properties="nav"/>',
                 '<item id="css" href="style.css" media-type="text/css"/>']
+    if cover_img:
+        manifest.append('<item id="cover-image" href="images/cover.jpg" '
+                        'media-type="image/jpeg" properties="cover-image"/>')
     for i, n in enumerate(spine):
         manifest.append('<item id="s%d" href="text/%s" '
                         'media-type="application/xhtml+xml"/>' % (i, n))
@@ -353,10 +368,16 @@ def build(root: str) -> int:
            '<meta property="schema:accessMode">textual</meta>\n'
            '<meta property="schema:accessMode">visual</meta>\n'
            '<meta property="schema:accessibilityFeature">structuralNavigation</meta>\n'
+           # EPUB 3 kapağı manifest'te properties="cover-image" ile işaretlenir;
+           # bu ESKİ EPUB 2 satırı ise KDP'nin dönüştürücüsünün hâlâ okuduğu
+           # satırdır. İkisini birden yazmak standart pratiktir.
+           '%s'
            '</metadata>\n<manifest>\n%s\n</manifest>\n<spine>\n%s\n</spine>\n'
            '</package>\n'
            % (uid, E(tp["title"]), E(tp["author"]), E(tp["publisher"]),
               E(tp["subtitle"]),
+              ('<meta name="cover" content="cover-image"/>\n'
+               if cover_img else ""),
               "\n".join(manifest),
               "\n".join('<itemref idref="s%d"/>' % i
                         for i in range(len(spine)))))
@@ -379,6 +400,10 @@ def build(root: str) -> int:
         z.writestr("OEBPS/style.css", CSS, zipfile.ZIP_DEFLATED)
         for name, data in files:
             z.writestr(name, data, zipfile.ZIP_DEFLATED)
+        if cover_img:
+            with open(cover_img, "rb") as fh:
+                z.writestr("OEBPS/images/cover.jpg", fh.read(),
+                           zipfile.ZIP_DEFLATED)
 
     cover_raw = os.path.join(root, "07_ASSETS", "raw", "cover")
     have_cover = bool(os.path.isdir(cover_raw) and
@@ -393,8 +418,8 @@ def build(root: str) -> int:
         "diagramsEmbedded": sum(len(g.get("diagrams") or [])
                                 for g in book["games"]),
         "diagramFormat": "inline SVG (vector, no raster)",
-        "coverImage": None,
-        "coverStatus": ("READY" if have_cover
+        "coverImage": (os.path.relpath(cover_img, root) if cover_img else None),
+        "coverStatus": ("READY" if cover_img or have_cover
                         else "BLOCKED — kurucu kapak sanatı yok; sahte kapak "
                              "KONMADI"),
         "fixedLayout": False,

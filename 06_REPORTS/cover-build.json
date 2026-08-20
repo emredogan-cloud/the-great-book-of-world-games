@@ -252,7 +252,7 @@
     }
    ],
    "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
-   "sha256": "2ee57c58ac15dc1b8a1e21452b01d9504eed131e84547ebbb6f0b1192c3522a1",
+   "sha256": "93ce1c389e7977dfa808db35e4a9d40e2aa8a50be6ee42281ae981e785f18948",
    "bytes": 21142924,
    "wrapIn": [
     17.6103,
@@ -533,7 +533,7 @@
     }
    ],
    "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
-   "sha256": "e78c2bdfa5fa9059213aeb07bd00ac24fba8de816940a912faf59b1f287865e4",
+   "sha256": "f6972c22fe9dba69cf92805fabbc5bcab150e218c9217cde0358e03b1623e1ac",
    "bytes": 20392322,
    "wrapIn": [
     17.21,

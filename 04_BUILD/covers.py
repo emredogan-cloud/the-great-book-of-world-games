@@ -750,6 +750,14 @@ def main() -> int:
         return run_check(root)
     if args.build:
         cfg = load(os.path.join(root, "project_config.json"))
+        # ÖNCE geometri, SONRA kompozisyon. İkisi ayrı dosyalara yazar
+        # (cover-geometry.json ve cover-build.json) ve --check GEOMETRİYİ
+        # okur. Yalnızca --build çalıştırıldığında geometri dosyası eski
+        # iç bloğun sağlamasını taşımaya devam ediyordu: kapak TAZE, kayıt
+        # BAYAT, kapı haklı olarak kırmızı. Tek komut ikisini birden tazeler.
+        rc = run(root, args)
+        if rc:
+            return rc
         return build_covers(root, cfg, args)
     return run(root, args)
 

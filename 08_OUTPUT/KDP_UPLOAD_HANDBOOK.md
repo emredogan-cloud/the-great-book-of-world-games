@@ -146,7 +146,7 @@ declaration on your behalf. The facts you need in order to answer:
 - 160 pages · trim 8.5 × 11.0 in
 - no bleed · inside margin 0.5 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `f117284fbc4cb35b9cfc8ffdfd92d7d6880cce8dc2592ae26917fa02e7bc6687`
+- SHA-256 `474eda034194508ce6db8a079884c597c32f27665f394130bc2d594e73ba2989`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.5 x 11.0 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
@@ -163,7 +163,7 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
   (160 pages × 0.002252 in/page)
 - artwork embedded at **5283 × 3375 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `2ee57c58ac15dc1b8a1e21452b01d9504eed131e84547ebbb6f0b1192c3522a1`
+- SHA-256 `93ce1c389e7977dfa808db35e4a9d40e2aa8a50be6ee42281ae981e785f18948`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
@@ -296,7 +296,7 @@ declaration on your behalf. The facts you need in order to answer:
 - 160 pages · trim 8.25 × 11.0 in
 - no bleed · inside margin 0.625 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `5c53a429828431e03bbd89535ab7809c7a4a79b69e9a02c283b6bb19bb7ea81c`
+- SHA-256 `855adcacf16b318c03af03a55e0b7e4e4e259b72082ff2f7160cdbe73cdd5d60`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.25 x 11.0 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
@@ -313,7 +313,7 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
   (160 pages × 0.0025 in/page plus a board allowance)
 - artwork embedded at **5163 × 3375 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `e78c2bdfa5fa9059213aeb07bd00ac24fba8de816940a912faf59b1f287865e4`
+- SHA-256 `f6972c22fe9dba69cf92805fabbc5bcab150e218c9217cde0358e03b1623e1ac`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
@@ -372,7 +372,7 @@ yours to answer.
 08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub
 ```
 - EPUB 3, **reflowable**
-- 215 KB · SHA-256 `ddfcad43ba5cba101f8ac2b23914c032c0d5d0e4616c1137895fcfe61040ecf8`
+- 926 KB · SHA-256 `ba916ec1449f28478f580fe5ebbb422bcfc6504d0735ecd03940026a34d10baa`
 - diagrams are embedded as **inline SVG**, so they stay sharp at any screen
   size and add almost nothing to the file size
 
