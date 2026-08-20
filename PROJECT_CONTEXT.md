@@ -239,22 +239,31 @@ kapanmadan sonrakine geçilmez. CI kırmızıyken hiçbir şey ilerlemez.
 
 > **KURUCU EYLEMİ BEKLENİYOR — onay değil, EYLEM.**
 >
-> Faz 6 teknik olarak yapılabilecek her şeyi bitirdi ve **DURDU**. Beş
-> BLOKLAYICI madde kaldı ve beşi de ajanın üretemeyeceği şeylerdir:
+> Faz 6 **bitti**. Kurucu nihai kapak ve A+ sanatını teslim etti; üçü de
+> üretildi ve doğrulandı: ciltsiz · ciltli · Kindle. `main` temiz,
+> `origin/main` ile eşit, **CI yeşil**. Önceki fazda engellenen push bu
+> fazda **denendi ve geçti** (`9441ec1..887a97e`).
 >
-> 1. **Kapak sanatı yok.** İki metinsiz konsept ve tam çıktı sözleşmesi
->    `07_ASSETS/IMAGE_PROMPT_LIBRARY.html` içinde hazır. Dosyalar
->    `07_ASSETS/raw/cover/` altına düşünce hat kendiliğinden devam eder.
-> 2. **A+ görselleri yok** (dokuz dosya). Altı modülün metni hazır ve iddia
->    taramasından geçti.
-> 3. **`authorBio` boş.** KDP kardeş bir başlıkta yer tutucu biyografiyi
->    REDDETTİ. `metadata.py --gate release` bugün kırmızı yanıyor.
-> 4. **AI beyanı** hukuki bir bildirimdir ve kurucunundur.
-> 5. **Dış oynanabilirlik testi: 0 oturum.** Bu blok Faz 2'den beri aynı
+> **Yüklemeyi BLOKLAYAN iki madde kaldı** ve ikisi de ajanın
+> üretemeyeceği şeylerdir:
+>
+> 1. **AI beyanı** hukuki bir bildirimdir ve kurucunundur. Karar için
+>    gereken olgular `08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md` içinde hazır;
+>    **beyanın kendisi yazılmadı ve uydurulmadı.**
+> 2. **Dış oynanabilirlik testi: 0 oturum.** Bu blok Faz 2'den beri aynı
 >    yerde duruyor ve kitabın alt başlığındaki sözü ölçen tek kanıttır.
 >
-> Ayrıca **altı commit yerelde duruyor**: bu oturumun ortamı `git push`'u
-> engelledi. Komut çalıştırılmadı.
+> **Bloklamayanlar:** APLUS-05 sanatı (A+ projesi 5 modülle yüklenebilir) ·
+> ISBN ×2 (KDP atar; hiçbir yerde uydurulmadı) · ciltli şablon doğrulaması
+> (sırt formülü **hipotez**) · KDP Previewer.
 >
-> Açık kurucu kararları: **A4** (büyük punto) · **A5** (`STYLE.md` bandı —
-> Faz 6 ölçtü, § 17) · **A6** (yazar biyografisi).
+> **Kapsam kararı — kurucuya ait.** `release` kapısı **≥100 kilitli oyun**
+> ister; kitapta **56** var ve bu sayı her ticari yüzeyde dürüstçe duruyor.
+> Kapı bilerek kırmızıdır. Ya eşik 56'ya çekilir (Faz 6 kapanır) ya da 100
+> hedefi korunur (Faz 7 açılır, 44 oyun için kaynak gerekir). **Ajan
+> hiçbirini seçmedi** — seçmek kapsamı değiştirmektir.
+> Gerekçeler: `06_REPORTS/PHASE_6_BRUTAL_AUDIT.md § 6`.
+>
+> Açık kurucu kararları: **A4** (büyük punto) · **A5** (`STYLE.md` bandı) ·
+> **A8** (kapsam eşiği). **A6 KAPANDI** — biyografi kardeş projeden birebir
+> kopyalandı (`06_REPORTS/AUTHOR_BIO_PROVENANCE.md`).

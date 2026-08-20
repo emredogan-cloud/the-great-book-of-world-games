@@ -475,3 +475,89 @@ ajanın üretebileceği şeyler değil. `metadata.py --gate release` bugün
 
 Bu rapor **"KDP READY"** demiyor. **"KDP UPLOAD READY, WAITING FOR FOUNDER
 ACTION"** diyor — ve aradaki fark beş bloklayıcı maddedir.
+
+---
+
+# FAZ 6 · İKİNCİ YARI · VARLIK ALIMI VE KAPANIŞ
+
+> Buraya kadar olan bölümler kurucu sanatı **gelmeden önce** yazıldı.
+> Aşağısı sanat geldikten sonra olanlardır.
+
+## 23 · Yazar biyografisi — yazılmadı, KOPYALANDI
+
+A6 kapandı. Beş kardeş proje tarandı, dört farklı biyografi bulundu; en
+yenisi ve **tek açıkça onaylanmış** olanı seçildi:
+`THE-MYTH-HUNTERS-FIELD-BOOK` · karar **K36** (16 Ağustos 2026).
+Kopyalama sağlama toplamıyla doğrulandı; tek kelimesi değişmedi.
+Künye: [`AUTHOR_BIO_PROVENANCE.md`](AUTHOR_BIO_PROVENANCE.md)
+
+Biyografi şu üç yerde basılıyor: künye sayfası (iki baskı), arka kapak,
+EPUB künyesi.
+
+## 24 · Kapak seçimi — ölçülerek
+
+İki aday da **gerçek sarım geometrisinin** üstüne oturtuldu; tipografinin
+gireceği her bölge, her aday için **aynalanmış hâliyle de** ölçüldü.
+
+**COVER-02 seçildi.** Kanıt ve COVER-01'in neden elendiği (130 px küçük
+resimde iç kenar yoğunluğu 31.0 → 17.7):
+[`FINAL_COVER_SELECTION.md`](FINAL_COVER_SELECTION.md)
+
+## 25 · Sırt — `sd` yanlış soruyu soruyordu
+
+İlk yerleşim sırtın orta bölümünü (sd 32–47) "yazı geçirilemez" okudu ve
+başlığı **6.5 punto**'ya düşürdü. Doğru ölçüt **koyu piksel oranıdır**: en
+kalabalık yarım inç bile yalnızca **%25** koyu, ortalama parlaklık 157–205.
+Zemin açık parşömen, üstündekiler **ince çizgi**. Başlık **8.75 punto**.
+
+## 26 · Metin kutusu kaydedici
+
+Basılan her metin parçasının gerçek kutusu inç olarak kaydediliyor. İlk
+koşuda **üç ihlal** buldu, biri ciddi: **sırt başlığı kapağın üstünden
+taşıyordu** (y 11.287 > 11.25). Gözle bakıldığında görünmüyordu.
+Şimdi iki sürümde de **sıfır ihlal**.
+
+## 27 · Kontrast desteği — beyaz kutu DEĞİL
+
+Arka kapak metni haritanın üstüne düşüyordu. § 7 beyaz paneli yasaklar,
+"ölçülen destek"e izin verir: sanatın **kendi** açık parşömen tonundan
+(92. yüzdelik parlaklık) alınan, yarım inçten uzun Gauss ile tüylendirilmiş
+bir yıkama uygulandı.
+
+## 28 · A+ — dosya adına güvenilmedi
+
+`aplus-05-play-family-discovery.png` adlı dosyanın **içeriği** modül 06'nın
+istemidir (sıralı nesneler, sağ uçta biri boş). **İçeriğine göre** bağlandı.
+Modül 05'in sanatı teslim **edilmedi** ve böyle raporlandı.
+Modül 04 tek 2×2 bileşik geldi; ayraç sütunları **ölçülerek** dört kareye
+ayrıldı — piksel üretilmedi.
+
+**Yükseltme:** `ASSET_UPSCALING_REPORT § 4.1` · `digital-art-4x` · ×4
+1569×1003 (efektif 89.1 DPI) → 6276×4012 (**efektif 356.4 DPI**).
+A+ görselleri yükseltilmedi ve nedeni yazıldı: en büyüğü 970 px.
+
+## 29 · Acımasız denetim — üç kusur, dördü CI'da
+
+Bu tur **kaynağı değil basılacak PDF'i** okudu ve üç kusur buldu; CI ise
+push edilince üç kez kırıldı. Hepsi kapandı ve **her biri bir kapıya
+dönüştü**: [`PHASE_6_BRUTAL_AUDIT.md`](PHASE_6_BRUTAL_AUDIT.md)
+
+En önemlisi: kitap **36 daktilo kesme işaretiyle** basılmaya hazırdı.
+Aynı dizgi kuralı üç ayrı yerde duruyordu; ikisi düzeltilince üçüncü
+sessizce daktiloyla basmaya devam etti. `04_BUILD/typo.py` — tek kural.
+
+## 30 · Git ve CI — push ARTIK GEÇTİ
+
+Önceki fazda push engellenmişti. Bu fazda **denendi ve geçti**:
+
+```
+9441ec1..887a97e  main -> main
+```
+
+`main` temiz, `origin/main` ile eşit, CI **yeşil**. Faz 6'nın on iki
+commit'i uzakta.
+
+## 31 · Nihai durum
+
+Özet ve kalan kurucu eylemleri: [`FINAL_RELEASE_REPORT.md`](FINAL_RELEASE_REPORT.md)
+

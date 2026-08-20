@@ -5,6 +5,66 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.6.1] — 2026-08-20 · FAZ 6 · VARLIK ALIMI, DİZGİ VE CI KAPANIŞI
+
+Kurucu **nihai kapak** ve **nihai A+ sanatını** teslim etti. Bu sürüm onları
+üretime aldı, yazar biyografisini kapattı ve **basılacak dosyayı** (kaynağı
+değil) denetleyerek üç kusur buldu.
+
+### Kitap 36 daktilo kesme işaretiyle basılmaya hazırdı
+
+Dizgi kuralı kapanış tırnağından önce **harf** arıyordu; alıntı bir noktayla
+ya da parantezle bittiğinde dönüşüm olmuyordu — *açan kıvrık, kapayan
+daktilo*. Kural **üç ayrı yerde** duruyordu (Paragraph · SVG etiketi ·
+doğrudan tuval üstbilgisi); ikisi düzeltilince üçüncüsü sessizce daktiloyla
+bastı. **`04_BUILD/typo.py`** ile tek yere indi; dönüşemeyen düz tırnak artık
+**yükseltir**. `render_diagrams.text()` ayrıca **hiç XML kaçışı yapmıyordu**.
+
+### CI push edilince üç kez kırıldı
+
+Faz 6 commit'leri hiç push edilmemişti; CI onları ilk kez gördü.
+`qa_lineedit`/`qa_visual` `--verbose` kabul etmiyordu (argparse çıkış 2 →
+"kapı kırmızı" görünüyor, oysa **kapı hiç koşmadı**), ve "çıkış 2 = ATLANDI"
+konvansiyonu iş akışında **altı** yerde ayrı ayrı yanlış ele alınıyordu.
+
+- **`04_BUILD/ci_run.sh`** — `0 yeşil · 1 KIRMIZI · 2 ATLANDI`, tek yerde
+- **`05_TESTS/ci_simulate.py`** — komutları tarif etmez, `validate.yml`
+  içindeki `run:` bloklarını `git ls-files` ağacında koşturur.
+  `--without reportlab,PIL` bağımlılıksız runner'ı taklit eder ve **üçüncü
+  kusuru bu mod buldu**, GitHub değil.
+
+### Kapak, A+ ve biyografi
+
+- **COVER-02** ölçülerek seçildi (dosya adına ya da beğeniye göre değil)
+- Sırt başlığı 6.5 → **8.75 punto**: doğru ölçüt `sd` değil **koyu piksel oranı**
+- Metin kutusu kaydedici gözün kaçırdığını yakaladı: sırt başlığı kapağın
+  **üstünden taşıyordu** (y 11.287 > 11.25). Şimdi **0 ihlal**
+- Arka kapak metnine beyaz panel değil, **sanatın kendi tonundan** alınmış
+  tüylendirilmiş kontrast desteği
+- A+ sanatı **dosya adına değil içeriğe göre** bağlandı; modül 04'ün 2×2
+  bileşiği ayraçlar **ölçülerek** dörde ayrıldı
+- Yazar biyografisi **yazılmadı, kopyalandı** — kardeş projeden birebir
+- EPUB artık kapak **ve** künyede biyografi taşıyor
+
+### Kapılar
+
+`selftest` 192 → **214** · `package_selftest` 38 → **39**. Yeni kapılar
+**basılmış PDF'i** denetler: daktilo tırnağı, dizgi birim testleri, kopya
+kural yasağı, CI tarama sözleşmesi, uçtan uca dizgi kusuru.
+
+### Push
+
+Önceki fazda engellenen push **denendi ve geçti**: `9441ec1..887a97e`.
+CI **yeşil**.
+
+### Yapılmayanlar
+
+Kalan 44 oyun **uydurulmadı**. `.gate` `release`'e **alınmadı** — kapı ≥100
+kilitli oyun ister, kitapta 56 var; eşiği düşürmek kapsam kararıdır ve
+kurucuya aittir. Amazon'a **dokunulmadı**.
+
+---
+
 ## [0.6.0] — 2026-08-20 · FAZ 6 · NİHAİ ÜRETİM VE KDP PAKETİ
 
 **Yazılan: 4 oyun** (manuscript **52 → 56**) · **basılan kitap: 160 sayfa**.

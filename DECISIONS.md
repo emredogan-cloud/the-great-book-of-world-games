@@ -22,10 +22,17 @@ Durum tablosu · 13 Ağustos 2026 (Faz 2 girişi)
 | ~~A7~~ | Oyun testçileri kim | — | — | ✅ **KAPANDI · K15** — dış testçi VAR |
 | **A4** | Büyük punto sürümü v1.0'a girecek mi | DÜŞÜK | Faz 4 | AÇIK (bootstrap varsayımı: hayır) |
 | **A5** | Kalibre edilmiş `STYLE.md` onayı | ORTA | **Faz 2 sonu** | AÇIK — v2.0 ölçümle yazıldı, onay bekliyor |
-| **A6** | Yazar biyografisi metni | ORTA | Faz 5 | AÇIK |
+| ~~A6~~ | Yazar biyografisi metni | — | — | ✅ **KAPANDI · Faz 6** — kardeş projeden birebir kopyalandı, yazılmadı; künye: `06_REPORTS/AUTHOR_BIO_PROVENANCE.md` |
+| **A8** | **Kapsam eşiği: 56 mı 100 mü?** | **YÜKSEK** | **Faz 6 sonu** | AÇIK — `release` kapısı ≥100 ister, kitapta 56 var; kapı bilerek kırmızı |
 
-Dört yüksek öncelikli karar Faz 2 girişinde kapandı. Kalan üçünün hiçbiri
-Faz 2'yi bloklamaz.
+Dört yüksek öncelikli karar Faz 2 girişinde kapandı. **A6** Faz 6'da kapandı.
+
+**A8 Faz 6'da doğdu ve YÜKLEMEYİ ETKİLER.** Kapsam modeli 100 oyun öngördü;
+56'sı için kaynak açılabildi ve kalan 44 **uydurulmadı**. `release` kapısı
+hâlâ ≥100 istediği için geçilemez durumda — bu bir kusur değil, kapsamın
+küçüldüğünün kaydıdır. Eşiği düşürmek ya da Faz 7'yi açmak **kurucu
+kararıdır**; ajan hiçbirini seçmedi. Gerekçeler:
+`06_REPORTS/PHASE_6_BRUTAL_AUDIT.md § 6`.
 
 ---
 
