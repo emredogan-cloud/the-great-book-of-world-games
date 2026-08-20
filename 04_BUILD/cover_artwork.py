@@ -52,7 +52,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_ROOT = os.path.dirname(HERE)
 
-UPSCAYL = os.path.expanduser("~/Applications/upscayl-cli/upscayl-bin")
+ENGINE_SYMBOLIC = "~/Applications/upscayl-cli/upscayl-bin"
+UPSCAYL = os.path.expanduser(ENGINE_SYMBOLIC)
 UPSCAYL_MODEL = "digital-art-4x"     # ASSET_UPSCALING_REPORT § 6.4
 UPSCAYL_SCALE = 4
 TARGET_PPI = 300
@@ -171,11 +172,12 @@ def do_upscale(root, src, ev, verbose=True) -> dict:
                            "(ASSET_UPSCALING_REPORT § 6.2/1)"}
     if not os.path.exists(UPSCAYL):
         return {"error": "yükseltme motoru yok: %s "
-                         "(ASSET_UPSCALING_REPORT § 2.2)" % UPSCAYL}
+                         "(ASSET_UPSCALING_REPORT § 2.2)" % ENGINE_SYMBOLIC}
     cmd = [UPSCAYL, "-i", src, "-o", dst, "-n", UPSCAYL_MODEL,
            "-s", str(UPSCALE_SCALE_ARG), "-g", "0", "-f", "png"]
     if verbose:
-        print("     → %s" % " ".join(cmd))
+        print("     → %s -i <raw> -o <processed> -n %s -s %d -g 0 -f png"
+              % (ENGINE_SYMBOLIC, UPSCAYL_MODEL, UPSCALE_SCALE_ARG))
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0 or not os.path.exists(dst):
         return {"error": (r.stderr or r.stdout or "bilinmeyen hata")[-400:]}
@@ -217,8 +219,9 @@ def run(root: str, args) -> int:
     print("  yöntem : %s · model %s · ölçek %dx"
           % ("upscayl-bin (Real-ESRGAN ncnn-vulkan)", UPSCAYL_MODEL,
              UPSCAYL_SCALE))
-    print("  motor  : %s" % ("KURULU ✓" if os.path.exists(UPSCAYL)
-                             else "YOK ⛔ " + UPSCAYL))
+    print("  motor  : %s" % ("KURULU ✓ " + ENGINE_SYMBOLIC
+                             if os.path.exists(UPSCAYL)
+                             else "YOK ⛔ " + ENGINE_SYMBOLIC))
 
     results = {}
     for area in ("cover", "aplus"):
@@ -268,7 +271,10 @@ def run(root: str, args) -> int:
             "Ham dosyalara yazılmaz; çıktı 07_ASSETS/processed/ altındadır.",
         ],
         "generatedAtPhase": "phase6",
-        "engine": {"path": UPSCAYL, "present": os.path.exists(UPSCAYL),
+        # ⚠ MUTLAK YOL YAZILMAZ. Bu dosya PUBLIC depoda durur ve genişletilmiş
+        # bir ev dizini yolu, kurucunun kullanıcı adını depoya koyar. Yol
+        # SEMBOLİK biçimde saklanır; araç aynı araçtır.
+        "engine": {"path": ENGINE_SYMBOLIC, "present": os.path.exists(UPSCAYL),
                    "model": UPSCAYL_MODEL, "scale": UPSCAYL_SCALE,
                    "authority": "ASSET_UPSCALING_REPORT.md"},
         "targetPpi": TARGET_PPI,

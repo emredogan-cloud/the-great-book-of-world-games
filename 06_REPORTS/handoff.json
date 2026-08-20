@@ -1,0 +1,117 @@
+{
+ "$comment": [
+  "TESLİM PAKETİ — ÜRETİLMİŞ DOSYA (04_BUILD/handoff.py).",
+  "Ajan KDP paneline DOKUNMADI."
+ ],
+ "generatedAtPhase": "phase6",
+ "packages": {
+  "paperback": {
+   "folder": "PAPERBACK",
+   "interior": {
+    "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
+    "exists": true,
+    "sha256": "f834a260a24d5ec4441774b8a05a97826b457f979e48d4ceaaedc716b5208672",
+    "recordedSha256": "f834a260a24d5ec4441774b8a05a97826b457f979e48d4ceaaedc716b5208672",
+    "bytes": 517959,
+    "pageCount": 160
+   },
+   "blankPages": 18,
+   "trim": {
+    "widthIn": 8.5,
+    "heightIn": 11.0
+   },
+   "margins": {
+    "gutterIn": 0.5,
+    "outerIn": 0.5,
+    "topIn": 0.625,
+    "bottomIn": 0.625
+   },
+   "cover": null,
+   "coverStatus": "BLOCKED — kurucu sanatı yok"
+  },
+  "hardcover": {
+   "folder": "HARDCOVER",
+   "interior": {
+    "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf",
+    "exists": true,
+    "sha256": "c615a6fb8c651d76a2af11f36552dfe5dd6998afd40cc8ebd0256e002f93e5ff",
+    "recordedSha256": "c615a6fb8c651d76a2af11f36552dfe5dd6998afd40cc8ebd0256e002f93e5ff",
+    "bytes": 518466,
+    "pageCount": 160
+   },
+   "blankPages": 18,
+   "trim": {
+    "widthIn": 8.25,
+    "heightIn": 11.0
+   },
+   "margins": {
+    "gutterIn": 0.625,
+    "outerIn": 0.5,
+    "topIn": 0.625,
+    "bottomIn": 0.625
+   },
+   "cover": null,
+   "coverStatus": "BLOCKED — kurucu sanatı yok"
+  },
+  "kindle": {
+   "folder": "KINDLE",
+   "epub": {
+    "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
+    "exists": true,
+    "sha256": "ddfcad43ba5cba101f8ac2b23914c032c0d5d0e4616c1137895fcfe61040ecf8",
+    "recordedSha256": "ddfcad43ba5cba101f8ac2b23914c032c0d5d0e4616c1137895fcfe61040ecf8",
+    "bytes": 220668
+   },
+   "coverStatus": "BLOCKED — kurucu kapak sanatı yok; sahte kapak KONMADI"
+  },
+  "aplus": {
+   "folder": "APLUS",
+   "modules": 6,
+   "imagesMissing": 9,
+   "status": "BLOCKED — kurucu görselleri bekleniyor"
+  }
+ },
+ "checksumFiles": {
+  "PAPERBACK": 1,
+  "HARDCOVER": 1,
+  "KINDLE": 1,
+  "APLUS": 1
+ },
+ "handbook": "08_OUTPUT/KDP_UPLOAD_HANDBOOK.md",
+ "previewerChecklist": "08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md",
+ "handbookBytes": 22238,
+ "previewerBytes": 4097,
+ "blockingFounderActions": [
+  {
+   "id": "A6",
+   "field": "founder.authorBio",
+   "blocking": true,
+   "note": "`founder.authorBio` is empty. KDP asks for an author biography, and on a sibling title KDP rejected a placeholder biography as template text (12 August 2026). Write a real one before publishing."
+  },
+  {
+   "id": "AI-DECL",
+   "field": "founder.aiDisclosure.founderConfirmed",
+   "blocking": true,
+   "note": "The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`."
+  },
+  {
+   "id": "COVER-ART",
+   "field": "07_ASSETS/raw/cover/",
+   "blocking": true,
+   "note": "Kapak sanatı yok."
+  },
+  {
+   "id": "APLUS-ART",
+   "field": "07_ASSETS/raw/aplus/",
+   "blocking": true,
+   "note": "A+ görselleri yok."
+  },
+  {
+   "id": "PLAYTEST",
+   "field": "01_SOURCE/playtests/",
+   "blocking": true,
+   "note": "Dış oynanabilirlik testi 0 oturum."
+  }
+ ],
+ "errors": []
+}

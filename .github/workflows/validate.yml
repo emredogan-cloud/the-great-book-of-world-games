@@ -251,9 +251,76 @@ jobs:
             echo "::notice::update_docs.py henüz yok — Faz 1 teslimatı"
           fi
 
+  # ── FAZ 6: PAKET KAPILARI ──────────────────────────────────────────────
+  # Bu iş ÜÇÜNCÜ TARAF PAKET KURAR (reportlab · Pillow) ve bu bilinçli bir
+  # istisnadır: Faz 6'nın kapıları basılacak DOSYAYA bakar ve o dosyayı
+  # okumak için tipografi ve görüntü kütüphanesi gerekir. Ötekiler standart
+  # kütüphaneyle koşmaya devam eder.
+  #
+  # ⚠ TİCARİ MANUSCRIPT DEPODA YOKTUR (A1 · K12). Bu kapıların hepsi orada
+  # BOŞ KOŞAR ve 0 döner. Bir kapının CI'da kırmızı yanması KUSURU olduğu
+  # için olmalıdır, verisi orada olmadığı için değil.
+  package-gates:
+    name: paket kapıları (Faz 6)
+    needs: gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: bağımlılıklar
+        run: pip install --quiet reportlab pillow
+      - name: SVG sözlüğü
+        run: |
+          if [ -f 04_BUILD/svg_vector.py ]; then
+            python3 04_BUILD/svg_vector.py --check-vocabulary
+          fi
+      - name: diyagramları render et
+        run: |
+          if [ -f 04_BUILD/render_diagrams.py ]; then
+            python3 04_BUILD/render_diagrams.py \
+              --json 06_REPORTS/diagram-render-ci.json
+          fi
+      - name: GÖRSEL KAPI (render edilmiş SVG)
+        run: |
+          if [ -f 04_BUILD/qa_visual.py ]; then
+            python3 04_BUILD/qa_visual.py --json 06_REPORTS/qa-visual-ci.json
+          fi
+      - name: SATIR EDİTÖRÜ
+        run: |
+          if [ -f 04_BUILD/qa_lineedit.py ]; then
+            python3 04_BUILD/qa_lineedit.py
+          fi
+      - name: iç blok · kapak · EPUB · A+ · metadata · teslim
+        run: |
+          for s in interior epub covers aplus metadata handoff cover_artwork; do
+            if [ -f "04_BUILD/$s.py" ]; then
+              echo "── $s"
+              python3 "04_BUILD/$s.py" --check
+            fi
+          done
+      - name: KDP ön denetimi
+        run: |
+          if [ -f 04_BUILD/kdp_preflight.py ]; then
+            python3 04_BUILD/kdp_preflight.py
+          fi
+      - name: PAKET KAPILARININ KENDİ TESTİ
+        run: |
+          if [ -f 05_TESTS/package_selftest.py ]; then
+            set +e
+            python3 05_TESTS/package_selftest.py
+            rc=$?
+            set -e
+            case $rc in
+              0) echo "::notice::paket kapıları ısırıyor" ;;
+              2) echo "::notice::bağımlılık/manuscript yok — ATLANDI (beklenen)" ;;
+              *) echo "::error::paket kapılarında KÖRLÜK"; exit 1 ;;
+            esac
+          fi
+
   summary:
     name: özet
-    needs: [data, structure, gates-selftest, text, production-model]
+    needs: [data, structure, gates-selftest, text, production-model, package-gates]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -268,6 +335,7 @@ jobs:
             echo "| **kapıların kendi testi** | ${{ needs.gates-selftest.result }} |"
             echo "| metin kapıları | ${{ needs.text.result }} |"
             echo "| sayfa bütçesi ve telif | ${{ needs.production-model.result }} |"
+            echo "| **paket kapıları (Faz 6)** | ${{ needs.package-gates.result }} |"
           } >> "$GITHUB_STEP_SUMMARY"
           if [ "${{ contains(needs.*.result, 'failure') }}" = "true" ]; then
             {

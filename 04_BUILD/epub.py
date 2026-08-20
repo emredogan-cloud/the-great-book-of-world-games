@@ -416,10 +416,25 @@ def build(root: str) -> int:
     return 0
 
 
+
+def manuscript_absent(root: str) -> bool:
+    """Ticari manuscript depoda YOKTUR (karar K12).
+
+    CI taze bir klonda koşar ve orada `02_MANUSCRIPT/book.json` bulunmaz.
+    Bu bir kusur DEĞİLDİR ve kapı orada BOŞ KOŞAR. Bir kapının CI'da
+    kırmızı yanması, kusuru olduğu için olmalıdır; verinin orada olmaması
+    için değil."""
+    return not os.path.exists(os.path.join(root, "02_MANUSCRIPT", "book.json"))
+
+
 def run_check(root: str) -> int:
     p = os.path.join(root, "06_REPORTS", "epub.json")
     if not os.path.exists(p):
         print("  · EPUB üretilmemiş — ATLANDI")
+        return 0
+    if manuscript_absent(root):
+        print("  · ticari manuscript bu depoda yok — EPUB denetimi ATLANDI "
+              "(CI'da beklenen)")
         return 0
     r = load(p)
     f = os.path.join(root, r["file"])

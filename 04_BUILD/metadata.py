@@ -166,9 +166,12 @@ def build(root: str, gate: str) -> tuple[dict, list, list]:
 
     # ── authorBio: SEVİYEYE DUYARLI KAPI ────────────────────────────────
     if not bio:
-        msg = ("`founder.authorBio` BOŞ. KDP yazar biyografisini ister ve "
-               "World Myths'te yer tutucu metin REDDEDİLDİ (12 Ağustos 2026). "
-               "Kurucu gerçek bir biyografi yazmadan yayın tamamlanamaz.")
+        # ⚠ NOT İNGİLİZCE. Bu metin KDP_UPLOAD_HANDBOOK.md içinde BASILIR
+        # ve o kılavuz KDP panelinin diliyle, İngilizce yazılmıştır.
+        msg = ("`founder.authorBio` is empty. KDP asks for an author "
+               "biography, and on a sibling title KDP rejected a placeholder "
+               "biography as template text (12 August 2026). Write a real "
+               "one before publishing.")
         if gate == "release":
             errs.append("authorBio null — yol haritası Faz 6 § 12: KIRMIZI")
         founder_actions.append({"id": "A6", "field": "founder.authorBio",
@@ -177,18 +180,19 @@ def build(root: str, gate: str) -> tuple[dict, list, list]:
         founder_actions.append({
             "id": "AI-DECL", "field": "founder.aiDisclosure.founderConfirmed",
             "blocking": True,
-            "note": "KDP'nin yapay zekâ beyanı SEÇİMİ kurucunundur. Ajan "
-                    "hukuki bildirim veremez. Beyan için gereken olgular "
-                    "`aiProductionFacts` alanındadır."})
+            "note": "The AI-generated content declaration is a legal "
+                    "statement and the choice is yours alone. The agent "
+                    "cannot make it. The facts you need are in "
+                    "`aiProductionFacts`."})
     for ed in ("paperback", "hardcover"):
         if not isbn.get(ed):
             founder_actions.append({
                 "id": "ISBN-%s" % ed, "field": "founder.isbn.%s" % ed,
                 "blocking": False,
-                "note": "KDP ücretsiz ISBN atar. Atandıktan sonra buraya "
-                        "yazılırsa künye sayfası gerçek numarayı basar; "
-                        "yazılmazsa PENDING basmaya devam eder. SAHTE ISBN "
-                        "YASAKTIR."})
+                "note": "KDP assigns a free ISBN. Once it does, write it "
+                        "here and rebuild: the copyright page will print the "
+                        "real number instead of PENDING. No ISBN has been "
+                        "invented anywhere in this package."})
 
     md = {
         "$comment": [
@@ -273,7 +277,22 @@ def build(root: str, gate: str) -> tuple[dict, list, list]:
     return md, errs, founder_actions
 
 
+
+def manuscript_absent(root: str) -> bool:
+    """Ticari manuscript depoda YOKTUR (karar K12).
+
+    CI taze bir klonda koşar ve orada `02_MANUSCRIPT/book.json` bulunmaz.
+    Bu bir kusur DEĞİLDİR ve kapı orada BOŞ KOŞAR. Bir kapının CI'da
+    kırmızı yanması, kusuru olduğu için olmalıdır; verinin orada olmaması
+    için değil."""
+    return not os.path.exists(os.path.join(root, "02_MANUSCRIPT", "book.json"))
+
+
 def run(root: str, args) -> int:
+    if manuscript_absent(root):
+        print("  · ticari manuscript bu depoda yok — metadata ATLANDI "
+              "(CI'da beklenen)")
+        return 0
     gate = args.gate or (open(os.path.join(root, ".gate"),
                               encoding="utf-8").read().strip()
                          if os.path.exists(os.path.join(root, ".gate"))

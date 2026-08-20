@@ -123,6 +123,12 @@ def run(root: str, args) -> int:
                 declared[d["diagramId"]] = d
 
     svgs = sorted(f for f in os.listdir(ddir) if f.endswith(".svg"))
+    if not svgs:
+        # Render edilmiş SVG'ler ÜRETİLİR ve depoda durmazlar (.gitignore).
+        # Taze bir klonda hiç yoktur; kapı orada BOŞ KOŞAR.
+        print("  · render edilmiş SVG yok — görsel kapı ATLANDI "
+              "(önce 04_BUILD/render_diagrams.py)")
+        return 0
     rep = Report()
     print("=" * 74)
     print("  GÖRSEL KAPI · RENDER EDİLMİŞ SVG (%d dosya)" % len(svgs))

@@ -206,7 +206,22 @@ def check_images(pdf: str, rep: Report) -> dict:
     return {"rasterImages": len(rows)}
 
 
+
+def manuscript_absent(root: str) -> bool:
+    """Ticari manuscript depoda YOKTUR (karar K12).
+
+    CI taze bir klonda koşar ve orada `02_MANUSCRIPT/book.json` bulunmaz.
+    Bu bir kusur DEĞİLDİR ve kapı orada BOŞ KOŞAR. Bir kapının CI'da
+    kırmızı yanması, kusuru olduğu için olmalıdır; verinin orada olmaması
+    için değil."""
+    return not os.path.exists(os.path.join(root, "02_MANUSCRIPT", "book.json"))
+
+
 def run(root: str, args) -> int:
+    if manuscript_absent(root):
+        print("  · ticari manuscript bu depoda yok — KDP ön denetimi ATLANDI "
+              "(CI'da beklenen)")
+        return 0
     cfg = load(os.path.join(root, "project_config.json"))
     editions = []
     for ed in ("paperback", "hardcover"):

@@ -6,7 +6,7 @@
  ],
  "generatedAtPhase": "phase6",
  "engine": {
-  "path": "/home/emre/Applications/upscayl-cli/upscayl-bin",
+  "path": "~/Applications/upscayl-cli/upscayl-bin",
   "present": true,
   "model": "digital-art-4x",
   "scale": 4,

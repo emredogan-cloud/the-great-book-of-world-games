@@ -212,8 +212,13 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/kdp_preflight.py ] && \
   run_optional "KDP ÖN DENETİMİ"        $VENV_PY 04_BUILD/kdp_preflight.py \
                                    --json 06_REPORTS/kdp-preflight.json
+[ -f 04_BUILD/handoff.py ] && \
+  run_optional "TESLİM PAKETİ güncel"   $VENV_PY 04_BUILD/handoff.py --check
+[ -f 04_BUILD/qa_lineedit.py ] && \
+  run_optional "SATIR EDİTÖRÜ"          $VENV_PY 04_BUILD/qa_lineedit.py \
+                                   --json 06_REPORTS/qa-lineedit.json
 [ -f 05_TESTS/package_selftest.py ] && \
-  run "PAKET KAPILARININ TESTİ" $PY 05_TESTS/package_selftest.py
+  run_optional "PAKET KAPILARININ TESTİ" $VENV_PY 05_TESTS/package_selftest.py
 
 # ── ÜRETİLEN BELGELER BAYAT MI ─────────────────────────────────────────────
 [ -f 04_BUILD/update_docs.py ] && \

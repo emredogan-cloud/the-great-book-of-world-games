@@ -28,7 +28,7 @@
 | Aday oyun | **154** | ≥140 |
 | Üretime hazır kural | **120** | — |
 | Kilitli oyun | **0** | 100 |
-| Yazılmış oyun | **0** | 100 |
+| Yazılmış oyun | **56** | 100 |
 | Oynanabilirlik testi geçen | **0** | 100 |
 | Kültür | **89** | ≥45 |
 | Aile | **7** | 7 |

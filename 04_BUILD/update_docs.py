@@ -63,6 +63,41 @@ def modelled_pages(cfg: dict) -> int:
     return int(math.ceil(raw / mult) * mult)
 
 
+def written_count(root: str, games: list) -> int:
+    """Yazılmış oyun sayısı — boşluk kaydından, yoksa envanterden."""
+    p = os.path.join(root, "01_SOURCE", "founder_research_gap_register.json")
+    if os.path.exists(p):
+        try:
+            v = load(p).get("written")
+            if isinstance(v, int):
+                return v
+        except Exception:                                   # noqa: BLE001
+            pass
+    return sum(1 for g in games if g.get("status") == "written")
+
+
+def production_facts(root: str) -> dict:
+    """Faz 6 üretim olguları — ÜRETİLMİŞ raporlardan, tahminden değil."""
+    out = {}
+    for ed in ("paperback", "hardcover"):
+        p = os.path.join(root, "06_REPORTS", "interior-%s.json" % ed)
+        if os.path.exists(p):
+            r = load(p)
+            out[ed] = {"pages": r["pageCount"],
+                       "trim": "%s × %s in" % (r["trim"]["widthIn"],
+                                               r["trim"]["heightIn"])}
+    p = os.path.join(root, "06_REPORTS", "cover-geometry.json")
+    if os.path.exists(p):
+        g = load(p)
+        for ed, blk in g.get("editions", {}).items():
+            out.setdefault(ed, {})["spineIn"] = blk["spineWidthIn"]
+        out["artworkPresent"] = g.get("artworkPresent")
+    p = os.path.join(root, "06_REPORTS", "epub.json")
+    if os.path.exists(p):
+        out["kindle"] = {"format": load(p)["format"]}
+    return out
+
+
 def measure(root: str) -> dict:
     cfg = load(os.path.join(root, "project_config.json"))
     fams = load(os.path.join(root, "01_SOURCE", "family_index.json"))
@@ -85,7 +120,15 @@ def measure(root: str) -> dict:
         "dropped": len(games) - len(live),
         "publishable": len(publishable),
         "locked": sum(1 for g in games if g.get("status") in ("locked", "written")),
-        "written": sum(1 for g in games if g.get("status") == "written"),
+        # ⚠ YAZILMIŞ SAYISI ENVANTERDEN OKUNAMAZ.
+        # Hiçbir envanter kaydı `status: written` taşımıyor ve taşımaz:
+        # yazılmış olmak manuscript'in bir olgusudur, envanterin değil.
+        # Bu yüzden BOOK_STATS beş faz boyunca "Yazılmış oyun 0" yazdı ve
+        # o satır elli altı madde basıldıktan sonra bile 0 diyordu.
+        # Sayı, PUBLIC ve türetilmiş olan boşluk kaydından alınır — o kayıt
+        # zaten kapsamdan türetir ve manuscript'le örtüştüğü CI'da denetlenir.
+        "written": written_count(root, games),
+        "production": production_facts(root),
         "cultures": len({g.get("culture") for g in publishable if g.get("culture")}),
         "regions": len({g.get("region") for g in publishable if g.get("region")}),
         "screened": sum(1 for g in games if g.get("restrictionStatus")),
@@ -193,7 +236,7 @@ def render_stats(m: dict) -> str:
     a("| Yol haritası hedefi | %d |" % scope["pageTarget"])
     a("| Sapma | %+.1f%% |" % ((pages - scope["pageTarget"]) / scope["pageTarget"] * 100))
     a("")
-    a("## 4. Sürümler")
+    a("## 4. Sürüm ve telif modeli")
     a("")
     a("| Sürüm | Durum | Liste | Baskı | Telif | Başabaş ACOS |")
     a("|---|---|---:|---:|---:|---:|")
@@ -213,7 +256,34 @@ def render_stats(m: dict) -> str:
         a("| %s | hipotez | %.2f $ | %.2f $ | **%.2f $** | %%%.1f |"
           % (eid, lst, cost, roy, roy / lst * 100))
     a("")
-    a("## 5. Aile dağılımı")
+    # ── FAZ 6: ÜRETİLEN GERÇEK KİTAP ─────────────────────────────────
+    # § 3'teki sayfa modeli 100 OYUNLUK KAPSAMIN izdüşümüdür. Aşağıdaki
+    # sayılar BASILAN kitabındır ve interior.py tarafından SAYILMIŞTIR.
+    pf = m.get("production") or {}
+    if pf:
+        a("## 5. Üretilen kitap (Faz 6 · SAYILDI)")
+        a("")
+        a("> § 3'teki model **100 oyunluk kapsamın** izdüşümüdür.")
+        a("> Aşağıdakiler **basılan kitabın** ölçüleridir.")
+        a("")
+        a("| Sürüm | Sayfa | Trim | Sırt |")
+        a("|---|---:|---|---:|")
+        for ed in ("paperback", "hardcover"):
+            b = pf.get(ed)
+            if b and "pages" in b:
+                a("| %s | **%d** | %s | %.4f in |"
+                  % (ed, b["pages"], b.get("trim", "—"), b.get("spineIn", 0)))
+        if pf.get("kindle"):
+            a("| kindle | — | — | — |")
+        a("")
+        a("| | |")
+        a("|---|---|")
+        a("| Kindle biçimi | %s |" % pf.get("kindle", {}).get("format", "—"))
+        a("| Kapak sanatı | %s |"
+          % ("var" if pf.get("artworkPresent") else "**YOK — kurucu eylemi**"))
+        a("")
+
+    a("## 6. Aile dağılımı")
     a("")
     a("| Aile | Aday | Taban | Hedef | |")
     a("|---|---:|---:|---:|---|")

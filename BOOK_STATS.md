@@ -14,7 +14,7 @@
 | Yayımlanabilir aday | **152** | — | |
 | Üretime hazır kural | **120** | — | |
 | Kilitli oyun | **0** | 100 | `····················` |
-| Yazılmış oyun | **0** | 100 | `····················` |
+| Yazılmış oyun | **56** | 100 | `███████████·········` |
 | Oynanabilirlik testi geçen | **0** | 100 | `····················` |
 | Kültür | **89** | ≥45 | `████████████████████` |
 | Bölge | **33** | — | |
@@ -45,7 +45,7 @@
 | Yol haritası hedefi | 256 |
 | Sapma | -2.3% |
 
-## 4. Sürümler
+## 4. Sürüm ve telif modeli
 
 | Sürüm | Durum | Liste | Baskı | Telif | Başabaş ACOS |
 |---|---|---:|---:|---:|---:|
@@ -54,7 +54,23 @@
 | kindle | hipotez | 11.99 $ | 1.20 $ | **7.19 $** | %60.0 |
 | largeprint | devre dışı | — | — | — | — |
 
-## 5. Aile dağılımı
+## 5. Üretilen kitap (Faz 6 · SAYILDI)
+
+> § 3'teki model **100 oyunluk kapsamın** izdüşümüdür.
+> Aşağıdakiler **basılan kitabın** ölçüleridir.
+
+| Sürüm | Sayfa | Trim | Sırt |
+|---|---:|---|---:|
+| paperback | **160** | 8.5 × 11.0 in | 0.3603 in |
+| hardcover | **160** | 8.25 × 11.0 in | 0.4600 in |
+| kindle | — | — | — |
+
+| | |
+|---|---|
+| Kindle biçimi | EPUB 3, reflowable |
+| Kapak sanatı | **YOK — kurucu eylemi** |
+
+## 6. Aile dağılımı
 
 | Aile | Aday | Taban | Hedef | |
 |---|---:|---:|---:|---|
