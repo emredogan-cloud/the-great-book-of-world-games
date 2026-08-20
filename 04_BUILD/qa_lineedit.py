@@ -414,6 +414,19 @@ def run(root: str, args) -> int:
                     return (w in blob or w.rstrip("s") in blob
                             or (len(w) >= 5 and w[:5] in blob)
                             or (len(w) >= 4 and w[:4] in blob))
+                # ⚠ 'HERHANGİ BİRİ' YETMEZ.
+                # İlk sürüm efsanedeki kelimelerden BİRİ metinde geçiyorsa
+                # geçiriyordu. `mbube-formation` efsanesi "lion and buffalo"
+                # diyordu; oyunda buffalo YOKTUR, impala vardır — ve
+                # "lion" geçtiği için kapı yeşil yandı. Okur diyagrama
+                # bakıp oyunda bir manda olduğunu sanacaktı.
+                #
+                # Uzun içerik kelimeleri (≥6 harf) TEK TEK aranır: bir
+                # efsane, kuralda hiç geçmeyen bir NESNE adlandıramaz.
+                for w in words:
+                    if len(w) >= 6 and not seen(w):
+                        dia.append("%s → efsane %r: %r kuralda GEÇMİYOR"
+                                   % (g["gameId"], e.get("label"), w))
                 if words and not any(seen(w) for w in words):
                     dia.append("%s → efsane %r maddenin metninde GEÇMİYOR"
                                % (g["gameId"], e.get("label")))

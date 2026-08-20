@@ -135,7 +135,7 @@
    "legend": [
     {
      "glyph": "king",
-     "label": "the king — only he enters the castle"
+     "label": "the king — the castle is his"
     },
     {
      "glyph": "light",
@@ -496,11 +496,11 @@
     },
     {
      "glyph": "blindfolded",
-     "label": "the two blindfolded: lion and buffalo"
+     "label": "the two blindfolded: lion and impala"
     },
     {
      "glyph": "ring",
-     "label": "the ring — six to twenty players"
+     "label": "the ring — six players or more"
     }
    ]
   },

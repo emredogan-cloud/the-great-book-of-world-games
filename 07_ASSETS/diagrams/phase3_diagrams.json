@@ -1,1183 +1,1183 @@
 {
-  "$comment": [
-    "FAZ 3 KALİBRASYON BATCH'İ — DİYAGRAM TANIMLAYICILARI.",
-    "",
-    "Beşi DÜZENSİZ NOKTA TAHTASIDIR (graph modu · dil v1.3): bu tahtalar",
-    "ızgara değildir ve yaklaşık bir ızgarayla çizilemezler. Yanlış çizilmiş",
-    "bir tahta okurun oyunu oynayamamasına yol açar — kitabın ölüm biçimi.",
-    "",
-    "Düğüm konumları 0–1 normalize edilmiştir; render deterministiktir.",
-    "Hepsi 150 mm bütçesi altında ÖLÇÜLMÜŞTÜR (K19)."
-  ],
-  "version": "1.0",
-  "phase": "phase3",
-  "purpose": "production-candidate",
-  "diagrams": [
+ "$comment": [
+  "FAZ 3 KALİBRASYON BATCH'İ — DİYAGRAM TANIMLAYICILARI.",
+  "",
+  "Beşi DÜZENSİZ NOKTA TAHTASIDIR (graph modu · dil v1.3): bu tahtalar",
+  "ızgara değildir ve yaklaşık bir ızgarayla çizilemezler. Yanlış çizilmiş",
+  "bir tahta okurun oyunu oynayamamasına yol açar — kitabın ölüm biçimi.",
+  "",
+  "Düğüm konumları 0–1 normalize edilmiştir; render deterministiktir.",
+  "Hepsi 150 mm bütçesi altında ÖLÇÜLMÜŞTÜR (K19)."
+ ],
+ "version": "1.0",
+ "phase": "phase3",
+ "purpose": "production-candidate",
+ "diagrams": [
+  {
+   "diagramId": "pong-hau-ki-setup",
+   "gameId": "pong-hau-ki",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 42,
+    "aspect": 1.0
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "caption": "Board after Culin's Figure 103. The barred side is drawn open; Culin's prose names it but the digitised figure could not be read at the level of individual edges, and this is recorded in the source note.",
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "a": [
+     0.0,
+     0.0
+    ],
+    "b": [
+     1.0,
+     0.0
+    ],
+    "c": [
+     1.0,
+     1.0
+    ],
+    "d": [
+     0.0,
+     1.0
+    ],
+    "e": [
+     0.5,
+     0.5
+    ]
+   },
+   "edges": [
+    [
+     "a",
+     "b"
+    ],
+    [
+     "b",
+     "c"
+    ],
+    [
+     "c",
+     "d"
+    ],
+    [
+     "a",
+     "e"
+    ],
+    [
+     "b",
+     "e"
+    ],
+    [
+     "c",
+     "e"
+    ],
+    [
+     "d",
+     "e"
+    ]
+   ],
+   "pieces": [
     {
-      "diagramId": "pong-hau-ki-setup",
-      "gameId": "pong-hau-ki",
-      "type": "setup-illustration",
-      "boardClass": "point",
-      "size": {
-        "spanMm": 42,
-        "aspect": 1.0
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "caption": "Board after Culin's Figure 103. The barred side is drawn open; Culin's prose names it but the digitised figure could not be read at the level of individual edges, and this is recorded in the source note.",
-      "greyLevels": [
-        0,
-        100
-      ],
-      "nodes": {
-        "a": [
-          0.0,
-          0.0
-        ],
-        "b": [
-          1.0,
-          0.0
-        ],
-        "c": [
-          1.0,
-          1.0
-        ],
-        "d": [
-          0.0,
-          1.0
-        ],
-        "e": [
-          0.5,
-          0.5
-        ]
-      },
-      "edges": [
-        [
-          "a",
-          "b"
-        ],
-        [
-          "b",
-          "c"
-        ],
-        [
-          "c",
-          "d"
-        ],
-        [
-          "a",
-          "e"
-        ],
-        [
-          "b",
-          "e"
-        ],
-        [
-          "c",
-          "e"
-        ],
-        [
-          "d",
-          "e"
-        ]
-      ],
-      "pieces": [
-        {
-          "at": "a",
-          "glyph": "dark"
-        },
-        {
-          "at": "b",
-          "glyph": "dark"
-        },
-        {
-          "at": "c",
-          "glyph": "light"
-        },
-        {
-          "at": "d",
-          "glyph": "light"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "dark",
-          "label": "moves first"
-        },
-        {
-          "glyph": "light",
-          "label": "second player"
-        }
-      ]
+     "at": "a",
+     "glyph": "dark"
     },
     {
-      "diagramId": "picaria-board",
-      "gameId": "picaria",
-      "type": "board-diagram",
-      "boardClass": "point",
-      "size": {
-        "spanMm": 46,
-        "aspect": 1.0
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "nodes": {
-        "nw": [
-          0.0,
-          0.0
-        ],
-        "n": [
-          0.5,
-          0.0
-        ],
-        "ne": [
-          1.0,
-          0.0
-        ],
-        "w": [
-          0.0,
-          0.5
-        ],
-        "c": [
-          0.5,
-          0.5
-        ],
-        "e": [
-          1.0,
-          0.5
-        ],
-        "sw": [
-          0.0,
-          1.0
-        ],
-        "s": [
-          0.5,
-          1.0
-        ],
-        "se": [
-          1.0,
-          1.0
-        ]
-      },
-      "edges": [
-        [
-          "nw",
-          "n"
-        ],
-        [
-          "n",
-          "ne"
-        ],
-        [
-          "w",
-          "c"
-        ],
-        [
-          "c",
-          "e"
-        ],
-        [
-          "sw",
-          "s"
-        ],
-        [
-          "s",
-          "se"
-        ],
-        [
-          "nw",
-          "w"
-        ],
-        [
-          "w",
-          "sw"
-        ],
-        [
-          "n",
-          "c"
-        ],
-        [
-          "c",
-          "s"
-        ],
-        [
-          "ne",
-          "e"
-        ],
-        [
-          "e",
-          "se"
-        ],
-        [
-          "nw",
-          "c"
-        ],
-        [
-          "c",
-          "se"
-        ],
-        [
-          "ne",
-          "c"
-        ],
-        [
-          "c",
-          "sw"
-        ]
-      ],
-      "pieces": [],
-      "legend": [],
-      "caption": "Nine playing points. A row of three sends one enemy piece to the centre, and the centre is where captured pieces go."
+     "at": "b",
+     "glyph": "dark"
     },
     {
-      "diagramId": "nerenchi-board",
-      "gameId": "nerenchi",
-      "type": "board-diagram",
-      "boardClass": "point",
-      "size": {
-        "spanMm": 62,
-        "aspect": 1.0
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "nodes": {
-        "oa": [
-          0.0,
-          0.0
-        ],
-        "ob": [
-          0.5,
-          0.0
-        ],
-        "oc": [
-          1.0,
-          0.0
-        ],
-        "od": [
-          1.0,
-          0.5
-        ],
-        "oe": [
-          1.0,
-          1.0
-        ],
-        "of": [
-          0.5,
-          1.0
-        ],
-        "og": [
-          0.0,
-          1.0
-        ],
-        "oh": [
-          0.0,
-          0.5
-        ],
-        "ma": [
-          0.17,
-          0.17
-        ],
-        "mb": [
-          0.5,
-          0.17
-        ],
-        "mc": [
-          0.83,
-          0.17
-        ],
-        "md": [
-          0.83,
-          0.5
-        ],
-        "me": [
-          0.83,
-          0.83
-        ],
-        "mf": [
-          0.5,
-          0.83
-        ],
-        "mg": [
-          0.17,
-          0.83
-        ],
-        "mh": [
-          0.17,
-          0.5
-        ],
-        "ia": [
-          0.34,
-          0.34
-        ],
-        "ib": [
-          0.5,
-          0.34
-        ],
-        "ic": [
-          0.66,
-          0.34
-        ],
-        "idd": [
-          0.66,
-          0.5
-        ],
-        "ie": [
-          0.66,
-          0.66
-        ],
-        "if": [
-          0.5,
-          0.66
-        ],
-        "ig": [
-          0.34,
-          0.66
-        ],
-        "ih": [
-          0.34,
-          0.5
-        ]
-      },
-      "edges": [
-        [
-          "oa",
-          "ob"
-        ],
-        [
-          "ob",
-          "oc"
-        ],
-        [
-          "oc",
-          "od"
-        ],
-        [
-          "od",
-          "oe"
-        ],
-        [
-          "oe",
-          "of"
-        ],
-        [
-          "of",
-          "og"
-        ],
-        [
-          "og",
-          "oh"
-        ],
-        [
-          "oh",
-          "oa"
-        ],
-        [
-          "ma",
-          "mb"
-        ],
-        [
-          "mb",
-          "mc"
-        ],
-        [
-          "mc",
-          "md"
-        ],
-        [
-          "md",
-          "me"
-        ],
-        [
-          "me",
-          "mf"
-        ],
-        [
-          "mf",
-          "mg"
-        ],
-        [
-          "mg",
-          "mh"
-        ],
-        [
-          "mh",
-          "ma"
-        ],
-        [
-          "ia",
-          "ib"
-        ],
-        [
-          "ib",
-          "ic"
-        ],
-        [
-          "ic",
-          "idd"
-        ],
-        [
-          "idd",
-          "ie"
-        ],
-        [
-          "ie",
-          "if"
-        ],
-        [
-          "if",
-          "ig"
-        ],
-        [
-          "ig",
-          "ih"
-        ],
-        [
-          "ih",
-          "ia"
-        ],
-        [
-          "ob",
-          "mb"
-        ],
-        [
-          "mb",
-          "ib"
-        ],
-        [
-          "od",
-          "md"
-        ],
-        [
-          "md",
-          "idd"
-        ],
-        [
-          "of",
-          "mf"
-        ],
-        [
-          "mf",
-          "if"
-        ],
-        [
-          "oh",
-          "mh"
-        ],
-        [
-          "mh",
-          "ih"
-        ]
-      ],
-      "pieces": [],
-      "legend": [],
-      "caption": "Twenty-four points where the lines meet. Three in a row is a nerenchi."
+     "at": "c",
+     "glyph": "light"
     },
     {
-      "diagramId": "diviyan-setup",
-      "gameId": "demala-diviyan-keliya",
-      "type": "setup-illustration",
-      "boardClass": "point",
-      "size": {
-        "spanMm": 58,
-        "aspect": 1.0
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "nodes": {
-        "nw": [
-          0.2,
-          0.2
-        ],
-        "n": [
-          0.5,
-          0.2
-        ],
-        "ne": [
-          0.8,
-          0.2
-        ],
-        "w": [
-          0.2,
-          0.5
-        ],
-        "c": [
-          0.5,
-          0.5
-        ],
-        "e": [
-          0.8,
-          0.5
-        ],
-        "sw": [
-          0.2,
-          0.8
-        ],
-        "s": [
-          0.5,
-          0.8
-        ],
-        "se": [
-          0.8,
-          0.8
-        ],
-        "tn": [
-          0.5,
-          0.0
-        ],
-        "ts": [
-          0.5,
-          1.0
-        ],
-        "tw": [
-          0.0,
-          0.5
-        ],
-        "te": [
-          1.0,
-          0.5
-        ]
-      },
-      "edges": [
-        [
-          "nw",
-          "n"
-        ],
-        [
-          "n",
-          "ne"
-        ],
-        [
-          "w",
-          "c"
-        ],
-        [
-          "c",
-          "e"
-        ],
-        [
-          "sw",
-          "s"
-        ],
-        [
-          "s",
-          "se"
-        ],
-        [
-          "nw",
-          "w"
-        ],
-        [
-          "w",
-          "sw"
-        ],
-        [
-          "n",
-          "c"
-        ],
-        [
-          "c",
-          "s"
-        ],
-        [
-          "ne",
-          "e"
-        ],
-        [
-          "e",
-          "se"
-        ],
-        [
-          "nw",
-          "c"
-        ],
-        [
-          "c",
-          "se"
-        ],
-        [
-          "ne",
-          "c"
-        ],
-        [
-          "c",
-          "sw"
-        ],
-        [
-          "n",
-          "tn"
-        ],
-        [
-          "nw",
-          "tn"
-        ],
-        [
-          "ne",
-          "tn"
-        ],
-        [
-          "s",
-          "ts"
-        ],
-        [
-          "sw",
-          "ts"
-        ],
-        [
-          "se",
-          "ts"
-        ],
-        [
-          "w",
-          "tw"
-        ],
-        [
-          "nw",
-          "tw"
-        ],
-        [
-          "sw",
-          "tw"
-        ],
-        [
-          "e",
-          "te"
-        ],
-        [
-          "ne",
-          "te"
-        ],
-        [
-          "se",
-          "te"
-        ]
-      ],
-      "pieces": [
-        {
-          "at": "c",
-          "glyph": "darkSpecial"
-        },
-        {
-          "at": "tn",
-          "glyph": "darkSpecial"
-        },
-        {
-          "at": "nw",
-          "glyph": "light"
-        },
-        {
-          "at": "ne",
-          "glyph": "light"
-        },
-        {
-          "at": "sw",
-          "glyph": "light"
-        },
-        {
-          "at": "se",
-          "glyph": "light"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "darkSpecial",
-          "label": "the two leopards"
-        },
-        {
-          "glyph": "light",
-          "label": "cattle, entering one at a time"
-        }
-      ]
-    },
-    {
-      "diagramId": "awithlaknannai-board",
-      "gameId": "awithlaknannai",
-      "type": "setup-illustration",
-      "boardClass": "point",
-      "size": {
-        "spanMm": 150,
-        "aspect": 0.18
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "caption": "After Culin's Figure 1111, a stone slab 33 inches long from Zuni (Brooklyn Institute Museum 5049). Culin places the game among European introductions and the entry says so. One point at the centre is left empty; every move begins there.",
-      "greyLevels": [
-        0,
-        100
-      ],
-      "nodes": {
-        "p0": [
-          0.0,
-          0.5
-        ],
-        "p1": [
-          0.083,
-          0.0
-        ],
-        "p2": [
-          0.083,
-          1.0
-        ],
-        "p3": [
-          0.167,
-          0.5
-        ],
-        "p4": [
-          0.25,
-          0.0
-        ],
-        "p5": [
-          0.25,
-          1.0
-        ],
-        "p6": [
-          0.333,
-          0.5
-        ],
-        "p7": [
-          0.417,
-          0.0
-        ],
-        "p8": [
-          0.417,
-          1.0
-        ],
-        "p9": [
-          0.5,
-          0.5
-        ],
-        "p10": [
-          0.583,
-          0.0
-        ],
-        "p11": [
-          0.583,
-          1.0
-        ],
-        "p12": [
-          0.667,
-          0.5
-        ],
-        "p13": [
-          0.75,
-          0.0
-        ],
-        "p14": [
-          0.75,
-          1.0
-        ],
-        "p15": [
-          0.833,
-          0.5
-        ],
-        "p16": [
-          0.917,
-          0.0
-        ],
-        "p17": [
-          0.917,
-          1.0
-        ],
-        "p18": [
-          1.0,
-          0.5
-        ]
-      },
-      "edges": [
-        [
-          "p0",
-          "p1"
-        ],
-        [
-          "p0",
-          "p2"
-        ],
-        [
-          "p1",
-          "p3"
-        ],
-        [
-          "p2",
-          "p3"
-        ],
-        [
-          "p3",
-          "p4"
-        ],
-        [
-          "p3",
-          "p5"
-        ],
-        [
-          "p4",
-          "p6"
-        ],
-        [
-          "p5",
-          "p6"
-        ],
-        [
-          "p6",
-          "p7"
-        ],
-        [
-          "p6",
-          "p8"
-        ],
-        [
-          "p7",
-          "p9"
-        ],
-        [
-          "p8",
-          "p9"
-        ],
-        [
-          "p9",
-          "p10"
-        ],
-        [
-          "p9",
-          "p11"
-        ],
-        [
-          "p10",
-          "p12"
-        ],
-        [
-          "p11",
-          "p12"
-        ],
-        [
-          "p12",
-          "p13"
-        ],
-        [
-          "p12",
-          "p14"
-        ],
-        [
-          "p13",
-          "p15"
-        ],
-        [
-          "p14",
-          "p15"
-        ],
-        [
-          "p15",
-          "p16"
-        ],
-        [
-          "p15",
-          "p17"
-        ],
-        [
-          "p16",
-          "p18"
-        ],
-        [
-          "p17",
-          "p18"
-        ],
-        [
-          "p1",
-          "p2"
-        ],
-        [
-          "p4",
-          "p5"
-        ],
-        [
-          "p7",
-          "p8"
-        ],
-        [
-          "p10",
-          "p11"
-        ],
-        [
-          "p13",
-          "p14"
-        ],
-        [
-          "p16",
-          "p17"
-        ]
-      ],
-      "pieces": [
-        {
-          "at": "p0",
-          "glyph": "dark"
-        },
-        {
-          "at": "p1",
-          "glyph": "dark"
-        },
-        {
-          "at": "p2",
-          "glyph": "dark"
-        },
-        {
-          "at": "p3",
-          "glyph": "dark"
-        },
-        {
-          "at": "p4",
-          "glyph": "dark"
-        },
-        {
-          "at": "p5",
-          "glyph": "dark"
-        },
-        {
-          "at": "p6",
-          "glyph": "dark"
-        },
-        {
-          "at": "p7",
-          "glyph": "dark"
-        },
-        {
-          "at": "p8",
-          "glyph": "dark"
-        },
-        {
-          "at": "p10",
-          "glyph": "light"
-        },
-        {
-          "at": "p11",
-          "glyph": "light"
-        },
-        {
-          "at": "p12",
-          "glyph": "light"
-        },
-        {
-          "at": "p13",
-          "glyph": "light"
-        },
-        {
-          "at": "p14",
-          "glyph": "light"
-        },
-        {
-          "at": "p15",
-          "glyph": "light"
-        },
-        {
-          "at": "p16",
-          "glyph": "light"
-        },
-        {
-          "at": "p17",
-          "glyph": "light"
-        },
-        {
-          "at": "p18",
-          "glyph": "light"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "dark",
-          "label": "one player"
-        },
-        {
-          "glyph": "light",
-          "label": "the other"
-        }
-      ]
-    },
-    {
-      "diagramId": "olinda-setup",
-      "gameId": "olinda-keliya",
-      "type": "board-diagram",
-      "boardClass": "pit",
-      "size": {
-        "pitsPerRow": 7,
-        "rows": 2,
-        "stores": true
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "A1",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "A2",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "A3",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "A4",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "A5",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "A6",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "A7",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "B1",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "B2",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "B3",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "B4",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "B5",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "B6",
-          "glyph": "seedCount",
-          "value": 4
-        },
-        {
-          "at": "B7",
-          "glyph": "seedCount",
-          "value": 4
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "seedCount",
-          "label": "four seeds in every hollow at the start"
-        }
-      ]
-    },
-    {
-      "diagramId": "zohn-ahl-track",
-      "gameId": "zohn-ahl",
-      "type": "board-diagram",
-      "boardClass": "track",
-      "size": {
-        "stations": 20
-      },
-      "panels": 1,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "0",
-          "glyph": "light"
-        },
-        {
-          "at": "0",
-          "glyph": "dark"
-        }
-      ],
-      "arrows": [
-        {
-          "kind": "flow",
-          "from": "0",
-          "to": "10"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "one team's awl"
-        },
-        {
-          "glyph": "dark",
-          "label": "the other team's awl"
-        },
-        {
-          "glyph": "flow",
-          "label": "the teams travel in opposite directions"
-        }
-      ]
-    },
-    {
-      "diagramId": "gonggi-toss",
-      "gameId": "gonggi",
-      "type": "move-diagram",
-      "boardClass": "bodily",
-      "frame": "hands",
-      "size": {},
-      "panels": 3,
-      "reconstructed": false,
-      "greyLevels": [
-        0,
-        100
-      ],
-      "pieces": [
-        {
-          "at": "R1",
-          "glyph": "light"
-        }
-      ],
-      "arrows": [
-        {
-          "kind": "move",
-          "from": "near",
-          "to": "far"
-        }
-      ],
-      "legend": [
-        {
-          "glyph": "light",
-          "label": "the tossed stone"
-        },
-        {
-          "glyph": "move",
-          "label": "gather while the stone is in the air"
-        }
-      ]
+     "at": "d",
+     "glyph": "light"
     }
-  ]
+   ],
+   "legend": [
+    {
+     "glyph": "dark",
+     "label": "moves first"
+    },
+    {
+     "glyph": "light",
+     "label": "second player"
+    }
+   ]
+  },
+  {
+   "diagramId": "picaria-board",
+   "gameId": "picaria",
+   "type": "board-diagram",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 46,
+    "aspect": 1.0
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "nw": [
+     0.0,
+     0.0
+    ],
+    "n": [
+     0.5,
+     0.0
+    ],
+    "ne": [
+     1.0,
+     0.0
+    ],
+    "w": [
+     0.0,
+     0.5
+    ],
+    "c": [
+     0.5,
+     0.5
+    ],
+    "e": [
+     1.0,
+     0.5
+    ],
+    "sw": [
+     0.0,
+     1.0
+    ],
+    "s": [
+     0.5,
+     1.0
+    ],
+    "se": [
+     1.0,
+     1.0
+    ]
+   },
+   "edges": [
+    [
+     "nw",
+     "n"
+    ],
+    [
+     "n",
+     "ne"
+    ],
+    [
+     "w",
+     "c"
+    ],
+    [
+     "c",
+     "e"
+    ],
+    [
+     "sw",
+     "s"
+    ],
+    [
+     "s",
+     "se"
+    ],
+    [
+     "nw",
+     "w"
+    ],
+    [
+     "w",
+     "sw"
+    ],
+    [
+     "n",
+     "c"
+    ],
+    [
+     "c",
+     "s"
+    ],
+    [
+     "ne",
+     "e"
+    ],
+    [
+     "e",
+     "se"
+    ],
+    [
+     "nw",
+     "c"
+    ],
+    [
+     "c",
+     "se"
+    ],
+    [
+     "ne",
+     "c"
+    ],
+    [
+     "c",
+     "sw"
+    ]
+   ],
+   "pieces": [],
+   "legend": [],
+   "caption": "Nine playing points. A row of three sends one enemy piece to the centre, and the centre is where captured pieces go."
+  },
+  {
+   "diagramId": "nerenchi-board",
+   "gameId": "nerenchi",
+   "type": "board-diagram",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 62,
+    "aspect": 1.0
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "oa": [
+     0.0,
+     0.0
+    ],
+    "ob": [
+     0.5,
+     0.0
+    ],
+    "oc": [
+     1.0,
+     0.0
+    ],
+    "od": [
+     1.0,
+     0.5
+    ],
+    "oe": [
+     1.0,
+     1.0
+    ],
+    "of": [
+     0.5,
+     1.0
+    ],
+    "og": [
+     0.0,
+     1.0
+    ],
+    "oh": [
+     0.0,
+     0.5
+    ],
+    "ma": [
+     0.17,
+     0.17
+    ],
+    "mb": [
+     0.5,
+     0.17
+    ],
+    "mc": [
+     0.83,
+     0.17
+    ],
+    "md": [
+     0.83,
+     0.5
+    ],
+    "me": [
+     0.83,
+     0.83
+    ],
+    "mf": [
+     0.5,
+     0.83
+    ],
+    "mg": [
+     0.17,
+     0.83
+    ],
+    "mh": [
+     0.17,
+     0.5
+    ],
+    "ia": [
+     0.34,
+     0.34
+    ],
+    "ib": [
+     0.5,
+     0.34
+    ],
+    "ic": [
+     0.66,
+     0.34
+    ],
+    "idd": [
+     0.66,
+     0.5
+    ],
+    "ie": [
+     0.66,
+     0.66
+    ],
+    "if": [
+     0.5,
+     0.66
+    ],
+    "ig": [
+     0.34,
+     0.66
+    ],
+    "ih": [
+     0.34,
+     0.5
+    ]
+   },
+   "edges": [
+    [
+     "oa",
+     "ob"
+    ],
+    [
+     "ob",
+     "oc"
+    ],
+    [
+     "oc",
+     "od"
+    ],
+    [
+     "od",
+     "oe"
+    ],
+    [
+     "oe",
+     "of"
+    ],
+    [
+     "of",
+     "og"
+    ],
+    [
+     "og",
+     "oh"
+    ],
+    [
+     "oh",
+     "oa"
+    ],
+    [
+     "ma",
+     "mb"
+    ],
+    [
+     "mb",
+     "mc"
+    ],
+    [
+     "mc",
+     "md"
+    ],
+    [
+     "md",
+     "me"
+    ],
+    [
+     "me",
+     "mf"
+    ],
+    [
+     "mf",
+     "mg"
+    ],
+    [
+     "mg",
+     "mh"
+    ],
+    [
+     "mh",
+     "ma"
+    ],
+    [
+     "ia",
+     "ib"
+    ],
+    [
+     "ib",
+     "ic"
+    ],
+    [
+     "ic",
+     "idd"
+    ],
+    [
+     "idd",
+     "ie"
+    ],
+    [
+     "ie",
+     "if"
+    ],
+    [
+     "if",
+     "ig"
+    ],
+    [
+     "ig",
+     "ih"
+    ],
+    [
+     "ih",
+     "ia"
+    ],
+    [
+     "ob",
+     "mb"
+    ],
+    [
+     "mb",
+     "ib"
+    ],
+    [
+     "od",
+     "md"
+    ],
+    [
+     "md",
+     "idd"
+    ],
+    [
+     "of",
+     "mf"
+    ],
+    [
+     "mf",
+     "if"
+    ],
+    [
+     "oh",
+     "mh"
+    ],
+    [
+     "mh",
+     "ih"
+    ]
+   ],
+   "pieces": [],
+   "legend": [],
+   "caption": "Twenty-four points where the lines meet. Three in a row is a nerenchi."
+  },
+  {
+   "diagramId": "diviyan-setup",
+   "gameId": "demala-diviyan-keliya",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 58,
+    "aspect": 1.0
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "nw": [
+     0.2,
+     0.2
+    ],
+    "n": [
+     0.5,
+     0.2
+    ],
+    "ne": [
+     0.8,
+     0.2
+    ],
+    "w": [
+     0.2,
+     0.5
+    ],
+    "c": [
+     0.5,
+     0.5
+    ],
+    "e": [
+     0.8,
+     0.5
+    ],
+    "sw": [
+     0.2,
+     0.8
+    ],
+    "s": [
+     0.5,
+     0.8
+    ],
+    "se": [
+     0.8,
+     0.8
+    ],
+    "tn": [
+     0.5,
+     0.0
+    ],
+    "ts": [
+     0.5,
+     1.0
+    ],
+    "tw": [
+     0.0,
+     0.5
+    ],
+    "te": [
+     1.0,
+     0.5
+    ]
+   },
+   "edges": [
+    [
+     "nw",
+     "n"
+    ],
+    [
+     "n",
+     "ne"
+    ],
+    [
+     "w",
+     "c"
+    ],
+    [
+     "c",
+     "e"
+    ],
+    [
+     "sw",
+     "s"
+    ],
+    [
+     "s",
+     "se"
+    ],
+    [
+     "nw",
+     "w"
+    ],
+    [
+     "w",
+     "sw"
+    ],
+    [
+     "n",
+     "c"
+    ],
+    [
+     "c",
+     "s"
+    ],
+    [
+     "ne",
+     "e"
+    ],
+    [
+     "e",
+     "se"
+    ],
+    [
+     "nw",
+     "c"
+    ],
+    [
+     "c",
+     "se"
+    ],
+    [
+     "ne",
+     "c"
+    ],
+    [
+     "c",
+     "sw"
+    ],
+    [
+     "n",
+     "tn"
+    ],
+    [
+     "nw",
+     "tn"
+    ],
+    [
+     "ne",
+     "tn"
+    ],
+    [
+     "s",
+     "ts"
+    ],
+    [
+     "sw",
+     "ts"
+    ],
+    [
+     "se",
+     "ts"
+    ],
+    [
+     "w",
+     "tw"
+    ],
+    [
+     "nw",
+     "tw"
+    ],
+    [
+     "sw",
+     "tw"
+    ],
+    [
+     "e",
+     "te"
+    ],
+    [
+     "ne",
+     "te"
+    ],
+    [
+     "se",
+     "te"
+    ]
+   ],
+   "pieces": [
+    {
+     "at": "c",
+     "glyph": "darkSpecial"
+    },
+    {
+     "at": "tn",
+     "glyph": "darkSpecial"
+    },
+    {
+     "at": "nw",
+     "glyph": "light"
+    },
+    {
+     "at": "ne",
+     "glyph": "light"
+    },
+    {
+     "at": "sw",
+     "glyph": "light"
+    },
+    {
+     "at": "se",
+     "glyph": "light"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "darkSpecial",
+     "label": "the two leopards"
+    },
+    {
+     "glyph": "light",
+     "label": "cattle, entering one at a time"
+    }
+   ]
+  },
+  {
+   "diagramId": "awithlaknannai-board",
+   "gameId": "awithlaknannai",
+   "type": "setup-illustration",
+   "boardClass": "point",
+   "size": {
+    "spanMm": 150,
+    "aspect": 0.18
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "caption": "After Culin's Figure 1111, a stone slab 33 inches long from Zuni (Brooklyn Institute Museum 5049). Culin places the game among European introductions and the entry says so. One point at the centre is left empty; every move begins there.",
+   "greyLevels": [
+    0,
+    100
+   ],
+   "nodes": {
+    "p0": [
+     0.0,
+     0.5
+    ],
+    "p1": [
+     0.083,
+     0.0
+    ],
+    "p2": [
+     0.083,
+     1.0
+    ],
+    "p3": [
+     0.167,
+     0.5
+    ],
+    "p4": [
+     0.25,
+     0.0
+    ],
+    "p5": [
+     0.25,
+     1.0
+    ],
+    "p6": [
+     0.333,
+     0.5
+    ],
+    "p7": [
+     0.417,
+     0.0
+    ],
+    "p8": [
+     0.417,
+     1.0
+    ],
+    "p9": [
+     0.5,
+     0.5
+    ],
+    "p10": [
+     0.583,
+     0.0
+    ],
+    "p11": [
+     0.583,
+     1.0
+    ],
+    "p12": [
+     0.667,
+     0.5
+    ],
+    "p13": [
+     0.75,
+     0.0
+    ],
+    "p14": [
+     0.75,
+     1.0
+    ],
+    "p15": [
+     0.833,
+     0.5
+    ],
+    "p16": [
+     0.917,
+     0.0
+    ],
+    "p17": [
+     0.917,
+     1.0
+    ],
+    "p18": [
+     1.0,
+     0.5
+    ]
+   },
+   "edges": [
+    [
+     "p0",
+     "p1"
+    ],
+    [
+     "p0",
+     "p2"
+    ],
+    [
+     "p1",
+     "p3"
+    ],
+    [
+     "p2",
+     "p3"
+    ],
+    [
+     "p3",
+     "p4"
+    ],
+    [
+     "p3",
+     "p5"
+    ],
+    [
+     "p4",
+     "p6"
+    ],
+    [
+     "p5",
+     "p6"
+    ],
+    [
+     "p6",
+     "p7"
+    ],
+    [
+     "p6",
+     "p8"
+    ],
+    [
+     "p7",
+     "p9"
+    ],
+    [
+     "p8",
+     "p9"
+    ],
+    [
+     "p9",
+     "p10"
+    ],
+    [
+     "p9",
+     "p11"
+    ],
+    [
+     "p10",
+     "p12"
+    ],
+    [
+     "p11",
+     "p12"
+    ],
+    [
+     "p12",
+     "p13"
+    ],
+    [
+     "p12",
+     "p14"
+    ],
+    [
+     "p13",
+     "p15"
+    ],
+    [
+     "p14",
+     "p15"
+    ],
+    [
+     "p15",
+     "p16"
+    ],
+    [
+     "p15",
+     "p17"
+    ],
+    [
+     "p16",
+     "p18"
+    ],
+    [
+     "p17",
+     "p18"
+    ],
+    [
+     "p1",
+     "p2"
+    ],
+    [
+     "p4",
+     "p5"
+    ],
+    [
+     "p7",
+     "p8"
+    ],
+    [
+     "p10",
+     "p11"
+    ],
+    [
+     "p13",
+     "p14"
+    ],
+    [
+     "p16",
+     "p17"
+    ]
+   ],
+   "pieces": [
+    {
+     "at": "p0",
+     "glyph": "dark"
+    },
+    {
+     "at": "p1",
+     "glyph": "dark"
+    },
+    {
+     "at": "p2",
+     "glyph": "dark"
+    },
+    {
+     "at": "p3",
+     "glyph": "dark"
+    },
+    {
+     "at": "p4",
+     "glyph": "dark"
+    },
+    {
+     "at": "p5",
+     "glyph": "dark"
+    },
+    {
+     "at": "p6",
+     "glyph": "dark"
+    },
+    {
+     "at": "p7",
+     "glyph": "dark"
+    },
+    {
+     "at": "p8",
+     "glyph": "dark"
+    },
+    {
+     "at": "p10",
+     "glyph": "light"
+    },
+    {
+     "at": "p11",
+     "glyph": "light"
+    },
+    {
+     "at": "p12",
+     "glyph": "light"
+    },
+    {
+     "at": "p13",
+     "glyph": "light"
+    },
+    {
+     "at": "p14",
+     "glyph": "light"
+    },
+    {
+     "at": "p15",
+     "glyph": "light"
+    },
+    {
+     "at": "p16",
+     "glyph": "light"
+    },
+    {
+     "at": "p17",
+     "glyph": "light"
+    },
+    {
+     "at": "p18",
+     "glyph": "light"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "dark",
+     "label": "one player"
+    },
+    {
+     "glyph": "light",
+     "label": "the other"
+    }
+   ]
+  },
+  {
+   "diagramId": "olinda-setup",
+   "gameId": "olinda-keliya",
+   "type": "board-diagram",
+   "boardClass": "pit",
+   "size": {
+    "pitsPerRow": 7,
+    "rows": 2,
+    "stores": true
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "A1",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "A2",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "A3",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "A4",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "A5",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "A6",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "A7",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B1",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B2",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B3",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B4",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B5",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B6",
+     "glyph": "seedCount",
+     "value": 4
+    },
+    {
+     "at": "B7",
+     "glyph": "seedCount",
+     "value": 4
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "seedCount",
+     "label": "four seeds in every hollow at the start"
+    }
+   ]
+  },
+  {
+   "diagramId": "zohn-ahl-track",
+   "gameId": "zohn-ahl",
+   "type": "board-diagram",
+   "boardClass": "track",
+   "size": {
+    "stations": 20
+   },
+   "panels": 1,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "0",
+     "glyph": "light"
+    },
+    {
+     "at": "0",
+     "glyph": "dark"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "flow",
+     "from": "0",
+     "to": "10"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "one team's awl"
+    },
+    {
+     "glyph": "dark",
+     "label": "the other team's awl"
+    },
+    {
+     "glyph": "flow",
+     "label": "the teams move in opposite directions"
+    }
+   ]
+  },
+  {
+   "diagramId": "gonggi-toss",
+   "gameId": "gonggi",
+   "type": "move-diagram",
+   "boardClass": "bodily",
+   "frame": "hands",
+   "size": {},
+   "panels": 3,
+   "reconstructed": false,
+   "greyLevels": [
+    0,
+    100
+   ],
+   "pieces": [
+    {
+     "at": "R1",
+     "glyph": "light"
+    }
+   ],
+   "arrows": [
+    {
+     "kind": "move",
+     "from": "near",
+     "to": "far"
+    }
+   ],
+   "legend": [
+    {
+     "glyph": "light",
+     "label": "the tossed stone"
+    },
+    {
+     "glyph": "move",
+     "label": "gather while the stone is in the air"
+    }
+   ]
+  }
+ ]
 }

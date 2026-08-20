@@ -352,7 +352,7 @@
    "legend": [
     {
      "glyph": "lightSpecial",
-     "label": "a castle — safe from capture"
+     "label": "a fort — safe from capture"
     },
     {
      "glyph": "empty",
@@ -794,7 +794,7 @@
     },
     {
      "glyph": "dark",
-     "label": "the besiegers (sixteen)"
+     "label": "the attackers (sixteen)"
     }
    ],
    "caption": "YENİDEN KURGULANMIŞ kurulum. Dizilim Linnaeus'un 1732 tablut kaydından aktarılmıştır; hnefatafl için böyle bir kayıt YOKTUR. Kral merkezde, sekiz savunan haç biçiminde, on altı kuşatan dört kenar ortasında. Dört köşe ve merkez kaçış/dayanak kareleridir."
@@ -1535,7 +1535,7 @@
     },
     {
      "glyph": "king",
-     "label": "the general — starts in the palace centre"
+     "label": "the general — starts in the camp"
     }
    ],
    "caption": "Alt oyuncunun hisarı ve KÖŞEGENLERİ. Köşegenler Kore tahtasından ÇIKARILAMAZ: bir taş çizili olan HER çizgi boyunca gidebilir, yani araba köşeden merkeze ve karşı köşeye geçebilir. Şah geri sırada değil, hisarın ortasında başlar."
@@ -1717,7 +1717,7 @@
    "legend": [
     {
      "glyph": "seedCount",
-     "label": "seeds in each hollow"
+     "label": "seeds in each cup"
     }
    ],
    "caption": "Son tohum A2'ye düştü; SONRAKİ çukur A3 BOŞ. Bir boş çukur ALMA demektir: boşluğun ÖTESİNDEKİ A4 (altı tohum) alınır ve sıra ondan sonraki dolu çukurdan sürer. A7 dört tohumdadır — 'inek'tir ve ÇUKUR SAHİBİNİN haznesine gider. İKİ boş çukur olsaydı tur biterdi."
@@ -1785,7 +1785,7 @@
    "legend": [
     {
      "glyph": "darkSpecial",
-     "label": "the line of three"
+     "label": "the row of three"
     },
     {
      "glyph": "dark",
@@ -2142,7 +2142,7 @@
     },
     {
      "glyph": "captured",
-     "label": "taken — trapped on a file"
+     "label": "taken — sandwiched on a file"
     },
     {
      "glyph": "move",
@@ -2345,7 +2345,7 @@
     },
     {
      "glyph": "lightSpecial",
-     "label": "a stack — an enemy is held beneath"
+     "label": "a stack — an enemy is held under it"
     },
     {
      "glyph": "move",

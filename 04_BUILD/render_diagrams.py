@@ -430,8 +430,35 @@ def render(d: dict, lang: dict, out_dir: str) -> dict:
                     ly - 0.9 * MM, ar["widthPt"] * 96 / 72,
                     "3,2" if ar["style"] == "dotted" else None)
         else:
-            mk = lang["markers"].get(key) or {}
-            c.text(sym_x, ly, mk.get("symbol", "·"), pr["minGlyphPt"])
+            # ⚠ MARKER SEMBOLÜ DE ÇİZİLİR, YAZILMAZ.
+            # v1.3 bu dersi GLİFLER için öğrendi ve yazdı: "SEMBOL
+            # YAZILMAZ, ÇİZİLİR; font o karakteri taşımıyorsa YER BOŞ
+            # KALIR." Ama MARKER yolu metin yazmaya devam etti. Faz 6
+            # ölçtü: üç marker sembolünün (↺ ⟦⟧ ⌒) ÜÇÜ DE baskı fontunda
+            # (Liberation Serif) YOK. `mbube-formation` efsanesindeki
+            # 'ring' satırı basılı sayfada SEMBOLSÜZ çıkacaktı ve okur
+            # çemberin ne olduğunu efsaneden öğrenemeyecekti.
+            r = 1.5 * MM
+            if key == "ring":
+                c.parts.append(
+                    '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="none" '
+                    'stroke="#000" stroke-width="%.2f"/>'
+                    % (sym_x, ly - 0.9 * MM, r, c.sw))
+            elif key == "repeat":
+                c.parts.append(
+                    '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="none" '
+                    'stroke="#000" stroke-width="%.2f"/>'
+                    % (sym_x, ly - 0.9 * MM, r * 0.85, c.sw))
+                c.line(sym_x + r * 0.5, ly - 1.9 * MM,
+                       sym_x + r * 1.2, ly - 0.9 * MM)
+            elif key == "score":
+                for dx in (-r, r):
+                    c.line(sym_x + dx, ly - 2.0 * MM, sym_x + dx, ly)
+                    c.line(sym_x + dx, ly - 2.0 * MM,
+                           sym_x + dx * 0.45, ly - 2.0 * MM)
+                    c.line(sym_x + dx, ly, sym_x + dx * 0.45, ly)
+            else:
+                c.circle(sym_x, ly - 0.9 * MM, r * 0.5, 0)
         c.text(pad * MM + 4.6 * MM, ly, e.get("label", ""),
                pr["minGlyphPt"], anchor="start")
         ly += 4.5 * MM

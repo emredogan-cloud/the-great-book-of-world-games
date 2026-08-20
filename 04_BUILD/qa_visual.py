@@ -229,6 +229,41 @@ def run(root: str, args) -> int:
                     colour.append("%s → %s %s" % (did, key, c))
     rep.check(not colour, "renk yok · yalnız izinli gri" + brief(sorted(set(colour))))
 
+    # ⑧ BASKI FONTUNDA GLİF VAR MI
+    #
+    # Bu kapı Faz 6'da açıldı çünkü bir kusur bulundu: efsanedeki `ring`
+    # sembolü (⌒ · U+2312) baskı fontunda (Liberation Serif) YOK. SVG'de
+    # duruyordu, `qa_diagram` sözlüğü doğru diyordu, ölçü doğruydu — ve
+    # basılı sayfada YER BOŞ KALACAKTI. Bir sembolün TANIMLI olması onun
+    # BASILABİLİR olduğunu göstermez.
+    print("\n── ⑧ baskı fontunda glif ──")
+    missing_glyphs = []
+    fdir = "/usr/share/fonts/truetype/liberation"
+    fpath = os.path.join(fdir, "LiberationSerif-Regular.ttf")
+    if os.path.exists(fpath):
+        try:
+            from PIL import ImageFont
+            fnt = ImageFont.truetype(fpath, 40)
+            seen = set()
+            for did, d in parsed.items():
+                for o in d["ops"]:
+                    if o["op"] != "text":
+                        continue
+                    for ch in o["text"]:
+                        if ch in seen or ch.isspace():
+                            continue
+                        seen.add(ch)
+                        if fnt.getmask(ch).getbbox() is None:
+                            missing_glyphs.append("%s → %r (U+%04X)"
+                                                  % (did, ch, ord(ch)))
+        except ImportError:
+            print("  ⚠ Pillow yok — glif denetimi ATLANDI")
+    else:
+        print("  ⚠ baskı fontu bulunamadı — glif denetimi ATLANDI")
+    rep.check(not missing_glyphs,
+              "çizilen her karakter baskı fontunda var"
+              + brief(sorted(set(missing_glyphs))))
+
     # ⑦ yetim dosya
     print("\n── ⑦ yetim dosya ──")
     orphan = sorted(set(parsed) - set(declared))
