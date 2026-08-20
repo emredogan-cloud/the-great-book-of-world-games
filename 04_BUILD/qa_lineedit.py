@@ -505,6 +505,12 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", default=DEFAULT_ROOT)
     ap.add_argument("--json", default=None)
+    # CI bu dizindeki HER qa_*.py betiğini TARAYARAK bulur ve hepsini
+    # `--verbose --json <yol>` ile çağırır. Bayrağı kullanmasak bile
+    # KABUL ETMEK zorundayız: etmeyince kapı kırmızı yanmaz, argparse
+    # çıkış 2 verir ve iş "kapı kırmızı" gibi görünür. Sözleşmeyi
+    # 05_TESTS/selftest.py § ⑫ denetler.
+    ap.add_argument("--verbose", action="store_true")
     args = ap.parse_args()
     return run(os.path.abspath(args.root), args)
 

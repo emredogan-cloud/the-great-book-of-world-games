@@ -301,9 +301,21 @@ jobs:
           done
       - name: KDP ön denetimi
         run: |
-          if [ -f 04_BUILD/kdp_preflight.py ]; then
-            python3 04_BUILD/kdp_preflight.py
-          fi
+          if [ ! -f 04_BUILD/kdp_preflight.py ]; then exit 0; fi
+          # Çıkış 2 = "ATLANDI", kırmızı DEĞİL. Ön denetim basılmış PDF'i
+          # okur; PDF'ler ticari manuscript'ten üretilir ve manuscript bu
+          # depoda YOKTUR (.gitignore § ①). Runner'da ayrıca pdfinfo da
+          # yoktur. Betik bunu 2 ile bildirir; adım bunu kırmızı sayarsa
+          # CI, ÜRETİLEMEYECEK bir çıktının yokluğuna kızmış olur.
+          set +e
+          python3 04_BUILD/kdp_preflight.py
+          rc=$?
+          set -e
+          case $rc in
+            0) echo "::notice::KDP ön denetimi yeşil" ;;
+            2) echo "::notice::pdfinfo/manuscript yok — ön denetim ATLANDI (beklenen)" ;;
+            *) echo "::error::KDP ön denetimi KIRMIZI"; exit 1 ;;
+          esac
       - name: PAKET KAPILARININ KENDİ TESTİ
         run: |
           if [ -f 05_TESTS/package_selftest.py ]; then

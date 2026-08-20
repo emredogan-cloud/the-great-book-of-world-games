@@ -1810,6 +1810,29 @@ def part11_typography(rep: Report, tmp: str) -> None:
                   "%s dizgiyi typo'dan alır (kopya kural yok)" % mod)
 
 
+# ---------------------------------------------------------------------------
+def part12_ci_contract(rep: Report, tmp: str) -> None:
+    """CI SÖZLEŞMESİ — tarama ile bulunan her betik bayrakları kabul etmeli.
+
+    CI `04_BUILD/qa_*.py` kalıbını TARAR (elle liste yok, ki yeni bir kapı
+    eklendiğinde unutulmasın) ve bulduğu her betiği
+    `--verbose --json <yol>` ile çağırır. Bir betik `--verbose` kabul
+    etmezse argparse ÇIKIŞ 2 verir ve iş "kapı kırmızı" gibi görünür —
+    oysa kapı hiç koşmamıştır. Faz 6'da qa_lineedit ve qa_visual tam
+    bunu yaptı ve CI'ı iki kez kırdı; yerelde qa_all.sh onları bayraksız
+    çağırdığı için görünmedi.
+    """
+    print("\n⑫ CI tarama sözleşmesi")
+    import glob
+    scripts = sorted(glob.glob(os.path.join(ROOT, "04_BUILD", "qa_*.py")))
+    rep.check(bool(scripts), "taranan qa_*.py betiği var")
+    for sp in scripts:
+        name = os.path.basename(sp)
+        src = open(sp, encoding="utf-8").read()
+        rep.check('"--verbose"' in src and '"--json"' in src,
+                  "%s CI bayraklarını kabul eder (--verbose --json)" % name)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1833,6 +1856,7 @@ def main() -> int:
         part9_phase5_gates(rep, tmp)
         part10_founder_gap_register(rep, tmp)
         part11_typography(rep, tmp)
+        part12_ci_contract(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:
