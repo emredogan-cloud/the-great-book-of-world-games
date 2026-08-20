@@ -118,12 +118,6 @@
  },
  "founderActions": [
   {
-   "id": "A6",
-   "field": "founder.authorBio",
-   "blocking": true,
-   "note": "`founder.authorBio` is empty. KDP asks for an author biography, and on a sibling title KDP rejected a placeholder biography as template text (12 August 2026). Write a real one before publishing."
-  },
-  {
    "id": "AI-DECL",
    "field": "founder.aiDisclosure.founderConfirmed",
    "blocking": true,

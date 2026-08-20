@@ -48,11 +48,21 @@
       "founderConfirmed": false,
       "$comment": "KDP panelindeki AI beyanı SEÇİMİNİ kurucu yapar. Ajan hukuki bildirim veremez."
     },
-    "authorBio": null,
+    "authorBio": "Emre is a puzzle designer, mythologist, and game archivist dedicated to preserving ancient cultures, codes, and stories for the next generation.",
     "authorBio$comment": [
-      "World Myths'te yer tutucu biyografi KDP tarafından 'şablon metni' olarak",
-      "REDDEDİLDİ (12 Ağustos 2026). Bu alan null kaldığı sürece Faz 6 kapısı",
-      "kırmızıdır. Kurucu onaylı metin girmeden üretim tamamlanamaz."
+      "⭑ A6 KAPANDI — kurucu · 20 Ağustos 2026 (Faz 6 · § 9).",
+      "",
+      "METİN YAZILMADI, KOPYALANDI. Kurucunun talimatı açıktı: öteki",
+      "kitaplarda kullanılan biyografinin AYNISI kullanılacak. Metin",
+      "THE-MYTH-HUNTERS-FIELD-BOOK/project_config.json içinden BİREBİR",
+      "alındı ve tek kelimesi değiştirilmedi; kopyalama bir sağlama",
+      "toplamıyla doğrulandı.",
+      "",
+      "Kaynak kararı: THE-MYTH-HUNTERS-FIELD-BOOK · K36 (16 Ağustos 2026)",
+      "— 'Metin kurucunun kendi cümlesidir.' Dört aday arasından bu seçildi",
+      "çünkü onaylı sürümlerin EN YENİSİ ve A6'yı kapatan tek metin odur.",
+      "",
+      "Künye: 06_REPORTS/AUTHOR_BIO_PROVENANCE.md"
     ]
   },
   "audience": {

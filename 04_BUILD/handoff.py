@@ -62,6 +62,10 @@ def write(p, text):
 def collect(root):
     """Paketleri toplar ve her birinin GERÇEK durumunu ölçer."""
     out = {}
+    cb = {}
+    cbp = os.path.join(root, "06_REPORTS", "cover-build.json")
+    if os.path.exists(cbp):
+        cb = load(cbp)
     for ed, folder in (("paperback", "PAPERBACK"), ("hardcover", "HARDCOVER")):
         rp = os.path.join(root, "06_REPORTS", "interior-%s.json" % ed)
         if not os.path.exists(rp):
@@ -79,23 +83,42 @@ def collect(root):
             "trim": r["trim"], "margins": r["margins"],
             "cover": None, "coverStatus": "BLOCKED — kurucu sanatı yok",
         }
+        cv = (cb.get("editions") or {}).get(ed)
+        if cv:
+            cf = os.path.join(root, cv["file"])
+            out[ed]["cover"] = {
+                "file": cv["file"], "exists": os.path.exists(cf),
+                "sha256": sha256(cf) if os.path.exists(cf) else None,
+                "recordedSha256": cv["sha256"],
+                "bytes": os.path.getsize(cf) if os.path.exists(cf) else 0,
+                "wrapIn": cv["wrapIn"], "spineIn": cv["spineIn"],
+                "artwork": cv["artwork"],
+                "typeItems": len(cv.get("typeLog") or []),
+                "spineFit": cv.get("spineFit"),
+            }
+            out[ed]["coverStatus"] = ("READY" if os.path.exists(cf)
+                                      else "MISSING FILE")
     ep = os.path.join(root, "06_REPORTS", "epub.json")
     if os.path.exists(ep):
         r = load(ep)
         f = os.path.join(root, r["file"])
+        kc = cb.get("kindle")
         out["kindle"] = {
             "folder": "KINDLE",
+            "cover": kc,
             "epub": {"file": r["file"], "exists": os.path.exists(f),
                      "sha256": sha256(f) if os.path.exists(f) else None,
                      "recordedSha256": r["sha256"],
                      "bytes": os.path.getsize(f) if os.path.exists(f) else 0},
-            "coverStatus": r["coverStatus"],
+            "coverStatus": ("READY" if kc else r["coverStatus"]),
         }
     ap = os.path.join(root, "03_APLUS", "aplus_content.json")
     if os.path.exists(ap):
         a = load(ap)
         out["aplus"] = {"folder": "APLUS", "modules": len(a["modules"]),
                         "imagesMissing": a["imagesMissing"],
+                        "ready": a.get("modulesReady", []),
+                        "withoutArt": a.get("modulesWithoutArt", []),
                         "status": a["status"]}
     return out
 
@@ -218,21 +241,28 @@ declaration on your behalf. The facts you need in order to answer:
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
 
 ### 15 · Cover upload
-{F} ⛔ **NOT READY.** No cover artwork exists yet. Generate it from
-`07_ASSETS/IMAGE_PROMPT_LIBRARY.html`, drop the raw files into
-`07_ASSETS/raw/cover/`, then run `04_BUILD/cover_artwork.py --upscale`
-and `04_BUILD/covers.py`.
+{A} Upload:
 
-{A} The geometry is already computed from this exact page count:
-- spine **{g['spineWidthIn']:.4f} in** ({g['pageCount']} pages ×
-  {g['spinePerPageIn']} in/page{' + board allowance' if ed == 'hardcover' else ''})
-- full wrap **{g['wrapWidthIn']:.4f} × {g['wrapHeightIn']:.4f} in**
-- at 300 ppi that is **{g['artworkTarget']['widthPx']} × {g['artworkTarget']['heightPx']} px**
-- spine text is {'allowed' if g['spineTextAllowed'] else 'NOT allowed'}
-  (KDP threshold {g['spineTextMinPages']} pages)
+```
+{pkg['cover']['file']}
+```
+- full wrap **{g['wrapWidthIn']:.4f} × {g['wrapHeightIn']:.4f} in**, including
+  {g['bleedIn']} in bleed on all four sides
+- spine **{g['spineWidthIn']:.4f} in**, computed from this exact page count
+  ({g['pageCount']} pages × {g['spinePerPageIn']} in/page{' plus a board allowance' if ed == 'hardcover' else ''})
+- artwork embedded at **{g['artworkTarget']['widthPx']} × {g['artworkTarget']['heightPx']} px**
+  (300 ppi); all type is **vector**, not baked into the image
+- SHA-256 `{pkg['cover']['sha256']}`
 
-⚠ If you rebuild the interior and the page count changes, this spine is wrong
-and the cover will not fit. Rebuild the cover after the interior, never before.
+Typography placement was measured, not eyeballed. The title and author sit in
+the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
+0–255 scale), so no panel, box or scrim sits behind them. The spine title is
+{pkg['cover']['spineFit'][0]['pt']:.2f} pt, sized to fit the measured clean run of the spine rather than
+chosen by eye. The back copy sits over a feathered wash taken from the
+artwork's own parchment tone — not a white panel.
+
+⚠ The barcode area (lower right of the back panel) is deliberately empty.
+**Do not place anything there** — Amazon prints the barcode itself.
 
 ### 16 · Previewer
 {F} Open the KDP Previewer and work through
@@ -291,10 +321,10 @@ published.** No proof copy has been ordered.
 
 | Format | Interior | Cover | Ready to upload |
 |---|---|---|---|
-| Paperback | ✅ {pkgs['paperback']['interior']['pageCount']} pp | ⛔ artwork missing | interior yes, cover no |
-| Hardcover | ✅ {pkgs['hardcover']['interior']['pageCount']} pp | ⛔ artwork missing | interior yes, cover no |
-| Kindle | ✅ EPUB 3 | ⛔ artwork missing | manuscript yes, cover no |
-| A+ Content | copy ✅ 6 modules | ⛔ {pkgs['aplus']['imagesMissing']} images missing | no |
+| Paperback | ✅ {pkgs['paperback']['interior']['pageCount']} pp | ✅ wrap PDF | **yes** |
+| Hardcover | ✅ {pkgs['hardcover']['interior']['pageCount']} pp | ✅ wrap PDF | **yes** |
+| Kindle | ✅ EPUB 3 | ✅ 1600 × 2560 JPG | **yes** |
+| A+ Content | copy ✅ 6 modules | ✅ {len(pkgs['aplus']['ready'])} of 6 modules have art | **yes, {len(pkgs['aplus']['ready'])} modules** |
 
 ---
 
@@ -357,10 +387,20 @@ break their accessibility settings, to preserve a promise that reflowing keeps
 anyway: each game is one uninterrupted entry.
 
 ### 15 · Cover upload
-{F} ⛔ **NOT READY.** Kindle requires a cover image (1.6:1 ratio, at least
-1000 px on the shorter side; 2560 × 1600 px is the recommended size). It will
-be produced from the same artwork as the print cover. No placeholder cover has
-been inserted.
+{A} Upload:
+
+```
+{k['cover']['file']}
+```
+- **1600 × 2560 px** (Amazon's recommended 1:1.6), JPEG
+- SHA-256 `{k['cover']['sha256']}`
+- derived from the **front panel** of the print artwork, not from the wrap —
+  an ebook cover must not show a spine or a back panel
+
+⚠ This file carries **no typography**. Kindle covers are set separately, at
+their own proportions; the print title block does not scale to 1:1.6 without
+being rebuilt. **Founder action:** either accept the artwork-only cover or ask
+for a typeset Kindle cover as a follow-up.
 
 ### 16 · Previewer
 {F} Use the Kindle Previewer. Check in particular: the diagrams at the
@@ -410,9 +450,19 @@ retired one, choose the closest and note the change — do not force an image
 into a module with a different aspect ratio.
 
 ### 5 · Image upload
-{F} ⛔ **NOT READY.** {ap['imagesMissing']} images are missing. Generate them
-from `07_ASSETS/IMAGE_PROMPT_LIBRARY.html`, put them in
-`07_ASSETS/raw/aplus/`, then run `04_BUILD/aplus.py`.
+{A} Processed and sized in `07_ASSETS/web/aplus/`. Ready modules:
+**{', '.join(ap['ready'])}**.
+
+⚠ **One module has no artwork: {', '.join(ap['withoutArt']) or 'none'}.** The
+file delivered as `aplus-05-play-family-discovery.png` is, on inspection, the
+**module 06** brief — rows of game objects on a pale ground with the right
+third left clear. It was mapped to module 06 by content rather than by
+filename. Module 05 (hands over a board, no faces) was not delivered, so the
+uploadable A+ project is **{len(ap['ready'])} modules**, not six. Its copy is written and
+waiting if you generate the art later.
+
+⚠ Module 04 was delivered as a single 2 × 2 composite. It was **split** into
+four 220 × 220 squares by measuring the gutters — no pixels were invented.
 
 ⚠ The generated images contain **no text**. All wording goes in Amazon's own
 fields, where it stays searchable and correctable.
@@ -560,12 +610,170 @@ this file was generated.
 
 ---
 
+## The cover — what to look at
+
+| | paperback | hardcover |
+|---|---|---|
+| Full wrap | {g['wrapWidthIn']:.4f} × {g['wrapHeightIn']:.4f} in | {gh['wrapWidthIn']:.4f} × {gh['wrapHeightIn']:.4f} in |
+| Spine | {g['spineWidthIn']:.4f} in | {gh['spineWidthIn']:.4f} in |
+| Artwork | {g['artworkTarget']['widthPx']} × {g['artworkTarget']['heightPx']} px @ 300 ppi | {gh['artworkTarget']['widthPx']} × {gh['artworkTarget']['heightPx']} px |
+| Type | vector, not rasterised | same |
+
+1. **The spine.** It is {g['spineWidthIn']:.3f} in — a thin spine, and the title is set at
+   {pkgs['paperback']['cover']['spineFit'][0]['pt']:.2f} pt to fit the part of the artwork that measured clean.
+   In the Previewer, check the spine text is centred between the two folds and
+   that no letter touches a fold. This is the single most common cover
+   rejection.
+2. **The barcode corner.** Lower right of the back panel is deliberately
+   empty. Confirm the Previewer's barcode overlay lands on empty artwork and
+   covers nothing.
+3. **The title block.** Sits in the quietest measured band of the artwork.
+   Check nothing in the map runs through a letter at full zoom.
+4. **The back copy.** It sits over a feathered wash drawn from the artwork's
+   own parchment tone. Check it reads as *paper*, not as a panel. If it looks
+   like a box, say so and it will be softened.
+5. **Bleed.** The artwork runs into all four bleed edges. Confirm no type is
+   within {g['safeIn']} in of any trim edge.
+
+---
+
+## A+ content — what to look at
+
+- **{len(pkgs['aplus']['ready'])} of 6 modules have artwork.** Module(s) without art:
+  **{', '.join(pkgs['aplus']['withoutArt']) or 'none'}**.
+- The header modules keep their **right third clear** — that is where Amazon
+  puts your text. Check on **mobile** as well as desktop; the crop differs.
+- Module 04 is four separate 220 × 220 squares, split from one composite.
+  Check the four read as a set.
+- No A+ image contains a single character of text. If you see lettering in
+  any of them, stop — it means the wrong file was uploaded.
+
+---
+
 ## What you must decide, not check
 
 - whether to publish before any external playtest has been run (zero sessions
   recorded)
 - how to answer the AI-generated content declaration
 - whether the hardcover ships at all in the first release
+"""
+
+
+def build_ai_notes(root, pkgs, md, fm):
+    """KDP'nin yapay zekâ beyanı için OLGULAR. Beyanın kendisi DEĞİL."""
+    m = md["measured"]
+    ap = pkgs.get("aplus", {})
+    return f"""# KDP AI-GENERATED CONTENT — DISCLOSURE NOTES
+
+> **The Great Book of World Games** · generated by `04_BUILD/handoff.py`
+>
+> ⚠ **This document is not a declaration.** KDP asks a question with legal
+> consequences and the answer is the account holder's to give. What follows is
+> the factual record needed to answer it accurately — what was generated, what
+> was assisted, and what was produced deterministically by code.
+
+---
+
+## The three KDP categories
+
+KDP distinguishes **AI-generated** (created by AI from a prompt) from
+**AI-assisted** (created by a person, then refined with AI tools, or created
+with AI and then substantially edited). It asks separately about **text**,
+**images** and **translations**.
+
+---
+
+## 1 · Text
+
+| | |
+|---|---|
+| Status | **AI-generated, then edited and verified against printed sources** |
+| Volume | {m['games']} game entries · {fm['measured']['frontMatterWords']:,} words of front matter · {fm['measured']['familyOpenerWords']:,} words of family openers |
+| Printed total | 65,000+ words |
+
+Every rule set was drafted with AI assistance **from a named printed source
+opened at page level**, and each entry carries that citation with its page
+numbers. The project keeps a separate verification record
+(`01_SOURCE/source_verification.json`, {len(load(os.path.join(root, '01_SOURCE', 'source_verification.json'))['records'])} entries) in which each
+citation is tied to a supporting passage quoted from the source.
+
+Where a source did not settle a rule, the book says so on the page rather than
+inventing one. Where a historical record is incomplete, the entry is marked
+**reconstructed** — {m['reconstructed']} of {m['games']} entries are.
+
+**Not machine translation.** The commercial text was written directly in
+English; the project's own configuration forbids machine translation into the
+commercial language.
+
+---
+
+## 2 · Images
+
+### Cover artwork — **AI-generated**
+
+| | |
+|---|---|
+| Produced by | the author, externally, from prompts held in `07_ASSETS/IMAGE_PROMPT_LIBRARY.html` |
+| Delivered | 2 candidates · 1 selected (`FINAL_COVER_SELECTION.md`) |
+| Post-processing | real upscaling (Real-ESRGAN, 4×), alpha flattening, crop to wrap geometry |
+| Text in the artwork | **none** — verified by inspection at high magnification |
+
+### A+ artwork — **AI-generated**
+
+| | |
+|---|---|
+| Delivered | 5 images, mapped to {len(ap.get('ready', []))} modules |
+| Post-processing | crop to Amazon module dimensions, one 2 × 2 composite split into four squares |
+| Text in the artwork | **none** |
+
+### Interior diagrams — **NOT AI-generated**
+
+This distinction matters and is easy to get wrong. The {len(load(os.path.join(root, '06_REPORTS', 'diagram-render.json'))['diagrams'])} board diagrams
+inside the book were **not** produced by an image model. They are drawn by the
+project's own code (`04_BUILD/render_diagrams.py`) from structured data — each
+board is a list of points and edges, and the renderer emits SVG
+deterministically. The same input produces a byte-identical file on any
+machine. They are vector drawings, not generated images.
+
+### Typography — **NOT AI-generated**
+
+All type on the cover and in the interior is set as vector text by
+`04_BUILD/covers.py` and `04_BUILD/interior.py` from the project metadata.
+No lettering is baked into any generated image.
+
+---
+
+## 3 · Translations
+
+**None.** No part of this book is a translation.
+
+---
+
+## 4 · What this means for the form
+
+The agent does not fill this in. For accuracy, the record supports:
+
+- **Text — AI-generated:** yes, with human editing and source verification
+- **Images — AI-generated:** yes, for the cover and A+ artwork; **no** for the
+  interior diagrams, which are code-drawn from data
+- **Translation — AI-generated:** no
+
+KDP's question about images concerns the images you upload. The cover and the
+A+ images are AI-generated. The interior contains no AI-generated images at
+all.
+
+---
+
+## 5 · Where the evidence lives
+
+| claim | file |
+|---|---|
+| Source citations, page level | `01_SOURCE/source_verification.json` |
+| Which games are reconstructed | `02_MANUSCRIPT/book.json` · each entry's notice |
+| Cover prompts and selection | `07_ASSETS/IMAGE_PROMPT_LIBRARY.html` · `06_REPORTS/FINAL_COVER_SELECTION.md` |
+| Upscaling method and factors | `06_REPORTS/cover-artwork-intake.json` · `ASSET_UPSCALING_REPORT.md` |
+| Diagrams are code-drawn | `04_BUILD/render_diagrams.py` · `07_ASSETS/diagrams/*.json` |
+| Author biography provenance | `06_REPORTS/AUTHOR_BIO_PROVENANCE.md` |
 """
 
 
@@ -611,6 +819,15 @@ def run(root, args):
         os.makedirs(os.path.join(root, "08_OUTPUT", "APLUS"), exist_ok=True)
         shutil.copy2(ap_src, os.path.join(root, "08_OUTPUT", "APLUS",
                                           "aplus_content.json"))
+    # İşlenmiş A+ görselleri teslim klasörüne kopyalanır: kurucu yüklerken
+    # 07_ASSETS içinde dolaşmak zorunda kalmasın.
+    web = os.path.join(root, "07_ASSETS", "web", "aplus")
+    if os.path.isdir(web):
+        dst = os.path.join(root, "08_OUTPUT", "APLUS")
+        os.makedirs(dst, exist_ok=True)
+        for fn in sorted(os.listdir(web)):
+            if fn.lower().endswith((".png", ".jpg")):
+                shutil.copy2(os.path.join(web, fn), os.path.join(dst, fn))
 
     counts = {}
     for folder in ("PAPERBACK", "HARDCOVER", "KINDLE", "APLUS"):
@@ -622,6 +839,8 @@ def run(root, args):
     write(os.path.join(root, "08_OUTPUT", "KDP_UPLOAD_HANDBOOK.md"), hb)
     pv = build_previewer(root, pkgs, cov, md, ivis)
     write(os.path.join(root, "08_OUTPUT", "KDP_PREVIEWER_CHECKLIST.md"), pv)
+    ai = build_ai_notes(root, pkgs, md, fm)
+    write(os.path.join(root, "08_OUTPUT", "KDP_AI_DISCLOSURE_NOTES.md"), ai)
 
     report = {
         "$comment": ["TESLİM PAKETİ — ÜRETİLMİŞ DOSYA (04_BUILD/handoff.py).",
@@ -631,18 +850,28 @@ def run(root, args):
         "checksumFiles": counts,
         "handbook": "08_OUTPUT/KDP_UPLOAD_HANDBOOK.md",
         "previewerChecklist": "08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md",
+        "aiDisclosureNotes": "08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md",
         "handbookBytes": len(hb.encode()),
         "previewerBytes": len(pv.encode()),
         "blockingFounderActions": [a for a in md["founderActions"]
                                    if a["blocking"]]
-        + [{"id": "COVER-ART", "field": "07_ASSETS/raw/cover/",
-            "blocking": True, "note": "Kapak sanatı yok."},
-           {"id": "APLUS-ART", "field": "07_ASSETS/raw/aplus/",
-            "blocking": True, "note": "A+ görselleri yok."},
-           {"id": "PLAYTEST", "field": "01_SOURCE/playtests/",
+        + ([] if pkgs.get("paperback", {}).get("cover") else
+           [{"id": "COVER-ART", "field": "07_ASSETS/raw/cover/",
+             "blocking": True, "note": "Kapak sanatı yok."}])
+        + ([{"id": "APLUS-05-ART", "field": "07_ASSETS/raw/aplus/",
+             "blocking": False,
+             "note": "Modül 05 (eller/masa) sanatı teslim edilmedi. "
+                     "Yüklenebilir A+ projesi %d modüldür; metni hazır ve "
+                     "sanat gelirse eklenir."
+                     % len(pkgs.get("aplus", {}).get("ready", []))}]
+           if pkgs.get("aplus", {}).get("withoutArt") else [])
+        + [{"id": "PLAYTEST", "field": "01_SOURCE/playtests/",
             "blocking": True, "note": "Dış oynanabilirlik testi 0 oturum."}],
         "errors": errs,
     }
+    allacts = report["blockingFounderActions"]
+    report["founderActions"] = allacts
+    report["blockingFounderActions"] = [a for a in allacts if a["blocking"]]
     dump(os.path.join(root, "06_REPORTS", "handoff.json"), report)
 
     for ed in ("paperback", "hardcover"):
@@ -653,19 +882,28 @@ def run(root, args):
                      p["interior"]["bytes"] / 1024.0,
                      "kapak ⛔" if not p["cover"] else "kapak ✓"))
     if k:
-        print("  %-10s EPUB 3 · %6.1f KB · kapak ⛔"
-              % ("kindle", k["epub"]["bytes"] / 1024.0))
+        print("  %-10s EPUB 3 · %6.1f KB · kapak %s"
+              % ("kindle", k["epub"]["bytes"] / 1024.0,
+                 "✓" if k.get("cover") else "⛔"))
     if pkgs.get("aplus"):
-        print("  %-10s %d modül · %d görsel eksik"
-              % ("a+", pkgs["aplus"]["modules"], pkgs["aplus"]["imagesMissing"]))
+        ap = pkgs["aplus"]
+        print("  %-10s %d/%d modül HAZIR · sanatsız: %s"
+              % ("a+", len(ap["ready"]), ap["modules"],
+                 ", ".join(ap["withoutArt"]) or "yok"))
     print("\n  ✓ 08_OUTPUT/KDP_UPLOAD_HANDBOOK.md      (%d bayt)" % len(hb.encode()))
     print("  ✓ 08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md  (%d bayt)" % len(pv.encode()))
+    print("  ✓ 08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md   (%d bayt)" % len(ai.encode()))
     print("  ✓ SHA256SUMS: %s"
           % " · ".join("%s %d" % (k2, v) for k2, v in counts.items()))
     print("\n  ⛔ BLOKLAYICI KURUCU EYLEMİ: %d"
           % len(report["blockingFounderActions"]))
     for a in report["blockingFounderActions"]:
-        print("     · %-12s %s" % (a["id"], a["field"]))
+        print("     · %-14s %s" % (a["id"], a["field"]))
+    other = [a for a in report["founderActions"] if not a["blocking"]]
+    if other:
+        print("  · bloklamayan kurucu eylemi: %d" % len(other))
+        for a in other:
+            print("     · %-14s %s" % (a["id"], a["field"]))
     for e in errs:
         print("  ✗ %s" % e)
     print("=" * 74)
@@ -694,7 +932,7 @@ def run_check(root):
         return 0
     r = load(p)
     errs = list(r.get("errors") or [])
-    for f in ("handbook", "previewerChecklist"):
+    for f in ("handbook", "previewerChecklist", "aiDisclosureNotes"):
         if not os.path.exists(os.path.join(root, r[f])):
             errs.append("%s dosyası yok: %s" % (f, r[f]))
     for ed in ("paperback", "hardcover"):

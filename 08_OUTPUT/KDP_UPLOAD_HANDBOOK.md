@@ -24,17 +24,15 @@ published.** No proof copy has been ordered.
 
 | Format | Interior | Cover | Ready to upload |
 |---|---|---|---|
-| Paperback | ✅ 160 pp | ⛔ artwork missing | interior yes, cover no |
-| Hardcover | ✅ 160 pp | ⛔ artwork missing | interior yes, cover no |
-| Kindle | ✅ EPUB 3 | ⛔ artwork missing | manuscript yes, cover no |
-| A+ Content | copy ✅ 6 modules | ⛔ 9 images missing | no |
+| Paperback | ✅ 160 pp | ✅ wrap PDF | **yes** |
+| Hardcover | ✅ 160 pp | ✅ wrap PDF | **yes** |
+| Kindle | ✅ EPUB 3 | ✅ 1600 × 2560 JPG | **yes** |
+| A+ Content | copy ✅ 6 modules | ✅ 5 of 6 modules have art | **yes, 5 modules** |
 
 ---
 
 ## Blocking founder actions
 
-- ⛔ **A6** — `founder.authorBio`
-  `founder.authorBio` is empty. KDP asks for an author biography, and on a sibling title KDP rejected a placeholder biography as template text (12 August 2026). Write a real one before publishing.
 - ⛔ **AI-DECL** — `founder.aiDisclosure.founderConfirmed`
   The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`.
 - · **ISBN-paperback** — `founder.isbn.paperback`
@@ -148,27 +146,34 @@ declaration on your behalf. The facts you need in order to answer:
 - 160 pages · trim 8.5 × 11.0 in
 - no bleed · inside margin 0.5 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `f834a260a24d5ec4441774b8a05a97826b457f979e48d4ceaaedc716b5208672`
+- SHA-256 `f117284fbc4cb35b9cfc8ffdfd92d7d6880cce8dc2592ae26917fa02e7bc6687`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.5 x 11.0 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
 
 ### 15 · Cover upload
-**FOUNDER ACTION** ⛔ **NOT READY.** No cover artwork exists yet. Generate it from
-`07_ASSETS/IMAGE_PROMPT_LIBRARY.html`, drop the raw files into
-`07_ASSETS/raw/cover/`, then run `04_BUILD/cover_artwork.py --upscale`
-and `04_BUILD/covers.py`.
+*agent prepared* Upload:
 
-*agent prepared* The geometry is already computed from this exact page count:
-- spine **0.3603 in** (160 pages ×
-  0.002252 in/page)
-- full wrap **17.6103 × 11.2500 in**
-- at 300 ppi that is **5283 × 3375 px**
-- spine text is allowed
-  (KDP threshold 79 pages)
+```
+08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf
+```
+- full wrap **17.6103 × 11.2500 in**, including
+  0.125 in bleed on all four sides
+- spine **0.3603 in**, computed from this exact page count
+  (160 pages × 0.002252 in/page)
+- artwork embedded at **5283 × 3375 px**
+  (300 ppi); all type is **vector**, not baked into the image
+- SHA-256 `2ee57c58ac15dc1b8a1e21452b01d9504eed131e84547ebbb6f0b1192c3522a1`
 
-⚠ If you rebuild the interior and the page count changes, this spine is wrong
-and the cover will not fit. Rebuild the cover after the interior, never before.
+Typography placement was measured, not eyeballed. The title and author sit in
+the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
+0–255 scale), so no panel, box or scrim sits behind them. The spine title is
+8.75 pt, sized to fit the measured clean run of the spine rather than
+chosen by eye. The back copy sits over a feathered wash taken from the
+artwork's own parchment tone — not a white panel.
+
+⚠ The barcode area (lower right of the back panel) is deliberately empty.
+**Do not place anything there** — Amazon prints the barcode itself.
 
 ### 16 · Previewer
 **FOUNDER ACTION** Open the KDP Previewer and work through
@@ -291,27 +296,34 @@ declaration on your behalf. The facts you need in order to answer:
 - 160 pages · trim 8.25 × 11.0 in
 - no bleed · inside margin 0.625 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `c615a6fb8c651d76a2af11f36552dfe5dd6998afd40cc8ebd0256e002f93e5ff`
+- SHA-256 `5c53a429828431e03bbd89535ab7809c7a4a79b69e9a02c283b6bb19bb7ea81c`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.25 x 11.0 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
 
 ### 15 · Cover upload
-**FOUNDER ACTION** ⛔ **NOT READY.** No cover artwork exists yet. Generate it from
-`07_ASSETS/IMAGE_PROMPT_LIBRARY.html`, drop the raw files into
-`07_ASSETS/raw/cover/`, then run `04_BUILD/cover_artwork.py --upscale`
-and `04_BUILD/covers.py`.
+*agent prepared* Upload:
 
-*agent prepared* The geometry is already computed from this exact page count:
-- spine **0.4600 in** (160 pages ×
-  0.0025 in/page + board allowance)
-- full wrap **17.2100 × 11.2500 in**
-- at 300 ppi that is **5163 × 3375 px**
-- spine text is allowed
-  (KDP threshold 79 pages)
+```
+08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf
+```
+- full wrap **17.2100 × 11.2500 in**, including
+  0.125 in bleed on all four sides
+- spine **0.4600 in**, computed from this exact page count
+  (160 pages × 0.0025 in/page plus a board allowance)
+- artwork embedded at **5163 × 3375 px**
+  (300 ppi); all type is **vector**, not baked into the image
+- SHA-256 `e78c2bdfa5fa9059213aeb07bd00ac24fba8de816940a912faf59b1f287865e4`
 
-⚠ If you rebuild the interior and the page count changes, this spine is wrong
-and the cover will not fit. Rebuild the cover after the interior, never before.
+Typography placement was measured, not eyeballed. The title and author sit in
+the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
+0–255 scale), so no panel, box or scrim sits behind them. The spine title is
+8.75 pt, sized to fit the measured clean run of the spine rather than
+chosen by eye. The back copy sits over a feathered wash taken from the
+artwork's own parchment tone — not a white panel.
+
+⚠ The barcode area (lower right of the back panel) is deliberately empty.
+**Do not place anything there** — Amazon prints the barcode itself.
 
 ### 16 · Previewer
 **FOUNDER ACTION** Open the KDP Previewer and work through
@@ -371,10 +383,20 @@ break their accessibility settings, to preserve a promise that reflowing keeps
 anyway: each game is one uninterrupted entry.
 
 ### 15 · Cover upload
-**FOUNDER ACTION** ⛔ **NOT READY.** Kindle requires a cover image (1.6:1 ratio, at least
-1000 px on the shorter side; 2560 × 1600 px is the recommended size). It will
-be produced from the same artwork as the print cover. No placeholder cover has
-been inserted.
+*agent prepared* Upload:
+
+```
+08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg
+```
+- **1600 × 2560 px** (Amazon's recommended 1:1.6), JPEG
+- SHA-256 `5f68c2b4e16b93299ecbbb22fc799720414243e414457206737709032a546b33`
+- derived from the **front panel** of the print artwork, not from the wrap —
+  an ebook cover must not show a spine or a back panel
+
+⚠ This file carries **no typography**. Kindle covers are set separately, at
+their own proportions; the print title block does not scale to 1:1.6 without
+being rebuilt. **Founder action:** either accept the artwork-only cover or ask
+for a typeset Kindle cover as a follow-up.
 
 ### 16 · Previewer
 **FOUNDER ACTION** Use the Kindle Previewer. Check in particular: the diagrams at the
@@ -417,9 +439,19 @@ retired one, choose the closest and note the change — do not force an image
 into a module with a different aspect ratio.
 
 ### 5 · Image upload
-**FOUNDER ACTION** ⛔ **NOT READY.** 9 images are missing. Generate them
-from `07_ASSETS/IMAGE_PROMPT_LIBRARY.html`, put them in
-`07_ASSETS/raw/aplus/`, then run `04_BUILD/aplus.py`.
+*agent prepared* Processed and sized in `07_ASSETS/web/aplus/`. Ready modules:
+**APLUS-01, APLUS-02, APLUS-03, APLUS-04, APLUS-06**.
+
+⚠ **One module has no artwork: APLUS-05.** The
+file delivered as `aplus-05-play-family-discovery.png` is, on inspection, the
+**module 06** brief — rows of game objects on a pale ground with the right
+third left clear. It was mapped to module 06 by content rather than by
+filename. Module 05 (hands over a board, no faces) was not delivered, so the
+uploadable A+ project is **5 modules**, not six. Its copy is written and
+waiting if you generate the art later.
+
+⚠ Module 04 was delivered as a single 2 × 2 composite. It was **split** into
+four 220 × 220 squares by measuring the gutters — no pixels were invented.
 
 ⚠ The generated images contain **no text**. All wording goes in Amazon's own
 fields, where it stays searchable and correctable.

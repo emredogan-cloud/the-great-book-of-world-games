@@ -37,10 +37,26 @@
    ],
    "title": "56 games. 39 cultures. One table.",
    "body": "This is a reference book you play from, not one you only read. Every game is set out across two facing pages so the book lies open on the table and nobody turns a page mid-turn. Every rule set names the work and the pages it was read from, and where a record is incomplete the book says so on the page instead of filling the gap quietly.",
-   "imagesPresent": [],
-   "imagesMissing": [
-    "aplus-01-hero-world-of-games.png"
+   "processed": [
+    {
+     "file": "07_ASSETS/web/aplus/aplus-01-hero-world-of-games.png",
+     "widthPx": 970,
+     "heightPx": 600,
+     "bytes": 964255,
+     "sha256": "3d2758389d5ac20b61175728fd364f34c27b1b652867cd8a8c8c3ca75ca8a48d"
+    }
    ],
+   "rawSource": {
+    "file": "07_ASSETS/raw/aplus/aplus-01-hero-world-of-games.png",
+    "widthPx": 1565,
+    "heightPx": 1005,
+    "sha256": "e184e4cdbafd6c95ef6d798a70358079581f42879fa98951cd830a7043baac19"
+   },
+   "imageStatus": "READY",
+   "imagesPresent": [
+    "07_ASSETS/web/aplus/aplus-01-hero-world-of-games.png"
+   ],
+   "imagesMissing": [],
    "titleChars": 33,
    "bodyChars": 337
   },
@@ -56,10 +72,26 @@
    ],
    "title": "Sorted by how they work, not by where they are from",
    "body": "Most collections file games by country, which teaches geography and hides the interesting part. This one files them by mechanism, so the sowing games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part. 39 cultures are represented, from Sumer to the Sámi, and each entry names the culture precisely rather than a continent.",
-   "imagesPresent": [],
-   "imagesMissing": [
-    "aplus-02-cultural-diversity.png"
+   "processed": [
+    {
+     "file": "07_ASSETS/web/aplus/aplus-02-cultural-diversity.png",
+     "widthPx": 970,
+     "heightPx": 600,
+     "bytes": 1015028,
+     "sha256": "0bb445e8fae2d1ea3c824006ee235faa2784818990a72a6c3fedb9848d0dc1cc"
+    }
    ],
+   "rawSource": {
+    "file": "07_ASSETS/raw/aplus/aplus-02-cultural-diversity.png",
+    "widthPx": 1536,
+    "heightPx": 1024,
+    "sha256": "bbf048a75f56bd04e49d474af84814cef1823eac150a7ed98b23343935e56e5b"
+   },
+   "imageStatus": "READY",
+   "imagesPresent": [
+    "07_ASSETS/web/aplus/aplus-02-cultural-diversity.png"
+   ],
+   "imagesMissing": [],
    "titleChars": 51,
    "bodyChars": 368
   },
@@ -75,10 +107,26 @@
    ],
    "title": "Everything you need for one game, on one opening",
    "body": "Players, time, age, materials and difficulty at the top. What to use instead of what — buttons, coins, dried beans, an egg box. Numbered rules, one action to a line. A board diagram drawn to scale. Then three questions every table actually argues about: what happens on a draw, what happens if nobody can move, and what happens when somebody plays an illegal move. Almost nothing in this book has to be bought.",
-   "imagesPresent": [],
-   "imagesMissing": [
-    "aplus-03-how-the-book-works.png"
+   "processed": [
+    {
+     "file": "07_ASSETS/web/aplus/aplus-03-how-the-book-works.png",
+     "widthPx": 300,
+     "heightPx": 400,
+     "bytes": 173536,
+     "sha256": "2dfae992a8671cf3a1bf54e1d86f3edafd86db1a361cb7121b9b563f989235eb"
+    }
    ],
+   "rawSource": {
+    "file": "07_ASSETS/raw/aplus/aplus-03-how-the-book-works.png",
+    "widthPx": 1024,
+    "heightPx": 1536,
+    "sha256": "a4b3af5566a187ef27d536fcd14a7760b20a867ee739aaf53f77eff63aa203a9"
+   },
+   "imageStatus": "READY",
+   "imagesPresent": [
+    "07_ASSETS/web/aplus/aplus-03-how-the-book-works.png"
+   ],
+   "imagesMissing": [],
    "titleChars": 48,
    "bodyChars": 410
   },
@@ -100,13 +148,58 @@
    ],
    "title": "7 families of play",
    "body": "Sowing · Hunt and siege · Race home · Line and territory · War board · Chance and nerve · Games without a board. Each family opens with a portrait of the idea behind it, and each has a written rule for what belongs in it and what does not. The boundaries are argued, not assumed.",
-   "imagesPresent": [],
-   "imagesMissing": [
-    "aplus-04-types-of-games-a.png",
-    "aplus-04-types-of-games-b.png",
-    "aplus-04-types-of-games-c.png",
-    "aplus-04-types-of-games-d.png"
+   "processed": [
+    {
+     "file": "07_ASSETS/web/aplus/aplus-04-types-of-games-a.png",
+     "widthPx": 220,
+     "heightPx": 220,
+     "bytes": 78282,
+     "sha256": "f0ec090b6d600abe260362ad110089eda41b45a61ba68a28e37ddf09cb0be36a"
+    },
+    {
+     "file": "07_ASSETS/web/aplus/aplus-04-types-of-games-b.png",
+     "widthPx": 220,
+     "heightPx": 220,
+     "bytes": 76887,
+     "sha256": "a4f746ffb3bfd89c8ef795352731e6777569b5db715db12e91a92cdb47e40f7b"
+    },
+    {
+     "file": "07_ASSETS/web/aplus/aplus-04-types-of-games-c.png",
+     "widthPx": 220,
+     "heightPx": 220,
+     "bytes": 88823,
+     "sha256": "8cac2c487e3920a00a14e7889b257d4273bd1c9f5c0a367638cabbec838f8a0d"
+    },
+    {
+     "file": "07_ASSETS/web/aplus/aplus-04-types-of-games-d.png",
+     "widthPx": 220,
+     "heightPx": 220,
+     "bytes": 70591,
+     "sha256": "01f4b97e6ef2418fcd8d6433d0eb9a2805f10548fd0830ab98b04870f9673b08"
+    }
    ],
+   "rawSource": {
+    "file": "07_ASSETS/raw/aplus/aplus-04-types-of-games.png",
+    "widthPx": 1254,
+    "heightPx": 1254,
+    "sha256": "3fe8678787277b661c63fa0300d069245ad95c0214238fc769d01afc9113a894"
+   },
+   "imageStatus": "READY",
+   "imagesPresent": [
+    "07_ASSETS/web/aplus/aplus-04-types-of-games-a.png",
+    "07_ASSETS/web/aplus/aplus-04-types-of-games-b.png",
+    "07_ASSETS/web/aplus/aplus-04-types-of-games-c.png",
+    "07_ASSETS/web/aplus/aplus-04-types-of-games-d.png"
+   ],
+   "imagesMissing": [],
+   "split": {
+    "gutterPx": [
+     623,
+     634
+    ],
+    "panels": 4,
+    "$note": "kurucu tek 2×2 bileşik teslim etti; dört panel ÖLÇÜLEREK ayrıldı"
+   },
    "titleChars": 18,
    "bodyChars": 279
   },
@@ -122,6 +215,9 @@
    ],
    "title": "For a table with an adult and a child at it",
    "body": "Ages are given per game and they mean something: the age at which a player can hold the whole game in their head. Every entry ends with a shorter version to start with — a smaller board, fewer pieces — which is the fastest way to teach a game to somebody who has not read the page.",
+   "processed": [],
+   "rawSource": null,
+   "imageStatus": "MISSING",
    "imagesPresent": [],
    "imagesMissing": [
     "aplus-05-play-family-discovery.png"
@@ -141,10 +237,26 @@
    ],
    "title": "Board templates, a glossary and three indexes",
    "body": "The back of the book is the part that gets used. Full-size board templates you can photocopy — the page size was chosen for exactly that. A materials guide. A glossary of the terms the book uses for mechanics. Sources for every game. Three indexes, by culture, by number of players, and by time and age. And one page listing the game origin stories that are widely repeated and are not true.",
-   "imagesPresent": [],
-   "imagesMissing": [
-    "aplus-06-complete-collection.png"
+   "processed": [
+    {
+     "file": "07_ASSETS/web/aplus/aplus-06-complete-collection.png",
+     "widthPx": 970,
+     "heightPx": 600,
+     "bytes": 842573,
+     "sha256": "c89a0373e94fe9f8bce255f3bee5ced51f24b99590922b5fc8cd1313e61c9ed4"
+    }
    ],
+   "rawSource": {
+    "file": "07_ASSETS/raw/aplus/aplus-05-play-family-discovery.png",
+    "widthPx": 1774,
+    "heightPx": 887,
+    "sha256": "306fa91aae729d1c1559c30e3578824217085e7cb055ecffec98d3a374ea6e39"
+   },
+   "imageStatus": "READY",
+   "imagesPresent": [
+    "07_ASSETS/web/aplus/aplus-06-complete-collection.png"
+   ],
+   "imagesMissing": [],
    "titleChars": 45,
    "bodyChars": 391
   }
@@ -153,6 +265,24 @@
   "forbiddenPatterns": 7,
   "hits": []
  },
- "imagesMissing": 9,
- "status": "BLOCKED — kurucu görselleri bekleniyor"
+ "imagesMissing": 1,
+ "modulesReady": [
+  "APLUS-01",
+  "APLUS-02",
+  "APLUS-03",
+  "APLUS-04",
+  "APLUS-06"
+ ],
+ "modulesWithoutArt": [
+  "APLUS-05"
+ ],
+ "contentMap": {
+  "aplus-01-hero-world-of-games.png": "APLUS-01",
+  "aplus-02-cultural-diversity.png": "APLUS-02",
+  "aplus-03-how-the-book-works.png": "APLUS-03",
+  "aplus-04-types-of-games.png": "APLUS-04",
+  "aplus-05-play-family-discovery.png": "APLUS-06"
+ },
+ "$contentMapNote": "Görseller DOSYA ADINA göre değil İÇERİĞE göre eşlendi. 'aplus-05-play-family-discovery.png' adlı dosyanın içeriği MODÜL 06'nın istemidir (soluk zeminde sıralanmış nesneler, sağ üçte biri boş) ve oraya bağlandı. Modül 05'in sanatı teslim edilmedi.",
+ "status": "READY"
 }

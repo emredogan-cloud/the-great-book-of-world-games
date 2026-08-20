@@ -28,47 +28,54 @@
   "forbiddenPatterns": 7,
   "hits": []
  },
- "imagesMissing": 9,
- "status": "BLOCKED — kurucu görselleri bekleniyor",
+ "imagesMissing": 1,
+ "modulesReady": [
+  "APLUS-01",
+  "APLUS-02",
+  "APLUS-03",
+  "APLUS-04",
+  "APLUS-06"
+ ],
+ "modulesWithoutArt": [
+  "APLUS-05"
+ ],
+ "contentMap": {
+  "aplus-01-hero-world-of-games.png": "APLUS-01",
+  "aplus-02-cultural-diversity.png": "APLUS-02",
+  "aplus-03-how-the-book-works.png": "APLUS-03",
+  "aplus-04-types-of-games.png": "APLUS-04",
+  "aplus-05-play-family-discovery.png": "APLUS-06"
+ },
+ "$contentMapNote": "Görseller DOSYA ADINA göre değil İÇERİĞE göre eşlendi. 'aplus-05-play-family-discovery.png' adlı dosyanın içeriği MODÜL 06'nın istemidir (soluk zeminde sıralanmış nesneler, sağ üçte biri boş) ve oraya bağlandı. Modül 05'in sanatı teslim edilmedi.",
+ "status": "READY",
  "moduleSummary": [
   {
    "id": "APLUS-01",
    "type": "Standard Image Header with Text",
    "titleChars": 33,
    "bodyChars": 337,
-   "imagesMissing": [
-    "aplus-01-hero-world-of-games.png"
-   ]
+   "imagesMissing": []
   },
   {
    "id": "APLUS-02",
    "type": "Standard Image & Text Overlay",
    "titleChars": 51,
    "bodyChars": 368,
-   "imagesMissing": [
-    "aplus-02-cultural-diversity.png"
-   ]
+   "imagesMissing": []
   },
   {
    "id": "APLUS-03",
    "type": "Standard Single Image & Sidebar",
    "titleChars": 48,
    "bodyChars": 410,
-   "imagesMissing": [
-    "aplus-03-how-the-book-works.png"
-   ]
+   "imagesMissing": []
   },
   {
    "id": "APLUS-04",
    "type": "Standard Four Image & Text",
    "titleChars": 18,
    "bodyChars": 279,
-   "imagesMissing": [
-    "aplus-04-types-of-games-a.png",
-    "aplus-04-types-of-games-b.png",
-    "aplus-04-types-of-games-c.png",
-    "aplus-04-types-of-games-d.png"
-   ]
+   "imagesMissing": []
   },
   {
    "id": "APLUS-05",
@@ -84,9 +91,7 @@
    "type": "Standard Image Header with Text",
    "titleChars": 45,
    "bodyChars": 391,
-   "imagesMissing": [
-    "aplus-06-complete-collection.png"
-   ]
+   "imagesMissing": []
   }
  ]
 }

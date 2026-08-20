@@ -61,6 +61,7 @@
 # demektir. İkisi de üretilmiş metindir; proza taşımazlar.
 !08_OUTPUT/KDP_UPLOAD_HANDBOOK.md
 !08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md
+!08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md
 
 09_ARCHIVE/*
 !09_ARCHIVE/.gitkeep

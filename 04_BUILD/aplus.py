@@ -157,6 +157,160 @@ def modules(m):
     ]
 
 
+
+# ── GÖRSEL İŞLEME ────────────────────────────────────────────────────────
+#
+# ⚠ DOSYA ADINA GÜVENİLMEZ (kurucu § 2). Teslim edilen görseller AÇILDI ve
+# içindekine bakıldı. Bir dosya `aplus-05-play-family-discovery.png` adını
+# taşıyordu ama içeriği MODÜL 06'nın istemidir: soluk zeminde düzenli
+# sıralara dizilmiş çok sayıda oyun nesnesi ve SAĞ ÜÇTE BİRİ boş. Modül
+# 05'in istemi (masa hizasından, elleri gösteren, yüzsüz bir kare) DEĞİLDİR.
+# Görsel, adının değil İÇERİĞİNİN modülüne bağlandı.
+CONTENT_MAP = {
+    "aplus-01-hero-world-of-games.png": "APLUS-01",
+    "aplus-02-cultural-diversity.png": "APLUS-02",
+    "aplus-03-how-the-book-works.png": "APLUS-03",
+    "aplus-04-types-of-games.png": "APLUS-04",
+    "aplus-05-play-family-discovery.png": "APLUS-06",
+}
+# Kırpma çıpası: kompozisyonun KORUNACAK yanı. Hero ve koleksiyon
+# modüllerinin SAĞ üçte biri metin içindir ve boş kalmalıdır; kırpma
+# soldan yapılır.
+CROP_ANCHOR = {"APLUS-01": "right", "APLUS-02": "center",
+               "APLUS-03": "center", "APLUS-04": "center",
+               "APLUS-06": "right"}
+
+
+def crop_to(im, tw, th, anchor="center"):
+    from PIL import Image
+    want = tw / float(th)
+    have = im.width / float(im.height)
+    if abs(have - want) > 1e-4:
+        if have > want:
+            nw = int(round(im.height * want))
+            if anchor == "right":
+                x = im.width - nw
+            elif anchor == "left":
+                x = 0
+            else:
+                x = (im.width - nw) // 2
+            im = im.crop((x, 0, x + nw, im.height))
+        else:
+            nh = int(round(im.width / want))
+            y = (im.height - nh) // 2
+            im = im.crop((0, y, im.width, y + nh))
+    return im.resize((tw, th), Image.LANCZOS)
+
+
+def split_quad(im):
+    """2×2 bileşik kareyi DÖRT kareye böler.
+
+    Kurucu `Standard Four Image & Text` için dört ayrı kare yerine tek bir
+    2×2 bileşik teslim etti. Bölmek bir ÜRETİM değil bir AYIRMA işidir:
+    piksel eklenmez, yalnızca zaten orada olan dört panel kesilir. Panel
+    sınırları, aradaki açık ayraç sütun/satırı ÖLÇÜLEREK bulunur.
+    """
+    import statistics
+    g = im.convert("L")
+    W, H = g.size
+    cols = [statistics.mean(g.crop((x, 0, x + 1, H)).getdata()) for x in range(W)]
+    rows = [statistics.mean(g.crop((0, y, W, y + 1)).getdata()) for y in range(H)]
+
+    def gutter(v, lo, hi):
+        seg = v[lo:hi]
+        return lo + max(range(len(seg)), key=lambda i: seg[i])
+
+    cx = gutter(cols, int(W * 0.42), int(W * 0.58))
+    cy = gutter(rows, int(H * 0.42), int(H * 0.58))
+    pad = int(min(W, H) * 0.012)
+    return [im.crop((pad, pad, cx - pad, cy - pad)),
+            im.crop((cx + pad, pad, W - pad, cy - pad)),
+            im.crop((pad, cy + pad, cx - pad, H - pad)),
+            im.crop((cx + pad, cy + pad, W - pad, H - pad))], (cx, cy)
+
+
+def process_images(root, mods, verbose=True):
+    """Ham A+ sanatını modül ölçülerine getirir. HAM DOSYAYA YAZMAZ."""
+    from PIL import Image
+    raw = os.path.join(root, "07_ASSETS", "raw", "aplus")
+    out_dir = os.path.join(root, "07_ASSETS", "web", "aplus")
+    os.makedirs(out_dir, exist_ok=True)
+    by_id = {m["id"]: m for m in mods}
+    delivered = {}
+    if os.path.isdir(raw):
+        for fn in os.listdir(raw):
+            if fn.startswith("."):
+                continue
+            key = fn.strip()
+            mid = CONTENT_MAP.get(key)
+            if mid:
+                delivered[mid] = os.path.join(raw, fn)
+
+    results = []
+    for m in mods:
+        src = delivered.get(m["id"])
+        rec = {"id": m["id"], "module": m["moduleType"],
+               "targetPx": m["imagePx"], "source": None, "outputs": [],
+               "status": "MISSING"}
+        if not src:
+            results.append(rec)
+            if verbose:
+                print("  %-10s ⛔ ham görsel YOK" % m["id"])
+            continue
+        im = Image.open(src)
+        if im.mode in ("RGBA", "LA", "P"):
+            im = im.convert("RGBA")
+            bg = Image.new("RGBA", im.size, (255, 255, 255, 255))
+            im = Image.alpha_composite(bg, im)
+        im = im.convert("RGB")
+        rec["source"] = {"file": os.path.relpath(src, root).replace("\t", ""),
+                         "widthPx": im.width, "heightPx": im.height,
+                         "sha256": sha256(src)}
+        tw, th = m["imagePx"]
+        if m["id"] == "APLUS-04":
+            quads, cut = split_quad(im)
+            rec["split"] = {"gutterPx": list(cut), "panels": 4,
+                            "$note": "kurucu tek 2×2 bileşik teslim etti; "
+                                     "dört panel ÖLÇÜLEREK ayrıldı"}
+            names = m.get("imageSet") or []
+            for q, name in zip(quads, names):
+                path = os.path.join(out_dir, name)
+                crop_to(q, tw, th, "center").save(path, "PNG", optimize=True)
+                rec["outputs"].append(_out(root, path, tw, th))
+        else:
+            path = os.path.join(out_dir, m["image"])
+            crop_to(im, tw, th, CROP_ANCHOR.get(m["id"], "center")).save(
+                path, "PNG", optimize=True)
+            rec["outputs"].append(_out(root, path, tw, th))
+        big = max(o["bytes"] for o in rec["outputs"])
+        rec["status"] = "READY" if big <= 2 * 1024 * 1024 else "TOO-LARGE"
+        rec["scaleFactor"] = round(tw / float(im.width), 4)
+        rec["upscaled"] = im.width < tw or im.height < th
+        results.append(rec)
+        if verbose:
+            print("  %-10s %d × %d → %s · ×%.3f · %s"
+                  % (m["id"], im.width, im.height,
+                     " + ".join("%d×%d" % (o["widthPx"], o["heightPx"])
+                                for o in rec["outputs"]),
+                     rec["scaleFactor"], rec["status"]))
+    return results
+
+
+def _out(root, path, tw, th):
+    return {"file": os.path.relpath(path, root), "widthPx": tw,
+            "heightPx": th, "bytes": os.path.getsize(path),
+            "sha256": sha256(path)}
+
+
+def sha256(p):
+    import hashlib
+    h = hashlib.sha256()
+    with open(p, "rb") as fh:
+        for c in iter(lambda: fh.read(1 << 16), b""):
+            h.update(c)
+    return h.hexdigest()
+
+
 def claim_scan(mods, measured) -> list:
     """Yasak iddia + ÖLÇÜLMEMİŞ SAYI taraması."""
     hits = []
@@ -195,18 +349,28 @@ def run(root: str, args) -> int:
     mods = modules(measured)
     hits = claim_scan(mods, measured)
 
-    raw = os.path.join(root, "07_ASSETS", "raw", "aplus")
-    have = set(os.listdir(raw)) if os.path.isdir(raw) else set()
+    print("=" * 74)
+    print("  A+ GÖRSEL İŞLEME")
+    print("=" * 74)
+    proc = process_images(root, mods)
+    by_id = {r["id"]: r for r in proc}
     for m in mods:
-        wanted = m.get("imageSet") or [m["image"]]
-        m["imagesPresent"] = [w for w in wanted if w in have]
-        m["imagesMissing"] = [w for w in wanted if w not in have]
+        r = by_id.get(m["id"], {})
+        m["processed"] = r.get("outputs", [])
+        m["rawSource"] = r.get("source")
+        m["imageStatus"] = r.get("status", "MISSING")
+        m["imagesPresent"] = [o["file"] for o in m["processed"]]
+        m["imagesMissing"] = ([] if m["processed"]
+                              else (m.get("imageSet") or [m["image"]]))
+        if r.get("split"):
+            m["split"] = r["split"]
         m["titleChars"] = len(m["title"])
         m["bodyChars"] = len(m["body"])
 
     over = [(m["id"], m["titleChars"], m["bodyChars"]) for m in mods
             if m["titleChars"] > LIMIT_TITLE or m["bodyChars"] > LIMIT_BODY]
     missing = sum(len(m["imagesMissing"]) for m in mods)
+    ready = [m for m in mods if m["imageStatus"] == "READY"]
 
     payload = {
         "$comment": [
@@ -223,9 +387,18 @@ def run(root: str, args) -> int:
         "modules": mods,
         "claimScan": {"forbiddenPatterns": len(FORBIDDEN), "hits": hits},
         "imagesMissing": missing,
-        "status": ("READY" if not missing and not hits and not over
-                   else "BLOCKED — kurucu görselleri bekleniyor"
-                   if missing and not hits and not over else "DEFECT"),
+        "modulesReady": [m["id"] for m in ready],
+        "modulesWithoutArt": [m["id"] for m in mods if not m["processed"]],
+        "contentMap": CONTENT_MAP,
+        "$contentMapNote":
+            "Görseller DOSYA ADINA göre değil İÇERİĞE göre eşlendi. "
+            "'aplus-05-play-family-discovery.png' adlı dosyanın içeriği "
+            "MODÜL 06'nın istemidir (soluk zeminde sıralanmış nesneler, sağ "
+            "üçte biri boş) ve oraya bağlandı. Modül 05'in sanatı "
+            "teslim edilmedi.",
+        "status": ("READY" if len(ready) >= 5 and not hits and not over
+                   else "PARTIAL — %d/%d modül hazır" % (len(ready), len(mods))
+                   if ready and not hits and not over else "DEFECT"),
     }
     dump(os.path.join(root, "03_APLUS", "aplus_content.json"), payload)
     dump(os.path.join(root, "06_REPORTS", "aplus.json"),
@@ -248,6 +421,12 @@ def run(root: str, args) -> int:
         print("     başlık  (%d/%d) %s" % (m["titleChars"], LIMIT_TITLE,
                                            m["title"]))
         print("     gövde   (%d/%d)" % (m["bodyChars"], LIMIT_BODY))
+    print("\n── MODÜL HARİTASI ──")
+    for m in mods:
+        print("  %-10s %-34s %s" % (m["id"], m["name"],
+                                    "✓ " + ", ".join(os.path.basename(f)
+                                                     for f in m["imagesPresent"])
+                                    if m["imagesPresent"] else "⛔ sanat yok"))
     print("\n── İDDİA TARAMASI ── %d kalıp" % len(FORBIDDEN))
     if hits:
         for h in hits:
@@ -262,10 +441,12 @@ def run(root: str, args) -> int:
         print("  ✗ %s alan sınırını aşıyor (başlık %d · gövde %d)"
               % (mid, t, b))
     print("\n" + "=" * 74)
+    print("  hazır modül : %s" % ", ".join(m["id"] for m in ready))
     if missing:
-        print("  ⛔ VARLIK KAPISI: %d A+ görseli eksik." % missing)
-        print("     Metin ve harita HAZIR; paket TAM DEĞİL ve tam olduğu")
-        print("     İDDİA EDİLMİYOR. İstemler: 07_ASSETS/IMAGE_PROMPT_LIBRARY.html")
+        print("  ⛔ sanatı OLMAYAN modül: %s"
+              % ", ".join(m["id"] for m in mods if not m["processed"]))
+        print("     Metni hazır, görseli yok. Yüklenebilir A+ projesi %d "
+              "modülden oluşur." % len(ready))
     print("  durum: %s" % payload["status"])
     print("=" * 74)
     return 1 if (hits or over) else 0

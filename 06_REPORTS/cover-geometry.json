@@ -77,7 +77,7 @@
     "frontOnlyWidthPx": 2588,
     "frontOnlyHeightPx": 3375
    },
-   "interiorSha256": "f834a260a24d5ec4441774b8a05a97826b457f979e48d4ceaaedc716b5208672",
+   "interiorSha256": "f117284fbc4cb35b9cfc8ffdfd92d7d6880cce8dc2592ae26917fa02e7bc6687",
    "interiorFile": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf"
   },
   "hardcover": {
@@ -152,14 +152,33 @@
    },
    "$hardcoverWarning": "CİLTLİ GEOMETRİ HİPOTEZDİR. KDP ciltli kapak şablonunu bir üreteçle verir; kalıp payı, menteşe ve tahta kalınlığı oradan okunur. KURUCU EYLEMİ: şablonu indir, buradaki sırt ve sarım ölçüleriyle KARŞILAŞTIR, farklıysa project_config.json içine gerçek değerleri yaz.",
    "founderConfirmedTemplate": false,
-   "interiorSha256": "c615a6fb8c651d76a2af11f36552dfe5dd6998afd40cc8ebd0256e002f93e5ff",
+   "interiorSha256": "5c53a429828431e03bbd89535ab7809c7a4a79b69e9a02c283b6bb19bb7ea81c",
    "interiorFile": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf"
   }
  },
  "rawArtwork": {
   "dir": "07_ASSETS/raw/cover",
-  "files": []
+  "files": [
+   {
+    "file": "\tCOVER-01.png",
+    "bytes": 3305799,
+    "sha256": "7b8e4056c0b826a6f6d10c3b08e921d04f4eafc32eb41390296282f3c90c52d0",
+    "widthPx": 1570,
+    "heightPx": 1002,
+    "mode": "RGBA",
+    "format": "PNG"
+   },
+   {
+    "file": "\tCOVER-02.png",
+    "bytes": 3381917,
+    "sha256": "6c5d379257851f888a26b295198e06d3d6b3075c73ccab56de1b806f069032a9",
+    "widthPx": 1569,
+    "heightPx": 1003,
+    "mode": "RGBA",
+    "format": "PNG"
+   }
+  ]
  },
- "artworkPresent": false,
- "compositionStatus": "BLOCKED — kurucu sanatı yok"
+ "artworkPresent": true,
+ "compositionStatus": "READY"
 }

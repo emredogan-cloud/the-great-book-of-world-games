@@ -80,9 +80,49 @@ this file was generated.
   count and a board allowance; KDP supplies a hardcover template that includes
   hinge and wrap allowances which cannot be derived. Download it and compare
   before generating hardcover artwork.
-- **A+ images: 9 missing.**
+- **A+ images: 1 missing.**
 - **Author biography is empty.** KDP rejected a placeholder biography on a
   sibling title. Write a real one before publishing.
+
+---
+
+## The cover — what to look at
+
+| | paperback | hardcover |
+|---|---|---|
+| Full wrap | 17.6103 × 11.2500 in | 17.2100 × 11.2500 in |
+| Spine | 0.3603 in | 0.4600 in |
+| Artwork | 5283 × 3375 px @ 300 ppi | 5163 × 3375 px |
+| Type | vector, not rasterised | same |
+
+1. **The spine.** It is 0.360 in — a thin spine, and the title is set at
+   8.75 pt to fit the part of the artwork that measured clean.
+   In the Previewer, check the spine text is centred between the two folds and
+   that no letter touches a fold. This is the single most common cover
+   rejection.
+2. **The barcode corner.** Lower right of the back panel is deliberately
+   empty. Confirm the Previewer's barcode overlay lands on empty artwork and
+   covers nothing.
+3. **The title block.** Sits in the quietest measured band of the artwork.
+   Check nothing in the map runs through a letter at full zoom.
+4. **The back copy.** It sits over a feathered wash drawn from the artwork's
+   own parchment tone. Check it reads as *paper*, not as a panel. If it looks
+   like a box, say so and it will be softened.
+5. **Bleed.** The artwork runs into all four bleed edges. Confirm no type is
+   within 0.25 in of any trim edge.
+
+---
+
+## A+ content — what to look at
+
+- **5 of 6 modules have artwork.** Module(s) without art:
+  **APLUS-05**.
+- The header modules keep their **right third clear** — that is where Amazon
+  puts your text. Check on **mobile** as well as desktop; the crop differs.
+- Module 04 is four separate 220 × 220 squares, split from one composite.
+  Check the four read as a set.
+- No A+ image contains a single character of text. If you see lettering in
+  any of them, stop — it means the wrong file was uploaded.
 
 ---
 

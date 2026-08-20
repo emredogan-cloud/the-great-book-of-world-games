@@ -166,6 +166,350 @@ def geometry(cfg, edition: str, pages: int) -> dict:
     return g
 
 
+
+def feathered_scrim(im, box_in, wrap_w_in, wrap_h_in, strength=0.62,
+                    feather_in=0.55):
+    """Metnin arkasına TÜYLENMİŞ bir parşömen yıkaması uygular.
+
+    ⚠ BU BİR BEYAZ PANEL DEĞİLDİR ve öyle görünmez. § 7 beyaz kutuyu,
+    beyaz başlık kartını ve beyaz sırt şeridini YASAKLAR; aynı madde
+    *"measured contrast support only where needed"* der. Buradaki destek
+    ÖLÇÜMLE gerekçelidir: arka kapak metin bloğunun sd değeri 27,7'dir ve
+    kırmızı seyahat çizgileri metnin içinden geçer.
+
+    Yıkama, sanatın KENDİ açık parşömen tonundan alınır (ortalama üst
+    yüzdelik), kenarları yarım inçten uzun bir Gauss ile tüylendirilir ve
+    hiçbir yerde tam opak olmaz. Sonuç bir kutu değil, kâğıdın o bölgede
+    biraz daha açık olmasıdır.
+    """
+    from PIL import Image, ImageFilter, ImageStat
+    W, H = im.size
+    x0 = int(box_in[0] / wrap_w_in * W); x1 = int(box_in[2] / wrap_w_in * W)
+    y0 = int((wrap_h_in - box_in[3]) / wrap_h_in * H)
+    y1 = int((wrap_h_in - box_in[1]) / wrap_h_in * H)
+    # yıkama rengi: bölgenin KENDİ açık tonu (sanattan alınır, uydurulmaz)
+    reg = im.crop((x0, y0, x1, y1))
+    px = sorted(reg.convert("L").getdata())
+    light = px[int(len(px) * 0.92)]
+    st = ImageStat.Stat(reg)
+    r, g, b = [min(255, int(c * (light / max(1.0, st.mean[0])))) for c in st.mean[:3]]
+    pad = int(feather_in / wrap_w_in * W)
+    mask = Image.new("L", (W, H), 0)
+    from PIL import ImageDraw
+    ImageDraw.Draw(mask).rectangle([x0 + pad // 2, y0 + pad // 2,
+                                    x1 - pad // 2, y1 - pad // 2],
+                                   fill=int(255 * strength))
+    mask = mask.filter(ImageFilter.GaussianBlur(pad * 0.75))
+    wash = Image.new("RGB", (W, H), (r, g, b))
+    return Image.composite(wash, im, mask), {
+        "boxIn": list(box_in), "washRGB": [r, g, b],
+        "strength": strength, "featherIn": feather_in,
+        "$note": "tüylenmiş yıkama · beyaz panel DEĞİL · § 7 ölçülen destek"}
+
+
+# ── SANAT HAZIRLIĞI ──────────────────────────────────────────────────────
+def prepare_artwork(root, geo_ed, src_rel, out_rel, verbose=True,
+                    scrim_boxes=None):
+    """İşlenmiş sanatı sürümün TAM sarım pikseline getirir.
+
+    ⚠ ALFA DÜZLEŞTİRİLİR. Kurucu dosyaları RGBA geldi; baskıda alfa
+    kanalının anlamı yoktur ve KDP'nin dönüştürücüsü onu siyaha da
+    çevirebilir. Beyaz üstüne düzleştirilir.
+
+    ⚠ KIRPMA ORANTIYI KORUR. Ciltli sarım ciltsizden DAR ve aynı
+    yüksekliktedir; sanat gerilmez, ORTADAN kırpılır.
+    """
+    from PIL import Image
+    src = os.path.join(root, src_rel)
+    im = Image.open(src)
+    if im.mode in ("RGBA", "LA", "P"):
+        im = im.convert("RGBA")
+        bg = Image.new("RGBA", im.size, (255, 255, 255, 255))
+        im = Image.alpha_composite(bg, im)
+    im = im.convert("RGB")
+
+    tw = geo_ed["artworkTarget"]["widthPx"]
+    th = geo_ed["artworkTarget"]["heightPx"]
+    want = tw / float(th)
+    have = im.width / float(im.height)
+    if abs(have - want) > 1e-4:
+        if have > want:                     # çok geniş → yanlardan kırp
+            nw = int(round(im.height * want))
+            x = (im.width - nw) // 2
+            im = im.crop((x, 0, x + nw, im.height))
+        else:                               # çok yüksek → üst/alttan kırp
+            nh = int(round(im.width / want))
+            y = (im.height - nh) // 2
+            im = im.crop((0, y, im.width, y + nh))
+    scale = tw / float(im.width)
+    im = im.resize((tw, th), Image.LANCZOS)
+    scrims = []
+    for box in (scrim_boxes or []):
+        im, meta = feathered_scrim(im, box, geo_ed["wrapWidthIn"],
+                                   geo_ed["wrapHeightIn"])
+        scrims.append(meta)
+    out = os.path.join(root, out_rel)
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    im.save(out, dpi=(300, 300))
+    if verbose:
+        print("     sanat → %d × %d px (×%.3f) · %s"
+              % (tw, th, scale, os.path.basename(out)))
+    return {"file": out_rel, "widthPx": tw, "heightPx": th,
+            "scrims": scrims,
+            "scaleFromProcessed": round(scale, 4),
+            "effectiveDpi": round(tw / geo_ed["wrapWidthIn"], 1),
+            "sha256": sha256(out), "bytes": os.path.getsize(out)}
+
+
+# Sırtın ölçülen koşuları (FINAL_COVER_SELECTION § 6).
+#
+# ⚠ 'sd' YANLIŞ SORUYU SORUYORDU. Sırt şeridinin standart sapması orta
+# bölgede 32–47'dir ve ilk yerleşim bunu "yazı geçirilemez" diye okudu;
+# başlığı 1,96 inçlik bir koşuya sıkıştırıp 6,5 punto'ya düşürdü — ince
+# bir sırt için bile fazla ürkek.
+#
+# Doğru soru KOYU PİKSEL ORANIDIR. Ölçüldü: sırtın en kalabalık yarım inçi
+# bile yalnızca %25 koyudur, ortalama parlaklık 157–205 arasında kalır.
+# Yani zemin AÇIK parşömendir ve üstündeki koyu şeyler İNCE ÇİZGİLERDİR;
+# koyu bir harf onların üstünde okunur. Yüksek sd, kütle değil KENARDAN
+# gelir.
+#
+# Başlık koşusu bu ölçümle seçildi: y 7,55–10,30 aralığında koyu piksel
+# oranı %8,2'yi hiç geçmiyor.
+SPINE_RUNS = {"title": (7.55, 10.30), "author": (0.62, 1.58)}
+
+
+def fit_tracked(text, font, max_in, start_pt=11.0, track_ratio=0.12,
+                min_pt=8.0):
+    """Metni verilen inç uzunluğuna SIĞDIRAN punto ve harf aralığını bulur.
+
+    Sırt 0,3603 inçtir — ince bir sırttır ve üstündeki yazı da incedir.
+    Punto tahmin edilmez: ölçülen temiz koşunun uzunluğundan TÜRETİLİR.
+    """
+    from reportlab.pdfbase.pdfmetrics import stringWidth
+    pt = start_pt
+    while pt >= min_pt:
+        track = pt * track_ratio
+        w = sum(stringWidth(ch, font, pt) for ch in text) + track * (len(text) - 1)
+        if w <= max_in * IN:
+            return pt, track, w
+        pt -= 0.25
+    track = min_pt * track_ratio
+    w = sum(stringWidth(ch, font, min_pt) for ch in text) + track * (len(text) - 1)
+    return min_pt, track, w
+
+
+class TypeLog:
+    """Basılan her metin parçasının GERÇEK kutusunu inç olarak kaydeder.
+
+    Kapağı gözle denetlemek gerekir ama YETMEZ: bir harfin güvenli alanı
+    yarım milim aşması gözle görülmez, kesimde görülür. Bu kayıt,
+    `covers.py --check`'in denetleyebileceği bir olgu üretir.
+    """
+
+    def __init__(self):
+        self.items = []
+
+    def add(self, kind, x0, y0, x1, y1, text=""):
+        self.items.append({"kind": kind, "text": text[:60],
+                           "x0": round(x0 / IN, 4), "y0": round(y0 / IN, 4),
+                           "x1": round(x1 / IN, 4), "y1": round(y1 / IN, 4)})
+
+
+# ── TİPOGRAFİ ────────────────────────────────────────────────────────────
+# Ölçülen en sakin arka kapak bloğu (sd 27,7) — FINAL_COVER_SELECTION § 6
+BACK_BOX = (0.70, 0.60, 5.90, 7.60)
+INK = (0.106, 0.094, 0.078)          # koyu kahve-siyah: parşömende mürekkep
+FONT_DIR = "/usr/share/fonts/truetype/liberation"
+FONTS = {"CoverSerif": "LiberationSerif-Regular.ttf",
+         "CoverSerif-B": "LiberationSerif-Bold.ttf",
+         "CoverSerif-I": "LiberationSerif-Italic.ttf"}
+
+
+def _register(pdfmetrics, TTFont):
+    for n, f in FONTS.items():
+        p = os.path.join(FONT_DIR, f)
+        if not os.path.exists(p):
+            raise RuntimeError("kapak fontu yok: %s" % p)
+        pdfmetrics.registerFont(TTFont(n, p))
+
+
+def _tracked(c, text, x, y, font, size, track, anchor="center", log=None,
+             kind="text", tf=None):
+    """Harf aralıklı (letterspaced) tek satır. Genişliği döner."""
+    from reportlab.pdfbase.pdfmetrics import stringWidth
+    w = sum(stringWidth(ch, font, size) for ch in text) + track * (len(text) - 1)
+    if anchor == "center":
+        cur = x - w / 2.0
+    elif anchor == "right":
+        cur = x - w
+    else:
+        cur = x
+    start = cur
+    c.setFont(font, size)
+    for ch in text:
+        c.drawString(cur, y, ch)
+        cur += stringWidth(ch, font, size) + track
+    if log is not None:
+        if tf is None:
+            log.add(kind, start, y - size * 0.24, start + w, y + size * 0.75,
+                    text)
+        else:
+            # sırt: döndürülmüş koordinat → sarım koordinatına çevrilir
+            sx, y0, y1 = tf
+            log.add(kind, sx - size * 0.75, -(start + w), sx + size * 0.24,
+                    -start, text)
+    return w
+
+
+def _wrap(text, font, size, maxw):
+    from reportlab.pdfbase.pdfmetrics import stringWidth
+    words, lines, cur = text.split(), [], ""
+    for w in words:
+        t = (cur + " " + w).strip()
+        if stringWidth(t, font, size) <= maxw:
+            cur = t
+        else:
+            if cur:
+                lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
+    """Tam sarım kapağı VEKTÖR tipografiyle basar."""
+    from reportlab.pdfgen import canvas as rl_canvas
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
+    import reportlab.rl_config as rl_config
+    sys.path.insert(0, HERE)
+    import cover_text as CT
+
+    _register(pdfmetrics, TTFont)
+    rl_config.canvas_basefontname = "CoverSerif"
+
+    W = geo_ed["wrapWidthIn"] * IN
+    H = geo_ed["wrapHeightIn"] * IN
+    Z, ZN = geo_ed["safeZones"], geo_ed["zones"]
+    os.makedirs(out_dir, exist_ok=True)
+    name = "GreatBookOfWorldGames_cover_%s.pdf" % ed
+    path = os.path.join(out_dir, name)
+
+    c = rl_canvas.Canvas(path, pagesize=(W, H), pageCompression=1)
+    c.setTitle("%s — cover (%s)" % (cfg["project"]["title"], ed))
+    c.setAuthor(cfg["founder"]["author"])
+    c.setCreator("04_BUILD/covers.py")
+    c.drawImage(os.path.join(root, art_rel), 0, 0, width=W, height=H,
+                preserveAspectRatio=False, anchor="c")
+    c.setFillColorRGB(*INK)
+    c.setStrokeColorRGB(*INK)
+    log = TypeLog()
+    spine_fit = []
+
+    fx0, fx1 = ZN["frontCover"]["x0"] * IN, ZN["frontCover"]["x1"] * IN
+    fcx = (fx0 + fx1) / 2.0
+    colw = (Z["frontTitle"]["x1"] - Z["frontTitle"]["x0"]) * IN
+
+    # ── ÖN KAPAK · başlık bloğu (ölçülen sakin bant: y 9,35–10,85 in) ──
+    # Alt başlık ilk sürümde AÇIK RENKLİ TAHTA PİYONUN üstüne düşüyordu
+    # (piyon x 11,0–11,6 in · y 9,4–10,2 in). Blok yukarı alındı ve alt
+    # başlık daraltıldı; artık piyonun üstünde kalıyor.
+    y = 10.60 * IN
+    _tracked(c, CT.FRONT_TITLE_TOP, fcx, y, "CoverSerif", 19.5, 5.4,
+             log=log, kind="frontTitle")
+    y -= 0.60 * IN
+    _tracked(c, CT.FRONT_TITLE_MAIN, fcx, y, "CoverSerif-B", 60, 2.0,
+             log=log, kind="frontTitle")
+    y -= 0.24 * IN
+    c.setLineWidth(1.0)
+    c.line(fcx - 1.85 * IN, y, fcx + 1.85 * IN, y)
+    y -= 0.215 * IN
+    from reportlab.pdfbase.pdfmetrics import stringWidth as _sw
+    c.setFont("CoverSerif-I", 12.0)
+    for txt in (CT.front_subtitle(measured), CT.front_subtitle2(measured)):
+        c.drawCentredString(fcx, y, txt)
+        hw = _sw(txt, "CoverSerif-I", 12.0) / 2.0
+        log.add("frontTitle", fcx - hw, y - 3.0, fcx + hw, y + 9.0, txt)
+        y -= 0.185 * IN
+
+    # ── ÖN KAPAK · yazar (ölçülen sakin bant: y 0,45–1,55 in) ──
+    _tracked(c, CT.AUTHOR, fcx, 0.86 * IN, "CoverSerif-B", 23, 4.4,
+             log=log, kind="frontAuthor")
+
+    # ── SIRT — ORTASI KALABALIK, İKİ UCU TEMİZ (ölçüldü) ──
+    # Yazı ortadan geçirilmez: başlık üstteki temiz koşuya, yazar alttaki
+    # temiz koşuya. Kalabalık orta bölge BOŞ bırakılır.
+    sx = (ZN["spine"]["x0"] + ZN["spine"]["x1"]) / 2.0 * IN
+    c.saveState()
+    c.translate(sx, 0)
+    c.rotate(-90)                      # yukarıdan aşağı okunur (KDP normu)
+    for key, txt, font in (("title", CT.SPINE_TITLE, "CoverSerif-B"),
+                           ("author", CT.SPINE_AUTHOR, "CoverSerif")):
+        lo, hi = SPINE_RUNS[key]
+        pt, track, w = fit_tracked(txt, font, hi - lo)
+        mid = (lo + hi) / 2.0
+        _tracked(c, txt, -(mid * IN), -pt * 0.34, font, pt, track,
+                 log=log, kind="spineText", tf=(sx, 0, 0))
+        spine_fit.append({"part": key, "text": txt, "pt": pt,
+                          "trackPt": round(track, 2),
+                          "widthIn": round(w / IN, 3),
+                          "runIn": [lo, hi]})
+    c.restoreState()
+
+    # ── ARKA KAPAK (ölçülen sakin blok: x 0,70–5,90 · y 0,60–4,60 in) ──
+    bx = BACK_BOX[0] * IN + 0.10 * IN
+    bw = (BACK_BOX[2] - BACK_BOX[0]) * IN - 0.20 * IN
+    by = BACK_BOX[3] * IN - 0.30 * IN
+    for kind, text in CT.back_copy(measured):
+        if kind == "head":
+            c.setFont("CoverSerif-B", 12.2)
+            for ln in _wrap(text, "CoverSerif-B", 12.2, bw):
+                c.drawString(bx, by, ln)
+                log.add("backCopy", bx, by - 3, bx + bw, by + 9, ln)
+                by -= 15.0
+            by -= 2.0
+        else:
+            c.setFont("CoverSerif", 10.6)
+            for ln in _wrap(text, "CoverSerif", 10.6, bw):
+                c.drawString(bx, by, ln)
+                log.add("backCopy", bx, by - 3, bx + bw, by + 8, ln)
+                by -= 13.4
+            by -= 7.0
+
+    # yazar biyografisi — kanonik metin, arka kapağın altında
+    bio = cfg["founder"].get("authorBio")
+    if bio:
+        by -= 4.0
+        c.setLineWidth(0.7)
+        c.line(bx, by + 8, bx + 2.0 * IN, by + 8)
+        by -= 6.0
+        c.setFont("CoverSerif-I", 10.2)
+        for ln in _wrap(bio, "CoverSerif-I", 10.2, bw):
+            c.drawString(bx, by, ln)
+            log.add("backCopy", bx, by - 3, bx + bw, by + 8, ln)
+            by -= 13.0
+
+    # yayıncı künyesi — barkod alanının ÜSTÜNDE, içinde değil
+    # Yayıncı künyesi ilk sürümde SIRTIN DİBİNE düşmüştü. Yeri, metin
+    # bloğunun altı — barkod alanına girmez.
+    c.setFont("CoverSerif", 9.8)
+    c.drawString(bx, max(by - 6.0, (Z["barcode"]["y1"] + 0.30) * IN),
+                 cfg["founder"]["publisher"])
+    c.showPage()
+    c.save()
+
+    rep = {"edition": ed, "typeLog": log.items, "spineFit": spine_fit,
+           "file": os.path.relpath(path, root),
+           "sha256": sha256(path), "bytes": os.path.getsize(path),
+           "wrapIn": [geo_ed["wrapWidthIn"], geo_ed["wrapHeightIn"]],
+           "spineIn": geo_ed["spineWidthIn"], "artwork": art_rel}
+    if verbose:
+        print("     kapak → %s (%.1f KB)" % (name, os.path.getsize(path) / 1024.0))
+    return rep
+
+
 def raw_assets(root: str) -> dict:
     d = os.path.join(root, "07_ASSETS", "raw", "cover")
     if not os.path.isdir(d):
@@ -188,6 +532,100 @@ def raw_assets(root: str) -> dict:
             rec["imageError"] = str(exc)
         files.append(rec)
     return {"dir": os.path.relpath(d, root), "files": files}
+
+
+def kindle_cover(root, geo_ed, art_rel, out_dir, verbose=True):
+    """Kindle kapağı — ÖN paneldan türetilir, sarımdan DEĞİL.
+
+    Amazon 1:1,6 en-boy ister ve 2560 × 1600 px önerir. Ön panel 1:1,304'tür,
+    yani yükseklik yetmez: sarımın ön panelinden 1:1,6 oranında bir dikey
+    dilim ORTADAN kırpılır. Tam sarımı ebook kapağı diye yüklemek, okura
+    sırtı ve arka kapağı göstermek demektir.
+    """
+    from PIL import Image
+    im = Image.open(os.path.join(root, art_rel)).convert("RGB")
+    W, H = im.size
+    Z = geo_ed["zones"]["frontCover"]
+    wi = geo_ed["wrapWidthIn"]
+    x0 = int(Z["x0"] / wi * W)
+    x1 = int(Z["x1"] / wi * W)
+    front = im.crop((x0, 0, x1, H))
+    want = 1600.0 / 2560.0                      # genişlik / yükseklik
+    have = front.width / float(front.height)
+    if have > want:
+        nw = int(round(front.height * want))
+        x = (front.width - nw) // 2
+        front = front.crop((x, 0, x + nw, front.height))
+    else:
+        nh = int(round(front.width / want))
+        y = (front.height - nh) // 2
+        front = front.crop((0, y, front.width, y + nh))
+    front = front.resize((1600, 2560), Image.LANCZOS)
+    os.makedirs(out_dir, exist_ok=True)
+    path = os.path.join(out_dir, "GreatBookOfWorldGames_cover_kindle.jpg")
+    front.save(path, "JPEG", quality=92, dpi=(300, 300), optimize=True)
+    if verbose:
+        print("     kindle kapağı → 1600 × 2560 px · %.1f KB"
+              % (os.path.getsize(path) / 1024.0))
+    return {"file": os.path.relpath(path, root), "widthPx": 1600,
+            "heightPx": 2560, "aspect": round(1600 / 2560.0, 4),
+            "sha256": sha256(path), "bytes": os.path.getsize(path),
+            "note": "ÖN panelden türetildi; tam sarım DEĞİL. Bu dosyada "
+                    "tipografi YOKTUR: Kindle kapağı ayrıca dizilir."}
+
+
+def build_covers(root, cfg, args) -> int:
+    """Seçilen sanattan bütün kapakları üretir."""
+    gp = os.path.join(root, "06_REPORTS", "cover-geometry.json")
+    geo = load(gp)
+    sel = args.artwork or os.path.join("07_ASSETS", "processed", "cover",
+                                       "cover-02-4x-300dpi.png")
+    if not os.path.exists(os.path.join(root, sel)):
+        print("  ⛔ işlenmiş sanat yok: %s" % sel)
+        print("     önce: 04_BUILD/cover_artwork.py --upscale")
+        return 1
+    fm = load(os.path.join(root, "02_MANUSCRIPT", "frontmatter.json"))
+    measured = fm["measured"]
+
+    print("=" * 74)
+    print("  KAPAK ÜRETİMİ")
+    print("=" * 74)
+    print("  seçilen sanat: %s" % sel)
+    print("  künye        : 06_REPORTS/FINAL_COVER_SELECTION.md")
+
+    out = {"$comment": ["KAPAK ÜRETİMİ — ÜRETİLMİŞ DOSYA (04_BUILD/covers.py).",
+                        "Tipografi VEKTÖRDÜR; sanatın üstüne beyaz kutu",
+                        "konmadı. Yerleşim ölçülen sakin bantlardadır."],
+           "generatedAtPhase": "phase6",
+           "selectedArtwork": sel, "editions": {}}
+    for ed in ("paperback", "hardcover"):
+        if ed not in geo["editions"]:
+            continue
+        g = geo["editions"][ed]
+        print("\n── %s ── sarım %.4f × %.4f in · sırt %.4f in"
+              % (ed.upper(), g["wrapWidthIn"], g["wrapHeightIn"],
+                 g["spineWidthIn"]))
+        art_rel = os.path.join("07_ASSETS", "print",
+                               "cover-wrap-%s.png" % ed)
+        art = prepare_artwork(root, g, sel, art_rel,
+                              scrim_boxes=[BACK_BOX])
+        odir = os.path.join(root, "08_OUTPUT",
+                            "PAPERBACK" if ed == "paperback" else "HARDCOVER")
+        rep = compose(root, cfg, ed, g, art_rel, measured, odir)
+        rep["artworkPrep"] = art
+        out["editions"][ed] = rep
+
+    kdir = os.path.join(root, "08_OUTPUT", "KINDLE")
+    print("\n── KINDLE ──")
+    out["kindle"] = kindle_cover(
+        root, geo["editions"]["paperback"],
+        os.path.join("07_ASSETS", "print", "cover-wrap-paperback.png"), kdir)
+
+    dump(os.path.join(root, "06_REPORTS", "cover-build.json"), out)
+    print("\n" + "=" * 74)
+    print("  ✅ kapaklar üretildi · ciltsiz · ciltli · kindle")
+    print("=" * 74)
+    return 0
 
 
 def run(root: str, args) -> int:
@@ -304,10 +742,15 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", default=DEFAULT_ROOT)
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--build", action="store_true")
+    ap.add_argument("--artwork", default=None)
     args = ap.parse_args()
     root = os.path.abspath(args.root)
     if args.check:
         return run_check(root)
+    if args.build:
+        cfg = load(os.path.join(root, "project_config.json"))
+        return build_covers(root, cfg, args)
     return run(root, args)
 
 

@@ -68,7 +68,7 @@
 | | |
 |---|---|
 | Kindle biçimi | EPUB 3, reflowable |
-| Kapak sanatı | **YOK — kurucu eylemi** |
+| Kapak sanatı | var |
 
 ## 6. Aile dağılımı
 

@@ -212,10 +212,19 @@ def main() -> int:
                      lambda d: d["measured"].__setitem__(
                          "subtitleMeasured",
                          "100 Games from 5,000 Years — from 45 Cultures")))
-    s.case("release kapısında boş authorBio KIRMIZI",
+    # ⚠ BU DURUM FAZ 6'DA DEĞİŞTİ. `authorBio` artık DOLU (kanonik metin
+    # kardeş projeden birebir alındı), yani "boş bırak ve kırmızı bekle"
+    # testi kendiliğinden geçmez oldu — kapı ısırmıyor göründü çünkü
+    # ısıracak kusur kalmamıştı. Test kusuru ENJEKTE ediyor: biyografi
+    # silinir ve `release` kapısının hâlâ ısırdığı doğrulanır.
+    s.case("release kapısında SİLİNMİŞ authorBio KIRMIZI",
            ["04_BUILD/metadata.py", "--root", "{root}", "--gate", "release"],
-           lambda w: None)
-    s.case("phase1 kapısında boş authorBio kurucu eylemi (kırmızı DEĞİL)",
+           edit_json("project_config.json",
+                     lambda d: d["founder"].__setitem__("authorBio", None)))
+    s.case("dolu authorBio release kapısında GEÇER",
+           ["04_BUILD/metadata.py", "--root", "{root}", "--gate", "release"],
+           lambda w: None, expect_red=False)
+    s.case("kanonik biyografi DEĞİŞİRSE künye bayatlar (bilgi)",
            MD, lambda w: None, expect_red=False)
 
     # ── EPUB ───────────────────────────────────────────────────────────

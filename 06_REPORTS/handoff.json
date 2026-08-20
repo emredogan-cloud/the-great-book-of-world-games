@@ -10,9 +10,9 @@
    "interior": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
     "exists": true,
-    "sha256": "f834a260a24d5ec4441774b8a05a97826b457f979e48d4ceaaedc716b5208672",
-    "recordedSha256": "f834a260a24d5ec4441774b8a05a97826b457f979e48d4ceaaedc716b5208672",
-    "bytes": 517959,
+    "sha256": "f117284fbc4cb35b9cfc8ffdfd92d7d6880cce8dc2592ae26917fa02e7bc6687",
+    "recordedSha256": "f117284fbc4cb35b9cfc8ffdfd92d7d6880cce8dc2592ae26917fa02e7bc6687",
+    "bytes": 518106,
     "pageCount": 160
    },
    "blankPages": 18,
@@ -26,17 +26,54 @@
     "topIn": 0.625,
     "bottomIn": 0.625
    },
-   "cover": null,
-   "coverStatus": "BLOCKED — kurucu sanatı yok"
+   "cover": {
+    "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
+    "exists": true,
+    "sha256": "2ee57c58ac15dc1b8a1e21452b01d9504eed131e84547ebbb6f0b1192c3522a1",
+    "recordedSha256": "2ee57c58ac15dc1b8a1e21452b01d9504eed131e84547ebbb6f0b1192c3522a1",
+    "bytes": 21142924,
+    "wrapIn": [
+     17.6103,
+     11.25
+    ],
+    "spineIn": 0.3603,
+    "artwork": "07_ASSETS/print/cover-wrap-paperback.png",
+    "typeItems": 27,
+    "spineFit": [
+     {
+      "part": "title",
+      "text": "THE GREAT BOOK OF WORLD GAMES",
+      "pt": 8.75,
+      "trackPt": 1.05,
+      "widthIn": 2.701,
+      "runIn": [
+       7.55,
+       10.3
+      ]
+     },
+     {
+      "part": "author",
+      "text": "EMRE DOĞAN",
+      "pt": 8.75,
+      "trackPt": 1.05,
+      "widthIn": 0.938,
+      "runIn": [
+       0.62,
+       1.58
+      ]
+     }
+    ]
+   },
+   "coverStatus": "READY"
   },
   "hardcover": {
    "folder": "HARDCOVER",
    "interior": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf",
     "exists": true,
-    "sha256": "c615a6fb8c651d76a2af11f36552dfe5dd6998afd40cc8ebd0256e002f93e5ff",
-    "recordedSha256": "c615a6fb8c651d76a2af11f36552dfe5dd6998afd40cc8ebd0256e002f93e5ff",
-    "bytes": 518466,
+    "sha256": "5c53a429828431e03bbd89535ab7809c7a4a79b69e9a02c283b6bb19bb7ea81c",
+    "recordedSha256": "5c53a429828431e03bbd89535ab7809c7a4a79b69e9a02c283b6bb19bb7ea81c",
+    "bytes": 518615,
     "pageCount": 160
    },
    "blankPages": 18,
@@ -50,11 +87,57 @@
     "topIn": 0.625,
     "bottomIn": 0.625
    },
-   "cover": null,
-   "coverStatus": "BLOCKED — kurucu sanatı yok"
+   "cover": {
+    "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
+    "exists": true,
+    "sha256": "e78c2bdfa5fa9059213aeb07bd00ac24fba8de816940a912faf59b1f287865e4",
+    "recordedSha256": "e78c2bdfa5fa9059213aeb07bd00ac24fba8de816940a912faf59b1f287865e4",
+    "bytes": 20392322,
+    "wrapIn": [
+     17.21,
+     11.25
+    ],
+    "spineIn": 0.46,
+    "artwork": "07_ASSETS/print/cover-wrap-hardcover.png",
+    "typeItems": 27,
+    "spineFit": [
+     {
+      "part": "title",
+      "text": "THE GREAT BOOK OF WORLD GAMES",
+      "pt": 8.75,
+      "trackPt": 1.05,
+      "widthIn": 2.701,
+      "runIn": [
+       7.55,
+       10.3
+      ]
+     },
+     {
+      "part": "author",
+      "text": "EMRE DOĞAN",
+      "pt": 8.75,
+      "trackPt": 1.05,
+      "widthIn": 0.938,
+      "runIn": [
+       0.62,
+       1.58
+      ]
+     }
+    ]
+   },
+   "coverStatus": "READY"
   },
   "kindle": {
    "folder": "KINDLE",
+   "cover": {
+    "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg",
+    "widthPx": 1600,
+    "heightPx": 2560,
+    "aspect": 0.625,
+    "sha256": "5f68c2b4e16b93299ecbbb22fc799720414243e414457206737709032a546b33",
+    "bytes": 730655,
+    "note": "ÖN panelden türetildi; tam sarım DEĞİL. Bu dosyada tipografi YOKTUR: Kindle kapağı ayrıca dizilir."
+   },
    "epub": {
     "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
     "exists": true,
@@ -62,49 +145,42 @@
     "recordedSha256": "ddfcad43ba5cba101f8ac2b23914c032c0d5d0e4616c1137895fcfe61040ecf8",
     "bytes": 220668
    },
-   "coverStatus": "BLOCKED — kurucu kapak sanatı yok; sahte kapak KONMADI"
+   "coverStatus": "READY"
   },
   "aplus": {
    "folder": "APLUS",
    "modules": 6,
-   "imagesMissing": 9,
-   "status": "BLOCKED — kurucu görselleri bekleniyor"
+   "imagesMissing": 1,
+   "ready": [
+    "APLUS-01",
+    "APLUS-02",
+    "APLUS-03",
+    "APLUS-04",
+    "APLUS-06"
+   ],
+   "withoutArt": [
+    "APLUS-05"
+   ],
+   "status": "READY"
   }
  },
  "checksumFiles": {
-  "PAPERBACK": 1,
-  "HARDCOVER": 1,
-  "KINDLE": 1,
-  "APLUS": 1
+  "PAPERBACK": 2,
+  "HARDCOVER": 2,
+  "KINDLE": 2,
+  "APLUS": 9
  },
  "handbook": "08_OUTPUT/KDP_UPLOAD_HANDBOOK.md",
  "previewerChecklist": "08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md",
- "handbookBytes": 22238,
- "previewerBytes": 4097,
+ "aiDisclosureNotes": "08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md",
+ "handbookBytes": 23635,
+ "previewerBytes": 5814,
  "blockingFounderActions": [
-  {
-   "id": "A6",
-   "field": "founder.authorBio",
-   "blocking": true,
-   "note": "`founder.authorBio` is empty. KDP asks for an author biography, and on a sibling title KDP rejected a placeholder biography as template text (12 August 2026). Write a real one before publishing."
-  },
   {
    "id": "AI-DECL",
    "field": "founder.aiDisclosure.founderConfirmed",
    "blocking": true,
    "note": "The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`."
-  },
-  {
-   "id": "COVER-ART",
-   "field": "07_ASSETS/raw/cover/",
-   "blocking": true,
-   "note": "Kapak sanatı yok."
-  },
-  {
-   "id": "APLUS-ART",
-   "field": "07_ASSETS/raw/aplus/",
-   "blocking": true,
-   "note": "A+ görselleri yok."
   },
   {
    "id": "PLAYTEST",
@@ -113,5 +189,25 @@
    "note": "Dış oynanabilirlik testi 0 oturum."
   }
  ],
- "errors": []
+ "errors": [],
+ "founderActions": [
+  {
+   "id": "AI-DECL",
+   "field": "founder.aiDisclosure.founderConfirmed",
+   "blocking": true,
+   "note": "The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`."
+  },
+  {
+   "id": "APLUS-05-ART",
+   "field": "07_ASSETS/raw/aplus/",
+   "blocking": false,
+   "note": "Modül 05 (eller/masa) sanatı teslim edilmedi. Yüklenebilir A+ projesi 5 modüldür; metni hazır ve sanat gelirse eklenir."
+  },
+  {
+   "id": "PLAYTEST",
+   "field": "01_SOURCE/playtests/",
+   "blocking": true,
+   "note": "Dış oynanabilirlik testi 0 oturum."
+  }
+ ]
 }
