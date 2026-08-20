@@ -80,12 +80,32 @@ def main():
     ap.add_argument("--keep", action="store_true",
                     help="geçici ağacı silme (hata ayıklama)")
     ap.add_argument("--gate", default=None, help="kapı seviyesi (öntanımlı .gate)")
+    ap.add_argument("--without", default=None,
+                    help="bu modülleri İTHAL EDİLEMEZ yap (virgülle), "
+                         "örn. reportlab,PIL — bağımlılığı olmayan bir "
+                         "runner'ı taklit eder")
     args = ap.parse_args()
 
     gate = args.gate
     if gate is None:
         gp = os.path.join(ROOT, ".gate")
         gate = open(gp, encoding="utf-8").read().strip() if os.path.exists(gp) else "phase1"
+
+    # BAĞIMLILIĞI OLMAYAN RUNNER. İş akışındaki her iş aynı paketleri
+    # kurmaz: metin kapıları işinde reportlab YOKTUR. Kapılar bunu 2 ile
+    # ("ATLANDI") bildirir. Yerelde reportlab kurulu olduğu için bu yol
+    # hiç koşmuyordu ve CI iki kez tam oradan kırıldı. Bu bayrak modülü
+    # ithal edilemez kılarak o işi taklit eder.
+    stub = None
+    if args.without:
+        stub = tempfile.mkdtemp(prefix="gbwg-nodep-")
+        for mod in [m.strip() for m in args.without.split(",") if m.strip()]:
+            d = os.path.join(stub, mod)
+            os.makedirs(d, exist_ok=True)
+            with open(os.path.join(d, "__init__.py"), "w",
+                      encoding="utf-8") as fh:
+                fh.write("raise ImportError(%r)\n"
+                         % ("%s ci_simulate --without ile gizlendi" % mod))
 
     files = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT,
                            capture_output=True, text=True).stdout.split("\0")
@@ -101,6 +121,9 @@ def main():
     print("  CI SİMÜLASYONU · komutlar validate.yml'den OKUNDU")
     print("=" * 74)
     print("  izlenen dosya: %d · kapı: %s" % (len(files), gate))
+    if stub:
+        print("  GİZLENEN MODÜL: %s (bağımlılıksız runner taklidi)"
+              % args.without)
     print("  manuscript ağaçta: %s (CI'da da böyle olmalı)"
           % ("EVET ⚠" if os.path.exists(
               os.path.join(work, "02_MANUSCRIPT", "book.json")) else "hayır"))
@@ -121,7 +144,10 @@ def main():
             print("  ⊘ %-52s (runner kurulumu — yerelde atlanır)" % name[:52])
             continue
         ran += 1
-        r = subprocess.run(["bash", "-e", "-c", cmd], cwd=work,
+        env = dict(os.environ)
+        if stub:
+            env["PYTHONPATH"] = stub + os.pathsep + env.get("PYTHONPATH", "")
+        r = subprocess.run(["bash", "-e", "-c", cmd], cwd=work, env=env,
                            capture_output=True, text=True)
         if r.returncode == 0:
             print("  ✓ %s" % name)
@@ -132,6 +158,8 @@ def main():
             for l in tail:
                 print("        %s" % l[:150])
 
+    if stub and not args.keep:
+        shutil.rmtree(stub, ignore_errors=True)
     if not args.keep:
         shutil.rmtree(td, ignore_errors=True)
     else:

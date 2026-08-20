@@ -56,7 +56,7 @@ jobs:
       - name: envanter parçalarla güncel mi
         run: |
           if [ -f 04_BUILD/build_index.py ]; then
-            python3 04_BUILD/build_index.py --check --verbose
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/build_index.py --check --verbose
           else
             echo "::notice::build_index.py henüz yok — Faz 1 teslimatı"
           fi
@@ -68,14 +68,14 @@ jobs:
       - name: araştırma kayıtları (Faz 1'de doğar)
         run: |
           if [ -f 04_BUILD/validate_research.py ]; then
-            python3 04_BUILD/validate_research.py --verbose --json 06_REPORTS/research.json
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/validate_research.py --verbose --json 06_REPORTS/research.json
           else
             echo "::notice::validate_research.py henüz yok — Faz 1 teslimatı"
           fi
       - name: tasnif bütünlüğü (Faz 1'de doğar)
         run: |
           if [ -f 04_BUILD/qa_taxonomy.py ]; then
-            python3 04_BUILD/qa_taxonomy.py --verbose --json 06_REPORTS/qa-taxonomy.json
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/qa_taxonomy.py --verbose --json 06_REPORTS/qa-taxonomy.json
           else
             echo "::notice::qa_taxonomy.py henüz yok — Faz 1 teslimatı"
           fi
@@ -85,7 +85,7 @@ jobs:
       - name: kapsam ve pilot kilidi (Faz 2'de doğar)
         run: |
           if [ -f 04_BUILD/validate_scope.py ]; then
-            python3 04_BUILD/validate_scope.py --verbose --json 06_REPORTS/scope-lock.json
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/validate_scope.py --verbose --json 06_REPORTS/scope-lock.json
           else
             echo "::notice::validate_scope.py henüz yok — Faz 2 teslimatı"
           fi
@@ -96,7 +96,7 @@ jobs:
       - name: üretim kuyruğu sırası (Faz 4'te doğar)
         run: |
           if [ -f 04_BUILD/build_queue.py ]; then
-            python3 04_BUILD/build_queue.py --check
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/build_queue.py --check
           else
             echo "::notice::build_queue.py henüz yok — Faz 4 teslimatı"
           fi
@@ -112,7 +112,7 @@ jobs:
       - name: kurucu boşluk kaydı güncel mi
         run: |
           if [ -f 04_BUILD/build_gap_register.py ]; then
-            python3 04_BUILD/build_gap_register.py --check
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/build_gap_register.py --check
           else
             echo "::notice::build_gap_register.py henüz yok"
           fi
@@ -120,7 +120,7 @@ jobs:
       - name: kurucu teslim alımı
         run: |
           if [ -f 04_BUILD/founder_delivery_ingest.py ]; then
-            python3 04_BUILD/founder_delivery_ingest.py --check
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/founder_delivery_ingest.py --check
           else
             echo "::notice::founder_delivery_ingest.py henüz yok"
           fi
@@ -188,7 +188,8 @@ jobs:
           for f in 04_BUILD/qa_*.py; do
             g="$(basename "$f" .py)"
             echo "▸ $g"
-            python3 "$f" --verbose --json "06_REPORTS/${g//_/-}.json" || exit 1
+            bash 04_BUILD/ci_run.sh \
+              python3 "$f" --verbose --json "06_REPORTS/${g//_/-}.json"
             RAN=$((RAN+1))
           done
           if [ "$RAN" -eq 0 ]; then
@@ -216,7 +217,8 @@ jobs:
         run: |
           for s in editions page_budget score_candidates; do
             if [ -f "04_BUILD/$s.py" ]; then
-              python3 "04_BUILD/$s.py" --verbose --json "06_REPORTS/${s//_/-}.json" || exit 1
+              bash 04_BUILD/ci_run.sh \
+                python3 "04_BUILD/$s.py" --verbose --json "06_REPORTS/${s//_/-}.json"
             else
               echo "::notice::$s.py henüz yok — Faz 1/2 teslimatı"
             fi
@@ -246,7 +248,7 @@ jobs:
       - name: üretilen belgeler güncel mi
         run: |
           if [ -f 04_BUILD/update_docs.py ]; then
-            python3 04_BUILD/update_docs.py --check --verbose
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/update_docs.py --check --verbose
           else
             echo "::notice::update_docs.py henüz yok — Faz 1 teslimatı"
           fi
@@ -273,49 +275,36 @@ jobs:
       - name: SVG sözlüğü
         run: |
           if [ -f 04_BUILD/svg_vector.py ]; then
-            python3 04_BUILD/svg_vector.py --check-vocabulary
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/svg_vector.py --check-vocabulary
           fi
       - name: diyagramları render et
         run: |
           if [ -f 04_BUILD/render_diagrams.py ]; then
-            python3 04_BUILD/render_diagrams.py \
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/render_diagrams.py \
               --json 06_REPORTS/diagram-render-ci.json
           fi
       - name: GÖRSEL KAPI (render edilmiş SVG)
         run: |
           if [ -f 04_BUILD/qa_visual.py ]; then
-            python3 04_BUILD/qa_visual.py --json 06_REPORTS/qa-visual-ci.json
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/qa_visual.py --json 06_REPORTS/qa-visual-ci.json
           fi
       - name: SATIR EDİTÖRÜ
         run: |
           if [ -f 04_BUILD/qa_lineedit.py ]; then
-            python3 04_BUILD/qa_lineedit.py
+            bash 04_BUILD/ci_run.sh python3 04_BUILD/qa_lineedit.py
           fi
       - name: iç blok · kapak · EPUB · A+ · metadata · teslim
         run: |
           for s in interior epub covers aplus metadata handoff cover_artwork; do
             if [ -f "04_BUILD/$s.py" ]; then
               echo "── $s"
-              python3 "04_BUILD/$s.py" --check
+              bash 04_BUILD/ci_run.sh python3 "04_BUILD/$s.py" --check
             fi
           done
       - name: KDP ön denetimi
         run: |
           if [ ! -f 04_BUILD/kdp_preflight.py ]; then exit 0; fi
-          # Çıkış 2 = "ATLANDI", kırmızı DEĞİL. Ön denetim basılmış PDF'i
-          # okur; PDF'ler ticari manuscript'ten üretilir ve manuscript bu
-          # depoda YOKTUR (.gitignore § ①). Runner'da ayrıca pdfinfo da
-          # yoktur. Betik bunu 2 ile bildirir; adım bunu kırmızı sayarsa
-          # CI, ÜRETİLEMEYECEK bir çıktının yokluğuna kızmış olur.
-          set +e
-          python3 04_BUILD/kdp_preflight.py
-          rc=$?
-          set -e
-          case $rc in
-            0) echo "::notice::KDP ön denetimi yeşil" ;;
-            2) echo "::notice::pdfinfo/manuscript yok — ön denetim ATLANDI (beklenen)" ;;
-            *) echo "::error::KDP ön denetimi KIRMIZI"; exit 1 ;;
-          esac
+          bash 04_BUILD/ci_run.sh python3 04_BUILD/kdp_preflight.py
       - name: PAKET KAPILARININ KENDİ TESTİ
         run: |
           if [ -f 05_TESTS/package_selftest.py ]; then
