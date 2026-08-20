@@ -1,0 +1,165 @@
+{
+ "$comment": [
+  "KAPAK GEOMETRİSİ — ÜRETİLMİŞ DOSYA (04_BUILD/covers.py).",
+  "Sırt genişliği ÖLÇÜLEN sayfa sayısından gelir; hiçbir sayfa",
+  "sayısı gömülü değildir. İç blok değişirse bu dosya BAYATLAR",
+  "ve --check kırmızı yanar."
+ ],
+ "generatedAtPhase": "phase6",
+ "editions": {
+  "paperback": {
+   "edition": "paperback",
+   "pageCount": 160,
+   "trimWidthIn": 8.5,
+   "trimHeightIn": 11.0,
+   "bleedIn": 0.125,
+   "safeIn": 0.25,
+   "spineWidthIn": 0.3603,
+   "spinePerPageIn": 0.002252,
+   "spineTextAllowed": true,
+   "spineTextMinPages": 79,
+   "wrapWidthIn": 17.6103,
+   "wrapHeightIn": 11.25,
+   "wrapWidthPt": 1267.94,
+   "wrapHeightPt": 810.0,
+   "zones": {
+    "backCover": {
+     "x0": 0.125,
+     "x1": 8.625
+    },
+    "spine": {
+     "x0": 8.625,
+     "x1": 8.9853
+    },
+    "frontCover": {
+     "x0": 8.9853,
+     "x1": 17.4853
+    }
+   },
+   "safeZones": {
+    "backCopy": {
+     "x0": 0.375,
+     "x1": 8.375,
+     "y0": 0.375,
+     "y1": 10.875
+    },
+    "spineText": {
+     "x0": 8.6875,
+     "x1": 8.9228,
+     "y0": 0.625,
+     "y1": 10.625
+    },
+    "frontTitle": {
+     "x0": 9.2353,
+     "x1": 17.2353,
+     "y0": 6.725,
+     "y1": 10.875
+    },
+    "frontAuthor": {
+     "x0": 9.2353,
+     "x1": 17.2353,
+     "y0": 0.375,
+     "y1": 2.105
+    },
+    "barcode": {
+     "x0": 6.375,
+     "x1": 8.375,
+     "y0": 0.375,
+     "y1": 1.575,
+     "$note": "KDP barkodu KENDİSİ basar. Bu alan BOŞ ve sade bırakılır; sahte barkod çizilmez."
+    }
+   },
+   "artworkTarget": {
+    "$note": "Kurucu sanatının HAM hedefi. 300 ppi baskı standardıdır; daha yüksek çözünürlük zarar vermez, düşüğü POD'da görünür.",
+    "ppi": 300,
+    "widthPx": 5283,
+    "heightPx": 3375,
+    "frontOnlyWidthPx": 2588,
+    "frontOnlyHeightPx": 3375
+   },
+   "interiorSha256": "91fc9ca68b838cd3fa900d8cc8c64cae63519c8d1aec0501548c584ebc03ba25",
+   "interiorFile": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf"
+  },
+  "hardcover": {
+   "edition": "hardcover",
+   "pageCount": 160,
+   "trimWidthIn": 8.25,
+   "trimHeightIn": 11.0,
+   "bleedIn": 0.125,
+   "safeIn": 0.25,
+   "spineWidthIn": 0.46,
+   "spinePerPageIn": 0.0025,
+   "spineTextAllowed": true,
+   "spineTextMinPages": 79,
+   "wrapWidthIn": 17.21,
+   "wrapHeightIn": 11.25,
+   "wrapWidthPt": 1239.12,
+   "wrapHeightPt": 810.0,
+   "zones": {
+    "backCover": {
+     "x0": 0.125,
+     "x1": 8.375
+    },
+    "spine": {
+     "x0": 8.375,
+     "x1": 8.835
+    },
+    "frontCover": {
+     "x0": 8.835,
+     "x1": 17.085
+    }
+   },
+   "safeZones": {
+    "backCopy": {
+     "x0": 0.375,
+     "x1": 8.125,
+     "y0": 0.375,
+     "y1": 10.875
+    },
+    "spineText": {
+     "x0": 8.4375,
+     "x1": 8.7725,
+     "y0": 0.625,
+     "y1": 10.625
+    },
+    "frontTitle": {
+     "x0": 9.085,
+     "x1": 16.835,
+     "y0": 6.725,
+     "y1": 10.875
+    },
+    "frontAuthor": {
+     "x0": 9.085,
+     "x1": 16.835,
+     "y0": 0.375,
+     "y1": 2.105
+    },
+    "barcode": {
+     "x0": 6.125,
+     "x1": 8.125,
+     "y0": 0.375,
+     "y1": 1.575,
+     "$note": "KDP barkodu KENDİSİ basar. Bu alan BOŞ ve sade bırakılır; sahte barkod çizilmez."
+    }
+   },
+   "artworkTarget": {
+    "$note": "Kurucu sanatının HAM hedefi. 300 ppi baskı standardıdır; daha yüksek çözünürlük zarar vermez, düşüğü POD'da görünür.",
+    "ppi": 300,
+    "widthPx": 5163,
+    "heightPx": 3375,
+    "frontOnlyWidthPx": 2512,
+    "frontOnlyHeightPx": 3375
+   },
+   "$hardcoverWarning": "CİLTLİ GEOMETRİ HİPOTEZDİR. KDP ciltli kapak şablonunu bir üreteçle verir; kalıp payı, menteşe ve tahta kalınlığı oradan okunur. KURUCU EYLEMİ: şablonu indir, buradaki sırt ve sarım ölçüleriyle KARŞILAŞTIR, farklıysa project_config.json içine gerçek değerleri yaz.",
+   "founderConfirmedTemplate": false,
+   "interiorSha256": "d6061cb9614e8c18789e8bbac2d8f86d87eb3e5b44221058509b083ccc14aa4b",
+   "interiorFile": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf"
+  }
+ },
+ "rawArtwork": {
+  "dir": "07_ASSETS/raw/cover",
+  "files": []
+ },
+ "artworkPresent": false,
+ "compositionStatus": "BLOCKED — kurucu sanatı yok"
+}

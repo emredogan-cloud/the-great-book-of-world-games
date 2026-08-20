@@ -1,0 +1,158 @@
+{
+ "$comment": [
+  "A+ İÇERİK PAKETİ — ÜRETİLMİŞ DOSYA (04_BUILD/aplus.py).",
+  "MODÜL → GÖRSEL → BAŞLIK → GÖVDE.",
+  "Metindeki her sayı projenin ÖLÇTÜĞÜ değerlerden gelir.",
+  "Görseller kurucu tarafından üretilir; yokken paket TAM DEĞİLDİR."
+ ],
+ "generatedAtPhase": "phase6",
+ "measured": {
+  "games": 56,
+  "cultures": 39,
+  "families": 7,
+  "reconstructed": 7,
+  "oldestGameBCE": 2600,
+  "oldestGameAgeYears": 4600,
+  "publicationYear": 2026,
+  "subtitleMeasured": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
+  "frontMatterWords": 2039,
+  "familyOpenerWords": 2415
+ },
+ "limits": {
+  "titleChars": 160,
+  "bodyChars": 1000,
+  "$note": "Amazon alan sınırları kaydedilen değerlerdir; kurucu A+ editöründe doğrular."
+ },
+ "modules": [
+  {
+   "id": "APLUS-01",
+   "n": "01",
+   "name": "HERO / WORLD OF GAMES",
+   "moduleType": "Standard Image Header with Text",
+   "image": "aplus-01-hero-world-of-games.png",
+   "imagePx": [
+    970,
+    600
+   ],
+   "title": "56 games. 39 cultures. One table.",
+   "body": "This is a reference book you play from, not one you only read. Every game is set out across two facing pages so the book lies open on the table and nobody turns a page mid-turn. Every rule set names the work and the pages it was read from, and where a record is incomplete the book says so on the page instead of filling the gap quietly.",
+   "imagesPresent": [],
+   "imagesMissing": [
+    "aplus-01-hero-world-of-games.png"
+   ],
+   "titleChars": 33,
+   "bodyChars": 337
+  },
+  {
+   "id": "APLUS-02",
+   "n": "02",
+   "name": "CULTURAL DIVERSITY",
+   "moduleType": "Standard Image & Text Overlay",
+   "image": "aplus-02-cultural-diversity.png",
+   "imagePx": [
+    970,
+    600
+   ],
+   "title": "Sorted by how they work, not by where they are from",
+   "body": "Most collections file games by country, which teaches geography and hides the interesting part. This one files them by mechanism, so the sowing games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part. 39 cultures are represented, from Sumer to the Sámi, and each entry names the culture precisely rather than a continent.",
+   "imagesPresent": [],
+   "imagesMissing": [
+    "aplus-02-cultural-diversity.png"
+   ],
+   "titleChars": 51,
+   "bodyChars": 368
+  },
+  {
+   "id": "APLUS-03",
+   "n": "03",
+   "name": "HOW THE BOOK WORKS",
+   "moduleType": "Standard Single Image & Sidebar",
+   "image": "aplus-03-how-the-book-works.png",
+   "imagePx": [
+    300,
+    400
+   ],
+   "title": "Everything you need for one game, on one opening",
+   "body": "Players, time, age, materials and difficulty at the top. What to use instead of what — buttons, coins, dried beans, an egg box. Numbered rules, one action to a line. A board diagram drawn to scale. Then three questions every table actually argues about: what happens on a draw, what happens if nobody can move, and what happens when somebody plays an illegal move. Almost nothing in this book has to be bought.",
+   "imagesPresent": [],
+   "imagesMissing": [
+    "aplus-03-how-the-book-works.png"
+   ],
+   "titleChars": 48,
+   "bodyChars": 410
+  },
+  {
+   "id": "APLUS-04",
+   "n": "04",
+   "name": "TYPES OF GAMES",
+   "moduleType": "Standard Four Image & Text",
+   "image": "aplus-04-types-of-games.png",
+   "imagePx": [
+    220,
+    220
+   ],
+   "imageSet": [
+    "aplus-04-types-of-games-a.png",
+    "aplus-04-types-of-games-b.png",
+    "aplus-04-types-of-games-c.png",
+    "aplus-04-types-of-games-d.png"
+   ],
+   "title": "7 families of play",
+   "body": "Sowing · Hunt and siege · Race home · Line and territory · War board · Chance and nerve · Games without a board. Each family opens with a portrait of the idea behind it, and each has a written rule for what belongs in it and what does not. The boundaries are argued, not assumed.",
+   "imagesPresent": [],
+   "imagesMissing": [
+    "aplus-04-types-of-games-a.png",
+    "aplus-04-types-of-games-b.png",
+    "aplus-04-types-of-games-c.png",
+    "aplus-04-types-of-games-d.png"
+   ],
+   "titleChars": 18,
+   "bodyChars": 279
+  },
+  {
+   "id": "APLUS-05",
+   "n": "05",
+   "name": "PLAY / FAMILY / DISCOVERY",
+   "moduleType": "Standard Image & Light Text Overlay",
+   "image": "aplus-05-play-family-discovery.png",
+   "imagePx": [
+    970,
+    300
+   ],
+   "title": "For a table with an adult and a child at it",
+   "body": "Ages are given per game and they mean something: the age at which a player can hold the whole game in their head. Every entry ends with a shorter version to start with — a smaller board, fewer pieces — which is the fastest way to teach a game to somebody who has not read the page.",
+   "imagesPresent": [],
+   "imagesMissing": [
+    "aplus-05-play-family-discovery.png"
+   ],
+   "titleChars": 43,
+   "bodyChars": 281
+  },
+  {
+   "id": "APLUS-06",
+   "n": "06",
+   "name": "THE COMPLETE COLLECTION",
+   "moduleType": "Standard Image Header with Text",
+   "image": "aplus-06-complete-collection.png",
+   "imagePx": [
+    970,
+    600
+   ],
+   "title": "Board templates, a glossary and three indexes",
+   "body": "The back of the book is the part that gets used. Full-size board templates you can photocopy — the page size was chosen for exactly that. A materials guide. A glossary of the terms the book uses for mechanics. Sources for every game. Three indexes, by culture, by number of players, and by time and age. And one page listing the game origin stories that are widely repeated and are not true.",
+   "imagesPresent": [],
+   "imagesMissing": [
+    "aplus-06-complete-collection.png"
+   ],
+   "titleChars": 45,
+   "bodyChars": 391
+  }
+ ],
+ "claimScan": {
+  "forbiddenPatterns": 7,
+  "hits": []
+ },
+ "imagesMissing": 9,
+ "status": "BLOCKED — kurucu görselleri bekleniyor"
+}

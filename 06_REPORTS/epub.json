@@ -1,0 +1,28 @@
+{
+ "format": "EPUB 3, reflowable",
+ "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
+ "sha256": "48e202d2d5ed327811a2a067f582f86668b328ee4d1aedc127f1687fc2126810",
+ "bytes": 220937,
+ "documents": 74,
+ "spineItems": 74,
+ "games": 56,
+ "diagramsEmbedded": 50,
+ "diagramFormat": "inline SVG (vector, no raster)",
+ "coverImage": null,
+ "coverStatus": "BLOCKED — kurucu kapak sanatı yok; sahte kapak KONMADI",
+ "fixedLayout": false,
+ "fixedLayoutRationale": "Çift sayfa mimarisi bir BASKI kısıtına verilmiş cevaptır. Kaydırılan bir ekranda o kısıt yoktur; madde kesintisiz akar. Sabit düzen ise gövde metnini telefonda okunamaz kılar ve okurun erişilebilirlik ayarlarını kilitler.",
+ "measured": {
+  "games": 56,
+  "cultures": 39,
+  "families": 7,
+  "reconstructed": 7,
+  "oldestGameBCE": 2600,
+  "oldestGameAgeYears": 4600,
+  "publicationYear": 2026,
+  "subtitleMeasured": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
+  "frontMatterWords": 2039,
+  "familyOpenerWords": 2415
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "$comment": [
+  "A+ İÇERİK PAKETİ — ÜRETİLMİŞ DOSYA (04_BUILD/aplus.py).",
+  "MODÜL → GÖRSEL → BAŞLIK → GÖVDE.",
+  "Metindeki her sayı projenin ÖLÇTÜĞÜ değerlerden gelir.",
+  "Görseller kurucu tarafından üretilir; yokken paket TAM DEĞİLDİR."
+ ],
+ "generatedAtPhase": "phase6",
+ "measured": {
+  "games": 56,
+  "cultures": 39,
+  "families": 7,
+  "reconstructed": 7,
+  "oldestGameBCE": 2600,
+  "oldestGameAgeYears": 4600,
+  "publicationYear": 2026,
+  "subtitleMeasured": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
+  "frontMatterWords": 2039,
+  "familyOpenerWords": 2415
+ },
+ "limits": {
+  "titleChars": 160,
+  "bodyChars": 1000,
+  "$note": "Amazon alan sınırları kaydedilen değerlerdir; kurucu A+ editöründe doğrular."
+ },
+ "claimScan": {
+  "forbiddenPatterns": 7,
+  "hits": []
+ },
+ "imagesMissing": 9,
+ "status": "BLOCKED — kurucu görselleri bekleniyor",
+ "moduleSummary": [
+  {
+   "id": "APLUS-01",
+   "type": "Standard Image Header with Text",
+   "titleChars": 33,
+   "bodyChars": 337,
+   "imagesMissing": [
+    "aplus-01-hero-world-of-games.png"
+   ]
+  },
+  {
+   "id": "APLUS-02",
+   "type": "Standard Image & Text Overlay",
+   "titleChars": 51,
+   "bodyChars": 368,
+   "imagesMissing": [
+    "aplus-02-cultural-diversity.png"
+   ]
+  },
+  {
+   "id": "APLUS-03",
+   "type": "Standard Single Image & Sidebar",
+   "titleChars": 48,
+   "bodyChars": 410,
+   "imagesMissing": [
+    "aplus-03-how-the-book-works.png"
+   ]
+  },
+  {
+   "id": "APLUS-04",
+   "type": "Standard Four Image & Text",
+   "titleChars": 18,
+   "bodyChars": 279,
+   "imagesMissing": [
+    "aplus-04-types-of-games-a.png",
+    "aplus-04-types-of-games-b.png",
+    "aplus-04-types-of-games-c.png",
+    "aplus-04-types-of-games-d.png"
+   ]
+  },
+  {
+   "id": "APLUS-05",
+   "type": "Standard Image & Light Text Overlay",
+   "titleChars": 43,
+   "bodyChars": 281,
+   "imagesMissing": [
+    "aplus-05-play-family-discovery.png"
+   ]
+  },
+  {
+   "id": "APLUS-06",
+   "type": "Standard Image Header with Text",
+   "titleChars": 45,
+   "bodyChars": 391,
+   "imagesMissing": [
+    "aplus-06-complete-collection.png"
+   ]
+  }
+ ]
+}

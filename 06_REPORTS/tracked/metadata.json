@@ -1,0 +1,152 @@
+{
+ "$comment": [
+  "KDP METADATA — ÜRETİLMİŞ DOSYA (04_BUILD/metadata.py).",
+  "Bu bir KOPYA KAĞIDIDIR. Ajan KDP paneline DOKUNMADI.",
+  "Her sayı ölçümden gelir; elle yazılmış sayı yoktur."
+ ],
+ "generatedAtPhase": "phase6",
+ "gate": "phase1",
+ "bookDetails": {
+  "language": "en",
+  "title": "The Great Book of World Games",
+  "titleChars": 29,
+  "subtitle": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleChars": 107,
+  "series": "The Great Book of…",
+  "volume": 2,
+  "author": "Emre Doğan",
+  "contributors": [],
+  "publisher": "Vâliçe Press",
+  "edition": "First edition"
+ },
+ "description": {
+  "text": "A reference book you play from.\n\nThe Great Book of World Games sets out 56 traditional games from 39 cultures, from the royal graves of Ur to a Zulu playground, and it sets them out so you can play them tonight. Each game gets two facing pages: the book lies open on the table and nobody has to turn a page in the middle of a turn.\n\nWHAT IS INSIDE EACH ENTRY\n· Players, time, age, materials and difficulty at a glance\n· What to use instead of what — buttons, coins, dried beans, an egg box\n· Numbered rules, one action to a line\n· A board diagram drawn to scale\n· The three questions every table argues about: what happens on a draw, what happens if nobody can move, and what happens when somebody plays an illegal move\n· A shorter version to start with\n· The work and the pages the rules were read from\n\nSORTED BY HOW THEY WORK, NOT BY WHERE THEY ARE FROM\nMost collections file games by country. This one files them by mechanism, in seven families — sowing, hunt and siege, race home, line and territory, the war board, chance and nerve, and games without a board. Put that way, the mancala games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part; the ancestors of chess sit together and you can watch six cultures solve the same problem six ways.\n\nHONEST ABOUT WHAT IS KNOWN\nEvery rule set names its source. Where a historical record is incomplete, the entry says so and shows what has been reconstructed and on what basis. Where no source settles a question — most often the draw — the book makes a ruling and tells you it is the book's ruling, so you can overrule it. One page at the back is given to game origin stories that are widely repeated and are not true.\n\nAT THE BACK\nFull-size board templates you can photocopy. A materials guide. A glossary of the terms used for mechanics. Sources for every game. Three indexes — by culture, by number of players, and by time and age.\n\n160 pages. Almost nothing in it has to be bought.",
+  "chars": 1981,
+  "limit": 4000,
+  "format": "plain text; KDP allows limited HTML but this copy is written to read correctly without it"
+ },
+ "keywords": [
+  "traditional board games book",
+  "world games rules and history",
+  "family games for adults and kids",
+  "mancala backgammon go rules",
+  "history of board games reference",
+  "games from around the world",
+  "classroom games activity book"
+ ],
+ "categories": {
+  "bisacPrimary": {
+   "code": "GAM002000",
+   "name": "GAMES & ACTIVITIES / Board"
+  },
+  "bisacSecondary": [
+   {
+    "code": "REF000000",
+    "name": "REFERENCE / General"
+   },
+   {
+    "code": "HIS000000",
+    "name": "HISTORY / General"
+   }
+  ],
+  "$note": "KDP artık kategorileri kendi ağacından seçtirir; BISAC kodları eşleştirme için verilir. Kurucu paneldeki karşılıklarını seçer."
+ },
+ "audience": {
+  "readerAgeMin": 8,
+  "readerAgeMax": 99,
+  "$note": "KDP yaş aralığı YALNIZCA çocuk kitabı olarak işaretlenen başlıklarda sorulur. Bu kitap bir aile başvuru cildidir ve çocuk kitabı olarak işaretlenMEZ — işaretlenirse yetişkin alıcı aramalarından düşer."
+ },
+ "publishingRights": {
+  "value": "I own the copyright and I hold the necessary publishing rights.",
+  "$note": "Kitabın metni bu proje için yazılmıştır. Kural kaynakları KAMUSAL ALAN eserlerdir ve alıntı değil KÜNYE olarak kullanılır; hiçbir kaynaktan blok metin aktarılmamıştır."
+ },
+ "isbn": {
+  "strategy": "kdp-free",
+  "paperback": "PENDING — KDP-PROVIDED ISBN",
+  "hardcover": "PENDING — KDP-PROVIDED ISBN",
+  "$note": "Sahte ISBN YASAKTIR (§ 15)."
+ },
+ "aiProductionFacts": {
+  "$note": "KDP'nin AI beyanı için OLGULAR. Seçimi kurucu yapar.",
+  "text": "Text was drafted with AI assistance and edited by the author; every rule set is traced to a named printed source at page level.",
+  "images": "Cover and A+ artwork are generated externally by the author; interior diagrams are drawn deterministically by the project's own code from data, not generated.",
+  "translation": "None. The commercial text is written directly in English.",
+  "founderConfirmed": false
+ },
+ "pricing": {
+  "hardcover": {
+   "listUSD": 34.99,
+   "enabled": true
+  },
+  "paperback": {
+   "listUSD": 22.99,
+   "enabled": true
+  },
+  "kindle": {
+   "listUSD": 11.99,
+   "enabled": true
+  },
+  "largeprint": {
+   "listUSD": null,
+   "enabled": false
+  }
+ },
+ "territories": {
+  "value": "All territories (worldwide rights)",
+  "$note": "Kurucu kararı; varsayılan budur."
+ },
+ "kdpSelect": {
+  "enrol": false,
+  "$note": "KU'ya GİRİLMEZ: 256 sayfalık tam okuma ≈ 1,23 $, ciltsiz telif 8,44 $. 6,9 kat kayıp."
+ },
+ "pageCounts": {
+  "paperback": 160,
+  "hardcover": 160
+ },
+ "measured": {
+  "games": 56,
+  "cultures": 39,
+  "families": 7,
+  "reconstructed": 7,
+  "oldestGameBCE": 2600,
+  "oldestGameAgeYears": 4600,
+  "publicationYear": 2026,
+  "subtitleMeasured": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
+  "frontMatterWords": 2039,
+  "familyOpenerWords": 2415
+ },
+ "founderActions": [
+  {
+   "id": "A6",
+   "field": "founder.authorBio",
+   "blocking": true,
+   "note": "`founder.authorBio` BOŞ. KDP yazar biyografisini ister ve World Myths'te yer tutucu metin REDDEDİLDİ (12 Ağustos 2026). Kurucu gerçek bir biyografi yazmadan yayın tamamlanamaz."
+  },
+  {
+   "id": "AI-DECL",
+   "field": "founder.aiDisclosure.founderConfirmed",
+   "blocking": true,
+   "note": "KDP'nin yapay zekâ beyanı SEÇİMİ kurucunundur. Ajan hukuki bildirim veremez. Beyan için gereken olgular `aiProductionFacts` alanındadır."
+  },
+  {
+   "id": "ISBN-paperback",
+   "field": "founder.isbn.paperback",
+   "blocking": false,
+   "note": "KDP ücretsiz ISBN atar. Atandıktan sonra buraya yazılırsa künye sayfası gerçek numarayı basar; yazılmazsa PENDING basmaya devam eder. SAHTE ISBN YASAKTIR."
+  },
+  {
+   "id": "ISBN-hardcover",
+   "field": "founder.isbn.hardcover",
+   "blocking": false,
+   "note": "KDP ücretsiz ISBN atar. Atandıktan sonra buraya yazılırsa künye sayfası gerçek numarayı basar; yazılmazsa PENDING basmaya devam eder. SAHTE ISBN YASAKTIR."
+  }
+ ],
+ "limits": {
+  "title": 200,
+  "subtitle": 200,
+  "description": 4000,
+  "keywordSlots": 7,
+  "keywordChars": 50
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "$comment": [
+  "KAPAK/A+ HAM VARLIK ALIMI — ÜRETİLMİŞ DOSYA.",
+  "Efektif DPI = piksel / fiziksel inç. Etiket DEĞİL, BÖLME.",
+  "Ham dosyalara yazılmaz; çıktı 07_ASSETS/processed/ altındadır."
+ ],
+ "generatedAtPhase": "phase6",
+ "engine": {
+  "path": "/home/emre/Applications/upscayl-cli/upscayl-bin",
+  "present": true,
+  "model": "digital-art-4x",
+  "scale": 4,
+  "authority": "ASSET_UPSCALING_REPORT.md"
+ },
+ "targetPpi": 300,
+ "geometry": {
+  "wrapIn": [
+   17.6103,
+   11.25
+  ],
+  "wrapPx": [
+   5283,
+   3375
+  ],
+  "pageCount": 160,
+  "spineIn": 0.3603
+ },
+ "assets": {
+  "cover": [],
+  "aplus": []
+ },
+ "assetCount": 0,
+ "gate": "OPEN — kurucu sanatı bekleniyor"
+}
