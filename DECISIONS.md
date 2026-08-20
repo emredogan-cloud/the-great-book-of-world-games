@@ -896,6 +896,42 @@ içermiyor.
 
 ---
 
+### K35 · ÖLÇÜLEN BİR KAPI, GÖRDÜĞÜ DOSYA KADAR VARDIR
+
+**Karar.** Bir kalite kapısının denetlediği dosya kümesi, kapının kendisi
+kadar denetlenir. `.gitignore` bir kapıyı kör edebilir ve ettiği anda kapı
+**yeşil** yanar.
+
+**Neden.** Faz 6 ölçtü: CI'da diyagram kapıları **51 diyagramın 18'ini**
+görüyordu. Faz 4 ve Faz 5 kendi tanımlayıcı dosyalarını izin listesine
+eklememişti; dosyalar `.gitignore` tarafından dışarıda bırakılmıştı. Kapı
+her push'ta koştu, her push'ta yeşil yandı ve **33 diyagrama hiç bakmadı**.
+Bakacak dosyası olmayan bir kapı, kusuru olmayan bir kapı gibi görünür.
+
+**Sonuç.** Faz 4/5/6 tanımlayıcıları izin listesine alındı. Bundan sonra
+CI'da koşan her kapı için tek soru şudur: *bu kapı bugün kaç dosya gördü?*
+
+---
+
+### K34 · KÜLTÜR ADI, MADDEDE NE YAZIYORSA İNDEKSTE DE ODUR
+
+**Karar.** Bir maddenin başlığındaki kültür adı ile o oyunun kültür
+indeksindeki kova adı **birebir aynı** olmak zorundadır. Ayrışırlarsa
+envanter düzeltilir ve kapsam kilidine şerh düşülür.
+
+**Neden.** Basılı sayfa okunduğunda bulundu: `set-dilth` maddesi
+*White Mountain Apache* diyor, kültür indeksi *Apache* diyordu — indeks
+envanterden üretiliyor ve envanterde dar ad yoktu. Okur maddede gördüğü adı
+indekste arar. Bu bir tasnif tartışması değil, bir **kullanılabilirlik**
+kusurudur; ayrıca Culin'in kaydı Albert Reagan'ın White River gözlemine
+dayanır ve dar ad kaynağa daha yakındır.
+
+**Mekanizma.** `qa_index.py ③` kültür kovalarını kilitle karşılaştırır ve
+ayrışmayı kırmızı yakar. Kapsam kilidi ayrıca **sessiz kaymayı** yakaladı ve
+düzeltmenin şerhsiz geçmesine izin vermedi (şerh A3).
+
+---
+
 ### K33 · ENVANTERİN KAYNAK ATFI, KAYNAĞIN KENDİSİ DEĞİLDİR
 
 **Karar veren:** kurucu (§ 4 · § 26 yetkisiyle ajan) · **Faz:** 5 · **Tarih:** 19 Ağustos 2026

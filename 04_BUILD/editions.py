@@ -80,11 +80,37 @@ def main() -> int:
 
     prod = cfg.get("production", {})
     pc = prod.get("kdpPrintCost", {})
-    pages = modelled_pages(cfg)
+
+    # ⚠ EKONOMİ BASILAN KİTABIN SAYFA SAYISINDAN HESAPLANIR.
+    #
+    # `modelled_pages()` 100 OYUNLUK KAPSAMIN izdüşümüdür (254) ve kapsam
+    # kilitli olduğu için öyle kalır. Ama KDP basılan sayfaya göre fatura
+    # keser ve telif ORADAN çıkar. 254 sayfalık bir modelden hesaplanan
+    # telif, 160 sayfalık bir kitap için YANLIŞTIR — ve yanlış olduğu yön
+    # kitabın aleyhinedir: kısa kitap DAHA ÇOK kazandırır.
+    #
+    # Bu yüzden iç blok üretildiyse SAYILAN sayfa kazanır ve model
+    # karşılaştırma için yanında basılır.
+    modelled = modelled_pages(cfg)
+    pages, source = modelled, "model (100 oyunluk kapsam izdüşümü)"
+    ip = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                      "06_REPORTS", "interior-paperback.json")
+    if os.path.exists(ip):
+        try:
+            with open(ip, encoding="utf-8") as fh:
+                pages = int(json.load(fh)["pageCount"])
+            source = "SAYILDI (interior.py · basılan kitap)"
+        except Exception:                                   # noqa: BLE001
+            pass
     errors: list[str] = []
     rows: list[dict] = []
 
-    print("\n  modellenen sayfa sayısı: %d\n" % pages)
+    print("\n  sayfa sayısı: %d — %s" % (pages, source))
+    if pages != modelled:
+        print("  (kapsam modeli %d sayfa derdi; ekonomi BASILAN kitaptan "
+              "hesaplanıyor)\n" % modelled)
+    else:
+        print("")
     print("  %-11s %8s %8s %8s %9s  %s"
           % ("sürüm", "liste", "baskı", "telif", "b.e.ACOS", "durum"))
     print("  " + "-" * 62)
@@ -156,7 +182,12 @@ def main() -> int:
     if args.json:
         os.makedirs(os.path.dirname(args.json), exist_ok=True)
         with open(args.json, "w", encoding="utf-8") as fh:
-            json.dump({"status": status, "pages": pages, "editions": rows,
+            json.dump({"status": status, "pages": pages,
+                       "modelledPages": modelled, "pageSource": source,
+                       "$note": ("Telif BASILAN sayfa sayısından hesaplanır. "
+                                 "Kapsam modeli (100 oyun) ayrı bir sayıdır "
+                                 "ve karşılaştırma için tutulur."),
+                       "editions": rows,
                        "errors": errors}, fh, ensure_ascii=False, indent=2)
     return 1 if errors else 0
 

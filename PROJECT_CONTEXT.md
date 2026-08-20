@@ -4,7 +4,7 @@
 > belgedir.** Hafızası olmayan bir ajan buradan başlar ve projenin nerede
 > olduğunu, neyin kilitli neyin açık olduğunu buradan öğrenir.
 >
-> Son güncelleme: **14 Ağustos 2026** · Faz: **5 · ÜRETİM AÇIK** · Kapı: `phase1`
+> Son güncelleme: **20 Ağustos 2026** · Faz: **6 · TAMAMLANDI** · Kapı: `phase1`
 
 ---
 
@@ -54,67 +54,66 @@ ayrılmış — akademik oyun tarihi (oynanamaz) ve jenerik aile oyunu listeleri
 
 ## 4 · Şu anki durum
 
-> ⚠ **ÜRETİM AÇIK · RESMÎ KAPI KAPALI.** İkisi ayrı şeylerdir ve bu
-> ayrım kasıtlıdır (kararlar K18 · K21). Kurucu Faz 4 üretim işini de
-> yetkilendirdi; resmî faz kapısı **yalnızca gerçek kanıtla** açılır.
+> ⚠ **FAZ 6 TAMAMLANDI · KDP YÜKLEMESİ KURUCUYU BEKLİYOR.**
 >
 > ```
-> PRODUCTION       : AUTHORIZED
-> FORMAL VALIDATION: PENDING
+> PHASE 6      : COMPLETE (technically executable work)
+> INTERIOR     : READY  · 160 sayfa · ciltsiz + ciltli + EPUB
+> COVER        : BLOCKED · kurucu sanatı yok
+> A+           : BLOCKED · dokuz görsel yok
+> PUBLISHED    : NO
 > ```
 
 | | |
 |---|---|
-| Faz | **5 · ÜRETİM ŞERİDİ AÇIK** (koşullu · K21 · A10) |
-| Kapı (`.gate`) | **`phase1`** — yükseltilmedi ve yükseltilmeyecek |
-| Kilitli kapsam | **100 oyun · 73 kültür · 19 yedek** ✅ (K23 şerhli) |
-| **Yazılmış oyun** | **23** / 100 ⛔ |
-| Kilitli oyun | **0** / 100 |
-| Doğrulanmış künye | **31** · doğrulama kaydı **51** |
-| Kaynak: denendi-erişilemedi | **5** oyun (P4) |
-| Kaynak: arandı-kayıt yok | **2** oyun (P6 · K23 terfileri) |
-| Kaynak: henüz denenmedi | **69** oyun |
-| **Erişilebilir · yazılmamış** | **72** oyun — kuyrukta sıralı |
-| **K24 istisnası** | cats-cradle · kayıtlı + dört testle kilitli |
-| **Dış oynanabilirlik testi** | **0** ⛔ **BLOKLAYICI** |
-| Diyagram | **26 render · hepsi tavan içinde** ✅ |
-| **Oyun başına diyagram** | **azami 144,0 mm** ✅ |
-| Diyagram dili | **v1.4** |
-| **Arka madde** | **ALTI BÖLÜM TAM** ✅ · üç indeks üretildi |
-| **Sayfa modeli** | **258** (hedef 256, **+%0,8**) ✅ **BANTTA** |
-| Birim telif | ciltsiz **8,41 $** · ciltli **10,96 $** |
-| Selftest | **177 denetim** ✅ |
-| Depo | public · `main` · CI **YEŞİL** |
-| **Sonraki adım** | **KURUCU: kaynak erişimi · dış test · diyagram dili v1.5** |
+| Faz | **6 · TAMAMLANDI** — ajan DURDU |
+| Kapı (`.gate`) | **`phase1`** — yükseltilmedi |
+| Kilitli kapsam | **100 oyun · 68 kültür** (şerhler A1–A3) |
+| **Yazılmış oyun** | **56** / 100 |
+| Kültür · bölge · aile | **39** · 22 · 7 |
+| `reconstructed` madde | 7 (yedisinin de beyanı var) |
+| Doğrulama kaydı | **74** · `verified` **55** · uydurulmuş künye **0** |
+| **Basılan sayfa** | **160** (SAYILDI) · ciltsiz 8,5×11 · ciltli 8,25×11 |
+| **Basılan kelime** | **65.395** |
+| Çift sayfa sözü | **56 / 56 madde SOL sayfada başlıyor** |
+| Sırt | ciltsiz **0,3603 in** · ciltli **0,4600 in** |
+| Birim telif (160 s.) | ciltsiz **10,07 $** · ciltli **12,62 $** · Kindle 7,19 $ |
+| Diyagram | **51 render · 51'i gözle denetlendi** · dil v1.5 |
+| Ön madde + aile açılışları | **YAZILDI** (2.039 + 2.415 kelime) |
+| Kindle | **EPUB 3 · reflowable** · 50 diyagram satır içi SVG |
+| A+ | metin **hazır** · görsel **yok** |
+| Selftest | **192** denetim ✅ |
+| **Paket kapılarının testi** | **37 kasıtlı kusurun 37'si yakalandı** ✅ |
+| Yerel kapılar | `qa_all.sh` → **HEPSİ YEŞİL** |
+| CI | temiz klonda **simüle edildi ve YEŞİL** · ⛔ **push YAPILMADI** |
+| **Sonraki adım** | **KURUCU: kapak sanatı · A+ görselleri · yazar biyografisi · AI beyanı · dış test** |
 
-Faz raporları: [`06_REPORTS/PHASE_2_REPORT.md`](06_REPORTS/PHASE_2_REPORT.md) ·
-[`06_REPORTS/PHASE_3_REPORT.md`](06_REPORTS/PHASE_3_REPORT.md) ·
-[`06_REPORTS/PHASE_4_REPORT.md`](06_REPORTS/PHASE_4_REPORT.md) ·
-[`06_REPORTS/PHASE_5_REPORT.md`](06_REPORTS/PHASE_5_REPORT.md)
+Faz raporları: [`06_REPORTS/PHASE_6_FINAL_REPORT.md`](06_REPORTS/PHASE_6_FINAL_REPORT.md) ·
+[`06_REPORTS/PHASE_5_REPORT.md`](06_REPORTS/PHASE_5_REPORT.md) ·
+[`06_REPORTS/FINAL_WRITING_PHASE_CLOSURE.md`](06_REPORTS/FINAL_WRITING_PHASE_CLOSURE.md)
 
-**Faz 5 kendi ana hedefini tutturamadı ve bunu gizlemiyor.** Hedef 100
-oyundu; yazılan **23**'tür. Faz iki koşuda çalıştı: birincisi kapsam
-değişikliğini, arka maddeyi ve altı kapı kusurunu tamamladı ama **hiç oyun
-yazmadı**; ikincisi K24 istisnasını kurdu ve **üç oyun yazdı**
-(cats-cradle · shogi · pachisi).
+**Faz 6 kitabı BASILABİLİR hâle getirdi ve dört oyun daha açtı.** Kurucunun
+teslim ettiği Murray 1952 sayfa seviyesinde tarandı; boşluk kaydı o eseri
+"denendi ve açılamadı" diye tutuyordu ve bu, teslimden sonra doğru değildi.
+Alquerque, Ashta Kashte, Rimau-rimau ve Go yazıldı (52 → 56); yazılmayan
+sekiz aday için gerekçe **tahmin değil ölçüm** olarak kayda geçti.
 
-**Faz 5'in en değerli çıktısı yine bir düzeltmedir** — yedi kapı kusuru,
-yedisi de gerçek veriyle **yeşil koşuyordu**. En sertleri:
+**Faz 6'nın en değerli çıktısı yine bir düzeltmeler kümesidir** — hepsi
+sayısal kapılar YEŞİLKEN bulundu:
 
-- `scope_lock.json`'ın başlığı *"model ayrışırsa bu KAPI ISIRIR"* diye
-  **vaat ediyordu**; öyle bir denetim **hiç yazılmamıştı**.
-- **Bir tane** şerh, kilit özetinin denetimini **ömür boyu** kapatıyordu.
-- Kapsamdan **çıkarılmış** bir oyun **basılmaya devam edebiliyordu**.
-- Kalibre config ölçümden kayınca **ekonomi eski sayıyla** hesaplanıyordu.
-- Efsanedeki iki sembol **birebir aynı** çizilebiliyordu — beş diyagramda
-  bulundu, biri **Faz 3'ten beri basılıydı**.
-
-⚠ **KALAN 77 OYUN BİR YAZIM İŞİ DEĞİL, ÖNCE BİR KAYNAK İŞİDİR.** Faz 5 on
-kaynak açtı ve **yedisi kural taşımıyordu**: Culin'in *Korean Games* cildi
-Çin ve Japon oyunlarına yalnızca **karşılaştırma notu** verir (xiangqi ·
-tien-gow · jianzi · sugoroku), Fiske filolojidir (hnefatafl · halatafl),
-Culin'in mancala'sı Şam ve Vei kayıtlarıdır (oware), ve Smith'in go
-kitabı **Japon** kodifikasyonudur — kapsam ise **Han Çinlisi** der.
+- **65 Türkçe efsane etiketi** İngilizce kitabın diyagramlarında basılacaktı.
+  İkisinde Türkçeye özgü **tek bir harf yok**tu, yani aksan taraması da kördü.
+- **Üç gömülmemiş font** (Helvetica · Times-Roman · ZapfDingbats) — KDP üçünü
+  de reddederdi.
+- **Baskı fontunda olmayan bir efsane sembolü** (U+2312): sayfada yer boş
+  kalacaktı.
+- **`mbube-formation` diyagramı "buffalo" diyordu**; oyunda impala vardır.
+- **Bir künye hatası**: "folio 916" — Murray'in sayfası render edilip okundu,
+  metin "(Alf. 91b)" diyor.
+- **CI 51 diyagramın 33'ünü hiç görmüyordu**: Faz 4 ve 5 tanımlayıcılarını
+  izin listesine eklememişti. Bakacak dosyası olmayan bir kapı yeşil yanar.
+- **BOOK_STATS beş fazdır "Yazılmış oyun 0" diyordu**; sayıyı envanterin
+  `status` alanından okuyordu ve orada asla yazmayacaktı.
 
 ## 5 · Bu projenin risk profili
 
@@ -240,26 +239,22 @@ kapanmadan sonrakine geçilmez. CI kırmızıyken hiçbir şey ilerlemez.
 
 > **KURUCU EYLEMİ BEKLENİYOR — onay değil, EYLEM.**
 >
-> Faz 5 kapsam değişikliğini (K23), arka maddeyi ve altı kapı kusurunu
-> tamamladı; **oyun yazımını tamamlayamadı: 20/100.**
+> Faz 6 teknik olarak yapılabilecek her şeyi bitirdi ve **DURDU**. Beş
+> BLOKLAYICI madde kaldı ve beşi de ajanın üretemeyeceği şeylerdir:
 >
-> Bekleyen dört BLOKLAYICI:
+> 1. **Kapak sanatı yok.** İki metinsiz konsept ve tam çıktı sözleşmesi
+>    `07_ASSETS/IMAGE_PROMPT_LIBRARY.html` içinde hazır. Dosyalar
+>    `07_ASSETS/raw/cover/` altına düşünce hat kendiliğinden devam eder.
+> 2. **A+ görselleri yok** (dokuz dosya). Altı modülün metni hazır ve iddia
+>    taramasından geçti.
+> 3. **`authorBio` boş.** KDP kardeş bir başlıkta yer tutucu biyografiyi
+>    REDDETTİ. `metadata.py --gate release` bugün kırmızı yanıyor.
+> 4. **AI beyanı** hukuki bir bildirimdir ve kurucunundur.
+> 5. **Dış oynanabilirlik testi: 0 oturum.** Bu blok Faz 2'den beri aynı
+>    yerde duruyor ve kitabın alt başlığındaki sözü ölçen tek kanıttır.
 >
-> 1. **80 oyun yazılmadı.** Faz 5 beş oyunun kaynağını sayfa seviyesinde
->    açtı ve beşi de yazılamaz çıktı. Bu küçük bir örneklemdir ama
->    "erişilebilir" sayılan 92 oyunun bir bölümünün **kural taşımayan**
->    kaynaklara bağlı olabileceğini gösteriyor.
-> 2. **Dış oynanabilirlik test oturumları.** Paket `01_SOURCE/pilot_tr/`
->    içinde hazır. Ajan bu adımı yapamaz ve sahte kayıt üretmez.
->    **Bu blok Faz 2'den beri aynı yerde.**
-> 3. **cats-cradle · 150 mm çatışması.** Kaynak (Jayne 1906, ss. 324–338)
->    **tam ve sayfa-doğrulanmış**; sekiz figür oyun başına 150 mm tavanına
->    sığmıyor. Üç seçenek `source_access_pending.json § editorialHolds`
->    içinde. **Kurucu kararı gerekir.**
-> 4. **Telifli kaynaklara erişim.** Beş oyun engelli (P4). Ayrıca iki
->    oyun (lagori · kho-kho) **P6**'dadır: kaynakları arandı ve
->    denetlenebilir bir kayıt **bulunamadı** — bu bir erişim engeli
->    değildir ve kütüphane kartıyla açılmaz.
+> Ayrıca **altı commit yerelde duruyor**: bu oturumun ortamı `git push`'u
+> engelledi. Komut çalıştırılmadı.
 >
-> Açık kurucu kararları: **A4** (büyük punto) · **A5** (`STYLE.md` onayı) ·
-> **A6** (yazar biyografisi).
+> Açık kurucu kararları: **A4** (büyük punto) · **A5** (`STYLE.md` bandı —
+> Faz 6 ölçtü, § 17) · **A6** (yazar biyografisi).

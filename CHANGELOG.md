@@ -5,6 +5,86 @@ Her faz kendi girdisini ekler. Format: ters kronolojik.
 
 ---
 
+## [0.6.0] — 2026-08-20 · FAZ 6 · NİHAİ ÜRETİM VE KDP PAKETİ
+
+**Yazılan: 4 oyun** (manuscript **52 → 56**) · **basılan kitap: 160 sayfa**.
+
+### Murray 1952 açıldı — ve dört oyun açtı
+
+Kurucunun teslim ettiği Murray sayfa seviyesinde tarandı. Boşluk kaydı bu
+eseri `BLOCKED_WORKS` içinde "denendi ve açılamadı" diye tutuyordu ve o
+gerekçe **teslimden sonra doğru değildi**.
+
+| oyun | kültür | kaynak |
+|---|---|---|
+| **Alquerque** | Andalusi Arap | Murray ss. 65–66 (§ 4.2 · § 4.2.1) |
+| **Ashta Kashte** | Bengalli | Murray ss. 129 ve 131 (§ 6.3 · § 6.3.3) |
+| **Rimau-rimau** | Malay | Murray s. 108 (§ 5.6.1) |
+| **Go** | Han Çinlisi | Murray ss. 89–91 (§ 4.7.1) |
+
+Üç şekil PDF sayfası **400 dpi render edilip gözle okundu**: Fig. 27, 52, 56.
+`go`nun UNRESOLVED düğümü **kaynakla** çözüldü — Murray künyeyi Çin adıyla
+açar ve 19×19 tahtayı bir Çin kaydına bağlar.
+
+**Yazılmayan sekiz aday için gerekçe ölçüldü**, tahmin edilmedi: en sertleri
+`zamma` (Murray terfi eden taşın alma gücü için açıkça *"nothing is said"*
+der) ve `tabula` (Murray'in **metni kendi şekliyle çelişiyor**: metin *table
+D* der, aynı sayfadaki Fig. 16 beş tablo gösterir).
+
+### Kitap ilk kez BASILABİLİR hâle geldi
+
+- **Ön madde ve yedi aile açılışı yazıldı** — Faz 5 ikisini de yazılmamış
+  devretmişti (2.039 + 2.415 kelime).
+- **İç blok** (`04_BUILD/interior.py`): 160 sayfa, iki trim, gerçek vektör
+  diyagramlar, gömülü font. **56/56 madde SOL sayfada başlıyor.**
+- **Kindle EPUB 3** (reflowable) · 50 diyagram satır içi SVG.
+- **Kapak geometrisi**, **A+ paketi**, **metadata**, **teslim paketi** ve
+  iki kurucu kılavuzu üretildi.
+- **Alt başlık ölçümden türetiliyor**: *"56 Games from 4,600 Years … 39
+  Cultures"*. Hipotez (*"100 … 45"*) config'te duruyor, silinmedi.
+- **Ekonomi basılan kitaptan hesaplanıyor**: 160 sayfada ciltsiz telif
+  **8,48 → 10,07 $**, ciltli **11,03 → 12,62 $**.
+
+### Sayısal kapılar YEŞİLKEN bulunan kusurlar
+
+| ne | ölçü |
+|---|---|
+| Türkçe efsane etiketi (basılacaktı) | **65** |
+| Bunlardan Türkçeye özgü harf taşımayan | 2 |
+| Gömülmemiş font | **3** (Helvetica · Times-Roman · ZapfDingbats) |
+| Baskı fontunda olmayan efsane sembolü | 1 (U+2312) |
+| Efsane ↔ kural terminoloji ayrışması | 13 |
+| Diyagramın oyunda olmayan bir hayvanı adlandırması | 1 (`buffalo` / impala) |
+| Künye hatası (OCR) | 1 (`folio 916` → `91b`) |
+| Basılan metinde markdown işareti | 2 (güvenlik uyarısının içinde) |
+| Basılan künyede projenin iç sözlüğü | 12 madde |
+| **CI'ın hiç görmediği diyagram** | **33 / 51** |
+
+### Yeni kapılar
+
+| kapı | ne yapar |
+|---|---|
+| `04_BUILD/qa_visual.py` | **11 denetim** · tanımlayıcıyı değil RENDER EDİLMİŞ SVG'yi denetler |
+| `04_BUILD/qa_lineedit.py` | **12 denetim · 1.891 metin bloğu** |
+| `04_BUILD/kdp_preflight.py` | **18 denetim** · sayfa RASTERLENİP mürekkep kutusu ölçülür |
+| `05_TESTS/package_selftest.py` | **37 kasıtlı kusur · 37'si yakalandı** |
+| CI işi `package-gates` | Faz 6 kapıları CI'da koşar |
+
+### Kapsam şerhi
+
+**A3 (K34)** · `set-dilth` kültürü `Apache` → `White Mountain Apache`.
+Kapsam kilidi sessiz kaymayı yakaladı ve doğru yaptı; düzeltme şerhle
+kayda geçirildi.
+
+### DURULDU
+
+KDP paneline dokunulmadı. Yükleme yok, Previewer yok, fiyat yok, A+
+gönderimi yok, prova yok, yayın yok. **Beş bloklayıcı kurucu eylemi** açık:
+kapak sanatı · A+ görselleri · yazar biyografisi · AI beyanı · dış test.
+Ayrıca **altı commit yerelde** duruyor: ortam `git push`'u engelledi.
+
+---
+
 ## [0.5.9] — 2026-08-19 · FAZ 5 · BATCH 8 — TESLİM #2 VE YAZIM FAZI KAPANIŞI
 
 **Yazılan: 4 oyun** (manuscript **48 → 52**).
