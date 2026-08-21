@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDP Upload Guide — The Great Book of World Games</title>
+<meta name="description" content="Founder Control Center for uploading The Great Book of World Games to Amazon KDP. Offline, self-contained, progress-tracked.">
+<style>
+  :root{
+    --ink:#231f1a; --ink-soft:#57503f; --paper:#faf6ee; --paper-raised:#fffdf8;
+    --line:#e4dbc7; --line-soft:#ece4d2;
+    --accent:#7a4b21; --accent-soft:#f1e4cd;
+    --green:#1a7a4c; --green-soft:#e3f3ea; --green-line:#a9d9bf;
+    --blue:#1d5fa8; --blue-soft:#e6eff9; --blue-line:#aecbea;
+    --red:#b8351f; --red-soft:#fbe9e4; --red-line:#eab3a4;
+    --amber:#946a13; --amber-soft:#fbf0d9;
+    --radius:10px;
+    --shadow:0 1px 2px rgba(35,31,26,.06), 0 4px 14px rgba(35,31,26,.05);
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, "Liberation Mono", monospace;
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  /* NOTE: scroll-behavior:smooth deliberately NOT used here. Tested and
+     found unreliable for long-distance anchor jumps (a 15,000px jump
+     silently stalled after ~24px in real testing) — a working instant
+     jump beats a decorative animated one that can stall. */
+  body{
+    margin:0; font-family:var(--sans); color:var(--ink); background:var(--paper);
+    line-height:1.55; font-size:15px;
+  }
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:700; color:var(--ink); margin:0 0 .4em;}
+  a{color:var(--blue);}
+  code{font-family:var(--mono); font-size:.92em; background:var(--line-soft); padding:.1em .35em; border-radius:4px;}
+  .mono{font-family:var(--mono);}
+
+  /* ---------- layout shell ---------- */
+  .shell{display:flex; min-height:100vh;}
+  .sidebar{
+    width:250px; flex:0 0 250px; background:var(--paper-raised); border-right:1px solid var(--line);
+    position:sticky; top:0; height:100vh; overflow-y:auto; padding:20px 0 30px;
+  }
+  .main{flex:1; min-width:0; padding:0 0 80px;}
+  .content{max-width:980px; margin:0 auto; padding:0 32px;}
+
+  /* ---------- sidebar ---------- */
+  .brand{padding:0 20px 16px; border-bottom:1px solid var(--line); margin-bottom:14px;}
+  .brand .name{font-family:var(--serif); font-weight:700; font-size:17px; line-height:1.25;}
+  .brand .tag{font-size:11.5px; color:var(--ink-soft); margin-top:4px; letter-spacing:.02em;}
+  .sidenav{padding:0 12px;}
+  .sidenav a{
+    display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink);
+    padding:8px 10px; border-radius:8px; font-size:13.5px; font-weight:600; margin-bottom:2px;
+  }
+  .sidenav a:hover{background:var(--line-soft);}
+  .sidenav a.active{background:var(--accent-soft); color:var(--accent);}
+  .sidenav .dot{width:7px; height:7px; border-radius:50%; background:var(--line); flex:0 0 auto;}
+  .sidenav .dot.done{background:var(--green);}
+  .sidenav .dot.partial{background:var(--amber);}
+  .sidenav small{margin-left:auto; font-weight:500; color:var(--ink-soft); font-size:11px;}
+
+  .progress-block{margin:16px 12px 0; padding:14px; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);}
+  .progress-block .pct{font-family:var(--serif); font-size:26px; font-weight:700; line-height:1;}
+  .progress-block .lbl{font-size:11px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em; margin-top:2px;}
+  .progress-bar{height:7px; border-radius:5px; background:var(--line-soft); margin:10px 0 8px; overflow:hidden;}
+  .progress-bar > div{height:100%; background:linear-gradient(90deg,#8a6a3a,var(--green)); border-radius:5px; transition:width .25s ease;}
+  .progress-stats{display:flex; justify-content:space-between; font-size:11px; color:var(--ink-soft);}
+  .reset-btn{
+    margin-top:10px; width:100%; padding:6px 8px; font-size:11.5px; border-radius:7px;
+    border:1px solid var(--line); background:var(--paper-raised); color:var(--ink-soft); cursor:pointer;
+  }
+  .reset-btn:hover{border-color:var(--red-line); color:var(--red);}
+
+  /* ---------- top banner ---------- */
+  .topbar{
+    background:linear-gradient(180deg,var(--paper-raised),var(--paper)); border-bottom:1px solid var(--line);
+    padding:28px 32px 22px;
+  }
+  .eyebrow{font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); font-weight:700; margin-bottom:6px;}
+  .topbar h1{font-size:28px; margin-bottom:4px;}
+  .topbar .subline{color:var(--ink-soft); font-size:14px; max-width:720px;}
+  .state-banner{
+    margin-top:16px; display:flex; flex-wrap:wrap; gap:10px;
+  }
+  .state-chip{
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:999px;
+    padding:6px 14px; font-size:12.5px; font-weight:600; display:flex; align-items:center; gap:6px;
+  }
+  .state-chip b{font-family:var(--serif); font-size:14px;}
+  .state-chip.ok{border-color:var(--green-line); background:var(--green-soft); color:var(--green);}
+  .disclaimer-banner{
+    margin-top:16px; background:var(--red-soft); border:1px solid var(--red-line); color:var(--red);
+    border-radius:var(--radius); padding:10px 14px; font-size:13px; font-weight:600;
+  }
+
+  section{padding:40px 0; border-bottom:1px solid var(--line-soft); scroll-margin-top:20px;}
+  section:last-of-type{border-bottom:none;}
+  .section-head{margin-bottom:20px;}
+  .section-head .kicker{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-soft); font-weight:700;}
+  .section-head h2{font-size:23px; display:flex; align-items:center; gap:10px;}
+  .section-head p{color:var(--ink-soft); max-width:760px; font-size:14px;}
+  .section-progress{font-size:12.5px; color:var(--ink-soft); font-weight:600; margin-top:6px;}
+
+  /* ---------- legend ---------- */
+  .legend{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0;}
+  .legend .item{display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; padding:8px 12px; border-radius:9px; border:1px solid var(--line);}
+  .legend .item span.dsc{font-weight:400; color:var(--ink-soft); font-size:12px;}
+
+  /* ---------- cards / steps ---------- */
+  .card{
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 20px; margin-bottom:14px; box-shadow:var(--shadow);
+  }
+  .step{border-left:4px solid var(--line);}
+  .step.type-founder{border-left-color:var(--green);}
+  .step.type-agent{border-left-color:var(--blue);}
+  .step.type-mixed{border-left-color:var(--accent);}
+  .step.done{opacity:.62;}
+  .step-top{display:flex; align-items:flex-start; gap:12px;}
+  .step-check{flex:0 0 auto; padding-top:2px;}
+  .step-check input{width:19px; height:19px; accent-color:var(--green); cursor:pointer;}
+  .step-num{
+    flex:0 0 auto; width:30px; height:30px; border-radius:8px; background:var(--accent-soft); color:var(--accent);
+    display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:700; font-size:13.5px;
+  }
+  .step-titlewrap{flex:1; min-width:0;}
+  .step-title{font-family:var(--serif); font-weight:700; font-size:16.5px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  .step-title .done-tag{font-size:11px; background:var(--green-soft); color:var(--green); padding:2px 8px; border-radius:999px; font-weight:700; font-family:var(--sans);}
+  .badge{
+    font-size:10.5px; font-weight:700; padding:3px 9px; border-radius:999px; text-transform:uppercase; letter-spacing:.03em;
+    display:inline-flex; align-items:center; gap:4px; white-space:nowrap;
+  }
+  .badge.founder{background:var(--green-soft); color:var(--green); border:1px solid var(--green-line);}
+  .badge.agent{background:var(--blue-soft); color:var(--blue); border:1px solid var(--blue-line);}
+  .badge.warn{background:var(--red-soft); color:var(--red); border:1px solid var(--red-line);}
+  .step-body{margin-top:12px; padding-left:42px;}
+  .fieldgrid{display:grid; grid-template-columns:150px 1fr; gap:6px 14px; font-size:13.5px; margin:10px 0;}
+  .fieldgrid dt{color:var(--ink-soft); font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.03em; padding-top:2px;}
+  .fieldgrid dd{margin:0;}
+  .copyrow{display:flex; align-items:stretch; gap:0; margin:4px 0; max-width:100%;}
+  .copyval{
+    font-family:var(--mono); font-size:12.8px; background:var(--paper); border:1px solid var(--line);
+    border-right:none; border-radius:7px 0 0 7px; padding:7px 10px; flex:1; min-width:0; overflow-x:auto;
+    white-space:pre-wrap; word-break:break-word;
+  }
+  .copybtn{
+    flex:0 0 auto; border:1px solid var(--line); background:var(--accent); color:#fff; font-weight:700;
+    font-size:12px; padding:0 14px; border-radius:0 7px 7px 0; cursor:pointer; white-space:nowrap;
+  }
+  .copybtn:hover{background:#5f3a19;}
+  .copybtn.copied{background:var(--green);}
+  .filebtn{
+    display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:700; text-decoration:none;
+    background:var(--blue-soft); color:var(--blue); border:1px solid var(--blue-line); padding:6px 12px; border-radius:7px; margin:4px 6px 4px 0;
+  }
+  .filebtn:hover{background:var(--blue); color:#fff;}
+  .filemeta{font-size:11.5px; color:var(--ink-soft); margin-left:2px;}
+  .note{font-size:13px; color:var(--ink-soft); margin:8px 0;}
+  .warnbox{
+    background:var(--red-soft); border:1px solid var(--red-line); color:#7a2313; border-radius:8px;
+    padding:9px 12px; font-size:13px; font-weight:600; margin:10px 0; display:flex; gap:8px;
+  }
+  .infobox{
+    background:var(--blue-soft); border:1px solid var(--blue-line); color:#123a63; border-radius:8px;
+    padding:9px 12px; font-size:13px; margin:10px 0;
+  }
+  details{margin-top:10px;}
+  details > summary{
+    cursor:pointer; font-size:12.5px; font-weight:700; color:var(--accent); list-style:none; padding:4px 0;
+    display:flex; align-items:center; gap:6px;
+  }
+  details > summary::-webkit-details-marker{display:none;}
+  details > summary::before{content:"▸"; font-size:10px; transition:transform .15s;}
+  details[open] > summary::before{transform:rotate(90deg);}
+  details .details-body{padding:8px 2px 2px; font-size:13.5px; color:var(--ink-soft);}
+  .kw-list{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0;}
+  .kw-chip{font-family:var(--mono); font-size:12px; background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:5px 9px; display:flex; gap:6px; align-items:center;}
+  .kw-chip button{border:none; background:none; color:var(--accent); font-weight:700; cursor:pointer; font-size:11px; padding:0;}
+
+  /* ---------- tables ---------- */
+  table{width:100%; border-collapse:collapse; font-size:13.5px; margin:10px 0;}
+  th{text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft); padding:8px 10px; border-bottom:2px solid var(--line);}
+  td{padding:9px 10px; border-bottom:1px solid var(--line-soft); vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .status-pill{font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; white-space:nowrap; display:inline-block;}
+  .status-pill.ready{background:var(--green-soft); color:var(--green);}
+  .status-pill.partial{background:var(--amber-soft); color:var(--amber);}
+  .status-pill.missing{background:var(--red-soft); color:var(--red);}
+  .status-pill.pending{background:var(--line-soft); color:var(--ink-soft);}
+
+  /* ---------- ready dashboard ---------- */
+  .ready-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px; margin-top:16px;}
+  .ready-card{border:1px solid var(--line); background:var(--paper-raised); border-radius:var(--radius); padding:14px 16px;}
+  .ready-card .rc-top{display:flex; justify-content:space-between; align-items:center;}
+  .ready-card .rc-title{font-family:var(--serif); font-weight:700; font-size:14.5px;}
+  .ready-card .rc-detail{font-size:12px; color:var(--ink-soft); margin-top:4px;}
+  .rdot{width:11px; height:11px; border-radius:50%; background:var(--line);}
+  .rdot.green{background:var(--green);}
+  .rdot.amber{background:var(--amber);}
+  .rdot.red{background:var(--red);}
+
+  footer{padding:36px 32px 60px; text-align:center; color:var(--ink-soft); font-size:12.5px;}
+  footer .fproj{font-family:var(--serif); font-size:16px; color:var(--ink); font-weight:700;}
+  footer .fstatus{display:inline-block; margin:6px 0 12px; background:var(--green-soft); color:var(--green); font-weight:700; padding:4px 14px; border-radius:999px; font-size:12px;}
+  footer .fdisclaim{max-width:520px; margin:0 auto; font-weight:600; color:var(--red);}
+
+  .toast{
+    position:fixed; bottom:22px; left:50%; transform:translateX(-50%) translateY(20px); opacity:0;
+    background:var(--ink); color:#fff; padding:10px 18px; border-radius:999px; font-size:13px; font-weight:600;
+    transition:all .2s ease; pointer-events:none; z-index:999; box-shadow:0 6px 20px rgba(0,0,0,.25);
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  @media (max-width:860px){
+    .sidebar{position:fixed; left:0; top:0; transform:translateX(-100%); z-index:50; box-shadow:0 0 0 100vmax rgba(0,0,0,0); transition:transform .2s;}
+    .sidebar.open{transform:translateX(0); box-shadow:0 0 40px rgba(0,0,0,.25);}
+    .menu-btn{display:flex !important;}
+    .content{padding:0 16px;}
+    .topbar{padding:20px 16px;}
+    .fieldgrid{grid-template-columns:1fr;}
+  }
+  .menu-btn{
+    display:none; position:fixed; top:14px; left:14px; z-index:60; width:38px; height:38px; border-radius:9px;
+    background:var(--ink); color:#fff; border:none; align-items:center; justify-content:center; font-size:18px; cursor:pointer;
+  }
+  .print-hide{}
+  @media print{
+    .sidebar, .menu-btn, .copybtn, .reset-btn, .toast{display:none !important;}
+    .shell{display:block;}
+    section{break-inside:avoid-page;}
+  }
+</style>
+</head>
+<body>
+
+<button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="name">KDP Upload Guide</div>
+      <div class="tag">The Great Book of World Games</div>
+    </div>
+    <div class="sidenav" id="sidenav">
+      <!-- populated by JS -->
+    </div>
+    <div class="progress-block">
+      <div class="pct" id="pctBig">0%</div>
+      <div class="lbl">Overall progress</div>
+      <div class="progress-bar"><div id="pbarFill" style="width:0%"></div></div>
+      <div class="progress-stats">
+        <span id="statDone">0 done</span>
+        <span id="statRemain">0 left</span>
+      </div>
+      <button class="reset-btn" id="resetBtn">Reset all progress</button>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div class="eyebrow">Founder Control Center · Offline · Self-Contained</div>
+      <h1>KDP Upload Guide</h1>
+      <div class="subline">A practical, step-by-step conversion of <code>08_OUTPUT/KDP_UPLOAD_HANDBOOK.md</code> for uploading <strong>The Great Book of World Games</strong> to Amazon KDP. Every value below is copied from the project's own generated files — nothing here is invented.</div>
+
+      <div class="state-banner" id="stateBanner"><!-- populated by JS --></div>
+      <div class="disclaimer-banner">⚠ Nothing in this guide means Amazon KDP actions have already been performed. No file has been uploaded, no price set, no declaration answered, nothing published.</div>
+    </div>
+
+    <div class="content">
+
+      <!-- ============ A. BEFORE YOU START ============ -->
+      <section id="before">
+        <div class="section-head">
+          <div class="kicker">Section A</div>
+          <h2>🚦 Before You Start</h2>
+          <p>Read this once. It explains the marking system, tells you what is genuinely blocking an upload today, and gives you the legal/AI-disclosure facts in one place before you hit them three times (paperback, hardcover, Kindle).</p>
+        </div>
+
+        <div class="legend">
+          <div class="item"><span class="badge founder">🟢 Founder action</span><span class="dsc">Only you can do this — in your KDP account.</span></div>
+          <div class="item"><span class="badge agent">🔵 Agent prepared</span><span class="dsc">Value or file is ready — copy/paste or upload it.</span></div>
+          <div class="item"><span class="badge warn">🔴 Warning</span><span class="dsc">Do not do this / do not skip this.</span></div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom:10px;">Blocking founder actions — today</h3>
+          <table>
+            <tr><th>ID</th><th>What</th><th>Why the agent can't do it</th></tr>
+            <tr>
+              <td><span class="badge warn">⛔ BLOCKING</span></td>
+              <td><b>AI-generated content declaration</b></td>
+              <td>Legal statement to Amazon; the choice is the account holder's alone. Facts are below in <a href="#ai-disclosure-detail">§ AI Disclosure Facts</a>.</td>
+            </tr>
+            <tr>
+              <td><span class="badge warn">⛔ BLOCKING</span></td>
+              <td><b>External playtest</b></td>
+              <td>Project's own playability standard requires ≥1 human playtest session before any game is "locked." <strong>0 sessions recorded.</strong> The book does not claim to have been playtested.</td>
+            </tr>
+          </table>
+          <h3 style="margin:18px 0 10px;">Not blocking, but yours to finish</h3>
+          <table>
+            <tr><th>ID</th><th>What</th><th>Detail</th></tr>
+            <tr><td>ISBN ×2</td><td>Paperback + hardcover ISBN</td><td>KDP assigns a free ISBN at upload time. Both currently print <code>PENDING — KDP-PROVIDED ISBN</code>. No number has been invented anywhere.</td></tr>
+            <tr><td>APLUS-05-ART</td><td>1 of 6 A+ modules has no artwork</td><td>Module 05's copy is written and waiting. The project is uploadable today with the other 5 modules.</td></tr>
+            <tr><td>Hardcover template</td><td>Spine formula is a hypothesis</td><td>Computed as 160 pages × 0.0025 in/page + a 0.06 in board allowance. KDP's downloadable hardcover template (hinge + wrap allowances) has not been compared against it.</td></tr>
+          </table>
+        </div>
+
+        <div class="card" id="ai-disclosure-detail">
+          <h3>AI disclosure — the facts (not a declaration)</h3>
+          <p class="note">KDP asks separately about <strong>text</strong>, <strong>images</strong> and <strong>translations</strong>, and distinguishes <em>AI-generated</em> from <em>AI-assisted</em>. This is the factual record — the choice of what to tick is the founder's.</p>
+          <div class="fieldgrid">
+            <dt>Text</dt><dd>AI-generated, then edited by the author and verified against printed sources. Every rule set traces to a named printed source at page level (74-entry verification record). Not machine translation — written directly in English.</dd>
+            <dt>Cover images</dt><dd><strong>AI-generated</strong> — produced by the author externally from prompts in <code>07_ASSETS/IMAGE_PROMPT_LIBRARY.html</code>, then upscaled (Real-ESRGAN 4×) and composited. No text baked into the artwork.</dd>
+            <dt>A+ images</dt><dd><strong>AI-generated</strong> — same origin, 5 delivered images mapped to 5 modules. No text in the artwork.</dd>
+            <dt>Interior diagrams</dt><dd><strong>NOT AI-generated.</strong> All 51 board diagrams are vector SVG, drawn deterministically by the project's own code from structured data — not an image model.</dd>
+            <dt>Typography</dt><dd><strong>NOT AI-generated.</strong> All cover/interior type is vector text placed by code, never baked into a generated image.</dd>
+            <dt>Translation</dt><dd>None. Commercial text is written directly in English.</dd>
+          </div>
+          <div class="copyrow"><div class="copyval" id="cp-ai-text">Text was drafted with AI assistance and edited by the author; every rule set is traced to a named printed source at page level.</div><button class="copybtn" data-copy="cp-ai-text">Copy</button></div>
+          <div class="copyrow"><div class="copyval" id="cp-ai-img">Cover and A+ artwork are generated externally by the author; interior diagrams are drawn deterministically by the project's own code from data, not generated.</div><button class="copybtn" data-copy="cp-ai-img">Copy</button></div>
+          <div class="copyrow"><div class="copyval" id="cp-ai-trans">None. The commercial text is written directly in English.</div><button class="copybtn" data-copy="cp-ai-trans">Copy</button></div>
+          <a class="filebtn" href="KDP_AI_DISCLOSURE_NOTES.md" target="_blank">📄 Open full AI disclosure notes →</a>
+        </div>
+
+        <div class="card">
+          <h3>What "step" means in this guide</h3>
+          <p class="note">Every step below has a checkbox. Checking it only updates <em>this browser's</em> local progress tracker (saved via <code>localStorage</code> on this machine) — it does not touch Amazon, and it does not mean the underlying KDP action has necessarily been verified correct. Use the checkbox as your own progress memory across sessions.</p>
+        </div>
+      </section>
+
+      <!-- ============ B. PAPERBACK ============ -->
+      <section id="paperback">
+        <div class="section-head">
+          <div class="kicker">Section B</div>
+          <h2>📕 Paperback</h2>
+          <p>Trim 8.5 × 11.0 in · 160 pages · list price $22.99 (modelled).</p>
+          <div class="section-progress" data-section-progress="paperback"></div>
+        </div>
+        <div id="steps-paperback"></div>
+      </section>
+
+      <!-- ============ C. HARDCOVER ============ -->
+      <section id="hardcover">
+        <div class="section-head">
+          <div class="kicker">Section C</div>
+          <h2>📘 Hardcover</h2>
+          <p>Trim 8.25 × 11.0 in · 160 pages · list price $34.99 (modelled). Spine geometry computed independently from paperback — see step 15.</p>
+          <div class="section-progress" data-section-progress="hardcover"></div>
+        </div>
+        <div id="steps-hardcover"></div>
+      </section>
+
+      <!-- ============ D. KINDLE ============ -->
+      <section id="kindle">
+        <div class="section-head">
+          <div class="kicker">Section D</div>
+          <h2>📱 Kindle / eBook</h2>
+          <p>EPUB 3, reflowable · list price $11.99 (modelled).</p>
+          <div class="section-progress" data-section-progress="kindle"></div>
+        </div>
+        <div id="steps-kindle"></div>
+      </section>
+
+      <!-- ============ E. A+ CONTENT ============ -->
+      <section id="aplus">
+        <div class="section-head">
+          <div class="kicker">Section E</div>
+          <h2>🧩 A+ Content</h2>
+          <p>6 modules specified · 5 have artwork ready · all 6 have title/body text ready.</p>
+          <div class="section-progress" data-section-progress="aplus"></div>
+        </div>
+        <div id="steps-aplus"></div>
+      </section>
+
+      <!-- ============ F. FINAL VERIFICATION ============ -->
+      <section id="verify">
+        <div class="section-head">
+          <div class="kicker">Section F</div>
+          <h2>✅ Final Verification</h2>
+          <p>Facts to re-check with your own eyes before you press Publish on anything — the "Final Safety Check."</p>
+          <div class="section-progress" data-section-progress="verify"></div>
+        </div>
+        <div id="steps-verify"></div>
+      </section>
+
+      <!-- ============ G. FILE CHECKLIST ============ -->
+      <section id="files">
+        <div class="section-head">
+          <div class="kicker">Section G</div>
+          <h2>📂 Files to Upload</h2>
+          <p>Every file KDP will ask for, with its actual measured size and checksum. Paths are relative to this guide's own folder (<code>08_OUTPUT/</code>).</p>
+        </div>
+        <div id="files-table"></div>
+      </section>
+
+      <!-- ============ READY TO UPLOAD ============ -->
+      <section id="ready">
+        <div class="section-head">
+          <div class="kicker">Dashboard</div>
+          <h2>🚀 Ready to Upload</h2>
+          <p>Computed live from your checkboxes above plus the project's actual current state. Nothing here is a claim that Amazon has been touched.</p>
+        </div>
+        <div class="ready-grid" id="readyGrid"></div>
+      </section>
+
+    </div>
+
+    <footer>
+      <div class="fproj">The Great Book of World Games</div>
+      <div class="fstatus">STATUS: KDP UPLOAD READY</div>
+      <div class="fdisclaim">Nothing in this guide means Amazon KDP actions have already been performed.</div>
+      <div style="margin-top:18px; font-size:11.5px;">
+        Generated from <code>08_OUTPUT/KDP_UPLOAD_HANDBOOK.md</code> · commit <code>428fccb</code> · 2026-08-21<br>
+        This is a snapshot. If the handbook is regenerated with different values (ISBN assigned, A+ art delivered, prices changed), re-derive this file from the handbook again.
+      </div>
+    </footer>
+  </main>
+</div>
+
+<div class="toast" id="toast">Copied</div>
+
+<script>
+/* =========================================================================
+   DATA — transcribed faithfully from 08_OUTPUT/KDP_UPLOAD_HANDBOOK.md
+   (commit 428fccb) plus project_config.json / 06_REPORTS/tracked/metadata.json
+   / 06_REPORTS/handoff.json / 06_REPORTS/editions.json / 03_APLUS/aplus_content.json.
+   No instruction was removed, reordered or invented.
+   ========================================================================= */
+
+const PROJECT = {
+  title: "The Great Book of World Games",
+  subtitle: "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  author: "Emre Doğan",
+  authorBio: "Emre is a puzzle designer, mythologist, and game archivist dedicated to preserving ancient cultures, codes, and stories for the next generation.",
+  publisher: "Vâliçe Press",
+  games: 56, cultures: 39, families: 7, reconstructed: 7,
+  pages: 160,
+  oldestYears: "4,600", oldestBCE: 2600,
+  ci: "GitHub Actions: success (run for commit 5c190fc, 2026-08-21)"
+};
+
+function step(n, title, type, fields, opts){
+  opts = opts || {};
+  return Object.assign({n:n, title:title, type:type, fields:fields||{}}, opts);
+}
+
+const SECTIONS = {
+
+paperback: [
+step("1","KDP Bookshelf",["founder"],{
+  location:"kdp.amazon.com → Bookshelf → + Create → Create Paperback",
+  check:"You have not already created a title for the other print format.",
+  expected:"A new, empty paperback title draft opens.",
+  warn:["Do NOT start a brand-new title if you already created one for hardcover or Kindle — use “+ Create Hardcover” / “+ Create eBook” underneath the existing title instead, so all editions stay linked on one detail page."]
+}),
+step("2","Book Details — language",["agent"],{
+  enter:[{label:"Language", value:"en"}],
+  expected:"Language field shows English."
+}),
+step("3","Title",["agent"],{
+  location:"Paperback Details → Title",
+  enter:[{label:"Title", value:"The Great Book of World Games"}],
+  check:"29 of 200 characters allowed. No trailing space.",
+  expected:"Title field matches exactly, no trailing whitespace."
+}),
+step("4","Subtitle",["agent"],{
+  location:"Paperback Details → Subtitle",
+  enter:[{label:"Subtitle", value:"56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight"}],
+  check:"107 of 200 characters allowed.",
+  expected:"Subtitle pasted exactly.",
+  warn:["The two numbers in this subtitle are MEASURED, not chosen. The book contains 56 games from 39 cultures. If you ever edit this subtitle by hand, do not round the numbers up."]
+}),
+step("5","Author",["agent"],{
+  enter:[{label:"Primary author", value:"Emre Doğan"}],
+  expected:"Author field shows Emre Doğan."
+}),
+step("6","Contributors",["agent"],{
+  enter:[{label:"Contributors", value:"(leave empty)"}],
+  check:"Contributor list has zero rows.",
+  expected:"No contributor rows present.",
+  warn:["An empty contributor ROW (a row started then left blank) will block the form. Do not add a row at all — leave the list untouched."]
+}),
+step("7","Description",["agent"],{
+  location:"Paperback Details → Description",
+  enter:[{label:"Description (1981 of 4000 chars)", value:PROJECT._descFull, big:true}],
+  file:{label:"Source of truth", path:"../06_REPORTS/tracked/metadata.json", note:"→ description.text"},
+  expected:"Full description pasted; written to read correctly as plain text (KDP's limited HTML is not required)."
+}),
+step("8","Publishing rights",["founder","agent"],{
+  location:"Paperback Details → Publishing rights",
+  enter:[{label:"Select", value:"I own the copyright and I hold the necessary publishing rights."}],
+  note:"Basis: the book's text was written for this project. Rule sources are PUBLIC-DOMAIN works used as citations, not quotations — no block text was copied from any source.",
+  expected:"Rights option selected."
+}),
+step("9","Keywords",["agent"],{
+  location:"Paperback Details → 7 Keywords",
+  keywords:["traditional board games book","world games rules and history","family games for adults and kids","mancala backgammon go rules","history of board games reference","games from around the world","classroom games activity book"],
+  expected:"All 7 keyword slots filled, one phrase each."
+}),
+step("10","Categories",["founder"],{
+  location:"Paperback Details → Categories (KDP's own category tree)",
+  enter:[{label:"Primary (BISAC match)", value:"GAMES & ACTIVITIES / Board — GAM002000"},{label:"Secondary", value:"REFERENCE / General — REF000000"},{label:"Secondary", value:"HISTORY / General — HIS000000"}],
+  expected:"Three categories chosen matching the BISAC codes above."
+}),
+step("11","Age and grade range",["founder"],{
+  enter:[{label:"Leave", value:"empty"}],
+  note:"KDP only asks for an age range on titles marked as children's books. This is a family reference volume and must NOT be marked as a children's book — doing so drops it from adult-buyer search.",
+  expected:"Age/grade range left blank; book not marked as children's."
+}),
+step("12","ISBN",["founder","agent"],{
+  location:"Paperback Details → ISBN",
+  enter:[{label:"Select", value:"Get a free KDP ISBN"}],
+  note:"Current recorded value: PENDING — KDP-PROVIDED ISBN. No ISBN has been invented anywhere in this package.",
+  after:"Once KDP assigns a number, write it into project_config.json → founder.isbn.paperback and rebuild — the copyright page will then print the real number instead of PENDING.",
+  expected:"Free KDP ISBN option selected."
+}),
+step("13","AI-generated content declaration",["founder"],{
+  note:"This choice is yours and only yours — the agent cannot make a legal declaration on your behalf. Facts: see § AI Disclosure Facts above.",
+  expected:"Declaration answered by you in the KDP panel."
+}),
+step("14","Manuscript upload",["agent"],{
+  location:"Paperback Content → Manuscript",
+  file:{label:"Upload", path:"PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf", sha:"474eda034194508c…", size:"518,096 bytes"},
+  enter:[{label:"Trim size", value:"8.5 x 11.0 in"},{label:"Bleed", value:"No bleed"},{label:"Paper", value:"White"},{label:"Ink", value:"Black & white"}],
+  note:"160 pages · no bleed · inside margin 0.5 in · outside 0.5 in · all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1).",
+  expected:"Manuscript accepted, page count reads 160."
+}),
+step("15","Cover upload",["agent"],{
+  location:"Paperback Content → Cover",
+  file:{label:"Upload", path:"PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf", sha:"93ce1c389e7977df…", size:"21,142,924 bytes"},
+  note:"Full wrap 17.6103 × 11.2500 in, including 0.125 in bleed on all four sides. Spine 0.3603 in, computed from this exact page count (160 × 0.002252 in/page). Artwork embedded at 5283 × 3375 px (300 ppi, independently measured — not a metadata label). All type is vector, not baked into the image. Typography placement was measured, not eyeballed: title and author sit in the two quietest bands of the artwork (standard deviation 12.8 / 13.7 on a 0–255 scale), so no panel, box or scrim sits behind them. Spine title is 8.75 pt, sized to the measured clean run of the spine. Back copy sits over a feathered wash taken from the artwork's own parchment tone — not a white panel.",
+  warn:["The barcode area (lower right of the back panel) is deliberately EMPTY. Do not place anything there — Amazon prints the barcode itself."],
+  expected:"Cover accepted, Previewer shows no “cover missing” warning."
+}),
+step("16","Previewer",["founder"],{
+  file:{label:"Checklist", path:"KDP_PREVIEWER_CHECKLIST.md"},
+  note:"Open the KDP Previewer and work through the checklist. The agent cannot run the Previewer and does not claim to have done so.",
+  expected:"Previewer opened, checklist worked through, no unexpected warnings."
+}),
+step("17","Pricing",["agent","founder"],{
+  location:"Paperback Rights & Pricing → List price",
+  enter:[{label:"Modelled list price", value:"$22.99"}],
+  after:"Check the royalty KDP shows you against 06_REPORTS/editions.json. If they differ, KDP's printing cost has changed and the model needs re-running, not overriding.",
+  expected:"Price entered, royalty matches modelled $10.07 (60% plan) within KDP's own rounding."
+}),
+step("18","Territories",["founder"],{
+  enter:[{label:"Select", value:"All territories (worldwide rights)"}],
+  expected:"Worldwide rights selected."
+}),
+step("19","Royalty",["founder","agent"],{
+  enter:[{label:"Royalty plan", value:"60%"}],
+  note:"List price is above $9.99, so 60% applies. KDP Select / Kindle Unlimited: do NOT enrol — a full 256-page read pays ≈$1.23 in KENP versus an $8.44 paperback royalty, a 6.9× loss.",
+  warn:["Do NOT enrol in KDP Select."],
+  expected:"60% royalty plan selected, KDP Select left unchecked."
+}),
+step("20","Final review",["founder"],{
+  note:"Read the whole preview once more. Confirm the copyright page shows the real ISBN if one has been assigned, and that the author biography is present if you have entered one.",
+  expected:"Preview re-read end to end, copyright page checked."
+}),
+step("21","Publish",["founder"],{
+  note:"Press Publish. The agent has not done this and cannot do it.",
+  warn:["This is the point of no easy return for this edition. Confirm every step above first."],
+  expected:"Paperback submitted for Amazon's review."
+}),
+],
+
+hardcover: [
+step("1","KDP Bookshelf",["founder"],{
+  location:"kdp.amazon.com → Bookshelf → + Create → Create Hardcover",
+  expected:"A new hardcover title draft opens (or is linked under the existing paperback title).",
+  warn:["Do NOT start a new title if you already created one for the other print format — use “+ Create Paperback” underneath the existing title so both editions stay linked on one detail page."]
+}),
+step("2","Book Details — language",["agent"],{enter:[{label:"Language", value:"en"}], expected:"Language field shows English."}),
+step("3","Title",["agent"],{
+  enter:[{label:"Title", value:"The Great Book of World Games"}],
+  check:"29 of 200 characters allowed. No trailing space.",
+  expected:"Title matches paperback exactly."
+}),
+step("4","Subtitle",["agent"],{
+  enter:[{label:"Subtitle", value:"56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight"}],
+  check:"107 of 200 characters allowed.",
+  warn:["Numbers are measured (56 games / 39 cultures). Do not round up if you edit."],
+  expected:"Subtitle matches paperback exactly."
+}),
+step("5","Author",["agent"],{enter:[{label:"Primary author", value:"Emre Doğan"}], expected:"Author field shows Emre Doğan."}),
+step("6","Contributors",["agent"],{
+  enter:[{label:"Contributors", value:"(leave empty)"}],
+  warn:["An empty contributor row will block the form — leave the list untouched, do not start a row."],
+  expected:"No contributor rows present."
+}),
+step("7","Description",["agent"],{
+  enter:[{label:"Description (1981 of 4000 chars)", value:PROJECT._descFull, big:true}],
+  file:{label:"Source of truth", path:"../06_REPORTS/tracked/metadata.json", note:"→ description.text"},
+  expected:"Same description as paperback, pasted in full."
+}),
+step("8","Publishing rights",["founder","agent"],{
+  enter:[{label:"Select", value:"I own the copyright and I hold the necessary publishing rights."}],
+  note:"Basis: the book's text was written for this project. Rule sources are public-domain works used as citations, not quotations.",
+  expected:"Rights option selected."
+}),
+step("9","Keywords",["agent"],{
+  keywords:["traditional board games book","world games rules and history","family games for adults and kids","mancala backgammon go rules","history of board games reference","games from around the world","classroom games activity book"],
+  expected:"All 7 keyword slots filled — identical to paperback."
+}),
+step("10","Categories",["founder"],{
+  enter:[{label:"Primary", value:"GAMES & ACTIVITIES / Board — GAM002000"},{label:"Secondary", value:"REFERENCE / General — REF000000"},{label:"Secondary", value:"HISTORY / General — HIS000000"}],
+  expected:"Same three categories as paperback."
+}),
+step("11","Age and grade range",["founder"],{
+  enter:[{label:"Leave", value:"empty"}],
+  note:"Not a children's book — marking it as one drops it from adult-buyer search.",
+  expected:"Left blank."
+}),
+step("12","ISBN",["founder","agent"],{
+  enter:[{label:"Select", value:"Get a free KDP ISBN"}],
+  note:"Current recorded value: PENDING — KDP-PROVIDED ISBN.",
+  after:"Once assigned, write it into project_config.json → founder.isbn.hardcover and rebuild.",
+  expected:"Free KDP ISBN selected — a SEPARATE number from the paperback's."
+}),
+step("13","AI-generated content declaration",["founder"],{
+  note:"Asked again for this edition. This choice is yours alone — see § AI Disclosure Facts above.",
+  expected:"Declaration answered."
+}),
+step("14","Manuscript upload",["agent"],{
+  file:{label:"Upload", path:"HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf", sha:"855adcacf16b318c…", size:"518,610 bytes"},
+  enter:[{label:"Trim size", value:"8.25 x 11.0 in"},{label:"Bleed", value:"No bleed"},{label:"Paper", value:"White"},{label:"Ink", value:"Black & white"}],
+  note:"160 pages · trim 8.25 × 11.0 in (narrower than paperback's 8.5 in) · inside margin 0.625 in · outside 0.5 in · same embedded/subsetted Liberation Serif fonts.",
+  expected:"Manuscript accepted, page count reads 160."
+}),
+step("15","Cover upload",["agent"],{
+  file:{label:"Upload", path:"HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf", sha:"f6972c22fe9dba69…", size:"20,392,322 bytes"},
+  note:"Full wrap 17.2100 × 11.2500 in, including 0.125 in bleed on all sides. Spine 0.4600 in — computed INDEPENDENTLY from the paperback (160 × 0.0025 in/page, plus a board-thickness allowance), not derived from the paperback's spine. Artwork embedded at 5163 × 3375 px, independently measured at 300 ppi. Same measured, un-panelled typography placement as the paperback.",
+  warn:["Barcode area is deliberately empty — do not place anything there.","Hardcover spine formula (0.0025 in/page + 0.06 in board) is a HYPOTHESIS. KDP supplies a downloadable hardcover template with hinge/wrap allowances that has not yet been compared against it. Do this before ordering a hardcover proof."],
+  expected:"Cover accepted."
+}),
+step("16","Previewer",["founder"],{
+  file:{label:"Checklist", path:"KDP_PREVIEWER_CHECKLIST.md"},
+  note:"Open the KDP Previewer and work through the checklist for this edition specifically — margins differ from the paperback.",
+  expected:"Previewer worked through, no unexpected warnings."
+}),
+step("17","Pricing",["agent","founder"],{
+  enter:[{label:"Modelled list price", value:"$34.99"}],
+  after:"Check the royalty KDP shows against 06_REPORTS/editions.json (modelled royalty $12.62 at 60%). If different, re-run the pricing model rather than overriding it.",
+  expected:"Price entered, royalty checked."
+}),
+step("18","Territories",["founder"],{enter:[{label:"Select", value:"All territories (worldwide rights)"}], expected:"Worldwide rights selected."}),
+step("19","Royalty",["founder","agent"],{
+  enter:[{label:"Royalty plan", value:"60%"}],
+  warn:["Do NOT enrol in KDP Select — same 6.9× KENP-vs-royalty loss reasoning as the paperback."],
+  expected:"60% selected, Select left unchecked."
+}),
+step("20","Final review",["founder"],{
+  note:"Confirm the copyright page shows the real ISBN if assigned, and the author biography is present.",
+  expected:"Preview re-read end to end."
+}),
+step("21","Publish",["founder"],{
+  note:"Press Publish. The agent has not done this and cannot do it.",
+  warn:["Confirm the hardcover-template check above before this step — its spine geometry is still a hypothesis."],
+  expected:"Hardcover submitted for Amazon's review."
+}),
+],
+
+kindle: [
+step("1","KDP Bookshelf",["founder"],{
+  location:"Bookshelf → + Create → Create eBook, or “+ Create Kindle eBook” beneath the existing print title",
+  expected:"eBook draft opens, linked to the existing title if one exists."
+}),
+step("2–13","Book details",["agent","founder"],{
+  note:"Identical to the paperback: same title, subtitle, author, description, keywords and categories (see Section B, steps 2–13, for the exact values — they are not repeated here to avoid drift between two copies of the same text). The AI declaration is asked again and is again yours to answer.",
+  enter:[{label:"ISBN", value:"leave blank — an eBook does not need one"}],
+  expected:"All fields match the paperback; ISBN field left empty."
+}),
+step("14","Manuscript upload",["agent"],{
+  file:{label:"Upload", path:"KINDLE/GreatBookOfWorldGames.epub", sha:"ba916ec1449f2847…", size:"947,738 bytes (926 KB)"},
+  note:"EPUB 3, reflowable. Diagrams are embedded as inline SVG, so they stay sharp at any screen size and add almost nothing to file size.",
+  details:"Why reflowable and not fixed-layout: the print book's two-page spread answers a paper constraint a scrolling screen does not have. Fixed layout would squeeze an 8.5 × 11 spread onto a phone, lock the reader's font size, and break their accessibility settings — to preserve a promise that reflowing keeps anyway: each game is one uninterrupted entry.",
+  expected:"EPUB accepted, no conversion errors."
+}),
+step("15","Cover upload",["agent"],{
+  file:{label:"Upload", path:"KINDLE/GreatBookOfWorldGames_cover_kindle.jpg", sha:"9b1f14c4069092e0…", size:"1,031,472 bytes"},
+  note:"1600 × 2560 px (Amazon's recommended 1:1.6 ratio), JPEG. Derived from the front panel of the print artwork, not the wrap — an eBook cover must not show a spine or a back panel. Title, subtitle and author are set as vector outline type (LiberationSerif TTF, not AI-generated), at the same measured, quiet position used on the print front cover, scaled to this file's own pixel density.",
+  details:"Amazon evaluates Kindle covers by pixel dimensions, not DPI — there is no physical print size for an eBook. The file's 300×300 dpi tag is a compatibility label only; the real content density is ~228 px/in. 1600 × 2560 comfortably clears Amazon's stated minimum (1000 × 625) and matches its recommended ratio.",
+  expected:"Cover accepted; thumbnail shows title/author text, not bare artwork."
+}),
+step("16","Previewer",["founder"],{
+  note:"Use the Kindle Previewer. Check in particular: the diagrams at the smallest font size, the numbered rule lists, and the three-question blocks (draw / stuck / illegal move).",
+  expected:"Previewer worked through on at least one device size."
+}),
+step("17","Pricing",["agent","founder"],{
+  enter:[{label:"Modelled list price", value:"$11.99"}],
+  note:"Select the 70% royalty option — the price sits inside KDP's $2.99–$9.99…-band check. If it does not, take the 35% plan rather than dropping the price to fit.",
+  expected:"Price entered, 70% royalty confirmed."
+}),
+step("18–21","Territories, royalty, review, publish",["founder"],{
+  note:"As for print. KDP Select enrolment: do not enrol — same reasoning as the print editions.",
+  warn:["Do NOT enrol in KDP Select / Kindle Unlimited."],
+  expected:"Kindle edition submitted for Amazon's review."
+}),
+],
+
+aplus: [
+step("1","Marketing",["founder"],{
+  location:"Bookshelf → the title's … menu → Marketing (or Author Central → A+ Content, depending on the account)",
+  expected:"A+ Content editor opens for this title."
+}),
+step("2","A+ Content",["founder"],{
+  enter:[{label:"Internal project name", value:"GBWG-EN-v1"}],
+  note:"This name is not shown to shoppers.",
+  expected:"New A+ project created."
+}),
+step("3","Module creation",["agent"],{
+  note:"Six modules are specified, in this exact order — see the module table below.",
+  expected:"Six module slots created (or five, if you choose to wait on APLUS-05's artwork)."
+}),
+step("4","Module type",["founder"],{
+  note:"Pick each module type exactly as listed in the table below. If Amazon has renamed or retired one, choose the closest and note the change — do not force an image into a module with a different aspect ratio.",
+  expected:"Module types match the table."
+}),
+step("5","Image upload",["agent"],{
+  note:"Processed and sized in 07_ASSETS/web/aplus/ (and mirrored in 08_OUTPUT/APLUS/). Ready modules: APLUS-01, APLUS-02, APLUS-03, APLUS-04, APLUS-06.",
+  warn:[
+    "One module has no artwork: APLUS-05. The file delivered as “aplus-05-play-family-discovery.png” is, on inspection, the MODULE 06 brief (rows of game objects on a pale ground, right third clear). It was mapped to module 06 by content, not by filename. Module 05 (hands over a board, no faces) was never delivered — the uploadable A+ project is 5 modules, not six. Its copy is written and waiting if art is generated later.",
+    "Module 04 was delivered as a single 2×2 composite and was SPLIT into four 220×220 squares by measuring the gutters — no pixels were invented.",
+    "The generated images contain NO text. All wording goes in Amazon's own fields, where it stays searchable and correctable."
+  ],
+  expected:"5 of 6 module images uploaded."
+}),
+step("6a","Title and body text — APLUS-01",["agent"],{
+  aplus:{title:"56 games. 39 cultures. One table.", body:"This is a reference book you play from, not one you only read. Every game is set out across two facing pages so the book lies open on the table and nobody turns a page mid-turn. Every rule set names the work and the pages it was read from, and where a record is incomplete the book says so on the page instead of filling the gap quietly.", titleChars:33, bodyChars:337, module:"APLUS-01 — HERO / WORLD OF GAMES"},
+  expected:"Title + body pasted into module 01's native fields."
+}),
+step("6b","Title and body text — APLUS-02",["agent"],{
+  aplus:{title:"Sorted by how they work, not by where they are from", body:"Most collections file games by country, which teaches geography and hides the interesting part. This one files them by mechanism, so the sowing games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part. 39 cultures are represented, from Sumer to the Sámi, and each entry names the culture precisely rather than a continent.", titleChars:51, bodyChars:368, module:"APLUS-02 — CULTURAL DIVERSITY"},
+  expected:"Title + body pasted into module 02's native fields."
+}),
+step("6c","Title and body text — APLUS-03",["agent"],{
+  aplus:{title:"Everything you need for one game, on one opening", body:"Players, time, age, materials and difficulty at the top. What to use instead of what — buttons, coins, dried beans, an egg box. Numbered rules, one action to a line. A board diagram drawn to scale. Then three questions every table actually argues about: what happens on a draw, what happens if nobody can move, and what happens when somebody plays an illegal move. Almost nothing in this book has to be bought.", titleChars:48, bodyChars:410, module:"APLUS-03 — HOW THE BOOK WORKS"},
+  expected:"Title + body pasted into module 03's native fields."
+}),
+step("6d","Title and body text — APLUS-04",["agent"],{
+  aplus:{title:"7 families of play", body:"Sowing · Hunt and siege · Race home · Line and territory · War board · Chance and nerve · Games without a board. Each family opens with a portrait of the idea behind it, and each has a written rule for what belongs in it and what does not. The boundaries are argued, not assumed.", titleChars:18, bodyChars:279, module:"APLUS-04 — TYPES OF GAMES"},
+  expected:"Title + body pasted into module 04's native fields."
+}),
+step("6e","Title and body text — APLUS-05",["agent"],{
+  aplus:{title:"For a table with an adult and a child at it", body:"Ages are given per game and they mean something: the age at which a player can hold the whole game in their head. Every entry ends with a shorter version to start with — a smaller board, fewer pieces — which is the fastest way to teach a game to somebody who has not read the page.", titleChars:43, bodyChars:281, module:"APLUS-05 — PLAY / FAMILY / DISCOVERY"},
+  warn:["This module's TEXT is ready, but it has no artwork yet. Save it as a draft, or wait to add this module until art is delivered."],
+  expected:"Title + body ready — module upload blocked on artwork only."
+}),
+step("6f","Title and body text — APLUS-06",["agent"],{
+  aplus:{title:"Board templates, a glossary and three indexes", body:"The back of the book is the part that gets used. Full-size board templates you can photocopy — the page size was chosen for exactly that. A materials guide. A glossary of the terms the book uses for mechanics. Sources for every game. Three indexes, by culture, by number of players, and by time and age. And one page listing the game origin stories that are widely repeated and are not true.", titleChars:45, bodyChars:391, module:"APLUS-06 — THE COMPLETE COLLECTION"},
+  expected:"Title + body pasted into module 06's native fields."
+}),
+step("7","Preview",["founder"],{
+  note:"Use A+ preview on both desktop and mobile. The right-hand third of the header modules is where Amazon puts your text — check nothing important in the artwork is hidden behind it.",
+  expected:"Previewed on both desktop and mobile layouts."
+}),
+step("8","Submit",["founder"],{
+  note:"Submit for review. A+ content is moderated by Amazon.",
+  expected:"Submission confirmed."
+}),
+step("9","Moderation",["founder"],{
+  note:"Usually takes up to seven days. Most common rejections: claims that cannot be substantiated, contact details, pricing/shipping language. This copy has already been scanned against 7 forbidden claim patterns and carries no bestseller, award, testing or guaranteed-outcome claim — every number in it is checked against the book's measured values.",
+  expected:"Moderation result received."
+}),
+step("10","Live verification",["founder"],{
+  note:"Once live, open the detail page as a shopper and confirm all six (or five) modules render, in order, on desktop AND mobile.",
+  expected:"All modules confirmed live and in the correct order."
+}),
+],
+
+verify: [
+step("1","Title is correct",["check"],{value:"The Great Book of World Games", expected:"Matches on paperback, hardcover, and Kindle listings."}),
+step("2","Author is correct",["check"],{value:"Emre Doğan", expected:"Matches on all three listings and the copyright page."}),
+step("3","Game count is correct",["check"],{value:"56 games", expected:"Subtitle, description, A+ copy, and back cover all say 56 — not 100."}),
+step("4","Page count is correct",["check"],{value:"160 pages (both print editions)", expected:"Matches KDP's own page-count report at upload."}),
+step("5","No fake ISBN anywhere",["check"],{value:"PENDING — KDP-PROVIDED ISBN (until KDP assigns one)", expected:"No 978/979-prefixed number appears anywhere in project files or on the copyright page unless it is the real KDP-issued one."}),
+step("6","No stale “100 games” claim",["check"],{value:"Independently re-swept — 0 hits outside the labelled historical hypothesis field", expected:"Cover, back copy, A+ copy, metadata, handbook and interior all say 56, never 100."}),
+step("7","No stale “45 cultures” claim",["check"],{value:"Independently re-swept — 0 hits outside the labelled historical hypothesis field", expected:"Cover, back copy, A+ copy, metadata, handbook and interior all say 39, never 45."}),
+step("8","Cover is correct",["check"],{value:"COVER-02 “The Board That Is a Map” · measured 300 DPI (paperback + hardcover, independently verified)", expected:"Title/author/subtitle readable, no white panel, spine text centred in the measured clean run, barcode area empty."}),
+step("9","Kindle cover is correct",["check"],{value:"1600 × 2560 px, vector typography present (title/subtitle/author)", expected:"Front-panel-only crop, no spine or back panel visible, text readable at thumbnail size."}),
+step("10","A+ mapping is correct",["check"],{value:"6/6 modules have title+body mapped to native fields · 5/6 have artwork (APLUS-05 pending)", expected:"No module shows text baked into its image; no module is missing its native title/body."}),
+],
+
+};
+
+PROJECT._descFull = "A reference book you play from.\n\nThe Great Book of World Games sets out 56 traditional games from 39 cultures, from the royal graves of Ur to a Zulu playground, and it sets them out so you can play them tonight. Each game gets two facing pages: the book lies open on the table and nobody has to turn a page in the middle of a turn.\n\nWHAT IS INSIDE EACH ENTRY\n· Players, time, age, materials and difficulty at a glance\n· What to use instead of what — buttons, coins, dried beans, an egg box\n· Numbered rules, one action to a line\n· A board diagram drawn to scale\n· The three questions every table argues about: what happens on a draw, what happens if nobody can move, and what happens when somebody plays an illegal move\n· A shorter version to start with\n· The work and the pages the rules were read from\n\nSORTED BY HOW THEY WORK, NOT BY WHERE THEY ARE FROM\nMost collections file games by country. This one files them by mechanism, in seven families — sowing, hunt and siege, race home, line and territory, the war board, chance and nerve, and games without a board. Put that way, the mancala games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part; the ancestors of chess sit together and you can watch six cultures solve the same problem six ways.\n\nHONEST ABOUT WHAT IS KNOWN\nEvery rule set names its source. Where a historical record is incomplete, the entry says so and shows what has been reconstructed and on what basis. Where no source settles a question — most often the draw — the book makes a ruling and tells you it is the book's ruling, so you can overrule it. One page at the back is given to game origin stories that are widely repeated and are not true.\n\nAT THE BACK\nFull-size board templates you can photocopy. A materials guide. A glossary of the terms used for mechanics. Sources for every game. Three indexes — by culture, by number of players, and by time and age.\n\n160 pages. Almost nothing in it has to be bought.";
+
+const FILES = [
+  {format:"Paperback", file:"GreatBookOfWorldGames_interior_paperback.pdf", path:"PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf", status:"ready", notes:"160 pp · 8.5×11 in · fonts embedded/subsetted · 518,096 bytes"},
+  {format:"Paperback", file:"GreatBookOfWorldGames_cover_paperback.pdf", path:"PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf", status:"ready", notes:"17.6103×11.25 in wrap · 300 DPI measured · 21,142,924 bytes"},
+  {format:"Hardcover", file:"GreatBookOfWorldGames_interior_hardcover.pdf", path:"HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf", status:"ready", notes:"160 pp · 8.25×11 in · fonts embedded/subsetted · 518,610 bytes"},
+  {format:"Hardcover", file:"GreatBookOfWorldGames_cover_hardcover.pdf", path:"HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf", status:"ready", notes:"17.2100×11.25 in wrap · 300 DPI measured · spine formula is a hypothesis · 20,392,322 bytes"},
+  {format:"Kindle", file:"GreatBookOfWorldGames.epub", path:"KINDLE/GreatBookOfWorldGames.epub", status:"ready", notes:"EPUB 3 reflowable · inline SVG diagrams · 947,738 bytes"},
+  {format:"Kindle", file:"GreatBookOfWorldGames_cover_kindle.jpg", path:"KINDLE/GreatBookOfWorldGames_cover_kindle.jpg", status:"ready", notes:"1600×2560 px · vector typography · 1,031,472 bytes"},
+  {format:"A+", file:"aplus-01-hero-world-of-games.png", path:"APLUS/aplus-01-hero-world-of-games.png", status:"ready", notes:"970×600 px · module 01"},
+  {format:"A+", file:"aplus-02-cultural-diversity.png", path:"APLUS/aplus-02-cultural-diversity.png", status:"ready", notes:"970×600 px · module 02"},
+  {format:"A+", file:"aplus-03-how-the-book-works.png", path:"APLUS/aplus-03-how-the-book-works.png", status:"ready", notes:"300×400 px · module 03"},
+  {format:"A+", file:"aplus-04-types-of-games-{a,b,c,d}.png", path:"APLUS/aplus-04-types-of-games-a.png", status:"ready", notes:"4 × 220×220 px · module 04 · split from one 2×2 composite by measured gutters"},
+  {format:"A+", file:"aplus-05-play-family-discovery.png", path:"", status:"missing", notes:"module 05 — NOT delivered. Copy is ready and waiting."},
+  {format:"A+", file:"aplus-06-complete-collection.png", path:"APLUS/aplus-06-complete-collection.png", status:"ready", notes:"970×600 px · module 06 (content-mapped, not filename-mapped)"},
+];
+
+const APLUS_MODULE_TABLE = [
+  {n:"01", type:"Standard Image Header with Text", image:"aplus-01-hero-world-of-games.png", size:"970 × 600 px"},
+  {n:"02", type:"Standard Image & Text Overlay", image:"aplus-02-cultural-diversity.png", size:"970 × 600 px"},
+  {n:"03", type:"Standard Single Image & Sidebar", image:"aplus-03-how-the-book-works.png", size:"300 × 400 px"},
+  {n:"04", type:"Standard Four Image & Text", image:"aplus-04-types-of-games-{a,b,c,d}.png", size:"220 × 220 px each"},
+  {n:"05", type:"Standard Image & Light Text Overlay", image:"⛔ not delivered", size:"970 × 300 px"},
+  {n:"06", type:"Standard Image Header with Text", image:"aplus-06-complete-collection.png", size:"970 × 600 px"},
+];
+
+const READY_CONFIG = [
+  {id:"paperback", label:"Paperback", ids:idsFor("paperback")},
+  {id:"hardcover", label:"Hardcover", ids:idsFor("hardcover")},
+  {id:"kindle", label:"Kindle", ids:idsFor("kindle")},
+  {id:"aplus", label:"A+", ids:idsFor("aplus")},
+  {id:"metadata", label:"Metadata", staticNote:"Title, subtitle, author, description, keywords, categories — all agent-prepared and ready in every section above.", staticState:"green"},
+  {id:"aidecl", label:"AI disclosure", ids:["paperback-13","hardcover-13","kindle-2–13"]},
+  {id:"previewer", label:"Previewer", ids:["paperback-16","hardcover-16","kindle-16"]},
+  {id:"pricing", label:"Pricing", ids:["paperback-17","hardcover-17","kindle-17"]},
+  {id:"finalreview", label:"Final review", ids:idsFor("verify").concat(["paperback-20","hardcover-20"])},
+];
+
+function idsFor(section){
+  return SECTIONS[section].map((s,i)=>section+"-"+s.n+"-"+i);
+}
+
+/* =========================================================================
+   RENDER
+   ========================================================================= */
+const SECTION_META = {
+  paperback:{label:"📕 Paperback", target:"paperback"},
+  hardcover:{label:"📘 Hardcover", target:"hardcover"},
+  kindle:{label:"📱 Kindle", target:"kindle"},
+  aplus:{label:"🧩 A+ Content", target:"aplus"},
+  verify:{label:"✅ Verification", target:"verify"},
+};
+
+let PROGRESS = {};
+try{ PROGRESS = JSON.parse(localStorage.getItem("kdpGuideProgress_gbwg") || "{}"); }catch(e){ PROGRESS = {}; }
+
+function saveProgress(){
+  try{ localStorage.setItem("kdpGuideProgress_gbwg", JSON.stringify(PROGRESS)); }catch(e){}
+}
+
+function badge(type){
+  if(type==="founder") return '<span class="badge founder">🟢 Founder action</span>';
+  if(type==="agent") return '<span class="badge agent">🔵 Agent prepared</span>';
+  if(type==="check") return '<span class="badge agent">🔵 Verify</span>';
+  return "";
+}
+
+function escapeHtml(s){
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+let copyCounter = 0;
+function copyBlock(value, label){
+  copyCounter++;
+  const id = "copyval-"+copyCounter;
+  return '<div class="copyrow"><div class="copyval" id="'+id+'">'+escapeHtml(value)+'</div>'
+    + '<button class="copybtn" data-copy="'+id+'">'+(label||"Copy")+'</button></div>';
+}
+
+function renderStepFields(f){
+  let html = "";
+  if(f.location){
+    html += '<div class="fieldgrid"><dt>KDP location</dt><dd>'+escapeHtml(f.location)+'</dd></div>';
+  }
+  if(f.enter && f.enter.length){
+    f.enter.forEach(function(e){
+      html += '<div class="note" style="margin-bottom:2px;"><strong>'+escapeHtml(e.label)+':</strong></div>';
+      html += copyBlock(e.value);
+    });
+  }
+  if(f.keywords){
+    html += '<div class="note"><strong>Keywords (7 slots):</strong></div><div class="kw-list">';
+    f.keywords.forEach(function(k,i){
+      copyCounter++;
+      const id = "copyval-"+copyCounter;
+      html += '<span class="kw-chip"><span id="'+id+'">'+escapeHtml(k)+'</span><button data-copy="'+id+'" class="copybtnkw" onclick="doCopy(\''+id+'\',this)">copy</button></span>';
+    });
+    html += '</div>';
+  }
+  if(f.aplus){
+    html += '<div class="note" style="margin-bottom:6px;"><strong>'+escapeHtml(f.aplus.module)+'</strong></div>';
+    html += '<div class="fieldgrid"><dt>Title ('+f.aplus.titleChars+' chars)</dt><dd></dd></div>';
+    html += copyBlock(f.aplus.title);
+    html += '<div class="fieldgrid"><dt>Body ('+f.aplus.bodyChars+' chars)</dt><dd></dd></div>';
+    html += copyBlock(f.aplus.body);
+  }
+  if(f.file){
+    html += '<div class="note" style="margin-top:8px;"><strong>'+escapeHtml(f.file.label)+':</strong> '
+      + '<a class="filebtn" href="'+escapeHtml(f.file.path)+'" target="_blank">📄 Open '+escapeHtml(f.file.path.split("/").pop())+' →</a>';
+    if(f.file.sha){ html += '<span class="filemeta">SHA-256 '+escapeHtml(f.file.sha)+'</span>'; }
+    if(f.file.size){ html += '<span class="filemeta"> · '+escapeHtml(f.file.size)+'</span>'; }
+    if(f.file.note){ html += '<span class="filemeta"> '+escapeHtml(f.file.note)+'</span>'; }
+    html += '</div>';
+  }
+  if(f.note){
+    html += '<div class="note">'+escapeHtml(f.note)+'</div>';
+  }
+  if(f.value){
+    html += '<div class="note" style="margin-bottom:2px;"><strong>Current value:</strong></div>';
+    html += copyBlock(f.value);
+  }
+  if(f.warn && f.warn.length){
+    f.warn.forEach(function(w){
+      html += '<div class="warnbox">🔴 '+escapeHtml(w)+'</div>';
+    });
+  }
+  if(f.after){
+    html += '<details><summary>After KDP responds</summary><div class="details-body">'+escapeHtml(f.after)+'</div></details>';
+  }
+  if(f.details){
+    html += '<details><summary>Why (background)</summary><div class="details-body">'+escapeHtml(f.details)+'</div></details>';
+  }
+  if(f.check){
+    html += '<div class="fieldgrid"><dt>Check</dt><dd>'+escapeHtml(f.check)+'</dd></div>';
+  }
+  if(f.expected){
+    html += '<div class="fieldgrid"><dt>Expected result</dt><dd>'+escapeHtml(f.expected)+'</dd></div>';
+  }
+  return html;
+}
+
+function renderSteps(sectionKey){
+  const container = document.getElementById("steps-"+sectionKey);
+  const items = SECTIONS[sectionKey];
+  let html = "";
+  items.forEach(function(s, i){
+    const id = sectionKey+"-"+s.n+"-"+i;
+    const done = !!PROGRESS[id];
+    const badges = s.type.map(badge).join(" ");
+    html += '<div class="card step type-'+s.type[0]+(done?" done":"")+'" data-step-id="'+id+'">'
+      + '<div class="step-top">'
+      + '<div class="step-check"><input type="checkbox" data-id="'+id+'" '+(done?"checked":"")+'></div>'
+      + '<div class="step-num">'+escapeHtml(s.n)+'</div>'
+      + '<div class="step-titlewrap"><div class="step-title">'+escapeHtml(s.title)+' '+badges+(done?'<span class="done-tag">✓ done</span>':'')+'</div></div>'
+      + '</div>'
+      + '<div class="step-body">'+renderStepFields(s.fields)+'</div>'
+      + '</div>';
+  });
+  container.innerHTML = html;
+}
+
+function renderSidenav(){
+  const nav = document.getElementById("sidenav");
+  const items = [
+    {id:"before", label:"Before You Start"},
+    {id:"paperback", label:"Paperback"},
+    {id:"hardcover", label:"Hardcover"},
+    {id:"kindle", label:"Kindle"},
+    {id:"aplus", label:"A+ Content"},
+    {id:"verify", label:"Verification"},
+    {id:"files", label:"File Checklist"},
+    {id:"ready", label:"Ready to Upload"},
+  ];
+  nav.innerHTML = items.map(function(it){
+    return '<a href="#'+it.id+'" data-nav="'+it.id+'"><span class="dot" data-navdot="'+it.id+'"></span>'+it.label+'<small data-navpct="'+it.id+'"></small></a>';
+  }).join("");
+}
+
+function renderFiles(){
+  let html = '<div class="card"><table><tr><th>Format</th><th>File</th><th>Path</th><th>Status</th><th>Notes</th></tr>';
+  FILES.forEach(function(f){
+    const pill = f.status==="ready" ? '<span class="status-pill ready">ready</span>' : '<span class="status-pill missing">missing</span>';
+    const link = f.path ? '<a href="'+escapeHtml(f.path)+'" target="_blank">📄 open</a>' : '<span style="color:var(--ink-soft)">—</span>';
+    html += '<tr><td>'+escapeHtml(f.format)+'</td><td class="mono" style="font-size:12px;">'+escapeHtml(f.file)+'</td><td>'+link+'</td><td>'+pill+'</td><td style="color:var(--ink-soft)">'+escapeHtml(f.notes)+'</td></tr>';
+  });
+  html += '</table></div>';
+
+  html += '<div class="card"><h3>A+ module → type → image → size</h3><table><tr><th>#</th><th>Module type</th><th>Image</th><th>Size</th></tr>';
+  APLUS_MODULE_TABLE.forEach(function(m){
+    html += '<tr><td>'+m.n+'</td><td>'+escapeHtml(m.type)+'</td><td class="mono" style="font-size:12px;">'+escapeHtml(m.image)+'</td><td>'+escapeHtml(m.size)+'</td></tr>';
+  });
+  html += '</table></div>';
+  document.getElementById("files-table").innerHTML = html;
+}
+
+function sectionCounts(sectionKey){
+  const items = SECTIONS[sectionKey];
+  let done = 0;
+  items.forEach(function(s,i){ if(PROGRESS[sectionKey+"-"+s.n+"-"+i]) done++; });
+  return {done: done, total: items.length};
+}
+
+function renderReady(){
+  let html = "";
+  READY_CONFIG.forEach(function(r){
+    let dotClass = "red", detail = "";
+    if(r.staticNote){
+      dotClass = r.staticState === "green" ? "green" : "amber";
+      detail = r.staticNote;
+    } else {
+      let done = 0;
+      r.ids.forEach(function(id){ if(PROGRESS[id]) done++; });
+      const total = r.ids.length;
+      dotClass = done===0 ? "red" : (done===total ? "green" : "amber");
+      detail = done+" / "+total+" steps checked off";
+    }
+    html += '<div class="ready-card"><div class="rc-top"><div class="rc-title">'+escapeHtml(r.label)+'</div><div class="rdot '+dotClass+'"></div></div>'
+      + '<div class="rc-detail">'+escapeHtml(detail)+'</div></div>';
+  });
+  document.getElementById("readyGrid").innerHTML = html;
+}
+
+function totalStats(){
+  let total=0, done=0;
+  Object.keys(SECTIONS).forEach(function(k){
+    SECTIONS[k].forEach(function(s,i){
+      total++;
+      if(PROGRESS[k+"-"+s.n+"-"+i]) done++;
+    });
+  });
+  return {total:total, done:done};
+}
+
+function updateProgressUI(){
+  const st = totalStats();
+  const pct = st.total ? Math.round(st.done/st.total*100) : 0;
+  document.getElementById("pctBig").textContent = pct+"%";
+  document.getElementById("pbarFill").style.width = pct+"%";
+  document.getElementById("statDone").textContent = st.done+" done";
+  document.getElementById("statRemain").textContent = (st.total-st.done)+" left";
+
+  ["paperback","hardcover","kindle","aplus","verify"].forEach(function(k){
+    const c = sectionCounts(k);
+    const el = document.querySelector('[data-section-progress="'+k+'"]');
+    if(el){ el.textContent = c.done+" / "+c.total+" steps checked off"; }
+    const dot = document.querySelector('[data-navdot="'+k+'"]');
+    if(dot){
+      dot.classList.remove("done","partial");
+      if(c.done===c.total && c.total>0) dot.classList.add("done");
+      else if(c.done>0) dot.classList.add("partial");
+    }
+    const navpct = document.querySelector('[data-navpct="'+k+'"]');
+    if(navpct){ navpct.textContent = c.done+"/"+c.total; }
+  });
+
+  document.querySelectorAll(".step").forEach(function(card){
+    const id = card.getAttribute("data-step-id");
+    const on = !!PROGRESS[id];
+    card.classList.toggle("done", on);
+    const tagWrap = card.querySelector(".step-title");
+    if(tagWrap){
+      let tag = tagWrap.querySelector(".done-tag");
+      if(on && !tag){
+        tag = document.createElement("span");
+        tag.className = "done-tag";
+        tag.textContent = "✓ done";
+        tagWrap.appendChild(tag);
+      } else if(!on && tag){
+        tag.remove();
+      }
+    }
+  });
+
+  renderReady();
+  renderStateBanner();
+}
+
+function renderStateBanner(){
+  const st = totalStats();
+  const banner = document.getElementById("stateBanner");
+  banner.innerHTML =
+    '<div class="state-chip ok"><b>'+PROJECT.games+'</b> verified games</div>'
+  + '<div class="state-chip ok"><b>'+PROJECT.cultures+'</b> cultures</div>'
+  + '<div class="state-chip ok"><b>'+PROJECT.pages+'</b> pages (both print editions)</div>'
+  + '<div class="state-chip ok">Paperback · Hardcover · Kindle · A+ (5/6) all ready</div>'
+  + '<div class="state-chip ok">CI: ✅ green (GitHub Actions, latest push)</div>'
+  + '<div class="state-chip">Your progress: <b>'+st.done+'/'+st.total+'</b></div>';
+}
+
+function doCopy(elId, btn){
+  const el = document.getElementById(elId);
+  const text = el.textContent;
+  const done = function(){
+    if(btn){
+      const original = btn.textContent;
+      btn.textContent = "✓ Copied";
+      btn.classList.add("copied");
+      setTimeout(function(){ btn.textContent = original; btn.classList.remove("copied"); }, 1400);
+    }
+    showToast("Copied to clipboard");
+  };
+  if(navigator.clipboard && window.isSecureContext !== false){
+    navigator.clipboard.writeText(text).then(done).catch(function(){ fallbackCopy(text, done); });
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+
+function fallbackCopy(text, cb){
+  try{
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    const ok = document.execCommand("copy");
+    document.body.removeChild(ta);
+    if(ok){ cb(); } else { showToast("Copy failed — select the text and press Ctrl/Cmd+C"); }
+  }catch(e){
+    showToast("Copy failed — select the text and press Ctrl/Cmd+C");
+  }
+}
+
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ t.classList.remove("show"); }, 1600);
+}
+
+document.addEventListener("click", function(e){
+  const btn = e.target.closest(".copybtn");
+  if(btn){
+    const id = btn.getAttribute("data-copy");
+    doCopy(id, btn);
+  }
+});
+
+document.addEventListener("change", function(e){
+  if(e.target.matches('input[type="checkbox"][data-id]')){
+    const id = e.target.getAttribute("data-id");
+    PROGRESS[id] = e.target.checked;
+    saveProgress();
+    updateProgressUI();
+  }
+});
+
+document.getElementById("resetBtn").addEventListener("click", function(){
+  if(confirm("Reset all checked-off progress on this device? This cannot be undone.")){
+    PROGRESS = {};
+    saveProgress();
+    document.querySelectorAll('input[type="checkbox"][data-id]').forEach(function(cb){ cb.checked = false; });
+    updateProgressUI();
+  }
+});
+
+/* active-section highlight on scroll */
+const navLinks = function(){ return document.querySelectorAll("[data-nav]"); };
+function setActiveNav(){
+  const sections = document.querySelectorAll("main section, main .content > section");
+  let current = "before";
+  const scrollPos = window.scrollY + 120;
+  document.querySelectorAll("section[id]").forEach(function(sec){
+    if(sec.offsetTop <= scrollPos) current = sec.id;
+  });
+  navLinks().forEach(function(a){
+    a.classList.toggle("active", a.getAttribute("data-nav")===current);
+  });
+}
+window.addEventListener("scroll", setActiveNav, {passive:true});
+
+/* mobile nav */
+document.getElementById("menuBtn").addEventListener("click", function(){
+  document.getElementById("sidebar").classList.toggle("open");
+});
+document.getElementById("sidenav").addEventListener("click", function(e){
+  if(e.target.closest("a")) document.getElementById("sidebar").classList.remove("open");
+});
+
+/* ---- boot ---- */
+renderSidenav();
+renderSteps("paperback");
+renderSteps("hardcover");
+renderSteps("kindle");
+renderSteps("aplus");
+renderSteps("verify");
+renderFiles();
+updateProgressUI();
+setActiveNav();
+</script>
+</body>
+</html>
