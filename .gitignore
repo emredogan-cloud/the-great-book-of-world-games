@@ -55,14 +55,15 @@
 # 06_REPORTS/tracked/ altındadır (K18: rapor depoda durur, ürün durmaz).
 08_OUTPUT/**/*
 !08_OUTPUT/**/.gitkeep
-# ⚠ DÖRT KILAVUZ İSTİSNADIR. 08_OUTPUT ürünün kendisini (PDF · EPUB) dışarıda
+# ⚠ BEŞ KILAVUZ İSTİSNADIR. 08_OUTPUT ürünün kendisini (PDF · EPUB) dışarıda
 # tutar — onlar depoya ait değildir. Ama kurucuya giden bu BELGELER teslimattır
 # (yol haritası Faz 6 § 3) ve taze bir klonda yoklarsa teslim paketi eksik
-# demektir. Dördü de üretilmiş metindir; proza taşımazlar.
+# demektir. Beşi de üretilmiş/adli metindir; proza taşımazlar.
 !08_OUTPUT/KDP_UPLOAD_HANDBOOK.md
 !08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md
 !08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md
 !08_OUTPUT/KDP_UPLOAD_GUIDE.html
+!08_OUTPUT/KDP_MARGIN_FORENSIC_REPORT.md
 
 09_ARCHIVE/*
 !09_ARCHIVE/.gitkeep

@@ -248,6 +248,85 @@ def main() -> int:
     s.case("basılan PDF'te daktilo tırnağı KIRMIZI",
            ["04_BUILD/kdp_preflight.py", "--root", "{root}"], neuter_typo)
 
+    # ── GUTTER EMNİYETİ — GERÇEK KDP PREVIEWER SAYFA 159 REGRESYONU ──────
+    # Gerçek Amazon KDP Print Previewer, 160 sayfalık ciltsizde sayfa
+    # 159'da "Insufficient gutter" dedi (kurucu bildirimi, 2026-08-21).
+    # Kök neden ÖLÇÜLDÜ: iç marj TAM KDP asgarisinde (emniyet payı SIFIR)
+    # diziliyordu ve bazı gliflerin (ölçülen örnek: sayfa 159'daki açılış
+    # tek tırnağı ') mürekkebi Liberation Serif'te nominal başlangıcın az
+    # solunda basıyordu — bir dizgi hatası değil, normal bir font çizim
+    # gerçeği. `interior.GUTTER_SAFETY_IN` (0,05 in) bu payı taşır.
+    #
+    # Kusur burada KAYNAKTA değil ÇIKTIDA aranır (dizgi tırnağı testiyle
+    # aynı ilke): sabiti KASITLI olarak -0,01'e çekip GERÇEK kitap SADECE
+    # ciltsiz için yeniden dizilir — bu, tam KDP asgarisinin 0,01 in
+    # ALTINDA nominal bir marj üretir ve glif taşması onu daha da
+    # KÖTÜLEŞTİRİR (asla iyileştirmez), yani bu durum KIRMIZI olmak
+    # ZORUNDADIR, kırılgan bir eşik değildir.
+    print("\n── gutter emniyeti — KDP Previewer sayfa 159 regresyonu ──")
+
+    def gutter_deficit(w):
+        ip = os.path.join(w, "04_BUILD", "interior.py")
+        src = open(ip, encoding="utf-8").read()
+        old = "GUTTER_SAFETY_IN = 0.05"
+        if old not in src:
+            raise RuntimeError("GUTTER_SAFETY_IN sabiti bulunamadı — "
+                               "kaynak değişmiş, testi güncelle")
+        open(ip, "w", encoding="utf-8").write(src.replace(old,
+            "GUTTER_SAFETY_IN = -0.01"))
+        r = subprocess.run([PY, "04_BUILD/interior.py", "--edition",
+                            "paperback", "--root", w],
+                           cwd=w, capture_output=True, text=True)
+        if r.returncode != 0:
+            raise RuntimeError("iç blok yeniden üretilemedi: %s"
+                               % r.stderr.strip()[-300:])
+
+    s.case("iç marj KDP asgarisinin 0,01 in ALTINA düşerse (sayfa 159 "
+           "sınıfı hata) kdp_preflight.py KIRMIZI",
+           ["04_BUILD/kdp_preflight.py", "--root", "{root}"], gutter_deficit)
+
+    # § 14'ün tam istediği eşik testi ("0,49 in KIRMIZI · 0,50 in YEŞİL")
+    # gerçek kitaba karşı KIRILGANDIR — bulgu tam olarak bu: nominal tam
+    # 0,50 in bile bu kitabın GERÇEK metniyle glif taşmasından 0,49 in'e
+    # düşebiliyordu (16 sayfa). Eşiğin KENDİSİNİ font taşmasından bağımsız
+    # ve KESİN doğrulamak için `check_ink()` SENTETİK, dolgu dikdörtgenli
+    # (glif belirsizliği yok) bir PDF'e karşı DOĞRUDAN çağrılır.
+    print("\n── gutter eşiği — sentetik kesinlik testi (§14) ──")
+    try:
+        sys.path.insert(0, os.path.join(ROOT, "04_BUILD"))
+        import importlib
+        kp = importlib.import_module("kdp_preflight")
+        from reportlab.pdfgen import canvas as rl_canvas
+        IN = 72.0
+        for label, gutter_val, want_red in (("0.49 in", 0.49, True),
+                                            ("0.50 in", 0.50, False)):
+            with tempfile.TemporaryDirectory(prefix="gbwg-gutter-") as td:
+                pdf_path = os.path.join(td, "synthetic.pdf")
+                c = rl_canvas.Canvas(pdf_path, pagesize=(8.5 * IN, 11.0 * IN))
+                c.setFillColorRGB(0, 0, 0)
+                # Sayfa 1 = TEK = SAĞ/recto → iç marj SOLDADIR. Dolu bir
+                # dikdörtgen — bir glifin değil, tam bilinen bir x'in sol
+                # kenarını ölçer.
+                c.rect(gutter_val * IN, 5.0 * IN, 10, 10, fill=1, stroke=0)
+                c.showPage()
+                c.save()
+                rep = kp.Report()
+                r = kp.check_ink(pdf_path, 160, 8.5, 11.0, rep)
+                got_red = bool(rep.fail)
+                name = ("iç marj TAM %s (160 s. asgarisi 0,50) %s"
+                       % (label, "KIRMIZI" if want_red else "GEÇER"))
+                if got_red == want_red:
+                    s.passed += 1
+                    print("  ✓ %s (ölçülen %.4f in)"
+                          % (name, r["worstMarginIn"]["gutterIn"]))
+                else:
+                    s.failed.append(name)
+                    print("  ✗ %s — kapı %s (ölçülen %.4f in)"
+                          % (name, "ISIRMADI" if want_red else "yanlış ısırdı",
+                             r["worstMarginIn"]["gutterIn"]))
+    except ImportError as exc:
+        print("  ⊘ sentetik eşik testi ATLANDI: %s" % exc)
+
     # ── EPUB ───────────────────────────────────────────────────────────
     print("\n── EPUB (epub.py --check) ──")
     EP = ["04_BUILD/epub.py", "--root", "{root}", "--check"]

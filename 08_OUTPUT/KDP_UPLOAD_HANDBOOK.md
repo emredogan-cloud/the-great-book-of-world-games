@@ -142,9 +142,9 @@ declaration on your behalf. The facts you need in order to answer:
 08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf
 ```
 - 160 pages · trim 8.5 × 11.0 in
-- no bleed · inside margin 0.5 in · outside 0.5 in
+- no bleed · inside margin 0.55 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `474eda034194508ce6db8a079884c597c32f27665f394130bc2d594e73ba2989`
+- SHA-256 `4090f93731f2607014dec031199fcaa9500a5abf6a8af4e45cbb1d6182ecf068`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.5 x 11.0 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
@@ -161,7 +161,7 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
   (160 pages × 0.002252 in/page)
 - artwork embedded at **5283 × 3375 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `93ce1c389e7977dfa808db35e4a9d40e2aa8a50be6ee42281ae981e785f18948`
+- SHA-256 `e8679dae049013f92d94da5d751deab11493c6c1dc1c53bf675be93e71059048`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
@@ -292,9 +292,9 @@ declaration on your behalf. The facts you need in order to answer:
 08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf
 ```
 - 160 pages · trim 8.25 × 11.0 in
-- no bleed · inside margin 0.625 in · outside 0.5 in
+- no bleed · inside margin 0.675 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `855adcacf16b318c03af03a55e0b7e4e4e259b72082ff2f7160cdbe73cdd5d60`
+- SHA-256 `996a5c13b407cd15834a472a7334c5e15daa7988aacc1f4ad462923a3864d1d8`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.25 x 11.0 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
@@ -311,7 +311,7 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
   (160 pages × 0.0025 in/page plus a board allowance)
 - artwork embedded at **5163 × 3375 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `f6972c22fe9dba69cf92805fabbc5bcab150e218c9217cde0358e03b1623e1ac`
+- SHA-256 `406ac45a8d6a83b4b1de8da7a8e13727b37fbe82eda601a1c7ddfae2fb97493b`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a

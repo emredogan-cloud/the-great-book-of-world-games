@@ -10,9 +10,9 @@
    "interior": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
     "exists": true,
-    "sha256": "474eda034194508ce6db8a079884c597c32f27665f394130bc2d594e73ba2989",
-    "recordedSha256": "474eda034194508ce6db8a079884c597c32f27665f394130bc2d594e73ba2989",
-    "bytes": 518096,
+    "sha256": "4090f93731f2607014dec031199fcaa9500a5abf6a8af4e45cbb1d6182ecf068",
+    "recordedSha256": "4090f93731f2607014dec031199fcaa9500a5abf6a8af4e45cbb1d6182ecf068",
+    "bytes": 518841,
     "pageCount": 160
    },
    "blankPages": 18,
@@ -21,16 +21,18 @@
     "heightIn": 11.0
    },
    "margins": {
-    "gutterIn": 0.5,
+    "gutterIn": 0.55,
     "outerIn": 0.5,
     "topIn": 0.625,
-    "bottomIn": 0.625
+    "bottomIn": 0.625,
+    "gutterBareMinIn": 0.5,
+    "gutterSafetyIn": 0.05
    },
    "cover": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
     "exists": true,
-    "sha256": "93ce1c389e7977dfa808db35e4a9d40e2aa8a50be6ee42281ae981e785f18948",
-    "recordedSha256": "93ce1c389e7977dfa808db35e4a9d40e2aa8a50be6ee42281ae981e785f18948",
+    "sha256": "e8679dae049013f92d94da5d751deab11493c6c1dc1c53bf675be93e71059048",
+    "recordedSha256": "e8679dae049013f92d94da5d751deab11493c6c1dc1c53bf675be93e71059048",
     "bytes": 21142924,
     "wrapIn": [
      17.6103,
@@ -71,9 +73,9 @@
    "interior": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf",
     "exists": true,
-    "sha256": "855adcacf16b318c03af03a55e0b7e4e4e259b72082ff2f7160cdbe73cdd5d60",
-    "recordedSha256": "855adcacf16b318c03af03a55e0b7e4e4e259b72082ff2f7160cdbe73cdd5d60",
-    "bytes": 518610,
+    "sha256": "996a5c13b407cd15834a472a7334c5e15daa7988aacc1f4ad462923a3864d1d8",
+    "recordedSha256": "996a5c13b407cd15834a472a7334c5e15daa7988aacc1f4ad462923a3864d1d8",
+    "bytes": 519172,
     "pageCount": 160
    },
    "blankPages": 18,
@@ -82,16 +84,18 @@
     "heightIn": 11.0
    },
    "margins": {
-    "gutterIn": 0.625,
+    "gutterIn": 0.675,
     "outerIn": 0.5,
     "topIn": 0.625,
-    "bottomIn": 0.625
+    "bottomIn": 0.625,
+    "gutterBareMinIn": 0.5,
+    "gutterSafetyIn": 0.05
    },
    "cover": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
     "exists": true,
-    "sha256": "f6972c22fe9dba69cf92805fabbc5bcab150e218c9217cde0358e03b1623e1ac",
-    "recordedSha256": "f6972c22fe9dba69cf92805fabbc5bcab150e218c9217cde0358e03b1623e1ac",
+    "sha256": "406ac45a8d6a83b4b1de8da7a8e13727b37fbe82eda601a1c7ddfae2fb97493b",
+    "recordedSha256": "406ac45a8d6a83b4b1de8da7a8e13727b37fbe82eda601a1c7ddfae2fb97493b",
     "bytes": 20392322,
     "wrapIn": [
      17.21,
@@ -200,8 +204,8 @@
  "handbook": "08_OUTPUT/KDP_UPLOAD_HANDBOOK.md",
  "previewerChecklist": "08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md",
  "aiDisclosureNotes": "08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md",
- "handbookBytes": 23925,
- "previewerBytes": 5814,
+ "handbookBytes": 23926,
+ "previewerBytes": 5815,
  "blockingFounderActions": [
   {
    "id": "AI-DECL",

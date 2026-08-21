@@ -16,7 +16,7 @@
 | Final page count | **160** | **160** |
 | Trim | 8.5 × 11.0 in | 8.25 × 11.0 in |
 | Bleed | none | none |
-| Inside margin (gutter) | 0.5 in | 0.625 in |
+| Inside margin (gutter) | 0.55 in | 0.675 in |
 | Outside margin | 0.5 in | 0.5 in |
 | Top / bottom margin | 0.625 / 0.625 in | 0.625 / 0.625 in |
 | Spine (from page count) | **0.3603 in** | **0.4600 in** |

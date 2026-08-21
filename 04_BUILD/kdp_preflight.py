@@ -124,16 +124,36 @@ def check_geometry(pdf: str, trim_w_in, trim_h_in, rep: Report) -> dict:
 
 
 def check_ink(pdf: str, pages: int, trim_w_in, trim_h_in, rep: Report,
-              dpi: int = 72) -> dict:
-    """Her sayfayı rasterler ve GERÇEK mürekkep kutusunu ölçer."""
+              dpi: int = 300) -> dict:
+    """Her sayfayı rasterler ve GERÇEK mürekkep kutusunu ölçer.
+
+    ⚠ İki ayrı kusurdu, ikisi de burada düzeltildi (KDP Previewer'ın
+    gerçekten bulduğu sayfa 159 "Insufficient gutter" hatasından sonra):
+
+    ① Bu denetim İÇ MARJI (gutter — cilde bakan taraf) DIŞ/ÜST/ALT ile
+       AYNI çıplak 0,25 in eşiğine karşı ölçüyordu. KDP'nin gutter kuralı
+       SAYFA SAYISINA göre değişir (151–300 sayfa için 0,50 in) ve bu
+       fonksiyon `pages` parametresini ALIYOR ama hiç KULLANMIYORDU.
+       Artık `interior.gutter_in(pages)` — dizginin KENDİSİNİN kullandığı
+       AYNI tek doğruluk kaynağı — ile SAYFA TARAFINA (tek=SAĞ/recto,
+       çift=SOL/verso) göre ayrı ayrı denetleniyor.
+    ② `dpi=72` idi. 72 dpi'de 1 piksel = 1/72 in ≈ 0,0139 in'dir — sayfa
+       159'un gerçek açığı yalnızca 0,0100 in'di, yani ESKİ ÇÖZÜNÜRLÜKTE
+       PİKSELİN ALTINDA kalıp YUVARLANARAK KAYBOLURDU. 300 dpi'de
+       1 piksel ≈ 0,0033 in — aynı büyüklükteki bir açığı üç pikselden
+       görür.
+    """
     try:
         from PIL import Image, ImageChops
     except ImportError:
         print("  ⚠ Pillow yok — mürekkep kutusu ATLANDI")
         rep.warn.append("Pillow yok")
         return {}
+    sys.path.insert(0, HERE)
+    from interior import gutter_in
+    req_gutter = gutter_in(pages)
     import tempfile
-    worst = {"leftIn": 99.0, "rightIn": 99.0, "topIn": 99.0, "bottomIn": 99.0}
+    worst = {"gutterIn": 99.0, "outerIn": 99.0, "topIn": 99.0, "bottomIn": 99.0}
     offenders, blanks = [], []
     with tempfile.TemporaryDirectory() as td:
         subprocess.run(["pdftoppm", "-r", str(dpi), "-gray", "-png", pdf,
@@ -152,15 +172,31 @@ def check_ink(pdf: str, pages: int, trim_w_in, trim_h_in, rep: Report,
             top = bbox[1] / dpi
             right = (W - bbox[2]) / dpi
             bottom = (H - bbox[3]) / dpi
-            worst["leftIn"] = min(worst["leftIn"], left)
-            worst["rightIn"] = min(worst["rightIn"], right)
+            verso = (n % 2 == 0)                    # ÇİFT sayfa = SOL
+            gutter = right if verso else left
+            outer = left if verso else right
+            worst["gutterIn"] = min(worst["gutterIn"], gutter)
+            worst["outerIn"] = min(worst["outerIn"], outer)
             worst["topIn"] = min(worst["topIn"], top)
             worst["bottomIn"] = min(worst["bottomIn"], bottom)
-            if min(left, right, top, bottom) < SAFE_IN - 1.0 / dpi:
-                offenders.append("s.%d (%.3f in)"
-                                 % (n, min(left, right, top, bottom)))
+            probs = []
+            if gutter < req_gutter - 1.0 / dpi:
+                probs.append("iç marj %.4f in < %.3f in gerekli"
+                             % (gutter, req_gutter))
+            if outer < SAFE_IN - 1.0 / dpi:
+                probs.append("dış marj %.4f in < %.2f in" % (outer, SAFE_IN))
+            if top < SAFE_IN - 1.0 / dpi:
+                probs.append("üst marj %.4f in < %.2f in" % (top, SAFE_IN))
+            if bottom < SAFE_IN - 1.0 / dpi:
+                probs.append("alt marj %.4f in < %.2f in" % (bottom, SAFE_IN))
+            if probs:
+                offenders.append("s.%d (%s): %s"
+                                 % (n, "SOL" if verso else "SAĞ",
+                                    "; ".join(probs)))
     rep.check(not offenders,
-              "mürekkep güvenli alanda (trim'e ≥ %.2f in)" % SAFE_IN
+              "mürekkep GÜVENLİ — iç marj (gutter) ≥ %.3f in (%d sayfa "
+              "için KDP asgarisi) · dış/üst/alt ≥ %.2f in, sayfa tarafına "
+              "göre ayrı denetlendi" % (req_gutter, pages, SAFE_IN)
               + brief(offenders))
     runs, run = [], []
     for n in blanks:
@@ -173,8 +209,8 @@ def check_ink(pdf: str, pages: int, trim_w_in, trim_h_in, rep: Report,
     if len(run) > 2:
         runs.append("%d–%d" % (run[0], run[-1]))
     rep.check(not runs, "art arda ikiden fazla boş sayfa yok" + brief(runs))
-    return {"worstMarginIn": {k: round(v, 3) for k, v in worst.items()},
-            "blankPages": blanks}
+    return {"worstMarginIn": {k: round(v, 4) for k, v in worst.items()},
+            "requiredGutterIn": req_gutter, "blankPages": blanks}
 
 
 def check_language(pdf: str, rep: Report) -> dict:
@@ -278,9 +314,10 @@ def run(root: str, args) -> int:
         r["pageCount"] = n
         w = r["ink"].get("worstMarginIn", {})
         if w:
-            print("  · en dar mürekkep payı: sol %.3f · sağ %.3f · üst %.3f "
-                  "· alt %.3f in" % (w["leftIn"], w["rightIn"], w["topIn"],
-                                     w["bottomIn"]))
+            print("  · en dar mürekkep payı: iç/gutter %.4f (asgari %.3f) · "
+                  "dış %.4f · üst %.4f · alt %.4f in"
+                  % (w["gutterIn"], r["ink"].get("requiredGutterIn", 0.0),
+                     w["outerIn"], w["topIn"], w["bottomIn"]))
         print("  · çıkarılan kelime: %d · raster görsel: %d"
               % (r["language"]["extractedWords"], r["images"].get("rasterImages", 0)))
         out[ed] = r

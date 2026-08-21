@@ -67,6 +67,26 @@ MM = 72.0 / 25.4
 KDP_GUTTER_IN = [(150, 0.375), (300, 0.500), (500, 0.625),
                  (700, 0.750), (828, 0.875)]
 KDP_OUTER_MIN_IN = 0.25         # bleed yoksa dış/üst/alt asgari
+
+# ⚠ EMNİYET PAYI — çıplak KDP asgarisinin ÜSTÜNE eklenir, asgariyi
+# DEĞİŞTİRMEZ. Gerçek KDP Previewer 160 sayfalık ciltsizde sayfa 159'da
+# "Insufficient gutter" dedi. Kaynak taranınca (04_BUILD/kdp_preflight.py
+# check_ink(), 300 dpi, sayfa tarafına göre gutter/dış ayrımı yapılarak)
+# bu TEK sayfa değildi — ciltsizde 16 sayfa, gutter tam asgaride (emniyet
+# payı SIFIR) dizildiği için 0,0033–0,0100 in kısa ölçüldü. Kök neden bir
+# aritmetik hatası değil: bazı karakterlerin (ölçülen örnek: sayfa 159'da
+# açılış tek tırnağı ') mürekkebi, Liberation Serif'in glif tasarımı
+# gereği harfin nominal başlangıç noktasının hafifçe SOLUNA taşıyor — bu
+# yazı tiplerinde sık görülen normal bir çizim gerçeğidir, bir dizgi
+# hatası değil. Marj tam yasal asgaride durduğu için bu küçük taşma
+# yasal sınırı GEÇİYORDU. Ciltli hiç başarısız olmadı çünkü zaten kendi
+# +0,125 in cilt payı bu taşmayı TESADÜFEN yutuyordu — yani ciltsiz de
+# aynı sınıf korumaya ihtiyaç duyuyor, tesadüfe bırakılamaz.
+#
+# En kötü ölçülen taşma 0,0100 in'di (iki sayfa, ikisi de tam bu değerde).
+# Pay onun BEŞ KATI: 149 sayfalık bir kitapta bile aynı sınıf bir glif
+# taşması bir daha yasal sınırı aşamaz.
+GUTTER_SAFETY_IN = 0.05
 FONT_DIR_CANDIDATES = [
     "/usr/share/fonts/truetype/liberation",
     "/usr/share/fonts/liberation",
@@ -923,7 +943,8 @@ def _furniture(c, lay, i, p, geom, title):
 def geometry(cfg, edition: str, pages_guess: int) -> dict:
     trim = cfg["production"]["trimPaperback" if edition == "paperback"
                              else "trimHardcover"]
-    g_in = gutter_in(pages_guess)
+    bare_min = gutter_in(pages_guess)           # KDP'nin ÇIPLAK asgarisi
+    g_in = bare_min + GUTTER_SAFETY_IN           # dizginin GERÇEKTEN kullandığı
     # Ciltli ciltte blok dikişe daha yakın oturur: bir kademe fazla iç marj.
     if edition == "hardcover":
         g_in += 0.125
@@ -933,6 +954,7 @@ def geometry(cfg, edition: str, pages_guess: int) -> dict:
         "trimWidthIn": trim["w"], "trimHeightIn": trim["h"],
         "wPt": trim["w"] * IN, "hPt": trim["h"] * IN,
         "gutterIn": g_in, "outerIn": outer_in,
+        "gutterBareMinIn": bare_min, "gutterSafetyIn": GUTTER_SAFETY_IN,
         "topIn": 0.625, "bottomIn": 0.625,
         "gutterPt": g_in * IN, "outerPt": outer_in * IN,
         "topPt": 0.625 * IN, "bottomPt": 0.625 * IN,
@@ -994,7 +1016,9 @@ def build_edition(root, cfg, edition, out_dir, verbose=True):
         "bytes": os.path.getsize(path),
         "trim": {"widthIn": geom["trimWidthIn"], "heightIn": geom["trimHeightIn"]},
         "margins": {"gutterIn": geom["gutterIn"], "outerIn": geom["outerIn"],
-                    "topIn": geom["topIn"], "bottomIn": geom["bottomIn"]},
+                    "topIn": geom["topIn"], "bottomIn": geom["bottomIn"],
+                    "gutterBareMinIn": geom["gutterBareMinIn"],
+                    "gutterSafetyIn": geom["gutterSafetyIn"]},
         "kdpGutterRequiredIn": gutter_in(lay.n),
         "bleed": False,
         "font": geom["font"], "fontDir": fdir,
@@ -1014,10 +1038,10 @@ def build_edition(root, cfg, edition, out_dir, verbose=True):
     dump(os.path.join(root, "06_REPORTS", "interior-%s.json" % edition), report)
     if verbose:
         print("  ✓ %-10s %3d sayfa · %5.1f KB · trim %.2f×%.2f in · "
-              "iç marj %.3f in (KDP asgari %.3f)"
+              "iç marj %.3f in (KDP asgari %.3f + %.3f emniyet payı)"
               % (edition, lay.n, os.path.getsize(path) / 1024.0,
                  geom["trimWidthIn"], geom["trimHeightIn"],
-                 geom["gutterIn"], gutter_in(lay.n)))
+                 geom["gutterIn"], gutter_in(lay.n), GUTTER_SAFETY_IN))
         print("     çift sayfa: %d/%d madde SOL sayfada başlıyor · dört "
               "sayfalık madde: %s · boş sayfa: %d"
               % (verso_start, len(meta["spreads"]),

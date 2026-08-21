@@ -2,17 +2,19 @@
  "edition": "hardcover",
  "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf",
  "pageCount": 160,
- "sha256": "855adcacf16b318c03af03a55e0b7e4e4e259b72082ff2f7160cdbe73cdd5d60",
- "bytes": 518610,
+ "sha256": "996a5c13b407cd15834a472a7334c5e15daa7988aacc1f4ad462923a3864d1d8",
+ "bytes": 519172,
  "trim": {
   "widthIn": 8.25,
   "heightIn": 11.0
  },
  "margins": {
-  "gutterIn": 0.625,
+  "gutterIn": 0.675,
   "outerIn": 0.5,
   "topIn": 0.625,
-  "bottomIn": 0.625
+  "bottomIn": 0.625,
+  "gutterBareMinIn": 0.5,
+  "gutterSafetyIn": 0.05
  },
  "kdpGutterRequiredIn": 0.5,
  "bleed": false,

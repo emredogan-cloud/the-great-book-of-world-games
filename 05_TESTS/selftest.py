@@ -1833,6 +1833,59 @@ def part12_ci_contract(rep: Report, tmp: str) -> None:
                   "%s CI bayraklarını kabul eder (--verbose --json)" % name)
 
 
+# ---------------------------------------------------------------------------
+def part13_gutter_tiers(rep: Report, tmp: str) -> None:
+    """⑬ GUTTER (İÇ MARJ) KADEMESİ SAYFA SAYISINDAN TÜRETİLİR.
+
+    Gerçek KDP Previewer 160 sayfalık ciltsizde sayfa 159'da "Insufficient
+    gutter" dedi (kurucu bildirimi, 2026-08-21). Kök neden: `interior.py`
+    sayfa-sayısı → gutter kademesi tablosunu ZATEN doğru taşıyordu, ama
+    (a) `kdp_preflight.py`'nin BASILMIŞ PDF'i ölçen denetimi bu tabloyu
+    hiç OKUMUYORDU — sabit 0,25 in'e karşı bakıyordu — ve (b) dizgi hiçbir
+    EMNİYET PAYI bırakmadan tam asgaride duruyordu, yani bir glifin
+    (açılış tek tırnağı gibi) normal çizim taşması yasal sınırı geçebildi.
+    Bu bölüm KDP'nin resmî kademe tablosunun HER sınırında doğru değeri
+    seçtiğini ve emniyet payının hâlâ yerinde olduğunu doğrular — kasıtlı
+    kusur enjeksiyonu ile DEĞİL, gerçek fonksiyonu doğrudan çağırarak
+    (bu tablo çok ucuz test edilir, tam kitabı yeniden dizmeye gerek yok;
+    ciltsizin/ciltlinin GERÇEK render edilmiş PDF'e karşı denetimi
+    `05_TESTS/package_selftest.py`'nin gutter bölümündedir).
+    """
+    print("\n⑬ gutter kademesi sayfa sayısından türetilir")
+    sys.path.insert(0, os.path.join(ROOT, "04_BUILD"))
+    import interior
+
+    # KDP'nin resmî tablosu — Amazon.com, büyük trim, siyah-beyaz.
+    # Talimatın kendi sınır listesi: 149/150/151/160/300/301.
+    tiers = [(24, 0.375), (149, 0.375), (150, 0.375), (151, 0.500),
+             (160, 0.500), (300, 0.500), (301, 0.625), (500, 0.625),
+             (501, 0.750), (700, 0.750), (701, 0.875), (828, 0.875)]
+    for pages, want in tiers:
+        got = interior.gutter_in(pages)
+        rep.check(got == want,
+                  "%d sayfa → gutter asgarisi %.3f in" % (pages, want),
+                  "gelen %.3f in" % got)
+
+    # Emniyet payı VAR ve makul büyüklükte — sıfıra sessizce dönemez.
+    # 0,01 in en kötü ölçülen glif taşmasıydı (sayfa 159 · sayfa 15);
+    # pay onun altına düşerse aynı sınıf hata sessizce geri gelebilir.
+    rep.check(interior.GUTTER_SAFETY_IN >= 0.01,
+              "gutter emniyet payı ölçülen en kötü taşmadan (0,01 in) küçük "
+              "DEĞİL", "gelen %.3f in" % interior.GUTTER_SAFETY_IN)
+
+    # `kdp_preflight.py` gerçekten interior.gutter_in'İ okuyor mu — sabit,
+    # kopya bir 0,25 in'e karşı DEĞİL. Tek doğruluk kaynağı ihlali burada
+    # yakalanır.
+    kp_src = open(os.path.join(ROOT, "04_BUILD", "kdp_preflight.py"),
+                 encoding="utf-8").read()
+    rep.check("from interior import gutter_in" in kp_src,
+              "kdp_preflight.py gutter asgarisini interior.py'den OKUR "
+              "(kopya tablo yok)")
+    rep.check("req_gutter" in kp_src and "gutter <" in kp_src,
+              "kdp_preflight.py iç marjı (gutter) dış/üst/alt'tan AYRI "
+              "denetler")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1857,6 +1910,7 @@ def main() -> int:
         part10_founder_gap_register(rep, tmp)
         part11_typography(rep, tmp)
         part12_ci_contract(rep, tmp)
+        part13_gutter_tiers(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:

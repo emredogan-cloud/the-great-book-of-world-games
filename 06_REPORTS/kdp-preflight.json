@@ -33,11 +33,12 @@
    },
    "ink": {
     "worstMarginIn": {
-     "leftIn": 0.486,
-     "rightIn": 0.486,
-     "topIn": 0.361,
-     "bottomIn": 0.333
+     "gutterIn": 0.54,
+     "outerIn": 0.49,
+     "topIn": 0.36,
+     "bottomIn": 0.3467
     },
+    "requiredGutterIn": 0.5,
     "blankPages": [
      2,
      8,
@@ -99,11 +100,12 @@
    },
    "ink": {
     "worstMarginIn": {
-     "leftIn": 0.486,
-     "rightIn": 0.5,
-     "topIn": 0.361,
-     "bottomIn": 0.333
+     "gutterIn": 0.6633,
+     "outerIn": 0.49,
+     "topIn": 0.36,
+     "bottomIn": 0.3467
     },
+    "requiredGutterIn": 0.5,
     "blankPages": [
      2,
      8,
