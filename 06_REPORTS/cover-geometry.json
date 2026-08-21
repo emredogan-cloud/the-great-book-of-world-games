@@ -85,73 +85,73 @@
    "pageCount": 160,
    "trimWidthIn": 8.25,
    "trimHeightIn": 11.0,
-   "bleedIn": 0.125,
-   "safeIn": 0.25,
-   "spineWidthIn": 0.46,
+   "bleedIn": 0.591,
+   "safeIn": 0.125,
+   "spineWidthIn": 0.549,
    "spinePerPageIn": 0.0025,
    "spineTextAllowed": true,
    "spineTextMinPages": 79,
-   "wrapWidthIn": 17.21,
-   "wrapHeightIn": 11.25,
-   "wrapWidthPt": 1239.12,
-   "wrapHeightPt": 810.0,
+   "wrapWidthIn": 18.624,
+   "wrapHeightIn": 12.417,
+   "wrapWidthPt": 1340.93,
+   "wrapHeightPt": 894.02,
    "zones": {
     "backCover": {
-     "x0": 0.125,
-     "x1": 8.375
+     "x0": 0.591,
+     "x1": 9.038
     },
     "spine": {
-     "x0": 8.375,
-     "x1": 8.835
+     "x0": 9.038,
+     "x1": 9.587
     },
     "frontCover": {
-     "x0": 8.835,
-     "x1": 17.085
+     "x0": 9.587,
+     "x1": 18.034
     }
    },
    "safeZones": {
     "backCopy": {
-     "x0": 0.375,
-     "x1": 8.125,
-     "y0": 0.375,
-     "y1": 10.875
+     "x0": 0.716,
+     "x1": 8.644,
+     "y0": 0.716,
+     "y1": 11.702
     },
     "spineText": {
-     "x0": 8.4375,
-     "x1": 8.7725,
-     "y0": 0.625,
-     "y1": 10.625
+     "x0": 9.1005,
+     "x1": 9.5245,
+     "y0": 0.716,
+     "y1": 11.702
     },
     "frontTitle": {
-     "x0": 9.085,
-     "x1": 16.835,
-     "y0": 6.725,
-     "y1": 10.875
+     "x0": 9.981,
+     "x1": 17.909,
+     "y0": 7.3326,
+     "y1": 11.702
     },
     "frontAuthor": {
-     "x0": 9.085,
-     "x1": 16.835,
-     "y0": 0.375,
-     "y1": 2.105
+     "x0": 9.981,
+     "x1": 17.909,
+     "y0": 0.716,
+     "y1": 2.6135
     },
     "barcode": {
-     "x0": 6.125,
-     "x1": 8.125,
-     "y0": 0.375,
-     "y1": 1.575,
+     "x0": 6.788,
+     "x1": 8.788,
+     "y0": 0.966,
+     "y1": 2.166,
      "$note": "KDP barkodu KENDİSİ basar. Bu alan BOŞ ve sade bırakılır; sahte barkod çizilmez."
     }
    },
    "artworkTarget": {
-    "$note": "Kurucu sanatının HAM hedefi. 300 ppi baskı standardıdır; daha yüksek çözünürlük zarar vermez, düşüğü POD'da görünür.",
+    "$note": "GERÇEK KDP Print Cover Calculator çıktısı — HİPOTEZ DEĞİL. project_config.json § hardcoverConfirmedTemplate.",
     "ppi": 300,
-    "widthPx": 5163,
-    "heightPx": 3375,
-    "frontOnlyWidthPx": 2512,
-    "frontOnlyHeightPx": 3375
+    "widthPx": 5587,
+    "heightPx": 3725,
+    "frontOnlyWidthPx": 2711,
+    "frontOnlyHeightPx": 3725
    },
-   "$hardcoverWarning": "CİLTLİ GEOMETRİ HİPOTEZDİR. KDP ciltli kapak şablonunu bir üreteçle verir; kalıp payı, menteşe ve tahta kalınlığı oradan okunur. KURUCU EYLEMİ: şablonu indir, buradaki sırt ve sarım ölçüleriyle KARŞILAŞTIR, farklıysa project_config.json içine gerçek değerleri yaz.",
-   "founderConfirmedTemplate": false,
+   "founderConfirmedTemplate": true,
+   "confirmedTemplateSource": "KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 160 sayfa · 2026-08-21",
    "interiorSha256": "996a5c13b407cd15834a472a7334c5e15daa7988aacc1f4ad462923a3864d1d8",
    "interiorFile": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf"
   }

@@ -305,18 +305,17 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
 ```
 08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf
 ```
-- full wrap **17.2100 × 11.2500 in**, including
-  0.125 in bleed on all four sides
-- spine **0.4600 in**, computed from this exact page count
-  (160 pages × 0.0025 in/page plus a board allowance)
-- artwork embedded at **5163 × 3375 px**
+- full wrap **18.6240 × 12.4170 in**, including
+  0.591 in wrap allowance on all four sides
+- spine **0.5490 in**, **confirmed directly from KDP** — not computed from a formula (KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 160 sayfa · 2026-08-21)
+- artwork embedded at **5587 × 3725 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `406ac45a8d6a83b4b1de8da7a8e13727b37fbe82eda601a1c7ddfae2fb97493b`
+- SHA-256 `950d121c350f6ccb749ecb206a3ef95d796bc6568231afc13e60791f875afb89`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
 0–255 scale), so no panel, box or scrim sits behind them. The spine title is
-8.75 pt, sized to fit the measured clean run of the spine rather than
+9.75 pt, sized to fit the measured clean run of the spine rather than
 chosen by eye. The back copy sits over a feathered wash taken from the
 artwork's own parchment tone — not a white panel.
 

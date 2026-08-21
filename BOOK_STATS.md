@@ -62,7 +62,7 @@
 | Sürüm | Sayfa | Trim | Sırt |
 |---|---:|---|---:|
 | paperback | **160** | 8.5 × 11.0 in | 0.3603 in |
-| hardcover | **160** | 8.25 × 11.0 in | 0.4600 in |
+| hardcover | **160** | 8.25 × 11.0 in | 0.5490 in |
 | kindle | — | — | — |
 
 | | |

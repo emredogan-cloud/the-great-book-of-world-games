@@ -149,6 +149,25 @@ def steps_for_print(ed, pkg, md, cov, fm):
     g = cov["editions"][ed]
     isbn = md["isbn"]["paperback" if ed == "paperback" else "hardcover"]
     b = md["bookDetails"]
+    confirmed = bool(g.get("founderConfirmedTemplate"))
+    # ⚠ SPİNE CÜMLESİ İKİ AYRI GERÇEĞİ ANLATIR — birbirine KARIŞTIRILMAZ.
+    # Hipotez (ciltsiz her zaman · ciltli doğrulanmadıysa): formülden
+    # HESAPLANDI, cümle formülü YAZAR. Doğrulanmış ciltli: KDP'nin kendi
+    # hesaplayıcısından OKUNDU — cümle "formülden hesaplandı" DERSE
+    # (0,0025 in/sayfa + tahta payı formülü artık gerçek 0,549 in değerini
+    # ÜRETMEZ; 160×0,0025+0,06=0,46 ≠ 0,549) bu bir Faz 6 kusuruydu ve
+    # aynı sınıf hatanın tekrarı olurdu.
+    bleed_label = "wrap allowance" if confirmed else "bleed"
+    if confirmed:
+        spine_sentence = ("**confirmed directly from KDP** — not computed "
+                          "from a formula (%s)"
+                          % g.get("confirmedTemplateSource", ""))
+    else:
+        spine_sentence = ("computed from this exact page count\n  (%d "
+                          "pages × %s in/page%s)"
+                          % (g["pageCount"], g["spinePerPageIn"],
+                             " plus a board allowance" if ed == "hardcover"
+                             else ""))
     return f"""
 ### 1 · KDP Bookshelf
 {F} Sign in at kdp.amazon.com → **Bookshelf** → **+ Create** →
@@ -247,9 +266,8 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
 {pkg['cover']['file']}
 ```
 - full wrap **{g['wrapWidthIn']:.4f} × {g['wrapHeightIn']:.4f} in**, including
-  {g['bleedIn']} in bleed on all four sides
-- spine **{g['spineWidthIn']:.4f} in**, computed from this exact page count
-  ({g['pageCount']} pages × {g['spinePerPageIn']} in/page{' plus a board allowance' if ed == 'hardcover' else ''})
+  {g['bleedIn']} in {bleed_label} on all four sides
+- spine **{g['spineWidthIn']:.4f} in**, {spine_sentence}
 - artwork embedded at **{g['artworkTarget']['widthPx']} × {g['artworkTarget']['heightPx']} px**
   (300 ppi); all type is **vector**, not baked into the image
 - SHA-256 `{pkg['cover']['sha256']}`
@@ -541,6 +559,29 @@ def build_previewer(root, pkgs, cov, md, ivis):
     g = cov["editions"]["paperback"]
     gh = cov["editions"]["hardcover"]
     w = ivis.get("paperback", {}).get("ink", {}).get("worstMarginIn", {})
+    hc_confirmed = bool(gh.get("founderConfirmedTemplate"))
+    hc_stale = gh.get("$stalePageCountWarning")
+    if hc_confirmed and not hc_stale:
+        hc_geometry_risk = (
+            "- **Hardcover geometry is confirmed, not derived.** The spine, "
+            "wrap and hinge above were confirmed directly from KDP (%s), not "
+            "computed from a formula. Re-confirm only if the page count "
+            "changes from %d." % (gh.get("confirmedTemplateSource", ""), gh.get("pageCount", hc["interior"]["pageCount"]))
+        )
+    elif hc_confirmed and hc_stale:
+        hc_geometry_risk = (
+            "- **Hardcover geometry was confirmed at a different page count.** "
+            "%s Re-run the KDP Print Cover Calculator at the current page count "
+            "before generating hardcover artwork." % hc_stale
+        )
+    else:
+        hc_geometry_risk = (
+            "- **Hardcover geometry is a hypothesis.** The spine above is "
+            "computed from page count and a board allowance; KDP supplies a "
+            "hardcover template that includes hinge and wrap allowances which "
+            "cannot be derived. Download it and compare before generating "
+            "hardcover artwork."
+        )
     return f"""# KDP PREVIEWER CHECKLIST
 ## The Great Book of World Games
 
@@ -619,10 +660,7 @@ this file was generated.
 
 - **No cover, in any format.** Paperback, hardcover and Kindle all need one and
   none exists. This is the single blocking gap.
-- **Hardcover geometry is a hypothesis.** The spine above is computed from page
-  count and a board allowance; KDP supplies a hardcover template that includes
-  hinge and wrap allowances which cannot be derived. Download it and compare
-  before generating hardcover artwork.
+{hc_geometry_risk}
 - **A+ images: {pkgs['aplus']['imagesMissing']} missing.**
 - **Author biography is empty.** KDP rejected a placeholder biography on a
   sibling title. Write a real one before publishing.

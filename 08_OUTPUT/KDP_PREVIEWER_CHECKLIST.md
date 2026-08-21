@@ -19,16 +19,16 @@
 | Inside margin (gutter) | 0.55 in | 0.675 in |
 | Outside margin | 0.5 in | 0.5 in |
 | Top / bottom margin | 0.625 / 0.625 in | 0.625 / 0.625 in |
-| Spine (from page count) | **0.3603 in** | **0.4600 in** |
-| Full cover wrap | 17.6103 × 11.2500 in | 17.2100 × 11.2500 in |
+| Spine (from page count) | **0.3603 in** | **0.5490 in** |
+| Full cover wrap | 17.6103 × 11.2500 in | 18.6240 × 12.4170 in |
 | Fonts | Liberation Serif, embedded and subsetted | same |
 | Raster images | none — every diagram is vector | same |
 
 Measured ink margins in the built paperback — the closest any ink comes to the
 trim edge, on any of the 160 pages:
 
-- left **0.486 in** · right **0.486 in**
-- top **0.361 in** · bottom **0.333 in**
+- left **? in** · right **? in**
+- top **0.36 in** · bottom **0.3467 in**
 
 KDP's own minimum without bleed is 0.25 in, so there is real headroom. If the
 Previewer reports content outside the printable area, something changed after
@@ -76,10 +76,7 @@ this file was generated.
 
 - **No cover, in any format.** Paperback, hardcover and Kindle all need one and
   none exists. This is the single blocking gap.
-- **Hardcover geometry is a hypothesis.** The spine above is computed from page
-  count and a board allowance; KDP supplies a hardcover template that includes
-  hinge and wrap allowances which cannot be derived. Download it and compare
-  before generating hardcover artwork.
+- **Hardcover geometry is confirmed, not derived.** The spine, wrap and hinge above were confirmed directly from KDP (KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 160 sayfa · 2026-08-21), not computed from a formula. Re-confirm only if the page count changes from 160.
 - **A+ images: 1 missing.**
 - **Author biography is empty.** KDP rejected a placeholder biography on a
   sibling title. Write a real one before publishing.
@@ -90,9 +87,9 @@ this file was generated.
 
 | | paperback | hardcover |
 |---|---|---|
-| Full wrap | 17.6103 × 11.2500 in | 17.2100 × 11.2500 in |
-| Spine | 0.3603 in | 0.4600 in |
-| Artwork | 5283 × 3375 px @ 300 ppi | 5163 × 3375 px |
+| Full wrap | 17.6103 × 11.2500 in | 18.6240 × 12.4170 in |
+| Spine | 0.3603 in | 0.5490 in |
+| Artwork | 5283 × 3375 px @ 300 ppi | 5587 × 3725 px |
 | Type | vector, not rasterised | same |
 
 1. **The spine.** It is 0.360 in — a thin spine, and the title is set at

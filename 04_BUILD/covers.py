@@ -81,7 +81,123 @@ def sha256(path):
     return h.hexdigest()
 
 
+def hardcover_confirmed_geometry(cfg: dict, pages: int) -> dict:
+    """KURUCUNUN GERÇEKTEN ÇALIŞTIRDIĞI KDP Print Cover Calculator'dan
+    okunan ciltli geometrisi — hipotez formülünün YERİNE geçer.
+
+    Kaynak: `project_config.json → production.hardcoverConfirmedTemplate`
+    (21 Ağustos 2026, kdp.amazon.com/cover-calculator, Hardcover · B&W ·
+    White paper · 8,25×11 in · 160 sayfa). Aşağıdaki beş özdeşlik bu
+    turda ÖLÇÜLEREK doğrulandı (KDP'nin gösterdiği ondalık yuvarlamayla,
+    ±0,002 in içinde):
+
+        Tam sarım GENİŞLİĞİ  = 2×ÖnKapak + Sırt + 2×Wrap
+        Tam sarım YÜKSEKLİĞİ = ÖnKapak yüksekliği + 2×Wrap
+        Sırt GÜVENLİ ALANI   = Sırt genişliği − 2×SırtPayı
+
+    Yani "Wrap" sanatın DIŞ (üst/alt/dış kenar) tarafına, "Hinge" sırta
+    bitişik iç kenara (menteşe/kırışma bölgesi) aittir — Hinge toplam
+    genişliğe AYRICA eklenmez, ÖnKapak/ArkaKapak payının İÇİNDE, sırta en
+    yakın şeridi işaretler. Bu, KDP'nin resmî tablosundaki dokuz satırın
+    (Tam Kapak · Ön Kapak · Pay · Wrap · Hinge · Sırt · Sırt Güvenli Alan ·
+    Sırt Payı · Barkod Payı) verdiği sayılarla birebir kapanan tek tutarlı
+    modeldir.
+    """
+    t = cfg["production"]["hardcoverConfirmedTemplate"]
+    trim = cfg["production"]["trimHardcover"]
+    wrap, hinge, margin = t["wrapIn"], t["hingeIn"], t["marginIn"]
+    spine_w = t["spineWidthIn"]
+    front_w, front_h = t["frontCoverWidthIn"], t["frontCoverHeightIn"]
+    wrap_w, wrap_h = t["fullCoverWidthIn"], t["fullCoverHeightIn"]
+    spine_safe_w = t["spineSafeAreaWidthIn"]
+    spine_safe_h = t["spineSafeAreaHeightIn"]
+    bc_h, bc_v = t["barcodeMarginHorizontalIn"], t["barcodeMarginVerticalIn"]
+
+    back_x0 = wrap
+    spine_x0 = back_x0 + front_w
+    front_x0 = spine_x0 + spine_w
+    front_x1 = front_x0 + front_w
+    panel_y0, panel_y1 = wrap, wrap + front_h
+    spine_safe_x0 = spine_x0 + (spine_w - spine_safe_w) / 2.0
+    spine_safe_y0 = panel_y0 + (front_h - spine_safe_h) / 2.0
+
+    g = {
+        "edition": "hardcover",
+        "pageCount": pages,
+        "trimWidthIn": trim["w"], "trimHeightIn": trim["h"],
+        "bleedIn": wrap, "safeIn": margin,
+        "spineWidthIn": round(spine_w, 4),
+        "spinePerPageIn": SPINE_PER_PAGE_IN["hardcover"],
+        "spineTextAllowed": pages >= SPINE_TEXT_MIN_PAGES,
+        "spineTextMinPages": SPINE_TEXT_MIN_PAGES,
+        "wrapWidthIn": round(wrap_w, 4), "wrapHeightIn": round(wrap_h, 4),
+        "wrapWidthPt": round(wrap_w * IN, 2),
+        "wrapHeightPt": round(wrap_h * IN, 2),
+        "zones": {
+            "backCover": {"x0": round(back_x0, 4), "x1": round(spine_x0, 4)},
+            "spine":     {"x0": round(spine_x0, 4), "x1": round(front_x0, 4)},
+            "frontCover": {"x0": round(front_x0, 4), "x1": round(front_x1, 4)},
+        },
+        "safeZones": {
+            "backCopy": {
+                "x0": round(back_x0 + margin, 4),
+                "x1": round(spine_x0 - hinge, 4),
+                "y0": round(panel_y0 + margin, 4),
+                "y1": round(panel_y1 - margin, 4)},
+            "spineText": {
+                "x0": round(spine_safe_x0, 4),
+                "x1": round(spine_safe_x0 + spine_safe_w, 4),
+                "y0": round(spine_safe_y0, 4),
+                "y1": round(spine_safe_y0 + spine_safe_h, 4)},
+            "frontTitle": {
+                "x0": round(front_x0 + hinge, 4),
+                "x1": round(front_x1 - margin, 4),
+                "y0": round(panel_y0 + front_h * 0.60, 4),
+                "y1": round(panel_y1 - margin, 4)},
+            "frontAuthor": {
+                "x0": round(front_x0 + hinge, 4),
+                "x1": round(front_x1 - margin, 4),
+                "y0": round(panel_y0 + margin, 4),
+                "y1": round(panel_y0 + front_h * 0.18, 4)},
+            "barcode": {
+                "x0": round(spine_x0 - bc_h - BARCODE_W_IN, 4),
+                "x1": round(spine_x0 - bc_h, 4),
+                "y0": round(panel_y0 + bc_v, 4),
+                "y1": round(panel_y0 + bc_v + BARCODE_H_IN, 4),
+                "$note": "KDP barkodu KENDİSİ basar. Bu alan BOŞ ve sade "
+                         "bırakılır; sahte barkod çizilmez."},
+        },
+        "artworkTarget": {
+            "$note": "GERÇEK KDP Print Cover Calculator çıktısı — HİPOTEZ "
+                     "DEĞİL. project_config.json § hardcoverConfirmedTemplate.",
+            "ppi": 300,
+            "widthPx": int(round(wrap_w * 300)),
+            "heightPx": int(round(wrap_h * 300)),
+            "frontOnlyWidthPx": int(round((front_w + wrap) * 300)),
+            "frontOnlyHeightPx": int(round(wrap_h * 300)),
+        },
+        "founderConfirmedTemplate": True,
+        "confirmedTemplateSource":
+            "KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) "
+            "· %d sayfa · %s" % (t["sourcePageCount"],
+                                 cfg["production"].get(
+                                     "hardcoverConfirmedTemplateDate",
+                                     "2026-08-21")),
+    }
+    if pages != t["sourcePageCount"]:
+        g["$stalePageCountWarning"] = (
+            "KURUCU EYLEMİ: gerçek sayfa sayısı (%d) KDP hesaplayıcısına "
+            "girilen değerden (%d) FARKLI. Hesaplayıcıyı yeni sayfa "
+            "sayısıyla YENİDEN çalıştır ve project_config.json § "
+            "hardcoverConfirmedTemplate'i güncelle — bu geometri bayat "
+            "olabilir." % (pages, t["sourcePageCount"]))
+    return g
+
+
 def geometry(cfg, edition: str, pages: int) -> dict:
+    if edition == "hardcover" and cfg.get("production", {}).get(
+            "hardcoverTemplateConfirmed"):
+        return hardcover_confirmed_geometry(cfg, pages)
     trim = cfg["production"]["trimPaperback" if edition == "paperback"
                              else "trimHardcover"]
     tw, th = trim["w"], trim["h"]
@@ -276,7 +392,20 @@ def prepare_artwork(root, geo_ed, src_rel, out_rel, verbose=True,
 #
 # Başlık koşusu bu ölçümle seçildi: y 7,55–10,30 aralığında koyu piksel
 # oranı %8,2'yi hiç geçmiyor.
-SPINE_RUNS = {"title": (7.55, 10.30), "author": (0.62, 1.58)}
+#
+# ⚠ CİLTLİ KENDİ KOŞUSUNU TAŞIR. Ciltlinin sarımı artık GERÇEK KDP
+# geometrisi kullanıyor (18,624×12,417 in — hipotezin 17,21×11,25'inden
+# hem daha geniş hem daha yüksek) ve bu, kaynak sanattan FARKLI bir dikey
+# kırpma oranı üretir. Ciltsizin ölçülen "sırtın üst/alt sakin, ortası
+# kalabalık" DESENİ (yukarıdaki not) ciltlinin kendi sırt güvenli
+# alanına (`hardcoverConfirmedTemplate.spineSafeArea*`) ORANTILI olarak
+# taşındı — aynı fraksiyon, yeni mutlak sınırlar. Kapak render edildikten
+# sonra GÖZLE yeniden denetlenmeli; bu bir varsayım DEĞİL, ölçülemeyen
+# tek şey kırpılan bölgenin AYNI ölçüde sakin kaldığıdır.
+SPINE_RUNS = {
+    "paperback": {"title": (7.55, 10.30), "author": (0.62, 1.58)},
+    "hardcover": {"title": (8.3238, 11.345), "author": (0.716, 1.7652)},
+}
 
 
 def fit_tracked(text, font, max_in, start_pt=11.0, track_ratio=0.12,
@@ -317,8 +446,30 @@ class TypeLog:
 
 
 # ── TİPOGRAFİ ────────────────────────────────────────────────────────────
-# Ölçülen en sakin arka kapak bloğu (sd 27,7) — FINAL_COVER_SELECTION § 6
-BACK_BOX = (0.70, 0.60, 5.90, 7.60)
+# Ölçülen en sakin arka kapak bloğu (sd 27,7) — FINAL_COVER_SELECTION § 6.
+# PAPERBACK — DOKUNULMADI, birebir eski değer.
+#
+# HARDCOVER — ciltli artık GERÇEK KDP geometrisini kullanıyor (sarım
+# 18,624×12,417 in; arka kapak paneli x=0,591'de başlıyor, ciltsizin
+# x=0,125'i DEĞİL). Sabit inç kutusu SARIM KÖŞESİNDEN değil PANEL
+# KÖŞESİNDEN ölçülen bir OFSET olarak taşındı — panel genişliği/yüksekliği
+# ikisinde de neredeyse aynı olduğu için (8,50→8,447 in · 11,00→11,236 in,
+# ikisi de <%2,5 fark) ofset ÖLÇEKLENMEDİ, yalnızca yeni panel köşesine
+# eklendi. Render SONRASI gözle yeniden denetlendi.
+BACK_BOX = {
+    "paperback": (0.70, 0.60, 5.90, 7.60),
+    "hardcover": (1.166, 1.066, 6.366, 8.066),
+}
+FRONT_TITLE_TOP_Y_IN = {"paperback": 10.60, "hardcover": 11.427}
+# ⚠ Ciltli değeri düz oran ölçeklemesiyle DEĞİL, `safeZones.frontTitle.y1`
+# (11,702 in — panel üstü eksi 0,125 in dış pay) eksi metnin GERÇEK
+# tırmanma yüksekliği (19,5 pt × 0,75 = 0,2031 in) eksi ciltsizin KENDİ
+# güvenli sınırının altında bıraktığı pay (0,0719 in, ciltsizin gerçek
+# 10,60 in'inden geriye türetildi) ile hesaplandı. İlk oranlı deneme
+# (11,6996) `TypeLog`'un kaydettiği gerçek üst kenarı 11,903'e taşımıştı
+# — üst wrap sınırının (11,826) 0,077 in ÜSTÜNDE, yani başlık kıvrım
+# payına giriyordu. Bu, render edilip TypeLog ölçülünce bulundu.
+FRONT_AUTHOR_Y_IN = {"paperback": 0.86, "hardcover": 0.9492}
 INK = (0.106, 0.094, 0.078)          # koyu kahve-siyah: parşömende mürekkep
 FONT_DIR = "/usr/share/fonts/truetype/liberation"
 FONTS = {"CoverSerif": "LiberationSerif-Regular.ttf",
@@ -416,7 +567,7 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
     # Alt başlık ilk sürümde AÇIK RENKLİ TAHTA PİYONUN üstüne düşüyordu
     # (piyon x 11,0–11,6 in · y 9,4–10,2 in). Blok yukarı alındı ve alt
     # başlık daraltıldı; artık piyonun üstünde kalıyor.
-    y = 10.60 * IN
+    y = FRONT_TITLE_TOP_Y_IN[ed] * IN
     _tracked(c, CT.FRONT_TITLE_TOP, fcx, y, "CoverSerif", 19.5, 5.4,
              log=log, kind="frontTitle")
     y -= 0.60 * IN
@@ -435,8 +586,8 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
         y -= 0.185 * IN
 
     # ── ÖN KAPAK · yazar (ölçülen sakin bant: y 0,45–1,55 in) ──
-    _tracked(c, CT.AUTHOR, fcx, 0.86 * IN, "CoverSerif-B", 23, 4.4,
-             log=log, kind="frontAuthor")
+    _tracked(c, CT.AUTHOR, fcx, FRONT_AUTHOR_Y_IN[ed] * IN, "CoverSerif-B",
+             23, 4.4, log=log, kind="frontAuthor")
 
     # ── SIRT — ORTASI KALABALIK, İKİ UCU TEMİZ (ölçüldü) ──
     # Yazı ortadan geçirilmez: başlık üstteki temiz koşuya, yazar alttaki
@@ -447,7 +598,7 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
     c.rotate(-90)                      # yukarıdan aşağı okunur (KDP normu)
     for key, txt, font in (("title", CT.SPINE_TITLE, "CoverSerif-B"),
                            ("author", CT.SPINE_AUTHOR, "CoverSerif")):
-        lo, hi = SPINE_RUNS[key]
+        lo, hi = SPINE_RUNS[ed][key]
         pt, track, w = fit_tracked(txt, font, hi - lo)
         mid = (lo + hi) / 2.0
         _tracked(c, txt, -(mid * IN), -pt * 0.34, font, pt, track,
@@ -459,9 +610,10 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
     c.restoreState()
 
     # ── ARKA KAPAK (ölçülen sakin blok: x 0,70–5,90 · y 0,60–4,60 in) ──
-    bx = BACK_BOX[0] * IN + 0.10 * IN
-    bw = (BACK_BOX[2] - BACK_BOX[0]) * IN - 0.20 * IN
-    by = BACK_BOX[3] * IN - 0.30 * IN
+    back_box = BACK_BOX[ed]
+    bx = back_box[0] * IN + 0.10 * IN
+    bw = (back_box[2] - back_box[0]) * IN - 0.20 * IN
+    by = back_box[3] * IN - 0.30 * IN
     for kind, text in CT.back_copy(measured):
         if kind == "head":
             c.setFont("CoverSerif-B", 12.2)
@@ -719,44 +871,61 @@ def build_covers(root, cfg, args) -> int:
            "generatedAtPhase": "phase6",
            "selectedArtwork": sel, "editions": {}}
 
+    # ── Kapsam seçimi — üç bağımsız bayrak ──────────────────────────────
+    # Bir baskı sürümü düzeltilirken ÖTEKİLERE ve Kindle'a DOKUNULMAMASI
+    # gerekebilir: SHA-256'ları KDP_UPLOAD_HANDBOOK.md'de basılı ve
+    # gereksiz yeniden üretim yalnızca zaman damgasını değiştirip o
+    # kılavuzu bayatlatır.
     kindle_only = getattr(args, "kindle_only", False)
-    if kindle_only:
-        # Yalnızca Kindle yeniden dizilecekse ciltsiz/ciltli PDF'lere
-        # DOKUNULMAZ — SHA-256'ları KDP_UPLOAD_HANDBOOK.md içinde basılı ve
-        # gereksiz yeniden üretim yalnızca zaman damgasını değiştirip o
-        # kılavuzu bayatlatır. Önceki kaydı taşı.
+    hardcover_only = getattr(args, "hardcover_only", False)
+    do_paperback = not kindle_only and not hardcover_only
+    do_hardcover = hardcover_only or (not kindle_only and not hardcover_only)
+    do_kindle = not hardcover_only
+
+    if kindle_only or hardcover_only:
         prev_path = os.path.join(root, "06_REPORTS", "cover-build.json")
         if not os.path.exists(prev_path):
-            print("  ⛔ --kindle-only önce en az bir tam --build ister "
-                  "(ciltsiz/ciltli kaydı yok)")
+            print("  ⛔ --kindle-only/--hardcover-only önce en az bir tam "
+                  "--build ister (önceki kayıt yok)")
             return 1
-        out["editions"] = load(prev_path).get("editions", {})
-        print("\n  · --kindle-only: ciltsiz/ciltli PDF'lere DOKUNULMADI, "
-              "önceki kayıt korundu")
-    else:
-        for ed in ("paperback", "hardcover"):
-            if ed not in geo["editions"]:
-                continue
-            g = geo["editions"][ed]
-            print("\n── %s ── sarım %.4f × %.4f in · sırt %.4f in"
-                  % (ed.upper(), g["wrapWidthIn"], g["wrapHeightIn"],
-                     g["spineWidthIn"]))
-            art_rel = os.path.join("07_ASSETS", "print",
-                                   "cover-wrap-%s.png" % ed)
-            art = prepare_artwork(root, g, sel, art_rel,
-                                  scrim_boxes=[BACK_BOX])
-            odir = os.path.join(root, "08_OUTPUT",
-                                "PAPERBACK" if ed == "paperback" else "HARDCOVER")
-            rep = compose(root, cfg, ed, g, art_rel, measured, odir)
-            rep["artworkPrep"] = art
-            out["editions"][ed] = rep
+        prev = load(prev_path)
+        out["editions"] = dict(prev.get("editions", {}))
+        out["kindle"] = prev.get("kindle")
+        if kindle_only:
+            print("\n  · --kindle-only: ciltsiz/ciltli PDF'lere DOKUNULMADI, "
+                  "önceki kayıt korundu")
+        if hardcover_only:
+            print("\n  · --hardcover-only: YALNIZCA ciltli yeniden diziliyor "
+                  "— ciltsiz VE Kindle'a DOKUNULMAYACAK, önceki kayıtları "
+                  "korunuyor")
 
-    kdir = os.path.join(root, "08_OUTPUT", "KINDLE")
-    print("\n── KINDLE ──")
-    out["kindle"] = kindle_cover(
-        root, geo["editions"]["paperback"],
-        os.path.join("07_ASSETS", "print", "cover-wrap-paperback.png"), kdir,
-        measured)
+    for ed in ("paperback", "hardcover"):
+        if (ed == "paperback" and not do_paperback) or \
+           (ed == "hardcover" and not do_hardcover):
+            continue
+        if ed not in geo["editions"]:
+            continue
+        g = geo["editions"][ed]
+        print("\n── %s ── sarım %.4f × %.4f in · sırt %.4f in"
+              % (ed.upper(), g["wrapWidthIn"], g["wrapHeightIn"],
+                 g["spineWidthIn"]))
+        art_rel = os.path.join("07_ASSETS", "print",
+                               "cover-wrap-%s.png" % ed)
+        art = prepare_artwork(root, g, sel, art_rel,
+                              scrim_boxes=[BACK_BOX[ed]])
+        odir = os.path.join(root, "08_OUTPUT",
+                            "PAPERBACK" if ed == "paperback" else "HARDCOVER")
+        rep = compose(root, cfg, ed, g, art_rel, measured, odir)
+        rep["artworkPrep"] = art
+        out["editions"][ed] = rep
+
+    if do_kindle:
+        kdir = os.path.join(root, "08_OUTPUT", "KINDLE")
+        print("\n── KINDLE ──")
+        out["kindle"] = kindle_cover(
+            root, geo["editions"]["paperback"],
+            os.path.join("07_ASSETS", "print", "cover-wrap-paperback.png"),
+            kdir, measured)
 
     dump(os.path.join(root, "06_REPORTS", "cover-build.json"), out)
     print("\n" + "=" * 74)
@@ -803,10 +972,15 @@ def run(root: str, args) -> int:
         print("\n── %s ──" % ed.upper())
         print("  sayfa sayısı        %d  (ÖLÇÜLDÜ, tahmin değil)"
               % g["pageCount"])
-        print("  sırt                %.4f in  (%.4f in/sayfa%s)"
-              % (g["spineWidthIn"], g["spinePerPageIn"],
-                 " + %.2f in tahta" % HARDCOVER_BOARD_IN
-                 if ed == "hardcover" else ""))
+        if ed == "hardcover" and g.get("founderConfirmedTemplate"):
+            print("  sırt                %.4f in  (GERÇEK KDP hesaplayıcısı "
+                  "— formül DEĞİL, bkz. confirmedTemplateSource)"
+                  % g["spineWidthIn"])
+        else:
+            print("  sırt                %.4f in  (%.4f in/sayfa%s)"
+                  % (g["spineWidthIn"], g["spinePerPageIn"],
+                     " + %.2f in tahta" % HARDCOVER_BOARD_IN
+                     if ed == "hardcover" else ""))
         print("  tam sarım           %.4f × %.4f in  (%.0f × %.0f px @300 ppi)"
               % (g["wrapWidthIn"], g["wrapHeightIn"],
                  g["artworkTarget"]["widthPx"], g["artworkTarget"]["heightPx"]))
@@ -819,8 +993,14 @@ def run(root: str, args) -> int:
               % (z["backCover"]["x0"], z["backCover"]["x1"],
                  z["spine"]["x0"], z["spine"]["x1"],
                  z["frontCover"]["x0"], z["frontCover"]["x1"]))
-        if ed == "hardcover" and not g.get("founderConfirmedTemplate"):
-            print("  ⚠ CİLTLİ ŞABLON DOĞRULANMADI — KURUCU EYLEMİ")
+        if ed == "hardcover":
+            if g.get("founderConfirmedTemplate"):
+                print("  ✓ CİLTLİ ŞABLON KURUCU TARAFINDAN DOĞRULANDI — %s"
+                      % g.get("confirmedTemplateSource", ""))
+                if g.get("$stalePageCountWarning"):
+                    print("  ⚠ %s" % g["$stalePageCountWarning"])
+            else:
+                print("  ⚠ CİLTLİ ŞABLON DOĞRULANMADI — KURUCU EYLEMİ")
 
     print("\n── HAM KAPAK SANATI ──")
     print("  dizin: %s" % assets["dir"])
@@ -883,6 +1063,9 @@ def main() -> int:
     ap.add_argument("--kindle-only", action="store_true",
                     help="yalnızca Kindle kapağını yeniden üret; "
                          "ciltsiz/ciltli PDF'lere DOKUNMAZ")
+    ap.add_argument("--hardcover-only", action="store_true",
+                    help="yalnızca ciltli kapağı yeniden üret; ciltsiz "
+                         "VE Kindle'a DOKUNMAZ")
     ap.add_argument("--artwork", default=None)
     args = ap.parse_args()
     root = os.path.abspath(args.root)

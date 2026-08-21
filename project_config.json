@@ -388,6 +388,37 @@
       "h": 11.0,
       "trimClass": "large"
     },
+    "hardcoverTemplateConfirmed": true,
+    "hardcoverConfirmedTemplate": {
+      "$comment": [
+        "KURUCU KDP Print Cover Calculator'ı GERÇEKTEN çalıştırdı",
+        "(kdp.amazon.com/cover-calculator · Hardcover · B&W · White paper ·",
+        "8.25 x 11 in · 160 sayfa) ve ekran görüntüsünü teslim etti — 21",
+        "Ağustos 2026. Bu blok o ARAÇTAN okunan DEĞERLERDİR, hesaplanmadı.",
+        "PHASE_6'nın hipotez formülü (0,0025 in/sayfa + 0,06 in tahta payı)",
+        "artık YALNIZCA `founderConfirmedTemplate` false olduğunda kullanılan",
+        "bir yedektir — bkz. 04_BUILD/covers.py § hardcover_confirmed_geometry.",
+        "",
+        "Sayfa sayısı DEĞİŞİRSE bu blok BAYATLAR: kurucu KDP hesaplayıcısını",
+        "yeni sayfa sayısıyla YENİDEN çalıştırıp burayı güncellemelidir —",
+        "covers.py bunu otomatik yeniden türetemez, KDP'nin kendi aracı."
+      ],
+      "sourcePageCount": 160,
+      "sourceTrimIn": {"w": 8.25, "h": 11.0},
+      "fullCoverWidthIn": 18.624,
+      "fullCoverHeightIn": 12.417,
+      "frontCoverWidthIn": 8.447,
+      "frontCoverHeightIn": 11.236,
+      "spineWidthIn": 0.549,
+      "wrapIn": 0.591,
+      "hingeIn": 0.394,
+      "marginIn": 0.125,
+      "spineMarginIn": 0.062,
+      "spineSafeAreaWidthIn": 0.424,
+      "spineSafeAreaHeightIn": 10.986,
+      "barcodeMarginHorizontalIn": 0.25,
+      "barcodeMarginVerticalIn": 0.375
+    },
     "ink": "black",
     "paper": "white",
     "$comment": [
