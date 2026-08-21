@@ -389,14 +389,16 @@ anyway: each game is one uninterrupted entry.
 08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg
 ```
 - **1600 × 2560 px** (Amazon's recommended 1:1.6), JPEG
-- SHA-256 `5f68c2b4e16b93299ecbbb22fc799720414243e414457206737709032a546b33`
+- SHA-256 `9b1f14c4069092e0610c1e162962361491a756a43c3a28576a98348253cc880d`
 - derived from the **front panel** of the print artwork, not from the wrap —
   an ebook cover must not show a spine or a back panel
+- title, subtitle and author are set as **vector outline type** (LiberationSerif TTF, not AI-generated), at the same measured, quiet position used on the print front cover, scaled to this file's own pixel density
 
-⚠ This file carries **no typography**. Kindle covers are set separately, at
-their own proportions; the print title block does not scale to 1:1.6 without
-being rebuilt. **Founder action:** either accept the artwork-only cover or ask
-for a typeset Kindle cover as a follow-up.
+⚠ Amazon evaluates Kindle covers by **pixel dimensions**, not DPI — there is
+no physical print size for an eBook. The file's 300×300 dpi tag is a
+compatibility label only; the real content density is ~228 px/in. 1600 × 2560
+comfortably clears Amazon's stated minimum (1000 × 625) and matches its
+recommended 1.6:1 ratio.
 
 ### 16 · Previewer
 **FOUNDER ACTION** Use the Kindle Previewer. Check in particular: the diagrams at the

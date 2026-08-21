@@ -534,13 +534,128 @@ def raw_assets(root: str) -> dict:
     return {"dir": os.path.relpath(d, root), "files": files}
 
 
-def kindle_cover(root, geo_ed, art_rel, out_dir, verbose=True):
+def _pil_tracked(draw, text, cx, y, font, track_px, fill):
+    """Harf aralıklı, ORTALANMIŞ tek satır — `_tracked()`'ın PIL/rasterlenmiş
+    karşılığı. Her karakter kendi ilerleme genişliğince ilerler, aralarına
+    track_px eklenir. Anchor 'ls' → (x, y) sol-taban (baseline)."""
+    widths = [font.getlength(ch) for ch in text]
+    total = sum(widths) + track_px * (len(text) - 1)
+    x = cx - total / 2.0
+    for ch, w in zip(text, widths):
+        draw.text((x, y), ch, font=font, fill=fill, anchor="ls")
+        x += w + track_px
+    return total
+
+
+def _pil_fit_tracked(text, font_path, start_px, max_w_px, track_ratio,
+                     min_px=None):
+    """Metni verilen piksel genişliğine SIĞDIRAN punto/harf aralığını
+    bulur — `fit_tracked()`'ın (§ sırt) PIL karşılığı. Punto TAHMİN
+    edilmez, ölçülen genişlikten TÜRETİLİR."""
+    from PIL import ImageFont
+    min_px = min_px if min_px is not None else max(8.0, start_px * 0.55)
+    size = start_px
+    while size >= min_px:
+        font = ImageFont.truetype(font_path, max(1, round(size)))
+        track = size * track_ratio
+        w = sum(font.getlength(ch) for ch in text) + track * (len(text) - 1)
+        if w <= max_w_px:
+            return font, track, w
+        size -= 1.0
+    font = ImageFont.truetype(font_path, max(1, round(min_px)))
+    track = min_px * track_ratio
+    w = sum(font.getlength(ch) for ch in text) + track * (len(text) - 1)
+    return font, track, w
+
+
+def kindle_typography(front, geo_ed, measured):
+    """Kindle ön kapağına VEKTÖR ANAHATTAN (TrueType) tipografi basar.
+
+    Beyaz kutu YOK, AI-üretilmiş metin YOK. Yerleşim İCAT EDİLMEDİ: sarımın
+    ölçülen sakin bantlarıyla AYNI dikey konumlar kullanılır
+    (FINAL_COVER_SELECTION.md § 6 — ön başlık y 9,35–10,85 in · ön yazar
+    y 0,45–1,55 in, ikisi de sd < 14 yani "gerek yok" düzeyinde sakin);
+    yalnızca bu görselin KENDİ px/in oranına ÖLÇEKLENİR. Kindle kırpması
+    (`kindle_cover`) sarımın ön panel sütununun ORTALANMIŞ bir alt kümesi
+    olduğundan, yatayda görsel merkezine ortalamak aynı sakin bandı korur.
+    """
+    from PIL import ImageDraw
+    sys.path.insert(0, HERE)
+    import cover_text as CT
+
+    draw = ImageDraw.Draw(front)
+    W, H = front.size
+    scale = H / geo_ed["wrapHeightIn"]           # px / gerçek inç (bu görsel)
+    cx = W / 2.0
+    fill = tuple(min(255, round(c * 255)) for c in INK)
+    margin_px = COVER_SAFE_IN * scale
+    max_w = W - 2 * margin_px
+    reg = os.path.join(FONT_DIR, FONTS["CoverSerif"])
+    bold = os.path.join(FONT_DIR, FONTS["CoverSerif-B"])
+    ital = os.path.join(FONT_DIR, FONTS["CoverSerif-I"])
+    if not (os.path.exists(reg) and os.path.exists(bold) and os.path.exists(ital)):
+        raise RuntimeError("kapak fontu yok: %s" % FONT_DIR)
+    log = []
+
+    def y_of(y_in_from_bottom):
+        return H - y_in_from_bottom * scale      # PDF y (alttan) → PIL y (üstten)
+
+    # ── üst satır — "THE GREAT BOOK OF" (wrap: y 10.60 in) ──
+    y = y_of(10.60)
+    f, tr, w = _pil_fit_tracked(CT.FRONT_TITLE_TOP, reg, 19.5 * scale / IN,
+                                max_w, 5.4 / 19.5)
+    _pil_tracked(draw, CT.FRONT_TITLE_TOP, cx, y, f, tr, fill)
+    log.append({"kind": "frontTitle", "text": CT.FRONT_TITLE_TOP,
+               "px": round(f.size, 1)})
+
+    # ── ana başlık — "WORLD GAMES" (wrap: 0.60 in aşağı) ──
+    y = y_of(10.60 - 0.60)
+    f, tr, w = _pil_fit_tracked(CT.FRONT_TITLE_MAIN, bold, 60 * scale / IN,
+                                max_w, 2.0 / 60)
+    _pil_tracked(draw, CT.FRONT_TITLE_MAIN, cx, y, f, tr, fill)
+    log.append({"kind": "frontTitle", "text": CT.FRONT_TITLE_MAIN,
+               "px": round(f.size, 1)})
+
+    # ── ayırıcı çizgi ──
+    y = y_of(10.60 - 0.60 - 0.24)
+    half = 1.85 * scale
+    draw.line([(cx - half, y), (cx + half, y)], fill=fill,
+             width=max(1, round(1.0 * scale / IN)))
+
+    # ── alt başlıklar — measured'dan basılır, SAYI elle yazılmaz ──
+    y = y_of(10.60 - 0.60 - 0.24 - 0.215)
+    for i, txt in enumerate((CT.front_subtitle(measured),
+                             CT.front_subtitle2(measured))):
+        f, tr, w = _pil_fit_tracked(txt, ital, 12 * scale / IN, max_w, 0.0)
+        draw.text((cx, y), txt, font=f, fill=fill, anchor="ms")
+        log.append({"kind": "frontTitle", "text": txt, "px": round(f.size, 1)})
+        y = y_of(10.60 - 0.60 - 0.24 - 0.215 - 0.185 * (i + 1))
+
+    # ── yazar (wrap: y 0.86 in) ──
+    y = y_of(0.86)
+    f, tr, w = _pil_fit_tracked(CT.AUTHOR, bold, 23 * scale / IN, max_w,
+                                4.4 / 23)
+    _pil_tracked(draw, CT.AUTHOR, cx, y, f, tr, fill)
+    log.append({"kind": "frontAuthor", "text": CT.AUTHOR,
+               "px": round(f.size, 1)})
+
+    return front, log
+
+
+def kindle_cover(root, geo_ed, art_rel, out_dir, measured, verbose=True):
     """Kindle kapağı — ÖN paneldan türetilir, sarımdan DEĞİL.
 
     Amazon 1:1,6 en-boy ister ve 2560 × 1600 px önerir. Ön panel 1:1,304'tür,
     yani yükseklik yetmez: sarımın ön panelinden 1:1,6 oranında bir dikey
     dilim ORTADAN kırpılır. Tam sarımı ebook kapağı diye yüklemek, okura
     sırtı ve arka kapağı göstermek demektir.
+
+    Tipografi bu kırpmanın ÜZERİNE, sarımla AYNI vektör-anahat yerleşimiyle
+    basılır — bkz. `kindle_typography()`. DPI etiketi basılmaz iddiası
+    taşımaz: bu bir EKRAN varlığıdır, KDP Kindle kapaklarını piksel
+    boyutuyla değerlendirir (bkz. 300×300 dpi etiketi yalnızca uyumluluk
+    içindir, gerçek px/in ~227,6 — ekranda anlamsızdır ve final raporda
+    açıkça yazılır).
     """
     from PIL import Image
     im = Image.open(os.path.join(root, art_rel)).convert("RGB")
@@ -561,17 +676,22 @@ def kindle_cover(root, geo_ed, art_rel, out_dir, verbose=True):
         y = (front.height - nh) // 2
         front = front.crop((0, y, front.width, y + nh))
     front = front.resize((1600, 2560), Image.LANCZOS)
+    front, typo_log = kindle_typography(front, geo_ed, measured)
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "GreatBookOfWorldGames_cover_kindle.jpg")
-    front.save(path, "JPEG", quality=92, dpi=(300, 300), optimize=True)
+    front.save(path, "JPEG", quality=95, dpi=(300, 300), optimize=True)
     if verbose:
-        print("     kindle kapağı → 1600 × 2560 px · %.1f KB"
-              % (os.path.getsize(path) / 1024.0))
+        print("     kindle kapağı → 1600 × 2560 px · vektör tipografi (%d öge) · %.1f KB"
+              % (len(typo_log), os.path.getsize(path) / 1024.0))
     return {"file": os.path.relpath(path, root), "widthPx": 1600,
             "heightPx": 2560, "aspect": round(1600 / 2560.0, 4),
             "sha256": sha256(path), "bytes": os.path.getsize(path),
-            "note": "ÖN panelden türetildi; tam sarım DEĞİL. Bu dosyada "
-                    "tipografi YOKTUR: Kindle kapağı ayrıca dizilir."}
+            "typography": typo_log,
+            "note": "ÖN panelden türetildi; tam sarım DEĞİL. Tipografi "
+                    "VEKTÖR ANAHATTAN (LiberationSerif TTF, AI-üretilmiş "
+                    "METİN DEĞİL) basıldı; konum sarımın ölçülen sakin "
+                    "bantlarıyla AYNI, yalnızca bu görselin px/in oranına "
+                    "ölçeklendi."}
 
 
 def build_covers(root, cfg, args) -> int:
@@ -598,28 +718,45 @@ def build_covers(root, cfg, args) -> int:
                         "konmadı. Yerleşim ölçülen sakin bantlardadır."],
            "generatedAtPhase": "phase6",
            "selectedArtwork": sel, "editions": {}}
-    for ed in ("paperback", "hardcover"):
-        if ed not in geo["editions"]:
-            continue
-        g = geo["editions"][ed]
-        print("\n── %s ── sarım %.4f × %.4f in · sırt %.4f in"
-              % (ed.upper(), g["wrapWidthIn"], g["wrapHeightIn"],
-                 g["spineWidthIn"]))
-        art_rel = os.path.join("07_ASSETS", "print",
-                               "cover-wrap-%s.png" % ed)
-        art = prepare_artwork(root, g, sel, art_rel,
-                              scrim_boxes=[BACK_BOX])
-        odir = os.path.join(root, "08_OUTPUT",
-                            "PAPERBACK" if ed == "paperback" else "HARDCOVER")
-        rep = compose(root, cfg, ed, g, art_rel, measured, odir)
-        rep["artworkPrep"] = art
-        out["editions"][ed] = rep
+
+    kindle_only = getattr(args, "kindle_only", False)
+    if kindle_only:
+        # Yalnızca Kindle yeniden dizilecekse ciltsiz/ciltli PDF'lere
+        # DOKUNULMAZ — SHA-256'ları KDP_UPLOAD_HANDBOOK.md içinde basılı ve
+        # gereksiz yeniden üretim yalnızca zaman damgasını değiştirip o
+        # kılavuzu bayatlatır. Önceki kaydı taşı.
+        prev_path = os.path.join(root, "06_REPORTS", "cover-build.json")
+        if not os.path.exists(prev_path):
+            print("  ⛔ --kindle-only önce en az bir tam --build ister "
+                  "(ciltsiz/ciltli kaydı yok)")
+            return 1
+        out["editions"] = load(prev_path).get("editions", {})
+        print("\n  · --kindle-only: ciltsiz/ciltli PDF'lere DOKUNULMADI, "
+              "önceki kayıt korundu")
+    else:
+        for ed in ("paperback", "hardcover"):
+            if ed not in geo["editions"]:
+                continue
+            g = geo["editions"][ed]
+            print("\n── %s ── sarım %.4f × %.4f in · sırt %.4f in"
+                  % (ed.upper(), g["wrapWidthIn"], g["wrapHeightIn"],
+                     g["spineWidthIn"]))
+            art_rel = os.path.join("07_ASSETS", "print",
+                                   "cover-wrap-%s.png" % ed)
+            art = prepare_artwork(root, g, sel, art_rel,
+                                  scrim_boxes=[BACK_BOX])
+            odir = os.path.join(root, "08_OUTPUT",
+                                "PAPERBACK" if ed == "paperback" else "HARDCOVER")
+            rep = compose(root, cfg, ed, g, art_rel, measured, odir)
+            rep["artworkPrep"] = art
+            out["editions"][ed] = rep
 
     kdir = os.path.join(root, "08_OUTPUT", "KINDLE")
     print("\n── KINDLE ──")
     out["kindle"] = kindle_cover(
         root, geo["editions"]["paperback"],
-        os.path.join("07_ASSETS", "print", "cover-wrap-paperback.png"), kdir)
+        os.path.join("07_ASSETS", "print", "cover-wrap-paperback.png"), kdir,
+        measured)
 
     dump(os.path.join(root, "06_REPORTS", "cover-build.json"), out)
     print("\n" + "=" * 74)
@@ -743,6 +880,9 @@ def main() -> int:
     ap.add_argument("--root", default=DEFAULT_ROOT)
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--build", action="store_true")
+    ap.add_argument("--kindle-only", action="store_true",
+                    help="yalnızca Kindle kapağını yeniden üret; "
+                         "ciltsiz/ciltli PDF'lere DOKUNMAZ")
     ap.add_argument("--artwork", default=None)
     args = ap.parse_args()
     root = os.path.abspath(args.root)

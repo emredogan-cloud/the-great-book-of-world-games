@@ -1,7 +1,12 @@
 # The Great Book of World Games
 
-**100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories
-from 45 Cultures, Ready to Play Tonight**
+**56 Games from 4,600 Years of Human Play — Rules, Boards and Stories
+from 39 Cultures, Ready to Play Tonight**
+
+> Alt başlık `02_MANUSCRIPT/frontmatter.json § measured` içinden basılır ve
+> **ölçülen** değerdir. Kapsam modeli hâlâ 100 oyun/45 kültür hipotezini
+> taşır ([`DECISIONS.md § A8`](DECISIONS.md)); bu, kapsamın **kilitlenmiş
+> hedefi**dir, kitabın bugünkü içeriği değil.
 
 ---
 
@@ -13,9 +18,11 @@ Oyun rafı ikiye ayrılmış: bir yanda akademik oyun tarihi — otoriter,
 güzel, **oynanamaz**. Öbür yanda 9,99 $'lık aile oyunu listeleri —
 ucuz, hızlı, **içeriksiz**. Arada hiçbir şey yok.
 
-Bu kitap o boşluğu doldurur: 45 kültürden 100 oyunu **bölgeye göre değil
-mekaniğe göre** dizer, her birini kaynak künyesine bağlar ve
-**gerçekten oynanabilir** hâlde verir.
+Bu kitap o boşluğu doldurur: kilitli kapsam 45 kültürden 100 oyun
+hedefler; bugün **39 kültürden 56 oyun** kaynağa bağlanıp yazılmış
+durumda ([`DECISIONS.md § A8`](DECISIONS.md)). Oyunlar **bölgeye göre
+değil mekaniğe göre** dizilir, her biri kaynak künyesine bağlanır ve
+**gerçekten oynanabilir** hâlde verilir.
 
 Depoda duran şey: **araştırma künyeleri, oyun şeması, doğrulama kapıları,
 CI/CD, oynanabilirlik test kayıtları, dizgi ve KDP üretim hattı, ölçüm
@@ -33,13 +40,13 @@ dosyaların **içeriğine** bakar ve kural metni görürse kırmızı yanar.
 
 | | |
 |---|---|
-| Faz | **0 · Bootstrap** |
-| Kapı (`.gate`) | `phase0` |
-| Aday oyun | 0 / ≥140 |
+| Faz | **6 · TAMAMLANDI** (teknik iş) |
+| Kapı (`.gate`) | `phase1` — yükseltilmedi ([`DECISIONS.md § A8`](DECISIONS.md)) |
+| Aday oyun | 154 / ≥140 |
 | Kilitli oyun | 0 / 100 |
-| Yazılmış oyun | 0 / 100 |
-| Görsel | 0 / ~130 |
-| **Sonraki adım** | **Faz 1 — kurucu onayı bekliyor** |
+| Yazılmış oyun | **56** / 100 |
+| Kapak · A+ | ciltsiz · ciltli · Kindle üretildi · A+ 5/6 modül sanatlı |
+| **Sonraki adım** | **KURUCU: AI beyanı · dış oynanabilirlik testi** (bloklayıcı) — bkz. [`06_REPORTS/FINAL_RELEASE_REPORT.md`](06_REPORTS/FINAL_RELEASE_REPORT.md) |
 
 Ölçülmüş güncel durum: [`BOOK_STATS.md`](BOOK_STATS.md) ·
 [`ROADMAP_PROGRESS.md`](ROADMAP_PROGRESS.md)

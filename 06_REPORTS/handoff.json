@@ -134,9 +134,36 @@
     "widthPx": 1600,
     "heightPx": 2560,
     "aspect": 0.625,
-    "sha256": "5f68c2b4e16b93299ecbbb22fc799720414243e414457206737709032a546b33",
-    "bytes": 730655,
-    "note": "ÖN panelden türetildi; tam sarım DEĞİL. Bu dosyada tipografi YOKTUR: Kindle kapağı ayrıca dizilir."
+    "sha256": "9b1f14c4069092e0610c1e162962361491a756a43c3a28576a98348253cc880d",
+    "bytes": 1031472,
+    "typography": [
+     {
+      "kind": "frontTitle",
+      "text": "THE GREAT BOOK OF",
+      "px": 62
+     },
+     {
+      "kind": "frontTitle",
+      "text": "WORLD GAMES",
+      "px": 182
+     },
+     {
+      "kind": "frontTitle",
+      "text": "56 games from 4,600 years of human play",
+      "px": 38
+     },
+     {
+      "kind": "frontTitle",
+      "text": "Rules, boards and stories from 39 cultures",
+      "px": 38
+     },
+     {
+      "kind": "frontAuthor",
+      "text": "EMRE DOĞAN",
+      "px": 73
+     }
+    ],
+    "note": "ÖN panelden türetildi; tam sarım DEĞİL. Tipografi VEKTÖR ANAHATTAN (LiberationSerif TTF, AI-üretilmiş METİN DEĞİL) basıldı; konum sarımın ölçülen sakin bantlarıyla AYNI, yalnızca bu görselin px/in oranına ölçeklendi."
    },
    "epub": {
     "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
@@ -173,7 +200,7 @@
  "handbook": "08_OUTPUT/KDP_UPLOAD_HANDBOOK.md",
  "previewerChecklist": "08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md",
  "aiDisclosureNotes": "08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md",
- "handbookBytes": 23635,
+ "handbookBytes": 23899,
  "previewerBytes": 5814,
  "blockingFounderActions": [
   {
