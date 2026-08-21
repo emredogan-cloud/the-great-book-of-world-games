@@ -39,10 +39,8 @@ published.** No proof copy has been ordered.
   KDP assigns a free ISBN. Once it does, write it here and rebuild: the copyright page will print the real number instead of PENDING. No ISBN has been invented anywhere in this package.
 - · **ISBN-hardcover** — `founder.isbn.hardcover`
   KDP assigns a free ISBN. Once it does, write it here and rebuild: the copyright page will print the real number instead of PENDING. No ISBN has been invented anywhere in this package.
+- · **APLUS-ART** — 1 of 6 A+ module(s) missing artwork: APLUS-05. Copy is written and waiting; the project is uploadable today with the other 5 module(s). Prompts are in `07_ASSETS/IMAGE_PROMPT_LIBRARY.html`.
 
-- ⛔ **COVER-ART** — no cover artwork exists. Prompts are ready in
-  `07_ASSETS/IMAGE_PROMPT_LIBRARY.html`.
-- ⛔ **APLUS-ART** — no A+ artwork exists. Prompts are in the same file.
 - ⛔ **PLAYTEST** — the project's own playability standard requires at least
   one external human playtest per game before a game may be called locked.
   Zero sessions have been recorded. The book does not claim to have been

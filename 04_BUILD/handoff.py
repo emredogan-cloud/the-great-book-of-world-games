@@ -334,10 +334,27 @@ published.** No proof copy has been ordered.
     for a in actions:
         mark = "⛔" if a["blocking"] else "·"
         parts.append(f"- {mark} **{a['id']}** — `{a['field']}`\n  {a['note']}\n")
+    # ⚠ COVER-ART / APLUS-ART BURADA SABİT METİN OLARAK DURUYORDU — sanat
+    # gelmeden ÖNCE yazılmıştı ve sanat geldikten sonra hiç güncellenmedi.
+    # "Status at a glance" tablosu (yukarıda) kapağı ✅ gösterirken bu blok
+    # hâlâ "no cover artwork exists" diyordu: aynı belge kendi kendiyle
+    # çelişiyordu. `run()`'ın `handoff.json` için zaten hesapladığı KOŞULLU
+    # mantıkla (aşağıda) aynı `pkgs` değişkeninden okunur; sabit metin değil.
+    if not pkgs.get("paperback", {}).get("cover"):
+        parts.append(
+            "- ⛔ **COVER-ART** — no cover artwork exists. Prompts are ready in\n"
+            "  `07_ASSETS/IMAGE_PROMPT_LIBRARY.html`.\n")
+    missing_aplus = pkgs.get("aplus", {}).get("withoutArt") or []
+    if missing_aplus:
+        ready_n = len(pkgs.get("aplus", {}).get("ready") or [])
+        total_n = pkgs.get("aplus", {}).get("modules", 6)
+        parts.append(
+            "- · **APLUS-ART** — %d of %d A+ module(s) missing artwork: %s. "
+            "Copy is written and waiting; the project is uploadable today "
+            "with the other %d module(s). Prompts are in "
+            "`07_ASSETS/IMAGE_PROMPT_LIBRARY.html`.\n"
+            % (len(missing_aplus), total_n, ", ".join(missing_aplus), ready_n))
     parts.append("""
-- ⛔ **COVER-ART** — no cover artwork exists. Prompts are ready in
-  `07_ASSETS/IMAGE_PROMPT_LIBRARY.html`.
-- ⛔ **APLUS-ART** — no A+ artwork exists. Prompts are in the same file.
 - ⛔ **PLAYTEST** — the project's own playability standard requires at least
   one external human playtest per game before a game may be called locked.
   Zero sessions have been recorded. The book does not claim to have been
