@@ -1,9 +1,9 @@
 {
  "edition": "largeprint",
  "file": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_interior_largeprint.pdf",
- "pageCount": 232,
- "sha256": "e6b938d14375c238ed00677904bf194bb266c162803dfd9543b04aee7d8d3685",
- "bytes": 591191,
+ "pageCount": 234,
+ "sha256": "e8dd4096705e88becf4ab94fea2651df1a60037183151a6a139a66572e32dfc8",
+ "bytes": 592888,
  "trim": {
   "widthIn": 8.5,
   "heightIn": 11.0
@@ -24,13 +24,13 @@
  "spreadsStartingVerso": 29,
  "spreadsTotal": 56,
  "fourPageEntries": [],
- "blankPages": 9,
+ "blankPages": 10,
  "pageKinds": {
   "front": 13,
-  "blank": 9,
+  "blank": 10,
   "opener": 7,
   "game": 178,
-  "back": 25
+  "back": 26
  },
  "frontMatterPages": 15,
  "bodyEndPage": 204,
@@ -96,7 +96,7 @@
  "gutterIterations": [
   [
    200,
-   232
+   234
   ]
  ],
  "tocFitted": true,

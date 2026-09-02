@@ -48,7 +48,7 @@
       "founderConfirmed": false,
       "$comment": "KDP panelindeki AI beyanı SEÇİMİNİ kurucu yapar. Ajan hukuki bildirim veremez."
     },
-    "authorBio": "Emre is a puzzle designer, mythologist, and game archivist dedicated to preserving ancient cultures, codes, and stories for the next generation.",
+    "authorBio": "Emre Doğan writes about the stories that cultures tell themselves in order to keep going.\n\nTrained as a software engineer, he came to mythology the way most people do — through a single story that would not leave him alone — and stayed for the pattern underneath. CODEX MYTHOLOGICA, his first book, gathers seventy-six myths from nineteen traditions and retells each one in full.\n\nHe reads in several languages, badly, and is grateful daily to the translators and ethnographers whose patient work made a book like this possible for someone who is neither.\n\nHe lives in Turkey.",
     "authorBio$comment": [
       "⭑ A6 KAPANDI — kurucu · 20 Ağustos 2026 (Faz 6 · § 9).",
       "",
@@ -63,7 +63,8 @@
       "çünkü onaylı sürümlerin EN YENİSİ ve A6'yı kapatan tek metin odur.",
       "",
       "Künye: 06_REPORTS/AUTHOR_BIO_PROVENANCE.md"
-    ]
+    ],
+    "authorBio$why": "Supplied verbatim by the Founder on 2026-09-02 and canonical from that date. It replaced an invented one-liner ('puzzle designer, mythologist, and game archivist') that was carried by three projects and described credentials nobody had claimed. Do not rewrite it, do not add credentials, and do not shorten it except where a provider field has a hard character limit — record any shortened variant in docs/execution/phase-3/ rather than improvising at the point of use."
   },
   "audience": {
     "$comment": "Alıcı çoğu zaman okurun kendisidir — World Myths'in aksine tek kişiyi ikna etmek yeterli.",
@@ -822,6 +823,30 @@
       "in today's world",
       "dive into",
       "unlock the secrets"
+    ]
+  },
+  "companion": {
+    "$why": "The single route from an Amazon buyer back to Valice Press. Amazon does not share a reader's address, so the inside of the book they already bought is the only place we may speak to them again. Printed in the back matter from 2026-09-02; every edition sold before that date ends without it. KDP forbids a hyperlink whose purpose is collecting customer information — this one collects nothing, and the house rule is stricter still: the material is free and the email is optional forever.",
+    "url": "valicepress.com/companion/world-games",
+    "heading": "Boards, cards and score sheets — free to print",
+    "standfirst": "Everything in this book that is better on loose paper than bound into a spine is waiting for you online, at full size and free to print as often as you like.",
+    "items": [
+      {
+        "name": "Thirty-one board templates",
+        "detail": "at full playing size, one per sheet, heavier lines than the page can carry."
+      },
+      {
+        "name": "Culture cards",
+        "detail": "one per tradition — where the game is from, how old it is, and what is known."
+      },
+      {
+        "name": "Score sheets",
+        "detail": "for the games that need one, ruled for the number of players each takes."
+      },
+      {
+        "name": "The index of games",
+        "detail": "all fifty-six on two pages, by family, region and number of players."
+      }
     ]
   }
 }

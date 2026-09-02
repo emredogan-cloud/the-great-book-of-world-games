@@ -796,7 +796,8 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
     # ⑦ ARKA MADDE ---------------------------------------------------------
     back_start = lay.n + 1
     _back_matter(lay, bm, sty, pagemap,
-                 {g["gameId"]: g["title"] for g in book["games"]})
+                 {g["gameId"]: g["title"] for g in book["games"]},
+                 cfg=cfg)
 
     # ⑧ İÇİNDEKİLER'İ GERÇEK SAYFALARLA DOLDUR ------------------------------
     # İçindekiler ÖNCE yer tutar, SONRA gerçek numaralarla doldurulur:
@@ -844,7 +845,7 @@ def _refill(lay, start_page, npages, flowables, sty):
     return len(queue) == 0
 
 
-def _back_matter(lay, bm, sty, pagemap, titles=None):
+def _back_matter(lay, bm, sty, pagemap, titles=None, cfg=None):
     from reportlab.platypus import Paragraph
     P = lambda t, s: Paragraph(t, sty[s])  # noqa: E731
     lay.back_pages = {}
@@ -950,6 +951,41 @@ def _back_matter(lay, bm, sty, pagemap, titles=None):
             "Origin stories that are widely repeated and are not supported by "
             "anything. They are collected here because a reader who has been "
             "told one of them deserves to know where it came from.")
+
+    # ⑦ eşlikçi — KİTABIN SON SÖZÜ, ve okurun bize dönebileceği tek kapı.
+    #
+    # Amazon okurun adresini vermez ve hiç vermeyecek. Bir Valice okuruna
+    # ikinci kez seslenebileceğimiz tek yer, zaten satın aldığı kitabın
+    # içidir. Bu sayfa 2026-09-02'de eklendi: kitabın basılı sürümleri
+    # eşlikçiden önce dizilmişti, dolayısıyla bugüne kadar hiçbir okur onun
+    # var olduğunu öğrenemedi.
+    #
+    # KDP bağlantı kuralı: bir bağlantının amacı müşteri bilgisi toplamak
+    # olamaz. Burada e-posta yok, form yok, kayıt yok — yalnızca ücretsiz
+    # ve gerçek bir materyal. Ev kuralı da aynı yönde: önce değer.
+    comp = (cfg or {}).get("companion") or {}
+    url = comp.get("url")
+    if url:
+        items = comp.get("items") or []
+        c = [P(esc(comp.get("standfirst", "")), "body")] if comp.get("standfirst") else []
+        for it in items:
+            c.append(P("<b>%s</b> &nbsp; %s" % (esc(it["name"]), esc(it.get("detail", ""))),
+                       "body"))
+        c.append(P("<b>%s</b>" % esc(url), "h2"))
+        c.append(P(esc("Free, and free of conditions: nothing to sign up for, no email "
+                       "asked, no account needed. Print what you want and play."), "body"))
+
+        # BİLEREK `section()` DEĞİL. `section()` önce `pad_to_recto()` çağırır
+        # ve bu, kitabı 160'tan 162 sayfaya çıkarır — sırt kalınlığı değişir,
+        # kapak geçersizleşir, yayımlanmış bir kitap için tek dosyalık bir
+        # güncelleme iki dosyalık bir revizyona dönüşür. Kitap zaten boş bir
+        # son sayfayla bitiyor; bu bölüm oraya akar ve sayfa sayısı sabit
+        # kalır. Sabit kalıp kalmadığını `05_TESTS` değil, üretim çıktısının
+        # kendisi söyler: build 160 yazmıyorsa bu değişiklik geri alınmalıdır.
+        lay.back_pages["companion"] = lay.n + 1
+        heading = comp.get("heading", "The companion")
+        lay.flow([P("<b>%s</b>" % esc(heading), "sect")] + c, "back",
+                 run_head=heading)
 
 
 # ── ÇİZİM ────────────────────────────────────────────────────────────────

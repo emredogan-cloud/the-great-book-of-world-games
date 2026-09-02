@@ -2,8 +2,8 @@
  "edition": "paperback",
  "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
  "pageCount": 160,
- "sha256": "4090f93731f2607014dec031199fcaa9500a5abf6a8af4e45cbb1d6182ecf068",
- "bytes": 518841,
+ "sha256": "486dd753956aec3a1fcfe739ecb964d0e89cfd895c8fdb0fc9f0210d7dd961dd",
+ "bytes": 519699,
  "trim": {
   "widthIn": 8.5,
   "heightIn": 11.0
@@ -24,13 +24,13 @@
  "spreadsStartingVerso": 56,
  "spreadsTotal": 56,
  "fourPageEntries": [],
- "blankPages": 18,
+ "blankPages": 17,
  "pageKinds": {
   "front": 9,
-  "blank": 18,
+  "blank": 17,
   "opener": 7,
   "game": 112,
-  "back": 14
+  "back": 15
  },
  "frontMatterPages": 13,
  "bodyEndPage": 139,
