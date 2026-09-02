@@ -154,6 +154,79 @@
    "confirmedTemplateSource": "KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 160 sayfa · 2026-08-21",
    "interiorSha256": "996a5c13b407cd15834a472a7334c5e15daa7988aacc1f4ad462923a3864d1d8",
    "interiorFile": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf"
+  },
+  "largeprint": {
+   "edition": "largeprint",
+   "pageCount": 232,
+   "trimWidthIn": 8.5,
+   "trimHeightIn": 11.0,
+   "bleedIn": 0.125,
+   "safeIn": 0.25,
+   "spineWidthIn": 0.5225,
+   "spinePerPageIn": 0.002252,
+   "spineTextAllowed": true,
+   "spineTextMinPages": 79,
+   "wrapWidthIn": 17.7725,
+   "wrapHeightIn": 11.25,
+   "wrapWidthPt": 1279.62,
+   "wrapHeightPt": 810.0,
+   "zones": {
+    "backCover": {
+     "x0": 0.125,
+     "x1": 8.625
+    },
+    "spine": {
+     "x0": 8.625,
+     "x1": 9.1475
+    },
+    "frontCover": {
+     "x0": 9.1475,
+     "x1": 17.6475
+    }
+   },
+   "safeZones": {
+    "backCopy": {
+     "x0": 0.375,
+     "x1": 8.375,
+     "y0": 0.375,
+     "y1": 10.875
+    },
+    "spineText": {
+     "x0": 8.6875,
+     "x1": 9.085,
+     "y0": 0.625,
+     "y1": 10.625
+    },
+    "frontTitle": {
+     "x0": 9.3975,
+     "x1": 17.3975,
+     "y0": 6.725,
+     "y1": 10.875
+    },
+    "frontAuthor": {
+     "x0": 9.3975,
+     "x1": 17.3975,
+     "y0": 0.375,
+     "y1": 2.105
+    },
+    "barcode": {
+     "x0": 6.375,
+     "x1": 8.375,
+     "y0": 0.375,
+     "y1": 1.575,
+     "$note": "KDP barkodu KENDİSİ basar. Bu alan BOŞ ve sade bırakılır; sahte barkod çizilmez."
+    }
+   },
+   "artworkTarget": {
+    "$note": "Kurucu sanatının HAM hedefi. 300 ppi baskı standardıdır; daha yüksek çözünürlük zarar vermez, düşüğü POD'da görünür.",
+    "ppi": 300,
+    "widthPx": 5332,
+    "heightPx": 3375,
+    "frontOnlyWidthPx": 2588,
+    "frontOnlyHeightPx": 3375
+   },
+   "interiorSha256": "e6b938d14375c238ed00677904bf194bb266c162803dfd9543b04aee7d8d3685",
+   "interiorFile": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_interior_largeprint.pdf"
   }
  },
  "rawArtwork": {

@@ -568,6 +568,303 @@
     "sha256": "7a4cad66b0d6f5c2202176a732cb19f71f4206491c3bba55033b97dfb4de708f",
     "bytes": 14639895
    }
+  },
+  "largeprint": {
+   "edition": "largeprint",
+   "typeLog": [
+    {
+     "kind": "frontTitle",
+     "text": "THE GREAT BOOK OF",
+     "x0": 11.4246,
+     "y0": 10.535,
+     "x1": 15.3704,
+     "y1": 10.8031
+    },
+    {
+     "kind": "frontTitle",
+     "text": "WORLD GAMES",
+     "x0": 10.006,
+     "y0": 9.8,
+     "x1": 16.789,
+     "y1": 10.625
+    },
+    {
+     "kind": "frontTitle",
+     "text": "56 games from 4,600 years of human play",
+     "x0": 11.9948,
+     "y0": 9.5033,
+     "x1": 14.8002,
+     "y1": 9.67
+    },
+    {
+     "kind": "frontTitle",
+     "text": "Rules, boards and stories from 39 cultures",
+     "x0": 11.9785,
+     "y0": 9.3183,
+     "x1": 14.8165,
+     "y1": 9.485
+    },
+    {
+     "kind": "frontTitle",
+     "text": "LARGE PRINT EDITION",
+     "x0": 11.9192,
+     "y0": 9.06,
+     "x1": 14.8758,
+     "y1": 9.2456
+    },
+    {
+     "kind": "frontAuthor",
+     "text": "EMRE DOĞAN",
+     "x0": 12.0089,
+     "y0": 0.7833,
+     "x1": 14.7861,
+     "y1": 1.0996
+    },
+    {
+     "kind": "spineText",
+     "text": "THE GREAT BOOK OF WORLD GAMES · LARGE PRINT",
+     "x0": 8.8029,
+     "y0": 7.1664,
+     "x1": 8.9129,
+     "y1": 10.6836
+    },
+    {
+     "kind": "spineText",
+     "text": "EMRE DOĞAN",
+     "x0": 8.7951,
+     "y0": 0.631,
+     "x1": 8.9154,
+     "y1": 1.569
+    },
+    {
+     "kind": "backCopy",
+     "text": "Large Print Edition — the same book, set in 16-point type.",
+     "x0": 0.8,
+     "y0": 7.2583,
+     "x1": 5.8,
+     "y1": 7.425
+    },
+    {
+     "kind": "backCopy",
+     "text": "A reference book you play from.",
+     "x0": 0.8,
+     "y0": 7.0222,
+     "x1": 5.8,
+     "y1": 7.1889
+    },
+    {
+     "kind": "backCopy",
+     "text": "56 traditional games from 39 cultures, from the royal graves",
+     "x0": 0.8,
+     "y0": 6.7861,
+     "x1": 5.8,
+     "y1": 6.9389
+    },
+    {
+     "kind": "backCopy",
+     "text": "playground — set out so you can play them tonight. Each game",
+     "x0": 0.8,
+     "y0": 6.6,
+     "x1": 5.8,
+     "y1": 6.7528
+    },
+    {
+     "kind": "backCopy",
+     "text": "pages, so the book lies open on the table and nobody turns a",
+     "x0": 0.8,
+     "y0": 6.4139,
+     "x1": 5.8,
+     "y1": 6.5667
+    },
+    {
+     "kind": "backCopy",
+     "text": "turn.",
+     "x0": 0.8,
+     "y0": 6.2278,
+     "x1": 5.8,
+     "y1": 6.3806
+    },
+    {
+     "kind": "backCopy",
+     "text": "Sorted by how they work, not by where they are from.",
+     "x0": 0.8,
+     "y0": 5.9444,
+     "x1": 5.8,
+     "y1": 6.1111
+    },
+    {
+     "kind": "backCopy",
+     "text": "Seven families — sowing, hunt and siege, race home, line and",
+     "x0": 0.8,
+     "y0": 5.7083,
+     "x1": 5.8,
+     "y1": 5.8611
+    },
+    {
+     "kind": "backCopy",
+     "text": "board, chance and nerve, and games without a board. Put that",
+     "x0": 0.8,
+     "y0": 5.5222,
+     "x1": 5.8,
+     "y1": 5.675
+    },
+    {
+     "kind": "backCopy",
+     "text": "games of Ghana, Sri Lanka and Buganda sit together, and you ",
+     "x0": 0.8,
+     "y0": 5.3361,
+     "x1": 5.8,
+     "y1": 5.4889
+    },
+    {
+     "kind": "backCopy",
+     "text": "solve the problem of chess six different ways.",
+     "x0": 0.8,
+     "y0": 5.15,
+     "x1": 5.8,
+     "y1": 5.3028
+    },
+    {
+     "kind": "backCopy",
+     "text": "Honest about what is known.",
+     "x0": 0.8,
+     "y0": 4.8667,
+     "x1": 5.8,
+     "y1": 5.0333
+    },
+    {
+     "kind": "backCopy",
+     "text": "Every rule set names the work and the pages it was read from",
+     "x0": 0.8,
+     "y0": 4.6306,
+     "x1": 5.8,
+     "y1": 4.7833
+    },
+    {
+     "kind": "backCopy",
+     "text": "incomplete, the entry says so and shows what has been recons",
+     "x0": 0.8,
+     "y0": 4.4444,
+     "x1": 5.8,
+     "y1": 4.5972
+    },
+    {
+     "kind": "backCopy",
+     "text": "the back lists the game origin stories that are widely repea",
+     "x0": 0.8,
+     "y0": 4.2583,
+     "x1": 5.8,
+     "y1": 4.4111
+    },
+    {
+     "kind": "backCopy",
+     "text": "Inside: what to use instead of what — buttons, coins, dried ",
+     "x0": 0.8,
+     "y0": 3.975,
+     "x1": 5.8,
+     "y1": 4.1278
+    },
+    {
+     "kind": "backCopy",
+     "text": "Numbered rules, one action to a line. Board diagrams drawn t",
+     "x0": 0.8,
+     "y0": 3.7889,
+     "x1": 5.8,
+     "y1": 3.9417
+    },
+    {
+     "kind": "backCopy",
+     "text": "templates at the back you can photocopy. Almost nothing in t",
+     "x0": 0.8,
+     "y0": 3.6028,
+     "x1": 5.8,
+     "y1": 3.7556
+    },
+    {
+     "kind": "backCopy",
+     "text": "bought.",
+     "x0": 0.8,
+     "y0": 3.4167,
+     "x1": 5.8,
+     "y1": 3.5694
+    },
+    {
+     "kind": "backCopy",
+     "text": "Emre is a puzzle designer, mythologist, and game archivist d",
+     "x0": 0.8,
+     "y0": 2.9944,
+     "x1": 5.8,
+     "y1": 3.1472
+    },
+    {
+     "kind": "backCopy",
+     "text": "ancient cultures, codes, and stories for the next generation",
+     "x0": 0.8,
+     "y0": 2.8139,
+     "x1": 5.8,
+     "y1": 2.9667
+    }
+   ],
+   "spineFit": [
+    {
+     "part": "title",
+     "text": "THE GREAT BOOK OF WORLD GAMES · LARGE PRINT",
+     "pt": 8.0,
+     "trackPt": 0.96,
+     "widthIn": 3.517,
+     "runIn": [
+      7.55,
+      10.3
+     ]
+    },
+    {
+     "part": "author",
+     "text": "EMRE DOĞAN",
+     "pt": 8.75,
+     "trackPt": 1.05,
+     "widthIn": 0.938,
+     "runIn": [
+      0.62,
+      1.58
+     ]
+    }
+   ],
+   "file": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.pdf",
+   "sha256": "7250ae36cc49fa4feae747259416e73db9ecad30dc02d753d8092aff2fe3efac",
+   "bytes": 21381891,
+   "wrapIn": [
+    17.7725,
+    11.25
+   ],
+   "spineIn": 0.5225,
+   "artwork": "07_ASSETS/print/cover-wrap-largeprint.png",
+   "artworkPrep": {
+    "file": "07_ASSETS/print/cover-wrap-largeprint.png",
+    "widthPx": 5332,
+    "heightPx": 3375,
+    "scrims": [
+     {
+      "boxIn": [
+       0.7,
+       0.6,
+       5.9,
+       7.6
+      ],
+      "washRGB": [
+       215,
+       192,
+       163
+      ],
+      "strength": 0.62,
+      "featherIn": 0.55,
+      "$note": "tüylenmiş yıkama · beyaz panel DEĞİL · § 7 ölçülen destek"
+     }
+    ],
+    "scaleFromProcessed": 0.8496,
+    "effectiveDpi": 300.0,
+    "sha256": "12afb913af504627d631f3c9ddfa745ad90725387edcf509f937e7786be0eb31",
+    "bytes": 13014002
+   }
   }
  },
  "kindle": {

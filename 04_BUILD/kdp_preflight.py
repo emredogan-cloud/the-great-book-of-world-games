@@ -274,7 +274,7 @@ def run(root: str, args) -> int:
         return 0
     cfg = load(os.path.join(root, "project_config.json"))
     editions = []
-    for ed in ("paperback", "hardcover"):
+    for ed in ("paperback", "hardcover", "largeprint"):
         p = os.path.join(root, "06_REPORTS", "interior-%s.json" % ed)
         if os.path.exists(p):
             editions.append((ed, load(p)))
@@ -304,8 +304,8 @@ def run(root: str, args) -> int:
         r["images"] = check_images(pdf, rep)
 
         cost = cfg["production"]["kdpPrintCost"][
-            "paperbackLargeTrimBW" if ed == "paperback"
-            else "hardcoverLargeTrimBW"]
+            "hardcoverLargeTrimBW" if ed == "hardcover"
+            else "paperbackLargeTrimBW"]        # largeprint = ciltsiz bandı
         n = geo["pages"]
         rep.check(cost["minPages"] <= n <= cost["maxPages"],
                   "%s sayfa sayısı KDP bandında (%d ∈ [%d, %d])"

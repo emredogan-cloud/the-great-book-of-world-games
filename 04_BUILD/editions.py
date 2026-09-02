@@ -127,11 +127,21 @@ def main() -> int:
 
         if eid in BANDS:
             b = pc.get(BANDS[eid], {})
-            cost = b.get("fixed", 0) + pages * b.get("perPage", 0)
+            ed_pages = pages
+            if eid == "largeprint":
+                # Büyük punto KENDİ sayılan sayfasından hesaplanır.
+                lpp = os.path.join(os.path.dirname(ip), "interior-largeprint.json")
+                if not os.path.exists(lpp):
+                    errors.append("largeprint etkin ama iç bloğu üretilmemiş "
+                                  "(06_REPORTS/interior-largeprint.json yok)")
+                    continue
+                with open(lpp, encoding="utf-8") as fh:
+                    ed_pages = int(json.load(fh)["pageCount"])
+            cost = b.get("fixed", 0) + ed_pages * b.get("perPage", 0)
             rate = (pc.get("royaltyRateAtOrAbove999", 0.6) if lst >= 9.99
                     else pc.get("royaltyRateBelow999", 0.5))
-            if not (b.get("minPages", 0) <= pages <= b.get("maxPages", 10 ** 6)):
-                errors.append("%s: %d sayfa KDP sınırları dışında" % (eid, pages))
+            if not (b.get("minPages", 0) <= ed_pages <= b.get("maxPages", 10 ** 6)):
+                errors.append("%s: %d sayfa KDP sınırları dışında" % (eid, ed_pages))
         elif eid == "kindle":
             rate = pc.get("kindleRoyaltyRate70", 0.70)
             cost = pc.get("kindleDeliveryPerMB", 0.15) * pc.get(

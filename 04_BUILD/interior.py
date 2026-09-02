@@ -171,20 +171,44 @@ def register_fonts() -> str:
     return fdir
 
 
-def styles(body_pt: float, lead_pt: float):
+def styles(body_pt: float, lead_pt: float, scale: float = 1.0,
+           min_pt: float = 0.0):
     """Bütün stiller GÖMÜLÜ fonta bağlanır.
 
     ⚠ `bulletFontName` DAHİL. reportlab'ın ParagraphStyle varsayılanı
     Helvetica'dır ve madde imi hiç kullanılmasa bile font kaynağa
     girebiliyor; `pdffonts` ilk koşuda üç gömülmemiş font gösterdi
     (Helvetica · Times-Roman · ZapfDingbats) ve KDP üçünü de reddederdi.
+
+    BÜYÜK PUNTO (largeprint): `scale` bütün ölçüleri tek çarpanla büyütür
+    (punto, satır aralığı, boşluk, girinti) ve hiçbir yazı `min_pt`in
+    altına inemez. scale=1.0 ve min_pt=0 iken bu fonksiyon ESKİSİYLE
+    birebir aynı stilleri üretir — ciltsiz ve ciltli çıktı değişmez.
     """
     from reportlab.lib.styles import ParagraphStyle
 
     def S(**kw):
         kw.setdefault("bulletFontName", "GBSerif")
+        if scale != 1.0 or min_pt:
+            for k in ("fontSize", "leading", "spaceAfter", "spaceBefore",
+                      "leftIndent"):
+                if k in kw:
+                    kw[k] = kw[k] * scale
+            if kw.get("fontSize", 0) < min_pt:
+                ratio = min_pt / kw["fontSize"]
+                kw["fontSize"] = min_pt
+                kw["leading"] = kw["leading"] * ratio
         return ParagraphStyle(**kw)
+
+    def fs(base: float) -> str:
+        """Paragraph içi <font size=…> için ölçekli punto (dize)."""
+        v = base * scale
+        if v < min_pt:
+            v = min_pt
+        return "%g" % round(v, 2)
+
     return {
+        "_fs":    fs,
         "h1":     S(name="h1", fontName="GBSerif-B", fontSize=17, leading=20,
                     spaceAfter=2),
         "kicker": S(name="k", fontName="GBSerif-I", fontSize=9.5, leading=12,
@@ -534,8 +558,9 @@ def _toc_flowables(fm, sty, pagemap, back_pages):
             out.append(P("<b>%s</b>" % esc(item["title"]), "tocfam"))
         else:
             pg = "000" if ph else (pagemap.get(item["gameId"]) or "—")
-            out.append(P("%s <font size=8>· %s</font> &nbsp;&nbsp;%s"
-                         % (esc(item["title"]), esc(item["culture"]), pg),
+            out.append(P("%s <font size=%s>· %s</font> &nbsp;&nbsp;%s"
+                         % (esc(item["title"]), sty["_fs"](8),
+                            esc(item["culture"]), pg),
                          "toc"))
     out.append(P("<b>At the back</b>", "tocfam"))
     for lbl, key in TOC_BACK:
@@ -566,12 +591,16 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
     p.folio = False
     x, y_top, w, h = lay.frame(lay.n)
     y = y_top - h * 0.22
-    for fl in (P("<b>%s</b>" % esc(tp["title"]), "title"),
-               P(esc(tp["subtitle"]), "sub"),
-               VSpace(36),
-               P(esc(tp["author"]), "author"),
-               VSpace(h * 0.30),
-               P(esc(tp["publisher"]), "sub")):
+    ed_label = geom.get("editionLabel")          # "Large Print Edition" vb.
+    tp_items = [P("<b>%s</b>" % esc(tp["title"]), "title"),
+                P(esc(tp["subtitle"]), "sub")]
+    if ed_label:
+        tp_items.append(P("<b>%s</b>" % esc(ed_label), "sub"))
+    tp_items += [VSpace(36),
+                 P(esc(tp["author"]), "author"),
+                 VSpace(h * 0.30),
+                 P(esc(tp["publisher"]), "sub")]
+    for fl in tp_items:
         fw, fh = fl.wrap(w, h)
         p.items.append((fl, x, y - fh, w))
         y -= fh
@@ -583,9 +612,16 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
     lines = ["<b>%s</b>" % esc(tp["title"]), esc(tp["subtitle"]), "",
              esc(im["copyright"]), esc(im["publisher"]), "",
              "%s · %s" % (esc(tp["series"]), "Volume %s" % tp["volume"]),
-             esc(im["edition"]), esc(im["printedBy"]), ""]
-    for ed in ("paperback", "hardcover"):
-        lines.append("ISBN (%s): %s" % (ed, esc(im["isbn"][ed])))
+             esc(ed_label or im["edition"]), esc(im["printedBy"]), ""]
+    if ed_label:
+        # Büyük punto kendi (KDP'nin vereceği) ISBN'ini taşır; öteki
+        # sürümlerin numaraları bu künyede listelenmez.
+        lines.append("ISBN (large print paperback): %s"
+                     % esc(im["isbn"].get("largeprint")
+                           or im["isbn"]["paperback"]))
+    else:
+        for ed in ("paperback", "hardcover"):
+            lines.append("ISBN (%s): %s" % (ed, esc(im["isbn"][ed])))
     lines += ["", esc(im["rights"])]
     if im.get("authorBio"):
         lines += ["", "<b>About the author.</b> " + esc(im["authorBio"])]
@@ -636,6 +672,8 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
     games = {g["gameId"]: g for g in book["games"]}
     pagemap, spreads, overflow = {}, [], []
     cur_family = None
+    dia_ratio = []     # büyük punto: diyagram genişliği / ciltsizdeki genişlik
+    pb_geom = geometry(cfg, "paperback", 160) if geom.get("largePrint") else None
 
     for item in fm["contents"]:
         if item["kind"] == "family-opener":
@@ -667,6 +705,33 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
             continue
 
         g = games[item["gameId"]]
+        if geom.get("largePrint"):
+            # ── BÜYÜK PUNTO: MADDE TEK AKIŞTIR, SAYFA SINIRI YOKTUR ──────
+            # 16 puntoda bir madde 3–5 sayfa tutar; çift-sayfa sözü bu
+            # sürümde VERİLMEZ (büyük punto okuru sayfa çevirmeyi bekler)
+            # ve verilmediği için --check de onu bu sürümde SAYMAZ.
+            # Diyagramlar hikâye/malzeme bloğundan sonra, kurallardan
+            # ÖNCE akışa girer; fiziksel boyutları ciltsizdekinden
+            # KÜÇÜLMEZ (oran raporda ölçülür: diagramScaleVsPaperback).
+            first = lay.n + 1
+            pagemap[g["gameId"]] = first
+            x0, yt0, w0, h0 = lay.frame(first)
+            docs = [diagram_docs[d] for d in g.get("diagrams", [])
+                    if d in diagram_docs]
+            budget = h0 * geom["lpDiagramBudget"]
+            dia = [SVGFlow(d, w0, budget / max(len(docs), 1)) for d in docs]
+            pw = pb_geom["wPt"] - pb_geom["gutterPt"] - pb_geom["outerPt"]
+            ph = pb_geom["hPt"] - pb_geom["topPt"] - pb_geom["bottomPt"]
+            for d, lp_d in zip(docs, dia):
+                pb_d = SVGFlow(d, pw, ph * DIAGRAM_PAGE_BUDGET / max(len(docs), 1))
+                dia_ratio.append(round(lp_d.w / pb_d.w, 3))
+            stream = game_left(g, sty) + dia + game_right(g, sty)
+            used, rest = lay.flow(stream, "game", run_head=g["title"])
+            if rest:
+                raise RuntimeError("largeprint: %s akışı bitmedi" % g["gameId"])
+            spreads.append((g["gameId"], first, lay.n - first + 1))
+            continue
+
         lay.pad_to_verso()
         first = lay.n + 1
         pagemap[g["gameId"]] = first
@@ -749,7 +814,8 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
     return lay, {"tocFitted": ok,
                  "pagemap": pagemap, "spreads": spreads,
                  "overflow": overflow, "frontPages": front_pages,
-                 "bodyEnd": body_end, "backStart": back_start}
+                 "bodyEnd": body_end, "backStart": back_start,
+                 "diagramRatios": dia_ratio}
 
 
 def _center(lay, page_no, frac):
@@ -809,8 +875,8 @@ def _back_matter(lay, bm, sty, pagemap, titles=None):
                     key=lambda x: (pagemap.get(x["gameId"]) or 9999,
                                    x["title"])):
         pg = pagemap.get(t["gameId"])
-        tpl.append(P("<b>%s</b> &nbsp; <font size=8>%s%s</font>"
-                     % (esc(t["title"]),
+        tpl.append(P("<b>%s</b> &nbsp; <font size=%s>%s%s</font>"
+                     % (esc(t["title"]), sty["_fs"](8),
                         "page %d" % pg if pg else "",
                         " · reconstructed" if t["reconstructed"] else ""),
                      "idx"))
@@ -823,8 +889,8 @@ def _back_matter(lay, bm, sty, pagemap, titles=None):
     # ② malzeme rehberi
     mat = []
     for m in sorted(bm["materialsGuide"], key=lambda x: -x["count"]):
-        mat.append(P("<b>%s</b> <font size=8>— used by %d game%s</font>"
-                     % (esc(m["substitute"]), m["count"],
+        mat.append(P("<b>%s</b> <font size=%s>— used by %d game%s</font>"
+                     % (esc(m["substitute"]), sty["_fs"](8), m["count"],
                         "" if m["count"] == 1 else "s"), "idxh"))
         mat.append(P(esc(names(m["usedBy"])), "idx"))
     section("materialsGuide", "Materials and Substitutions", mat,
@@ -834,8 +900,9 @@ def _back_matter(lay, bm, sty, pagemap, titles=None):
     # ③ sözlük
     gl = []
     for t in sorted(bm["glossary"], key=lambda x: x["term"]):
-        att = (" <font size=7.5>(%s)</font>"
-               % esc(names(t["attestedIn"][:6]))) if t["attestedIn"] else ""
+        att = (" <font size=%s>(%s)</font>"
+               % (sty["_fs"](7.5),
+                  esc(names(t["attestedIn"][:6])))) if t["attestedIn"] else ""
         gl.append(P("<b>%s</b> &nbsp;%s%s"
                     % (esc(t["term"]), esc(t["definition"]), att), "idx"))
     section("glossary", "Glossary", gl,
@@ -846,8 +913,8 @@ def _back_matter(lay, bm, sty, pagemap, titles=None):
     bib = []
     for b in sorted(bm["bibliography"], key=lambda x: x["title"]):
         pg = pagemap.get(b["gameId"])
-        bib.append(P("<b>%s</b> <font size=8>· %s%s</font>"
-                     % (esc(b["title"]), esc(b["culture"]),
+        bib.append(P("<b>%s</b> <font size=%s>· %s%s</font>"
+                     % (esc(b["title"]), sty["_fs"](8), esc(b["culture"]),
                         " · page %d" % pg if pg else ""), "idxh"))
         for s in b["sources"]:
             bib.append(P(esc(s), "idx"))
@@ -909,7 +976,10 @@ def _furniture(c, lay, i, p, geom, title):
     """Üstbilgi ve sayfa numarası. Boş sayfada YOKTUR."""
     verso = lay.is_verso(i)
     x_in, y_top, w, h = lay.frame(i)
-    c.setFont("GBSerif-I", 8.5)
+    # Büyük puntoda üstbilgi/folyo da büyür (geom → headPt/folioPt);
+    # öteki sürümlerde değerler eskisiyle aynıdır.
+    scale = geom.get("typeScale", 1.0)
+    c.setFont("GBSerif-I", geom.get("headPt", 8.5))
     c.setFillColorRGB(0, 0, 0)
     # Üstbilgi Paragraph'tan değil DOĞRUDAN tuvalden geçer, yani esc()'i
     # görmez. Dizgi tırnağını burada ayrıca uygulamak ZORUNLU: aksi
@@ -924,6 +994,10 @@ def _furniture(c, lay, i, p, geom, title):
     # bastırmaktır.
     if p.opensSection:
         return
+    # ⚠ Üstbilgi/folyo UZAKLIĞI ölçeklenmez: büyük puntoda 13×1,52 pt
+    # yukarı çıkan üstbilgi sayfa üstüne 0,22 in yaklaşıyordu ve KDP'nin
+    # 0,25 in mürekkep payını 200 sayfada ihlal ediyordu (kdp_preflight
+    # ölçtü). Punto büyür, konum sabit kalır.
     if p.kind != "front" or p.runHead:
         hy = geom["hPt"] - geom["topPt"] + 13
         if verso:
@@ -931,7 +1005,7 @@ def _furniture(c, lay, i, p, geom, title):
         else:
             c.drawRightString(x_in + w, hy, head)
     if p.folio:
-        c.setFont("GBSerif", 9.5)
+        c.setFont("GBSerif", geom.get("folioPt", 9.5))
         fy = geom["bottomPt"] - 20
         if verso:
             c.drawString(x_in, fy, str(i))
@@ -941,15 +1015,16 @@ def _furniture(c, lay, i, p, geom, title):
 
 # ── SÜRÜM ────────────────────────────────────────────────────────────────
 def geometry(cfg, edition: str, pages_guess: int) -> dict:
-    trim = cfg["production"]["trimPaperback" if edition == "paperback"
-                             else "trimHardcover"]
+    prod = cfg["production"]
+    # largeprint = ciltsiz trim + büyük punto (project_config → production.largePrint)
+    trim = prod["trimHardcover" if edition == "hardcover" else "trimPaperback"]
     bare_min = gutter_in(pages_guess)           # KDP'nin ÇIPLAK asgarisi
     g_in = bare_min + GUTTER_SAFETY_IN           # dizginin GERÇEKTEN kullandığı
     # Ciltli ciltte blok dikişe daha yakın oturur: bir kademe fazla iç marj.
     if edition == "hardcover":
         g_in += 0.125
     outer_in = 0.5
-    return {
+    g = {
         "edition": edition,
         "trimWidthIn": trim["w"], "trimHeightIn": trim["h"],
         "wPt": trim["w"] * IN, "hPt": trim["h"] * IN,
@@ -960,9 +1035,24 @@ def geometry(cfg, edition: str, pages_guess: int) -> dict:
         "topPt": 0.625 * IN, "bottomPt": 0.625 * IN,
         "bleed": False,
         "colWidthMm": (trim["w"] - g_in - outer_in) * 25.4,
-        "bodyPt": 10.5, "leadingPt": 13.5,
+        "bodyPt": 10.5, "leadingPt": 13.5, "typeScale": 1.0,
         "font": "Liberation Serif (SIL OFL 1.1, embedded)",
     }
+    if edition == "largeprint":
+        lp = prod["largePrint"]
+        scale = lp["bodyPt"] / 10.5
+        g.update({
+            "largePrint": True,
+            "bodyPt": lp["bodyPt"],
+            "leadingPt": round(13.5 * scale, 2),
+            "typeScale": scale,
+            "minPt": lp["minimumPt"],
+            "headPt": max(8.5 * scale, lp["minimumPt"]),
+            "folioPt": max(9.5 * scale, lp["minimumPt"]),
+            "editionLabel": lp["editionLabel"],
+            "lpDiagramBudget": lp["diagramPageBudget"],
+        })
+    return g
 
 
 def build_edition(root, cfg, edition, out_dir, verbose=True):
@@ -985,7 +1075,10 @@ def build_edition(root, cfg, edition, out_dir, verbose=True):
     guess, seen = 200, []
     for _ in range(6):
         geom = geometry(cfg, edition, guess)
-        sty = styles(geom["bodyPt"], geom["leadingPt"])
+        if geom.get("largePrint"):
+            sty = styles(10.5, 13.5, geom["typeScale"], geom["minPt"])
+        else:
+            sty = styles(geom["bodyPt"], geom["leadingPt"])
         lay, meta = build_layout(root, cfg, book, fm, bm, geom, sty,
                                  diagram_docs)
         n = lay.n
@@ -1035,6 +1128,27 @@ def build_edition(root, cfg, edition, out_dir, verbose=True):
         "gutterIterations": seen,
         "tocFitted": meta.get("tocFitted", True),
     }
+    if geom.get("largePrint"):
+        from reportlab.lib.styles import ParagraphStyle
+        min_font = min(v.fontSize for v in sty.values()
+                       if isinstance(v, ParagraphStyle))
+        min_font = min(min_font, float(sty["_fs"](7.5)))
+        per_game = {gid: n_pages for gid, first, n_pages in meta["spreads"]}
+        report.update({
+            "largePrint": True,
+            "editionLabel": geom["editionLabel"],
+            "bodyPt": geom["bodyPt"], "leadingPt": geom["leadingPt"],
+            "typeScale": round(geom["typeScale"], 4),
+            "minFontPtSet": round(min_font, 2),
+            "headPt": round(geom["headPt"], 2), "folioPt": round(geom["folioPt"], 2),
+            "pagesPerGame": per_game,
+            "pagesPerGameMax": max(per_game.values()) if per_game else 0,
+            "pagesPerGameMean": round(sum(per_game.values()) / len(per_game), 2)
+            if per_game else 0,
+            "diagramScaleVsPaperbackMin": min(meta["diagramRatios"])
+            if meta["diagramRatios"] else None,
+            "diagramCount": len(meta["diagramRatios"]),
+        })
     dump(os.path.join(root, "06_REPORTS", "interior-%s.json" % edition), report)
     if verbose:
         print("  ✓ %-10s %3d sayfa · %5.1f KB · trim %.2f×%.2f in · "
@@ -1087,6 +1201,37 @@ def run_check(root, cfg) -> int:
         if len(r["fourPageEntries"]) > 6:
             errs.append("%s: dört sayfalık madde %d > 6 (mimarî tavan)"
                         % (ed, len(r["fourPageEntries"])))
+    # ── BÜYÜK PUNTO (varsa) — çift-sayfa sözü YOK, punto tabanı VAR ──────
+    lp_path = os.path.join(root, "06_REPORTS", "interior-largeprint.json")
+    lp = None
+    if os.path.exists(lp_path):
+        lp = load(lp_path)
+        f = os.path.join(root, lp["file"])
+        lpc = cfg["production"].get("largePrint", {})
+        if not os.path.exists(f):
+            errs.append("largeprint PDF yok: %s" % lp["file"])
+        elif sha256(f) != lp["sha256"]:
+            errs.append("largeprint PDF sağlama toplamı tutmuyor — dosya değişmiş")
+        if lp["margins"]["gutterIn"] < lp["kdpGutterRequiredIn"]:
+            errs.append("largeprint: iç marj %.3f in < KDP asgari %.3f in"
+                        % (lp["margins"]["gutterIn"], lp["kdpGutterRequiredIn"]))
+        if lp["pageCount"] % 2:
+            errs.append("largeprint: sayfa sayısı TEK (%d)" % lp["pageCount"])
+        cost = cfg["production"]["kdpPrintCost"]["paperbackLargeTrimBW"]
+        if not (cost["minPages"] <= lp["pageCount"] <= cost["maxPages"]):
+            errs.append("largeprint: sayfa sayısı KDP bandı dışında (%d ∉ [%d, %d])"
+                        % (lp["pageCount"], cost["minPages"], cost["maxPages"]))
+        if not lp.get("tocFitted", True):
+            errs.append("largeprint: içindekiler ayrılan sayfalara SIĞMADI")
+        if lp.get("bodyPt", 0) < lpc.get("bodyPt", 16):
+            errs.append("largeprint: gövde puntosu %.1f < %.1f"
+                        % (lp.get("bodyPt", 0), lpc.get("bodyPt", 16)))
+        if lp.get("minFontPtSet", 0) < lpc.get("minimumPt", 12):
+            errs.append("largeprint: en küçük punto %.2f < taban %.2f"
+                        % (lp.get("minFontPtSet", 0), lpc.get("minimumPt", 12)))
+        if (lp.get("diagramScaleVsPaperbackMin") or 1.0) < 0.98:
+            errs.append("largeprint: bir diyagram ciltsizdekinden KÜÇÜK (oran %.3f)"
+                        % lp["diagramScaleVsPaperbackMin"])
     for e in errs:
         print("  ✗ %s" % e)
     if errs:
@@ -1098,6 +1243,12 @@ def run_check(root, cfg) -> int:
                                   r["spreadsStartingVerso"], r["spreadsTotal"],
                                   r["margins"]["gutterIn"],
                                   r["kdpGutterRequiredIn"]))
+    if lp:
+        print("  ✓ %-10s %3d sayfa · gövde %.1f pt · en küçük %.2f pt · "
+              "diyagram oranı ≥ %s · iç marj %.3f in ≥ %.3f"
+              % ("largeprint", lp["pageCount"], lp["bodyPt"], lp["minFontPtSet"],
+                 lp.get("diagramScaleVsPaperbackMin"),
+                 lp["margins"]["gutterIn"], lp["kdpGutterRequiredIn"]))
     return 0
 
 
@@ -1105,7 +1256,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", default=DEFAULT_ROOT)
-    ap.add_argument("--edition", choices=["paperback", "hardcover"])
+    ap.add_argument("--edition",
+                    choices=["paperback", "hardcover", "largeprint"])
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--check", action="store_true")
     args = ap.parse_args()
@@ -1134,9 +1286,10 @@ def main() -> int:
 
     editions = (["paperback", "hardcover"] if args.all or not args.edition
                 else [args.edition])
+    out_dirs = {"paperback": "PAPERBACK", "hardcover": "HARDCOVER",
+                "largeprint": "LARGEPRINT"}
     for ed in editions:
-        out = os.path.join(root, "08_OUTPUT",
-                           "PAPERBACK" if ed == "paperback" else "HARDCOVER")
+        out = os.path.join(root, "08_OUTPUT", out_dirs[ed])
         build_edition(root, cfg, ed, out)
     print("=" * 74)
     return 0

@@ -404,7 +404,10 @@
         "covers.py bunu otomatik yeniden türetemez, KDP'nin kendi aracı."
       ],
       "sourcePageCount": 160,
-      "sourceTrimIn": {"w": 8.25, "h": 11.0},
+      "sourceTrimIn": {
+        "w": 8.25,
+        "h": 11.0
+      },
       "fullCoverWidthIn": 18.624,
       "fullCoverHeightIn": 12.417,
       "frontCoverWidthIn": 8.447,
@@ -687,14 +690,30 @@
       },
       {
         "id": "largeprint",
-        "list": null,
-        "enabled": false,
-        "priority": 9,
-        "$comment": "Büyük punto: 12 ay sonra değerlendirilir. Diyagram ağırlıklı bir kitapta punto büyütmek sayfa sayısını patlatır — A4'te karar verilecek."
+        "list": 31.99,
+        "enabled": true,
+        "priority": 4,
+        "$comment": "Faz 2 v3: üretildi. Liste fiyatı price-engine + editions.py ile SAYFA SAYISI ölçüldükten sonra yazılır (priceBasis alanına bak).",
+        "priceBasis": "price-engine.mjs 2026-09-02 · 232 pp large trim B&W: print $4.94; $27.99 nets $11.85 (42.3%), $29.99 $13.05, $31.99 $14.25 (44.5%, BE ACOS 44.5%, max CPC $1.14 @8% CVR), $34.99 $16.05. $31.99 chosen: clears the 35% target, sits $3 under the $34.99 hardcover, and is the $X.99 grid point nearest the roadmap's $31.03 LP figure. Founder may move it at Gate 8."
       }
     ],
     "kdpSelect": false,
-    "kdpSelect$comment": "KU'ya GİRİLMEZ: 256 sayfalık tam okuma ≈ 1,23 $, ciltsiz telif 8,44 $. 6,9 kat kayıp."
+    "kdpSelect$comment": "KU'ya GİRİLMEZ: 256 sayfalık tam okuma ≈ 1,23 $, ciltsiz telif 8,44 $. 6,9 kat kayıp.",
+    "largePrint": {
+      "$comment": [
+        "BÜYÜK PUNTO SÜRÜMÜ — Faz 2 v3 (2026-09-02). Ciltsiz trim (8,5×11) +",
+        "16 punto gövde (endüstri/KDP 'Large Print' beklentisi: ≥16 pt), hiçbir",
+        "yazı 12 puntonun altında değil. interior.py --edition largeprint bütün",
+        "ölçüleri typeScale = bodyPt/10,5 ile büyütür; diyagramlar ciltsizdekinden",
+        "KÜÇÜLMEZ (rapor: diagramScaleVsPaperbackMin). Çift-sayfa sözü bu sürümde",
+        "VERİLMEZ. Kurucu A4 'bootstrap: hayır' demişti; Phase 2 v3 talimatı § 16-17",
+        "büyük puntoyu açıkça istedi — bu blok o talimatın karşılığıdır."
+      ],
+      "bodyPt": 16.0,
+      "minimumPt": 12.0,
+      "editionLabel": "Large Print Edition",
+      "diagramPageBudget": 0.6
+    }
   },
   "privacy": {
     "$comment": [

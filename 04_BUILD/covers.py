@@ -51,6 +51,7 @@ IN = 72.0
 #   false olduğu sürece çıktıyı "TEMPLATE PENDING" diye işaretler.
 SPINE_PER_PAGE_IN = {
     "paperback": 0.002252,      # beyaz kâğıt · siyah-beyaz mürekkep
+    "largeprint": 0.002252,     # büyük punto = ciltsiz (aynı kâğıt, aynı trim)
     "hardcover": 0.0025,        # HİPOTEZ — şablonla doğrulanacak
 }
 HARDCOVER_BOARD_IN = 0.06       # HİPOTEZ — tahta payı
@@ -198,8 +199,8 @@ def geometry(cfg, edition: str, pages: int) -> dict:
     if edition == "hardcover" and cfg.get("production", {}).get(
             "hardcoverTemplateConfirmed"):
         return hardcover_confirmed_geometry(cfg, pages)
-    trim = cfg["production"]["trimPaperback" if edition == "paperback"
-                             else "trimHardcover"]
+    trim = cfg["production"]["trimHardcover" if edition == "hardcover"
+                             else "trimPaperback"]   # largeprint = ciltsiz trim
     tw, th = trim["w"], trim["h"]
     spine = pages * SPINE_PER_PAGE_IN[edition]
     if edition == "hardcover":
@@ -404,6 +405,7 @@ def prepare_artwork(root, geo_ed, src_rel, out_rel, verbose=True,
 # tek şey kırpılan bölgenin AYNI ölçüde sakin kaldığıdır.
 SPINE_RUNS = {
     "paperback": {"title": (7.55, 10.30), "author": (0.62, 1.58)},
+    "largeprint": {"title": (7.55, 10.30), "author": (0.62, 1.58)},
     "hardcover": {"title": (8.3238, 11.345), "author": (0.716, 1.7652)},
 }
 
@@ -458,9 +460,11 @@ class TypeLog:
 # eklendi. Render SONRASI gözle yeniden denetlendi.
 BACK_BOX = {
     "paperback": (0.70, 0.60, 5.90, 7.60),
+    "largeprint": (0.70, 0.60, 5.90, 7.60),
     "hardcover": (1.166, 1.066, 6.366, 8.066),
 }
-FRONT_TITLE_TOP_Y_IN = {"paperback": 10.60, "hardcover": 11.427}
+FRONT_TITLE_TOP_Y_IN = {"paperback": 10.60, "largeprint": 10.60,
+                        "hardcover": 11.427}
 # ⚠ Ciltli değeri düz oran ölçeklemesiyle DEĞİL, `safeZones.frontTitle.y1`
 # (11,702 in — panel üstü eksi 0,125 in dış pay) eksi metnin GERÇEK
 # tırmanma yüksekliği (19,5 pt × 0,75 = 0,2031 in) eksi ciltsizin KENDİ
@@ -469,7 +473,9 @@ FRONT_TITLE_TOP_Y_IN = {"paperback": 10.60, "hardcover": 11.427}
 # (11,6996) `TypeLog`'un kaydettiği gerçek üst kenarı 11,903'e taşımıştı
 # — üst wrap sınırının (11,826) 0,077 in ÜSTÜNDE, yani başlık kıvrım
 # payına giriyordu. Bu, render edilip TypeLog ölçülünce bulundu.
-FRONT_AUTHOR_Y_IN = {"paperback": 0.86, "hardcover": 0.9492}
+FRONT_AUTHOR_Y_IN = {"paperback": 0.86, "largeprint": 0.86,
+                     "hardcover": 0.9492}
+LARGE_PRINT_LABEL = "LARGE PRINT EDITION"   # ön kapak + sırt + arka kapak
 INK = (0.106, 0.094, 0.078)          # koyu kahve-siyah: parşömende mürekkep
 FONT_DIR = "/usr/share/fonts/truetype/liberation"
 FONTS = {"CoverSerif": "LiberationSerif-Regular.ttf",
@@ -584,6 +590,11 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
         hw = _sw(txt, "CoverSerif-I", 12.0) / 2.0
         log.add("frontTitle", fcx - hw, y - 3.0, fcx + hw, y + 9.0, txt)
         y -= 0.185 * IN
+    if ed == "largeprint":
+        # Büyük punto etiketi alt başlığın hemen altında, aynı sakin bantta.
+        y -= 0.07 * IN
+        _tracked(c, LARGE_PRINT_LABEL, fcx, y, "CoverSerif-B", 13.5, 3.2,
+                 log=log, kind="frontTitle")
 
     # ── ÖN KAPAK · yazar (ölçülen sakin bant: y 0,45–1,55 in) ──
     _tracked(c, CT.AUTHOR, fcx, FRONT_AUTHOR_Y_IN[ed] * IN, "CoverSerif-B",
@@ -596,7 +607,9 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
     c.saveState()
     c.translate(sx, 0)
     c.rotate(-90)                      # yukarıdan aşağı okunur (KDP normu)
-    for key, txt, font in (("title", CT.SPINE_TITLE, "CoverSerif-B"),
+    spine_title = CT.SPINE_TITLE + (" · LARGE PRINT" if ed == "largeprint"
+                                    else "")
+    for key, txt, font in (("title", spine_title, "CoverSerif-B"),
                            ("author", CT.SPINE_AUTHOR, "CoverSerif")):
         lo, hi = SPINE_RUNS[ed][key]
         pt, track, w = fit_tracked(txt, font, hi - lo)
@@ -614,7 +627,11 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
     bx = back_box[0] * IN + 0.10 * IN
     bw = (back_box[2] - back_box[0]) * IN - 0.20 * IN
     by = back_box[3] * IN - 0.30 * IN
-    for kind, text in CT.back_copy(measured):
+    back_items = list(CT.back_copy(measured))
+    if ed == "largeprint":
+        back_items.insert(0, ("head", "Large Print Edition — the same book, "
+                                      "set in 16-point type."))
+    for kind, text in back_items:
         if kind == "head":
             c.setFont("CoverSerif-B", 12.2)
             for ln in _wrap(text, "CoverSerif-B", 12.2, bw):
@@ -878,11 +895,14 @@ def build_covers(root, cfg, args) -> int:
     # kılavuzu bayatlatır.
     kindle_only = getattr(args, "kindle_only", False)
     hardcover_only = getattr(args, "hardcover_only", False)
-    do_paperback = not kindle_only and not hardcover_only
-    do_hardcover = hardcover_only or (not kindle_only and not hardcover_only)
-    do_kindle = not hardcover_only
+    largeprint_only = getattr(args, "largeprint_only", False)
+    full = not (kindle_only or hardcover_only or largeprint_only)
+    do_paperback = full
+    do_hardcover = hardcover_only or full
+    do_largeprint = largeprint_only or (full and "largeprint" in geo["editions"])
+    do_kindle = full or kindle_only
 
-    if kindle_only or hardcover_only:
+    if kindle_only or hardcover_only or largeprint_only:
         prev_path = os.path.join(root, "06_REPORTS", "cover-build.json")
         if not os.path.exists(prev_path):
             print("  ⛔ --kindle-only/--hardcover-only önce en az bir tam "
@@ -899,9 +919,12 @@ def build_covers(root, cfg, args) -> int:
                   "— ciltsiz VE Kindle'a DOKUNULMAYACAK, önceki kayıtları "
                   "korunuyor")
 
-    for ed in ("paperback", "hardcover"):
+    out_dirs = {"paperback": "PAPERBACK", "hardcover": "HARDCOVER",
+                "largeprint": "LARGEPRINT"}
+    for ed in ("paperback", "hardcover", "largeprint"):
         if (ed == "paperback" and not do_paperback) or \
-           (ed == "hardcover" and not do_hardcover):
+           (ed == "hardcover" and not do_hardcover) or \
+           (ed == "largeprint" and not do_largeprint):
             continue
         if ed not in geo["editions"]:
             continue
@@ -913,8 +936,7 @@ def build_covers(root, cfg, args) -> int:
                                "cover-wrap-%s.png" % ed)
         art = prepare_artwork(root, g, sel, art_rel,
                               scrim_boxes=[BACK_BOX[ed]])
-        odir = os.path.join(root, "08_OUTPUT",
-                            "PAPERBACK" if ed == "paperback" else "HARDCOVER")
+        odir = os.path.join(root, "08_OUTPUT", out_dirs[ed])
         rep = compose(root, cfg, ed, g, art_rel, measured, odir)
         rep["artworkPrep"] = art
         out["editions"][ed] = rep
@@ -937,9 +959,11 @@ def build_covers(root, cfg, args) -> int:
 def run(root: str, args) -> int:
     cfg = load(os.path.join(root, "project_config.json"))
     out, errs = {}, []
-    for ed in ("paperback", "hardcover"):
+    for ed in ("paperback", "hardcover", "largeprint"):
         p = os.path.join(root, "06_REPORTS", "interior-%s.json" % ed)
         if not os.path.exists(p):
+            if ed == "largeprint":
+                continue            # büyük punto isteğe bağlı bir sürümdür
             errs.append("%s iç bloğu YOK — sırt hesaplanamaz" % ed)
             continue
         r = load(p)
@@ -1066,6 +1090,9 @@ def main() -> int:
     ap.add_argument("--hardcover-only", action="store_true",
                     help="yalnızca ciltli kapağı yeniden üret; ciltsiz "
                          "VE Kindle'a DOKUNMAZ")
+    ap.add_argument("--largeprint-only", action="store_true",
+                    help="yalnızca büyük punto kapağını üret; ciltsiz, "
+                         "ciltli VE Kindle'a DOKUNMAZ")
     ap.add_argument("--artwork", default=None)
     args = ap.parse_args()
     root = os.path.abspath(args.root)

@@ -1,5 +1,5 @@
 {
- "checks": 20,
+ "checks": 30,
  "failed": [],
  "warnings": [],
  "editions": {
@@ -136,6 +136,64 @@
     "rasterImages": 0
    },
    "pageCount": 160
+  },
+  "largeprint": {
+   "fonts": [
+    {
+     "name": "AAAAAA+LiberationSerif-Bold",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif-Italic",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif-BoldItalic",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+LiberationSerif",
+     "embedded": true
+    }
+   ],
+   "geometry": {
+    "pages": 232,
+    "sizes": [
+     [
+      612.0,
+      792.0
+     ]
+    ]
+   },
+   "ink": {
+    "worstMarginIn": {
+     "gutterIn": 0.5333,
+     "outerIn": 0.4867,
+     "topIn": 0.3167,
+     "bottomIn": 0.3467
+    },
+    "requiredGutterIn": 0.5,
+    "blankPages": [
+     2,
+     8,
+     16,
+     54,
+     94,
+     124,
+     206,
+     210,
+     226
+    ]
+   },
+   "language": {
+    "extractedWords": 65511,
+    "turkishHits": [],
+    "typewriterQuotes": []
+   },
+   "images": {
+    "rasterImages": 0
+   },
+   "pageCount": 232
   }
  }
 }
