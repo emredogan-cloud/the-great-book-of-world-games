@@ -61,6 +61,21 @@ commercial language.
 | Post-processing | crop to Amazon module dimensions, one 2 × 2 composite split into four squares |
 | Text in the artwork | **none** |
 
+### Interior hero illustrations — **AI-generated**
+
+| | |
+|---|---|
+| Produced by | one dedicated illustration per game, 63 of 63 games (100% — every game in the manuscript has one dedicated hero illustration) |
+| Tool | ChatGPT (chatgpt.com) web session, GPT Image model, browser automation via Claude in Chrome |
+| Post-processing | grayscale conversion, resize, JPEG re-encode for print file size |
+| Text in the artwork | **none** — a written prohibition in every prompt, checked on each image before acceptance |
+
+Every game opens on a full illustration before its rules begin. Unlike the
+cover and A+ artwork, these were generated one at a time, inside the book's
+own interior, and are new as of this build — any earlier answer to KDP's
+image-declaration question for this title is stale once this hero-image set
+ships. Full per-image record: `07_ASSETS/GBK02_GAME_ILLUSTRATION_MANIFEST.json`.
+
 ### Interior diagrams — **NOT AI-generated**
 
 This distinction matters and is easy to get wrong. The 57 board diagrams
@@ -89,13 +104,14 @@ No lettering is baked into any generated image.
 The agent does not fill this in. For accuracy, the record supports:
 
 - **Text — AI-generated:** yes, with human editing and source verification
-- **Images — AI-generated:** yes, for the cover and A+ artwork; **no** for the
+- **Images — AI-generated:** yes — the cover, the A+ artwork, and every
+  interior hero illustration (63 of them); **no** for the
   interior diagrams, which are code-drawn from data
 - **Translation — AI-generated:** no
 
-KDP's question about images concerns the images you upload. The cover and the
-A+ images are AI-generated. The interior contains no AI-generated images at
-all.
+KDP's question about images concerns the images you upload. The cover, the A+
+images, and the 63 interior hero illustrations are AI-generated. The
+interior diagrams are the only images in this book that are not.
 
 ---
 
@@ -107,5 +123,6 @@ all.
 | Which games are reconstructed | `02_MANUSCRIPT/book.json` · each entry's notice |
 | Cover prompts and selection | `07_ASSETS/IMAGE_PROMPT_LIBRARY.html` · `06_REPORTS/FINAL_COVER_SELECTION.md` |
 | Upscaling method and factors | `06_REPORTS/cover-artwork-intake.json` · `ASSET_UPSCALING_REPORT.md` |
+| Interior hero illustrations, per-game record | `07_ASSETS/GBK02_GAME_ILLUSTRATION_MANIFEST.json` · `06_REPORTS/GBK02_CHATGPT_IMAGE_GENERATION_LOG.md` |
 | Diagrams are code-drawn | `04_BUILD/render_diagrams.py` · `07_ASSETS/diagrams/*.json` |
 | Author biography provenance | `06_REPORTS/AUTHOR_BIO_PROVENANCE.md` |

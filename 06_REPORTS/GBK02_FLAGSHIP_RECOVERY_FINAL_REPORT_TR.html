@@ -198,6 +198,13 @@ a{color:var(--accent)}
 <strong>Nihai doğrulama:</strong> <code>qa_all.sh</code>'nin tam ve taze bir çalıştırması <strong>"✅ BÜTÜN KAPILAR YEŞİL · kapı seviyesi: phase1"</strong> döndürdü (çıkış kodu 0). Ayrıca <code>selftest.py</code> 229/229, <code>package_selftest.py</code> 42/42 kasıtlı kusur yakalama testinde yeşil.
 </div>
 
+<h3>13. madde — bu raporun kendi yazımı sırasında bulunan bir hata</h3>
+<div class="box warn">
+<strong>Bulgu:</strong> <code>04_BUILD/handoff.py</code>'nin ürettiği <code>08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md</code> — KDP'nin yapay zekâ beyanı sorusunu kurucunun doğru yanıtlaması için tutulan olgusal kayıt — hâlâ "iç blokta hiç yapay zekâ görseli yok" diye yazıyordu. Bu, 63 kahraman illüstrasyonu eklenmeden önce doğruydu; şimdi yanlış. <code>qa_all.sh</code>'nin ilk yeşil geçişi bunu yakalamadı çünkü bu dosyanın QA kapısı yalnızca sayfa sayısı/sağlama bayatlığını denetliyor, düzyazının olgusal doğruluğunu değil.<br><br>
+<strong>Düzeltme:</strong> <code>build_ai_notes()</code> fonksiyonuna yeni bir "Interior hero illustrations — AI-generated" bölümü eklendi (63/63 kapsam, üretim aracı, işleme adımları), form-özeti bölümü ve kanıt tablosu düzeltildi. <code>handoff.py</code> yeniden çalıştırıldı, <code>--check</code> ve tam <code>qa_all.sh</code> ile yeniden doğrulandı.<br><br>
+<strong>Not:</strong> Bu, basılı ön madde metnindeki (<code>copyrightPage.aiDisclosure</code>) ayrı bir boşluktan farklıdır — World Games'te bu metin hiç yok (kardeş kitaplar UES-01/02/ETY-01/Kwaidan'ın aksine). O, yeni bir hukuki/editoryal metin yazmayı gerektirir ve kurucunun kararıdır; bu geçişte icat edilmedi. §10'a bakın.
+</div>
+
 <h2 id="s6">6. Sayfa sayıları — öncesi/sonrası</h2>
 <table>
 <tr><th>Baskı</th><th>Öncesi (56 oyun, 15 Eylül ölçümü)</th><th>Sonrası (63 oyun, bu geçiş)</th></tr>
@@ -236,7 +243,7 @@ a{color:var(--accent)}
 <tr><th></th><th>Madde</th><th>Neden ajan tamamlayamaz</th></tr>
 <tr><td><span class="tag rec">AÇIK</span></td><td>Ciltli kapak için KDP Print Cover Calculator'ın gerçek web aracıyla yeniden çalıştırılması</td><td><code>project_config.json</code>'daki <code>hardcoverConfirmedTemplate</code> hâlâ 160 sayfalık eski bir ölçüme dayanıyor; gerçek sayı artık 184. Bu değer yalnızca Amazon'un kendi hesaplayıcısından manuel olarak alınabilir.</td></tr>
 <tr><td><span class="tag rec">AÇIK</span></td><td>shatranj, chaturanga, omweso için diyagram (§7)</td><td>Kaynak-doğrulanmış tahta oranları gerektirir; icat edilemez.</td></tr>
-<tr><td><span class="tag rec">AÇIK</span></td><td>AI açıklama beyanı (AI disclosure)</td><td>KDP hesabı düzeyinde bir beyan, kurucunun kendi onayını gerektirir.</td></tr>
+<tr><td><span class="tag rec">AÇIK</span></td><td>AI açıklama beyanı (AI disclosure) — iki ayrı madde</td><td><code>project_config.json → founder.aiDisclosure.founderConfirmed</code> zaten teslim paketinde bloklayıcı olarak işaretli, kurucunun KDP hesabı düzeyinde onayını bekliyor. Ayrıca World Games'in basılı ön maddesinde (<code>copyrightPage.aiDisclosure</code>) — kardeş kitaplar UES-01/02/ETY-01/Kwaidan'ın aksine — hiç açıklama metni yok; bu artık daha önemli, çünkü kitap artık 63 üretilmiş iç görsel taşıyor. Metni yazmak editoryal/hukuki bir karardır, bu geçişte icat edilmedi.</td></tr>
 <tr><td><span class="tag rec">AÇIK</span></td><td>ISBN ataması</td><td>Kurucunun ISBN kaydından tahsis gerektirir.</td></tr>
 <tr><td><span class="tag rec">AÇIK</span></td><td>Fiili oynanabilirlik testleri (playtests)</td><td>İnsan oyuncular gerektirir; BOOK_STATS.md'de "oynanabilirlik testi geçen: 0" olarak dürüstçe raporlanıyor.</td></tr>
 <tr><td><span class="tag rec">AÇIK</span></td><td>APLUS-05 eksik sanat varlığı</td><td>Önceki bir founder-delivery talebinden kalma, bu görevin kapsamı dışında.</td></tr>
