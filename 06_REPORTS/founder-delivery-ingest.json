@@ -10,10 +10,10 @@
     "ajan SAYFAYI OKUYARAK işaretler — K17'nin kendisi budur."
   ],
   "deliveryRoot": "06_FOUNDER_DELIVERY/",
-  "gamesWithFolder": 11,
+  "gamesWithFolder": 8,
   "delivered": 0,
-  "awaitingDelivery": 10,
-  "errors": 1,
+  "awaitingDelivery": 8,
+  "errors": 0,
   "bibliographyComplete": 0,
   "lockable": 0,
   "independentlyVerified": 0,
@@ -115,43 +115,6 @@
       "state": "awaiting-delivery"
     },
     {
-      "gameId": "congklak",
-      "files": [
-        {
-          "name": "REQUEST.md",
-          "bytes": 2529,
-          "sha256": "fa8a0abd238cf465f513e0b370d0c56feabe6d1473c9a8ce212dae38469abb69"
-        }
-      ],
-      "bytes": 2529,
-      "sourceFiles": 0,
-      "bibliography": {},
-      "bibliographyMissing": [],
-      "errors": [],
-      "warnings": [
-        "henüz teslim yok — klasör açık, bekliyor"
-      ],
-      "title": "Congklak",
-      "family": "sowing",
-      "culture": "Javanese",
-      "primaryBlocker": "P1",
-      "priorityClass": "A",
-      "state": "awaiting-delivery"
-    },
-    {
-      "gameId": "hayalet-oyun",
-      "files": [],
-      "bytes": 0,
-      "sourceFiles": 0,
-      "bibliography": {},
-      "bibliographyMissing": [],
-      "errors": [
-        "kayıtta böyle bir oyun YOK — gameId yanlış ya da oyun zaten yazılmış"
-      ],
-      "warnings": [],
-      "state": "error"
-    },
-    {
       "gameId": "konane",
       "files": [
         {
@@ -173,30 +136,6 @@
       "culture": "Hawaiian",
       "primaryBlocker": "P2",
       "priorityClass": "C",
-      "state": "awaiting-delivery"
-    },
-    {
-      "gameId": "morra",
-      "files": [
-        {
-          "name": "REQUEST.md",
-          "bytes": 2121,
-          "sha256": "5e4d9fda242ebde367cfb43540284d2707e38db7daa0b2e9768012fb5ee0ce03"
-        }
-      ],
-      "bytes": 2121,
-      "sourceFiles": 0,
-      "bibliography": {},
-      "bibliographyMissing": [],
-      "errors": [],
-      "warnings": [
-        "henüz teslim yok — klasör açık, bekliyor"
-      ],
-      "title": "Morra",
-      "family": "boardless",
-      "culture": "Italian",
-      "primaryBlocker": "P3",
-      "priorityClass": "A",
       "state": "awaiting-delivery"
     },
     {

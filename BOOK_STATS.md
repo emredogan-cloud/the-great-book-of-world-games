@@ -14,7 +14,7 @@
 | Yayımlanabilir aday | **152** | — | |
 | Üretime hazır kural | **120** | — | |
 | Kilitli oyun | **0** | 100 | `····················` |
-| Yazılmış oyun | **56** | 100 | `███████████·········` |
+| Yazılmış oyun | **63** | 100 | `█████████████·······` |
 | Oynanabilirlik testi geçen | **0** | 100 | `····················` |
 | Kültür | **89** | ≥45 | `████████████████████` |
 | Bölge | **33** | — | |
@@ -52,7 +52,7 @@
 | hardcover | hipotez | 34.99 $ | 9.90 $ | **11.09 $** | %31.7 |
 | paperback | hipotez | 22.99 $ | 5.25 $ | **8.54 $** | %37.2 |
 | kindle | hipotez | 11.99 $ | 1.20 $ | **7.19 $** | %60.0 |
-| largeprint | devre dışı | — | — | — | — |
+| largeprint | hipotez | 31.99 $ | 1.20 $ | **21.19 $** | %66.2 |
 
 ## 5. Üretilen kitap (Faz 6 · SAYILDI)
 
@@ -61,8 +61,8 @@
 
 | Sürüm | Sayfa | Trim | Sırt |
 |---|---:|---|---:|
-| paperback | **160** | 8.5 × 11.0 in | 0.3603 in |
-| hardcover | **160** | 8.25 × 11.0 in | 0.5490 in |
+| paperback | **180** | 8.5 × 11 in | 0.4054 in |
+| hardcover | **184** | 8.25 × 11 in | 0.5490 in |
 | kindle | — | — | — |
 
 | | |

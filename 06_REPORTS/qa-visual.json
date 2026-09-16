@@ -2,8 +2,8 @@
   "checks": 11,
   "failed": [],
   "facts": {
-    "drawnTextLabels": 188,
-    "svgFiles": 51,
-    "declared": 51
+    "drawnTextLabels": 280,
+    "svgFiles": 57,
+    "declared": 57
   }
 }

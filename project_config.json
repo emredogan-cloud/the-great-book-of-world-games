@@ -294,7 +294,7 @@
     ],
     "ink": "black",
     "minStrokePt": 0.75,
-    "minGlyphPt": 7.0,
+    "minGlyphPt": 7,
     "colourForbidden": true,
     "greyLevelsAllowed": [
       0,
@@ -381,12 +381,12 @@
   "production": {
     "trimPaperback": {
       "w": 8.5,
-      "h": 11.0,
+      "h": 11,
       "trimClass": "large"
     },
     "trimHardcover": {
       "w": 8.25,
-      "h": 11.0,
+      "h": 11,
       "trimClass": "large"
     },
     "hardcoverTemplateConfirmed": true,
@@ -407,7 +407,7 @@
       "sourcePageCount": 160,
       "sourceTrimIn": {
         "w": 8.25,
-        "h": 11.0
+        "h": 11
       },
       "fullCoverWidthIn": 18.624,
       "fullCoverHeightIn": 12.417,
@@ -433,7 +433,7 @@
     "kdpPrintCost": {
       "$comment": "KDP resmî formülleri · 12 Ağustos 2026 · Amazon.com",
       "paperbackLargeTrimBW": {
-        "fixed": 1.0,
+        "fixed": 1,
         "perPage": 0.017,
         "minPages": 110,
         "maxPages": 828
@@ -476,26 +476,26 @@
         "taşma oranı kitabın sayfa sayısını belirleyen tek değişkendir."
       ],
       "measured": {
-        "wordsPerTypesetPage": 470.3,
-        "wordsPerGame": 730,
-        "textPagesPerGame": 1.303,
-        "diagramPagesPerGame": 0.259,
-        "measuredPagesPerGame": 1.564,
-        "billedPagesPerGame": 2.036,
-        "spreadOverflowRate": 0.018,
+        "wordsPerTypesetPage": 475.3,
+        "wordsPerGame": 729.4,
+        "textPagesPerGame": 1.273,
+        "diagramPagesPerGame": 0.262,
+        "measuredPagesPerGame": 1.535,
+        "billedPagesPerGame": 2.032,
+        "spreadOverflowRate": 0.016,
         "spreadOverflowGames": [
           "tablut"
         ],
-        "sampleSize": 56,
-        "projectedTotalPages": 254,
-        "deviationPct": -0.78,
+        "sampleSize": 63,
+        "projectedTotalPages": 252,
+        "deviationPct": -1.56,
         "withinTolerance": true,
         "measuredAtPhase": "phase6",
         "measuredAtGate": "phase1",
         "overflowDriver": "both",
-        "textSpreadPages": 0.696,
+        "textSpreadPages": 0.699,
         "diagramSpreadPages": 0.632,
-        "report": "06_REPORTS/phase6-typeset-measurement.json",
+        "report": "06_REPORTS/phase7-typeset-measurement.json",
         "$supersedes": [
           "ÖRNEKLEM ÜÇ FAZDA BÜYÜDÜ VE MODEL HER SEFERİNDE DÜZELDİ.",
           "",
@@ -630,7 +630,34 @@
           "⚠ 'projectedTotalPages' 100 OYUNLUK KAPSAMIN izdüşümüdür ve öyle kalır:",
           "kapsam kilitlidir ve sessizce yeniden yazılmaz. KİTABIN GERÇEK sayfa",
           "sayısı 56 maddeden ÜRETİLİR ve 04_BUILD/interior.py onu SAYAR —",
-          "tahmin etmez. Kapak sırtı o SAYILAN değerden hesaplanır."
+          "tahmin etmez. Kapak sırtı o SAYILAN değerden hesaplanır.",
+          "",
+          "FAZ 7 · KURTARMA + HERO GÖRSEL GEÇİŞİ SONRASI (63 oyun) — 15-16 Eylül 2026.",
+          "",
+          "                     Faz 6 (56)   Faz 7 (63)",
+          "  kelime/sayfa           470.3        475.3",
+          "  kelime/oyun            None         729.4",
+          "  olculen sayfa/oyun     1.564        1.535",
+          "  faturalanan            2.036        2.032",
+          "  tasan madde            ['tablut']   ['tablut']",
+          "  projectedTotalPages    254          252",
+          "  sapma                  -0.78%       -1.56%",
+          "",
+          "Yedi oyun eklendi (congklak, ayoayo, gebeta, hus, mefuvha,",
+          "ludus-duodecim-scriptorum, morra) ve model YENIDEN OLCULDU: sapma",
+          "bandin icinde kaldi, tasan tek madde hala sadece tablut.",
+          "",
+          "ONEMLI METODOLOJI NOTU: bu olcum (calibrate_pages.py) SADECE metin +",
+          "SVG diyagram yuksekligini modeller ve 100 oyunluk HEDEF kapsam icin",
+          "bir projeksiyondur — su anki 63 oyunluk KITABIN gercek sayfa sayisi",
+          "DEGILDIR. Ayni fazda interior.py'ye HER OYUN ICIN BIR GPT Image",
+          "kahraman gorseli eklendi (bkz. 07_ASSETS/GBK02_GAME_ILLUSTRATION_",
+          "MANIFEST.json); bu gorseller calibrate_pages.py'nin modelinde YOKTUR",
+          "ve olmamalidir — gercek, SAYILMIS sayfa sayisi (kapak sirti buradan",
+          "degil oradan hesaplanir) 06_REPORTS/interior-<edition>.json icindedir:",
+          "paperback 180 s. · hardcover 184 s. · largeprint 266 s. Dort sayfaya",
+          "tasan madde sayisi (--check esigi altisi) paperback'te 3, hardcover'da",
+          "5'tir; ikisi de sinirin altindadir."
         ]
       },
       "$comment": [
@@ -710,8 +737,8 @@
         "VERİLMEZ. Kurucu A4 'bootstrap: hayır' demişti; Phase 2 v3 talimatı § 16-17",
         "büyük puntoyu açıkça istedi — bu blok o talimatın karşılığıdır."
       ],
-      "bodyPt": 16.0,
-      "minimumPt": 12.0,
+      "bodyPt": 16,
+      "minimumPt": 12,
       "editionLabel": "Large Print Edition",
       "diagramPageBudget": 0.6
     }
@@ -815,8 +842,8 @@
     "$comment": "Ayrıntı: 00_CONTEXT/STYLE.md. Ölçülen değerler qa_* kapılarından gelir.",
     "ruleTextMaxSentenceWords": 22,
     "ruleTextRequiresNumberedSteps": true,
-    "narrativeSentenceAvgMin": 12.0,
-    "narrativeSentenceAvgMax": 19.0,
+    "narrativeSentenceAvgMin": 12,
+    "narrativeSentenceAvgMax": 19,
     "forbiddenPatterns": [
       "sadece … değil, aynı zamanda",
       "not only … but also",
@@ -848,5 +875,20 @@
         "detail": "all fifty-six on two pages, by family, region and number of players."
       }
     ]
+  },
+  "metadata": {
+    "title": "The Great Book of World Games",
+    "subtitle": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+    "description": "Fifty-six traditional games from thirty-nine cultures spanning some 4,600 years, arranged by mechanic rather than by region into seven families — Sowing Games, Hunt and Siege, Race Home, Line and Territory and others. Each entry gives sourced provenance, complete playable rules and a deterministic vector board diagram, and the seven rule sets that are scholarly reconstructions say so in the prose. The oldest game in it is the Royal Game of Ur, at 2600 BCE. It aims at the gap between academic game history, which is authoritative but unplayable, and the cheap family-games listicle.",
+    "$source": "scripts/catalog/valice-catalog.mjs on 2026-09-07 — the same strings the live product page serves. These configs predate the `metadata` convention, which is why metadata-lint reported title and description missing."
+  },
+  "measured": {
+    "56": 56,
+    "39": 39,
+    "4": 4,
+    "600": 600,
+    "$countsWhy": "Counted 2026-09-07 off 02_MANUSCRIPT/book.json: len(games) = 56, and the distinct `culture` values across those 56 games number exactly 39. The '4,600 Years' of the subtitle is a span, not a content count: the earliest dated game is the Royal Game of Ur, 'played from about 2600 BC', which is 4,626 years to 2026 — so 4,600 is true and rounded DOWN. metadata-lint splits '4,600' on the comma, which is why 4 and 600 appear here as separate keys.",
+    "4600": 4600,
+    "$span4600": "The subtitle's '4,600 Years' as ONE number. The keys 4 and 600 are also present because metadata-lint splits on the comma and checks each half; kdp-reconcile strips the comma and checks the whole. Both want backing and the span is the same either way: the earliest dated game is the Royal Game of Ur, 'played from about 2600 BC', which is 4,626 years to 2026 — so 4,600 is true and rounded DOWN."
   }
 }

@@ -23,13 +23,13 @@ with AI and then substantially edited). It asks separately about **text**,
 | | |
 |---|---|
 | Status | **AI-generated, then edited and verified against printed sources** |
-| Volume | 56 game entries · 2,039 words of front matter · 2,415 words of family openers |
+| Volume | 56 game entries · 2,039 words of front matter · 2,422 words of family openers |
 | Printed total | 65,000+ words |
 
 Every rule set was drafted with AI assistance **from a named printed source
 opened at page level**, and each entry carries that citation with its page
 numbers. The project keeps a separate verification record
-(`01_SOURCE/source_verification.json`, 74 entries) in which each
+(`01_SOURCE/source_verification.json`, 80 entries) in which each
 citation is tied to a supporting passage quoted from the source.
 
 Where a source did not settle a rule, the book says so on the page rather than
@@ -63,7 +63,7 @@ commercial language.
 
 ### Interior diagrams — **NOT AI-generated**
 
-This distinction matters and is easy to get wrong. The 51 board diagrams
+This distinction matters and is easy to get wrong. The 57 board diagrams
 inside the book were **not** produced by an image model. They are drawn by the
 project's own code (`04_BUILD/render_diagrams.py`) from structured data — each
 board is a list of points and edges, and the renderer emits SVG

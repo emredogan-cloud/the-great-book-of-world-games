@@ -7,17 +7,17 @@
  ],
  "generatedAtPhase": "phase6",
  "measured": {
-  "games": 56,
-  "cultures": 39,
+  "games": 63,
+  "cultures": 45,
   "families": 7,
-  "reconstructed": 7,
+  "reconstructed": 8,
   "oldestGameBCE": 2600,
   "oldestGameAgeYears": 4600,
   "publicationYear": 2026,
-  "subtitleMeasured": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleMeasured": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
   "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
   "frontMatterWords": 2039,
-  "familyOpenerWords": 2415
+  "familyOpenerWords": 2422
  },
  "limits": {
   "titleChars": 160,
@@ -35,7 +35,7 @@
     970,
     600
    ],
-   "title": "56 games. 39 cultures. One table.",
+   "title": "63 games. 45 cultures. One table.",
    "body": "This is a reference book you play from, not one you only read. Every game is set out across two facing pages so the book lies open on the table and nobody turns a page mid-turn. Every rule set names the work and the pages it was read from, and where a record is incomplete the book says so on the page instead of filling the gap quietly.",
    "processed": [
     {
@@ -71,7 +71,7 @@
     600
    ],
    "title": "Sorted by how they work, not by where they are from",
-   "body": "Most collections file games by country, which teaches geography and hides the interesting part. This one files them by mechanism, so the sowing games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part. 39 cultures are represented, from Sumer to the Sámi, and each entry names the culture precisely rather than a continent.",
+   "body": "Most collections file games by country, which teaches geography and hides the interesting part. This one files them by mechanism, so the sowing games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part. 45 cultures are represented, from Sumer to the Sámi, and each entry names the culture precisely rather than a continent.",
    "processed": [
     {
      "file": "07_ASSETS/web/aplus/aplus-02-cultural-diversity.png",

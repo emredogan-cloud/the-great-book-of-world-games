@@ -13,57 +13,57 @@
     {
      "kind": "frontTitle",
      "text": "THE GREAT BOOK OF",
-     "x0": 11.2624,
+     "x0": 11.3075,
      "y0": 10.535,
-     "x1": 15.2082,
+     "x1": 15.2533,
      "y1": 10.8031
     },
     {
      "kind": "frontTitle",
      "text": "WORLD GAMES",
-     "x0": 9.8438,
+     "x0": 9.8889,
      "y0": 9.8,
-     "x1": 16.6268,
+     "x1": 16.6719,
      "y1": 10.625
     },
     {
      "kind": "frontTitle",
-     "text": "56 games from 4,600 years of human play",
-     "x0": 11.8326,
+     "text": "63 games from 4,600 years of human play",
+     "x0": 11.8777,
      "y0": 9.5033,
-     "x1": 14.638,
+     "x1": 14.6831,
      "y1": 9.67
     },
     {
      "kind": "frontTitle",
-     "text": "Rules, boards and stories from 39 cultures",
-     "x0": 11.8163,
+     "text": "Rules, boards and stories from 45 cultures",
+     "x0": 11.8614,
      "y0": 9.3183,
-     "x1": 14.6543,
+     "x1": 14.6994,
      "y1": 9.485
     },
     {
      "kind": "frontAuthor",
      "text": "EMRE DOĞAN",
-     "x0": 11.8467,
+     "x0": 11.8918,
      "y0": 0.7833,
-     "x1": 14.6239,
+     "x1": 14.669,
      "y1": 1.0996
     },
     {
      "kind": "spineText",
      "text": "THE GREAT BOOK OF WORLD GAMES",
-     "x0": 8.714,
+     "x0": 8.7366,
      "y0": 7.5746,
-     "x1": 8.8343,
+     "x1": 8.8569,
      "y1": 10.2754
     },
     {
      "kind": "spineText",
      "text": "EMRE DOĞAN",
-     "x0": 8.714,
+     "x0": 8.7366,
      "y0": 0.631,
-     "x1": 8.8343,
+     "x1": 8.8569,
      "y1": 1.569
     },
     {
@@ -76,7 +76,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "56 traditional games from 39 cultures, from the royal graves",
+     "text": "63 traditional games from 45 cultures, from the royal graves",
      "x0": 0.8,
      "y0": 7.0222,
      "x1": 5.8,
@@ -212,7 +212,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "Emre is a puzzle designer, mythologist, and game archivist d",
+     "text": "Emre Doğan writes about the stories that cultures tell thems",
      "x0": 0.8,
      "y0": 3.2306,
      "x1": 5.8,
@@ -220,11 +220,51 @@
     },
     {
      "kind": "backCopy",
-     "text": "ancient cultures, codes, and stories for the next generation",
+     "text": "going. Trained as a software engineer, he came to mythology ",
      "x0": 0.8,
      "y0": 3.05,
      "x1": 5.8,
      "y1": 3.2028
+    },
+    {
+     "kind": "backCopy",
+     "text": "— through a single story that would not leave him alone — an",
+     "x0": 0.8,
+     "y0": 2.8694,
+     "x1": 5.8,
+     "y1": 3.0222
+    },
+    {
+     "kind": "backCopy",
+     "text": "underneath. CODEX MYTHOLOGICA, his first book, gathers seven",
+     "x0": 0.8,
+     "y0": 2.6889,
+     "x1": 5.8,
+     "y1": 2.8417
+    },
+    {
+     "kind": "backCopy",
+     "text": "nineteen traditions and retells each one in full. He reads i",
+     "x0": 0.8,
+     "y0": 2.5083,
+     "x1": 5.8,
+     "y1": 2.6611
+    },
+    {
+     "kind": "backCopy",
+     "text": "and is grateful daily to the translators and ethnographers w",
+     "x0": 0.8,
+     "y0": 2.3278,
+     "x1": 5.8,
+     "y1": 2.4806
+    },
+    {
+     "kind": "backCopy",
+     "text": "book like this possible for someone who is neither. He lives",
+     "x0": 0.8,
+     "y0": 2.1472,
+     "x1": 5.8,
+     "y1": 2.3
     }
    ],
    "spineFit": [
@@ -252,17 +292,17 @@
     }
    ],
    "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
-   "sha256": "e8679dae049013f92d94da5d751deab11493c6c1dc1c53bf675be93e71059048",
-   "bytes": 21142924,
+   "sha256": "cd7e16e9780be914507e01f9d330659dba504b70eb490f37e57a4108d9d36e75",
+   "bytes": 21211064,
    "wrapIn": [
-    17.6103,
+    17.6554,
     11.25
    ],
-   "spineIn": 0.3603,
+   "spineIn": 0.4054,
    "artwork": "07_ASSETS/print/cover-wrap-paperback.png",
    "artworkPrep": {
     "file": "07_ASSETS/print/cover-wrap-paperback.png",
-    "widthPx": 5283,
+    "widthPx": 5297,
     "heightPx": 3375,
     "scrims": [
      {
@@ -282,10 +322,10 @@
       "$note": "tüylenmiş yıkama · beyaz panel DEĞİL · § 7 ölçülen destek"
      }
     ],
-    "scaleFromProcessed": 0.8418,
+    "scaleFromProcessed": 0.844,
     "effectiveDpi": 300.0,
-    "sha256": "e9d6a061e08bde7df1bce2dc92900601535a667b0a5baf7a5b6a7dde8effe411",
-    "bytes": 12891327
+    "sha256": "d10bbf33b5826c9549b2dc1f85a3ecfebe349a7bd95925131efe6973eb59ad8f",
+    "bytes": 12929262
    }
   },
   "hardcover": {
@@ -309,7 +349,7 @@
     },
     {
      "kind": "frontTitle",
-     "text": "56 games from 4,600 years of human play",
+     "text": "63 games from 4,600 years of human play",
      "x0": 12.4078,
      "y0": 10.3303,
      "x1": 15.2132,
@@ -317,7 +357,7 @@
     },
     {
      "kind": "frontTitle",
-     "text": "Rules, boards and stories from 39 cultures",
+     "text": "Rules, boards and stories from 45 cultures",
      "x0": 12.3915,
      "y0": 10.1453,
      "x1": 15.2295,
@@ -357,7 +397,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "56 traditional games from 39 cultures, from the royal graves",
+     "text": "63 traditional games from 45 cultures, from the royal graves",
      "x0": 1.266,
      "y0": 7.4882,
      "x1": 6.266,
@@ -493,7 +533,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "Emre is a puzzle designer, mythologist, and game archivist d",
+     "text": "Emre Doğan writes about the stories that cultures tell thems",
      "x0": 1.266,
      "y0": 3.6966,
      "x1": 6.266,
@@ -501,11 +541,51 @@
     },
     {
      "kind": "backCopy",
-     "text": "ancient cultures, codes, and stories for the next generation",
+     "text": "going. Trained as a software engineer, he came to mythology ",
      "x0": 1.266,
      "y0": 3.516,
      "x1": 6.266,
      "y1": 3.6688
+    },
+    {
+     "kind": "backCopy",
+     "text": "— through a single story that would not leave him alone — an",
+     "x0": 1.266,
+     "y0": 3.3354,
+     "x1": 6.266,
+     "y1": 3.4882
+    },
+    {
+     "kind": "backCopy",
+     "text": "underneath. CODEX MYTHOLOGICA, his first book, gathers seven",
+     "x0": 1.266,
+     "y0": 3.1549,
+     "x1": 6.266,
+     "y1": 3.3077
+    },
+    {
+     "kind": "backCopy",
+     "text": "nineteen traditions and retells each one in full. He reads i",
+     "x0": 1.266,
+     "y0": 2.9743,
+     "x1": 6.266,
+     "y1": 3.1271
+    },
+    {
+     "kind": "backCopy",
+     "text": "and is grateful daily to the translators and ethnographers w",
+     "x0": 1.266,
+     "y0": 2.7938,
+     "x1": 6.266,
+     "y1": 2.9466
+    },
+    {
+     "kind": "backCopy",
+     "text": "book like this possible for someone who is neither. He lives",
+     "x0": 1.266,
+     "y0": 2.6132,
+     "x1": 6.266,
+     "y1": 2.766
     }
    ],
    "spineFit": [
@@ -533,8 +613,8 @@
     }
    ],
    "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
-   "sha256": "950d121c350f6ccb749ecb206a3ef95d796bc6568231afc13e60791f875afb89",
-   "bytes": 24526117,
+   "sha256": "3ea1480877740da9a512b589159bf2277a9cf11eacd0a10ab7f30a744f653936",
+   "bytes": 24526639,
    "wrapIn": [
     18.624,
     12.417
@@ -575,65 +655,65 @@
     {
      "kind": "frontTitle",
      "text": "THE GREAT BOOK OF",
-     "x0": 11.4246,
+     "x0": 11.5011,
      "y0": 10.535,
-     "x1": 15.3704,
+     "x1": 15.4469,
      "y1": 10.8031
     },
     {
      "kind": "frontTitle",
      "text": "WORLD GAMES",
-     "x0": 10.006,
+     "x0": 10.0825,
      "y0": 9.8,
-     "x1": 16.789,
+     "x1": 16.8655,
      "y1": 10.625
     },
     {
      "kind": "frontTitle",
-     "text": "56 games from 4,600 years of human play",
-     "x0": 11.9948,
+     "text": "63 games from 4,600 years of human play",
+     "x0": 12.0713,
      "y0": 9.5033,
-     "x1": 14.8002,
+     "x1": 14.8767,
      "y1": 9.67
     },
     {
      "kind": "frontTitle",
-     "text": "Rules, boards and stories from 39 cultures",
-     "x0": 11.9785,
+     "text": "Rules, boards and stories from 45 cultures",
+     "x0": 12.055,
      "y0": 9.3183,
-     "x1": 14.8165,
+     "x1": 14.893,
      "y1": 9.485
     },
     {
      "kind": "frontTitle",
      "text": "LARGE PRINT EDITION",
-     "x0": 11.9192,
+     "x0": 11.9957,
      "y0": 9.06,
-     "x1": 14.8758,
+     "x1": 14.9523,
      "y1": 9.2456
     },
     {
      "kind": "frontAuthor",
      "text": "EMRE DOĞAN",
-     "x0": 12.0089,
+     "x0": 12.0854,
      "y0": 0.7833,
-     "x1": 14.7861,
+     "x1": 14.8626,
      "y1": 1.0996
     },
     {
      "kind": "spineText",
      "text": "THE GREAT BOOK OF WORLD GAMES · LARGE PRINT",
-     "x0": 8.8029,
+     "x0": 8.8412,
      "y0": 7.1664,
-     "x1": 8.9129,
+     "x1": 8.9512,
      "y1": 10.6836
     },
     {
      "kind": "spineText",
      "text": "EMRE DOĞAN",
-     "x0": 8.7951,
+     "x0": 8.8334,
      "y0": 0.631,
-     "x1": 8.9154,
+     "x1": 8.9537,
      "y1": 1.569
     },
     {
@@ -654,7 +734,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "56 traditional games from 39 cultures, from the royal graves",
+     "text": "63 traditional games from 45 cultures, from the royal graves",
      "x0": 0.8,
      "y0": 6.7861,
      "x1": 5.8,
@@ -790,7 +870,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "Emre is a puzzle designer, mythologist, and game archivist d",
+     "text": "Emre Doğan writes about the stories that cultures tell thems",
      "x0": 0.8,
      "y0": 2.9944,
      "x1": 5.8,
@@ -798,11 +878,51 @@
     },
     {
      "kind": "backCopy",
-     "text": "ancient cultures, codes, and stories for the next generation",
+     "text": "going. Trained as a software engineer, he came to mythology ",
      "x0": 0.8,
      "y0": 2.8139,
      "x1": 5.8,
      "y1": 2.9667
+    },
+    {
+     "kind": "backCopy",
+     "text": "— through a single story that would not leave him alone — an",
+     "x0": 0.8,
+     "y0": 2.6333,
+     "x1": 5.8,
+     "y1": 2.7861
+    },
+    {
+     "kind": "backCopy",
+     "text": "underneath. CODEX MYTHOLOGICA, his first book, gathers seven",
+     "x0": 0.8,
+     "y0": 2.4528,
+     "x1": 5.8,
+     "y1": 2.6056
+    },
+    {
+     "kind": "backCopy",
+     "text": "nineteen traditions and retells each one in full. He reads i",
+     "x0": 0.8,
+     "y0": 2.2722,
+     "x1": 5.8,
+     "y1": 2.425
+    },
+    {
+     "kind": "backCopy",
+     "text": "and is grateful daily to the translators and ethnographers w",
+     "x0": 0.8,
+     "y0": 2.0917,
+     "x1": 5.8,
+     "y1": 2.2444
+    },
+    {
+     "kind": "backCopy",
+     "text": "book like this possible for someone who is neither. He lives",
+     "x0": 0.8,
+     "y0": 1.9111,
+     "x1": 5.8,
+     "y1": 2.0639
     }
    ],
    "spineFit": [
@@ -830,17 +950,17 @@
     }
    ],
    "file": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.pdf",
-   "sha256": "7250ae36cc49fa4feae747259416e73db9ecad30dc02d753d8092aff2fe3efac",
-   "bytes": 21381891,
+   "sha256": "0063f94dfbdc8ba969db8c0e8bffaf0c30033ecde3bd88fc05fb99febadddb09",
+   "bytes": 21491977,
    "wrapIn": [
-    17.7725,
+    17.849,
     11.25
    ],
-   "spineIn": 0.5225,
+   "spineIn": 0.599,
    "artwork": "07_ASSETS/print/cover-wrap-largeprint.png",
    "artworkPrep": {
     "file": "07_ASSETS/print/cover-wrap-largeprint.png",
-    "widthPx": 5332,
+    "widthPx": 5355,
     "heightPx": 3375,
     "scrims": [
      {
@@ -852,7 +972,7 @@
       ],
       "washRGB": [
        215,
-       192,
+       193,
        163
       ],
       "strength": 0.62,
@@ -860,10 +980,10 @@
       "$note": "tüylenmiş yıkama · beyaz panel DEĞİL · § 7 ölçülen destek"
      }
     ],
-    "scaleFromProcessed": 0.8496,
+    "scaleFromProcessed": 0.8533,
     "effectiveDpi": 300.0,
-    "sha256": "12afb913af504627d631f3c9ddfa745ad90725387edcf509f937e7786be0eb31",
-    "bytes": 13014002
+    "sha256": "bd8a1cee0840d9a7bb5322de0ad0766d0cb82561bf2356dc61a6ce00084510da",
+    "bytes": 13072961
    }
   }
  },
@@ -872,8 +992,8 @@
   "widthPx": 1600,
   "heightPx": 2560,
   "aspect": 0.625,
-  "sha256": "9b1f14c4069092e0610c1e162962361491a756a43c3a28576a98348253cc880d",
-  "bytes": 1031472,
+  "sha256": "bc45110fe2ebd7e94b9069b6822aa98727cc38c7c3033174e315f98c7085b35b",
+  "bytes": 1030653,
   "typography": [
    {
     "kind": "frontTitle",
@@ -887,12 +1007,12 @@
    },
    {
     "kind": "frontTitle",
-    "text": "56 games from 4,600 years of human play",
+    "text": "63 games from 4,600 years of human play",
     "px": 38
    },
    {
     "kind": "frontTitle",
-    "text": "Rules, boards and stories from 39 cultures",
+    "text": "Rules, boards and stories from 45 cultures",
     "px": 38
    },
    {

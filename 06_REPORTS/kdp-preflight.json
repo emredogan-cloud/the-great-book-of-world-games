@@ -23,7 +23,7 @@
     }
    ],
    "geometry": {
-    "pages": 160,
+    "pages": 180,
     "sizes": [
      [
       612.0,
@@ -45,30 +45,32 @@
      10,
      12,
      14,
-     26,
-     40,
-     66,
-     86,
-     116,
-     124,
-     140,
+     36,
+     50,
+     67,
+     80,
+     100,
+     123,
+     129,
+     134,
      142,
-     146,
-     152,
-     156,
-     158,
-     160
+     160,
+     162,
+     166,
+     172,
+     176,
+     178
     ]
    },
    "language": {
-    "extractedWords": 65419,
+    "extractedWords": 71831,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
-    "rasterImages": 0
+    "rasterImages": 63
    },
-   "pageCount": 160
+   "pageCount": 180
   },
   "hardcover": {
    "fonts": [
@@ -90,7 +92,7 @@
     }
    ],
    "geometry": {
-    "pages": 160,
+    "pages": 184,
     "sizes": [
      [
       594.0,
@@ -112,30 +114,34 @@
      10,
      12,
      14,
-     26,
-     40,
-     66,
-     86,
-     116,
-     124,
-     140,
-     142,
+     36,
+     49,
+     52,
+     67,
+     71,
+     84,
+     104,
+     127,
+     133,
+     138,
      146,
-     152,
-     156,
-     158,
-     160
+     164,
+     166,
+     170,
+     176,
+     180,
+     182
     ]
    },
    "language": {
-    "extractedWords": 65419,
+    "extractedWords": 71835,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
-    "rasterImages": 0
+    "rasterImages": 63
    },
-   "pageCount": 160
+   "pageCount": 184
   },
   "largeprint": {
    "fonts": [
@@ -157,7 +163,7 @@
     }
    ],
    "geometry": {
-    "pages": 232,
+    "pages": 266,
     "sizes": [
      [
       612.0,
@@ -177,23 +183,23 @@
      2,
      8,
      16,
-     54,
-     94,
-     124,
-     206,
-     210,
-     226
+     148,
+     236,
+     238,
+     242,
+     258,
+     266
     ]
    },
    "language": {
-    "extractedWords": 65511,
+    "extractedWords": 71952,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
-    "rasterImages": 0
+    "rasterImages": 63
    },
-   "pageCount": 232
+   "pageCount": 266
   }
  }
 }

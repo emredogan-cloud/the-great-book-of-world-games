@@ -372,6 +372,45 @@ class Layout:
 # ── İÇERİK → FLOWABLE ────────────────────────────────────────────────────
 DIAGRAM_PAGE_BUDGET = 0.52   # çift sayfanın SAĞ yaprağında diyagrama ayrılan pay
 
+# ⚠ HERO GÖRSELİ BÜTÇESİ — SOL yaprakta, başlıktan ÖNCE, sayfa yüksekliğinin
+# bu kesri kadar yer kaplar (genişlik değil — 3:2 GPT Image çıktısı bu
+# yükseklik hedefine göre kendiliğinden ölçeklenir, bkz. ImageFlow).
+# run_check() dört sayfalık madde sayısını ALTI ile sınırlar (K-ARCHIVE
+# "çift sayfa" sözü). Bu değer o sınırı AŞMAYACAK şekilde --check ile
+# ÖLÇÜLEREK seçilmiştir; büyütülecekse yeniden ölçülmeden büyütülmez.
+HERO_IMAGE_BUDGET = 0.19
+
+
+class ImageFlow:
+    """Bir kahraman görselini (GPT Image, raster PNG) akışa sokar.
+
+    SVGFlow ile aynı arayüz (wrap/split/drawOn) — dizgi motoru ikisini
+    ayırt etmez. Görsel BÖLÜNMEZ ve yükseklik hedefine göre ölçeklenir;
+    genişlik hiçbir zaman sütun genişliğini AŞMAZ.
+    """
+
+    def __init__(self, path, max_w_pt, max_h_pt, gap_pt=8.0):
+        from reportlab.lib.utils import ImageReader
+        self.path = path
+        self.reader = ImageReader(path)
+        iw, ih = self.reader.getSize()
+        self.gap = gap_pt
+        s = min(max_w_pt / iw, max_h_pt / ih, 1.0)
+        self.w = iw * s
+        self.h = ih * s
+
+    def wrap(self, aw, ah):
+        self.aw = aw
+        return aw, self.h + self.gap
+
+    def split(self, aw, ah):
+        return []                      # görsel BÖLÜNMEZ
+
+    def drawOn(self, canv, x, y, _sW=0):
+        cx = x + (getattr(self, "aw", self.w) - self.w) / 2.0
+        canv.drawImage(self.reader, cx, y + self.gap, self.w, self.h,
+                       preserveAspectRatio=True, mask="auto")
+
 # ⚠ SIRA OKUMA SIRASIDIR, ÖLÇÜM SIRASI DEĞİL.
 # `calibrate_pages.py` blokları yükseklik toplamak için sıralar ve orada
 # sıranın anlamı yoktur. BASILAN sayfada vardır: ilk sürümde 'Winning'
@@ -570,7 +609,8 @@ def _toc_flowables(fm, sty, pagemap, back_pages):
 
 
 # ── KİTABI KUR ───────────────────────────────────────────────────────────
-def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
+def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs, plate_docs=None):
+    plate_docs = plate_docs or {}
     lay = Layout(geom, sty)
     from reportlab.platypus import Paragraph
     P = lambda t, s: Paragraph(t, sty[s])  # noqa: E731
@@ -725,7 +765,11 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
             for d, lp_d in zip(docs, dia):
                 pb_d = SVGFlow(d, pw, ph * DIAGRAM_PAGE_BUDGET / max(len(docs), 1))
                 dia_ratio.append(round(lp_d.w / pb_d.w, 3))
-            stream = game_left(g, sty) + dia + game_right(g, sty)
+            hero = []
+            plate_path = plate_docs.get(g["gameId"])
+            if plate_path:
+                hero = [ImageFlow(plate_path, w0, h0 * HERO_IMAGE_BUDGET)]
+            stream = hero + game_left(g, sty) + dia + game_right(g, sty)
             used, rest = lay.flow(stream, "game", run_head=g["title"])
             if rest:
                 raise RuntimeError("largeprint: %s akışı bitmedi" % g["gameId"])
@@ -742,8 +786,6 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
         # sağ sayfa taşıyor ve 56 maddenin 39'u dört sayfaya çıkıyordu.
         # Dizgi ölçümü (calibrate_pages.py) maddeyi TEK AKIŞ olarak ölçer
         # ve 1,56 sayfa der; dizginin de öyle akması gerekir.
-        stream = game_left(g, sty) + game_right(g, sty)
-
         # ── ÇİFT SAYFA DENGESİ ─────────────────────────────────────────
         # Sol sayfayı tepeye kadar doldurup kalanı sağa atmak çalışır ama
         # ÇİRKİN ve yanıltıcıdır: Bao'da sol sayfa doluyor, sağ sayfa
@@ -754,6 +796,14 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs):
         # kapasitesi (çerçeve − diyagram) çıkarılır ve sol sayfa GEREKTİĞİ
         # KADAR doldurulur — ne fazlası ne eksiği.
         x0, yt0, w0, h0 = lay.frame(first)
+        # HERO GÖRSELİ — maddenin İLK öğesi, başlıktan bile önce: spread'i
+        # AÇAR. Kurucu direktifi: "no game section without a dedicated
+        # visual… placed BEFORE that game's rules content."
+        hero = []
+        plate_path = plate_docs.get(g["gameId"])
+        if plate_path:
+            hero = [ImageFlow(plate_path, w0, h0 * HERO_IMAGE_BUDGET)]
+        stream = hero + game_left(g, sty) + game_right(g, sty)
         docs = [diagram_docs[d] for d in g.get("diagrams", [])
                 if d in diagram_docs]
         # ⚠ DİYAGRAM BÜTÇESİ SAYFA BAŞINA, DİYAGRAM BAŞINA DEĞİL.
@@ -1107,6 +1157,27 @@ def build_edition(root, cfg, edition, out_dir, verbose=True):
         if fn.endswith(".svg"):
             diagram_docs[fn[:-4]] = sv.parse(os.path.join(ddir, fn))
 
+    # HERO GÖRSELLERİ — gameId'ye göre eşlenir (dosya adı GBK02_GAME_NNN_
+    # SLUG_HERO.jpg; NNN book.json games[] içindeki 1-tabanlı sıradır).
+    # PRINT İÇİN plates_print/ kullanılır: gri tonlama + küçültülmüş JPEG
+    # (bkz. 07_ASSETS/plates/ — orijinal renkli PNG kaynak, dijital/EPUB
+    # sürümler için saklanır, iç bloğa GİRMEZ). Kitap siyah mürekkep
+    # ekonomisiyle fiyatlandırılır (project_config.json → ink: "black");
+    # renkli bir görsel iç blokta baskı presine kontrolsüz bırakılmaz,
+    # gri dönüşüm burada YAPILIR (07_BUILD/… optimize_plates.py).
+    pdir = os.path.join(root, "07_ASSETS", "plates_print")
+    if not os.path.isdir(pdir):
+        pdir = os.path.join(root, "07_ASSETS", "plates")  # yedek: optimize edilmemiş
+    plate_docs = {}
+    if os.path.isdir(pdir):
+        order = [g["gameId"] for g in book["games"]]
+        for fn in sorted(os.listdir(pdir)):
+            m = re.match(r"GBK02_GAME_(\d{3})_.*_HERO\.(jpg|png)$", fn)
+            if m:
+                idx = int(m.group(1)) - 1
+                if 0 <= idx < len(order):
+                    plate_docs[order[idx]] = os.path.join(pdir, fn)
+
     # İÇ MARJ DÖNGÜSÜ: marj sayfa sayısına bağlı, sayfa sayısı marja.
     guess, seen = 200, []
     for _ in range(6):
@@ -1116,7 +1187,7 @@ def build_edition(root, cfg, edition, out_dir, verbose=True):
         else:
             sty = styles(geom["bodyPt"], geom["leadingPt"])
         lay, meta = build_layout(root, cfg, book, fm, bm, geom, sty,
-                                 diagram_docs)
+                                 diagram_docs, plate_docs)
         n = lay.n
         seen.append((guess, n))
         if gutter_in(n) == gutter_in(guess):

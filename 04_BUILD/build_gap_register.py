@@ -498,23 +498,6 @@ ENTRIES = {
     pat=['"lagori" OR "pittu" OR "lingocha" Karnataka game ethnography',
          'seven stones game South India folklore 1900s archive']),
 
-"morra": g("BLOCKED", "P3", 4, ["parlett-1999"],
-    "Erişilebilir kaynak AÇILDI ve mekaniği verdi ama PUANLAMA ve KAZANMA "
-    "KOŞULU yoktur. Bir oyun bitişi olmadan basılamaz.",
-    ["Falkener 1892 § Atep/Mora, ss. 103–105 AÇILDI: iki biçim kayıtlı "
-     "(ikisi birden parmak atar ve ikisi de tahmin eder; ya da biri atar öteki "
-     "tahmin eder) ve İTALYAN oyunu adlandırılıyor",
-     "Cicero De Officiis III.77 — bir ATASÖZÜDÜR, kural değil",
-     "Parlett 1999 telif altında"],
-    "Puanlama, kazanma koşulu, tur yapısı ve berabere kuralı.",
-    ["Morra'nın PUANLAMASINI ve KAZANMA koşulunu veren herhangi bir künye",
-     "Tur yapısı: kaç el oynanır, puan nasıl birikir",
-     "Berabere durumunda ne olduğu"],
-    s=["P1"],
-    rule=["turn order", "scoring", "end condition", "draw condition", "variants"],
-    ideal="Bir İtalyan halk oyunları derlemesi ya da Parlett'in morra bölümü.",
-    pat=['"morra" Italian finger game rules scoring', '"micatio" mora game history rules',
-         'morra gioco regole punteggio storico']),
 
 "myinda": g("BLOCKED", "P1", 2, ["pollux-onomasticon"],
     "Elde açılabilir tek kayıt Gomme'un İNGİLİZ 'Blind Man's Buff' maddesidir "
@@ -662,25 +645,6 @@ ENTRIES.update({
     pat=['Seville "Cultural Legacy of the Royal Game of the Goose" open access PDF',
          '"game of the goose" 63 spaces rules historical', 'giuoco dell\'oca regole storiche 63']),
 
-"ludus-duodecim-scriptorum": g("SOURCE-PENDING", "P6", 1, ["specialist-articles", "murray-1952"],
-    "Yeniden kurgulama BELİRSİZDİR: taşların iz üzerindeki YÖNÜ ve başlangıç "
-    "yerleşimi kesin bilinmiyor. Tahta yazıtları kural değil, SÖZ OYUNUDUR — "
-    "yani en çok bulunan kanıt en az kural taşıyan kanıttır.",
-    C_SCAN + ["Murray 1952 FAZ 6'DA AÇILDI (ss. 29–31) ve ÇELİŞKİLİ ÇIKTI: "
-              "basılı metin taşların 'table D'den toplandığını söyler, aynı "
-              "sayfadaki Fig. 16 (Ostia levhası) BEŞ tablo gösterir (A·B·C·D·E). "
-              "İzin SON çeyreği sayfadan çıkarılamıyor.",
-              "Schädler · Board Game Studies — HİÇ denenmedi"],
-    "İzin son çeyreği (nereden toplanır) — Murray'in metni ve şekli çelişiyor. "
-    "Başlangıç yerleşimi ve alma kuralı Murray s. 31'de VARDIR.",
-    ["Schädler, Ulrich — Roma tahta oyunları üzerine Board Game Studies çalışması",
-     "XII scripta için önerilmiş yeniden kurgulamalar ve ARALARINDAKİ FARK",
-     "Tabula ile XII scripta arasındaki tarihsel geçişi veren bir kaynak"],
-    s=["P1"], recon=E_RECON,
-    ideal="Rakip yeniden kurgulamaları KARŞILAŞTIRAN bir çalışma — kitap tek "
-          "yorum seçecek ve seçtiğini beyan edecek.",
-    pat=['Schädler ludus duodecim scriptorum reconstruction Board Game Studies',
-         'XII scripta Roman game reconstruction rules scholarship']),
 
 "nard": g("SOURCE-PENDING", "P2", 3, ["murray-1952"],
     "Birincil künye engelli (Murray 1952); ikinci künye bir Orta Farsça "
@@ -722,18 +686,6 @@ ENTRIES.update({
     pat=['Herskovits "Wari in the New World" JRAI 1932 PDF',
          '"adji boto" Ndyuka Maroon Suriname game rules']),
 
-"ayoayo": g("SOURCE-PENDING", "P2", 3, ["specialist-articles", "zaslavsky-1973"],
-    "Birincil künye Nijerya basımı dar dağıtımlı bir monografidir ve HİÇ "
-    "DENENMEDİ; ikinci künye (Zaslavsky) engelli.",
-    C_SCAN + ["Odeleye 1977 — HİÇ denenmedi",
-              "Zaslavsky 1973 proje genelinde DENENDİ ve açılamadı"],
-    "Ayò'nun ekim ve alma kuralı ve Oware'den FARKI.",
-    ["Odeleye, A. O., Ayo: A Popular Yoruba Game (Ibadan: Oxford University "
-     "Press Nigeria, 1977) — kural bölümü",
-     "KARAR MALZEMESİ: Ayòayò ile Oware kitapta AYRI maddeler mi? Kayıt "
-     "mekanik yakınlığı ve tekrar riskini işaretliyor — farkı yazan bir kaynak gerekir"],
-    s=["P1"],
-    pat=['Odeleye "Ayo: A Popular Yoruba Game" 1977', '"ayoayo" OR "ayò" Yoruba mancala rules']),
 
 "bohnenspiel": g("BLOCKED", "P1", 4, ["murray-1952", "bell-1960"], W_ACCESS,
     C_SCAN + ["Murray 1952 ve Bell proje genelinde DENENDİ ve açılamadı"],
@@ -745,57 +697,9 @@ ENTRIES.update({
     ideal="Alman kaynaklı bir dönem kaydı köken sorununu da hafifletir.",
     pat=['"Bohnenspiel" German mancala rules Murray', 'das Bohnenspiel Regeln historisch Saatspiel']),
 
-"congklak": g("BLOCKED", "P1", 4, ["murray-1952", "russ-2000"], W_ACCESS,
-    C_SCAN + ["Murray 1952 ve Russ 2000 proje genelinde DENENDİ ve açılamadı"],
-    "İki künyenin ikisi de engelli.",
-    ["Murray 1952 ya da Russ 2000'de congklak/congkak/dakon maddesi",
-     "Çukur sayısı, depo (rumah) kuralı, eş zamanlı başlangıç olup olmadığı, "
-     "ekim yönü, alma, tur sonu ve yeniden dizme kuralı",
-     "KARAR MALZEMESİ: sungka ile mekanik farkı — kitap ikisini ayrı madde "
-     "yapacaksa farkı yazmalı"],
-    pat=['"congklak" OR "congkak" OR "dakon" Javanese mancala rules',
-         'congkak Malay Indonesian sowing game rules ethnography']),
 
-"gebeta": g("SOURCE-PENDING", "P2", 3, ["specialist-articles", "townshend-1979"],
-    "İki künyenin ikisi de hakemli dergi makalesidir ve İKİSİ DE HİÇ DENENMEDİ. "
-    "Bu oyun kayıtta engelli KANITI olmayan az sayıdaki maddeden biridir.",
-    C_SCAN + ["Pankhurst 1971 · Ethiopia Observer 14 — HİÇ denenmedi",
-              "Townshend 1979 · Azania 14 — HİÇ denenmedi"],
-    "Gabata biçimlerinin hangisinin basılacağı ve o biçimin kural metni.",
-    ["Pankhurst, Richard, 'Gabata and Related Board Games of Ethiopia and the "
-     "Horn of Africa', Ethiopia Observer 14 (1971) — makalenin tamamı",
-     "Townshend 1979 · Azania 14 — ikinci bağımsız kaynak olarak",
-     "⚠ Kayıt uyarıyor: kaya oyulmuş tahtaların TARİHLENDİRMESİ tartışmalıdır; "
-     "kitap kesin tarih VERMEYECEK — kaynak bunu desteklemeli"],
-    cult=CULT_FULL,
-    ideal="Pankhurst makalesi + Amhara atfını veren çağdaş bir kaynak.",
-    pat=['Pankhurst "Gabata" Ethiopia Observer 1971 board games',
-         '"gebeta" OR "gabata" Ethiopian mancala rules Amhara',
-         'Townshend Mankala Eastern Southern Africa Azania 1979']),
 
-"hus": g("SOURCE-PENDING", "P2", 3, ["murray-1952", "townshend-1979"],
-    "Birincil künye (Murray 1952) engelli; ikincisi (Townshend 1979) HİÇ "
-    "DENENMEDİ. Oyun `attributed` taranmıştır: Nama atfı ZORUNLUDUR.",
-    C_SCAN + ["Murray 1952 DENENDİ ve açılamadı", "Townshend 1979 — HİÇ denenmedi",
-              "FAZ 6 · MURRAY ss. 207 ve 209 AÇILDI. § 8.2.4 diziyi ve dört açılış biçimini verir, ortak kurallar s. 207'dedir. YAZILMADI: 4×16 = 64 çukurluk tahta bu kitabın malzeme eşiğinin üstündedir ve Schultze'nin kaydıyla ILN çizimi tahta boyutunda ÇELİŞİR (4×16'ya karşı 4×8)."],
-    "Dört sıralı tahtanın kural metni ve Nama bağlamı.",
-    ["Murray 1952 ya da Townshend 1979'da hus/ǁhus maddesi — dört sıra, "
-     "ekim yönü, alma koşulu, bitiş",
-     "Nama topluluğu atfını veren bir kaynak (atıf zorunluluğu için)"],
-    s=["P1"], cult=CULT_FULL,
-    pat=['"hus" Nama mancala four row rules Namibia',
-         'Townshend Mankala Azania 1979 hus ohus']),
 
-"mefuvha": g("SOURCE-PENDING", "P2", 3, ["zaslavsky-1973", "townshend-1979"],
-    "Birincil künye (Zaslavsky) engelli; ikincisi (Townshend 1979) HİÇ "
-    "DENENMEDİ. Oyun `attributed` taranmıştır: Venda atfı ZORUNLUDUR.",
-    C_SCAN + ["Zaslavsky 1973 DENENDİ ve açılamadı", "Townshend 1979 — HİÇ denenmedi"],
-    "Dört sıralı tahtanın kural metni ve Venda bağlamı.",
-    ["Zaslavsky 1973 ya da Townshend 1979'da mefuvha/muravharavha maddesi",
-     "Venda topluluğu atfını veren bir kaynak"],
-    s=["P1"], cult=CULT_FULL,
-    pat=['"mefuvha" OR "muravharavha" Venda game rules South Africa',
-         'Venda traditional board game four row mancala']),
 
 "sungka": g("SOURCE-PENDING", "P2", 4, ["culin-1900-philippine", "murray-1952"],
     "Birincil künye 1900 tarihli bir dergi makalesidir — KAMUSAL ALANDADIR — "

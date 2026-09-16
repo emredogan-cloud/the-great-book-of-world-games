@@ -13,19 +13,19 @@
 
 | | Paperback | Hardcover |
 |---|---|---|
-| Final page count | **160** | **160** |
-| Trim | 8.5 × 11.0 in | 8.25 × 11.0 in |
+| Final page count | **180** | **184** |
+| Trim | 8.5 × 11 in | 8.25 × 11 in |
 | Bleed | none | none |
 | Inside margin (gutter) | 0.55 in | 0.675 in |
 | Outside margin | 0.5 in | 0.5 in |
 | Top / bottom margin | 0.625 / 0.625 in | 0.625 / 0.625 in |
-| Spine (from page count) | **0.3603 in** | **0.5490 in** |
-| Full cover wrap | 17.6103 × 11.2500 in | 18.6240 × 12.4170 in |
+| Spine (from page count) | **0.4054 in** | **0.5490 in** |
+| Full cover wrap | 17.6554 × 11.2500 in | 18.6240 × 12.4170 in |
 | Fonts | Liberation Serif, embedded and subsetted | same |
 | Raster images | none — every diagram is vector | same |
 
 Measured ink margins in the built paperback — the closest any ink comes to the
-trim edge, on any of the 160 pages:
+trim edge, on any of the 180 pages:
 
 - left **? in** · right **? in**
 - top **0.36 in** · bottom **0.3467 in**
@@ -41,10 +41,10 @@ this file was generated.
 | What you may see | Is it a problem? |
 |---|---|
 | "Your cover has not been uploaded" | Yes — cover artwork does not exist yet. Expected. |
-| Blank pages flagged | No. There are 18 deliberate blanks: a book of two-page spreads needs each game to start on a left-hand page, and part titles open on the right. |
+| Blank pages flagged | No. There are 20 deliberate blanks: a book of two-page spreads needs each game to start on a left-hand page, and part titles open on the right. |
 | Low-resolution image warning | Would be a real problem. There are no raster images at all, so it should not appear. |
 | Font not embedded | Would be a real problem. All four faces are embedded and subsetted; verified with `pdffonts`. |
-| Page size mismatch | Would be a real problem. All 160 pages are exactly 8.5 × 11.0 in. |
+| Page size mismatch | Would be a real problem. All 180 pages are exactly 8.5 × 11 in. |
 | Text too close to the trim | Should not appear — see the measured margins above. |
 
 ---
@@ -61,7 +61,7 @@ this file was generated.
 3. **A spread with two diagrams — for example Alquerque, pages 88–89.** Confirm
    both diagrams sit on the right-hand page with the rules, and neither is
    clipped.
-4. **The board templates (from page 140).**
+4. **The board templates (from page 160).**
    These are meant to survive a photocopier. Check the line weight is still
    visible at the smallest zoom the Previewer offers.
 5. **The three indexes.** Pick a culture, follow it to the page, confirm the
@@ -76,7 +76,7 @@ this file was generated.
 
 - **No cover, in any format.** Paperback, hardcover and Kindle all need one and
   none exists. This is the single blocking gap.
-- **Hardcover geometry is confirmed, not derived.** The spine, wrap and hinge above were confirmed directly from KDP (KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 160 sayfa · 2026-08-21), not computed from a formula. Re-confirm only if the page count changes from 160.
+- **Hardcover geometry was confirmed at a different page count.** KURUCU EYLEMİ: gerçek sayfa sayısı (184) KDP hesaplayıcısına girilen değerden (160) FARKLI. Hesaplayıcıyı yeni sayfa sayısıyla YENİDEN çalıştır ve project_config.json § hardcoverConfirmedTemplate'i güncelle — bu geometri bayat olabilir. Re-run the KDP Print Cover Calculator at the current page count before generating hardcover artwork.
 - **A+ images: 1 missing.**
 - **Author biography is empty.** KDP rejected a placeholder biography on a
   sibling title. Write a real one before publishing.
@@ -87,12 +87,12 @@ this file was generated.
 
 | | paperback | hardcover |
 |---|---|---|
-| Full wrap | 17.6103 × 11.2500 in | 18.6240 × 12.4170 in |
-| Spine | 0.3603 in | 0.5490 in |
-| Artwork | 5283 × 3375 px @ 300 ppi | 5587 × 3725 px |
+| Full wrap | 17.6554 × 11.2500 in | 18.6240 × 12.4170 in |
+| Spine | 0.4054 in | 0.5490 in |
+| Artwork | 5297 × 3375 px @ 300 ppi | 5587 × 3725 px |
 | Type | vector, not rasterised | same |
 
-1. **The spine.** It is 0.360 in — a thin spine, and the title is set at
+1. **The spine.** It is 0.405 in — a thin spine, and the title is set at
    8.75 pt to fit the part of the artwork that measured clean.
    In the Previewer, check the spine text is centred between the two folds and
    that no letter touches a fold. This is the single most common cover

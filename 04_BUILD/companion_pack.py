@@ -5,7 +5,7 @@ COMPANION PACK — The Great Book of World Games
 Builds the free digital companion for the printed paperback: four PDFs and a
 manifest, every fact in them read from the manuscript data.
 
-    game-index.pdf              all 56 games in book order, one table
+    game-index.pdf              all games in book order, one table
     quick-reference-cards.pdf   one cut-out card per game, four to a sheet
     score-sheets.pdf            general score grid · match record · tailored
                                 tally sheets ONLY where the rules count
@@ -55,6 +55,17 @@ LETTER_W, LETTER_H = 8.5 * IN, 11.0 * IN
 MARGIN = 0.5 * IN
 FOOTER = "valicepress.com/companion/world-games · The Great Book of World Games"
 BOOK_TITLE = "The Great Book of World Games"
+
+
+def _publisher() -> str:
+    """Kurucu değeri: tek doğruluk kaynağı project_config.json (validate_structure.py)."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(os.path.dirname(here), "project_config.json"),
+              encoding="utf-8") as f:
+        return json.load(f)["publisher"]
+
+
+PUBLISHER = _publisher()
 RECON_MARK = "†"
 RECON_LEGEND = ("%s  rules the book presents as a scholarly reconstruction"
                 % RECON_MARK)
@@ -345,7 +356,7 @@ def build_game_index(data: BookData, out_path: str) -> int:
                             leftMargin=MARGIN, rightMargin=MARGIN,
                             topMargin=MARGIN + 6, bottomMargin=MARGIN + 6,
                             title="%s — Game Index" % BOOK_TITLE,
-                            author="Vâliçe Press", creator="companion_pack.py")
+                            author=PUBLISHER, creator="companion_pack.py")
 
     def on_page(c, d):
         draw_footer(c, LETTER_W, d.page)
@@ -454,7 +465,7 @@ def build_cards(data: BookData, out_path: str) -> int:
     st = styles()
     c = rl_canvas.Canvas(out_path, pagesize=(LETTER_W, LETTER_H))
     c.setTitle("%s — Quick Reference Cards" % BOOK_TITLE)
-    c.setAuthor("Vâliçe Press")
+    c.setAuthor(PUBLISHER)
     c.setCreator("companion_pack.py")
 
     card_w = (LETTER_W - 2 * MARGIN) / 2.0      # 3.75 in
@@ -647,7 +658,7 @@ def build_score_sheets(data: BookData, out_path: str) -> dict:
     st = styles()
     c = rl_canvas.Canvas(out_path, pagesize=(LETTER_W, LETTER_H))
     c.setTitle("%s — Score Sheets" % BOOK_TITLE)
-    c.setAuthor("Vâliçe Press")
+    c.setAuthor(PUBLISHER)
     c.setCreator("companion_pack.py")
     sh = Sheet(c, st)
     made = {"general": 0, "matchRecord": 0, "tailored": []}
@@ -962,7 +973,7 @@ def build_boards_pack(data: BookData, out_path: str, sv) -> tuple[list, list]:
     included, excluded = select_boards(data, sv)
     c = rl_canvas.Canvas(out_path, pagesize=(LETTER_W, LETTER_H))
     c.setTitle("%s — Boards Pack" % BOOK_TITLE)
-    c.setAuthor("Vâliçe Press")
+    c.setAuthor(PUBLISHER)
     c.setCreator("companion_pack.py")
 
     # ── contents page ────────────────────────────────────────────────────

@@ -2,7 +2,7 @@
   "status": "pass",
   "measuredOn": "phase6",
   "measuredAtGate": "phase1",
-  "sampleSize": 56,
+  "sampleSize": 63,
   "sampleGames": [
     "tablut",
     "yut-nori",
@@ -59,9 +59,16 @@
     "alquerque",
     "ashta-kashte",
     "rimau-rimau",
-    "go"
+    "go",
+    "congklak",
+    "ayoayo",
+    "gebeta",
+    "hus",
+    "mefuvha",
+    "ludus-duodecim-scriptorum",
+    "morra"
   ],
-  "sampleCaveat": "Örneklem 56 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
+  "sampleCaveat": "Örneklem 63 oyundur. Sınırı bir tercih değil bir KAPI belirler: bir kural metni yalnızca sayfa seviyesinde doğrulanmış bir kaynağa dayanabilir, yani ölçülebilen oyun sayısı doğrulanabilen kaynak sayısıdır. Bu örneklem bir eğilimi gösterir; taşma oranını belirleyen aykırı değerler için hâlâ küçüktür.",
   "geometry": {
     "trimWidthMm": 215.9,
     "trimHeightMm": 279.4,
@@ -91,7 +98,7 @@
     },
     {
       "gameId": "yut-nori",
-      "words": 656,
+      "words": 660,
       "textHeightMm": 330.6,
       "diagramHeightMm": 76.0,
       "diagrams": [
@@ -147,15 +154,15 @@
     },
     {
       "gameId": "olinda-keliya",
-      "words": 665,
-      "textHeightMm": 290.2,
+      "words": 644,
+      "textHeightMm": 285.4,
       "diagramHeightMm": 40.1,
       "diagrams": [
         "olinda-setup"
       ],
-      "textPages": 1.199,
+      "textPages": 1.179,
       "diagramPages": 0.166,
-      "measuredPages": 1.365,
+      "measuredPages": 1.345,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -317,7 +324,7 @@
     },
     {
       "gameId": "set-dilth",
-      "words": 811,
+      "words": 808,
       "textHeightMm": 334.8,
       "diagramHeightMm": 65.0,
       "diagrams": [
@@ -516,94 +523,94 @@
     {
       "gameId": "royal-game-of-ur",
       "words": 770,
-      "textHeightMm": 355.4,
+      "textHeightMm": 351.9,
       "diagramHeightMm": 50.5,
       "diagrams": [
         "ur-board"
       ],
-      "textPages": 1.469,
+      "textPages": 1.454,
       "diagramPages": 0.209,
-      "measuredPages": 1.677,
+      "measuredPages": 1.663,
       "billedPages": 2,
       "overflowsSpread": false
     },
     {
       "gameId": "bao-la-kiswahili",
       "words": 870,
-      "textHeightMm": 336.7,
+      "textHeightMm": 333.2,
       "diagramHeightMm": 62.0,
       "diagrams": [
         "bao-board"
       ],
-      "textPages": 1.391,
+      "textPages": 1.377,
       "diagramPages": 0.256,
-      "measuredPages": 1.648,
+      "measuredPages": 1.633,
       "billedPages": 2,
       "overflowsSpread": false
     },
     {
       "gameId": "sugoroku",
       "words": 620,
-      "textHeightMm": 284.2,
+      "textHeightMm": 280.6,
       "diagramHeightMm": 0.0,
       "diagrams": [],
-      "textPages": 1.174,
+      "textPages": 1.16,
       "diagramPages": 0.0,
-      "measuredPages": 1.174,
+      "measuredPages": 1.16,
       "billedPages": 2,
       "overflowsSpread": false
     },
     {
       "gameId": "mbube-mbube",
       "words": 612,
-      "textHeightMm": 273.0,
+      "textHeightMm": 269.5,
       "diagramHeightMm": 63.5,
       "diagrams": [
         "mbube-formation"
       ],
-      "textPages": 1.128,
+      "textPages": 1.114,
       "diagramPages": 0.262,
-      "measuredPages": 1.391,
+      "measuredPages": 1.376,
       "billedPages": 2,
       "overflowsSpread": false
     },
     {
       "gameId": "achi",
       "words": 602,
-      "textHeightMm": 288.7,
+      "textHeightMm": 285.2,
       "diagramHeightMm": 81.0,
       "diagrams": [
         "achi-wheel"
       ],
-      "textPages": 1.193,
+      "textPages": 1.179,
       "diagramPages": 0.335,
-      "measuredPages": 1.528,
+      "measuredPages": 1.513,
       "billedPages": 2,
       "overflowsSpread": false
     },
     {
       "gameId": "polis",
       "words": 687,
-      "textHeightMm": 302.3,
+      "textHeightMm": 298.8,
       "diagramHeightMm": 55.0,
       "diagrams": [
         "polis-capture"
       ],
-      "textPages": 1.249,
+      "textPages": 1.235,
       "diagramPages": 0.227,
-      "measuredPages": 1.477,
+      "measuredPages": 1.462,
       "billedPages": 2,
       "overflowsSpread": false
     },
     {
       "gameId": "astragaloi",
       "words": 711,
-      "textHeightMm": 309.2,
+      "textHeightMm": 305.7,
       "diagramHeightMm": 0.0,
       "diagrams": [],
-      "textPages": 1.278,
+      "textPages": 1.263,
       "diagramPages": 0.0,
-      "measuredPages": 1.278,
+      "measuredPages": 1.263,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -694,14 +701,14 @@
     {
       "gameId": "catch-the-hare",
       "words": 741,
-      "textHeightMm": 295.3,
+      "textHeightMm": 302.3,
       "diagramHeightMm": 53.0,
       "diagrams": [
         "hare-board"
       ],
-      "textPages": 1.22,
+      "textPages": 1.249,
       "diagramPages": 0.219,
-      "measuredPages": 1.439,
+      "measuredPages": 1.468,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -841,26 +848,122 @@
       "measuredPages": 1.765,
       "billedPages": 2,
       "overflowsSpread": false
+    },
+    {
+      "gameId": "congklak",
+      "words": 750,
+      "textHeightMm": 298.4,
+      "diagramHeightMm": 40.1,
+      "diagrams": [
+        "congklak-setup"
+      ],
+      "textPages": 1.233,
+      "diagramPages": 0.166,
+      "measuredPages": 1.399,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "ayoayo",
+      "words": 752,
+      "textHeightMm": 300.0,
+      "diagramHeightMm": 40.1,
+      "diagrams": [
+        "ayoayo-setup"
+      ],
+      "textPages": 1.24,
+      "diagramPages": 0.166,
+      "measuredPages": 1.406,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "gebeta",
+      "words": 803,
+      "textHeightMm": 300.2,
+      "diagramHeightMm": 40.1,
+      "diagrams": [
+        "gebeta-setup"
+      ],
+      "textPages": 1.241,
+      "diagramPages": 0.166,
+      "measuredPages": 1.406,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "hus",
+      "words": 631,
+      "textHeightMm": 243.2,
+      "diagramHeightMm": 59.7,
+      "diagrams": [
+        "hus-setup"
+      ],
+      "textPages": 1.005,
+      "diagramPages": 0.247,
+      "measuredPages": 1.252,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "mefuvha",
+      "words": 518,
+      "textHeightMm": 234.2,
+      "diagramHeightMm": 59.7,
+      "diagrams": [
+        "mefuvha-setup"
+      ],
+      "textPages": 0.968,
+      "diagramPages": 0.247,
+      "measuredPages": 1.215,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "ludus-duodecim-scriptorum",
+      "words": 825,
+      "textHeightMm": 308.0,
+      "diagramHeightMm": 71.5,
+      "diagrams": [
+        "duodecim-scripta-board"
+      ],
+      "textPages": 1.273,
+      "diagramPages": 0.295,
+      "measuredPages": 1.568,
+      "billedPages": 2,
+      "overflowsSpread": false
+    },
+    {
+      "gameId": "morra",
+      "words": 507,
+      "textHeightMm": 232.1,
+      "diagramHeightMm": 0.0,
+      "diagrams": [],
+      "textPages": 0.959,
+      "diagramPages": 0.0,
+      "measuredPages": 0.959,
+      "billedPages": 2,
+      "overflowsSpread": false
     }
   ],
-  "avgWordsPerGame": 735.4,
-  "measuredWordsPerPage": 470.3,
+  "avgWordsPerGame": 729.4,
+  "measuredWordsPerPage": 475.3,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.564,
-  "avgBilledPagesPerGame": 2.036,
-  "avgTextPagesPerGame": 1.292,
-  "avgDiagramPagesPerGame": 0.272,
+  "avgMeasuredPagesPerGame": 1.535,
+  "avgBilledPagesPerGame": 2.032,
+  "avgTextPagesPerGame": 1.273,
+  "avgDiagramPagesPerGame": 0.262,
   "spreadOverflowGames": [
     "tablut"
   ],
-  "spreadOverflowRate": 0.018,
+  "spreadOverflowRate": 0.016,
   "finding": "Metin farkı (0.70 sayfa) ve diyagram farkı (0.63) AYNI büyüklükte. Tek bir sürücü yoktur; sayfa bütçesi ikisini birden denetlemek zorundadır.",
   "overflowDriver": "both",
-  "textSpreadPages": 0.696,
+  "textSpreadPages": 0.699,
   "diagramSpreadPages": 0.632,
-  "projectedBodyPages": 204,
-  "projectedTotalPages": 254,
+  "projectedBodyPages": 203,
+  "projectedTotalPages": 252,
   "pageTarget": 256,
-  "deviationPct": -0.78,
+  "deviationPct": -1.56,
   "withinTolerance": true
 }

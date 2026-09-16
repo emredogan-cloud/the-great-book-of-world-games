@@ -47,7 +47,14 @@ TR_CHARS = set("ışğİŞĞ")
 TR_WORDS = {"ve", "bir", "bu", "için", "ile", "olan", "oyuncu", "kural",
             "sayfa", "kaynak", "doğrulanmış", "yazılmış", "değil", "kayıt"}
 # Ticari metinde MEŞRU olarak geçen özel adlar — dil taramasının dışında.
-TR_ALLOW = {"doğan", "vâliçe"}
+TR_ALLOW = {"doğan", "vâliçe",
+            # "ile" bir Türkçe bağlaç OLARAK DEĞİL, Yoruba dilinde "evler"
+            # (houses) anlamına gelen gerçek kelime olarak basılıyor:
+            # ayoayo.culturalStory ve ayoayo.sources[1], oyunun çukurları
+            # için kullanılan Yoruba terimini alıntılıyor (Murray 1952,
+            # §7.5.16-17). Eş yazımlı bir Türkçe kelimeyle çakışması
+            # tesadüftür; alıntı SİLİNMEZ, denetim BURADA muaf tutulur.
+            "ile"}
 
 
 def load(p):

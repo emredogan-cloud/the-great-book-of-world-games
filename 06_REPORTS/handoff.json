@@ -10,15 +10,15 @@
    "interior": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
     "exists": true,
-    "sha256": "4090f93731f2607014dec031199fcaa9500a5abf6a8af4e45cbb1d6182ecf068",
-    "recordedSha256": "4090f93731f2607014dec031199fcaa9500a5abf6a8af4e45cbb1d6182ecf068",
-    "bytes": 518841,
-    "pageCount": 160
+    "sha256": "edc925e465edac1e9e20a8e4a909f07401510ce7bedf8e9a1b5bb00a0dc08dd7",
+    "recordedSha256": "edc925e465edac1e9e20a8e4a909f07401510ce7bedf8e9a1b5bb00a0dc08dd7",
+    "bytes": 16940649,
+    "pageCount": 180
    },
-   "blankPages": 18,
+   "blankPages": 20,
    "trim": {
     "widthIn": 8.5,
-    "heightIn": 11.0
+    "heightIn": 11
    },
    "margins": {
     "gutterIn": 0.55,
@@ -31,16 +31,16 @@
    "cover": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
     "exists": true,
-    "sha256": "e8679dae049013f92d94da5d751deab11493c6c1dc1c53bf675be93e71059048",
-    "recordedSha256": "e8679dae049013f92d94da5d751deab11493c6c1dc1c53bf675be93e71059048",
-    "bytes": 21142924,
+    "sha256": "cd7e16e9780be914507e01f9d330659dba504b70eb490f37e57a4108d9d36e75",
+    "recordedSha256": "cd7e16e9780be914507e01f9d330659dba504b70eb490f37e57a4108d9d36e75",
+    "bytes": 21211064,
     "wrapIn": [
-     17.6103,
+     17.6554,
      11.25
     ],
-    "spineIn": 0.3603,
+    "spineIn": 0.4054,
     "artwork": "07_ASSETS/print/cover-wrap-paperback.png",
-    "typeItems": 27,
+    "typeItems": 32,
     "spineFit": [
      {
       "part": "title",
@@ -73,15 +73,15 @@
    "interior": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf",
     "exists": true,
-    "sha256": "996a5c13b407cd15834a472a7334c5e15daa7988aacc1f4ad462923a3864d1d8",
-    "recordedSha256": "996a5c13b407cd15834a472a7334c5e15daa7988aacc1f4ad462923a3864d1d8",
-    "bytes": 519172,
-    "pageCount": 160
+    "sha256": "7ccd018eaf234cd46b4309ee7302d3997b3832219d7297f01d0de07a274f69c4",
+    "recordedSha256": "7ccd018eaf234cd46b4309ee7302d3997b3832219d7297f01d0de07a274f69c4",
+    "bytes": 16943218,
+    "pageCount": 184
    },
-   "blankPages": 18,
+   "blankPages": 22,
    "trim": {
     "widthIn": 8.25,
-    "heightIn": 11.0
+    "heightIn": 11
    },
    "margins": {
     "gutterIn": 0.675,
@@ -94,16 +94,16 @@
    "cover": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
     "exists": true,
-    "sha256": "950d121c350f6ccb749ecb206a3ef95d796bc6568231afc13e60791f875afb89",
-    "recordedSha256": "950d121c350f6ccb749ecb206a3ef95d796bc6568231afc13e60791f875afb89",
-    "bytes": 24526117,
+    "sha256": "3ea1480877740da9a512b589159bf2277a9cf11eacd0a10ab7f30a744f653936",
+    "recordedSha256": "3ea1480877740da9a512b589159bf2277a9cf11eacd0a10ab7f30a744f653936",
+    "bytes": 24526639,
     "wrapIn": [
      18.624,
      12.417
     ],
     "spineIn": 0.549,
     "artwork": "07_ASSETS/print/cover-wrap-hardcover.png",
-    "typeItems": 27,
+    "typeItems": 32,
     "spineFit": [
      {
       "part": "title",
@@ -138,8 +138,8 @@
     "widthPx": 1600,
     "heightPx": 2560,
     "aspect": 0.625,
-    "sha256": "9b1f14c4069092e0610c1e162962361491a756a43c3a28576a98348253cc880d",
-    "bytes": 1031472,
+    "sha256": "bc45110fe2ebd7e94b9069b6822aa98727cc38c7c3033174e315f98c7085b35b",
+    "bytes": 1030653,
     "typography": [
      {
       "kind": "frontTitle",
@@ -153,12 +153,12 @@
      },
      {
       "kind": "frontTitle",
-      "text": "56 games from 4,600 years of human play",
+      "text": "63 games from 4,600 years of human play",
       "px": 38
      },
      {
       "kind": "frontTitle",
-      "text": "Rules, boards and stories from 39 cultures",
+      "text": "Rules, boards and stories from 45 cultures",
       "px": 38
      },
      {
@@ -172,9 +172,9 @@
    "epub": {
     "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
     "exists": true,
-    "sha256": "ba916ec1449f28478f580fe5ebbb422bcfc6504d0735ecd03940026a34d10baa",
-    "recordedSha256": "ba916ec1449f28478f580fe5ebbb422bcfc6504d0735ecd03940026a34d10baa",
-    "bytes": 947738
+    "sha256": "30e7f98a8d5c263d9255cb32b08828a0c0627541e28554fd8400c2b026cb564f",
+    "recordedSha256": "30e7f98a8d5c263d9255cb32b08828a0c0627541e28554fd8400c2b026cb564f",
+    "bytes": 1271304
    },
    "coverStatus": "READY"
   },
@@ -196,16 +196,16 @@
   }
  },
  "checksumFiles": {
-  "PAPERBACK": 2,
-  "HARDCOVER": 2,
-  "KINDLE": 2,
+  "PAPERBACK": 3,
+  "HARDCOVER": 3,
+  "KINDLE": 4,
   "APLUS": 9
  },
  "handbook": "08_OUTPUT/KDP_UPLOAD_HANDBOOK.md",
  "previewerChecklist": "08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md",
  "aiDisclosureNotes": "08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md",
- "handbookBytes": 23998,
- "previewerBytes": 5821,
+ "handbookBytes": 23991,
+ "previewerBytes": 5952,
  "blockingFounderActions": [
   {
    "id": "AI-DECL",

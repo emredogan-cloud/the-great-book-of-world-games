@@ -7,17 +7,17 @@
  ],
  "generatedAtPhase": "phase6",
  "measured": {
-  "games": 56,
-  "cultures": 39,
+  "games": 63,
+  "cultures": 45,
   "families": 7,
-  "reconstructed": 7,
+  "reconstructed": 8,
   "oldestGameBCE": 2600,
   "oldestGameAgeYears": 4600,
   "publicationYear": 2026,
-  "subtitleMeasured": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleMeasured": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
   "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
   "frontMatterWords": 2039,
-  "familyOpenerWords": 2415
+  "familyOpenerWords": 2422
  },
  "limits": {
   "titleChars": 160,

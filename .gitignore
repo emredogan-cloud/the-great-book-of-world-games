@@ -40,6 +40,12 @@
 07_ASSETS/print/**/*
 07_ASSETS/kindle/**/*
 07_ASSETS/web/**/*
+# 63 kahraman görseli (GPT Image, ~165 MB renkli + ~13 MB gri/print) — aynı
+# gerekçe: büyük, deterministik değil, yeniden üretilebilir değil. Depoda
+# yalnızca ÖLÇÜMLERİ durur: 07_ASSETS/GBK02_GAME_ILLUSTRATION_MANIFEST.json
+# ve 06_REPORTS/GBK02_CHATGPT_IMAGE_GENERATION_LOG.md.
+07_ASSETS/plates/*
+07_ASSETS/plates_print/*
 07_ASSETS/diagrams/**/*
 !07_ASSETS/**/.gitkeep
 !07_ASSETS/**/README.md
