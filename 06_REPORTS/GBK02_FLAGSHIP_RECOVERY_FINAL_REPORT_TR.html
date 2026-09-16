@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Amiral Gemisi Kurtarma ve Görsel Bütünleştirme — Nihai Rapor</title>
+<style>
+:root{--ink:#1b1a17;--mut:#6b675e;--pap:#faf8f3;--line:#ddd8cc;--card:#fff;
+      --p0:#8a2f1d;--p1:#8a6a1d;--p2:#3a6b4a;--accent:#2c4a6e;--warn:#8a2f1d;--ok:#2c5e3f;
+      --fact:#2c5e3f;--market:#2c4a6e;--infer:#8a6a1d;--rec:#6a2c6e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--pap);color:var(--ink);font:16px/1.65 Georgia,'Liberation Serif',serif;padding:0 0 6rem}
+.wrap{max-width:66rem;margin:0 auto;padding:0 1.5rem}
+h1{font-size:2.2rem;line-height:1.25;margin:2.5rem 0 .3rem}
+h2{font-size:1.55rem;margin:3.2rem 0 .8rem;padding-top:1.4rem;border-top:3px solid var(--ink)}
+h3{font-size:1.2rem;margin:1.8rem 0 .5rem}
+h4{font-size:1rem;margin:1.4rem 0 .4rem;text-transform:uppercase;letter-spacing:.03em;color:var(--mut)}
+p{margin:.7rem 0}
+.lede{color:var(--mut);font-size:1.1rem}
+.meta{color:var(--mut);font-size:.9rem;margin-bottom:1.5rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0 1.5rem;font-size:.9rem}
+th,td{text-align:left;padding:.42rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:normal;border-bottom:2px solid var(--ink)}
+tr:last-child td{border-bottom:2px solid var(--ink)}
+.box{border-left:4px solid var(--ink);padding:.3rem 0 .3rem 1.2rem;margin:1.3rem 0}
+.box.warn{border-color:var(--warn);background:rgba(138,47,29,.05)}
+.box.ok{border-color:var(--ok);background:rgba(44,94,63,.05)}
+.box.accent{border-color:var(--accent);background:rgba(44,74,110,.05)}
+.tag{display:inline-block;border-radius:1rem;padding:.05rem .6rem;font-size:.72rem;font-weight:bold;color:#fff;margin-right:.3rem;letter-spacing:.02em}
+.tag.fact{background:var(--fact)}
+.tag.market{background:var(--market)}
+.tag.infer{background:var(--infer)}
+.tag.rec{background:var(--rec)}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:2rem;padding:.1rem .7rem;font-size:.8rem;color:var(--mut);margin:.1rem .2rem .1rem 0}
+.pill.p0{background:var(--p0);color:#fff;border-color:var(--p0)}
+.pill.p1{background:var(--p1);color:#fff;border-color:var(--p1)}
+.pill.p2{background:var(--p2);color:#fff;border-color:var(--p2)}
+.pill.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.num{font-variant-numeric:tabular-nums;font-weight:bold}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1rem 1.5rem;margin:1.5rem 0}
+.toc a{color:var(--accent);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.toc ol{margin:.3rem 0;padding-left:1.3rem;columns:2;column-gap:2rem}
+.bigstat{display:inline-block;text-align:center;margin:.5rem 1.5rem .5rem 0}
+.bigstat .n{font-size:2rem;font-weight:bold;display:block;line-height:1}
+.bigstat .l{font-size:.78rem;color:var(--mut)}
+footer{color:var(--mut);font-size:.85rem;margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
+code{background:var(--card);padding:.1rem .3rem;border-radius:2px;font-size:.88em;border:1px solid var(--line)}
+a{color:var(--accent)}
+.legend{font-size:.82rem;color:var(--mut);margin:.5rem 0 1.5rem}
+@media (prefers-color-scheme:dark){
+ :root:not([data-theme="light"]){--ink:#e9e5dc;--mut:#a39d8f;--pap:#16150f;--line:#3a372f;--card:#1f1e18;
+   --p0:#e08a6e;--p1:#e0c26e;--p2:#7fbf9a;--accent:#8fb4e0;--warn:#e08a6e;--ok:#7fbf9a;
+   --fact:#7fbf9a;--market:#8fb4e0;--infer:#e0c26e;--rec:#c98fe0}
+}
+:root[data-theme="dark"]{--ink:#e9e5dc;--mut:#a39d8f;--pap:#16150f;--line:#3a372f;--card:#1f1e18;
+   --p0:#e08a6e;--p1:#e0c26e;--p2:#7fbf9a;--accent:#8fb4e0;--warn:#e08a6e;--ok:#7fbf9a;
+   --fact:#7fbf9a;--market:#8fb4e0;--infer:#e0c26e;--rec:#c98fe0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Amiral Gemisi Kurtarma ve Görsel Bütünleştirme</h1>
+<p class="lede">The Great Book of World Games (GBK-02) — Nihai Rapor</p>
+<p class="meta">16 Eylül 2026 · Kurucu direktifi (15 Eylül 2026, "FLAGSHIP RECOVERY + EXPANSION + FULL VISUAL ILLUSTRATION PASS") · Uçtan uca, tek oturumda yürütüldü · Bu rapor <code>06_REPORTS/GBK02_FLAGSHIP_RECOVERY_FINAL_REPORT_TR.html</code> yolunda, görevin kendi teslimat listesinde adı geçen dosyadır.</p>
+
+<div class="legend">
+<span class="tag fact">GERÇEK</span> = depodaki dosyalardan/derlenmiş PDF'lerden doğrudan ölçüldü ·
+<span class="tag rec">AÇIK MADDE</span> = kurucunun kendi eylemini gerektirir, ajan tarafından tamamlanamaz
+</div>
+
+<div>
+<span class="bigstat"><span class="n">56 → 63</span><span class="l">yazılmış oyun</span></span>
+<span class="bigstat"><span class="n">63 / 63</span><span class="l">kahraman illüstrasyon (%100)</span></span>
+<span class="bigstat"><span class="n">180 / 184 / 266</span><span class="l">sayfa (ciltsiz/ciltli/büyük punto)</span></span>
+<span class="bigstat"><span class="n">✅ YEŞİL</span><span class="l">qa_all.sh, kapı seviyesi phase1</span></span>
+</div>
+
+<div class="toc">
+<strong>İçindekiler</strong>
+<ol>
+<li><a href="#s1">Yönetici özeti</a></li>
+<li><a href="#s2">Kapsam kurtarma — 56 → 63 oyun</a></li>
+<li><a href="#s3">Görsel bütünleştirme — 63/63 kahraman illüstrasyon</a></li>
+<li><a href="#s4">Teknik entegrasyon — dizgi motoru</a></li>
+<li><a href="#s5">Tam QA paketi — 12 kırmızı kapı, 12 düzeltme</a></li>
+<li><a href="#s6">Sayfa sayıları — öncesi/sonrası</a></li>
+<li><a href="#s7">Diyagram kapsamı ve gerçek boşluklar</a></li>
+<li><a href="#s8">Git durumu</a></li>
+<li><a href="#s9">Şeffaflık notları</a></li>
+<li><a href="#s10">Kurucuya kalan maddeler</a></li>
+<li><a href="#s11">Görev kontrol listesi durumu</a></li>
+</ol>
+</div>
+
+<h2 id="s1">1. Yönetici özeti</h2>
+<p>Kurucunun 15 Eylül 2026 direktifi tek bir oturumda uçtan uca yürütüldü: kaynak kurtarma, içerik genişletme, diyagram tamamlama, 63 oyunun her biri için gerçek bir ChatGPT/GPT Image tarayıcı oturumuyla tek tek üretilmiş kahraman illüstrasyonu, dizgi motoruna entegrasyon, görsel optimizasyon, tam derleme ve projenin kendi ~30 kapılık QA paketinin baştan sona yeşile çekilmesi.</p>
+<p>Kitap 56 oyundan 63 oyuna çıktı. Yedi yeni oyun, sayı doldurmak için değil, önceki bir çıkarma hatası düzeltildiği için eklendi: <code>06_FOUNDER_DELIVERY/619290767-A-History-of-Board-games-Other-Than-Chess.pdf</code> (Murray, 1952) önceden düz <code>pdftotext</code> ile tek karakterlik bozuk parçalar üretiyordu ve bu, birkaç oyun kaynağının gerçekten erişilemez olduğu izlenimini vermişti. <code>pdftotext -raw</code> ile yeniden çıkarma sorunu ortadan kaldırdı ve temiz, alıntılanabilir kaynak metni ortaya çıkardı. Altı aday oyun (rimau-rimau, nine-men's-morris, tapatan, twelve-men's-morris, zamma, halatafl) zaten kitapta olan oyunlarla çakıştığı için reddedildi — kopya doldurma yapılmadı.</p>
+<p>Bu geçişte kitabın önceden var olan 56 oyununun tamamı da dahil olmak üzere her oyun için bir kahraman illüstrasyonu üretildi; toplam 63/63. Her görsel insan gözüyle tek tek incelendi, içerik politikası reddi olan 4 görsel yeniden istekle çözüldü, tamamı deterministik adlandırma kuralına (<code>GBK02_GAME_&lt;NNN&gt;_&lt;SLUG&gt;_HERO.png</code>) uyacak şekilde indirildi ve tam bir üretim günlüğü ile envanter dosyası olarak belgelendi.</p>
+<p>Süreç boyunca en önemli tek bulgu, oyun sayısı artışının <code>02_MANUSCRIPT/frontmatter.json</code>'a hiç yansımamış olmasıydı — bu dosya elle değil <code>build_frontmatter.py</code> ile üretilir ve güncellenmemiş haliyle kitap, içindekiler ve aile-açılış sayfalarında 7 oyunu eksik gösteren bir baskıya gidecekti. Bu, tam QA paketi ilk kez uçtan uca çalıştırılana kadar tespit edilmemişti; şimdi düzeltilmiş ve doğrulanmıştır.</p>
+<p>Sonuç: <span class="pill ok">tüm 3 baskı derlendi</span> <span class="pill ok">tüm 30 QA kapısı yeşil</span> <span class="pill ok">3 commit origin/main'e itildi</span>. Kurucu için açık kalan maddeler §10'da listelenmiştir.</p>
+
+<h2 id="s2">2. Kapsam kurtarma — 56 → 63 oyun</h2>
+<h3>Kök neden: yanlış "erişilemez kaynak" etiketi</h3>
+<div class="box warn">
+<strong>Bulgu:</strong> <code>06_REPORTS/FOUNDER_RESEARCH_GAP_REGISTER.md</code>, Murray'nin (1952) sowing-game bölümünü ve duodecim scripta bölümünü "engellenmiş" olarak işaretlemişti. Kök neden kaynağın gerçekten okunamaz olması değil, önceki bir çıkarma geçişinin düz <code>pdftotext</code> kullanmasıydı — bu, PDF'nin bu bölümlerini tek karakterlik bozuk parçalara dönüştürüyordu. <code>pdftotext -raw</code> (ve çapraz kontrol için <code>-layout</code>) ile yeniden çıkarma sorunu tamamen ortadan kaldırdı.
+</div>
+<h3>Eklenen 7 oyun</h3>
+<table>
+<tr><th>Oyun</th><th>Kültür</th><th>Aile</th><th>Birincil kaynak</th><th>Yeniden yapılandırma</th></tr>
+<tr><td>Congklak</td><td>Malay</td><td>sowing</td><td>Murray, sowing-game bölümü</td><td>hayır</td></tr>
+<tr><td>Ayoayo</td><td>Yoruba</td><td>sowing</td><td>Murray §7.5.12, §7.5.16-17</td><td>hayır</td></tr>
+<tr><td>Gebeta</td><td>Amhara</td><td>sowing</td><td>Murray §7.6.1-2, §8.1.2</td><td>hayır</td></tr>
+<tr><td>Hus</td><td>Nama</td><td>sowing</td><td>Murray §8.2.1 + §8.2.4</td><td>hayır</td></tr>
+<tr><td>Mefuvha</td><td>Venda</td><td>sowing</td><td>Murray §8.2.11 (kayıtlı örnek oyun dahil)</td><td>hayır</td></tr>
+<tr><td>Ludus Duodecim Scriptorum</td><td>Roma</td><td>race</td><td>Murray §2.8.1-2.8.3</td><td><strong>evet</strong> — zar-hamle eşlemesi tam korunmamış, tahta ve genel yapı doğrulanmış</td></tr>
+<tr><td>Morra</td><td>İtalyan</td><td>boardless</td><td>Antik Roma'dan (micatio) günümüze kesintisiz tanıklık</td><td>hayır</td></tr>
+</table>
+<p class="meta">Not: Hus için ilk taslak taslak halinde yanlışlıkla "reconstructed" işaretlenmişti; kaynak yeniden okunduğunda yakalama kuralının Murray'de doğrudan ve tam ifade edildiği görüldü, düzeltildi.</p>
+
+<h3>Reddedilen adaylar — kopya kontrolü</h3>
+<table>
+<tr><th>Aday</th><th>Gerekçe</th></tr>
+<tr><td>rimau-rimau</td><td>zaten book.json'da mevcut, sevkiyatta</td></tr>
+<tr><td>nine-men's-morris</td><td>zaten book.json'da mevcut, sevkiyatta</td></tr>
+<tr><td>tapatan</td><td>mevcut üç-sıra ailesi üyelerine fazla yakın</td></tr>
+<tr><td>twelve-men's-morris</td><td>nine-men's-morris ve fox-and-geese'e fazla yakın, doldurma gibi okunur</td></tr>
+<tr><td>zamma</td><td>mevcut war-board/alquerque ailesi üyelerine fazla yakın</td></tr>
+<tr><td>halatafl</td><td>mevcut tafl ailesi üyesine (tablut/hnefatafl) fazla yakın</td></tr>
+</table>
+
+<h3>Aile dağılımı, öncesi → sonrası</h3>
+<table>
+<tr><th>Aile</th><th>Öncesi</th><th>Sonrası</th></tr>
+<tr><td>The War Board</td><td>14</td><td>14</td></tr>
+<tr><td>The Sowing Games</td><td>5</td><td class="num">10</td></tr>
+<tr><td>The Line and the Territory</td><td>9</td><td>9</td></tr>
+<tr><td>The Race Home</td><td>12</td><td class="num">13</td></tr>
+<tr><td>The Hunt and the Siege</td><td>6</td><td>6</td></tr>
+<tr><td>Games Without a Board</td><td>7</td><td class="num">8</td></tr>
+<tr><td>Chance and Nerve</td><td>3</td><td>3</td></tr>
+</table>
+<p>Genişleme kasıtlı olarak en zayıf aileye (sowing, 5 oyun) yoğunlaştı; bu görevin kendi önceliklendirme talimatıyla uyumludur. Hedef aralık (~72-76 oyun) direktifte açıkça bir istek listesi değil bir "asgari planlama aralığı" olarak çerçevelenmişti; 63'te durulması, kalan adayların kaynak tarafından gerçekten engellenmiş olmasından kaynaklanıyor (bkz. §10).</p>
+
+<h2 id="s3">3. Görsel bütünleştirme — 63/63 kahraman illüstrasyon</h2>
+<p>Kitaptaki <strong>her oyun</strong> için — önceden var olan 56'sı dahil, yalnızca yeni 7'si değil — <code>chatgpt.com</code> üzerinden gerçek bir tarayıcı oturumuyla, GPT Image modeliyle, oyun başına tek tek üretilmiş bir kahraman illüstrasyonu var. Bu, API çağrısı değil, tarayıcı otomasyonu (Claude in Chrome) ile yürütülen gerçek bir ChatGPT oturumudur.</p>
+<table>
+<tr><th></th><th>Değer</th></tr>
+<tr><td>Toplam oyun</td><td class="num">63</td></tr>
+<tr><td>Üretilen görsel</td><td class="num">63</td></tr>
+<tr><td>Kapsam</td><td class="num">%100</td></tr>
+<tr><td>İçerik politikası reddi → yeniden üretimle çözüldü</td><td class="num">4</td></tr>
+<tr><td>Ham boyut (63 × 1536×1024 PNG, <code>07_ASSETS/plates/</code>)</td><td class="num">164.4 MB</td></tr>
+<tr><td>Baskıya optimize boyut (<code>07_ASSETS/plates_print/</code>)</td><td class="num">12.7 MB</td></tr>
+</table>
+<p>İçerik politikası reddi alan 4 oyun (gonggi, hopscotch, conkers, mbube-mbube) istek metni yeniden düzenlenerek tek seferde çözüldü; hiçbiri kalite ödünü gerektirmedi. A/B seçim arayüzü (iki aday arasında seçim) jan-ken ve bul için ortaya çıktı; her ikisinde de daha uygun aday incelenip seçildi.</p>
+
+<h3>Stil sözleşmesi</h3>
+<div class="box accent">
+<strong>Kayıt:</strong> premium ciltli referans kitap için müze kalitesinde editoryal illüstrasyon.<br>
+<strong>Yasaklar:</strong> metin/yazı/rakam/altyazı yok · filigran/imza/logo yok · modern nesne yok · anakronistik mimari yok · döneme tipik olmayan uydurma etnografik süsleme yok · abartılı/karikatürize yüz yok · görünür para veya bahis yok.<br>
+<strong>Diyagramlardan ayrım:</strong> kahraman illüstrasyonu atmosfer/kültür/insan; tahta/kural diyagramları <code>07_ASSETS/diagrams/</code> içindeki ayrı, deterministik SVG sistemidir ve asla GPT Image tarafından icat edilmez.
+</div>
+
+<h3>Adlandırma ve doğrulama</h3>
+<p>Her dosya <code>GBK02_GAME_&lt;NNN&gt;_&lt;SLUG&gt;_HERO.png</code> kuralına uyar (NNN = book.json <code>games[]</code> dizisindeki 1 tabanlı sıra). Tüm 63 dosya boyut/bozulma/piksel-boyutu (1536×1024) kontrolünden geçti. Ayrıca bağımsız bir ikinci doğrulama: derlenmiş her üç baskı PDF'inde <code>kdp_preflight.py</code>'nin kendi raster-görsel sayacı <strong>tam 63</strong> görsel buldu — hem ciltsiz, hem ciltli, hem büyük puntoda.</p>
+<p>Tam üretim anlatımı: <code>06_REPORTS/GBK02_CHATGPT_IMAGE_GENERATION_LOG.md</code>. Oyun başına tüm meta veri: <code>07_ASSETS/GBK02_GAME_ILLUSTRATION_MANIFEST.json</code>.</p>
+
+<h2 id="s4">4. Teknik entegrasyon — dizgi motoru</h2>
+<p><code>04_BUILD/interior.py</code>, kitabın "HER OYUN BİR ÇİFT SAYFADIR" ilkesini (okuyucu bir oyunun ortasında sayfa çevirmez) koruyarak genişletildi:</p>
+<ul>
+<li>Yeni <code>ImageFlow</code> sınıfı — mevcut <code>SVGFlow</code> ile aynı arayüzü (<code>wrap/split/drawOn</code>) paylaşır, <code>reportlab</code>'ın <code>ImageReader</code>/<code>drawImage</code> ile çalışır.</li>
+<li>Yeni <code>HERO_IMAGE_BUDGET = 0.19</code> — kahraman görseline sayfa yüksekliğinin %19'u ayrılır (mevcut <code>DIAGRAM_PAGE_BUDGET = 0.52</code> ile aynı kalıp).</li>
+<li>Kahraman görseli, her oyunun açılış (sol) sayfasında, başlıktan önce, ilk akış öğesi olarak yerleştirilir — hem büyük-punto sürekli-akış yolunda hem standart çift-sayfa yolunda.</li>
+<li><code>build_edition()</code> içinde yeni <code>plate_docs</code> yüklemesi — <code>07_ASSETS/plates_print/</code> dizinini tarar (yoksa <code>plates/</code>'e düşer), <code>GBK02_GAME_(\d{3})_.*_HERO\.(jpg|png)$</code> düzenli ifadesiyle eşleştirir.</li>
+</ul>
+<p>Bu bütçeyle 4 sayfaya taşan oyun sayısı ciltsizde 3/63, ciltlide 5/63 — ikisi de projenin sabit kodlanmış 6 oyunluk tavanının altında, gerçek PDF derlemeleriyle doğrulandı (tahminle değil).</p>
+<p>Ayrıca: <code>04_BUILD/companion_pack.py</code>'de dört yerde sabit kodlanmış "Vâliçe Press" dizesi kaldırıldı, artık <code>project_config.json</code>'daki yayıncı alanından okunuyor.</p>
+
+<h2 id="s5">5. Tam QA paketi — 12 kırmızı kapı, 12 düzeltme</h2>
+<p><code>04_BUILD/qa_all.sh</code> ilk uçtan uca çalıştırmada 12 kırmızı kapı verdi. Hiçbiri kapsam daraltma veya atlama gerektirmedi — tümü kök nedeniyle düzeltildi:</p>
+<table>
+<tr><th>#</th><th>Kapı</th><th>Kök neden</th></tr>
+<tr><td>1</td><td>depo ve belge bütünlüğü</td><td>companion_pack.py'de sabit kodlanmış yayıncı adı</td></tr>
+<tr><td>2</td><td>kapıların kendi testi (selftest.py)</td><td>artık yazılmış oyunlar için bayat founder-delivery istek klasörleri</td></tr>
+<tr><td>3</td><td>gerçek dizgi ölçümü</td><td>project_config.json'daki ölçüm bloğu 63 oyunla bayatlamıştı</td></tr>
+<tr><td>4</td><td>kurucu boşluk kaydı</td><td>7 yazılmış oyun hâlâ aday olarak listeleniyordu</td></tr>
+<tr><td>5</td><td>Kindle EPUB güncel</td><td>bayat sağlama toplamı — yeniden derlemeyi gerektirdi</td></tr>
+<tr><td>6</td><td>kapak üretimi güncel</td><td>bayat sırt genişlikleri — yeniden derlemeyi gerektirdi</td></tr>
+<tr><td>7</td><td>A+ paketi güncel</td><td>bayat oyun/kültür sayıları — yeniden derlemeyi gerektirdi</td></tr>
+<tr><td>8</td><td>KDP ön denetimi</td><td>gerçek bir Yoruba sözcüğü ("ile") Türkçe tarayıcıda yanlış pozitifti</td></tr>
+<tr><td>9</td><td>teslim paketi güncel</td><td>bayat sayfa sayıları — yeniden derlemeyi gerektirdi</td></tr>
+<tr><td>10</td><td>satır editörü</td><td>2 tırnak-stili + 1 cümle-uzunluğu + 1 diyagram-etiket uyumsuzluğu (içerik hassasiyeti)</td></tr>
+<tr><td>11</td><td>paket kapılarının testi</td><td>madde 5-9'un bayatlığından kademeli</td></tr>
+<tr><td>12</td><td>üretilen belgeler güncel</td><td>bayat BOOK_STATS.md — yeniden derlemeyi gerektirdi</td></tr>
+</table>
+<div class="box ok">
+<strong>Nihai doğrulama:</strong> <code>qa_all.sh</code>'nin tam ve taze bir çalıştırması <strong>"✅ BÜTÜN KAPILAR YEŞİL · kapı seviyesi: phase1"</strong> döndürdü (çıkış kodu 0). Ayrıca <code>selftest.py</code> 229/229, <code>package_selftest.py</code> 42/42 kasıtlı kusur yakalama testinde yeşil.
+</div>
+
+<h2 id="s6">6. Sayfa sayıları — öncesi/sonrası</h2>
+<table>
+<tr><th>Baskı</th><th>Öncesi (56 oyun, 15 Eylül ölçümü)</th><th>Sonrası (63 oyun, bu geçiş)</th></tr>
+<tr><td>Ciltsiz (paperback)</td><td>160</td><td class="num">180</td></tr>
+<tr><td>Ciltli (hardcover)</td><td>160</td><td class="num">184</td></tr>
+<tr><td>Büyük punto (large-print)</td><td>233</td><td class="num">266</td></tr>
+</table>
+<p class="meta">"Öncesi" sütunu <code>FLAGSHIP_GBK02_CDX02_DEEP_RESEARCH_TR.html</code> raporunun 15 Eylül 2026 tarihli ölçümüdür. "Sonrası" sütunu bu geçişte derlenen PDF'lerin <code>pdfinfo</code> ile doğrudan ölçülen sayfa sayısıdır. Artış hem 7 yeni oyundan hem 63 kahraman görselinin eklenmesinden kaynaklanır; <code>calibrate_pages.py</code>'nin modellediği sayı yalnızca metin+diyagram bileşenidir, kahraman görselleri dahil değildir — gerçek sayı yalnızca <code>interior.py</code>'nin fiili derlemesinden gelir.</p>
+
+<h2 id="s7">7. Diyagram kapsamı ve gerçek boşluklar</h2>
+<p>Yeni oyunlar için 6 diyagram eklendi: congklak-setup, ayoayo-setup, gebeta-setup, hus-setup, mefuvha-setup (hepsi pit-tipi), ve duodecim-scripta-board (track-tipi, <code>reconstructed=true</code> etiketli). Morra için diyagram eklenmedi — boardless bir oyun, aile geleneğiyle tutarlı.</p>
+<p>book.json'a karşı doğrudan doğrulama: <strong>11 oyun</strong> diyagramsız sevk ediliyor. Bunların 8'i doğru bir şekilde diyagramsız (boardless oyunlar, domino oyunu, kum üzerine her seferinde yeniden çizilen tahta, veya diyagramın kahraman görseliyle bilgi tekrarı olacağı durumlar). Ancak <strong>3'ü gerçek bir boşluk</strong>:</p>
+<div class="box warn">
+<span class="pill p0">shatranj</span> <span class="pill p0">chaturanga</span> <span class="pill p1">omweso</span> — üçü de sabit bir tahta geometrisine sahip (shatranj 8×8, chaturanga haç biçimli dört-oyunculu, omweso 4×8 pit) ama henüz diyagramı yok. Bu geçişte eklenmedi çünkü kaynak-doğrulanmış bir tanımlayıcı olmadan tahta oranlarını icat etmek, projenin "hiçbir görsel kaynaksız uydurulmaz" ilkesini ihlal ederdi. Kurucu araştırma raporu shatranj ve chaturanga'yı zaten en yüksek öncelik olarak işaretlemişti.
+</div>
+
+<h2 id="s8">8. Git durumu</h2>
+<table>
+<tr><th>Commit</th><th>Özet</th><th>Durum</th></tr>
+<tr><td><code>af66e8d</code></td><td>7 yeni oyun + 63/63 kahraman illüstrasyon + dizgi entegrasyonu + QA düzeltmeleri</td><td class="num">origin/main'e itildi</td></tr>
+<tr><td><code>e28f475</code></td><td>companion back matter + kurucu biyografisi (önceki oturumdan)</td><td class="num">origin/main'e itildi</td></tr>
+<tr><td><code>a6a945d</code></td><td>büyük punto sürümü (önceki oturumdan)</td><td class="num">origin/main'e itildi</td></tr>
+</table>
+<p><strong>main</strong> dalı artık <code>origin/main</code> ile tam senkron (<code>e4df5bd..af66e8d</code>).</p>
+<p><strong>Kasıtlı olarak git dışı bırakılanlar</strong> (mevcut proje politikasıyla tutarlı, bu geçişte değiştirilmedi):</p>
+<ul>
+<li><code>02_MANUSCRIPT/*.json</code>, <code>*.md</code> — ticari el yazması metni; depo herkese açık olsa da metin gizli kalır (<code>.gitignore</code> + <code>validate_structure.py</code>'nin <code>check_manuscript_leak()</code> tarayıcısı çift güvenceli).</li>
+<li><code>07_ASSETS/plates/*</code>, <code>07_ASSETS/plates_print/*</code> — 63 kahraman görselinin kendisi (~177 MB birleşik); bu geçişte aynı gerekçeyle (büyük, deterministik olmayan görsel varlık, yalnızca ölçüm izlenir) <code>.gitignore</code>'a eklendi. Görsellerin kendisi yerine tam meta veri manifestosu izlenir.</li>
+</ul>
+
+<h2 id="s9">9. Şeffaflık notları</h2>
+<p>Depoda, bu görevin ürettiği hiçbir şeyle ilişkilendirilemeyen, izlenmeyen 5 öğe bulundu: <code>ARCHIVE/</code>, <code>QA/</code>, <code>READY/</code>, <code>gates.json</code>, <code>VISUAL-INTEGRATION-HANDOFF-FOR-AGENT-A.md</code>. Bunlar muhtemelen ayrı, daha geniş bir "Interior Visual Prompt Library / Agent A" girişiminin kalıntılarıdır (kurucunun kendi bellek kayıtlarında 13 Eylül 2026 tarihiyle anılıyor). Bu geçişte <strong>hiçbirine dokunulmadı</strong> — ne git'e eklendi ne silindi. Kurucunun bunları gözden geçirip ne yapılacağına karar vermesi gerekir.</p>
+
+<h2 id="s10">10. Kurucuya kalan maddeler</h2>
+<table>
+<tr><th></th><th>Madde</th><th>Neden ajan tamamlayamaz</th></tr>
+<tr><td><span class="tag rec">AÇIK</span></td><td>Ciltli kapak için KDP Print Cover Calculator'ın gerçek web aracıyla yeniden çalıştırılması</td><td><code>project_config.json</code>'daki <code>hardcoverConfirmedTemplate</code> hâlâ 160 sayfalık eski bir ölçüme dayanıyor; gerçek sayı artık 184. Bu değer yalnızca Amazon'un kendi hesaplayıcısından manuel olarak alınabilir.</td></tr>
+<tr><td><span class="tag rec">AÇIK</span></td><td>shatranj, chaturanga, omweso için diyagram (§7)</td><td>Kaynak-doğrulanmış tahta oranları gerektirir; icat edilemez.</td></tr>
+<tr><td><span class="tag rec">AÇIK</span></td><td>AI açıklama beyanı (AI disclosure)</td><td>KDP hesabı düzeyinde bir beyan, kurucunun kendi onayını gerektirir.</td></tr>
+<tr><td><span class="tag rec">AÇIK</span></td><td>ISBN ataması</td><td>Kurucunun ISBN kaydından tahsis gerektirir.</td></tr>
+<tr><td><span class="tag rec">AÇIK</span></td><td>Fiili oynanabilirlik testleri (playtests)</td><td>İnsan oyuncular gerektirir; BOOK_STATS.md'de "oynanabilirlik testi geçen: 0" olarak dürüstçe raporlanıyor.</td></tr>
+<tr><td><span class="tag rec">AÇIK</span></td><td>APLUS-05 eksik sanat varlığı</td><td>Önceki bir founder-delivery talebinden kalma, bu görevin kapsamı dışında.</td></tr>
+<tr><td><span class="tag rec">AÇIK</span></td><td>Kalan 31 aday oyun (22 BLOCKED, 8 SOURCE-PENDING, 1 UNRESOLVED)</td><td>Kaynak erişimi veya kurucu araştırması gerektirir — <code>04_BUILD/build_gap_register.py</code>'de belgeli.</td></tr>
+</table>
+
+<h2 id="s11">11. Görev kontrol listesi durumu</h2>
+<table>
+<tr><th>Madde</th><th>Durum</th></tr>
+<tr><td>Kaynak kurtarma (pdftotext kök neden düzeltmesi)</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>İçerik genişletme (7 yeni oyun, kopya kontrolü ile)</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>Diyagram kurtarma (6 yeni + 11 mevcut boşluk denetimi)</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>GPT Image üretimi (63/63, tarayıcı tabanlı, tek tek)</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>İndirme, adlandırma, manifesto kaydı</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>Görsel optimizasyon (164.4 MB → 12.7 MB)</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>Dizgi motoruna yerleştirme (ImageFlow, %19 bütçe)</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>Derleme (3 baskı + EPUB + kapaklar + A+ + teslim paketi)</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>Tam QA paketi (~30 kapı) — hepsi yeşil</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>git diff incelendi, sır taraması yapıldı</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>Değişiklikler commit edildi</td><td class="num">✅ tamamlandı (<code>af66e8d</code>)</td></tr>
+<tr><td>Kanonik dala (main) push edildi</td><td class="num">✅ tamamlandı</td></tr>
+<tr><td>Nihai rapor yazıldı</td><td class="num">✅ bu belge</td></tr>
+<tr><td>210-230 sayfa / 72-76 oyun aralığı</td><td class="num">kısmi — direktifte "asgari planlama aralığı" olarak nitelendi, nihai sayı (63 oyun, 180-266 sayfa) kaynak gerçekliğinden organik olarak çıktı, doldurmayla zorlanmadı</td></tr>
+<tr><td>Kurucu-only maddeler (§10)</td><td class="num">açık, ajan tamamlayamaz</td></tr>
+</table>
+
+<footer>
+<p>Vâliçe Press · The Great Book of World Games (GBK-02) · Mühendislik kaynakları: <code>06_REPORTS/GBK02_GAME_RECOVERY_INVENTORY.json</code>, <code>07_ASSETS/GBK02_GAME_ILLUSTRATION_MANIFEST.json</code>, <code>06_REPORTS/GBK02_CHATGPT_IMAGE_GENERATION_LOG.md</code></p>
+</footer>
+
+</div>
+</body>
+</html>
