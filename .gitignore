@@ -141,3 +141,9 @@ __pycache__/
 # KORUNMUYORDU da — tek bir `git add -A` onu public depoya sokardı.
 # Niyet ile koruma aynı şey değildir; bu satır ikincisidir.
 games-lib-screenshots/
+
+# ⚠ READY/ 08_OUTPUT gibi bir ÜRÜN paketidir ve kapalıdır (88 MB).
+# Kapaklar COMMON-AREA/covers/ hattından deterministik üretilir.
+READY/**/*
+!READY/**/*.json
+!READY/**/*.md
