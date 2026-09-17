@@ -78,7 +78,7 @@ ships. Full per-image record: `07_ASSETS/GBK02_GAME_ILLUSTRATION_MANIFEST.json`.
 
 ### Interior diagrams — **NOT AI-generated**
 
-This distinction matters and is easy to get wrong. The 57 board diagrams
+This distinction matters and is easy to get wrong. The 60 board diagrams
 inside the book were **not** produced by an image model. They are drawn by the
 project's own code (`04_BUILD/render_diagrams.py`) from structured data — each
 board is a list of points and edges, and the renderer emits SVG

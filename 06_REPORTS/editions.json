@@ -1,6 +1,6 @@
 {
   "status": "pass",
-  "pages": 180,
+  "pages": 182,
   "modelledPages": 252,
   "pageSource": "SAYILDI (interior.py · basılan kitap)",
   "$note": "Telif BASILAN sayfa sayısından hesaplanır. Kapsam modeli (100 oyun) ayrı bir sayıdır ve karşılaştırma için tutulur.",
@@ -8,17 +8,17 @@
     {
       "id": "hardcover",
       "list": 34.99,
-      "printCost": 8.71,
-      "royalty": 12.28,
-      "breakEvenAcosPct": 35.1,
+      "printCost": 8.74,
+      "royalty": 12.25,
+      "breakEvenAcosPct": 35.0,
       "royaltyRate": 0.6
     },
     {
       "id": "paperback",
       "list": 22.99,
-      "printCost": 4.06,
-      "royalty": 9.73,
-      "breakEvenAcosPct": 42.3,
+      "printCost": 4.09,
+      "royalty": 9.7,
+      "breakEvenAcosPct": 42.2,
       "royaltyRate": 0.6
     },
     {

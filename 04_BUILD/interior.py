@@ -646,6 +646,11 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs, plate_docs=No
         y -= fh
 
     # ③ künye sayfası ------------------------------------------------------
+    # Akış `lay.flow()` ile döner (§ Layout.flow) — künye metni (haklar +
+    # AI beyanı + yazar biyografisi) her sürümde aynı tek sayfaya sığmaz;
+    # büyük puntoda taştığı ÖLÇÜLEREK bulundu (s.4 alt marjı 0.0133 in).
+    # Elle y -= fh yığmak çerçeve dışına sessizce basardı; flow() sığmayanı
+    # bölüp yeni bir künye-devamı sayfasına taşır.
     p = lay.new_page("front")
     p.folio = False
     x, y_top, w, h = lay.frame(lay.n)
@@ -663,14 +668,19 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs, plate_docs=No
         for ed in ("paperback", "hardcover"):
             lines.append("ISBN (%s): %s" % (ed, esc(im["isbn"][ed])))
     lines += ["", esc(im["rights"])]
+    if im.get("aiDisclosure"):
+        lines += ["", esc(im["aiDisclosure"])]
     if im.get("authorBio"):
         lines += ["", "<b>About the author.</b> " + esc(im["authorBio"])]
-    y = y_top - h * 0.30
-    for ln in lines:
-        fl = P(ln or "&nbsp;", "small")
-        fw, fh = fl.wrap(w, h)
-        p.items.append((fl, x, y - fh, w))
-        y -= fh
+    flowables = [P(ln or "&nbsp;", "small") for ln in lines]
+    used, leftover = lay.flow(flowables, kind="front", start_page=p,
+                              reserve_top=h * 0.30)
+    if leftover:
+        raise RuntimeError("künye sayfası taştı ve flow() artık bırakmamalı — "
+                           "%d flowable sığmadı" % len(leftover))
+    # devam sayfalarının da folio'su kapalı kalsın (künye numaralanmaz)
+    for pg in lay.pages[-used:]:
+        pg.folio = False
 
     # ④ içindekiler --------------------------------------------------------
     # İçindekiler ÖNCE yer tutar, SONRA gerçek numaralarla doldurulur.

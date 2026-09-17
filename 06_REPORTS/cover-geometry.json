@@ -9,18 +9,18 @@
  "editions": {
   "paperback": {
    "edition": "paperback",
-   "pageCount": 180,
+   "pageCount": 182,
    "trimWidthIn": 8.5,
    "trimHeightIn": 11,
    "bleedIn": 0.125,
    "safeIn": 0.25,
-   "spineWidthIn": 0.4054,
+   "spineWidthIn": 0.4099,
    "spinePerPageIn": 0.002252,
    "spineTextAllowed": true,
    "spineTextMinPages": 79,
-   "wrapWidthIn": 17.6554,
+   "wrapWidthIn": 17.6599,
    "wrapHeightIn": 11.25,
-   "wrapWidthPt": 1271.19,
+   "wrapWidthPt": 1271.51,
    "wrapHeightPt": 810.0,
    "zones": {
     "backCover": {
@@ -29,11 +29,11 @@
     },
     "spine": {
      "x0": 8.625,
-     "x1": 9.0304
+     "x1": 9.0349
     },
     "frontCover": {
-     "x0": 9.0304,
-     "x1": 17.5304
+     "x0": 9.0349,
+     "x1": 17.5349
     }
    },
    "safeZones": {
@@ -45,19 +45,19 @@
     },
     "spineText": {
      "x0": 8.6875,
-     "x1": 8.9679,
+     "x1": 8.9724,
      "y0": 0.625,
      "y1": 10.625
     },
     "frontTitle": {
-     "x0": 9.2804,
-     "x1": 17.2804,
+     "x0": 9.2849,
+     "x1": 17.2849,
      "y0": 6.725,
      "y1": 10.875
     },
     "frontAuthor": {
-     "x0": 9.2804,
-     "x1": 17.2804,
+     "x0": 9.2849,
+     "x1": 17.2849,
      "y0": 0.375,
      "y1": 2.105
     },
@@ -72,28 +72,28 @@
    "artworkTarget": {
     "$note": "Kurucu sanatının HAM hedefi. 300 ppi baskı standardıdır; daha yüksek çözünürlük zarar vermez, düşüğü POD'da görünür.",
     "ppi": 300,
-    "widthPx": 5297,
+    "widthPx": 5298,
     "heightPx": 3375,
     "frontOnlyWidthPx": 2588,
     "frontOnlyHeightPx": 3375
    },
-   "interiorSha256": "edc925e465edac1e9e20a8e4a909f07401510ce7bedf8e9a1b5bb00a0dc08dd7",
+   "interiorSha256": "19bdb7a54c2cfe4588eb56f5298af31cf85586a0adb7c64159c76cd2152e54b5",
    "interiorFile": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf"
   },
   "hardcover": {
    "edition": "hardcover",
-   "pageCount": 184,
+   "pageCount": 186,
    "trimWidthIn": 8.25,
    "trimHeightIn": 11,
    "bleedIn": 0.591,
    "safeIn": 0.125,
-   "spineWidthIn": 0.549,
+   "spineWidthIn": 0.608,
    "spinePerPageIn": 0.0025,
    "spineTextAllowed": true,
    "spineTextMinPages": 79,
-   "wrapWidthIn": 18.624,
+   "wrapWidthIn": 18.683,
    "wrapHeightIn": 12.417,
-   "wrapWidthPt": 1340.93,
+   "wrapWidthPt": 1345.18,
    "wrapHeightPt": 894.02,
    "zones": {
     "backCover": {
@@ -102,11 +102,11 @@
     },
     "spine": {
      "x0": 9.038,
-     "x1": 9.587
+     "x1": 9.646
     },
     "frontCover": {
-     "x0": 9.587,
-     "x1": 18.034
+     "x0": 9.646,
+     "x1": 18.093
     }
    },
    "safeZones": {
@@ -118,19 +118,19 @@
     },
     "spineText": {
      "x0": 9.1005,
-     "x1": 9.5245,
+     "x1": 9.5835,
      "y0": 0.716,
      "y1": 11.702
     },
     "frontTitle": {
-     "x0": 9.981,
-     "x1": 17.909,
+     "x0": 10.04,
+     "x1": 17.968,
      "y0": 7.3326,
      "y1": 11.702
     },
     "frontAuthor": {
-     "x0": 9.981,
-     "x1": 17.909,
+     "x0": 10.04,
+     "x1": 17.968,
      "y0": 0.716,
      "y1": 2.6135
     },
@@ -145,31 +145,30 @@
    "artworkTarget": {
     "$note": "GERÇEK KDP Print Cover Calculator çıktısı — HİPOTEZ DEĞİL. project_config.json § hardcoverConfirmedTemplate.",
     "ppi": 300,
-    "widthPx": 5587,
+    "widthPx": 5605,
     "heightPx": 3725,
     "frontOnlyWidthPx": 2711,
     "frontOnlyHeightPx": 3725
    },
    "founderConfirmedTemplate": true,
-   "confirmedTemplateSource": "KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 160 sayfa · 2026-08-21",
-   "$stalePageCountWarning": "KURUCU EYLEMİ: gerçek sayfa sayısı (184) KDP hesaplayıcısına girilen değerden (160) FARKLI. Hesaplayıcıyı yeni sayfa sayısıyla YENİDEN çalıştır ve project_config.json § hardcoverConfirmedTemplate'i güncelle — bu geometri bayat olabilir.",
-   "interiorSha256": "7ccd018eaf234cd46b4309ee7302d3997b3832219d7297f01d0de07a274f69c4",
+   "confirmedTemplateSource": "KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 186 sayfa · 2026-09-17",
+   "interiorSha256": "25df1636639fc831456188e983e7de5ff0b9f5b1a1f51eb131d1f7163775f45b",
    "interiorFile": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf"
   },
   "largeprint": {
    "edition": "largeprint",
-   "pageCount": 266,
+   "pageCount": 272,
    "trimWidthIn": 8.5,
    "trimHeightIn": 11,
    "bleedIn": 0.125,
    "safeIn": 0.25,
-   "spineWidthIn": 0.599,
+   "spineWidthIn": 0.6125,
    "spinePerPageIn": 0.002252,
    "spineTextAllowed": true,
    "spineTextMinPages": 79,
-   "wrapWidthIn": 17.849,
+   "wrapWidthIn": 17.8625,
    "wrapHeightIn": 11.25,
-   "wrapWidthPt": 1285.13,
+   "wrapWidthPt": 1286.1,
    "wrapHeightPt": 810.0,
    "zones": {
     "backCover": {
@@ -178,11 +177,11 @@
     },
     "spine": {
      "x0": 8.625,
-     "x1": 9.224
+     "x1": 9.2375
     },
     "frontCover": {
-     "x0": 9.224,
-     "x1": 17.724
+     "x0": 9.2375,
+     "x1": 17.7375
     }
    },
    "safeZones": {
@@ -194,19 +193,19 @@
     },
     "spineText": {
      "x0": 8.6875,
-     "x1": 9.1615,
+     "x1": 9.175,
      "y0": 0.625,
      "y1": 10.625
     },
     "frontTitle": {
-     "x0": 9.474,
-     "x1": 17.474,
+     "x0": 9.4875,
+     "x1": 17.4875,
      "y0": 6.725,
      "y1": 10.875
     },
     "frontAuthor": {
-     "x0": 9.474,
-     "x1": 17.474,
+     "x0": 9.4875,
+     "x1": 17.4875,
      "y0": 0.375,
      "y1": 2.105
     },
@@ -221,12 +220,12 @@
    "artworkTarget": {
     "$note": "Kurucu sanatının HAM hedefi. 300 ppi baskı standardıdır; daha yüksek çözünürlük zarar vermez, düşüğü POD'da görünür.",
     "ppi": 300,
-    "widthPx": 5355,
+    "widthPx": 5359,
     "heightPx": 3375,
     "frontOnlyWidthPx": 2588,
     "frontOnlyHeightPx": 3375
    },
-   "interiorSha256": "715e2ec69655b5657794d63b37b419aa1ec98a1ab28b8e51021edc1a3c40c661",
+   "interiorSha256": "ed142dd8a2545049666e117056c37bb5e6d07ce821d7381979e56bc5698af736",
    "interiorFile": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_interior_largeprint.pdf"
   }
  },

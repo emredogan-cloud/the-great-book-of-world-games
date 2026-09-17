@@ -1,9 +1,9 @@
 {
  "edition": "hardcover",
  "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf",
- "pageCount": 184,
- "sha256": "7ccd018eaf234cd46b4309ee7302d3997b3832219d7297f01d0de07a274f69c4",
- "bytes": 16943218,
+ "pageCount": 186,
+ "sha256": "25df1636639fc831456188e983e7de5ff0b9f5b1a1f51eb131d1f7163775f45b",
+ "bytes": 16956913,
  "trim": {
   "widthIn": 8.25,
   "heightIn": 11
@@ -30,13 +30,13 @@
   "seega",
   "shogi"
  ],
- "blankPages": 22,
+ "blankPages": 20,
  "pageKinds": {
   "front": 9,
-  "blank": 17,
+  "blank": 15,
   "opener": 7,
   "game": 136,
-  "back": 15
+  "back": 19
  },
  "frontMatterPages": 13,
  "bodyEndPage": 163,
@@ -109,7 +109,7 @@
  "gutterIterations": [
   [
    200,
-   184
+   186
   ]
  ],
  "tocFitted": true

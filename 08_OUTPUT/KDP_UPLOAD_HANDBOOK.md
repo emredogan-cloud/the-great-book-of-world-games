@@ -4,7 +4,7 @@
 > **Generated file** — `04_BUILD/handoff.py`. Every number below is measured
 > from the built artefacts. If you rebuild anything, rebuild this file.
 >
-> Generated at phase **6** · interior **180 pages** ·
+> Generated at phase **6** · interior **182 pages** ·
 > **56 games** · **39 cultures**
 
 ---
@@ -24,8 +24,8 @@ published.** No proof copy has been ordered.
 
 | Format | Interior | Cover | Ready to upload |
 |---|---|---|---|
-| Paperback | ✅ 180 pp | ✅ wrap PDF | **yes** |
-| Hardcover | ✅ 184 pp | ✅ wrap PDF | **yes** |
+| Paperback | ✅ 182 pp | ✅ wrap PDF | **yes** |
+| Hardcover | ✅ 186 pp | ✅ wrap PDF | **yes** |
 | Kindle | ✅ EPUB 3 | ✅ 1600 × 2560 JPG | **yes** |
 | A+ Content | copy ✅ 6 modules | ✅ 5 of 6 modules have art | **yes, 5 modules** |
 
@@ -141,10 +141,10 @@ declaration on your behalf. The facts you need in order to answer:
 ```
 08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf
 ```
-- 180 pages · trim 8.5 × 11 in
+- 182 pages · trim 8.5 × 11 in
 - no bleed · inside margin 0.55 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `edc925e465edac1e9e20a8e4a909f07401510ce7bedf8e9a1b5bb00a0dc08dd7`
+- SHA-256 `19bdb7a54c2cfe4588eb56f5298af31cf85586a0adb7c64159c76cd2152e54b5`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.5 x 11 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
@@ -155,13 +155,13 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
 ```
 08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf
 ```
-- full wrap **17.6554 × 11.2500 in**, including
+- full wrap **17.6599 × 11.2500 in**, including
   0.125 in bleed on all four sides
-- spine **0.4054 in**, computed from this exact page count
-  (180 pages × 0.002252 in/page)
-- artwork embedded at **5297 × 3375 px**
+- spine **0.4099 in**, computed from this exact page count
+  (182 pages × 0.002252 in/page)
+- artwork embedded at **5298 × 3375 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `cd7e16e9780be914507e01f9d330659dba504b70eb490f37e57a4108d9d36e75`
+- SHA-256 `de3634b44c9009a713f651861acaf067bc8f477dd9e438f4735d20ac86a1ca32`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
@@ -291,10 +291,10 @@ declaration on your behalf. The facts you need in order to answer:
 ```
 08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf
 ```
-- 184 pages · trim 8.25 × 11 in
+- 186 pages · trim 8.25 × 11 in
 - no bleed · inside margin 0.675 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `7ccd018eaf234cd46b4309ee7302d3997b3832219d7297f01d0de07a274f69c4`
+- SHA-256 `25df1636639fc831456188e983e7de5ff0b9f5b1a1f51eb131d1f7163775f45b`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.25 x 11 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
@@ -305,12 +305,12 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
 ```
 08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf
 ```
-- full wrap **18.6240 × 12.4170 in**, including
+- full wrap **18.6830 × 12.4170 in**, including
   0.591 in wrap allowance on all four sides
-- spine **0.5490 in**, **confirmed directly from KDP** — not computed from a formula (KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 160 sayfa · 2026-08-21)
-- artwork embedded at **5587 × 3725 px**
+- spine **0.6080 in**, **confirmed directly from KDP** — not computed from a formula (KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 186 sayfa · 2026-09-17)
+- artwork embedded at **5605 × 3725 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `3ea1480877740da9a512b589159bf2277a9cf11eacd0a10ab7f30a744f653936`
+- SHA-256 `0441bc8e940da851a6ac63a3698e0fbe371930feedff4289ade01e5519e2b19d`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
@@ -369,7 +369,7 @@ yours to answer.
 08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub
 ```
 - EPUB 3, **reflowable**
-- 1242 KB · SHA-256 `30e7f98a8d5c263d9255cb32b08828a0c0627541e28554fd8400c2b026cb564f`
+- 1243 KB · SHA-256 `ca57ebaec8508175390e1970fd37abba2f3525778f6bfefa9175e2416dfb9ce9`
 - diagrams are embedded as **inline SVG**, so they stay sharp at any screen
   size and add almost nothing to the file size
 
@@ -386,7 +386,7 @@ anyway: each game is one uninterrupted entry.
 08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg
 ```
 - **1600 × 2560 px** (Amazon's recommended 1:1.6), JPEG
-- SHA-256 `bc45110fe2ebd7e94b9069b6822aa98727cc38c7c3033174e315f98c7085b35b`
+- SHA-256 `a5f5fb8bd5c34ca0abcd636df9a9a756338a318dc38549a05f926a7d9c957a41`
 - derived from the **front panel** of the print artwork, not from the wrap —
   an ebook cover must not show a spine or a back panel
 - title, subtitle and author are set as **vector outline type** (LiberationSerif TTF, not AI-generated), at the same measured, quiet position used on the print front cover, scaled to this file's own pixel density

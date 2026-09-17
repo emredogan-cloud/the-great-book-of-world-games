@@ -687,6 +687,48 @@
       "withinDiagramBudget": true
     },
     {
+      "diagramId": "shatranj-setup",
+      "gameId": "shatranj",
+      "widthMm": 68.0,
+      "heightMm": 86.0,
+      "legendMm": 18.0,
+      "boardClass": "cell",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/shatranj-setup.svg",
+      "renderedWidthMm": 68.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "chaturanga-setup",
+      "gameId": "chaturanga",
+      "widthMm": 68.0,
+      "heightMm": 77.0,
+      "legendMm": 9.0,
+      "boardClass": "cell",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/chaturanga-setup.svg",
+      "renderedWidthMm": 68.0,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
+      "diagramId": "omweso-setup",
+      "gameId": "omweso",
+      "widthMm": 90.4,
+      "heightMm": 55.7,
+      "legendMm": 4.5,
+      "boardClass": "pit",
+      "panels": 1,
+      "file": "07_ASSETS/diagrams/omweso-setup.svg",
+      "renderedWidthMm": 90.4,
+      "panelLayout": "horizontal",
+      "fitsFullWidth": true,
+      "withinDiagramBudget": true
+    },
+    {
       "diagramId": "tablut-setup",
       "gameId": "tablut",
       "widthMm": 75.0,

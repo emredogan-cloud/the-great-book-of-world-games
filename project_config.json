@@ -392,33 +392,37 @@
     "hardcoverTemplateConfirmed": true,
     "hardcoverConfirmedTemplate": {
       "$comment": [
-        "KURUCU KDP Print Cover Calculator'ı GERÇEKTEN çalıştırdı",
-        "(kdp.amazon.com/cover-calculator · Hardcover · B&W · White paper ·",
-        "8.25 x 11 in · 160 sayfa) ve ekran görüntüsünü teslim etti — 21",
-        "Ağustos 2026. Bu blok o ARAÇTAN okunan DEĞERLERDİR, hesaplanmadı.",
-        "PHASE_6'nın hipotez formülü (0,0025 in/sayfa + 0,06 in tahta payı)",
-        "artık YALNIZCA `founderConfirmedTemplate` false olduğunda kullanılan",
-        "bir yedektir — bkz. 04_BUILD/covers.py § hardcover_confirmed_geometry.",
+        "KURUCU (ajan araciligiyla, gercek tarayici oturumuyla) KDP Print",
+        "Cover Calculator'i GERCEKTEN calistirdi (kdp.amazon.com/cover-templates ·",
+        "Hardcover · B&W · White paper · 8.25 x 11 in · 186 sayfa) ve sonuc",
+        "tabloyu okudu — 17 Eylul 2026. Bu blok o ARACTAN okunan DEGERLERDIR,",
+        "hesaplanmadi. Onceki okuma (21 Agustos 2026, 160 sayfa) artik BAYATTI:",
+        "sayfa sayisi GBK-02 kurtarma + genisleme gecisleriyle 160 -> 184 -> 186",
+        "sayfaya cikti ve sirt 0.549 -> 0.608 in'e degisti (tam sarim genisligi",
+        "de 18.624 -> 18.683 in). PHASE_6'nin hipotez formulu (0.0025 in/sayfa +",
+        "0.06 in tahta payi) artik YALNIZCA founderConfirmedTemplate false",
+        "oldugunda kullanilan bir yedektir — bkz. 04_BUILD/covers.py",
+        "sect hardcover_confirmed_geometry.",
         "",
-        "Sayfa sayısı DEĞİŞİRSE bu blok BAYATLAR: kurucu KDP hesaplayıcısını",
-        "yeni sayfa sayısıyla YENİDEN çalıştırıp burayı güncellemelidir —",
-        "covers.py bunu otomatik yeniden türetemez, KDP'nin kendi aracı."
+        "Sayfa sayisi DEGISIRSE bu blok BAYATLAR: hesaplayiciyi yeni sayfa",
+        "sayisiyla YENIDEN calistirip burayi guncellemek gerekir —",
+        "covers.py bunu otomatik yeniden turetemez, KDP'nin kendi araci."
       ],
-      "sourcePageCount": 160,
+      "sourcePageCount": 186,
       "sourceTrimIn": {
         "w": 8.25,
         "h": 11
       },
-      "fullCoverWidthIn": 18.624,
+      "fullCoverWidthIn": 18.683,
       "fullCoverHeightIn": 12.417,
       "frontCoverWidthIn": 8.447,
       "frontCoverHeightIn": 11.236,
-      "spineWidthIn": 0.549,
+      "spineWidthIn": 0.608,
       "wrapIn": 0.591,
       "hingeIn": 0.394,
       "marginIn": 0.125,
       "spineMarginIn": 0.062,
-      "spineSafeAreaWidthIn": 0.424,
+      "spineSafeAreaWidthIn": 0.483,
       "spineSafeAreaHeightIn": 10.986,
       "barcodeMarginHorizontalIn": 0.25,
       "barcodeMarginVerticalIn": 0.375
@@ -741,7 +745,8 @@
       "minimumPt": 12,
       "editionLabel": "Large Print Edition",
       "diagramPageBudget": 0.6
-    }
+    },
+    "hardcoverConfirmedTemplateDate": "2026-09-17"
   },
   "privacy": {
     "$comment": [

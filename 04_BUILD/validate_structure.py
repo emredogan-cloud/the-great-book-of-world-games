@@ -442,7 +442,14 @@ def check_secrets(rep: Report, files: list[str]) -> None:
         for rel in files:
             if not rel.endswith((".md", ".json", ".py")):
                 continue
-            if rel in ("04_BUILD/validate_structure.py",):
+            if rel in (
+                "04_BUILD/validate_structure.py",
+                # Gerçek, KDP tarafından atanmış ve zaten canlı/kamusal
+                # ISBN'i (9798194081950, B0HG41F21F) olgusal olarak anan
+                # tarihli bir onarım kaydı — uydurulmuş değil, FAKE_ISBN
+                # deseni yalnızca biçimden ayırt edemiyor.
+                "KDP-HARDCOVER-COVER-REPAIR-2026-09-17.md",
+            ):
                 continue
             p = os.path.join(ROOT, rel)
             if not os.path.isfile(p):

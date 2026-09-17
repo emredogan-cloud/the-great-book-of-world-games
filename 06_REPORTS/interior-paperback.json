@@ -1,9 +1,9 @@
 {
  "edition": "paperback",
  "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
- "pageCount": 180,
- "sha256": "edc925e465edac1e9e20a8e4a909f07401510ce7bedf8e9a1b5bb00a0dc08dd7",
- "bytes": 16940649,
+ "pageCount": 182,
+ "sha256": "19bdb7a54c2cfe4588eb56f5298af31cf85586a0adb7c64159c76cd2152e54b5",
+ "bytes": 16954612,
  "trim": {
   "widthIn": 8.5,
   "heightIn": 11
@@ -28,13 +28,13 @@
   "seega",
   "shogi"
  ],
- "blankPages": 20,
+ "blankPages": 18,
  "pageKinds": {
   "front": 9,
-  "blank": 17,
+  "blank": 15,
   "opener": 7,
   "game": 132,
-  "back": 15
+  "back": 19
  },
  "frontMatterPages": 13,
  "bodyEndPage": 159,
@@ -107,7 +107,7 @@
  "gutterIterations": [
   [
    200,
-   180
+   182
   ]
  ],
  "tocFitted": true

@@ -434,11 +434,13 @@
       "gameId": "shatranj",
       "words": 731,
       "textHeightMm": 326.1,
-      "diagramHeightMm": 0.0,
-      "diagrams": [],
+      "diagramHeightMm": 90.0,
+      "diagrams": [
+        "shatranj-setup"
+      ],
       "textPages": 1.348,
-      "diagramPages": 0.0,
-      "measuredPages": 1.348,
+      "diagramPages": 0.372,
+      "measuredPages": 1.72,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -446,11 +448,13 @@
       "gameId": "chaturanga",
       "words": 842,
       "textHeightMm": 343.8,
-      "diagramHeightMm": 0.0,
-      "diagrams": [],
+      "diagramHeightMm": 81.0,
+      "diagrams": [
+        "chaturanga-setup"
+      ],
       "textPages": 1.421,
-      "diagramPages": 0.0,
-      "measuredPages": 1.421,
+      "diagramPages": 0.335,
+      "measuredPages": 1.755,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -742,11 +746,13 @@
       "gameId": "omweso",
       "words": 767,
       "textHeightMm": 309.4,
-      "diagramHeightMm": 0.0,
-      "diagrams": [],
+      "diagramHeightMm": 59.7,
+      "diagrams": [
+        "omweso-setup"
+      ],
       "textPages": 1.278,
-      "diagramPages": 0.0,
-      "measuredPages": 1.278,
+      "diagramPages": 0.247,
+      "measuredPages": 1.525,
       "billedPages": 2,
       "overflowsSpread": false
     },
@@ -947,12 +953,12 @@
     }
   ],
   "avgWordsPerGame": 729.4,
-  "measuredWordsPerPage": 475.3,
+  "measuredWordsPerPage": 470.7,
   "hypothesisWordsPerPage": 320,
-  "avgMeasuredPagesPerGame": 1.535,
+  "avgMeasuredPagesPerGame": 1.55,
   "avgBilledPagesPerGame": 2.032,
   "avgTextPagesPerGame": 1.273,
-  "avgDiagramPagesPerGame": 0.262,
+  "avgDiagramPagesPerGame": 0.277,
   "spreadOverflowGames": [
     "tablut"
   ],

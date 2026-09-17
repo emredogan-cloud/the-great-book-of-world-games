@@ -178,6 +178,23 @@ def build(root: str) -> int:
                       "purchaser may photocopy for personal and classroom use.",
             "edition": "First edition",
             "printedBy": "Printed on demand.",
+            "aiDisclosure": (
+                "Artificial intelligence was used in producing this book, and "
+                "it is worth being exact about where. The rules and cultural "
+                "notes were drafted with AI assistance and edited against "
+                "named, page-cited sources — every claim is checked "
+                "against a supporting passage kept in a separate "
+                "verification record. The board and rule diagrams were not "
+                "made by an image model: they are drawn as vectors from the "
+                "book's own structured data by its build code, so a diagram "
+                "cannot show a board that does not match the rule printed "
+                "beside it. Each of this book's %d games opens on a full "
+                "illustration, and those illustrations were generated with "
+                "an image model, one game at a time, reviewed and selected "
+                "before being placed — this is named here rather than "
+                "left to be noticed. The cover and the promotional artwork "
+                "were generated with an image model as well." % len(games)
+            ),
             "authorBio": cfg["founder"].get("authorBio"),
             "$authorBioNote": "null ise KURUCU EYLEMİ bekliyor (A6). "
                               "Yol haritası Faz 6 § 12: authorBio null → KIRMIZI.",

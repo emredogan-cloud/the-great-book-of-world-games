@@ -23,7 +23,7 @@
     }
    ],
    "geometry": {
-    "pages": 180,
+    "pages": 182,
     "sizes": [
      [
       612.0,
@@ -57,20 +57,18 @@
      160,
      162,
      166,
-     172,
-     176,
-     178
+     168
     ]
    },
    "language": {
-    "extractedWords": 71831,
+    "extractedWords": 72807,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
     "rasterImages": 63
    },
-   "pageCount": 180
+   "pageCount": 182
   },
   "hardcover": {
    "fonts": [
@@ -92,7 +90,7 @@
     }
    ],
    "geometry": {
-    "pages": 184,
+    "pages": 186,
     "sizes": [
      [
       594.0,
@@ -128,20 +126,18 @@
      164,
      166,
      170,
-     176,
-     180,
-     182
+     172
     ]
    },
    "language": {
-    "extractedWords": 71835,
+    "extractedWords": 72811,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
     "rasterImages": 63
    },
-   "pageCount": 184
+   "pageCount": 186
   },
   "largeprint": {
    "fonts": [
@@ -163,7 +159,7 @@
     }
    ],
    "geometry": {
-    "pages": 266,
+    "pages": 272,
     "sizes": [
      [
       612.0,
@@ -181,25 +177,25 @@
     "requiredGutterIn": 0.5,
     "blankPages": [
      2,
-     8,
-     16,
-     148,
-     236,
-     238,
-     242,
-     258,
-     266
+     6,
+     10,
+     18,
+     150,
+     240,
+     260,
+     264,
+     272
     ]
    },
    "language": {
-    "extractedWords": 71952,
+    "extractedWords": 72923,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
     "rasterImages": 63
    },
-   "pageCount": 266
+   "pageCount": 272
   }
  }
 }
