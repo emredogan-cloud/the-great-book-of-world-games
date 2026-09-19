@@ -147,3 +147,18 @@ games-lib-screenshots/
 READY/**/*
 !READY/**/*.json
 !READY/**/*.md
+
+# ── VP-044 · THE FOUR THAT WERE NEITHER TRACKED NOR IGNORED ────────────────
+# Decided 2026-09-19. Each of these had survived several sessions as an
+# "unrelated pre-existing untracked file", which is not a decision — it is the
+# absence of one, and it is how a 64 MB directory ends up one `git add -A` from
+# the index.
+#
+# ARCHIVE/ — 64 MB of superseded build output. History, not source. The builds
+# that matter are reproducible from 02_MANUSCRIPT + 04_BUILD, which ARE tracked.
+ARCHIVE/
+#
+# QA/ is 28 KB of measurement output and IS tracked from here: these are the
+# numbers the gates are argued from, and a gate whose evidence is not in the
+# repository cannot be checked by anyone but the machine that ran it.
+# gates.json likewise — it is the book's own state, 4 KB, and belongs in history.

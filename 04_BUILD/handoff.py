@@ -33,6 +33,52 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_ROOT = os.path.dirname(HERE)
 
 
+def playtest_release_standard(cfg: dict) -> dict | None:
+    """The dated decision that says what playability must be true before release.
+
+    Absent, the historic rule applies: one external human playtest per game, and
+    the gate blocks. Present, the gate says what the standard IS and whether the
+    Founder made it blocking. Either way the number of recorded sessions is read
+    from disk and printed — a standard may be lowered, a count may not be faked.
+    """
+    return (cfg.get("playtest") or {}).get("releaseStandard")
+
+
+def playtest_action(cfg: dict) -> list:
+    std = playtest_release_standard(cfg)
+    if std is None:
+        return [{"id": "PLAYTEST", "field": "01_SOURCE/playtests/",
+                 "blocking": True, "note": "Dış oynanabilirlik testi 0 oturum."}]
+    if std.get("blocksRelease"):
+        return [{"id": "PLAYTEST", "field": "01_SOURCE/playtests/",
+                 "blocking": True, "note": std["standard"]}]
+    return []
+
+
+def playtest_prose(cfg: dict) -> str:
+    std = playtest_release_standard(cfg)
+    if std is None:
+        return ("""
+- ⛔ **PLAYTEST** — the project's own playability standard requires at least
+  one external human playtest per game before a game may be called locked.
+  Zero sessions have been recorded. The book does not claim to have been
+  playtested, and the subtitle's promise rests on rule completeness rather
+  than on tested play. Publishing before playtesting is your decision to
+  make, and it should be a decision rather than an oversight.
+
+---
+""")
+    mark = "⛔" if std.get("blocksRelease") else "·"
+    old = std.get("supersedes", {})
+    return ("\n- %s **PLAYTEST** — the release standard for this book is: *%s* "
+            "(Founder decision %s, %s).\n"
+            "  It replaced: *%s* — of which **%d** session(s) were ever recorded.\n"
+            "  %s\n\n---\n"
+            % (mark, std["standard"], std.get("id", "—"), std.get("decidedOn", "—"),
+               old.get("standard", "—"), old.get("recordedSessions", 0),
+               std.get("whatMayNotHappen", "")))
+
+
 def load(p):
     with open(p, encoding="utf-8") as fh:
         return json.load(fh)
@@ -311,7 +357,7 @@ if you have entered one.
 """
 
 
-def build_handbook(root, pkgs, md, cov, fm, actions):
+def build_handbook(root, pkgs, md, cov, fm, actions, cfg):
     m = md["measured"]
     parts = [f"""# KDP UPLOAD HANDBOOK
 ## The Great Book of World Games
@@ -372,16 +418,7 @@ published.** No proof copy has been ordered.
             "with the other %d module(s). Prompts are in "
             "`07_ASSETS/IMAGE_PROMPT_LIBRARY.html`.\n"
             % (len(missing_aplus), total_n, ", ".join(missing_aplus), ready_n))
-    parts.append("""
-- ⛔ **PLAYTEST** — the project's own playability standard requires at least
-  one external human playtest per game before a game may be called locked.
-  Zero sessions have been recorded. The book does not claim to have been
-  playtested, and the subtitle's promise rests on rule completeness rather
-  than on tested play. Publishing before playtesting is your decision to
-  make, and it should be a decision rather than an oversight.
-
----
-""")
+    parts.append(playtest_prose(cfg))
     for ed, label in (("paperback", "PAPERBACK"), ("hardcover", "HARDCOVER")):
         if ed not in pkgs:
             continue
@@ -862,6 +899,7 @@ def run(root, args):
             print("  · %s yok — teslim paketi ATLANDI" % os.path.relpath(p, root))
             return 0
     md, cov, fm = load(md_p), load(cov_p), load(fm_p)
+    cfg = load(os.path.join(root, "project_config.json"))
     ivis = {}
     kp = os.path.join(root, "06_REPORTS", "kdp-preflight.json")
     if os.path.exists(kp):
@@ -911,7 +949,7 @@ def run(root, args):
         n = sums_file(root, folder)
         counts[folder] = n or 0
 
-    hb = build_handbook(root, pkgs, md, cov, fm, md["founderActions"])
+    hb = build_handbook(root, pkgs, md, cov, fm, md["founderActions"], cfg)
     write(os.path.join(root, "08_OUTPUT", "KDP_UPLOAD_HANDBOOK.md"), hb)
     pv = build_previewer(root, pkgs, cov, md, ivis)
     write(os.path.join(root, "08_OUTPUT", "KDP_PREVIEWER_CHECKLIST.md"), pv)
@@ -941,8 +979,7 @@ def run(root, args):
                      "sanat gelirse eklenir."
                      % len(pkgs.get("aplus", {}).get("ready", []))}]
            if pkgs.get("aplus", {}).get("withoutArt") else [])
-        + [{"id": "PLAYTEST", "field": "01_SOURCE/playtests/",
-            "blocking": True, "note": "Dış oynanabilirlik testi 0 oturum."}],
+        + playtest_action(cfg),
         "errors": errs,
     }
     allacts = report["blockingFounderActions"]

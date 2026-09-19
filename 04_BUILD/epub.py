@@ -50,7 +50,25 @@ import zipfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_ROOT = os.path.dirname(HERE)
 
-UUID_NS = "urn:uuid:great-book-of-world-games-"
+# COMMON-AREA/isbn is three directories above this book's root.
+sys.path.insert(0, os.path.join(
+    os.path.dirname(os.path.dirname(DEFAULT_ROOT)), "COMMON-AREA", "isbn"))
+import registry as isbn_registry  # noqa: E402
+
+# ⚠ THE UUID NAMESPACE IS DEAD, AND THIS IS WHY IT IS STILL WRITTEN DOWN.
+#
+# Until 2026-09-19 the package identifier was
+#     UUID_NS + sha1(title + subtitle)[:12]
+# — deterministic, tidy, and not the book's identifier. 978-625-00-4704-0 was
+# embedded on 2026-09-09; this generator was re-run for the 63-game recovery
+# edition, minted the UUID again, and the ISBN left the file. ISBN-REGISTRY.md
+# went on recording it as APPROVED · EMBEDDED · D2D READY for ten days because
+# nothing measured the artefact, and EPUBCheck was not run again either.
+#
+# The identifier now comes from the registry, and a book the registry does not
+# name raises rather than falls back. Do not restore a fallback here: the
+# fallback IS the defect.
+UUID_NS_RETIRED = "urn:uuid:great-book-of-world-games-"
 
 
 def load(p):
@@ -343,8 +361,17 @@ def build(root: str) -> int:
                '</head><body>%s</body></html>\n' % "".join(nav))
 
     # ── OPF ───────────────────────────────────────────────────────────
-    uid = UUID_NS + hashlib.sha1(
-        (tp["title"] + tp["subtitle"]).encode()).hexdigest()[:12]
+    out_dir = os.path.join(root, "08_OUTPUT", "KINDLE")
+    path = os.path.join(out_dir, "GreatBookOfWorldGames.epub")
+    uid = isbn_registry.identifier(path)          # raises if unregistered
+
+    # Which documents actually carry an inline <svg>? Measured from the bodies
+    # about to be written, never from a list someone typed. EPUBCheck raises
+    # OPF-014 once per undeclared document, and this book draws 54 board
+    # diagrams as inline vectors — 54 of the 55 errors on the shipped flagship
+    # EPUB were this single omission repeated.
+    svg_docs = {name.split("/")[-1] for name, data in files if "<svg" in data}
+
     manifest = ['<item id="nav" href="nav.xhtml" '
                 'media-type="application/xhtml+xml" properties="nav"/>',
                 '<item id="css" href="style.css" media-type="text/css"/>']
@@ -352,14 +379,22 @@ def build(root: str) -> int:
         manifest.append('<item id="cover-image" href="images/cover.jpg" '
                         'media-type="image/jpeg" properties="cover-image"/>')
     for i, n in enumerate(spine):
+        props = ' properties="svg"' if n in svg_docs else ""
         manifest.append('<item id="s%d" href="text/%s" '
-                        'media-type="application/xhtml+xml"/>' % (i, n))
+                        'media-type="application/xhtml+xml"%s/>' % (i, n, props))
     opf = ('<?xml version="1.0" encoding="utf-8"?>\n'
            '<package xmlns="http://www.idpf.org/2007/opf" version="3.0" '
            'unique-identifier="bookid" xml:lang="en">\n'
            '<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
            '<dc:identifier id="bookid">%s</dc:identifier>\n'
-           '<dc:title>%s</dc:title>\n'
+           # main + subtitle as separate refined titles. The display imprint is
+           # `Vâliçe Press`; EPUB metadata carries the ASCII form the registry
+           # fixes, because a retailer's importer is not required to be UTF-8
+           # clean and one of them proved it.
+           '<dc:title id="title-main">%s</dc:title>\n'
+           '<meta refines="#title-main" property="title-type">main</meta>\n'
+           '<dc:title id="title-main-sub">%s</dc:title>\n'
+           '<meta refines="#title-main-sub" property="title-type">subtitle</meta>\n'
            '<dc:creator>%s</dc:creator>\n'
            '<dc:publisher>%s</dc:publisher>\n'
            '<dc:language>en</dc:language>\n'
@@ -374,17 +409,15 @@ def build(root: str) -> int:
            '%s'
            '</metadata>\n<manifest>\n%s\n</manifest>\n<spine>\n%s\n</spine>\n'
            '</package>\n'
-           % (uid, E(tp["title"]), E(tp["author"]), E(tp["publisher"]),
-              E(tp["subtitle"]),
+           % (uid, E(tp["title"]), E(tp["subtitle"]), E(tp["author"]),
+              E(isbn_registry.IMPRINT_ASCII), E(tp["subtitle"]),
               ('<meta name="cover" content="cover-image"/>\n'
                if cover_img else ""),
               "\n".join(manifest),
               "\n".join('<itemref idref="s%d"/>' % i
                         for i in range(len(spine)))))
 
-    out_dir = os.path.join(root, "08_OUTPUT", "KINDLE")
     os.makedirs(out_dir, exist_ok=True)
-    path = os.path.join(out_dir, "GreatBookOfWorldGames.epub")
     with zipfile.ZipFile(path, "w") as z:
         z.writestr(zipfile.ZipInfo("mimetype"), "application/epub+zip",
                    compress_type=zipfile.ZIP_STORED)

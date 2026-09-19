@@ -1,0 +1,165 @@
+{
+ "version": 1,
+ "gates": {
+  "1": {
+   "key": "market",
+   "name": "Market fit",
+   "owner": "R1",
+   "founderSignoff": false,
+   "status": "in_progress",
+   "evidence": [
+    "BRIEF.md"
+   ],
+   "updatedAt": "2026-09-07T16:42:38.213Z",
+   "updatedBy": "backfill-gates.mjs",
+   "approvedBy": null,
+   "reason": "BRIEF.md is a measurement record, not a verdict — it says what was built, not whether the gate is satisfied. Attached as evidence; the gate needs its own check."
+  },
+  "2": {
+   "key": "rights",
+   "name": "Rights",
+   "owner": "R6",
+   "founderSignoff": true,
+   "status": "not_started",
+   "evidence": [],
+   "updatedAt": null,
+   "updatedBy": null,
+   "approvedBy": null,
+   "reason": null
+  },
+  "3": {
+   "key": "originality",
+   "name": "Originality / similarity",
+   "owner": "R8",
+   "founderSignoff": false,
+   "status": "passed",
+   "evidence": [
+    "QA/similarity.json"
+   ],
+   "updatedAt": "2026-09-07T16:54:48.380Z",
+   "updatedBy": "backfill-gates.mjs --refresh",
+   "approvedBy": null,
+   "reason": "QA/similarity.json reports ok with zero errors, re-read 2026-09-07."
+  },
+  "4": {
+   "key": "content",
+   "name": "Content quality",
+   "owner": "R3",
+   "founderSignoff": false,
+   "status": "passed",
+   "evidence": [
+    "QA/draft-lint.json"
+   ],
+   "updatedAt": "2026-09-07T16:54:48.380Z",
+   "updatedBy": "backfill-gates.mjs --refresh",
+   "approvedBy": null,
+   "reason": "QA/draft-lint.json reports ok with zero errors, re-read 2026-09-07."
+  },
+  "5": {
+   "key": "facts",
+   "name": "Factual verification",
+   "owner": "R4",
+   "founderSignoff": true,
+   "status": "not_started",
+   "evidence": [],
+   "updatedAt": null,
+   "updatedBy": null,
+   "approvedBy": null,
+   "reason": null
+  },
+  "6": {
+   "key": "editorial",
+   "name": "Editorial",
+   "owner": "R5",
+   "founderSignoff": false,
+   "status": "passed",
+   "evidence": [
+    "QA/style-lint.json"
+   ],
+   "updatedAt": "2026-09-07T16:54:48.380Z",
+   "updatedBy": "backfill-gates.mjs --refresh",
+   "approvedBy": null,
+   "reason": "QA/style-lint.json reports ok with zero errors, re-read 2026-09-07."
+  },
+  "7": {
+   "key": "cover",
+   "name": "Cover",
+   "owner": "R7",
+   "founderSignoff": true,
+   "status": "not_started",
+   "evidence": [],
+   "updatedAt": null,
+   "updatedBy": null,
+   "approvedBy": null,
+   "reason": null
+  },
+  "8": {
+   "key": "interior",
+   "name": "Interior / proof",
+   "owner": "R7",
+   "founderSignoff": true,
+   "status": "in_progress",
+   "evidence": [
+    "06_REPORTS/kdp-preflight.json"
+   ],
+   "updatedAt": "2026-09-07T16:42:38.213Z",
+   "updatedBy": "backfill-gates.mjs",
+   "approvedBy": null,
+   "reason": "Evidence on disk (06_REPORTS/kdp-preflight.json). This gate is a Founder sign-off; the signature has not been given, and no agent may give it. Recorded as in_progress rather than passed."
+  },
+  "9": {
+   "key": "metadata",
+   "name": "Metadata",
+   "owner": "R8",
+   "founderSignoff": false,
+   "status": "passed",
+   "evidence": [
+    "QA/metadata-lint.json"
+   ],
+   "updatedAt": "2026-09-07T16:54:48.380Z",
+   "updatedBy": "backfill-gates.mjs --refresh",
+   "approvedBy": null,
+   "reason": "QA/metadata-lint.json reports ok with zero errors, re-read 2026-09-07."
+  },
+  "10": {
+   "key": "compliance",
+   "name": "KDP compliance",
+   "owner": "R8",
+   "founderSignoff": true,
+   "status": "in_progress",
+   "evidence": [
+    "QA/compliance-lint.json"
+   ],
+   "updatedAt": "2026-09-07T16:54:48.380Z",
+   "updatedBy": "backfill-gates.mjs --refresh",
+   "approvedBy": null,
+   "reason": "Evidence on disk (QA/compliance-lint.json). Founder sign-off gate — the signature has not been given and no agent may give it."
+  },
+  "11": {
+   "key": "website",
+   "name": "Website product QA",
+   "owner": "R9",
+   "founderSignoff": false,
+   "status": "passed",
+   "evidence": [
+    "QA/website-qa.json"
+   ],
+   "updatedAt": "2026-09-07T16:42:38.213Z",
+   "updatedBy": "backfill-gates.mjs",
+   "approvedBy": null,
+   "reason": "QA/website-qa.json reports ok with zero errors. Back-filled from existing evidence 2026-09-07; the check was run before this record existed."
+  },
+  "12": {
+   "key": "publish",
+   "name": "Founder publication approval",
+   "owner": "founder",
+   "founderSignoff": true,
+   "status": "not_started",
+   "evidence": [],
+   "updatedAt": null,
+   "updatedBy": null,
+   "approvedBy": null,
+   "reason": null
+  }
+ }
+}

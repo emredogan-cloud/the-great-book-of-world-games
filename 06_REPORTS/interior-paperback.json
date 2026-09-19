@@ -2,8 +2,8 @@
  "edition": "paperback",
  "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
  "pageCount": 182,
- "sha256": "19bdb7a54c2cfe4588eb56f5298af31cf85586a0adb7c64159c76cd2152e54b5",
- "bytes": 16954612,
+ "sha256": "619984236d797681b69b10e646ae15fe41dd5f6f2777a3d03ae69f5694f2c30f",
+ "bytes": 17311752,
  "trim": {
   "widthIn": 8.5,
   "heightIn": 11
@@ -110,5 +110,13 @@
    182
   ]
  ],
- "tocFitted": true
+ "tocFitted": true,
+ "$remeasured": [
+  {
+   "on": "2026-09-19",
+   "why": "companion leaf spliced in by Valice-Press-Site/scripts/factory/build-companion-pages.mjs after interior.py finished",
+   "pageCount": 182,
+   "sha256": "619984236d797681b69b10e646ae15fe41dd5f6f2777a3d03ae69f5694f2c30f"
+  }
+ ]
 }

@@ -39,7 +39,7 @@ INTRO = {
   "Ghana to Sri Lanka to the Caribbean — and you will meet them together, "
   "which is the only way to see what they have in common and where they part.",
 
-  "There are fifty-six games here, from thirty-nine cultures, and the oldest "
+  "There are sixty-three games here, from forty-five cultures, and the oldest "
   "of them is about four thousand six hundred years old. That last number is "
   "not a flourish. It is the Royal Game of Ur, whose boards were buried in "
   "the graves of the city of Ur around 2600 BC and whose rules survive because "
@@ -48,7 +48,7 @@ INTRO = {
   "many other games, and where that is the case this book says so on the page "
   "rather than filling the gap quietly.",
 
-  "Fifty-six is also not a round number, and that is deliberate. A game got "
+  "Sixty-three is also not a round number, and that is deliberate. A game got "
   "into this book only if a real source could be opened and a complete set of "
   "rules read out of it: how the board is set up, who moves first, what a "
   "legal move is, how you win, and how the game ends. Where a source turned "
@@ -197,7 +197,7 @@ SOURCES_NOTE = {
   "from. Where a source turned out to name a game without describing it — "
   "Murray on Tapatan, for instance, who gives a line and a citation and no "
   "rules — the game is not in this book. Where a source gives a board and no "
-  "play, the same. That is why the number of games here is fifty-six and not "
+  "play, the same. That is why the number of games here is sixty-three and not "
   "a hundred: the missing games are missing because the evidence for them "
   "could not be opened, not because they were not interesting.",
   "Seven games are marked reconstructed. It means the record is genuine but "

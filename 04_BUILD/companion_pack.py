@@ -1087,7 +1087,7 @@ FILE_DESCRIPTIONS = {
         "to pick tonight's game before you open the book."),
     "quick-reference-cards": (
         "Quick Reference Cards",
-        "One cut-out card for each of the 56 games, with the players, time, age, "
+        "One cut-out card for each of the 63 games, with the players, time, age, "
         "materials and the objective, and the page where the full rules are. "
         "Four to a sheet with cut lines, so nobody has to hold the book open "
         "at the table."),

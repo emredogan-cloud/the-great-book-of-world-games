@@ -1,7 +1,7 @@
 # The Great Book of World Games
 
-**56 Games from 4,600 Years of Human Play — Rules, Boards and Stories
-from 39 Cultures, Ready to Play Tonight**
+**63 Games from 4,600 Years of Human Play — Rules, Boards and Stories
+from 45 Cultures, Ready to Play Tonight**
 
 > Alt başlık `02_MANUSCRIPT/frontmatter.json § measured` içinden basılır ve
 > **ölçülen** değerdir. Kapsam modeli hâlâ 100 oyun/45 kültür hipotezini

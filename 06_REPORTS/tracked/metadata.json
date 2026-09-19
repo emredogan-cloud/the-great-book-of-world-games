@@ -10,7 +10,7 @@
   "language": "en",
   "title": "The Great Book of World Games",
   "titleChars": 29,
-  "subtitle": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitle": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
   "subtitleChars": 107,
   "series": "The Great Book of…",
   "volume": 2,
@@ -20,7 +20,7 @@
   "edition": "First edition"
  },
  "description": {
-  "text": "A reference book you play from.\n\nThe Great Book of World Games sets out 56 traditional games from 39 cultures, from the royal graves of Ur to a Zulu playground, and it sets them out so you can play them tonight. Each game gets two facing pages: the book lies open on the table and nobody has to turn a page in the middle of a turn.\n\nWHAT IS INSIDE EACH ENTRY\n· Players, time, age, materials and difficulty at a glance\n· What to use instead of what — buttons, coins, dried beans, an egg box\n· Numbered rules, one action to a line\n· A board diagram drawn to scale\n· The three questions every table argues about: what happens on a draw, what happens if nobody can move, and what happens when somebody plays an illegal move\n· A shorter version to start with\n· The work and the pages the rules were read from\n\nSORTED BY HOW THEY WORK, NOT BY WHERE THEY ARE FROM\nMost collections file games by country. This one files them by mechanism, in seven families — sowing, hunt and siege, race home, line and territory, the war board, chance and nerve, and games without a board. Put that way, the mancala games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part; the ancestors of chess sit together and you can watch six cultures solve the same problem six ways.\n\nHONEST ABOUT WHAT IS KNOWN\nEvery rule set names its source. Where a historical record is incomplete, the entry says so and shows what has been reconstructed and on what basis. Where no source settles a question — most often the draw — the book makes a ruling and tells you it is the book's ruling, so you can overrule it. One page at the back is given to game origin stories that are widely repeated and are not true.\n\nAT THE BACK\nFull-size board templates you can photocopy. A materials guide. A glossary of the terms used for mechanics. Sources for every game. Three indexes — by culture, by number of players, and by time and age.\n\n160 pages. Almost nothing in it has to be bought.",
+  "text": "A reference book you play from.\n\nThe Great Book of World Games sets out 63 traditional games from 45 cultures, from the royal graves of Ur to a Zulu playground, and it sets them out so you can play them tonight. Each game gets two facing pages: the book lies open on the table and nobody has to turn a page in the middle of a turn.\n\nWHAT IS INSIDE EACH ENTRY\n· Players, time, age, materials and difficulty at a glance\n· What to use instead of what — buttons, coins, dried beans, an egg box\n· Numbered rules, one action to a line\n· A board diagram drawn to scale\n· The three questions every table argues about: what happens on a draw, what happens if nobody can move, and what happens when somebody plays an illegal move\n· A shorter version to start with\n· The work and the pages the rules were read from\n\nSORTED BY HOW THEY WORK, NOT BY WHERE THEY ARE FROM\nMost collections file games by country. This one files them by mechanism, in seven families — sowing, hunt and siege, race home, line and territory, the war board, chance and nerve, and games without a board. Put that way, the mancala games of Ghana, Sri Lanka and Buganda sit together and you can see what they share and where they part; the ancestors of chess sit together and you can watch six cultures solve the same problem six ways.\n\nHONEST ABOUT WHAT IS KNOWN\nEvery rule set names its source. Where a historical record is incomplete, the entry says so and shows what has been reconstructed and on what basis. Where no source settles a question — most often the draw — the book makes a ruling and tells you it is the book's ruling, so you can overrule it. One page at the back is given to game origin stories that are widely repeated and are not true.\n\nAT THE BACK\nFull-size board templates you can photocopy. A materials guide. A glossary of the terms used for mechanics. Sources for every game. Three indexes — by culture, by number of players, and by time and age.\n\n182 pages. Almost nothing in it has to be bought.",
   "chars": 1981,
   "limit": 4000,
   "format": "plain text; KDP allows limited HTML but this copy is written to read correctly without it"
@@ -62,8 +62,8 @@
  },
  "isbn": {
   "strategy": "kdp-free",
-  "paperback": "PENDING — KDP-PROVIDED ISBN",
-  "hardcover": "PENDING — KDP-PROVIDED ISBN",
+  "paperback": "9798194063468",
+  "hardcover": "9798194081950",
   "$note": "Sahte ISBN YASAKTIR (§ 15)."
  },
  "aiProductionFacts": {
@@ -71,7 +71,7 @@
   "text": "Text was drafted with AI assistance and edited by the author; every rule set is traced to a named printed source at page level.",
   "images": "Cover and A+ artwork are generated externally by the author; interior diagrams are drawn deterministically by the project's own code from data, not generated.",
   "translation": "None. The commercial text is written directly in English.",
-  "founderConfirmed": false
+  "founderConfirmed": true
  },
  "pricing": {
   "hardcover": {
@@ -87,8 +87,8 @@
    "enabled": true
   },
   "largeprint": {
-   "listUSD": null,
-   "enabled": false
+   "listUSD": 31.99,
+   "enabled": true
   }
  },
  "territories": {
@@ -100,42 +100,23 @@
   "$note": "KU'ya GİRİLMEZ: 256 sayfalık tam okuma ≈ 1,23 $, ciltsiz telif 8,44 $. 6,9 kat kayıp."
  },
  "pageCounts": {
-  "paperback": 160,
-  "hardcover": 160
+  "paperback": 182,
+  "hardcover": 186
  },
  "measured": {
-  "games": 56,
-  "cultures": 39,
+  "games": 63,
+  "cultures": 45,
   "families": 7,
-  "reconstructed": 7,
+  "reconstructed": 8,
   "oldestGameBCE": 2600,
   "oldestGameAgeYears": 4600,
   "publicationYear": 2026,
-  "subtitleMeasured": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
+  "subtitleMeasured": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
   "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
   "frontMatterWords": 2039,
-  "familyOpenerWords": 2415
+  "familyOpenerWords": 2422
  },
- "founderActions": [
-  {
-   "id": "AI-DECL",
-   "field": "founder.aiDisclosure.founderConfirmed",
-   "blocking": true,
-   "note": "The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`."
-  },
-  {
-   "id": "ISBN-paperback",
-   "field": "founder.isbn.paperback",
-   "blocking": false,
-   "note": "KDP assigns a free ISBN. Once it does, write it here and rebuild: the copyright page will print the real number instead of PENDING. No ISBN has been invented anywhere in this package."
-  },
-  {
-   "id": "ISBN-hardcover",
-   "field": "founder.isbn.hardcover",
-   "blocking": false,
-   "note": "KDP assigns a free ISBN. Once it does, write it here and rebuild: the copyright page will print the real number instead of PENDING. No ISBN has been invented anywhere in this package."
-  }
- ],
+ "founderActions": [],
  "limits": {
   "title": 200,
   "subtitle": 200,

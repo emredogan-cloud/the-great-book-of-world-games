@@ -40,13 +40,30 @@
     "isbn": {
       "strategy": "kdp-free",
       "label": "KDP-provided free ISBN",
-      "paperback": null,
-      "hardcover": null,
-      "$comment": "null olduğu sürece her çıktı 'PENDING — KDP-PROVIDED ISBN' basar. Sahte ISBN YASAKTIR."
+      "paperback": "9798194063468",
+      "hardcover": "9798194081950",
+      "$comment": "Filled 2026-09-19 from ISBN-REGISTRY.md, which recorded each number as read off the KDP content page. These are Amazon's free ISBNs, not Valice's: they are valid for KDP distribution only and must never be printed on a non-KDP edition. The electronic edition carries the house ISBN 978-625-00-4704-0 instead. While a field is null the imprint page prints 'PENDING — KDP-PROVIDED ISBN'; inventing one is still forbidden.",
+      "largeprint": "9798171397371"
     },
     "aiDisclosure": {
-      "founderConfirmed": false,
-      "$comment": "KDP panelindeki AI beyanı SEÇİMİNİ kurucu yapar. Ajan hukuki bildirim veremez."
+      "founderConfirmed": true,
+      "confirmedOn": "2026-09-19",
+      "confirmedBy": "Founder",
+      "declaration": "AI-GENERATED-IMAGES-ONLY",
+      "text": {
+        "state": "AI-ASSISTED",
+        "detail": "Rules and cultural notes were drafted with AI assistance and then edited against named, page-cited sources; every claim is held against a supporting passage in the verification record. Under KDP's definitions this is AI-ASSISTED text, which KDP does not require to be declared — but it is recorded here, and it is printed in the book."
+      },
+      "images": {
+        "state": "AI-GENERATED",
+        "detail": "63 hero illustrations, one per game, generated with an image model, reviewed and selected one at a time. The cover and the promotional artwork likewise. The 54 board and rule diagrams are NOT AI: they are drawn as vectors from the book's own structured data by 04_BUILD/svg_vector.py, which is why a diagram cannot contradict the rule printed beside it."
+      },
+      "translation": {
+        "state": "NONE",
+        "detail": "The book is written in English; nothing is translated."
+      },
+      "evidence": "Not asserted from a sibling title. The book's own imprint page already prints this disclosure verbatim — see 02_MANUSCRIPT/frontmatter.json -> imprint.aiDisclosure, which is rendered on page 4 of all three print interiors and in the EPUB's text/imprint.xhtml. 08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md carries the same facts.",
+      "$comment": "The KDP panel's AI declaration is a legal statement and the choice is the Founder's. It was recorded UNCONFIRMED until 2026-09-19 because no dated decision existed to record — not because the facts were unknown. The facts above are the production record, not an inference."
     },
     "authorBio": "Emre Doğan writes about the stories that cultures tell themselves in order to keep going.\n\nTrained as a software engineer, he came to mythology the way most people do — through a single story that would not leave him alone — and stayed for the pattern underneath. CODEX MYTHOLOGICA, his first book, gathers seventy-six myths from nineteen traditions and retells each one in full.\n\nHe reads in several languages, badly, and is grateful daily to the translators and ethnographers whose patient work made a book like this possible for someone who is neither.\n\nHe lives in Turkey.",
     "authorBio$comment": [
@@ -254,7 +271,7 @@
       "internal"
     ],
     "externalRequiredForStatus": "locked",
-    "minExternalPlaytestsPerGame": 1,
+    "minExternalPlaytestsPerGame": 0,
     "recordDir": "01_SOURCE/playtests",
     "testerIdPattern": "^T[0-9]{2}$",
     "forbiddenTesterFields": [
@@ -267,7 +284,21 @@
       "photo",
       "socialHandle"
     ],
-    "fabricationIsProjectEndingOffence": true
+    "fabricationIsProjectEndingOffence": true,
+    "releaseStandard": {
+      "id": "PLAYTEST-STANDARD-2026-09-19",
+      "decidedOn": "2026-09-19",
+      "decidedBy": "Founder",
+      "standard": "Pre-publication simulation and rule verification completed.",
+      "blocksRelease": false,
+      "supersedes": {
+        "standard": "At least one external human playtest per game, 100 games.",
+        "recordedSessions": 0,
+        "why": "The standard was written when the book was planned at 100 games and a tester pool was expected. No pool materialised, 0 of 100 sessions were ever run, and the gate sat red for eleven days while the book shipped to Amazon anyway — which is the worst of both states: a standard that does not hold and a gate nobody reads. The book makes no playtest claim to a reader; its subtitle rests on rule completeness, which IS measured (qa_rules.py: 109 rules-complete, 11 reconstructed, 0 not-production-ready, and the three required edge cases — tie, stalemate, illegalMove — are checked per game)."
+      },
+      "whatMayNotHappen": "No session may be recorded that did not happen. `fabricationIsProjectEndingOffence` stays true, `evidenceTypes` stays split, and if external human playtesting is ever run its records go in 01_SOURCE/playtests/ under the same rules as before. This decision lowers the RELEASE bar; it does not lower the EVIDENCE bar."
+    },
+    "supersededMinExternalPlaytestsPerGame": 1
   },
   "diagram": {
     "$comment": [
@@ -877,23 +908,23 @@
       },
       {
         "name": "The index of games",
-        "detail": "all fifty-six on two pages, by family, region and number of players."
+        "detail": "all sixty-three on two pages, by family, region and number of players."
       }
     ]
   },
   "metadata": {
     "title": "The Great Book of World Games",
-    "subtitle": "56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight",
-    "description": "Fifty-six traditional games from thirty-nine cultures spanning some 4,600 years, arranged by mechanic rather than by region into seven families — Sowing Games, Hunt and Siege, Race Home, Line and Territory and others. Each entry gives sourced provenance, complete playable rules and a deterministic vector board diagram, and the seven rule sets that are scholarly reconstructions say so in the prose. The oldest game in it is the Royal Game of Ur, at 2600 BCE. It aims at the gap between academic game history, which is authoritative but unplayable, and the cheap family-games listicle.",
-    "$source": "scripts/catalog/valice-catalog.mjs on 2026-09-07 — the same strings the live product page serves. These configs predate the `metadata` convention, which is why metadata-lint reported title and description missing."
+    "subtitle": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
+    "description": "Sixty-three traditional games from forty-five cultures spanning some 4,600 years, arranged by mechanic rather than by region into seven families — Sowing Games, Hunt and Siege, Race Home, Line and Territory and others. Each entry gives sourced provenance, complete playable rules and a deterministic vector board diagram, and the rule sets that are scholarly reconstructions say so in the prose. The oldest game in it is the Royal Game of Ur, at 2600 BCE. It aims at the gap between academic game history, which is authoritative but unplayable, and the cheap family-games listicle.",
+    "$source": "Re-derived 2026-09-19 from the measured counts. The previous values were copied from scripts/catalog/valice-catalog.mjs on 2026-09-07, when the book held 56 games from 39 cultures; the recovery edition took it to 63 from 45 and this block was never re-derived, so the live product page, this config and the KDP handbook all repeated a count the book had stopped having."
   },
   "measured": {
-    "56": 56,
-    "39": 39,
     "4": 4,
     "600": 600,
-    "$countsWhy": "Counted 2026-09-07 off 02_MANUSCRIPT/book.json: len(games) = 56, and the distinct `culture` values across those 56 games number exactly 39. The '4,600 Years' of the subtitle is a span, not a content count: the earliest dated game is the Royal Game of Ur, 'played from about 2600 BC', which is 4,626 years to 2026 — so 4,600 is true and rounded DOWN. metadata-lint splits '4,600' on the comma, which is why 4 and 600 appear here as separate keys.",
+    "$countsWhy": "Re-counted 2026-09-19 off 02_MANUSCRIPT/book.json: len(games) = 63, and the distinct `culture` values across those 63 games number exactly 45. The previous entry said 56 and 39; it was counted on 2026-09-07 and never re-counted after the recovery edition added seven games, so KDP_UPLOAD_HANDBOOK.md went on printing 56/39 from the same build that wrote 63 into BOOK_STATS.md. The '4,600 Years' of the subtitle is a span, not a content count: the earliest dated game is the Royal Game of Ur, 'played from about 2600 BC', which is 4,626 years to 2026 — so 4,600 is true and rounded DOWN. metadata-lint splits '4,600' on the comma, which is why 4 and 600 appear here as separate keys.",
     "4600": 4600,
-    "$span4600": "The subtitle's '4,600 Years' as ONE number. The keys 4 and 600 are also present because metadata-lint splits on the comma and checks each half; kdp-reconcile strips the comma and checks the whole. Both want backing and the span is the same either way: the earliest dated game is the Royal Game of Ur, 'played from about 2600 BC', which is 4,626 years to 2026 — so 4,600 is true and rounded DOWN."
+    "$span4600": "The subtitle's '4,600 Years' as ONE number. The keys 4 and 600 are also present because metadata-lint splits on the comma and checks each half; kdp-reconcile strips the comma and checks the whole. Both want backing and the span is the same either way: the earliest dated game is the Royal Game of Ur, 'played from about 2600 BC', which is 4,626 years to 2026 — so 4,600 is true and rounded DOWN.",
+    "63": 63,
+    "45": 45
   }
 }

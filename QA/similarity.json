@@ -1,0 +1,21 @@
+{
+  "tool": "similarity",
+  "target": "/home/emre/Downloads/MY-DİGİTAL-BOOK/ROADMAP-BOOKS/THE-GREAT-BOOK-OF-WORLD-GAMES/CONTENT",
+  "startedAt": "2026-09-07T17:00:16.953Z",
+  "finishedAt": "2026-09-07T17:00:16.954Z",
+  "ok": true,
+  "counts": {
+    "pass": 0,
+    "warn": 1,
+    "error": 0,
+    "skipped": 0
+  },
+  "findings": [
+    {
+      "level": "warn",
+      "check": "content",
+      "message": "no CONTENT/*.md to compare",
+      "where": null
+    }
+  ]
+}

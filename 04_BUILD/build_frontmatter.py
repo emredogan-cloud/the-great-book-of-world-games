@@ -127,7 +127,13 @@ def build(root: str) -> int:
 
     isbn = cfg["founder"]["isbn"]
     isbn_line = {}
-    for ed in ("paperback", "hardcover"):
+    # ⚠ LARGEPRINT BELONGS IN THIS LOOP. It was omitted, and interior.py's
+    # fallback is `isbn["largeprint"] or isbn["paperback"]` — harmless while both
+    # were null and every edition printed PENDING, but the moment a real
+    # paperback ISBN arrived the large-print imprint page would have printed the
+    # PAPERBACK's number. A large print is a separate KDP title record with its
+    # own ISBN; printing another edition's is worse than printing none.
+    for ed in ("paperback", "hardcover", "largeprint"):
         isbn_line[ed] = isbn.get(ed) or "PENDING — KDP-PROVIDED ISBN"
 
     try:

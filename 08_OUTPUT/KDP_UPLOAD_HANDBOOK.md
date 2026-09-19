@@ -5,7 +5,7 @@
 > from the built artefacts. If you rebuild anything, rebuild this file.
 >
 > Generated at phase **6** · interior **182 pages** ·
-> **56 games** · **39 cultures**
+> **63 games** · **45 cultures**
 
 ---
 
@@ -33,20 +33,11 @@ published.** No proof copy has been ordered.
 
 ## Blocking founder actions
 
-- ⛔ **AI-DECL** — `founder.aiDisclosure.founderConfirmed`
-  The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`.
-- · **ISBN-paperback** — `founder.isbn.paperback`
-  KDP assigns a free ISBN. Once it does, write it here and rebuild: the copyright page will print the real number instead of PENDING. No ISBN has been invented anywhere in this package.
-- · **ISBN-hardcover** — `founder.isbn.hardcover`
-  KDP assigns a free ISBN. Once it does, write it here and rebuild: the copyright page will print the real number instead of PENDING. No ISBN has been invented anywhere in this package.
 - · **APLUS-ART** — 1 of 6 A+ module(s) missing artwork: APLUS-05. Copy is written and waiting; the project is uploadable today with the other 5 module(s). Prompts are in `07_ASSETS/IMAGE_PROMPT_LIBRARY.html`.
 
-- ⛔ **PLAYTEST** — the project's own playability standard requires at least
-  one external human playtest per game before a game may be called locked.
-  Zero sessions have been recorded. The book does not claim to have been
-  playtested, and the subtitle's promise rests on rule completeness rather
-  than on tested play. Publishing before playtesting is your decision to
-  make, and it should be a decision rather than an oversight.
+- · **PLAYTEST** — the release standard for this book is: *Pre-publication simulation and rule verification completed.* (Founder decision PLAYTEST-STANDARD-2026-09-19, 2026-09-19).
+  It replaced: *At least one external human playtest per game, 100 games.* — of which **0** session(s) were ever recorded.
+  No session may be recorded that did not happen. `fabricationIsProjectEndingOffence` stays true, `evidenceTypes` stays split, and if external human playtesting is ever run its records go in 01_SOURCE/playtests/ under the same rules as before. This decision lowers the RELEASE bar; it does not lower the EVIDENCE bar.
 
 ---
 
@@ -75,12 +66,12 @@ The Great Book of World Games
 *agent prepared* Paste exactly:
 
 ```
-56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight
+63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight
 ```
 (107 of 200 characters.)
 
 ⚠ The two numbers in this subtitle are measured, not chosen. The book
-contains **56 games** from **39
+contains **63 games** from **45
 cultures**. If you edit the subtitle, do not round them up.
 
 ### 5 · Author
@@ -122,7 +113,7 @@ required.
 **FOUNDER ACTION** **Leave empty.** KDP yaş aralığı YALNIZCA çocuk kitabı olarak işaretlenen başlıklarda sorulur. Bu kitap bir aile başvuru cildidir ve çocuk kitabı olarak işaretlenMEZ — işaretlenirse yetişkin alıcı aramalarından düşer.
 
 ### 12 · ISBN
-**FOUNDER ACTION** Select **Get a free KDP ISBN**. Current recorded value: `PENDING — KDP-PROVIDED ISBN`.
+**FOUNDER ACTION** Select **Get a free KDP ISBN**. Current recorded value: `9798194063468`.
 *agent prepared* No ISBN has been invented anywhere in this package. Once KDP assigns one,
 write it into `project_config.json → founder.isbn.paperback` and rebuild: the
 copyright page will then print the real number instead of `PENDING`.
@@ -144,7 +135,7 @@ declaration on your behalf. The facts you need in order to answer:
 - 182 pages · trim 8.5 × 11 in
 - no bleed · inside margin 0.55 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `19bdb7a54c2cfe4588eb56f5298af31cf85586a0adb7c64159c76cd2152e54b5`
+- SHA-256 `619984236d797681b69b10e646ae15fe41dd5f6f2777a3d03ae69f5694f2c30f`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.5 x 11 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
@@ -225,12 +216,12 @@ The Great Book of World Games
 *agent prepared* Paste exactly:
 
 ```
-56 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 39 Cultures, Ready to Play Tonight
+63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight
 ```
 (107 of 200 characters.)
 
 ⚠ The two numbers in this subtitle are measured, not chosen. The book
-contains **56 games** from **39
+contains **63 games** from **45
 cultures**. If you edit the subtitle, do not round them up.
 
 ### 5 · Author
@@ -272,7 +263,7 @@ required.
 **FOUNDER ACTION** **Leave empty.** KDP yaş aralığı YALNIZCA çocuk kitabı olarak işaretlenen başlıklarda sorulur. Bu kitap bir aile başvuru cildidir ve çocuk kitabı olarak işaretlenMEZ — işaretlenirse yetişkin alıcı aramalarından düşer.
 
 ### 12 · ISBN
-**FOUNDER ACTION** Select **Get a free KDP ISBN**. Current recorded value: `PENDING — KDP-PROVIDED ISBN`.
+**FOUNDER ACTION** Select **Get a free KDP ISBN**. Current recorded value: `9798194081950`.
 *agent prepared* No ISBN has been invented anywhere in this package. Once KDP assigns one,
 write it into `project_config.json → founder.isbn.hardcover` and rebuild: the
 copyright page will then print the real number instead of `PENDING`.
@@ -294,7 +285,7 @@ declaration on your behalf. The facts you need in order to answer:
 - 186 pages · trim 8.25 × 11 in
 - no bleed · inside margin 0.675 in · outside 0.5 in
 - all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
-- SHA-256 `25df1636639fc831456188e983e7de5ff0b9f5b1a1f51eb131d1f7163775f45b`
+- SHA-256 `428dc40b1541c7d52c48f1d7eeffb66f3a60c5893b94edf58c1d6e8fd7cc7b80`
 
 **FOUNDER ACTION** Trim size in the KDP form: **8.25 x 11 in**.
 Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
@@ -369,7 +360,7 @@ yours to answer.
 08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub
 ```
 - EPUB 3, **reflowable**
-- 1243 KB · SHA-256 `ca57ebaec8508175390e1970fd37abba2f3525778f6bfefa9175e2416dfb9ce9`
+- 1243 KB · SHA-256 `22103a639336cdcc4abb6737af8c546b9f858f8ea03226113a607494fd7818cd`
 - diagrams are embedded as **inline SVG**, so they stay sharp at any screen
   size and add almost nothing to the file size
 

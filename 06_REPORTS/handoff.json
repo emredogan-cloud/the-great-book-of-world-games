@@ -10,9 +10,9 @@
    "interior": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
     "exists": true,
-    "sha256": "19bdb7a54c2cfe4588eb56f5298af31cf85586a0adb7c64159c76cd2152e54b5",
-    "recordedSha256": "19bdb7a54c2cfe4588eb56f5298af31cf85586a0adb7c64159c76cd2152e54b5",
-    "bytes": 16954612,
+    "sha256": "619984236d797681b69b10e646ae15fe41dd5f6f2777a3d03ae69f5694f2c30f",
+    "recordedSha256": "619984236d797681b69b10e646ae15fe41dd5f6f2777a3d03ae69f5694f2c30f",
+    "bytes": 17311752,
     "pageCount": 182
    },
    "blankPages": 18,
@@ -73,9 +73,9 @@
    "interior": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf",
     "exists": true,
-    "sha256": "25df1636639fc831456188e983e7de5ff0b9f5b1a1f51eb131d1f7163775f45b",
-    "recordedSha256": "25df1636639fc831456188e983e7de5ff0b9f5b1a1f51eb131d1f7163775f45b",
-    "bytes": 16956913,
+    "sha256": "428dc40b1541c7d52c48f1d7eeffb66f3a60c5893b94edf58c1d6e8fd7cc7b80",
+    "recordedSha256": "428dc40b1541c7d52c48f1d7eeffb66f3a60c5893b94edf58c1d6e8fd7cc7b80",
+    "bytes": 17313729,
     "pageCount": 186
    },
    "blankPages": 20,
@@ -172,9 +172,9 @@
    "epub": {
     "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
     "exists": true,
-    "sha256": "ca57ebaec8508175390e1970fd37abba2f3525778f6bfefa9175e2416dfb9ce9",
-    "recordedSha256": "ca57ebaec8508175390e1970fd37abba2f3525778f6bfefa9175e2416dfb9ce9",
-    "bytes": 1272414
+    "sha256": "22103a639336cdcc4abb6737af8c546b9f858f8ea03226113a607494fd7818cd",
+    "recordedSha256": "22103a639336cdcc4abb6737af8c546b9f858f8ea03226113a607494fd7818cd",
+    "bytes": 1272494
    },
    "coverStatus": "READY"
   },
@@ -204,41 +204,16 @@
  "handbook": "08_OUTPUT/KDP_UPLOAD_HANDBOOK.md",
  "previewerChecklist": "08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md",
  "aiDisclosureNotes": "08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md",
- "handbookBytes": 23991,
+ "handbookBytes": 23444,
  "previewerBytes": 5815,
- "blockingFounderActions": [
-  {
-   "id": "AI-DECL",
-   "field": "founder.aiDisclosure.founderConfirmed",
-   "blocking": true,
-   "note": "The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`."
-  },
-  {
-   "id": "PLAYTEST",
-   "field": "01_SOURCE/playtests/",
-   "blocking": true,
-   "note": "Dış oynanabilirlik testi 0 oturum."
-  }
- ],
+ "blockingFounderActions": [],
  "errors": [],
  "founderActions": [
-  {
-   "id": "AI-DECL",
-   "field": "founder.aiDisclosure.founderConfirmed",
-   "blocking": true,
-   "note": "The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`."
-  },
   {
    "id": "APLUS-05-ART",
    "field": "07_ASSETS/raw/aplus/",
    "blocking": false,
    "note": "Modül 05 (eller/masa) sanatı teslim edilmedi. Yüklenebilir A+ projesi 5 modüldür; metni hazır ve sanat gelirse eklenir."
-  },
-  {
-   "id": "PLAYTEST",
-   "field": "01_SOURCE/playtests/",
-   "blocking": true,
-   "note": "Dış oynanabilirlik testi 0 oturum."
   }
  ]
 }

@@ -2,8 +2,8 @@
  "edition": "largeprint",
  "file": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_interior_largeprint.pdf",
  "pageCount": 272,
- "sha256": "ed142dd8a2545049666e117056c37bb5e6d07ce821d7381979e56bc5698af736",
- "bytes": 17039459,
+ "sha256": "71bc83ccae5e4fcbd1717295208b7c6a03c42cf49338e3954a5ac830e72c738c",
+ "bytes": 17383452,
  "trim": {
   "widthIn": 8.5,
   "heightIn": 11
@@ -183,5 +183,13 @@
  "pagesPerGameMax": 4,
  "pagesPerGameMean": 3.38,
  "diagramScaleVsPaperbackMin": 1.0,
- "diagramCount": 59
+ "diagramCount": 59,
+ "$remeasured": [
+  {
+   "on": "2026-09-19",
+   "why": "companion leaf spliced in by Valice-Press-Site/scripts/factory/build-companion-pages.mjs after interior.py finished",
+   "pageCount": 272,
+   "sha256": "71bc83ccae5e4fcbd1717295208b7c6a03c42cf49338e3954a5ac830e72c738c"
+  }
+ ]
 }

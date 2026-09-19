@@ -1,0 +1,39 @@
+{
+  "tool": "compliance-lint",
+  "target": "/home/emre/Downloads/MY-DİGİTAL-BOOK/ROADMAP-BOOKS/THE-GREAT-BOOK-OF-WORLD-GAMES/project_config.json",
+  "startedAt": "2026-09-07T17:00:16.921Z",
+  "finishedAt": "2026-09-07T17:00:16.923Z",
+  "ok": false,
+  "counts": {
+    "pass": 0,
+    "warn": 0,
+    "error": 3,
+    "skipped": 1
+  },
+  "findings": [
+    {
+      "level": "error",
+      "check": "ai-disclosure",
+      "message": "text is null — must be generated|assisted|none, decided by the founder",
+      "where": null
+    },
+    {
+      "level": "error",
+      "check": "ai-disclosure",
+      "message": "images is null — must be generated|assisted|none, decided by the founder",
+      "where": null
+    },
+    {
+      "level": "error",
+      "check": "ai-disclosure",
+      "message": "translation is null — must be generated|assisted|none, decided by the founder",
+      "where": null
+    },
+    {
+      "level": "skipped",
+      "check": "linkage",
+      "message": "no built interior registered for (no slug) in print-interiors.mjs",
+      "where": null
+    }
+  ]
+}

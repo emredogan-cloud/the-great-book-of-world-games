@@ -13,7 +13,7 @@ geçer. Reddedilen bir A+ gönderimi yalnızca zaman kaybettirmez; hesabın
 işaretlenmesine yol açabilir.
 
 Tarama daha geniştir: sayı içeren her cümle, projenin ÖLÇTÜĞÜ sayılarla
-karşılaştırılır. "56 games" geçer; "100 games" GEÇMEZ. Kitabın kendi
+karşılaştırılır. "63 games" geçer; "100 games" GEÇMEZ. Kitabın kendi
 içindeki sayıyla pazarlama metnindeki sayı ayrışırsa, ayrışmayı okur bulur.
 
 ── GÖRSEL KAPISI ───────────────────────────────────────────────────────

@@ -55,7 +55,7 @@ this file was generated.
    built PDF, not from a model. Spot-check three entries against the pages they
    point to; if one is wrong they are all wrong and the build chain broke.
 2. **Any game spread — for example pages 16–17.** Confirm the entry begins on
-   the **left** page. Every one of the 56 games does; that
+   the **left** page. Every one of the 63 games does; that
    is the whole architecture of the book and the one thing a layout change
    silently breaks.
 3. **A spread with two diagrams — for example Alquerque, pages 88–89.** Confirm

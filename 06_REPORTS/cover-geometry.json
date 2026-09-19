@@ -77,7 +77,7 @@
     "frontOnlyWidthPx": 2588,
     "frontOnlyHeightPx": 3375
    },
-   "interiorSha256": "19bdb7a54c2cfe4588eb56f5298af31cf85586a0adb7c64159c76cd2152e54b5",
+   "interiorSha256": "619984236d797681b69b10e646ae15fe41dd5f6f2777a3d03ae69f5694f2c30f",
    "interiorFile": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf"
   },
   "hardcover": {
@@ -152,7 +152,7 @@
    },
    "founderConfirmedTemplate": true,
    "confirmedTemplateSource": "KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 186 sayfa · 2026-09-17",
-   "interiorSha256": "25df1636639fc831456188e983e7de5ff0b9f5b1a1f51eb131d1f7163775f45b",
+   "interiorSha256": "428dc40b1541c7d52c48f1d7eeffb66f3a60c5893b94edf58c1d6e8fd7cc7b80",
    "interiorFile": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf"
   },
   "largeprint": {
@@ -225,7 +225,7 @@
     "frontOnlyWidthPx": 2588,
     "frontOnlyHeightPx": 3375
    },
-   "interiorSha256": "ed142dd8a2545049666e117056c37bb5e6d07ce821d7381979e56bc5698af736",
+   "interiorSha256": "71bc83ccae5e4fcbd1717295208b7c6a03c42cf49338e3954a5ac830e72c738c",
    "interiorFile": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_interior_largeprint.pdf"
   }
  },

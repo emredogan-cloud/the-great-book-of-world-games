@@ -1,0 +1,54 @@
+{
+ "tool": "website-product-qa",
+ "target": "https://valicepress.com",
+ "ranAt": "2026-09-07T16:41:54.230Z",
+ "counts": {
+  "checked": 1,
+  "live": 1,
+  "published": 1,
+  "publishedPassing": 1,
+  "passing": 1
+ },
+ "$why": "Gate 11 evidence. Every assertion is against bytes returned by production; a row that says published while the page 404s fails here, which is the point.",
+ "rows": [
+  {
+   "slug": "the-great-book-of-world-games",
+   "url": "https://valicepress.com/books/the-great-book-of-world-games",
+   "websiteStatus": "published",
+   "status": 200,
+   "ok": true,
+   "checks": [
+    {
+     "name": "http-200",
+     "ok": true,
+     "detail": "HTTP 200"
+    },
+    {
+     "name": "title",
+     "ok": true,
+     "detail": "The Great Book of World Games"
+    },
+    {
+     "name": "cover",
+     "ok": true,
+     "detail": "/images/books/the-great-book-of-world-games.webp"
+    },
+    {
+     "name": "prices",
+     "ok": true,
+     "detail": "4/4 shown"
+    },
+    {
+     "name": "cta",
+     "ok": true,
+     "detail": "amazon B0HG44FH1B,B0HG3KMK9L,B0HG41F21F,B0HHNCVQVX"
+    },
+    {
+     "name": "asin-links",
+     "ok": true,
+     "detail": "B0HG3KMK9L,B0HG41F21F,B0HHNCVQVX"
+    }
+   ]
+  }
+ ]
+}

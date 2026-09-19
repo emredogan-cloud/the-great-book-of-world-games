@@ -23,7 +23,7 @@ with AI and then substantially edited). It asks separately about **text**,
 | | |
 |---|---|
 | Status | **AI-generated, then edited and verified against printed sources** |
-| Volume | 56 game entries · 2,039 words of front matter · 2,422 words of family openers |
+| Volume | 63 game entries · 2,039 words of front matter · 2,422 words of family openers |
 | Printed total | 65,000+ words |
 
 Every rule set was drafted with AI assistance **from a named printed source
@@ -34,7 +34,7 @@ citation is tied to a supporting passage quoted from the source.
 
 Where a source did not settle a rule, the book says so on the page rather than
 inventing one. Where a historical record is incomplete, the entry is marked
-**reconstructed** — 7 of 56 entries are.
+**reconstructed** — 8 of 63 entries are.
 
 **Not machine translation.** The commercial text was written directly in
 English; the project's own configuration forbids machine translation into the
