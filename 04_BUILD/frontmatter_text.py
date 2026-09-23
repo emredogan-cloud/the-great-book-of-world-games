@@ -53,10 +53,10 @@ INTRO = {
   "rules read out of it: how the board is set up, who moves first, what a "
   "legal move is, how you win, and how the game ends. Where a source turned "
   "out to describe a board without describing the play — which happens more "
-  "often than you would think — the game was left out. Seven of the games "
+  "often than you would think — the game was left out. Eight of the games "
   "here are marked as reconstructed, which means the record is real but "
   "incomplete and the book has closed a gap on the evidence available. Those "
-  "seven say so in their own text, in the place where you would need to know.",
+  "eight say so in their own text, in the place where you would need to know.",
 
   "What you do with the book is play. Every game is a two-page spread so that "
   "the book lies open on the table and nobody has to turn a page in the middle "
@@ -197,10 +197,9 @@ SOURCES_NOTE = {
   "from. Where a source turned out to name a game without describing it — "
   "Murray on Tapatan, for instance, who gives a line and a citation and no "
   "rules — the game is not in this book. Where a source gives a board and no "
-  "play, the same. That is why the number of games here is sixty-three and not "
-  "a hundred: the missing games are missing because the evidence for them "
-  "could not be opened, not because they were not interesting.",
-  "Seven games are marked reconstructed. It means the record is genuine but "
+  "That is why the number of games here is sixty-three and not a hundred: "
+  "thirty-seven games were put back when the sources dissolved under inspection.",
+  "Eight games are marked reconstructed. It means the record is genuine but "
   "has a hole in it, and the book has filled the hole with the best available "
   "reasoning rather than leaving the game unplayable. The notice appears in "
   "the entry itself and says which part is reconstructed. A book that "
@@ -240,7 +239,7 @@ FAMILY_OPENERS = [
    "at where the last one landed, because the last seed decides everything: "
    "whether you capture, whether you go again, whether you have just handed "
    "your opponent a harvest.",
-   "Five of the family are printed here. Oware is the Akan game, and it is the "
+   "Ten of the family are printed here. Oware is the Akan game, and it is the "
    "one most people meet first. Bao la Kiswahili from the Swahili coast is the "
    "hardest game in this book by some distance; it is played competitively, "
    "the opening is studied, and it has a rule about a house that keeps its "
@@ -311,7 +310,7 @@ FAMILY_OPENERS = [
    "shared roads so that the race becomes a fight. Where a track is shared, "
    "landing on somebody sends them home, and the game stops being a race and "
    "becomes an argument about position.",
-   "Twelve games are printed here, which makes this the second largest family "
+   "Thirteen games are printed here, which makes this the second largest family "
    "in the book. If you want to see the whole idea at once, play Yut Nori and "
    "then Ur on the same evening. They are four thousand years and five "
    "thousand miles apart and they are recognisably the same game."
@@ -423,7 +422,7 @@ FAMILY_OPENERS = [
    "that a loop of string and ten fingers is a small enough system that people "
    "keep arriving at the same figures independently, and where this book "
    "cannot show a route it does not draw one.",
-   "Seven games are printed. Jan-ken is the hand game the world plays to "
+   "Eight games are printed. Jan-ken is the hand game the world plays to "
    "decide who goes first, and it is genuinely Japanese, recorded in that form "
    "in 1895. Gonggi is the Korean five-stones game; Conkers is English and was "
    "collected in the 1890s; Hopscotch is older than any of the stories told "

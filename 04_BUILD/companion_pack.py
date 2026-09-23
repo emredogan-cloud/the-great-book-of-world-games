@@ -62,7 +62,8 @@ def _publisher() -> str:
     here = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(os.path.dirname(here), "project_config.json"),
               encoding="utf-8") as f:
-        return json.load(f)["publisher"]
+        cfg = json.load(f)
+        return cfg.get("publisher") or cfg.get("founder", {}).get("publisher", "Valice Press")
 
 
 PUBLISHER = _publisher()

@@ -633,7 +633,8 @@ def build(root: str, args) -> int:
             seen_game.add(gid)
             templates.append({
                 "gameId": gid,
-                "title": inv.get(gid, {}).get("name", gid),
+                "title": (written[gid]["title"] if gid in written
+                          else inv.get(gid, {}).get("name", gid)),
                 "diagramId": d["diagramId"],
                 "boardClass": d.get("boardClass"),
                 "size": d.get("size"),
@@ -768,10 +769,12 @@ def build(root: str, args) -> int:
         entry_sources = None
         if gid in written and written[gid].get("sources"):
             entry_sources = list(written[gid]["sources"])
+        name = written[gid]["title"] if gid in written else e["name"]
+        cult = written[gid]["culture"] if gid in written else e["culture"]
         bibliography.append({
             "gameId": gid,
-            "title": e["name"],
-            "culture": e["culture"],
+            "title": name,
+            "culture": cult,
             "sources": entry_sources or e.get("sourceRefs", []),
             "citationSource": ("entry" if entry_sources else "inventory"),
             "pageVerifiedCount": len(recs),
@@ -787,14 +790,16 @@ def build(root: str, args) -> int:
     for e in entries:
         gid = e["gameId"]
         g = inv.get(gid, {})
+        name = written[gid]["title"] if gid in written else e["name"]
+        cult = written[gid]["culture"] if gid in written else e["culture"]
         row = {
             "gameId": gid,
-            "title": e["name"],
+            "title": name,
             "family": e["family"],
             "page": pages.get(gid),
             "pageStatus": "measured" if gid in pages else "awaiting-typesetting",
         }
-        by_culture.setdefault(e["culture"], []).append(row)
+        by_culture.setdefault(cult, []).append(row)
         by_players[player_bucket(g)].append(
             dict(row, players="%s–%s" % ((g.get("players") or {}).get("min"),
                                          (g.get("players") or {}).get("max"))))

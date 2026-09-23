@@ -13,57 +13,57 @@
     {
      "kind": "frontTitle",
      "text": "THE GREAT BOOK OF",
-     "x0": 11.312,
+     "x0": 11.2894,
      "y0": 10.535,
-     "x1": 15.2578,
+     "x1": 15.2352,
      "y1": 10.8031
     },
     {
      "kind": "frontTitle",
      "text": "WORLD GAMES",
-     "x0": 9.8934,
+     "x0": 9.8708,
      "y0": 9.8,
-     "x1": 16.6764,
+     "x1": 16.6538,
      "y1": 10.625
     },
     {
      "kind": "frontTitle",
      "text": "63 games from 4,600 years of human play",
-     "x0": 11.8822,
+     "x0": 11.8596,
      "y0": 9.5033,
-     "x1": 14.6876,
+     "x1": 14.665,
      "y1": 9.67
     },
     {
      "kind": "frontTitle",
      "text": "Rules, boards and stories from 45 cultures",
-     "x0": 11.8659,
+     "x0": 11.8433,
      "y0": 9.3183,
-     "x1": 14.7039,
+     "x1": 14.6813,
      "y1": 9.485
     },
     {
      "kind": "frontAuthor",
      "text": "EMRE DOĞAN",
-     "x0": 11.8963,
+     "x0": 11.8737,
      "y0": 0.7833,
-     "x1": 14.6735,
+     "x1": 14.6509,
      "y1": 1.0996
     },
     {
      "kind": "spineText",
      "text": "THE GREAT BOOK OF WORLD GAMES",
-     "x0": 8.7388,
+     "x0": 8.7275,
      "y0": 7.5746,
-     "x1": 8.8591,
+     "x1": 8.8478,
      "y1": 10.2754
     },
     {
      "kind": "spineText",
      "text": "EMRE DOĞAN",
-     "x0": 8.7388,
+     "x0": 8.7275,
      "y0": 0.631,
-     "x1": 8.8591,
+     "x1": 8.8478,
      "y1": 1.569
     },
     {
@@ -292,17 +292,17 @@
     }
    ],
    "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
-   "sha256": "de3634b44c9009a713f651861acaf067bc8f477dd9e438f4735d20ac86a1ca32",
-   "bytes": 21215547,
+   "sha256": "2c2ecbdc0766deb7034ad7d108d95e25e2393223a59b1d0be22e648de0c2bbef",
+   "bytes": 21183120,
    "wrapIn": [
-    17.6599,
+    17.6373,
     11.25
    ],
-   "spineIn": 0.4099,
+   "spineIn": 0.3873,
    "artwork": "07_ASSETS/print/cover-wrap-paperback.png",
    "artworkPrep": {
     "file": "07_ASSETS/print/cover-wrap-paperback.png",
-    "widthPx": 5298,
+    "widthPx": 5291,
     "heightPx": 3375,
     "scrims": [
      {
@@ -322,10 +322,10 @@
       "$note": "tüylenmiş yıkama · beyaz panel DEĞİL · § 7 ölçülen destek"
      }
     ],
-    "scaleFromProcessed": 0.8442,
+    "scaleFromProcessed": 0.8431,
     "effectiveDpi": 300.0,
-    "sha256": "80e1fbc7cd4fefa7c640847084e1064323d8e822de7bd6ee0563350dff88b5ee",
-    "bytes": 12931669
+    "sha256": "9efe6af8538f946264df1dfc25776cfd52a037d8cb621c3fafd39ff929601124",
+    "bytes": 12910070
    }
   },
   "hardcover": {
@@ -613,8 +613,8 @@
     }
    ],
    "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
-   "sha256": "0441bc8e940da851a6ac63a3698e0fbe371930feedff4289ade01e5519e2b19d",
-   "bytes": 24577375,
+   "sha256": "a30ac97c774c87dbba4281873c4d14afd89f0327209ab48e15cda626d16b8fc0",
+   "bytes": 24577574,
    "wrapIn": [
     18.683,
     12.417
@@ -742,7 +742,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "playground — set out so you can play them tonight. Each game",
+     "text": "playground — set out so you can play them tonight. Complete ",
      "x0": 0.8,
      "y0": 6.6,
      "x1": 5.8,
@@ -750,7 +750,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "pages, so the book lies open on the table and nobody turns a",
+     "text": "diagrams and cultural stories in clear, readable type.",
      "x0": 0.8,
      "y0": 6.4139,
      "x1": 5.8,
@@ -758,23 +758,23 @@
     },
     {
      "kind": "backCopy",
-     "text": "turn.",
-     "x0": 0.8,
-     "y0": 6.2278,
-     "x1": 5.8,
-     "y1": 6.3806
-    },
-    {
-     "kind": "backCopy",
      "text": "Sorted by how they work, not by where they are from.",
      "x0": 0.8,
-     "y0": 5.9444,
+     "y0": 6.1306,
      "x1": 5.8,
-     "y1": 6.1111
+     "y1": 6.2972
     },
     {
      "kind": "backCopy",
      "text": "Seven families — sowing, hunt and siege, race home, line and",
+     "x0": 0.8,
+     "y0": 5.8944,
+     "x1": 5.8,
+     "y1": 6.0472
+    },
+    {
+     "kind": "backCopy",
+     "text": "board, chance and nerve, and games without a board. Put that",
      "x0": 0.8,
      "y0": 5.7083,
      "x1": 5.8,
@@ -782,7 +782,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "board, chance and nerve, and games without a board. Put that",
+     "text": "games of Ghana, Sri Lanka and Buganda sit together, and you ",
      "x0": 0.8,
      "y0": 5.5222,
      "x1": 5.8,
@@ -790,7 +790,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "games of Ghana, Sri Lanka and Buganda sit together, and you ",
+     "text": "solve the problem of chess six different ways.",
      "x0": 0.8,
      "y0": 5.3361,
      "x1": 5.8,
@@ -798,23 +798,23 @@
     },
     {
      "kind": "backCopy",
-     "text": "solve the problem of chess six different ways.",
-     "x0": 0.8,
-     "y0": 5.15,
-     "x1": 5.8,
-     "y1": 5.3028
-    },
-    {
-     "kind": "backCopy",
      "text": "Honest about what is known.",
      "x0": 0.8,
-     "y0": 4.8667,
+     "y0": 5.0528,
      "x1": 5.8,
-     "y1": 5.0333
+     "y1": 5.2194
     },
     {
      "kind": "backCopy",
      "text": "Every rule set names the work and the pages it was read from",
+     "x0": 0.8,
+     "y0": 4.8167,
+     "x1": 5.8,
+     "y1": 4.9694
+    },
+    {
+     "kind": "backCopy",
+     "text": "incomplete, the entry says so and shows what has been recons",
      "x0": 0.8,
      "y0": 4.6306,
      "x1": 5.8,
@@ -822,7 +822,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "incomplete, the entry says so and shows what has been recons",
+     "text": "the back lists the game origin stories that are widely repea",
      "x0": 0.8,
      "y0": 4.4444,
      "x1": 5.8,
@@ -830,15 +830,15 @@
     },
     {
      "kind": "backCopy",
-     "text": "the back lists the game origin stories that are widely repea",
+     "text": "Inside: what to use instead of what — buttons, coins, dried ",
      "x0": 0.8,
-     "y0": 4.2583,
+     "y0": 4.1611,
      "x1": 5.8,
-     "y1": 4.4111
+     "y1": 4.3139
     },
     {
      "kind": "backCopy",
-     "text": "Inside: what to use instead of what — buttons, coins, dried ",
+     "text": "Numbered rules, one action to a line. Board diagrams drawn t",
      "x0": 0.8,
      "y0": 3.975,
      "x1": 5.8,
@@ -846,7 +846,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "Numbered rules, one action to a line. Board diagrams drawn t",
+     "text": "templates at the back you can photocopy. Almost nothing in t",
      "x0": 0.8,
      "y0": 3.7889,
      "x1": 5.8,
@@ -854,7 +854,7 @@
     },
     {
      "kind": "backCopy",
-     "text": "templates at the back you can photocopy. Almost nothing in t",
+     "text": "bought.",
      "x0": 0.8,
      "y0": 3.6028,
      "x1": 5.8,
@@ -862,67 +862,59 @@
     },
     {
      "kind": "backCopy",
-     "text": "bought.",
-     "x0": 0.8,
-     "y0": 3.4167,
-     "x1": 5.8,
-     "y1": 3.5694
-    },
-    {
-     "kind": "backCopy",
      "text": "Emre Doğan writes about the stories that cultures tell thems",
      "x0": 0.8,
-     "y0": 2.9944,
+     "y0": 3.1806,
      "x1": 5.8,
-     "y1": 3.1472
+     "y1": 3.3333
     },
     {
      "kind": "backCopy",
      "text": "going. Trained as a software engineer, he came to mythology ",
      "x0": 0.8,
-     "y0": 2.8139,
+     "y0": 3.0,
      "x1": 5.8,
-     "y1": 2.9667
+     "y1": 3.1528
     },
     {
      "kind": "backCopy",
      "text": "— through a single story that would not leave him alone — an",
      "x0": 0.8,
-     "y0": 2.6333,
+     "y0": 2.8194,
      "x1": 5.8,
-     "y1": 2.7861
+     "y1": 2.9722
     },
     {
      "kind": "backCopy",
      "text": "underneath. CODEX MYTHOLOGICA, his first book, gathers seven",
      "x0": 0.8,
-     "y0": 2.4528,
+     "y0": 2.6389,
      "x1": 5.8,
-     "y1": 2.6056
+     "y1": 2.7917
     },
     {
      "kind": "backCopy",
      "text": "nineteen traditions and retells each one in full. He reads i",
      "x0": 0.8,
-     "y0": 2.2722,
+     "y0": 2.4583,
      "x1": 5.8,
-     "y1": 2.425
+     "y1": 2.6111
     },
     {
      "kind": "backCopy",
      "text": "and is grateful daily to the translators and ethnographers w",
      "x0": 0.8,
-     "y0": 2.0917,
+     "y0": 2.2778,
      "x1": 5.8,
-     "y1": 2.2444
+     "y1": 2.4306
     },
     {
      "kind": "backCopy",
      "text": "book like this possible for someone who is neither. He lives",
      "x0": 0.8,
-     "y0": 1.9111,
+     "y0": 2.0972,
      "x1": 5.8,
-     "y1": 2.0639
+     "y1": 2.25
     }
    ],
    "spineFit": [
@@ -950,8 +942,8 @@
     }
    ],
    "file": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.pdf",
-   "sha256": "8b9cd747ecd4f3a8b0ede7b3456c1bc6e90059638e766fc782b67d64e14584f4",
-   "bytes": 21502601,
+   "sha256": "78c7cd231d92a780c6b59463a98d0d80b637e3d5d87b3eeaf39f79d66233879e",
+   "bytes": 21502750,
    "wrapIn": [
     17.8625,
     11.25
@@ -992,8 +984,8 @@
   "widthPx": 1600,
   "heightPx": 2560,
   "aspect": 0.625,
-  "sha256": "a5f5fb8bd5c34ca0abcd636df9a9a756338a318dc38549a05f926a7d9c957a41",
-  "bytes": 1029600,
+  "sha256": "6ed6efbed3c309412440c6bf7282ae0805d5ada390c7b8a9b66e59b6337e2f6c",
+  "bytes": 1031006,
   "typography": [
    {
     "kind": "frontTitle",

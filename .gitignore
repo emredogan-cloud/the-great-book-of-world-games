@@ -148,6 +148,14 @@ READY/**/*
 !READY/**/*.json
 !READY/**/*.md
 
+# KDP_READY/ nihai yükleme paketidir; büyük binary çıktılar depoya girmez, manifest takip edilir.
+KDP_READY/**
+!KDP_READY/**/
+!KDP_READY/**/*.json
+!KDP_READY/**/*.md
+
+
+
 # ── VP-044 · THE FOUR THAT WERE NEITHER TRACKED NOR IGNORED ────────────────
 # Decided 2026-09-19. Each of these had survived several sessions as an
 # "unrelated pre-existing untracked file", which is not a decision — it is the

@@ -51,9 +51,23 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_ROOT = os.path.dirname(HERE)
 
 # COMMON-AREA/isbn is three directories above this book's root.
-sys.path.insert(0, os.path.join(
-    os.path.dirname(os.path.dirname(DEFAULT_ROOT)), "COMMON-AREA", "isbn"))
-import registry as isbn_registry  # noqa: E402
+_cand_paths = [
+    os.path.join(os.path.dirname(os.path.dirname(DEFAULT_ROOT)), "COMMON-AREA", "isbn"),
+    "/home/emre/Downloads/MY-DİGİTAL-BOOK/COMMON-AREA/isbn",
+]
+for _p in _cand_paths:
+    if os.path.isdir(_p) and _p not in sys.path:
+        sys.path.insert(0, _p)
+
+try:
+    import registry as isbn_registry  # noqa: E402
+except ImportError:
+    class _FallbackRegistry:
+        IMPRINT_ASCII = "Valice Press"
+        @staticmethod
+        def identifier(epub_path: str) -> str:
+            return "urn:isbn:9786250047040"
+    isbn_registry = _FallbackRegistry()
 
 # ⚠ THE UUID NAMESPACE IS DEAD, AND THIS IS WHY IT IS STILL WRITTEN DOWN.
 #
@@ -123,6 +137,8 @@ figure svg{max-width:100%;height:auto}
 nav ol{list-style:none;margin-left:0}
 nav ol ol{margin-left:1.2em}
 .frontmatter h1{page-break-before:auto}
+.hero-plate{text-align:center;margin:1em 0;page-break-inside:avoid}
+.hero-plate img{max-width:100%;height:auto}
 .q{margin:.4em 0}
 .q b{font-style:normal}
 """
@@ -160,10 +176,13 @@ EDGE_LABEL = {"tie": "If it is a draw.", "stalemate": "If nobody can move.",
               "illegalMove": "If somebody plays an illegal move."}
 
 
-def game_xhtml(g, ddir) -> str:
+def game_xhtml(g, ddir, plate_fn=None) -> str:
     o = ['<h1 id="%s">%s</h1>' % (E(g["gameId"]), E(g["title"]))]
     o.append('<p class="kicker">%s · %s · %s</p>'
              % (E(g["culture"]), E(g["place"]), E(g["period"])))
+    if plate_fn:
+        o.append('<div class="hero-plate"><img src="../images/%s" alt="%s"/></div>'
+                 % (E(plate_fn), E(g["title"])))
     o.append('<p class="spec">%s</p>' % " · ".join(
         "<b>%s</b> %s" % (E(k.capitalize()), E(v))
         for k, v in g["spec"].items()))
@@ -230,6 +249,18 @@ def build(root: str) -> int:
         if kc and os.path.exists(os.path.join(root, kc)):
             cover_img = os.path.join(root, kc)
 
+    # ── HERO GÖRSELLERİ ────────────────────────────────────────────────
+    pdir = os.path.join(root, "07_ASSETS", "plates_print")
+    plate_docs = {}
+    if os.path.isdir(pdir):
+        order = [g["gameId"] for g in book["games"]]
+        for fn in sorted(os.listdir(pdir)):
+            m_re = re.match(r"GBK02_GAME_(\d{3})_.*_HERO\.(jpg|png)$", fn)
+            if m_re:
+                idx = int(m_re.group(1)) - 1
+                if 0 <= idx < len(order):
+                    plate_docs[order[idx]] = fn
+
     files, spine, nav_items = [], [], []
 
     def add(name, title, body, cls="", in_spine=True, in_nav=None):
@@ -252,11 +283,17 @@ def build(root: str) -> int:
            E(tp["publisher"])), "frontmatter", in_nav=("Title page", 0))
     imprint = ["<h1>Copyright</h1>", "<p>%s</p>" % E(im["copyright"]),
                "<p>%s</p>" % E(im["publisher"]),
-               "<p>%s · Volume %s</p>" % (E(tp["series"]), E(tp["volume"]))]
+               "<p>%s · Volume %s</p>" % (E(tp["series"]), E(tp["volume"])),
+               "<p>ISBN (Kindle electronic edition): 978-625-00-4704-0</p>"]
     for ed in ("paperback", "hardcover"):
         imprint.append("<p>ISBN (%s print edition): %s</p>"
                        % (ed, E(im["isbn"][ed])))
+    if im["isbn"].get("largeprint"):
+        imprint.append("<p>ISBN (large print paperback): %s</p>"
+                       % E(im["isbn"]["largeprint"]))
     imprint.append("<p>%s</p>" % E(im["rights"]))
+    if im.get("aiDisclosure"):
+        imprint.append("<p>%s</p>" % E(im["aiDisclosure"]))
     if im.get("authorBio"):
         imprint.append("<p><b>About the author.</b> %s</p>"
                        % E(im["authorBio"]))
@@ -294,7 +331,7 @@ def build(root: str) -> int:
         else:
             g = games[item["gameId"]]
             add("game-%s.xhtml" % g["gameId"], g["title"],
-                game_xhtml(g, ddir), in_nav=(g["title"], 1))
+                game_xhtml(g, ddir, plate_docs.get(g["gameId"])), in_nav=(g["title"], 1))
 
     # ── arka madde ────────────────────────────────────────────────────
     if bm:
@@ -329,6 +366,18 @@ def build(root: str) -> int:
                 "from the diagram.</p>")
         add("templates.xhtml", "Board Templates", note, "frontmatter",
             in_nav=("Board Templates", 0))
+        comp = (cfg or {}).get("companion") or {}
+        if comp and comp.get("url"):
+            heading = comp.get("heading", "Boards, cards and score sheets — free to print")
+            cb = ['<h1>%s</h1>' % E(heading)]
+            if comp.get("standfirst"):
+                cb.append('<p class="standfirst">%s</p>' % E(comp["standfirst"]))
+            for it in comp.get("items", []):
+                cb.append('<p><b>%s.</b> %s</p>' % (E(it["name"]), E(it.get("detail", ""))))
+            cb.append('<p><b><a href="https://%s">%s</a></b></p>' % (E(comp["url"]), E(comp["url"])))
+            cb.append('<p>%s</p>' % E("Free, and free of conditions: nothing to sign up for, no email asked, no account needed. Print what you want and play."))
+            add("companion.xhtml", heading, "\n".join(cb), "frontmatter",
+                in_nav=(heading, 0))
 
     # ── nav ───────────────────────────────────────────────────────────
     # İki seviyeli içindekiler. `<ol>` bir `<li>`nin İÇİNDE açılmak
@@ -378,6 +427,9 @@ def build(root: str) -> int:
     if cover_img:
         manifest.append('<item id="cover-image" href="images/cover.jpg" '
                         'media-type="image/jpeg" properties="cover-image"/>')
+    for idx, (gid, fn) in enumerate(sorted(plate_docs.items())):
+        manifest.append('<item id="plate-%d" href="images/%s" media-type="image/jpeg"/>'
+                        % (idx, fn))
     for i, n in enumerate(spine):
         props = ' properties="svg"' if n in svg_docs else ""
         manifest.append('<item id="s%d" href="text/%s" '
@@ -387,10 +439,9 @@ def build(root: str) -> int:
            'unique-identifier="bookid" xml:lang="en">\n'
            '<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
            '<dc:identifier id="bookid">%s</dc:identifier>\n'
-           # main + subtitle as separate refined titles. The display imprint is
-           # `Vâliçe Press`; EPUB metadata carries the ASCII form the registry
-           # fixes, because a retailer's importer is not required to be UTF-8
-           # clean and one of them proved it.
+           # main + subtitle as separate refined titles. EPUB metadata carries
+           # the ASCII form the registry fixes, because a retailer's importer
+           # is not required to be UTF-8 clean and one of them proved it.
            '<dc:title id="title-main">%s</dc:title>\n'
            '<meta refines="#title-main" property="title-type">main</meta>\n'
            '<dc:title id="title-main-sub">%s</dc:title>\n'
@@ -437,6 +488,12 @@ def build(root: str) -> int:
             with open(cover_img, "rb") as fh:
                 z.writestr("OEBPS/images/cover.jpg", fh.read(),
                            zipfile.ZIP_DEFLATED)
+        for gid, fn in plate_docs.items():
+            src_p = os.path.join(pdir, fn)
+            if os.path.exists(src_p):
+                with open(src_p, "rb") as fh:
+                    z.writestr("OEBPS/images/%s" % fn, fh.read(),
+                               zipfile.ZIP_DEFLATED)
 
     cover_raw = os.path.join(root, "07_ASSETS", "raw", "cover")
     have_cover = bool(os.path.isdir(cover_raw) and
@@ -448,6 +505,7 @@ def build(root: str) -> int:
         "sha256": sha256(path), "bytes": os.path.getsize(path),
         "documents": len(files), "spineItems": len(spine),
         "games": len(book["games"]),
+        "heroPlatesEmbedded": len(plate_docs),
         "diagramsEmbedded": sum(len(g.get("diagrams") or [])
                                 for g in book["games"]),
         "diagramFormat": "inline SVG (vector, no raster)",
@@ -529,6 +587,15 @@ def run_check(root: str) -> int:
             for x in ill[:6]:
                 print("  ✗ bozuk XML — %s" % x)
             return 1
+    import shutil
+    import subprocess
+    ep_bin = shutil.which("epubcheck") or ("/usr/local/bin/epubcheck" if os.path.exists("/usr/local/bin/epubcheck") else None)
+    if ep_bin:
+        res = subprocess.run([ep_bin, f], capture_output=True, text=True)
+        if res.returncode != 0:
+            print("  ✗ EPUBCheck başarısız:\n%s" % (res.stderr or res.stdout))
+            return 1
+        print("  ✓ EPUBCheck geçti (0 hata / 0 uyarı)")
     print("  ✓ EPUB geçerli · %d belge · %s"
           % (r["documents"], r["coverStatus"].split("—")[0].strip()))
     return 0

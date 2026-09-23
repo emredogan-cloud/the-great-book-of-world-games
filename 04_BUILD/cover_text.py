@@ -34,16 +34,22 @@ SPINE_TITLE = "THE GREAT BOOK OF WORLD GAMES"
 SPINE_AUTHOR = "EMRE DOĞAN"
 
 
-def back_copy(m):
+def back_copy(m, edition=None):
     """Arka kapak metni — onaylı açıklamadan damıtıldı."""
+    if edition == "largeprint":
+        first_body = ("%d traditional games from %d cultures, from the royal graves of Ur "
+                      "to a Zulu playground — set out so you can play them tonight. Complete "
+                      "rules, vector board diagrams and cultural stories in clear, readable type."
+                      % (m["games"], m["cultures"]))
+    else:
+        first_body = ("%d traditional games from %d cultures, from the royal graves of Ur "
+                      "to a Zulu playground — set out so you can play them tonight. Each "
+                      "game gets two facing pages, so the book lies open on the table and "
+                      "nobody turns a page in the middle of a turn."
+                      % (m["games"], m["cultures"]))
     return [
         ("head", "A reference book you play from."),
-        ("body",
-         "%d traditional games from %d cultures, from the royal graves of Ur "
-         "to a Zulu playground — set out so you can play them tonight. Each "
-         "game gets two facing pages, so the book lies open on the table and "
-         "nobody turns a page in the middle of a turn."
-         % (m["games"], m["cultures"])),
+        ("body", first_body),
         ("head", "Sorted by how they work, not by where they are from."),
         ("body",
          "Seven families — sowing, hunt and siege, race home, line and "

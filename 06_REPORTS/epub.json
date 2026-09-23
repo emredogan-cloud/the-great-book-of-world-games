@@ -1,11 +1,12 @@
 {
  "format": "EPUB 3, reflowable",
  "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
- "sha256": "22103a639336cdcc4abb6737af8c546b9f858f8ea03226113a607494fd7818cd",
- "bytes": 1272494,
- "documents": 82,
- "spineItems": 82,
+ "sha256": "85228ee0b0ac0688a0121342ba036e3854a57fb0792a79688e035cc75276b424",
+ "bytes": 14633185,
+ "documents": 83,
+ "spineItems": 83,
  "games": 63,
+ "heroPlatesEmbedded": 63,
  "diagramsEmbedded": 59,
  "diagramFormat": "inline SVG (vector, no raster)",
  "coverImage": "08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg",
@@ -22,7 +23,7 @@
   "publicationYear": 2026,
   "subtitleMeasured": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
   "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
-  "frontMatterWords": 2039,
+  "frontMatterWords": 2027,
   "familyOpenerWords": 2422
  }
 }

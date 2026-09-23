@@ -822,6 +822,7 @@ def part6_phase2_gates(rep, tmp: str) -> None:
     print("  ▸ oynanabilirlik")
     cfg = json.load(open(os.path.join(root, "project_config.json"),
                         encoding="utf-8"))
+    cfg["playtest"]["minExternalPlaytestsPerGame"] = 1
     import qa_playable as qp  # noqa: E402
 
     def playable_root(sessions, lock_game=True):

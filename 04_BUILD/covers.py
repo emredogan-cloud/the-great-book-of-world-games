@@ -627,7 +627,7 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
     bx = back_box[0] * IN + 0.10 * IN
     bw = (back_box[2] - back_box[0]) * IN - 0.20 * IN
     by = back_box[3] * IN - 0.30 * IN
-    back_items = list(CT.back_copy(measured))
+    back_items = list(CT.back_copy(measured, edition=ed))
     if ed == "largeprint":
         back_items.insert(0, ("head", "Large Print Edition — the same book, "
                                       "set in 16-point type."))
@@ -666,6 +666,27 @@ def compose(root, cfg, ed, geo_ed, art_rel, measured, out_dir, verbose=True):
     c.setFont("CoverSerif", 9.8)
     c.drawString(bx, max(by - 6.0, (Z["barcode"]["y1"] + 0.30) * IN),
                  cfg["founder"]["publisher"])
+
+    # ── BARKOD PLAKASI ────────────────────────────────────────────────
+    # KDP ölçümü: dosyanın KENDİSİNDE barkod kutusu (2.0 × 1.2 in + 0.07 in pay)
+    # açık renkli (minLum >= 225, maxStd <= 3.0) olmak zorundadır.
+    # Koyu veya dokulu arka plan KDP tarafından reddedilir.
+    # House standardı: BAND = (246, 243, 236) / RULE = (176, 143, 78).
+    bc = Z["barcode"]
+    pad = 0.07
+    bx0 = (bc["x0"] - pad) * IN
+    by0 = (bc["y0"] - pad) * IN
+    bw = (BARCODE_W_IN + 2 * pad) * IN
+    bh = (BARCODE_H_IN + 2 * pad) * IN
+    r = 0.05 * IN
+
+    c.saveState()
+    c.setFillColorRGB(246 / 255.0, 243 / 255.0, 236 / 255.0)
+    c.setStrokeColorRGB(176 / 255.0, 143 / 255.0, 78 / 255.0)
+    c.setLineWidth(0.5)
+    c.roundRect(bx0, by0, bw, bh, r, fill=1, stroke=1)
+    c.restoreState()
+
     c.showPage()
     c.save()
 

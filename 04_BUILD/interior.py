@@ -695,8 +695,11 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs, plate_docs=No
     toc_flow_pages = lay.n - toc_pages_start + 1
 
     # ⑤ ön madde denemeleri -------------------------------------------------
+    first_fm_sec = True
     for sec in fm["sections"]:
-        lay.pad_to_recto()
+        if first_fm_sec:
+            lay.pad_to_recto()
+            first_fm_sec = False
         fls = [P("<b>%s</b>" % esc(sec["title"]), "sect")]
         for para in sec.get("paragraphs", []):
             fls.append(P(esc(para), "body"))
@@ -828,7 +831,7 @@ def build_layout(root, cfg, book, fm, bm, geom, sty, diagram_docs, plate_docs=No
         total_h = sum(fl.wrap(w0, h0)[1] for fl in stream)
         # Akış flowable sınırında kesilir, tam hedefte değil; bu yüzden
         # sağ sayfaya bir pay bırakılır.
-        slack = h0 * 0.06
+        slack = h0 * 0.04
         right_cap = max(h0 - dia_h - slack, 0.0)
         left_target = min(h0, max(total_h - right_cap, total_h * 0.5))
 

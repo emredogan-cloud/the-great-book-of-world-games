@@ -23,7 +23,7 @@ with AI and then substantially edited). It asks separately about **text**,
 | | |
 |---|---|
 | Status | **AI-generated, then edited and verified against printed sources** |
-| Volume | 63 game entries · 2,039 words of front matter · 2,422 words of family openers |
+| Volume | 63 game entries · 2,027 words of front matter · 2,422 words of family openers |
 | Printed total | 65,000+ words |
 
 Every rule set was drafted with AI assistance **from a named printed source

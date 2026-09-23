@@ -171,7 +171,7 @@
     },
     {
       "gameId": "ayoayo",
-      "name": "Ayòayò",
+      "name": "Ayoayo",
       "altNames": [
         "Ayo"
       ],
@@ -435,7 +435,7 @@
         "Congkak",
         "Dakon"
       ],
-      "culture": "Javanese",
+      "culture": "Malay",
       "region": "Southeast Asia",
       "countryOrArea": "Indonesia · Malaysia",
       "period": "documented from the 19th century; archaeological board finds are older",
@@ -4960,7 +4960,7 @@
     },
     {
       "gameId": "sugoroku",
-      "name": "Ban-sugoroku",
+      "name": "E-Sugoroku",
       "altNames": [
         "Sugoroku"
       ],
@@ -8999,7 +8999,7 @@
     },
     {
       "gameId": "turkish-dama",
-      "name": "Dama",
+      "name": "Turkish Dama",
       "altNames": [
         "Turkish draughts"
       ],

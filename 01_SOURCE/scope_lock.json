@@ -395,7 +395,7 @@
    "gameId": "congklak",
    "name": "Congklak",
    "family": "sowing",
-   "culture": "Javanese",
+   "culture": "Malay",
    "region": "Southeast Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -635,7 +635,7 @@
   },
   {
    "gameId": "ayoayo",
-   "name": "Ayòayò",
+   "name": "Ayoayo",
    "family": "sowing",
    "culture": "Yoruba",
    "region": "West Africa",
@@ -1290,7 +1290,7 @@
   },
   {
    "gameId": "sugoroku",
-   "name": "Ban-sugoroku",
+   "name": "E-Sugoroku",
    "family": "race",
    "culture": "Japanese",
    "region": "East Asia",
@@ -1874,7 +1874,7 @@
   },
   {
    "gameId": "turkish-dama",
-   "name": "Dama",
+   "name": "Turkish Dama",
    "family": "war-board",
    "culture": "Turkish",
    "region": "Anatolia · Eastern Mediterranean",

@@ -438,6 +438,15 @@ def check_secrets(rep: Report, files: list[str]) -> None:
         except (OSError, json.JSONDecodeError):
             pass
     if strategy == "kdp-free":
+        real_isbns = {"9786250047040"}
+        if os.path.exists(cfgp):
+            try:
+                with open(cfgp, encoding="utf-8") as fh:
+                    for v in json.load(fh).get("founder", {}).get("isbn", {}).values():
+                        if isinstance(v, str):
+                            real_isbns.add(re.sub(r"[- ]", "", v))
+            except Exception:
+                pass
         isbn_hits: list[str] = []
         for rel in files:
             if not rel.endswith((".md", ".json", ".py")):
@@ -459,7 +468,9 @@ def check_secrets(rep: Report, files: list[str]) -> None:
                     body = fh.read()
             except (OSError, UnicodeDecodeError):
                 continue
-            if FAKE_ISBN.search(body):
+            matches = FAKE_ISBN.findall(body)
+            fake_matches = [m for m in matches if re.sub(r"[- ]", "", m) not in real_isbns]
+            if fake_matches:
                 isbn_hits.append(rel)
         rep.check(not isbn_hits,
                   "uydurulmuş ISBN yok (strateji: kdp-free)" +
