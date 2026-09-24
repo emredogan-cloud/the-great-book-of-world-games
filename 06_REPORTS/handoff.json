@@ -31,15 +31,15 @@
    "cover": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
     "exists": true,
-    "sha256": "2c2ecbdc0766deb7034ad7d108d95e25e2393223a59b1d0be22e648de0c2bbef",
-    "recordedSha256": "2c2ecbdc0766deb7034ad7d108d95e25e2393223a59b1d0be22e648de0c2bbef",
-    "bytes": 21183120,
+    "sha256": "f10249b333424b0628a4f68b412daa64cd40533983ed1ae762799c7a90cdb153",
+    "recordedSha256": "f10249b333424b0628a4f68b412daa64cd40533983ed1ae762799c7a90cdb153",
+    "bytes": 7320216,
     "wrapIn": [
      17.6373,
      11.25
     ],
     "spineIn": 0.3873,
-    "artwork": "07_ASSETS/print/cover-wrap-paperback.png",
+    "artwork": "07_ASSETS/processed/cover/print_master_standard_corrected.png",
     "typeItems": 32,
     "spineFit": [
      {
@@ -94,15 +94,15 @@
    "cover": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
     "exists": true,
-    "sha256": "a30ac97c774c87dbba4281873c4d14afd89f0327209ab48e15cda626d16b8fc0",
-    "recordedSha256": "a30ac97c774c87dbba4281873c4d14afd89f0327209ab48e15cda626d16b8fc0",
-    "bytes": 24577574,
+    "sha256": "e89da7354f732f05af8063d45cd08eaafc8d5ebc0ae5f3fd088a5fb253e2b500",
+    "recordedSha256": "e89da7354f732f05af8063d45cd08eaafc8d5ebc0ae5f3fd088a5fb253e2b500",
+    "bytes": 7971700,
     "wrapIn": [
      18.683,
      12.417
     ],
     "spineIn": 0.608,
-    "artwork": "07_ASSETS/print/cover-wrap-hardcover.png",
+    "artwork": "07_ASSETS/processed/cover/print_master_standard_corrected.png",
     "typeItems": 32,
     "spineFit": [
      {
@@ -138,8 +138,8 @@
     "widthPx": 1600,
     "heightPx": 2560,
     "aspect": 0.625,
-    "sha256": "6ed6efbed3c309412440c6bf7282ae0805d5ada390c7b8a9b66e59b6337e2f6c",
-    "bytes": 1031006,
+    "sha256": "0acc1a51f61b4c2e845c247a48839a774e6478cfec35dda932acfaa31a4ed3f6",
+    "bytes": 2356492,
     "typography": [
      {
       "kind": "frontTitle",
@@ -167,14 +167,14 @@
       "px": 73
      }
     ],
-    "note": "ÖN panelden türetildi; tam sarım DEĞİL. Tipografi VEKTÖR ANAHATTAN (LiberationSerif TTF, AI-üretilmiş METİN DEĞİL) basıldı; konum sarımın ölçülen sakin bantlarıyla AYNI, yalnızca bu görselin px/in oranına ölçeklendi."
+    "note": "Founder master cover from last-kindle-cover.png surgically corrected to canonical 63 games / 45 cultures / VALICE PRESS and upscaled to 1600x2560."
    },
    "epub": {
     "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
     "exists": true,
-    "sha256": "85228ee0b0ac0688a0121342ba036e3854a57fb0792a79688e035cc75276b424",
-    "recordedSha256": "85228ee0b0ac0688a0121342ba036e3854a57fb0792a79688e035cc75276b424",
-    "bytes": 14633185
+    "sha256": "696d4b9a5eca4bc88032049fff168ffe166c7409c52ff607d1f3e58e97d079cc",
+    "recordedSha256": "696d4b9a5eca4bc88032049fff168ffe166c7409c52ff607d1f3e58e97d079cc",
+    "bytes": 15960616
    },
    "coverStatus": "READY"
   },
@@ -196,8 +196,8 @@
   }
  },
  "checksumFiles": {
-  "PAPERBACK": 3,
-  "HARDCOVER": 3,
+  "PAPERBACK": 4,
+  "HARDCOVER": 4,
   "KINDLE": 4,
   "APLUS": 9
  },

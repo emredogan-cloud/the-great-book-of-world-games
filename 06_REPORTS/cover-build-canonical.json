@@ -1,0 +1,307 @@
+{
+  "book": "GBK-02",
+  "slug": "the-great-book-of-world-games",
+  "canon": {
+    "games": 63,
+    "cultures": 45,
+    "years": 4600,
+    "brand": "VALICE PRESS"
+  },
+  "formats": {
+    "KINDLE": {
+      "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg",
+      "px": [
+        1600,
+        2560
+      ],
+      "bytes": 2356492,
+      "suppliedPx": [
+        992,
+        1586
+      ],
+      "realUpscale": 1.613,
+      "crop": {
+        "cropYin": 0.0,
+        "extendedXin": 0.0,
+        "cropXin": 0.003,
+        "anchorY": 0.5
+      }
+    },
+    "PAPERBACK": {
+      "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
+      "jpg": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.jpg",
+      "pages": 172,
+      "trimIn": [
+        8.5,
+        11.0
+      ],
+      "wrapIn": [
+        17.6373,
+        11.25
+      ],
+      "wrapPx": [
+        5291,
+        3375
+      ],
+      "spineIn": 0.3873,
+      "spinePx": 116,
+      "spine": {
+        "groundFrom": "comp spine band, per-row percentile — lettering removed",
+        "trueSpineIn": 0.3873,
+        "spineSafeIn": 0.2633,
+        "textSet": true,
+        "title": "THE GREAT BOOK OF WORLD GAMES",
+        "author": "EMRE DOĞAN",
+        "reads": "top-to-bottom",
+        "endSafeIn": 0.55,
+        "titlePt": 18.2,
+        "authorPt": 10.3
+      },
+      "backCrop": {
+        "fit": "height-first; excess width cropped off the SPINE side only",
+        "cropYin": 0.0,
+        "cropInnerIn": 0.0,
+        "extendedInnerIn": 0.99,
+        "wrapSafeOutIn": 0.407,
+        "wrapSafeInIn": 0.093,
+        "wrapSafeYIn": 0.407,
+        "designBoxIn": [
+          8.123,
+          10.437
+        ]
+      },
+      "frontCrop": {
+        "fit": "height-first; excess width cropped off the SPINE side only",
+        "cropYin": 0.0,
+        "cropInnerIn": 0.0,
+        "extendedInnerIn": 0.44,
+        "wrapSafeOutIn": 0.407,
+        "wrapSafeInIn": 0.43,
+        "wrapSafeYIn": 0.407,
+        "designBoxIn": [
+          7.79,
+          10.437
+        ]
+      },
+      "barcodePlate": {
+        "pass": true,
+        "boxIn": [
+          6.375,
+          0.375,
+          8.375,
+          1.575
+        ],
+        "boxPx": [
+          1912,
+          2902,
+          2512,
+          3262
+        ],
+        "minLuminance": 241.7,
+        "meanLuminance": 241.7,
+        "stdLuminance": 0.0,
+        "thresholds": {
+          "minLuminance": 225.0,
+          "maxStd": 3.0
+        },
+        "$why": "KDP reviews the supplied file, not the Previewer's render. A dark or textured rectangle here is rejected even though the Previewer draws a white barcode over it.",
+        "plateIn": [
+          6.303,
+          0.307,
+          8.443,
+          1.647
+        ],
+        "platePadIn": 0.07,
+        "covered": {
+          "edgeEnergy": 6.62,
+          "verdict": "covers drawn content — lettering or a rule is lost here"
+        }
+      },
+      "bytes": 7320216
+    },
+    "HARDCOVER": {
+      "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
+      "jpg": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.jpg",
+      "pages": 172,
+      "trimIn": [
+        8.25,
+        11.0
+      ],
+      "wrapIn": [
+        18.683,
+        12.417
+      ],
+      "wrapPx": [
+        5605,
+        3725
+      ],
+      "spineIn": 0.608,
+      "spinePx": 182,
+      "spine": {
+        "groundFrom": "comp spine band, per-row percentile — lettering removed",
+        "trueSpineIn": 0.608,
+        "spineSafeIn": 0.484,
+        "textSet": true,
+        "title": "THE GREAT BOOK OF WORLD GAMES",
+        "author": "EMRE DOĞAN",
+        "reads": "top-to-bottom",
+        "endSafeIn": 0.716,
+        "titlePt": 27.4,
+        "authorPt": 19.0
+      },
+      "backCrop": {
+        "fit": "height-first; excess width cropped off the SPINE side only",
+        "cropYin": 0.0,
+        "cropInnerIn": 0.03,
+        "extendedInnerIn": 0.0,
+        "wrapSafeOutIn": 0.717,
+        "wrapSafeInIn": 0.843,
+        "wrapSafeYIn": 0.717,
+        "designBoxIn": [
+          7.477,
+          10.983
+        ]
+      },
+      "frontCrop": {
+        "fit": "height-first; excess width cropped off the SPINE side only",
+        "cropYin": 0.0,
+        "cropInnerIn": 0.253,
+        "extendedInnerIn": 0.0,
+        "wrapSafeOutIn": 0.717,
+        "wrapSafeInIn": 0.843,
+        "wrapSafeYIn": 0.717,
+        "designBoxIn": [
+          7.48,
+          10.983
+        ]
+      },
+      "barcodePlate": {
+        "pass": true,
+        "boxIn": [
+          6.788,
+          0.966,
+          8.788,
+          2.166
+        ],
+        "boxPx": [
+          2036,
+          3075,
+          2636,
+          3435
+        ],
+        "minLuminance": 241.7,
+        "meanLuminance": 241.7,
+        "stdLuminance": 0.0,
+        "thresholds": {
+          "minLuminance": 225.0,
+          "maxStd": 3.0
+        },
+        "$why": "KDP reviews the supplied file, not the Previewer's render. A dark or textured rectangle here is rejected even though the Previewer draws a white barcode over it.",
+        "plateIn": [
+          6.717,
+          0.897,
+          8.857,
+          2.237
+        ],
+        "platePadIn": 0.07,
+        "covered": {
+          "edgeEnergy": 7.9,
+          "verdict": "covers drawn content — lettering or a rule is lost here"
+        }
+      },
+      "bytes": 7971700
+    },
+    "LARGEPRINT": {
+      "file": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.pdf",
+      "jpg": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.jpg",
+      "pages": 272,
+      "trimIn": [
+        8.5,
+        11.0
+      ],
+      "wrapIn": [
+        17.8625,
+        11.25
+      ],
+      "wrapPx": [
+        5359,
+        3375
+      ],
+      "spineIn": 0.6125,
+      "spinePx": 184,
+      "spine": {
+        "groundFrom": "comp spine band, per-row percentile — lettering removed",
+        "trueSpineIn": 0.6125,
+        "spineSafeIn": 0.4885,
+        "textSet": true,
+        "title": "THE GREAT BOOK OF WORLD GAMES",
+        "author": "EMRE DOĞAN",
+        "reads": "top-to-bottom",
+        "endSafeIn": 0.55,
+        "titlePt": 25.2,
+        "authorPt": 19.2
+      },
+      "backCrop": {
+        "fit": "height-first; excess width cropped off the SPINE side only",
+        "cropYin": 0.0,
+        "cropInnerIn": 0.0,
+        "extendedInnerIn": 0.99,
+        "wrapSafeOutIn": 0.407,
+        "wrapSafeInIn": 0.093,
+        "wrapSafeYIn": 0.407,
+        "designBoxIn": [
+          8.123,
+          10.437
+        ]
+      },
+      "frontCrop": {
+        "fit": "height-first; excess width cropped off the SPINE side only",
+        "cropYin": 0.0,
+        "cropInnerIn": 0.0,
+        "extendedInnerIn": 0.44,
+        "wrapSafeOutIn": 0.407,
+        "wrapSafeInIn": 0.43,
+        "wrapSafeYIn": 0.407,
+        "designBoxIn": [
+          7.79,
+          10.437
+        ]
+      },
+      "barcodePlate": {
+        "pass": true,
+        "boxIn": [
+          6.375,
+          0.375,
+          8.375,
+          1.575
+        ],
+        "boxPx": [
+          1912,
+          2902,
+          2512,
+          3262
+        ],
+        "minLuminance": 241.7,
+        "meanLuminance": 241.7,
+        "stdLuminance": 0.0,
+        "thresholds": {
+          "minLuminance": 225.0,
+          "maxStd": 3.0
+        },
+        "$why": "KDP reviews the supplied file, not the Previewer's render. A dark or textured rectangle here is rejected even though the Previewer draws a white barcode over it.",
+        "plateIn": [
+          6.303,
+          0.307,
+          8.443,
+          1.647
+        ],
+        "platePadIn": 0.07,
+        "covered": {
+          "edgeEnergy": 6.62,
+          "verdict": "covers drawn content — lettering or a rule is lost here"
+        }
+      },
+      "bytes": 7343756
+    }
+  }
+}

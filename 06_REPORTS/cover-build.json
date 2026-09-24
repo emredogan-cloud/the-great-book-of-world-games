@@ -5,7 +5,7 @@
   "konmadı. Yerleşim ölçülen sakin bantlardadır."
  ],
  "generatedAtPhase": "phase6",
- "selectedArtwork": "07_ASSETS/processed/cover/cover-02-4x-300dpi.png",
+ "selectedArtwork": "07_ASSETS/processed/cover/print_master_standard_corrected.png",
  "editions": {
   "paperback": {
    "edition": "paperback",
@@ -292,14 +292,14 @@
     }
    ],
    "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
-   "sha256": "2c2ecbdc0766deb7034ad7d108d95e25e2393223a59b1d0be22e648de0c2bbef",
-   "bytes": 21183120,
+   "sha256": "f10249b333424b0628a4f68b412daa64cd40533983ed1ae762799c7a90cdb153",
+   "bytes": 7320216,
    "wrapIn": [
     17.6373,
     11.25
    ],
    "spineIn": 0.3873,
-   "artwork": "07_ASSETS/print/cover-wrap-paperback.png",
+   "artwork": "07_ASSETS/processed/cover/print_master_standard_corrected.png",
    "artworkPrep": {
     "file": "07_ASSETS/print/cover-wrap-paperback.png",
     "widthPx": 5291,
@@ -613,14 +613,14 @@
     }
    ],
    "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
-   "sha256": "a30ac97c774c87dbba4281873c4d14afd89f0327209ab48e15cda626d16b8fc0",
-   "bytes": 24577574,
+   "sha256": "e89da7354f732f05af8063d45cd08eaafc8d5ebc0ae5f3fd088a5fb253e2b500",
+   "bytes": 7971700,
    "wrapIn": [
     18.683,
     12.417
    ],
    "spineIn": 0.608,
-   "artwork": "07_ASSETS/print/cover-wrap-hardcover.png",
+   "artwork": "07_ASSETS/processed/cover/print_master_standard_corrected.png",
    "artworkPrep": {
     "file": "07_ASSETS/print/cover-wrap-hardcover.png",
     "widthPx": 5605,
@@ -942,14 +942,14 @@
     }
    ],
    "file": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.pdf",
-   "sha256": "78c7cd231d92a780c6b59463a98d0d80b637e3d5d87b3eeaf39f79d66233879e",
-   "bytes": 21502750,
+   "sha256": "5cba6771bb64d29fcd39a3f00ebcab5b6df160fadbd3edb4b894cc576d0344ed",
+   "bytes": 7343756,
    "wrapIn": [
     17.8625,
     11.25
    ],
    "spineIn": 0.6125,
-   "artwork": "07_ASSETS/print/cover-wrap-largeprint.png",
+   "artwork": "07_ASSETS/processed/cover/print_master_largeprint_corrected.png",
    "artworkPrep": {
     "file": "07_ASSETS/print/cover-wrap-largeprint.png",
     "widthPx": 5359,
@@ -984,8 +984,8 @@
   "widthPx": 1600,
   "heightPx": 2560,
   "aspect": 0.625,
-  "sha256": "6ed6efbed3c309412440c6bf7282ae0805d5ada390c7b8a9b66e59b6337e2f6c",
-  "bytes": 1031006,
+  "sha256": "0acc1a51f61b4c2e845c247a48839a774e6478cfec35dda932acfaa31a4ed3f6",
+  "bytes": 2356492,
   "typography": [
    {
     "kind": "frontTitle",
@@ -1013,6 +1013,11 @@
     "px": 73
    }
   ],
-  "note": "ÖN panelden türetildi; tam sarım DEĞİL. Tipografi VEKTÖR ANAHATTAN (LiberationSerif TTF, AI-üretilmiş METİN DEĞİL) basıldı; konum sarımın ölçülen sakin bantlarıyla AYNI, yalnızca bu görselin px/in oranına ölçeklendi."
- }
+  "note": "Founder master cover from last-kindle-cover.png surgically corrected to canonical 63 games / 45 cultures / VALICE PRESS and upscaled to 1600x2560."
+ },
+ "": [
+  "KAPAK ÜRETİMİ — FOUNDER MASTER ARTWORK (CANONICAL).",
+  "Kurucu kompozisyonu, sınırları, çizimleri ve dokusu korunmuştur.",
+  "Sırtlar ölçülen sayfa sayısından türetilmiştir; barkod plakaları standart KDP eşiklerini karşılar."
+ ]
 }

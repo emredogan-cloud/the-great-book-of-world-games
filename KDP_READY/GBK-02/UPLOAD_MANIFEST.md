@@ -1,7 +1,7 @@
 # KDP Upload Manifest & Production Certification
 ## The Great Book of World Games (GBK-02)
 
-**Publisher:** Vâliçe Press (Metadata: Valice Press)  
+**Publisher:** Valice Press  
 **Author:** Emre Doğan  
 **Title:** The Great Book of World Games  
 **Subtitle:** 63 Games from 4,600 Years of Human Play — Rules, Boards, and Stories from 45 Cultures  
@@ -15,14 +15,14 @@
 
 | Edition | File | Format | Page / Dim | File Size | SHA-256 Checksum |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Kindle** | `KINDLE/GreatBookOfWorldGames.epub` | EPUB 3 (Reflowable) | 83 XHTML Docs | 14,633,185 B | `85228ee0b0ac0688a0121342ba036e3854a57fb0792a79688e035cc75276b424` |
-| **Kindle** | `KINDLE/GreatBookOfWorldGames_cover_kindle.jpg` | JPEG (RGB) | 1600 × 2560 px | 1,031,006 B | `6ed6efbed3c309412440c6bf7282ae0805d5ada390c7b8a9b66e59b6337e2f6c` |
+| **Kindle** | `KINDLE/GreatBookOfWorldGames.epub` | EPUB 3 (Reflowable) | 83 XHTML Docs | 15,960,616 B | `696d4b9a5eca4bc88032049fff168ffe166c7409c52ff607d1f3e58e97d079cc` |
+| **Kindle** | `KINDLE/GreatBookOfWorldGames_cover_kindle.jpg` | JPEG (RGB) | 1600 × 2560 px | 2,356,492 B | `0acc1a51f61b4c2e845c247a48839a774e6478cfec35dda932acfaa31a4ed3f6` |
 | **Paperback** | `PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf` | PDF/X Compliant | 172 pp (8.5 × 11 in) | 16,945,890 B | `e36732801c5715af5549482142ce4342df12645189c33e0eed2bffc450e48d7f` |
-| **Paperback** | `PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf` | PDF Wrap | 17.6373 × 11.25 in | 21,183,120 B | `2c2ecbdc0766deb7034ad7d108d95e25e2393223a59b1d0be22e648de0c2bbef` |
+| **Paperback** | `PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf` | PDF Wrap | 17.6373 × 11.25 in | 7,320,216 B | `f10249b333424b0628a4f68b412daa64cd40533983ed1ae762799c7a90cdb153` |
 | **Hardcover** | `HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf` | PDF/X Compliant | 172 pp (8.25 × 11 in) | 16,946,214 B | `1bc0eafe9b18a646dab6aba77229d7ba262b8c53a99ebc6e7778d60e077cad81` |
-| **Hardcover** | `HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf` | PDF Case Wrap | 18.6830 × 12.417 in | 24,577,574 B | `a30ac97c774c87dbba4281873c4d14afd89f0327209ab48e15cda626d16b8fc0` |
+| **Hardcover** | `HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf` | PDF Case Wrap | 18.6830 × 12.417 in | 7,971,700 B | `e89da7354f732f05af8063d45cd08eaafc8d5ebc0ae5f3fd088a5fb253e2b500` |
 | **Large Print** | `LARGE_PRINT/GreatBookOfWorldGames_interior_largeprint.pdf` | PDF/X Compliant | 272 pp (8.5 × 11 in) | 17,035,124 B | `23e4173710d9956c50f1d4fe0139e1bfc56aab71a7d76e48a04ef74248568d69` |
-| **Large Print** | `LARGE_PRINT/GreatBookOfWorldGames_cover_largeprint.pdf` | PDF Wrap | 17.8625 × 11.25 in | 21,502,750 B | `78c7cd231d92a780c6b59463a98d0d80b637e3d5d87b3eeaf39f79d66233879e` |
+| **Large Print** | `LARGE_PRINT/GreatBookOfWorldGames_cover_largeprint.pdf` | PDF Wrap | 17.8625 × 11.25 in | 7,343,756 B | `5cba6771bb64d29fcd39a3f00ebcab5b6df160fadbd3edb4b894cc576d0344ed` |
 
 ---
 

@@ -152,7 +152,7 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
   (172 pages × 0.002252 in/page)
 - artwork embedded at **5291 × 3375 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `2c2ecbdc0766deb7034ad7d108d95e25e2393223a59b1d0be22e648de0c2bbef`
+- SHA-256 `f10249b333424b0628a4f68b412daa64cd40533983ed1ae762799c7a90cdb153`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
@@ -301,7 +301,7 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
 - spine **0.6080 in**, **confirmed directly from KDP** — not computed from a formula (KDP Print Cover Calculator (kdp.amazon.com/cover-calculator) · 186 sayfa · 2026-09-17)
 - artwork embedded at **5605 × 3725 px**
   (300 ppi); all type is **vector**, not baked into the image
-- SHA-256 `a30ac97c774c87dbba4281873c4d14afd89f0327209ab48e15cda626d16b8fc0`
+- SHA-256 `e89da7354f732f05af8063d45cd08eaafc8d5ebc0ae5f3fd088a5fb253e2b500`
 
 Typography placement was measured, not eyeballed. The title and author sit in
 the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
@@ -360,7 +360,7 @@ yours to answer.
 08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub
 ```
 - EPUB 3, **reflowable**
-- 14290 KB · SHA-256 `85228ee0b0ac0688a0121342ba036e3854a57fb0792a79688e035cc75276b424`
+- 15587 KB · SHA-256 `696d4b9a5eca4bc88032049fff168ffe166c7409c52ff607d1f3e58e97d079cc`
 - diagrams are embedded as **inline SVG**, so they stay sharp at any screen
   size and add almost nothing to the file size
 
@@ -377,7 +377,7 @@ anyway: each game is one uninterrupted entry.
 08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg
 ```
 - **1600 × 2560 px** (Amazon's recommended 1:1.6), JPEG
-- SHA-256 `6ed6efbed3c309412440c6bf7282ae0805d5ada390c7b8a9b66e59b6337e2f6c`
+- SHA-256 `0acc1a51f61b4c2e845c247a48839a774e6478cfec35dda932acfaa31a4ed3f6`
 - derived from the **front panel** of the print artwork, not from the wrap —
   an ebook cover must not show a spine or a back panel
 - title, subtitle and author are set as **vector outline type** (LiberationSerif TTF, not AI-generated), at the same measured, quiet position used on the print front cover, scaled to this file's own pixel density
