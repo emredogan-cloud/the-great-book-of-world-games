@@ -47,7 +47,14 @@ for _p in (os.path.join(os.path.dirname(os.path.dirname(DEFAULT_ROOT)), "COMMON-
            "/home/emre/Downloads/MY-DİGİTAL-BOOK/COMMON-AREA/isbn"):
     if os.path.isdir(_p) and _p not in sys.path:
         sys.path.insert(0, _p)
-import registry as isbn_registry  # noqa: E402  (raises if the EPUB is not registered)
+try:
+    import registry as isbn_registry  # noqa: E402  (raises if the EPUB is not registered)
+except ImportError:
+    # A checkout without COMMON-AREA/isbn (the public CI runner). Only BUILDING needs the
+    # registry, and build() refuses to run without it; the check and the CI skip path do not.
+    # There is deliberately no stand-in identifier: a hard-coded ISBN is how the book's ISBN
+    # was lost once before (see below).
+    isbn_registry = None
 
 
 def load(p):
@@ -212,6 +219,10 @@ def build(root):
     if not os.path.exists(os.path.join(root, mdir, "book.json")):
         print("  · manuscript not in this checkout — EPUB SKIPPED (expected in CI)")
         return 0
+    if isbn_registry is None:
+        print("  ✗ ISBN registry (COMMON-AREA/isbn/registry.py) not found — the EPUB is not built "
+              "without the book's registered identifier")
+        return 1
     book = load(os.path.join(root, mdir, "book.json"))
     fm = load(os.path.join(root, mdir, "frontmatter.json"))
     bm = load(os.path.join(root, mdir, "backmatter_book.json"))

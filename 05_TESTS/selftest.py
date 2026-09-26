@@ -1763,6 +1763,10 @@ def part10_founder_gap_register(rep, tmp: str) -> None:
             rep.check(code != 0, "kayıtta OLMAYAN gameId klasörü YAKALANIR", out)
         finally:
             shutil.rmtree(ghost_dir, ignore_errors=True)
+            # GBK-02 (2026-09-26): the check above rewrites the REAL intake report with the ghost
+            # game in it. qa_all.sh rewrote it again later, but a selftest run on its own left
+            # the ghost in 06_REPORTS/founder-delivery-ingest.json. Put the true report back.
+            run_gate("founder_delivery_ingest.py", root, "--check")
 
 
 # ---------------------------------------------------------------------------

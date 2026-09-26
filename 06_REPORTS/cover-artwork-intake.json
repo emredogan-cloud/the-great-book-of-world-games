@@ -15,20 +15,127 @@
  "targetPpi": 300,
  "geometry": {
   "wrapIn": [
-   17.6103,
+   17.831,
    11.25
   ],
   "wrapPx": [
-   5283,
+   5349,
    3375
   ],
-  "pageCount": 160,
-  "spineIn": 0.3603
+  "pageCount": 258,
+  "spineIn": 0.581
  },
  "assets": {
-  "cover": [],
-  "aplus": []
+  "cover": [
+   {
+    "file": "\tCOVER-01.png",
+    "bytes": 3305799,
+    "sha256": "7b8e4056c0b826a6f6d10c3b08e921d04f4eafc32eb41390296282f3c90c52d0",
+    "format": "PNG",
+    "mode": "RGBA",
+    "widthPx": 1570,
+    "heightPx": 1002,
+    "aspect": 1.5669,
+    "dpiTag": null,
+    "hasAlpha": true,
+    "kind": "unknown",
+    "verdict": "UNCLASSIFIED",
+    "note": "Dosya adı wrap/front/back içermiyor; istem sözleşmesindeki adlardan biri kullanılmalı."
+   },
+   {
+    "file": "\tCOVER-02.png",
+    "bytes": 3381917,
+    "sha256": "6c5d379257851f888a26b295198e06d3d6b3075c73ccab56de1b806f069032a9",
+    "format": "PNG",
+    "mode": "RGBA",
+    "widthPx": 1569,
+    "heightPx": 1003,
+    "aspect": 1.5643,
+    "dpiTag": null,
+    "hasAlpha": true,
+    "kind": "unknown",
+    "verdict": "UNCLASSIFIED",
+    "note": "Dosya adı wrap/front/back içermiyor; istem sözleşmesindeki adlardan biri kullanılmalı."
+   }
+  ],
+  "aplus": [
+   {
+    "file": "\taplus-01-hero-world-of-games.png",
+    "bytes": 2889931,
+    "sha256": "e184e4cdbafd6c95ef6d798a70358079581f42879fa98951cd830a7043baac19",
+    "format": "PNG",
+    "mode": "RGBA",
+    "widthPx": 1565,
+    "heightPx": 1005,
+    "aspect": 1.5572,
+    "dpiTag": null,
+    "hasAlpha": true,
+    "kind": "aplus",
+    "verdict": "PASS",
+    "note": "A+ görselleri YÜKSELTİLMEZ: en büyüğü 970 px ve her model bundan fazlasını üretir; küçültülür."
+   },
+   {
+    "file": "\taplus-02-cultural-diversity.png",
+    "bytes": 3210453,
+    "sha256": "bbf048a75f56bd04e49d474af84814cef1823eac150a7ed98b23343935e56e5b",
+    "format": "PNG",
+    "mode": "RGBA",
+    "widthPx": 1536,
+    "heightPx": 1024,
+    "aspect": 1.5,
+    "dpiTag": null,
+    "hasAlpha": true,
+    "kind": "aplus",
+    "verdict": "PASS",
+    "note": "A+ görselleri YÜKSELTİLMEZ: en büyüğü 970 px ve her model bundan fazlasını üretir; küçültülür."
+   },
+   {
+    "file": "\taplus-03-how-the-book-works.png",
+    "bytes": 2477931,
+    "sha256": "a4b3af5566a187ef27d536fcd14a7760b20a867ee739aaf53f77eff63aa203a9",
+    "format": "PNG",
+    "mode": "RGBA",
+    "widthPx": 1024,
+    "heightPx": 1536,
+    "aspect": 0.6667,
+    "dpiTag": null,
+    "hasAlpha": true,
+    "kind": "aplus",
+    "verdict": "PASS",
+    "note": "A+ görselleri YÜKSELTİLMEZ: en büyüğü 970 px ve her model bundan fazlasını üretir; küçültülür."
+   },
+   {
+    "file": "\taplus-04-types-of-games.png",
+    "bytes": 2936651,
+    "sha256": "3fe8678787277b661c63fa0300d069245ad95c0214238fc769d01afc9113a894",
+    "format": "PNG",
+    "mode": "RGBA",
+    "widthPx": 1254,
+    "heightPx": 1254,
+    "aspect": 1.0,
+    "dpiTag": null,
+    "hasAlpha": true,
+    "kind": "aplus",
+    "verdict": "PASS",
+    "note": "A+ görselleri YÜKSELTİLMEZ: en büyüğü 970 px ve her model bundan fazlasını üretir; küçültülür."
+   },
+   {
+    "file": "aplus-05-play-family-discovery.png",
+    "bytes": 2547554,
+    "sha256": "306fa91aae729d1c1559c30e3578824217085e7cb055ecffec98d3a374ea6e39",
+    "format": "PNG",
+    "mode": "RGBA",
+    "widthPx": 1774,
+    "heightPx": 887,
+    "aspect": 2.0,
+    "dpiTag": null,
+    "hasAlpha": true,
+    "kind": "aplus",
+    "verdict": "PASS",
+    "note": "A+ görselleri YÜKSELTİLMEZ: en büyüğü 970 px ve her model bundan fazlasını üretir; küçültülür."
+   }
+  ]
  },
- "assetCount": 0,
- "gate": "OPEN — kurucu sanatı bekleniyor"
+ "assetCount": 7,
+ "gate": "INTAKE"
 }

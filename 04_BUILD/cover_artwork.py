@@ -313,7 +313,12 @@ def run_check(root: str) -> int:
         return 0
     rep = load(p)
     errs = []
-    for area in ("cover", "aplus"):
+    # the raw artwork is never in a public checkout (.gitignore § ③), so there the report cannot
+    # be compared with the disk — it is wherever the book is built; the page count still is
+    public = not os.path.exists(os.path.join(root, "02_MANUSCRIPT", "book.json"))
+    if public:
+        print("  · ham sanat bu depoda yok (.gitignore § ③) — disk karşılaştırması ATLANDI (CI'da beklenen)")
+    for area in (() if public else ("cover", "aplus")):
         d = os.path.join(root, "07_ASSETS", "raw", area)
         on_disk = {f for f in os.listdir(d)
                    if not f.startswith(".")

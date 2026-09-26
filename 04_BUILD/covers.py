@@ -1080,6 +1080,13 @@ def check_canonical(root: str) -> int | None:
         return None
     rec = load(p)
     errs, ok = [], []
+    # A public checkout (CI) has the records but never the cover files: 08_OUTPUT is kept out of
+    # the repository (.gitignore § ⑤) with the manuscript. There the record is still checked
+    # against the interior reports and KDP's formula; the files themselves are checked wherever
+    # the book is built.
+    public = not os.path.exists(os.path.join(root, "02_MANUSCRIPT", "book.json"))
+    if public:
+        print("  · cover files are not in a public checkout — file checks SKIPPED (expected in CI)")
     try:
         import fitz
     except ImportError:
@@ -1096,7 +1103,9 @@ def check_canonical(root: str) -> int | None:
             errs.append("%s: cover built for %s pages, interior has %s — rebuild the cover"
                         % (ed, f["pages"], pages))
         pdf = os.path.join(root, f["file"])
-        if not os.path.exists(pdf):
+        if public:
+            pass
+        elif not os.path.exists(pdf):
             errs.append("%s: cover PDF missing (%s)" % (ed, f["file"]))
         elif fitz:
             r = fitz.open(pdf)[0].rect
@@ -1114,7 +1123,7 @@ def check_canonical(root: str) -> int | None:
                         % (ed, f.get("geometrySource", "?"), f["pages"]))
         ok.append("%s %d s. → sırt %.3f in" % (ed, f["pages"], f["spineIn"]))
     k = rec.get("formats", {}).get("KINDLE")
-    if not k or not os.path.exists(os.path.join(root, k["file"])):
+    if not k or not (public or os.path.exists(os.path.join(root, k["file"]))):
         errs.append("kindle: canonical cover missing")
     for e in errs:
         print("  ✗ %s" % e)
