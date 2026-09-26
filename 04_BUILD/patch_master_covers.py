@@ -51,7 +51,7 @@ def patch_print_master() -> tuple[str, str]:
     bb39 = gray[179:196, 250:271]
     mask[179:196, 250:271] = cv2.dilate((bb39 < 185).astype(np.uint8) * 255, np.ones((3, 3), np.uint8), iterations=2)
 
-    # 5. Back Imprint: 'Vâliçe Press' at (60..160, 773..798)
+    # 5. Back imprint: the old accented spelling of the imprint name at (60..160, 773..798)
     bbimp = gray[773:798, 60:160]
     mask[773:798, 60:160] = cv2.dilate((bbimp < 185).astype(np.uint8) * 255, np.ones((3, 3), np.uint8), iterations=2)
 

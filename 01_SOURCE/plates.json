@@ -1,0 +1,528 @@
+{
+ "$comment": [
+  "PLATE REGISTER — one illustration per game, named explicitly.",
+  "Until 2026-09 plates were matched to games by the order of files in a folder; one",
+  "stale download made Jan-ken print the Set-dilth picture in every edition. A plate",
+  "is now assigned here, by gameId, and 04_BUILD/make_plates.py, interior.py and",
+  "qa_book.py all refuse a register in which two games share one image.",
+  "kind: ai-generated | public-domain | cc0 | drawn (a board drawn for this book from its own diagram data) | pending-replacement (a build blocker).",
+  "2026-09-26 recovery: the 11 pending plates (audit WG-003, WG-033, WG-034) were replaced with public-domain or CC0 images of the equipment and two boards drawn from the diagram data; provenance in 07_ASSETS/plates/pd/README.md and 07_ASSETS/plates/drawn/README.md."
+ ],
+ "plates": {
+  "tablut": {
+   "source": "07_ASSETS/plates/GBK02_GAME_001_TABLUT_HERO.png",
+   "print": "07_ASSETS/plates_print/tablut.jpg",
+   "kindle": "07_ASSETS/plates_kindle/tablut.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men kneel on reindeer skins in open northern country over a small square board of pieces."
+  },
+  "yut-nori": {
+   "source": "07_ASSETS/plates/GBK02_GAME_002_YUT_NORI_HERO.png",
+   "print": "07_ASSETS/plates_print/yut-nori.jpg",
+   "kindle": "07_ASSETS/plates_kindle/yut-nori.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "A family in hanbok sits on a floor mat; a man tosses four sticks above a board of stations."
+  },
+  "fanorona": {
+   "source": "07_ASSETS/plates/GBK02_GAME_003_FANORONA_HERO.png",
+   "print": "07_ASSETS/plates_print/fanorona.jpg",
+   "kindle": "07_ASSETS/plates_kindle/fanorona.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in lamba cloth and hats sit at a lined wooden board covered with light and dark pieces."
+  },
+  "pong-hau-ki": {
+   "source": "07_ASSETS/plates/GBK02_GAME_004_PONG_HAU_KI_HERO.png",
+   "print": "07_ASSETS/plates_print/pong-hau-ki.jpg",
+   "kindle": "07_ASSETS/plates_kindle/pong-hau-ki.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two children crouch over a small board scratched in the earth with four stones."
+  },
+  "gonggi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_005_GONGGI_HERO.png",
+   "print": "07_ASSETS/plates_print/gonggi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/gonggi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two girls in hanbok on a wooden veranda, one gathering small stones."
+  },
+  "olinda-keliya": {
+   "source": "07_ASSETS/plates/GBK02_GAME_006_OLINDA_KELIYA_HERO.png",
+   "print": "07_ASSETS/plates_print/olinda-keliya.jpg",
+   "kindle": "07_ASSETS/plates_kindle/olinda-keliya.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two women in saris sit on a veranda beside a long carved sowing board."
+  },
+  "nerenchi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_007_NERENCHI_HERO.png",
+   "print": "07_ASSETS/plates_print/nerenchi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/nerenchi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men crouch on stone steps over a board cut into the stone, with seeds as pieces."
+  },
+  "demala-diviyan-keliya": {
+   "source": "07_ASSETS/plates/GBK02_GAME_008_DEMALA_DIVIYAN_KELIYA_HERO.png",
+   "print": "07_ASSETS/plates_print/demala-diviyan-keliya.jpg",
+   "kindle": "07_ASSETS/plates_kindle/demala-diviyan-keliya.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit at a low table set with carved leopard and cattle figures on a lined board."
+  },
+  "awithlaknannai": {
+   "source": "07_ASSETS/plates/pd/awithlaknannai_culin1907_figs1111-1112.png",
+   "print": "07_ASSETS/plates_print/awithlaknannai.jpg",
+   "kindle": "07_ASSETS/plates_kindle/awithlaknannai.jpg",
+   "kind": "public-domain",
+   "credit": "Zuñi stone slabs cut with the awithlaknannai board. Stewart Culin, Games of the North American Indians (1907), figs. 1111–1112. Public domain.",
+   "alt": "Two old drawings of long stone slabs, each cut with a narrow zigzag board of points.",
+   "caption": "Zuñi awithlaknannai boards cut in stone (Culin 1907, figs. 1111–1112)"
+  },
+  "picaria": {
+   "source": "07_ASSETS/plates/pd/picaria_culin1907_figs1101-1102.png",
+   "print": "07_ASSETS/plates_print/picaria.jpg",
+   "kindle": "07_ASSETS/plates_kindle/picaria.jpg",
+   "kind": "public-domain",
+   "credit": "Santa Clara Tewa boards for pitarilla (picaria), from sketches by T. S. Dozier. Stewart Culin, Games of the North American Indians (1907), figs. 1101–1102. Public domain.",
+   "alt": "Two line drawings of boards: three nested squares joined at their sides, and a square crossed by its diagonals and middle lines.",
+   "caption": "Santa Clara Tewa boards, from sketches by T. S. Dozier (Culin 1907, figs. 1101–1102)"
+  },
+  "zohn-ahl": {
+   "source": "07_ASSETS/plates/pd/zohn-ahl_culin1907_fig133.png",
+   "print": "07_ASSETS/plates_print/zohn-ahl.jpg",
+   "kindle": "07_ASSETS/plates_kindle/zohn-ahl.jpg",
+   "kind": "public-domain",
+   "credit": "Kiowa cloth for the ahl game. Stewart Culin, Games of the North American Indians (1907), fig. 133. Public domain.",
+   "alt": "A drawing of the Kiowa ahl cloth: four curved knees, marks numbered round the circle, creeks at north and south, dry branches at east and west, and the ahl stone in the middle.",
+   "caption": "Kiowa cloth for the ahl game (Culin 1907, fig. 133)"
+  },
+  "seega": {
+   "source": "07_ASSETS/plates/GBK02_GAME_012_SEEGA_HERO.png",
+   "print": "07_ASSETS/plates_print/seega.jpg",
+   "kindle": "07_ASSETS/plates_kindle/seega.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit by a river over a stone slab with shallow holes and pieces."
+  },
+  "tab": {
+   "source": "07_ASSETS/plates/GBK02_GAME_013_TAB_HERO.png",
+   "print": "07_ASSETS/plates_print/tab.jpg",
+   "kindle": "07_ASSETS/plates_kindle/tab.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Men at a café table in a street; four throwing sticks tumble against a wall."
+  },
+  "nine-mens-morris": {
+   "source": "07_ASSETS/plates/GBK02_GAME_014_NINE_MENS_MORRIS_HERO.png",
+   "print": "07_ASSETS/plates_print/nine-mens-morris.jpg",
+   "kindle": "07_ASSETS/plates_kindle/nine-mens-morris.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two monks sit on a cloister bench with a merels board and pieces between them."
+  },
+  "fox-and-geese": {
+   "source": "07_ASSETS/plates/GBK02_GAME_015_FOX_AND_GEESE_HERO.png",
+   "print": "07_ASSETS/plates_print/fox-and-geese.jpg",
+   "kindle": "07_ASSETS/plates_kindle/fox-and-geese.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two women at a farmhouse table play on a cross-shaped peg board, one dark peg among many pale ones."
+  },
+  "hopscotch": {
+   "source": "07_ASSETS/plates/GBK02_GAME_016_HOPSCOTCH_HERO.png",
+   "print": "07_ASSETS/plates_print/hopscotch.jpg",
+   "kindle": "07_ASSETS/plates_kindle/hopscotch.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Children in Victorian dress play hopscotch on a chalked grid in a cobbled street."
+  },
+  "totolospi": {
+   "source": "07_ASSETS/plates/pd/totolospi_culin1907_fig194.png",
+   "print": "07_ASSETS/plates_print/totolospi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/totolospi.jpg",
+   "kind": "public-domain",
+   "credit": "Hopi stone board and cane dice for totolospi, Oraibi. Stewart Culin, Games of the North American Indians (1907), fig. 194. Public domain.",
+   "alt": "An engraving of a stone slab cut with an oval board crossed by five lines on each side, with three split-cane dice beside it.",
+   "caption": "Hopi stone board and cane dice, Oraibi (Culin 1907, fig. 194)"
+  },
+  "set-dilth": {
+   "source": "07_ASSETS/plates/pd/set-dilth_culin1907_figs83-84.png",
+   "print": "07_ASSETS/plates_print/set-dilth.jpg",
+   "kindle": "07_ASSETS/plates_kindle/set-dilth.jpg",
+   "kind": "public-domain",
+   "credit": "White Mountain Apache staves and stone circuit for tsay-dithl. Stewart Culin, Games of the North American Indians (1907), figs. 83–84. Public domain.",
+   "alt": "A drawing of three flat wooden staves with painted bands, beside a circle of forty small stones in four groups of ten.",
+   "caption": "White Mountain Apache staves and the circle of forty stones (Culin 1907, figs. 83–84)"
+  },
+  "jan-ken": {
+   "source": "07_ASSETS/plates/pd/jan-ken_kensarae-sumai-zue-1809.jpg",
+   "print": "07_ASSETS/plates_print/jan-ken.jpg",
+   "kindle": "07_ASSETS/plates_kindle/jan-ken.jpg",
+   "kind": "public-domain",
+   "credit": "Mushi-ken: slug, frog and snake. Yoshinami and Gojaku, Kensarae sumai zue (Edo and Osaka, 1809). Public domain; image via Wikimedia Commons.",
+   "alt": "A Japanese woodblock print in three panels, each showing one hand sign: the little finger raised, the thumb raised, and the index finger pointing.",
+   "caption": "Mushi-ken, an older three-way hand game: slug, frog and snake (Kensarae sumai zue, 1809)"
+  },
+  "conkers": {
+   "source": "07_ASSETS/plates/GBK02_GAME_020_CONKERS_HERO.png",
+   "print": "07_ASSETS/plates_print/conkers.jpg",
+   "kindle": "07_ASSETS/plates_kindle/conkers.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two boys in caps in a leaf-strewn yard; one swings a conker on a string at the other's."
+  },
+  "cats-cradle": {
+   "source": "07_ASSETS/plates/GBK02_GAME_021_CATS_CRADLE_HERO.png",
+   "print": "07_ASSETS/plates_print/cats-cradle.jpg",
+   "kindle": "07_ASSETS/plates_kindle/cats-cradle.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two children's hands hold a string figure stretched between their fingers."
+  },
+  "shogi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_022_SHOGI_HERO.png",
+   "print": "07_ASSETS/plates_print/shogi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/shogi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in kimono kneel at a board with pentagonal pieces; one holds a captured piece."
+  },
+  "pachisi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_023_PACHISI_HERO.png",
+   "print": "07_ASSETS/plates_print/pachisi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/pachisi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two women sit on a courtyard floor beside a cross-shaped cloth board with tall pieces."
+  },
+  "xiangqi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_024_XIANGQI_HERO.png",
+   "print": "07_ASSETS/plates_print/xiangqi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/xiangqi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit at a teahouse table with a board of round, printed pieces."
+  },
+  "sittuyin": {
+   "source": "07_ASSETS/plates/GBK02_GAME_025_SITTUYIN_HERO.png",
+   "print": "07_ASSETS/plates_print/sittuyin.jpg",
+   "kindle": "07_ASSETS/plates_kindle/sittuyin.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in Burmese dress sit at a board of carved pieces in a pavilion."
+  },
+  "shatranj": {
+   "source": "07_ASSETS/plates/pd/shatranj_met-1971.193a-ff.jpg",
+   "print": "07_ASSETS/plates_print/shatranj.jpg",
+   "kindle": "07_ASSETS/plates_kindle/shatranj.jpg",
+   "kind": "cc0",
+   "credit": "Chess set, glazed stonepaste, Nishapur, Iran, 12th century. The Metropolitan Museum of Art, New York, Pfeiffer Fund, 1971 (1971.193a–ff). Open Access, CC0.",
+   "alt": "A twelfth-century chess set from Iran: turquoise and brown glazed pieces in abstract shapes, set out as two armies.",
+   "caption": "Chess set, Nishapur, Iran, 12th century (Metropolitan Museum of Art, 1971.193a–ff)"
+  },
+  "chaturanga": {
+   "source": "07_ASSETS/plates/pd/chaturanga_forbes1860_frontispiece.png",
+   "print": "07_ASSETS/plates_print/chaturanga.jpg",
+   "kindle": "07_ASSETS/plates_kindle/chaturanga.jpg",
+   "kind": "public-domain",
+   "credit": "The four armies at the start of the game. Frontispiece of Duncan Forbes, The History of Chess (London: W. H. Allen, 1860). Public domain; scan: Bayerische Staatsbibliothek.",
+   "alt": "An engraved eight-by-eight board with four small armies of chessmen, one in each corner, each with four pawns in front.",
+   "caption": "The four armies at the start (Forbes 1860, frontispiece)"
+  },
+  "hnefatafl": {
+   "source": "07_ASSETS/plates/GBK02_GAME_028_HNEFATAFL_HERO.png",
+   "print": "07_ASSETS/plates_print/hnefatafl.jpg",
+   "kindle": "07_ASSETS/plates_kindle/hnefatafl.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two bearded men in fur cloaks sit by a hearth at a board with a tall king piece among lighter and darker pieces."
+  },
+  "patolli": {
+   "source": "07_ASSETS/plates/GBK02_GAME_029_PATOLLI_HERO.png",
+   "print": "07_ASSETS/plates_print/patolli.jpg",
+   "kindle": "07_ASSETS/plates_kindle/patolli.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit on a mat before a painted cross-shaped board with pieces and beans."
+  },
+  "tien-gow": {
+   "source": "07_ASSETS/plates/GBK02_GAME_030_TIEN_GOW_HERO.png",
+   "print": "07_ASSETS/plates_print/tien-gow.jpg",
+   "kindle": "07_ASSETS/plates_kindle/tien-gow.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men at a teahouse table; one turns over a domino from a row standing on edge."
+  },
+  "jianzi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_031_JIANZI_HERO.png",
+   "print": "07_ASSETS/plates_print/jianzi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/jianzi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "People in a park; one kicks a feathered shuttlecock into the air."
+  },
+  "gomoku": {
+   "source": "07_ASSETS/plates/GBK02_GAME_032_GOMOKU_HERO.png",
+   "print": "07_ASSETS/plates_print/gomoku.jpg",
+   "kindle": "07_ASSETS/plates_kindle/gomoku.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in kimono kneel at a wooden grid board with black and white stones."
+  },
+  "royal-game-of-ur": {
+   "source": "07_ASSETS/plates/GBK02_GAME_033_ROYAL_GAME_OF_UR_HERO.png",
+   "print": "07_ASSETS/plates_print/royal-game-of-ur.jpg",
+   "kindle": "07_ASSETS/plates_kindle/royal-game-of-ur.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in Sumerian dress sit at a small inlaid board with conical pieces and pyramid-shaped dice."
+  },
+  "bao-la-kiswahili": {
+   "source": "07_ASSETS/plates/GBK02_GAME_034_BAO_LA_KISWAHILI_HERO.png",
+   "print": "07_ASSETS/plates_print/bao-la-kiswahili.jpg",
+   "kindle": "07_ASSETS/plates_kindle/bao-la-kiswahili.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in embroidered caps kneel beside a large four-row sowing board under an arched portico."
+  },
+  "sugoroku": {
+   "source": "07_ASSETS/plates/GBK02_GAME_035_E_SUGOROKU_HERO.png",
+   "print": "07_ASSETS/plates_print/sugoroku.jpg",
+   "kindle": "07_ASSETS/plates_kindle/sugoroku.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "A family in kimono kneels around a large illustrated board with a winding path."
+  },
+  "mbube-mbube": {
+   "source": "07_ASSETS/plates/GBK02_GAME_036_MBUBE_MBUBE_HERO.png",
+   "print": "07_ASSETS/plates_print/mbube-mbube.jpg",
+   "kindle": "07_ASSETS/plates_kindle/mbube-mbube.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Children in a ring holding hands, with two children inside the ring."
+  },
+  "achi": {
+   "source": "07_ASSETS/plates/drawn/achi_board.png",
+   "print": "07_ASSETS/plates_print/achi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/achi.jpg",
+   "kind": "drawn",
+   "credit": "Board drawn for this book from the rules and diagram data.",
+   "alt": "A line drawing of the Achi board, two squares joined at the middles of their sides, with black and white counters on some points.",
+   "caption": "The Achi board, drawn for this book from the rules"
+  },
+  "polis": {
+   "source": "07_ASSETS/plates/GBK02_GAME_038_POLIS_HERO.png",
+   "print": "07_ASSETS/plates_print/polis.jpg",
+   "kindle": "07_ASSETS/plates_kindle/polis.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in chitons sit at a stone table in a colonnade with a board of small pieces."
+  },
+  "astragaloi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_039_ASTRAGALOI_HERO.png",
+   "print": "07_ASSETS/plates_print/astragaloi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/astragaloi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Young men in tunics crouch on a paved courtyard, throwing knucklebones."
+  },
+  "senet": {
+   "source": "07_ASSETS/plates/GBK02_GAME_040_SENET_HERO.png",
+   "print": "07_ASSETS/plates_print/senet.jpg",
+   "kindle": "07_ASSETS/plates_kindle/senet.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "A woman in ancient Egyptian dress sits before a long board of three rows with conical and spool-shaped pieces."
+  },
+  "janggi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_041_JANGGI_HERO.png",
+   "print": "07_ASSETS/plates_print/janggi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/janggi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in gat hats sit at a board of octagonal pieces in a scholar's study."
+  },
+  "oware": {
+   "source": "07_ASSETS/plates/GBK02_GAME_042_OWARE_HERO.png",
+   "print": "07_ASSETS/plates_print/oware.jpg",
+   "kindle": "07_ASSETS/plates_kindle/oware.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit on stools in a village compound over a long carved sowing board."
+  },
+  "pallanguzhi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_043_PALLANGUZHI_HERO.png",
+   "print": "07_ASSETS/plates_print/pallanguzhi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/pallanguzhi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two women in saris sit on a courtyard floor with a long sowing board and a basket of shells."
+  },
+  "dara": {
+   "source": "07_ASSETS/plates/GBK02_GAME_044_DARA_HERO.png",
+   "print": "07_ASSETS/plates_print/dara.jpg",
+   "kindle": "07_ASSETS/plates_kindle/dara.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men crouch over rows of shallow pits scooped in the earth, with stones as pieces."
+  },
+  "mu-torere": {
+   "source": "07_ASSETS/plates/drawn/mu-torere_board.png",
+   "print": "07_ASSETS/plates_print/mu-torere.jpg",
+   "kindle": "07_ASSETS/plates_kindle/mu-torere.jpg",
+   "kind": "drawn",
+   "credit": "Board drawn for this book from the rules and diagram data.",
+   "alt": "A line drawing of the Mū Tōrere board: eight points round a centre, joined to it by eight lines, with four black and four white counters on the points.",
+   "caption": "The Mū Tōrere board at the start, drawn for this book from the rules"
+  },
+  "catch-the-hare": {
+   "source": "07_ASSETS/plates/GBK02_GAME_046_CATCH_THE_HARE_HERO.png",
+   "print": "07_ASSETS/plates_print/catch-the-hare.jpg",
+   "kindle": "07_ASSETS/plates_kindle/catch-the-hare.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Courtiers in medieval dress gather round a board with a hare figure and hound figures."
+  },
+  "hasami-shogi": {
+   "source": "07_ASSETS/plates/GBK02_GAME_047_HASAMI_SHOGI_HERO.png",
+   "print": "07_ASSETS/plates_print/hasami-shogi.jpg",
+   "kindle": "07_ASSETS/plates_kindle/hasami-shogi.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in kimono kneel at a low board with rows of flat pieces."
+  },
+  "li-b-el-merafib": {
+   "source": "07_ASSETS/plates/GBK02_GAME_048_LIB_EL_MERAFIB_HERO.png",
+   "print": "07_ASSETS/plates_print/li-b-el-merafib.jpg",
+   "kindle": "07_ASSETS/plates_kindle/li-b-el-merafib.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in open desert; one traces a spiral of holes in the sand with a stick."
+  },
+  "omweso": {
+   "source": "07_ASSETS/plates/GBK02_GAME_049_OMWESO_HERO.png",
+   "print": "07_ASSETS/plates_print/omweso.jpg",
+   "kindle": "07_ASSETS/plates_kindle/omweso.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit on carved stools in a timber hall with a four-row sowing board between them."
+  },
+  "turkish-dama": {
+   "source": "07_ASSETS/plates/GBK02_GAME_050_TURKISH_DAMA_HERO.png",
+   "print": "07_ASSETS/plates_print/turkish-dama.jpg",
+   "kindle": "07_ASSETS/plates_kindle/turkish-dama.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit at a courtyard table with a board of flat round pieces."
+  },
+  "jeu-de-dames": {
+   "source": "07_ASSETS/plates/GBK02_GAME_051_JEU_DE_DAMES_HERO.png",
+   "print": "07_ASSETS/plates_print/jeu-de-dames.jpg",
+   "kindle": "07_ASSETS/plates_kindle/jeu-de-dames.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in eighteenth-century coats play draughts at a café table by candlelight."
+  },
+  "bul": {
+   "source": "07_ASSETS/plates/GBK02_GAME_052_BUL_HERO.png",
+   "print": "07_ASSETS/plates_print/bul.jpg",
+   "kindle": "07_ASSETS/plates_kindle/bul.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men crouch in a village yard beside a row of corn cobs laid on the ground."
+  },
+  "alquerque": {
+   "source": "07_ASSETS/plates/pd/alquerque_libro-de-los-juegos-1283.jpg",
+   "print": "07_ASSETS/plates_print/alquerque.jpg",
+   "kindle": "07_ASSETS/plates_kindle/alquerque.jpg",
+   "kind": "public-domain",
+   "credit": "Players at alquerque. Libro de los juegos, made for Alfonso X of Castile, 1283. Public domain; image via Wikimedia Commons.",
+   "alt": "A medieval miniature of two men seated at a board of lines and diagonals, playing alquerque.",
+   "caption": "Players at alquerque (Libro de los juegos, 1283)"
+  },
+  "ashta-kashte": {
+   "source": "07_ASSETS/plates/GBK02_GAME_054_ASHTA_KASHTE_HERO.png",
+   "print": "07_ASSETS/plates_print/ashta-kashte.jpg",
+   "kindle": "07_ASSETS/plates_kindle/ashta-kashte.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two women sit on a veranda at a cloth board of squares with carved pieces and a dish of cowrie shells."
+  },
+  "rimau-rimau": {
+   "source": "07_ASSETS/plates/GBK02_GAME_055_RIMAU_RIMAU_HERO.png",
+   "print": "07_ASSETS/plates_print/rimau-rimau.jpg",
+   "kindle": "07_ASSETS/plates_kindle/rimau-rimau.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men crouch over a cloth board with a large tiger piece and many small pieces."
+  },
+  "go": {
+   "source": "07_ASSETS/plates/GBK02_GAME_056_GO_HERO.png",
+   "print": "07_ASSETS/plates_print/go.jpg",
+   "kindle": "07_ASSETS/plates_kindle/go.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in scholars' robes sit at a go board in a garden pavilion, bowls of stones beside them."
+  },
+  "congklak": {
+   "source": "07_ASSETS/plates/GBK02_GAME_057_CONGKLAK_HERO.png",
+   "print": "07_ASSETS/plates_print/congklak.jpg",
+   "kindle": "07_ASSETS/plates_kindle/congklak.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two women on a woven mat on a veranda play at a boat-shaped two-row sowing board."
+  },
+  "ayoayo": {
+   "source": "07_ASSETS/plates/GBK02_GAME_058_AYOAYO_HERO.png",
+   "print": "07_ASSETS/plates_print/ayoayo.jpg",
+   "kindle": "07_ASSETS/plates_kindle/ayoayo.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit on a mat under a tree; one drops seeds into a long two-row sowing board."
+  },
+  "gebeta": {
+   "source": "07_ASSETS/plates/GBK02_GAME_059_GEBETA_HERO.png",
+   "print": "07_ASSETS/plates_print/gebeta.jpg",
+   "kindle": "07_ASSETS/plates_kindle/gebeta.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in white cotton wraps sit on stools in a stone courtyard over a two-row sowing board."
+  },
+  "hus": {
+   "source": "07_ASSETS/plates/GBK02_GAME_060_HUS_HERO.png",
+   "print": "07_ASSETS/plates_print/hus.jpg",
+   "kindle": "07_ASSETS/plates_kindle/hus.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men crouch on dry open ground beside a long four-row sowing board."
+  },
+  "mefuvha": {
+   "source": "07_ASSETS/plates/GBK02_GAME_061_MEFUVHA_HERO.png",
+   "print": "07_ASSETS/plates_print/mefuvha.jpg",
+   "kindle": "07_ASSETS/plates_kindle/mefuvha.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men sit in a village compound at sunset beside a four-row sowing board."
+  },
+  "ludus-duodecim-scriptorum": {
+   "source": "07_ASSETS/plates/GBK02_GAME_062_LUDUS_DUODECIM_SCRIPTORUM_HERO.png",
+   "print": "07_ASSETS/plates_print/ludus-duodecim-scriptorum.jpg",
+   "kindle": "07_ASSETS/plates_kindle/ludus-duodecim-scriptorum.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men in tunics sit at a marble table with a long three-row board, pieces and a dice cup."
+  },
+  "morra": {
+   "source": "07_ASSETS/plates/GBK02_GAME_063_MORRA_HERO.png",
+   "print": "07_ASSETS/plates_print/morra.jpg",
+   "kindle": "07_ASSETS/plates_kindle/morra.jpg",
+   "kind": "ai-generated",
+   "credit": "Illustration generated with an image model (GPT Image), 2026.",
+   "alt": "Two men face each other at a village doorway, both throwing out fingers and calling a number."
+  }
+ }
+}

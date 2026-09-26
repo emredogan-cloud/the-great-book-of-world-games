@@ -79,11 +79,11 @@ def modules(m):
          "title": "%d games. %d cultures. One table." % (g, c),
          "body":
              "This is a reference book you play from, not one you only read. "
-             "Every game is set out across two facing pages so the book lies "
-             "open on the table and nobody turns a page mid-turn. Every rule "
-             "set names the work and the pages it was read from, and where a "
-             "record is incomplete the book says so on the page instead of "
-             "filling the gap quietly."},
+             "Every game opens with its board beside its rules, so the book "
+             "lies open on the table while you play. Every rule set names the "
+             "work it was read from, with the pages or, for a modern rulebook, "
+             "the section, and where a record is incomplete the book says so "
+             "on the page instead of filling the gap quietly."},
 
         {"id": "APLUS-02", "n": "02", "name": "CULTURAL DIVERSITY",
          "moduleType": "Standard Image & Text Overlay",
@@ -95,20 +95,21 @@ def modules(m):
              "and hides the interesting part. This one files them by "
              "mechanism, so the sowing games of Ghana, Sri Lanka and Buganda "
              "sit together and you can see what they share and where they "
-             "part. %d cultures are represented, from Sumer to the Sámi, and "
-             "each entry names the culture precisely rather than a continent."
+             "part. %d cultures are represented, from ancient Mesopotamia to "
+             "the Sámi, and each entry names the culture precisely rather than "
+             "a continent."
              % c},
 
         {"id": "APLUS-03", "n": "03", "name": "HOW THE BOOK WORKS",
          "moduleType": "Standard Single Image & Sidebar",
          "image": "aplus-03-how-the-book-works.png",
          "imagePx": [300, 400],
-         "title": "Everything you need for one game, on one opening",
+         "title": "Everything you need for one game, in one place",
          "body":
              "Players, time, age, materials and difficulty at the top. What "
              "to use instead of what — buttons, coins, dried beans, an egg "
-             "box. Numbered rules, one action to a line. A board diagram "
-             "drawn to scale. Then three questions every table actually "
+             "box. Numbered rules, one action to a line. A worked turn drawn "
+             "on the board. Then three questions every table actually "
              "argues about: what happens on a draw, what happens if nobody "
              "can move, and what happens when somebody plays an illegal "
              "move. Almost nothing in this book has to be bought."},
@@ -124,7 +125,7 @@ def modules(m):
          "title": "%d families of play" % f,
          "body":
              "Sowing · Hunt and siege · Race home · Line and territory · War "
-             "board · Chance and nerve · Games without a board. Each family "
+             "board · Chance and scoring · Games without a board. Each family "
              "opens with a portrait of the idea behind it, and each has a "
              "written rule for what belongs in it and what does not. The "
              "boundaries are argued, not assumed."},
@@ -137,23 +138,23 @@ def modules(m):
          "body":
              "Ages are given per game and they mean something: the age at "
              "which a player can hold the whole game in their head. Every "
-             "entry ends with a shorter version to start with — a smaller "
-             "board, fewer pieces — which is the fastest way to teach a game "
-             "to somebody who has not read the page."},
+             "entry has a first game to start with — often a smaller board or "
+             "fewer pieces — which is the fastest way to teach a game to "
+             "somebody who has not read the page."},
 
         {"id": "APLUS-06", "n": "06", "name": "THE COMPLETE COLLECTION",
          "moduleType": "Standard Image Header with Text",
          "image": "aplus-06-complete-collection.png",
          "imagePx": [970, 600],
-         "title": "Board templates, a glossary and three indexes",
+         "title": "Full-size boards, a glossary and the indexes",
          "body":
              "The back of the book is the part that gets used. Full-size "
-             "board templates you can photocopy — the page size was chosen "
-             "for exactly that. A materials guide. A glossary of the terms "
-             "the book uses for mechanics. Sources for every game. Three "
-             "indexes, by culture, by number of players, and by time and "
-             "age. And one page listing the game origin stories that are "
-             "widely repeated and are not true."},
+             "boards to photocopy, in the print editions. A list of what to "
+             "gather for a games kit. A glossary of the terms the rules use. "
+             "Sources for every game. An index of every game under every name "
+             "it goes by, and indexes by culture, age and difficulty. And a "
+             "page of game origin stories that are widely repeated and not "
+             "supported by the record."},
     ]
 
 

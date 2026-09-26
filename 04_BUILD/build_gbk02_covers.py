@@ -2,15 +2,26 @@
 """
 build_gbk02_covers.py — Build the complete canonical covers for GBK-02.
 
-Produces:
-  1. Paperback wrap PDF & JPG (8.5 x 11 in, 172 pp, spine 0.3873 in, wrap 17.6373 x 11.25 in)
-  2. Hardcover wrap PDF & JPG (8.25 x 11 in, 172 pp, spine 0.6080 in, wrap 18.6830 x 12.4170 in)
-  3. Large Print wrap PDF & JPG (8.5 x 11 in, 272 pp, spine 0.6125 in, wrap 17.8625 x 11.25 in)
+Produces (geometry follows the page counts the interiors actually have):
+  1. Paperback wrap PDF & JPG (8.5 x 11 in)
+  2. Hardcover wrap PDF & JPG (8.25 x 11 in)
+  3. Large Print wrap PDF & JPG (8.5 x 11 in)
   4. Kindle front cover JPG (1600 x 2560 px, RGB, 300 DPI)
+
+Geometry sources (recorded per format in 06_REPORTS/cover-build-canonical.json):
+  · paperback and large print — KDP's published formula ("Create a Paperback Cover", read
+    2026-09-26): spine = pages × 0.002252 in (white paper, black-and-white); width = bleed +
+    back + spine + front + bleed; height = trim + 2 × bleed. It reproduces both calculator
+    readings on file exactly (258 pp → 0.581 / 17.831; 500 pp → 1.126 / 18.376).
+  · hardcover — the KDP calculator reading in project_config.json when its page count matches
+    the interior; otherwise DERIVED from the two readings on file (186 pp → 0.608, 258 pp →
+    0.770: spine = pages × 0.002252 + 0.189) and marked PROVISIONAL until the calculator is
+    re-read for the new page count.
 
 Features:
   - Preserves Founder artwork composition, textures, compass, olive branches, and border.
-  - Sourced from surgically corrected master covers (63 games, 45 cultures, VALICE PRESS).
+  - Sourced from the Founder-approved masters with their text corrected by cover_text_fix.py
+    (07_ASSETS/processed/cover/x4r: counts measured from the manuscript, EB Garamond, no AI).
   - Large Print back cover features 16pt blurb.
   - Safe margins: PB safe box (0.375 in + tol), HC safe box (0.716 in outer, 0.844 in hinge).
   - Spine ground extracted from comp's luminance percentile with typography cleanly set.
@@ -58,15 +69,58 @@ COMP_KM = SRC_DIR / "kindle_master_corrected.png"
 
 BAND_A, BAND_B = 700, 815
 TITLE = "THE GREAT BOOK OF WORLD GAMES"
-AUTHOR = "EMRE DOĞAN"
-META_TITLE = "The Great Book of World Games — 63 Games from 4,600 Years of Human Play"
-META_AUTHOR = "Emre Doğan"
+# the author comes from project_config.json, never from a literal here
+META_AUTHOR = json.load(open(ROOT / "project_config.json", encoding="utf-8"))["founder"]["author"]
+AUTHOR = META_AUTHOR.upper()
+def _measured():
+    m = json.load(open(ROOT / "02_MANUSCRIPT" / "frontmatter.json", encoding="utf-8"))["measured"]
+    return m
+
+
+_M = _measured()
+META_TITLE = "The Great Book of World Games — %d Games from %s Years of Human Play" % (
+    _M["games"], "{:,}".format(_M["oldestGameAgeYears"]))
+X4R_DIR = SRC_DIR / "x4r"
+PB_SPINE_PER_PAGE_IN = 0.002252      # KDP "Create a Paperback Cover" (white paper, B&W), read 2026-09-26
+PB_BLEED_IN = 0.125
+HC_BOARD_IN = 0.189                  # derived: 186 pp → 0.608 and 258 pp → 0.770 (calculator readings)
+
+
+def calc(fmt, pages):
+    """Cover geometry for `pages`, with where each number came from."""
+    if fmt == "HARDCOVER":
+        t = json.load(open(ROOT / "project_config.json", encoding="utf-8"))["production"][
+            "hardcoverConfirmedTemplate"]
+        if pages == t["sourcePageCount"]:
+            return {"pages": pages, "spine": t["spineWidthIn"],
+                    "wrap": (t["fullCoverWidthIn"], t["fullCoverHeightIn"]),
+                    "source": "KDP Print Cover Calculator reading for %d pages" % pages,
+                    "provisional": False}
+        spine = round(pages * PB_SPINE_PER_PAGE_IN + HC_BOARD_IN, 3)
+        return {"pages": pages, "spine": spine,
+                "wrap": (round(t["fullCoverWidthIn"] - t["spineWidthIn"] + spine, 3),
+                         t["fullCoverHeightIn"]),
+                "source": ("DERIVED for %d pages from the calculator readings for 186 and %d pages "
+                           "(spine = pages × 0.002252 + 0.189) — re-read the KDP calculator before "
+                           "upload" % (pages, t["sourcePageCount"])),
+                "provisional": True}
+    trim_w, trim_h = 8.5, 11.0
+    spine = pages * PB_SPINE_PER_PAGE_IN
+    return {"pages": pages, "spine": round(spine, 3),
+            "wrap": (round(2 * PB_BLEED_IN + 2 * trim_w + spine, 3), round(trim_h + 2 * PB_BLEED_IN, 3)),
+            "source": "KDP paperback formula (pages × 0.002252 in; bleed + back + spine + front + bleed)",
+            "provisional": False}
+
+
+def _pages(edition):
+    r = json.load(open(ROOT / "06_REPORTS" / ("interior-%s.json" % edition), encoding="utf-8"))
+    return int(r["pageCount"])
 
 
 def build_kindle() -> dict:
     print("=== Building Kindle Cover ===")
     src_k = Image.open(COMP_KM)
-    k4 = Image.open(X4_DIR / "GAMES-kindle-x4.png")
+    k4 = Image.open(X4R_DIR / "GAMES-kindle-x4r.png")
     kim, kcrop = place(flatten(k4), 1600, 2560, 0.5, max_crop_in=2.0)
     
     out_dir = ROOT / "08_OUTPUT" / "KINDLE"
@@ -90,9 +144,15 @@ def build_print_wraps() -> dict:
     comp_std = flatten(Image.open(COMP_STD))
     comp_lp = flatten(Image.open(COMP_LP))
 
-    KF = Image.open(X4_DIR / "GAMES-front-x4.png")
-    KB_std = Image.open(X4_DIR / "GAMES-back-std-x4.png")
-    KB_lp = Image.open(X4_DIR / "GAMES-back-lp-x4.png")
+    KF = Image.open(X4R_DIR / "GAMES-front-x4r.png")
+    KB_std = Image.open(X4R_DIR / "GAMES-back-std-x4r.png")
+    KB_lp = Image.open(X4R_DIR / "GAMES-back-lp-x4r.png")
+    CALC = {fmt: calc(fmt, _pages(ed))
+            for fmt, ed in (("PAPERBACK", "paperback"), ("HARDCOVER", "hardcover"),
+                            ("LARGEPRINT", "largeprint"))}
+    for fmt, c in CALC.items():
+        print("  %-10s %d pp · spine %.3f in · wrap %.3f × %.3f in · %s"
+              % (fmt, c["pages"], c["spine"], c["wrap"][0], c["wrap"][1], c["source"]))
 
     ay = 0.72
     mc = 0.25
@@ -102,11 +162,11 @@ def build_print_wraps() -> dict:
     specs = {
         "PAPERBACK": {
             "trim": (8.5, 11.0),
-            "pages": 172,
+            "pages": CALC["PAPERBACK"]["pages"],
             "cal": 0.002252,
-            "wrap": (17.6373, 11.25),
+            "wrap": CALC["PAPERBACK"]["wrap"],
             "hc": False,
-            "spine_in": 0.3873,
+            "spine_in": CALC["PAPERBACK"]["spine"],
             "back_src": KB_std,
             "comp_spine": comp_std,
             "out_pdf": ROOT / "08_OUTPUT" / "PAPERBACK" / "GreatBookOfWorldGames_cover_paperback.pdf",
@@ -114,11 +174,11 @@ def build_print_wraps() -> dict:
         },
         "HARDCOVER": {
             "trim": (8.25, 11.0),
-            "pages": 172,
-            "cal": 0.0025,
-            "wrap": (18.6830, 12.4170),
+            "pages": CALC["HARDCOVER"]["pages"],
+            "cal": 0.002252,
+            "wrap": CALC["HARDCOVER"]["wrap"],
             "hc": True,
-            "spine_in": 0.6080,
+            "spine_in": CALC["HARDCOVER"]["spine"],
             "back_src": KB_std,
             "comp_spine": comp_std,
             "out_pdf": ROOT / "08_OUTPUT" / "HARDCOVER" / "GreatBookOfWorldGames_cover_hardcover.pdf",
@@ -126,11 +186,11 @@ def build_print_wraps() -> dict:
         },
         "LARGEPRINT": {
             "trim": (8.5, 11.0),
-            "pages": 272,
+            "pages": CALC["LARGEPRINT"]["pages"],
             "cal": 0.002252,
-            "wrap": (17.8625, 11.25),
+            "wrap": CALC["LARGEPRINT"]["wrap"],
             "hc": False,
-            "spine_in": 0.6125,
+            "spine_in": CALC["LARGEPRINT"]["spine"],
             "back_src": KB_lp,
             "comp_spine": comp_lp,
             "out_pdf": ROOT / "08_OUTPUT" / "LARGEPRINT" / "GreatBookOfWorldGames_cover_largeprint.pdf",
@@ -199,6 +259,8 @@ def build_print_wraps() -> dict:
             "wrapPx": [pw, ph],
             "spineIn": spine_in,
             "spinePx": sp_px,
+            "geometrySource": CALC[fmt]["source"],
+            "geometryProvisional": CALC[fmt]["provisional"],
             "spine": snote,
             "backCrop": bcrop,
             "frontCrop": fcrop,
@@ -213,7 +275,9 @@ def main():
     rec = {
         "book": "GBK-02",
         "slug": "the-great-book-of-world-games",
-        "canon": {"games": 63, "cultures": 45, "years": 4600, "brand": "VALICE PRESS"},
+        "canon": {"games": _M["games"], "cultures": _M["cultures"], "years": _M["oldestGameAgeYears"],
+                  "brand": "VALICE PRESS", "subtitle": _M["subtitleMeasured"]},
+        "geometrySource": "per format (see formats.*.geometrySource)",
         "formats": {},
     }
     rec["formats"]["KINDLE"] = build_kindle()

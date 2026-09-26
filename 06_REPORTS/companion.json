@@ -1,0 +1,31 @@
+{
+ "boards": 52,
+ "cards": 63,
+ "indexGames": 63,
+ "scoreSheetPages": 30,
+ "tailoredScoreSheets": 27,
+ "paperbackSha256": "9f0aa934021de6a4ab75cf5e3b4a58f8486bc9d9b02e83d5224730034125375f",
+ "out": "08_OUTPUT/COMPANION",
+ "files": {
+  "boards-pack.pdf": {
+   "pages": 52,
+   "bytes": 212844,
+   "sha256": "3323d2f86f8dc89b0c5380d725f9d5aa504f98fd2e7931338b215965d7f99f23"
+  },
+  "game-index.pdf": {
+   "pages": 3,
+   "bytes": 64968,
+   "sha256": "0e2c7a414cef412cbc4badec502ea1d5e96fbd5a76c655684c1fb5ddae56f206"
+  },
+  "quick-reference-cards.pdf": {
+   "pages": 16,
+   "bytes": 106271,
+   "sha256": "8be87147246672f0a7afb7c1cb38ce86e8934a3b835edfab4b8a0196c79877b1"
+  },
+  "score-sheets.pdf": {
+   "pages": 30,
+   "bytes": 83614,
+   "sha256": "b63b3553673872fff9fd0ce66a0d3984708ecc9e1a6ddbb1436c6a8a55e2e06f"
+  }
+ }
+}

@@ -36,7 +36,7 @@
       "Bu projede her üretici bu bloktan okur; gömülü değer CI'ı kırmızı yakar."
     ],
     "author": "Emre Doğan",
-    "publisher": "Vâliçe Press",
+    "publisher": "Valice Press",
     "isbn": {
       "strategy": "kdp-free",
       "label": "KDP-provided free ISBN",
@@ -46,24 +46,27 @@
       "largeprint": "9798171397371"
     },
     "aiDisclosure": {
-      "founderConfirmed": true,
+      "founderConfirmed": false,
       "confirmedOn": "2026-09-19",
       "confirmedBy": "Founder",
-      "declaration": "AI-GENERATED-IMAGES-ONLY",
+      "declaration": "AI-GENERATED-TEXT-AND-IMAGES",
       "text": {
-        "state": "AI-ASSISTED",
-        "detail": "Rules and cultural notes were drafted with AI assistance and then edited against named, page-cited sources; every claim is held against a supporting passage in the verification record. Under KDP's definitions this is AI-ASSISTED text, which KDP does not require to be declared — but it is recorded here, and it is printed in the book."
+        "state": "AI-GENERATED",
+        "detail": "The rules, the notes on each game and the front matter were researched and written with AI tools working from the printed sources named in each entry, under the author's direction. Each rule is cited to the page (or, for a modern codified ruleset, the section) it was read from; rulings the sources do not give are marked in the book as the book's own."
       },
       "images": {
-        "state": "AI-GENERATED",
-        "detail": "63 hero illustrations, one per game, generated with an image model, reviewed and selected one at a time. The cover and the promotional artwork likewise. The 54 board and rule diagrams are NOT AI: they are drawn as vectors from the book's own structured data by 04_BUILD/svg_vector.py, which is why a diagram cannot contradict the rule printed beside it."
+        "state": "AI-GENERATED (most plates and the cover); PUBLIC DOMAIN / CC0 (some plates); DRAWN BY THE BUILD CODE (two plates)",
+        "detail": "Most game plates and the cover art were generated with an image model and chosen one at a time; each AI plate is labelled 'AI-generated illustration' on its page. Plates that an invented image would misrepresent — the equipment of a game, or members of a living people — are public-domain or CC0 images, credited on the page and at the back. Two plates (Achi, Mū Tōrere) are board drawings made by 04_BUILD/boards.py. Board diagrams and full-size boards are NOT AI images: they are vector drawings made by 04_BUILD/boards.py from the positions written into each game's rules and checked by count."
       },
       "translation": {
         "state": "NONE",
         "detail": "The book is written in English; nothing is translated."
       },
       "evidence": "Not asserted from a sibling title. The book's own imprint page already prints this disclosure verbatim — see 02_MANUSCRIPT/frontmatter.json -> imprint.aiDisclosure, which is rendered on page 4 of all three print interiors and in the EPUB's text/imprint.xhtml. 08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md carries the same facts.",
-      "$comment": "The KDP panel's AI declaration is a legal statement and the choice is the Founder's. It was recorded UNCONFIRMED until 2026-09-19 because no dated decision existed to record — not because the facts were unknown. The facts above are the production record, not an inference."
+      "$comment": "The KDP panel's AI declaration is a legal statement and the choice is the Founder's. It was recorded UNCONFIRMED until 2026-09-19 because no dated decision existed to record — not because the facts were unknown. The facts above are the production record, not an inference.",
+      "$revision2026_09_26": "Corrected in the GBK-02 recovery. The previous record said every claim was held against a verification record and that the diagrams 'cannot contradict the rule printed beside them'; the 2026-09-25 audit found 17 wrong diagrams, 12 entries without page citations and one duplicated plate, so both statements were false. It also classed the text as AI-ASSISTED. Under KDP's own definitions, text an AI tool created is AI-GENERATED even after substantial human editing; the rules and notes of this book were written by AI tools from printed sources under the author's direction, so the text must be declared AI-GENERATED. The KDP content questionnaire must be re-answered accordingly (Founder action).",
+      "printed": "Artificial intelligence was used in making this book, and it is worth being exact about where. The rules, the notes on each game and these essays were researched and written with AI tools working from the printed sources named in each entry, under the author's direction, and the author is responsible for the editorial decisions. Each rule is cited to the page it was read from, and where no source gives a rule, the ruling is marked as this book's own. The board diagrams and the full-size boards were not made by an image model: they are drawn as vectors by the book's build code from the positions written into each game's rules, and each drawing is checked by count against the rules it illustrates. Of the «games» illustrations that open the games, «ai_plates_word» were generated with an image model, chosen one at a time and labelled on their pages; «pd_plates_word» are historical images in the public domain or released for free use, credited on their pages and at the back; and «drawn_plates_word» are boards drawn for this book from their rules. The cover art was generated with an image model.",
+      "$founderConfirmedNote": "Reset by the recovery: the facts changed (text classification, plate mix). The Founder must re-confirm and re-answer the KDP questionnaire."
     },
     "authorBio": "Emre Doğan writes about the stories that cultures tell themselves in order to keep going.\n\nTrained as a software engineer, he came to mythology the way most people do — through a single story that would not leave him alone — and stayed for the pattern underneath. CODEX MYTHOLOGICA, his first book, gathers seventy-six myths from nineteen traditions and retells each one in full.\n\nHe reads in several languages, badly, and is grateful daily to the translators and ethnographers whose patient work made a book like this possible for someone who is neither.\n\nHe lives in Turkey.",
     "authorBio$comment": [
@@ -423,40 +426,37 @@
     "hardcoverTemplateConfirmed": true,
     "hardcoverConfirmedTemplate": {
       "$comment": [
-        "KURUCU (ajan araciligiyla, gercek tarayici oturumuyla) KDP Print",
-        "Cover Calculator'i GERCEKTEN calistirdi (kdp.amazon.com/cover-templates ·",
-        "Hardcover · B&W · White paper · 8.25 x 11 in · 186 sayfa) ve sonuc",
-        "tabloyu okudu — 17 Eylul 2026. Bu blok o ARACTAN okunan DEGERLERDIR,",
-        "hesaplanmadi. Onceki okuma (21 Agustos 2026, 160 sayfa) artik BAYATTI:",
-        "sayfa sayisi GBK-02 kurtarma + genisleme gecisleriyle 160 -> 184 -> 186",
-        "sayfaya cikti ve sirt 0.549 -> 0.608 in'e degisti (tam sarim genisligi",
-        "de 18.624 -> 18.683 in). PHASE_6'nin hipotez formulu (0.0025 in/sayfa +",
-        "0.06 in tahta payi) artik YALNIZCA founderConfirmedTemplate false",
-        "oldugunda kullanilan bir yedektir — bkz. 04_BUILD/covers.py",
-        "sect hardcover_confirmed_geometry.",
-        "",
-        "Sayfa sayisi DEGISIRSE bu blok BAYATLAR: hesaplayiciyi yeni sayfa",
-        "sayisiyla YENIDEN calistirip burayi guncellemek gerekir —",
-        "covers.py bunu otomatik yeniden turetemez, KDP'nin kendi araci."
+        "KDP Print Cover Calculator (kdp.amazon.com/en_US/cover-calculator), READ 2026-09-26 in the GBK-02",
+        "recovery session through the browser: Hardcover · Black & white · White paper · Left to Right ·",
+        "Inches · 8.25 x 11 in · 258 pages. Values taken verbatim from the rendered results table.",
+        "The previous reading (2026-09-17, 186 pages: spine 0.608, full width 18.683) is superseded because",
+        "the recovery edition has 258 pages. If the page count changes, re-read the calculator."
       ],
-      "sourcePageCount": 186,
+      "sourcePageCount": 258,
       "sourceTrimIn": {
         "w": 8.25,
         "h": 11
       },
-      "fullCoverWidthIn": 18.683,
+      "fullCoverWidthIn": 18.845,
       "fullCoverHeightIn": 12.417,
       "frontCoverWidthIn": 8.447,
       "frontCoverHeightIn": 11.236,
-      "spineWidthIn": 0.608,
+      "spineWidthIn": 0.77,
       "wrapIn": 0.591,
       "hingeIn": 0.394,
       "marginIn": 0.125,
       "spineMarginIn": 0.062,
-      "spineSafeAreaWidthIn": 0.483,
+      "spineSafeAreaWidthIn": 0.645,
       "spineSafeAreaHeightIn": 10.986,
+      "spineSafeArea$source": "Width 0.645: the calculator's 'Spine Safe Area' row for 258 pages, read in the same 2026-09-26 session (that reading had the trim field still on 5.5 x 8.5; the row depends only on the page count — spine 0.77 minus 2 x 0.062 spine margin — and its spine row matched the 8.25 x 11 reading). Height 10.986: front cover height 11.236 minus 2 x 0.125 margin, identical to the 8.25 x 11 reading of 2026-09-17 (trim unchanged).",
       "barcodeMarginHorizontalIn": 0.25,
-      "barcodeMarginVerticalIn": 0.375
+      "barcodeMarginVerticalIn": 0.375,
+      "previousReading": {
+        "pages": 186,
+        "spineWidthIn": 0.608,
+        "fullCoverWidthIn": 18.683,
+        "readOn": "2026-09-17"
+      }
     },
     "ink": "black",
     "paper": "white",
@@ -777,7 +777,24 @@
       "editionLabel": "Large Print Edition",
       "diagramPageBudget": 0.6
     },
-    "hardcoverConfirmedTemplateDate": "2026-09-17"
+    "hardcoverConfirmedTemplateDate": "2026-09-26",
+    "paperbackConfirmedTemplate": {
+      "$comment": "KDP Print Cover Calculator READ 2026-09-26: Paperback · Black & white · White · 8.5 x 11 in.",
+      "pages258": {
+        "fullCoverWidthIn": 17.831,
+        "fullCoverHeightIn": 11.25,
+        "spineWidthIn": 0.581,
+        "edition": "paperback"
+      },
+      "pages500": {
+        "fullCoverWidthIn": 18.376,
+        "fullCoverHeightIn": 11.25,
+        "spineWidthIn": 1.126,
+        "spineSafeWidthIn": 1.001,
+        "spineSafeHeightIn": 10.75,
+        "edition": "large print"
+      }
+    }
   },
   "privacy": {
     "$comment": [
@@ -895,28 +912,31 @@
     "standfirst": "Everything in this book that is better on loose paper than bound into a spine is waiting for you online, at full size and free to print as often as you like.",
     "items": [
       {
-        "name": "Forty board templates",
-        "detail": "at full playing size, one per sheet, heavier lines than the page can carry."
+        "name": "{Boards} boards",
+        "detail": "one to a sheet, for every game played on a board, each with the page its rules are on."
       },
       {
-        "name": "Sixty-three game cards",
-        "detail": "one per game — setup on the front, rules on the back."
+        "name": "{Cards} game cards",
+        "detail": "one per game, four to a sheet: the quick-play facts, the setup, and the page with the full rules."
       },
       {
         "name": "Score sheets",
-        "detail": "for the games that need one, ruled for the number of players each takes."
+        "detail": "a general sheet, one for six players, a match record, and sheets made for {tailored} of the games."
       },
       {
         "name": "The index of games",
-        "detail": "all sixty-three on two pages, by family, region and number of players."
+        "detail": "all {games}, in the book's order, with players, time, age, difficulty and the page each starts on in the print editions."
       }
-    ]
+    ],
+    "items$comment": "Filled at build time from 08_OUTPUT/COMPANION/companion-manifest.json (counts measured from the companion pack itself): {Boards}/{Cards} = counts in words, capitalised; {games}/{tailored} = counts in words. Nothing here is a hand-typed number."
   },
   "metadata": {
     "title": "The Great Book of World Games",
-    "subtitle": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
-    "description": "Sixty-three traditional games from forty-five cultures spanning some 4,600 years, arranged by mechanic rather than by region into seven families — Sowing Games, Hunt and Siege, Race Home, Line and Territory and others. Each entry gives sourced provenance, complete playable rules and a deterministic vector board diagram, and the rule sets that are scholarly reconstructions say so in the prose. The oldest game in it is the Royal Game of Ur, at 2600 BCE. It aims at the gap between academic game history, which is authoritative but unplayable, and the cheap family-games listicle.",
-    "$source": "Re-derived 2026-09-19 from the measured counts. The previous values were copied from scripts/catalog/valice-catalog.mjs on 2026-09-07, when the book held 56 games from 39 cultures; the recovery edition took it to 63 from 45 and this block was never re-derived, so the live product page, this config and the KDP handbook all repeated a count the book had stopped having."
+    "subtitle": "63 Games from 5,000 Years of Human Play — Rules, Boards and Stories from 42 Cultures, Ready to Play Tonight",
+    "description": "A reference book you play from.\n\nThe Great Book of World Games sets out sixty-three traditional games from forty-two cultures, from the royal graves of Ur to a Zulu playground, so that you can play them tonight.\n\nEVERY ENTRY GIVES YOU\n· A quick-play box: players, time, age, difficulty, what you need and the goal\n· Where the game comes from, and how we know\n· What to use instead of what — buttons, coins, dried beans, an egg box\n· Numbered rules, one action to a line, with a board diagram drawn from the rules\n· The disputes every table has — a draw, a blocked player, an illegal move — settled\n· A worked turn, played out from a stated position\n· A simpler first game, and variants: the recorded ones, and house rules marked as such\n· The sources: the work and the pages the rules were read from\n\nSORTED BY HOW THEY WORK, NOT BY WHERE THEY ARE FROM\nSeven families — the sowing games, the hunt and the siege, the race home, the line and the territory, the war board, chance and scoring, and games without a board. Put that way, the mancala games of Ghana, Sri Lanka and Buganda sit together, and six cultures solve the problem of chess six different ways.\n\nHONEST ABOUT WHAT IS KNOWN\nWhere a game's record is incomplete — senet, the Royal Game of Ur, the Roman game of twelve lines — the entry says what the sources give and what has been reconstructed, and whose reconstruction it follows. Where no source settles a question, the book makes a ruling and marks it as its own, so you can overrule it. A section at the back lists game origin stories that are widely repeated and are not true.\n\nAT THE BACK\nFull-size boards for twenty-two of the games, drawn at playing size for the photocopier (print editions). A list of what to gather for a games kit. A glossary, the sources by work, an index of every game under every name it goes by, and indexes by culture, age and difficulty. A free companion pack online adds printable boards for the other games, a card for every game and score sheets.\n\nPaperback: 258 pages, 8.5 × 11 in.\nHardcover: 258 pages, 8.25 × 11 in.\nLarge print edition: 492 pages, set in 16-point type.",
+    "$source": "Re-derived 2026-09-26 (GBK-02 recovery) from 02_MANUSCRIPT/frontmatter.json § measured and the generated KDP description (06_REPORTS/tracked/metadata.json). The build reads the measured values directly; these copies exist for tools outside the build and must match them. The subtitle registered on the live KDP records is kept separately in subtitleRegisteredOnKdp.",
+    "subtitleRegisteredOnKdp": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
+    "$subtitleRegisteredNote": "The subtitle as registered on the live KDP records (Kindle B0HG44FH1B, paperback B0HG3KMK9L, hardcover B0HG41F21F, large print). KDP locks a print book's title and subtitle 72 hours after publication; a changed subtitle needs a new edition with a new ISBN (KDP Help, 'Update your book details')."
   },
   "measured": {
     "4": 4,

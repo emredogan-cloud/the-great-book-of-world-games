@@ -10,61 +10,40 @@
    "interior": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf",
     "exists": true,
-    "sha256": "e36732801c5715af5549482142ce4342df12645189c33e0eed2bffc450e48d7f",
-    "recordedSha256": "e36732801c5715af5549482142ce4342df12645189c33e0eed2bffc450e48d7f",
-    "bytes": 16945890,
-    "pageCount": 172
+    "sha256": "9f0aa934021de6a4ab75cf5e3b4a58f8486bc9d9b02e83d5224730034125375f",
+    "recordedSha256": "9f0aa934021de6a4ab75cf5e3b4a58f8486bc9d9b02e83d5224730034125375f",
+    "bytes": 17232567,
+    "pageCount": 258,
+    "font": "Source Serif 4 / Source Sans 3 / Cinzel (SIL OFL 1.1, embedded)"
    },
-   "blankPages": 12,
+   "blankPages": 2,
    "trim": {
     "widthIn": 8.5,
     "heightIn": 11
    },
    "margins": {
-    "gutterIn": 0.55,
-    "outerIn": 0.5,
-    "topIn": 0.625,
-    "bottomIn": 0.625,
+    "gutterIn": 0.7,
+    "outerIn": 0.825,
+    "topIn": 0.75,
+    "bottomIn": 0.8,
     "gutterBareMinIn": 0.5,
     "gutterSafetyIn": 0.05
    },
    "cover": {
     "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
     "exists": true,
-    "sha256": "f10249b333424b0628a4f68b412daa64cd40533983ed1ae762799c7a90cdb153",
-    "recordedSha256": "f10249b333424b0628a4f68b412daa64cd40533983ed1ae762799c7a90cdb153",
-    "bytes": 7320216,
+    "sha256": "f5f1a1fd61cccc9917ae280ad5db93d3a2137f84ff3b7d3551d5b6eb055c2815",
+    "recordedSha256": "f5f1a1fd61cccc9917ae280ad5db93d3a2137f84ff3b7d3551d5b6eb055c2815",
+    "geometryProvisional": false,
+    "bytes": 7204841,
     "wrapIn": [
-     17.6373,
+     17.831,
      11.25
     ],
-    "spineIn": 0.3873,
-    "artwork": "07_ASSETS/processed/cover/print_master_standard_corrected.png",
-    "typeItems": 32,
-    "spineFit": [
-     {
-      "part": "title",
-      "text": "THE GREAT BOOK OF WORLD GAMES",
-      "pt": 8.75,
-      "trackPt": 1.05,
-      "widthIn": 2.701,
-      "runIn": [
-       7.55,
-       10.3
-      ]
-     },
-     {
-      "part": "author",
-      "text": "EMRE DOĞAN",
-      "pt": 8.75,
-      "trackPt": 1.05,
-      "widthIn": 0.938,
-      "runIn": [
-       0.62,
-       1.58
-      ]
-     }
-    ]
+    "spineIn": 0.581,
+    "artwork": "Founder-approved final artwork (07_ASSETS/processed/cover/x4r); the subtitle counts and the back copy re-set from the manuscript by cover_text_fix.py",
+    "typeItems": 0,
+    "spineFit": null
    },
    "coverStatus": "READY"
   },
@@ -73,61 +52,40 @@
    "interior": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf",
     "exists": true,
-    "sha256": "1bc0eafe9b18a646dab6aba77229d7ba262b8c53a99ebc6e7778d60e077cad81",
-    "recordedSha256": "1bc0eafe9b18a646dab6aba77229d7ba262b8c53a99ebc6e7778d60e077cad81",
-    "bytes": 16946214,
-    "pageCount": 172
+    "sha256": "54bc5448aa2ccb87aab1563ac8bc22ce1f08f77cff4d332f305084efd494041d",
+    "recordedSha256": "54bc5448aa2ccb87aab1563ac8bc22ce1f08f77cff4d332f305084efd494041d",
+    "bytes": 17233319,
+    "pageCount": 258,
+    "font": "Source Serif 4 / Source Sans 3 / Cinzel (SIL OFL 1.1, embedded)"
    },
-   "blankPages": 11,
+   "blankPages": 2,
    "trim": {
     "widthIn": 8.25,
     "heightIn": 11
    },
    "margins": {
     "gutterIn": 0.675,
-    "outerIn": 0.5,
-    "topIn": 0.625,
-    "bottomIn": 0.625,
+    "outerIn": 0.6,
+    "topIn": 0.75,
+    "bottomIn": 0.8,
     "gutterBareMinIn": 0.5,
     "gutterSafetyIn": 0.05
    },
    "cover": {
     "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
     "exists": true,
-    "sha256": "e89da7354f732f05af8063d45cd08eaafc8d5ebc0ae5f3fd088a5fb253e2b500",
-    "recordedSha256": "e89da7354f732f05af8063d45cd08eaafc8d5ebc0ae5f3fd088a5fb253e2b500",
-    "bytes": 7971700,
+    "sha256": "a4ede697b14a6b18c5e37393eeb443966c3f168cad1fb647c346e80dc04a693a",
+    "recordedSha256": "a4ede697b14a6b18c5e37393eeb443966c3f168cad1fb647c346e80dc04a693a",
+    "geometryProvisional": false,
+    "bytes": 7824520,
     "wrapIn": [
-     18.683,
+     18.845,
      12.417
     ],
-    "spineIn": 0.608,
-    "artwork": "07_ASSETS/processed/cover/print_master_standard_corrected.png",
-    "typeItems": 32,
-    "spineFit": [
-     {
-      "part": "title",
-      "text": "THE GREAT BOOK OF WORLD GAMES",
-      "pt": 9.75,
-      "trackPt": 1.17,
-      "widthIn": 3.009,
-      "runIn": [
-       8.3238,
-       11.345
-      ]
-     },
-     {
-      "part": "author",
-      "text": "EMRE DOĞAN",
-      "pt": 9.75,
-      "trackPt": 1.17,
-      "widthIn": 1.045,
-      "runIn": [
-       0.716,
-       1.7652
-      ]
-     }
-    ]
+    "spineIn": 0.77,
+    "artwork": "Founder-approved final artwork (07_ASSETS/processed/cover/x4r); the subtitle counts and the back copy re-set from the manuscript by cover_text_fix.py",
+    "typeItems": 0,
+    "spineFit": null
    },
    "coverStatus": "READY"
   },
@@ -135,46 +93,19 @@
    "folder": "KINDLE",
    "cover": {
     "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg",
-    "widthPx": 1600,
-    "heightPx": 2560,
-    "aspect": 0.625,
-    "sha256": "0acc1a51f61b4c2e845c247a48839a774e6478cfec35dda932acfaa31a4ed3f6",
-    "bytes": 2356492,
-    "typography": [
-     {
-      "kind": "frontTitle",
-      "text": "THE GREAT BOOK OF",
-      "px": 62
-     },
-     {
-      "kind": "frontTitle",
-      "text": "WORLD GAMES",
-      "px": 182
-     },
-     {
-      "kind": "frontTitle",
-      "text": "63 games from 4,600 years of human play",
-      "px": 38
-     },
-     {
-      "kind": "frontTitle",
-      "text": "Rules, boards and stories from 45 cultures",
-      "px": 38
-     },
-     {
-      "kind": "frontAuthor",
-      "text": "EMRE DOĞAN",
-      "px": 73
-     }
+    "px": [
+     1600,
+     2560
     ],
-    "note": "Founder master cover from last-kindle-cover.png surgically corrected to canonical 63 games / 45 cultures / VALICE PRESS and upscaled to 1600x2560."
+    "bytes": 2360162,
+    "sha256": "b4d6ceb0f2236cb107f9eb6dd19b4735ecea9d4c1cb9ef15a079aeae98ea9594"
    },
    "epub": {
     "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
     "exists": true,
-    "sha256": "696d4b9a5eca4bc88032049fff168ffe166c7409c52ff607d1f3e58e97d079cc",
-    "recordedSha256": "696d4b9a5eca4bc88032049fff168ffe166c7409c52ff607d1f3e58e97d079cc",
-    "bytes": 15960616
+    "sha256": "a560f65f1c8851d73ad4c87f960fe1b98a140cb4f312adb1b72a950cde97a9ea",
+    "recordedSha256": "a560f65f1c8851d73ad4c87f960fe1b98a140cb4f312adb1b72a950cde97a9ea",
+    "bytes": 9054872
    },
    "coverStatus": "READY"
   },
@@ -196,19 +127,56 @@
   }
  },
  "checksumFiles": {
-  "PAPERBACK": 4,
-  "HARDCOVER": 4,
-  "KINDLE": 4,
+  "PAPERBACK": 3,
+  "HARDCOVER": 3,
+  "KINDLE": 2,
   "APLUS": 9
  },
  "handbook": "08_OUTPUT/KDP_UPLOAD_HANDBOOK.md",
  "previewerChecklist": "08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md",
  "aiDisclosureNotes": "08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md",
- "handbookBytes": 23445,
- "previewerBytes": 5952,
- "blockingFounderActions": [],
+ "handbookBytes": 25620,
+ "previewerBytes": 5867,
+ "blockingFounderActions": [
+  {
+   "id": "SUBTITLE-NEW-EDITION",
+   "field": "metadata.subtitleRegisteredOnKdp",
+   "blocking": true,
+   "note": "The verified subtitle (63 Games from 5,000 Years of Human Play — Rules, Boards and Stories from 42 Cultures, Ready to Play Tonight) differs from the one registered on the live KDP print records (63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight). KDP locks a paperback/hardcover title and subtitle 72 hours after publication; the corrected files need a NEW EDITION with a new ISBN (or KDP support). Decide before uploading the print files."
+  },
+  {
+   "id": "AI-QUESTIONNAIRE",
+   "field": "founder.aiDisclosure",
+   "blocking": true,
+   "note": "Under KDP's definitions the text of this book is AI-GENERATED (created by AI tools, then edited), not AI-assisted; most plates and the cover are AI-generated images. Re-answer the KDP AI content questions for every edition when uploading."
+  },
+  {
+   "id": "AI-DECL",
+   "field": "founder.aiDisclosure.founderConfirmed",
+   "blocking": true,
+   "note": "The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`."
+  }
+ ],
  "errors": [],
  "founderActions": [
+  {
+   "id": "SUBTITLE-NEW-EDITION",
+   "field": "metadata.subtitleRegisteredOnKdp",
+   "blocking": true,
+   "note": "The verified subtitle (63 Games from 5,000 Years of Human Play — Rules, Boards and Stories from 42 Cultures, Ready to Play Tonight) differs from the one registered on the live KDP print records (63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight). KDP locks a paperback/hardcover title and subtitle 72 hours after publication; the corrected files need a NEW EDITION with a new ISBN (or KDP support). Decide before uploading the print files."
+  },
+  {
+   "id": "AI-QUESTIONNAIRE",
+   "field": "founder.aiDisclosure",
+   "blocking": true,
+   "note": "Under KDP's definitions the text of this book is AI-GENERATED (created by AI tools, then edited), not AI-assisted; most plates and the cover are AI-generated images. Re-answer the KDP AI content questions for every edition when uploading."
+  },
+  {
+   "id": "AI-DECL",
+   "field": "founder.aiDisclosure.founderConfirmed",
+   "blocking": true,
+   "note": "The AI-generated content declaration is a legal statement and the choice is yours alone. The agent cannot make it. The facts you need are in `aiProductionFacts`."
+  },
   {
    "id": "APLUS-05-ART",
    "field": "07_ASSETS/raw/aplus/",

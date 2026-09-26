@@ -142,6 +142,10 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
 [ -f 04_BUILD/qa_diagram.py ] && \
   run "diyagram ↔ kural uyumu"  $PY 04_BUILD/qa_diagram.py \
                                    --json 06_REPORTS/qa-diagram.json
+# BASILAN diyagramlar (v2, boards.py) — K19 bütçesi GERÇEK render ölçümünden.
+[ -f 04_BUILD/qa_diagram_budget.py ] && \
+  run "BASILAN DİYAGRAM BÜTÇESİ (K19)" $PY 04_BUILD/qa_diagram_budget.py \
+                                   --json 06_REPORTS/qa-diagram-budget.json
 # GÖRSEL KAPI: tanımlayıcıyı değil RENDER EDİLMİŞ SVG'yi denetler.
 # Faz 6'da 63 Türkçe efsane etiketi bu kapıyla bulundu; bütün sayısal
 # kapılar o sırada yeşildi.
@@ -207,6 +211,14 @@ run "KAPILARIN KENDİ TESTİ"     $PY 05_TESTS/selftest.py
   run_optional "A+ paketi güncel"       $VENV_PY 04_BUILD/aplus.py --check
 [ -f 04_BUILD/metadata.py ] && \
   run "KDP metadata paketi"     $PY 04_BUILD/metadata.py --check
+# BASILI KİTAP: basılan madde metnini (qa_book) ve üretilen PDF'lerin
+# kendisini (qa_output: yazı boyu tabanı, içindekiler sayfaları) denetler.
+[ -f 04_BUILD/qa_book.py ] && \
+  run "BASILAN KİTAP (madde, tasnif, bayatlık)" $PY 04_BUILD/qa_book.py \
+                                   --json 06_REPORTS/qa-book.json
+[ -f 04_BUILD/qa_output.py ] && \
+  run_optional "BASILAN DOSYALAR (PDF)" $VENV_PY 04_BUILD/qa_output.py \
+                                   --json 06_REPORTS/qa-output.json
 # KDP ÖN DENETİMİ: Amazon'un yükleme denetimlerinin yerel karşılığı.
 # Previewer'ın YERİNE GEÇMEZ; onun reddedeceklerinin çoğunu önce bulur.
 [ -f 04_BUILD/kdp_preflight.py ] && \

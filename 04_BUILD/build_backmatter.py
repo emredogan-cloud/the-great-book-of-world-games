@@ -463,6 +463,13 @@ DURATION_BUCKETS = (("<=15", "Fifteen minutes or less"),
                     ("30+", "More than half an hour"))
 
 
+try:
+    from backmatter_text import INVENTED_TRADITIONS as _IT_V2
+    INVENTED_TRADITIONS = _IT_V2      # one corrected list for the record and the printed book
+except ImportError:                    # pragma: no cover
+    pass
+
+
 def load(path: str):
     with open(path, encoding="utf-8") as fh:
         return json.load(fh)
@@ -905,6 +912,9 @@ def build(root: str, args) -> int:
     }
     dump(os.path.join(root, "06_REPORTS", "backmatter.json"), public)
 
+    rc_book = build_book(root)
+    if rc_book:
+        return rc_book
     print("  ✓ arka madde üretildi · %d oyun" % len(entries))
     print("      ① tahta şablonu      %3d" % len(templates))
     print("      ② malzeme satırı     %3d" % len(materials))
@@ -919,6 +929,107 @@ def build(root: str, args) -> int:
     print("      ⑥ uydurulmuş gelenek %3d" % len(INVENTED_TRADITIONS))
     print("  · sayfa göndermesi olan oyun: %d/%d (gerisi dizgi bekliyor)"
           % (measured, len(entries)))
+    return 0
+
+
+def build_book(root: str) -> int:
+    """The PRINTED back matter of the book as it is (v2): full-size boards, the
+    games kit, the glossary with computed game pointers, the bibliography by
+    work, invented traditions, illustration credits and the author page.
+    Written to 02_MANUSCRIPT/backmatter_book.json (read by interior.py and
+    epub.py). The 100-game planning back matter above is left untouched."""
+    import re as _re
+    import backmatter_text as T
+    bp = os.path.join(root, "02_MANUSCRIPT", "book.json")
+    if not os.path.exists(bp):
+        return 0
+    book = load(bp)
+    cfg = load(os.path.join(root, "project_config.json"))
+    games = book["games"]
+    titles = {g["gameId"]: g["title"] for g in games}
+
+    def rules_blob(g):
+        parts = list(g.get("setup", []))
+        for b in g.get("rules", []):
+            parts.append(b.get("head", ""))
+            parts.extend(b.get("steps", []))
+        parts += [g.get("ending", {}).get("end", ""), g.get("ending", {}).get("winner", "")]
+        parts += [x.get("a", "") for x in g.get("special", [])]
+        return " ".join(p for p in parts if isinstance(p, str))
+    blobs = {g["gameId"]: rules_blob(g) for g in games}
+    glossary = []
+    for t in T.GLOSSARY:
+        pat = t.get("match") or _re.escape(t["term"])
+        rx = _re.compile(r"\b(?:%s)(?:s|es)?\b" % pat, _re.I)
+        hits = [g["gameId"] for g in games if rx.search(blobs[g["gameId"]])]
+        glossary.append({"term": t["term"], "definition": t["definition"],
+                         "games": hits if len(hits) <= t.get("maxGames", 8) else []})
+    works = {}
+    for g in games:
+        for c in g.get("citations") or [{"work": s} for s in g.get("sources", [])]:
+            w = c["work"].strip().rstrip(".")
+            w = _re.sub(r",?\s*(pp?\.|§|sect\.|section|art\.|articles?)\s.*$", "", w)
+            rec = works.setdefault(w, {"citation": w, "games": [], "pages": {}})
+            if g["gameId"] not in rec["games"]:
+                rec["games"].append(g["gameId"])
+            if c.get("pages"):
+                rec["pages"][g["gameId"]] = c["pages"]
+    bib = sorted(works.values(), key=lambda r: _re.sub(r"[^a-z]", "", r["citation"].lower()))
+    reg = load(os.path.join(root, "01_SOURCE", "plates.json"))["plates"]
+    n_ai = sum(1 for r in reg.values() if r.get("kind") == "ai-generated")
+    n_drawn = sum(1 for r in reg.values() if r.get("kind") == "drawn")
+    n_pd = len(reg) - n_ai - n_drawn
+    words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+             "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
+             "nineteen"]
+    tens = {20: "twenty", 30: "thirty", 40: "forty", 50: "fifty", 60: "sixty"}
+
+    def w_(n):
+        return words[n] if n < 20 else tens[n - n % 10] + ("" if n % 10 == 0 else "-" + words[n % 10])
+
+    def fill(v):
+        if isinstance(v, dict):
+            return {k: fill(x) for k, x in v.items()}
+        return (v.replace("\u00abai\u00bb", w_(n_ai).capitalize())
+                 .replace("\u00abpd\u00bb", w_(n_pd).capitalize())
+                 .replace("\u00abdrawn\u00bb", w_(n_drawn)))
+    credits = {"paragraphs": [fill(p) for p in T.CREDITS_PARAGRAPHS],
+               "plates": [{"game": titles[gid], "gameId": gid, "credit": r["credit"]}
+                          for gid, r in reg.items() if r.get("kind") != "ai-generated"]}
+    # the games kit: rows name gameIds; the printed column is computed from the titles,
+    # and every game that needs equipment must be opened by at least one row
+    kit = []
+    for k in T.KIT:
+        row = {x: v for x, v in k.items() if x != "gameIds"}
+        ids = k.get("gameIds") or []
+        unknown = [x for x in ids if x not in titles]
+        if unknown:
+            raise ValueError("kit row %r names unknown games: %s" % (k["item"], unknown))
+        row["games"] = ", ".join(titles[x] for x in ids)
+        kit.append(row)
+    if T.KIT:
+        in_kit = {x for k in T.KIT for x in k.get("gameIds") or []}
+        no_kit = [g["gameId"] for g in games
+                  if g["gameId"] not in in_kit and "hands only" not in g["spec"]["materials"].lower()]
+        if no_kit:
+            raise ValueError("games needing equipment but missing from the kit: %s" % no_kit)
+    bio = cfg["founder"].get("authorBio") or ""
+    out = {
+        "$comment": ["PRINTED BACK MATTER — generated by build_backmatter.py (build_book) from",
+                     "backmatter_text.py and the manuscript. Read by interior.py and epub.py."],
+        "templatesTitle": T.TEMPLATES_TITLE, "templatesIntro": T.TEMPLATES_INTRO,
+        "templates": T.TEMPLATES,
+        "kitIntro": T.KIT_INTRO, "kit": kit,
+        "glossaryIntro": T.GLOSSARY_INTRO, "glossary": glossary,
+        "bibliographyIntro": T.BIBLIOGRAPHY_INTRO, "bibliography": bib,
+        "indexIntro": T.INDEX_INTRO,
+        "inventedIntro": T.INVENTED_INTRO, "inventedTraditions": T.INVENTED_TRADITIONS,
+        "credits": credits,
+        "aboutAuthor": [p.strip() for p in bio.split("\n\n") if p.strip()],
+    }
+    dump(os.path.join(root, "02_MANUSCRIPT", "backmatter_book.json"), out)
+    print("  ✓ printed back matter: %d boards · %d kit rows · %d glossary terms · %d works · %d PD plates"
+          % (len(T.TEMPLATES), len(T.KIT), len(glossary), len(bib), n_pd))
     return 0
 
 

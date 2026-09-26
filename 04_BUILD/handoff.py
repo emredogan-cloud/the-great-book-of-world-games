@@ -105,12 +105,65 @@ def write(p, text):
         fh.write(text)
 
 
+CANON_ED = {"paperback": "PAPERBACK", "hardcover": "HARDCOVER", "largeprint": "LARGEPRINT"}
+CANON_ARTWORK = ("Founder-approved final artwork (07_ASSETS/processed/cover/x4r); the subtitle "
+                 "counts and the back copy re-set from the manuscript by cover_text_fix.py")
+
+
+def canonical_covers(root):
+    """The covers that ship (build_gbk02_covers.py → cover-build-canonical.json), in the two
+    shapes this handbook reads: a cover-build record and a cover-geometry record.
+    Returns (None, None) when there is no canonical build."""
+    p = os.path.join(root, "06_REPORTS", "cover-build-canonical.json")
+    if not os.path.exists(p):
+        return None, None
+    rec = load(p)
+    cfg = load(os.path.join(root, "project_config.json"))
+    hct = cfg["production"]["hardcoverConfirmedTemplate"]
+    cb, cov = {"editions": {}}, {"editions": {}}
+    for ed, fmt in CANON_ED.items():
+        f = rec["formats"].get(fmt)
+        if not f:
+            continue
+        cf = os.path.join(root, f["file"])
+        cb["editions"][ed] = {"file": f["file"], "sha256": sha256(cf) if os.path.exists(cf) else None,
+                              "wrapIn": f["wrapIn"], "spineIn": f["spineIn"],
+                              "artwork": CANON_ARTWORK, "typeLog": [], "spineFit": None,
+                              "geometrySource": f.get("geometrySource"),
+                              "geometryProvisional": f.get("geometryProvisional")}
+        hc = ed == "hardcover"
+        g = {"edition": ed, "pageCount": f["pages"],
+             "trimWidthIn": f["trimIn"][0], "trimHeightIn": f["trimIn"][1],
+             "bleedIn": hct["wrapIn"] if hc else 0.125,
+             "safeIn": hct["marginIn"] if hc else 0.25,      # covers.py: COVER_SAFE_IN
+             "spineWidthIn": f["spineIn"], "spinePerPageIn": 0.002252,
+             "wrapWidthIn": f["wrapIn"][0], "wrapHeightIn": f["wrapIn"][1],
+             "artworkTarget": {"widthPx": f["wrapPx"][0], "heightPx": f["wrapPx"][1]},
+             "founderConfirmedTemplate": hc and not f.get("geometryProvisional"),
+             "confirmedTemplateSource": f.get("geometrySource", "")}
+        if f.get("geometryProvisional"):
+            g["$stalePageCountWarning"] = (
+                "FOUNDER ACTION: this cover's geometry was DERIVED, not read from KDP's calculator "
+                "(%s). Re-read the KDP Print Cover Calculator for %d pages before uploading."
+                % (f.get("geometrySource"), f["pages"]))
+        cov["editions"][ed] = g
+    k = rec["formats"].get("KINDLE")
+    if k:
+        kf = os.path.join(root, k["file"])
+        cb["kindle"] = {"file": k["file"], "px": k.get("px"), "bytes": k.get("bytes"),
+                        "sha256": sha256(kf) if os.path.exists(kf) else None}
+    return cb, cov
+
+
 def collect(root):
     """Paketleri toplar ve her birinin GERÇEK durumunu ölçer."""
     out = {}
     cb = {}
     cbp = os.path.join(root, "06_REPORTS", "cover-build.json")
-    if os.path.exists(cbp):
+    canon, _ = canonical_covers(root)
+    if canon:
+        cb = canon
+    elif os.path.exists(cbp):
         cb = load(cbp)
     for ed, folder in (("paperback", "PAPERBACK"), ("hardcover", "HARDCOVER")):
         rp = os.path.join(root, "06_REPORTS", "interior-%s.json" % ed)
@@ -124,7 +177,7 @@ def collect(root):
                          "sha256": sha256(f) if os.path.exists(f) else None,
                          "recordedSha256": r["sha256"],
                          "bytes": os.path.getsize(f) if os.path.exists(f) else 0,
-                         "pageCount": r["pageCount"]},
+                         "pageCount": r["pageCount"], "font": r.get("font")},
             "blankPages": r.get("blankPages", 0),
             "trim": r["trim"], "margins": r["margins"],
             "cover": None, "coverStatus": "BLOCKED — kurucu sanatı yok",
@@ -136,14 +189,16 @@ def collect(root):
                 "file": cv["file"], "exists": os.path.exists(cf),
                 "sha256": sha256(cf) if os.path.exists(cf) else None,
                 "recordedSha256": cv["sha256"],
+                "geometryProvisional": cv.get("geometryProvisional"),
                 "bytes": os.path.getsize(cf) if os.path.exists(cf) else 0,
                 "wrapIn": cv["wrapIn"], "spineIn": cv["spineIn"],
                 "artwork": cv["artwork"],
                 "typeItems": len(cv.get("typeLog") or []),
                 "spineFit": cv.get("spineFit"),
             }
-            out[ed]["coverStatus"] = ("READY" if os.path.exists(cf)
-                                      else "MISSING FILE")
+            out[ed]["coverStatus"] = ("MISSING FILE" if not os.path.exists(cf)
+                                      else "PROVISIONAL — geometry derived, re-read KDP's calculator"
+                                      if cv.get("geometryProvisional") else "READY")
     ep = os.path.join(root, "06_REPORTS", "epub.json")
     if os.path.exists(ep):
         r = load(ep)
@@ -299,7 +354,7 @@ declaration on your behalf. The facts you need in order to answer:
 ```
 - {pkg['interior']['pageCount']} pages · trim {t['widthIn']} × {t['heightIn']} in
 - no bleed · inside margin {m['gutterIn']} in · outside {m['outerIn']} in
-- all fonts embedded and subsetted (Liberation Serif, SIL OFL 1.1)
+- all fonts embedded and subsetted ({pkg['interior'].get('font', 'see the interior report')})
 - SHA-256 `{pkg['interior']['sha256']}`
 
 {F} Trim size in the KDP form: **{t['widthIn']} x {t['heightIn']} in**.
@@ -315,17 +370,15 @@ Bleed: **No bleed**. Paper: **White**. Ink: **Black & white**.
   {g['bleedIn']} in {bleed_label} on all four sides
 - spine **{g['spineWidthIn']:.4f} in**, {spine_sentence}
 - artwork embedded at **{g['artworkTarget']['widthPx']} × {g['artworkTarget']['heightPx']} px**
-  (300 ppi); all type is **vector**, not baked into the image
+  (300 ppi); the cover is one raster image, its type included
 - SHA-256 `{pkg['cover']['sha256']}`
 
-Typography placement was measured, not eyeballed. The title and author sit in
-the two quietest bands of the artwork (standard deviation 12.8 and 13.7 on a
-0–255 scale), so no panel, box or scrim sits behind them. The spine title is
-{pkg['cover']['spineFit'][0]['pt']:.2f} pt, sized to fit the measured clean run of the spine rather than
-chosen by eye. The back copy sits over a feathered wash taken from the
-artwork's own parchment tone — not a white panel.
+The cover is the Founder-approved final artwork. Its subtitle counts and its back
+copy were re-set from the measured manuscript by `04_BUILD/cover_text_fix.py`
+(EB Garamond, SIL OFL 1.1) — the only change made to the artwork; nothing was
+redrawn or generated. {g.get('$stalePageCountWarning', 'Geometry: ' + g.get('confirmedTemplateSource', ''))}
 
-⚠ The barcode area (lower right of the back panel) is deliberately empty.
+⚠ The barcode area (lower right of the back panel) carries a plain light plate.
 **Do not place anything there** — Amazon prints the barcode itself.
 
 ### 16 · Previewer
@@ -466,15 +519,15 @@ anyway: each game is one uninterrupted entry.
 ```
 - **1600 × 2560 px** (Amazon's recommended 1:1.6), JPEG
 - SHA-256 `{k['cover']['sha256']}`
-- derived from the **front panel** of the print artwork, not from the wrap —
-  an ebook cover must not show a spine or a back panel
-{"- title, subtitle and author are set as **vector outline type** (LiberationSerif TTF, not AI-generated), at the same measured, quiet position used on the print front cover, scaled to this file's own pixel density" if k['cover'].get('typography') else "- ⚠ this file carries **no typography** — rebuild with `covers.py --build --kindle-only`"}
+- the Founder-approved Kindle master (the front-cover artwork composed at 1:1.6),
+  not the wrap — an ebook cover must not show a spine or a back panel
+- title and author are part of the Founder's artwork; the subtitle counts were
+  re-set from the measured manuscript by `04_BUILD/cover_text_fix.py`
 
 ⚠ Amazon evaluates Kindle covers by **pixel dimensions**, not DPI — there is
 no physical print size for an eBook. The file's 300×300 dpi tag is a
-compatibility label only; the real content density is ~228 px/in. 1600 × 2560
-comfortably clears Amazon's stated minimum (1000 × 625) and matches its
-recommended 1.6:1 ratio.
+compatibility label only. 1600 × 2560 comfortably clears Amazon's stated
+minimum (1000 × 625) and matches its recommended 1.6:1 ratio.
 
 ### 16 · Previewer
 {F} Use the Kindle Previewer. Check in particular: the diagrams at the
@@ -642,13 +695,13 @@ def build_previewer(root, pkgs, cov, md, ivis):
 | Top / bottom margin | {pb['margins']['topIn']} / {pb['margins']['bottomIn']} in | {hc['margins']['topIn']} / {hc['margins']['bottomIn']} in |
 | Spine (from page count) | **{g['spineWidthIn']:.4f} in** | **{gh['spineWidthIn']:.4f} in** |
 | Full cover wrap | {g['wrapWidthIn']:.4f} × {g['wrapHeightIn']:.4f} in | {gh['wrapWidthIn']:.4f} × {gh['wrapHeightIn']:.4f} in |
-| Fonts | Liberation Serif, embedded and subsetted | same |
-| Raster images | none — every diagram is vector | same |
+| Fonts | {pb['interior'].get('font')}, subsetted | same |
+| Raster images | the game plates and the cat's-cradle figures, all ≥ 300 ppi at print size; every diagram and board is vector | same |
 
 Measured ink margins in the built paperback — the closest any ink comes to the
 trim edge, on any of the {pb['interior']['pageCount']} pages:
 
-- left **{w.get('leftIn', '?')} in** · right **{w.get('rightIn', '?')} in**
+- inside (gutter) **{w.get('gutterIn', w.get('leftIn', '?'))} in** · outside **{w.get('outerIn', w.get('rightIn', '?'))} in**
 - top **{w.get('topIn', '?')} in** · bottom **{w.get('bottomIn', '?')} in**
 
 KDP's own minimum without bleed is 0.25 in, so there is real headroom. If the
@@ -711,18 +764,17 @@ this file was generated.
 | Full wrap | {g['wrapWidthIn']:.4f} × {g['wrapHeightIn']:.4f} in | {gh['wrapWidthIn']:.4f} × {gh['wrapHeightIn']:.4f} in |
 | Spine | {g['spineWidthIn']:.4f} in | {gh['spineWidthIn']:.4f} in |
 | Artwork | {g['artworkTarget']['widthPx']} × {g['artworkTarget']['heightPx']} px @ 300 ppi | {gh['artworkTarget']['widthPx']} × {gh['artworkTarget']['heightPx']} px |
-| Type | vector, not rasterised | same |
+| Type | part of the raster artwork (EB Garamond where the counts were re-set) | same |
 
-1. **The spine.** It is {g['spineWidthIn']:.3f} in — a thin spine, and the title is set at
-   {pkgs['paperback']['cover']['spineFit'][0]['pt']:.2f} pt to fit the part of the artwork that measured clean.
-   In the Previewer, check the spine text is centred between the two folds and
-   that no letter touches a fold. This is the single most common cover
+1. **The spine.** It is {g['spineWidthIn']:.3f} in (paperback) and {gh['spineWidthIn']:.3f} in
+   (hardcover). In the Previewer, check the spine text is centred between the two
+   folds and that no letter touches a fold. This is the single most common cover
    rejection.
-2. **The barcode corner.** Lower right of the back panel is deliberately
-   empty. Confirm the Previewer's barcode overlay lands on empty artwork and
-   covers nothing.
-3. **The title block.** Sits in the quietest measured band of the artwork.
-   Check nothing in the map runs through a letter at full zoom.
+2. **The barcode corner.** Lower right of the back panel carries a plain light
+   plate. Confirm the Previewer's barcode overlay lands on the plate and covers
+   nothing else.
+3. **The title block.** Is the Founder's artwork. Check nothing in the map runs
+   through a letter at full zoom.
 4. **The back copy.** It sits over a feathered wash drawn from the artwork's
    own parchment tone. Check it reads as *paper*, not as a panel. If it looks
    like a box, say so and it will be softened.
@@ -839,10 +891,11 @@ ships. Full per-image record: `07_ASSETS/GBK02_GAME_ILLUSTRATION_MANIFEST.json`.
 
 ### Interior diagrams — **NOT AI-generated**
 
-This distinction matters and is easy to get wrong. The {len(load(os.path.join(root, '06_REPORTS', 'diagram-render.json'))['diagrams'])} board diagrams
+This distinction matters and is easy to get wrong. The {len(load(os.path.join(root, '06_REPORTS', 'boards.json'))['diagrams'])} board diagrams
+and the {len(load(os.path.join(root, '06_REPORTS', 'boards.json'))['templates'])} full-size boards
 inside the book were **not** produced by an image model. They are drawn by the
-project's own code (`04_BUILD/render_diagrams.py`) from structured data — each
-board is a list of points and edges, and the renderer emits SVG
+project's own code (`04_BUILD/boards.py`) from structured data in each game's
+entry — each board is a list of points, cells and lines, and the renderer emits SVG
 deterministically. The same input produces a byte-identical file on any
 machine. They are vector drawings, not generated images.
 
@@ -885,7 +938,7 @@ interior diagrams are the only images in this book that are not.
 | Cover prompts and selection | `07_ASSETS/IMAGE_PROMPT_LIBRARY.html` · `06_REPORTS/FINAL_COVER_SELECTION.md` |
 | Upscaling method and factors | `06_REPORTS/cover-artwork-intake.json` · `ASSET_UPSCALING_REPORT.md` |
 | Interior hero illustrations, per-game record | `07_ASSETS/GBK02_GAME_ILLUSTRATION_MANIFEST.json` · `06_REPORTS/GBK02_CHATGPT_IMAGE_GENERATION_LOG.md` |
-| Diagrams are code-drawn | `04_BUILD/render_diagrams.py` · `07_ASSETS/diagrams/*.json` |
+| Diagrams are code-drawn | `04_BUILD/boards.py` · each game's `diagramSpecs` in `02_MANUSCRIPT/book.json` |
 | Author biography provenance | `06_REPORTS/AUTHOR_BIO_PROVENANCE.md` |
 """
 
@@ -899,6 +952,9 @@ def run(root, args):
             print("  · %s yok — teslim paketi ATLANDI" % os.path.relpath(p, root))
             return 0
     md, cov, fm = load(md_p), load(cov_p), load(fm_p)
+    _, canon_cov = canonical_covers(root)
+    if canon_cov:
+        cov = canon_cov
     cfg = load(os.path.join(root, "project_config.json"))
     ivis = {}
     kp = os.path.join(root, "06_REPORTS", "kdp-preflight.json")

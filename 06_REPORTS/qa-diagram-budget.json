@@ -1,0 +1,49 @@
+{
+  "status": "fail",
+  "checks": 7,
+  "errors": [
+    "hiçbir OYUN K19 tavanını aşmıyor — 33/63 oyun aşıyor — tablut 401 mm (3 diyagram, tavan 150), pachisi 372 mm (2 diyagram, tavan 150), rimau-rimau 325 mm (2 diyagram, tavan 150), xiangqi 210 mm (2 diyagram, tavan 150), janggi 210 mm (2 diyagram, tavan 150) … (+28)"
+  ],
+  "facts": {
+    "printedDiagrams": 121,
+    "games": 63,
+    "overBudgetGames": 33,
+    "limitMm": 150.0,
+    "maxGameMm": 400.8,
+    "overBudget": [
+      "tablut 401 mm (3 diyagram, tavan 150)",
+      "pachisi 372 mm (2 diyagram, tavan 150)",
+      "rimau-rimau 325 mm (2 diyagram, tavan 150)",
+      "xiangqi 210 mm (2 diyagram, tavan 150)",
+      "janggi 210 mm (2 diyagram, tavan 150)",
+      "hnefatafl 209 mm (2 diyagram, tavan 150)",
+      "turkish-dama 208 mm (2 diyagram, tavan 150)",
+      "jeu-de-dames 208 mm (2 diyagram, tavan 150)",
+      "fanorona 206 mm (3 diyagram, tavan 150)",
+      "go 203 mm (2 diyagram, tavan 150)",
+      "chaturanga 198 mm (2 diyagram, tavan 150)",
+      "ashta-kashte 198 mm (2 diyagram, tavan 150)",
+      "shogi 193 mm (2 diyagram, tavan 150)",
+      "sittuyin 193 mm (2 diyagram, tavan 150)",
+      "shatranj 193 mm (2 diyagram, tavan 150)",
+      "patolli 193 mm (2 diyagram, tavan 150)",
+      "hasami-shogi 193 mm (2 diyagram, tavan 150)",
+      "li-b-el-merafib 193 mm (2 diyagram, tavan 150)",
+      "fox-and-geese 188 mm (2 diyagram, tavan 150)",
+      "seega 186 mm (2 diyagram, tavan 150)",
+      "demala-diviyan-keliya 186 mm (2 diyagram, tavan 150)",
+      "zohn-ahl 183 mm (2 diyagram, tavan 150)",
+      "nerenchi 179 mm (2 diyagram, tavan 150)",
+      "nine-mens-morris 178 mm (2 diyagram, tavan 150)",
+      "achi 178 mm (2 diyagram, tavan 150)",
+      "set-dilth 174 mm (2 diyagram, tavan 150)",
+      "sugoroku 172 mm (2 diyagram, tavan 150)",
+      "yut-nori 169 mm (2 diyagram, tavan 150)",
+      "catch-the-hare 167 mm (2 diyagram, tavan 150)",
+      "dara 164 mm (2 diyagram, tavan 150)",
+      "mefuvha 154 mm (2 diyagram, tavan 150)",
+      "mu-torere 153 mm (2 diyagram, tavan 150)",
+      "alquerque 152 mm (2 diyagram, tavan 150)"
+    ]
+  }
+}

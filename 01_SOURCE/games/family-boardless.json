@@ -13,6 +13,9 @@
       "gameId": "hopscotch",
       "name": "Hopscotch",
       "altNames": [
+        "Hop-score",
+        "Beds",
+        "Scotch-hob",
         "Scotch-hoppers",
         "Rayuela",
         "Marelle",
@@ -102,8 +105,8 @@
       "gameId": "morra",
       "name": "Morra",
       "altNames": [
-        "Micatio",
-        "Mora"
+        "Mora",
+        "Micatio"
       ],
       "culture": "Italian",
       "region": "Mediterranean",
@@ -182,6 +185,9 @@
       "gameId": "jan-ken",
       "name": "Jan-ken",
       "altNames": [
+        "Ishi-ken",
+        "Rock, paper, scissors",
+        "Jan-ken-pon",
         "Janken",
         "Rock-paper-scissors",
         "Sansukumi-ken"
@@ -266,6 +272,9 @@
       "gameId": "gonggi",
       "name": "Gonggi",
       "altNames": [
+        "Gonggi nori",
+        "Kong-keui",
+        "Jackstones",
         "Gonggingi",
         "Korean jacks"
       ],
@@ -515,6 +524,9 @@
       "gameId": "cats-cradle",
       "name": "Cat's Cradle",
       "altNames": [
+        "Cratch-cradle",
+        "Aya ito tori",
+        "Ssi-teu-ki",
         "String figures (two-player form)"
       ],
       "culture": "English",
@@ -1249,11 +1261,14 @@
       "gameId": "jianzi",
       "name": "Jianzi",
       "altNames": [
+        "Ti jianzi",
+        "T'ek in",
+        "Jegichagi",
         "Shuttlecock kicking",
         "Da cau",
         "Chapteh"
       ],
-      "culture": "Han Chinese",
+      "culture": "Chinese",
       "region": "East Asia",
       "countryOrArea": "China (and across South-East Asia)",
       "period": "documented from at least the Han period; still played",
@@ -1572,6 +1587,8 @@
       "gameId": "conkers",
       "name": "Conkers",
       "altNames": [
+        "Conquerors",
+        "Cogger",
         "Obblyonker"
       ],
       "culture": "English",

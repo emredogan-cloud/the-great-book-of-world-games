@@ -18,8 +18,11 @@ _RULES = (
     (r"(?<![A-Za-zÀ-ÿ0-9])'(?=[A-Za-zÀ-ÿ])", "‘"),
     # don’t — harfler arasında
     (r"(?<=[A-Za-zÀ-ÿ])'(?=[A-Za-zÀ-ÿ])", "’"),
-    # pieces’ — harf/rakamdan sonra, boşluk ya da noktalamadan önce
-    (r"(?<=[A-Za-zÀ-ÿ0-9])'(?=\s|$|[,.;:!?)\]])", "’"),
+    # pieces’ — harf/rakamdan sonra, boşluk ya da noktalamadan önce.
+    # İç içe alıntı da buradan kapanır: “The Malagasy Game of 'Fanorona'” — tek
+    # tırnak çift tırnağın hemen önünde biter (GBK-02, 2026-09-26: kural bunu
+    # görmüyordu ve kaynak künyesi dizgide YÜKSELİYORDU).
+    (r"(?<=[A-Za-zÀ-ÿ0-9])'(?=\s|$|[,.;:!?)\]”\"])", "’"),
     # game.’ ve (Mweso)’ — NOKTALAMANIN ardından gelen kapanış.
     # Üstteki kurallar kendinden önce HARF arıyordu; alıntı bir noktayla
     # ya da parantezle bittiğinde kapanış düz kalıyordu.

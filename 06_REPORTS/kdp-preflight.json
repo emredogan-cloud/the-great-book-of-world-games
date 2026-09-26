@@ -6,24 +6,40 @@
   "paperback": {
    "fonts": [
     {
-     "name": "AAAAAA+LiberationSerif-Bold",
+     "name": "AAAAAA+Cinzel500",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif-Italic",
+     "name": "AAAAAA+SourceSerif4-It",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif",
+     "name": "AAAAAA+SourceSerif4-Regular",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif-BoldItalic",
+     "name": "AAAAAA+SourceSans3-Regular",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+SourceSans3-Bold",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+SourceSans3-It",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+SourceSans3-Semibold",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+SourceSerif4-Bold",
      "embedded": true
     }
    ],
    "geometry": {
-    "pages": 172,
+    "pages": 258,
     "sizes": [
      [
       612.0,
@@ -33,58 +49,64 @@
    },
    "ink": {
     "worstMarginIn": {
-     "gutterIn": 0.54,
-     "outerIn": 0.49,
-     "topIn": 0.36,
-     "bottomIn": 0.3467
+     "gutterIn": 0.68,
+     "outerIn": 0.8033,
+     "topIn": 0.4633,
+     "bottomIn": 0.4633
     },
     "requiredGutterIn": 0.5,
     "blankPages": [
      2,
-     32,
-     46,
-     74,
-     94,
-     124,
-     132,
-     150,
-     152,
-     156,
-     158,
-     164
+     13
     ]
    },
    "language": {
-    "extractedWords": 71497,
+    "extractedWords": 86950,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
-    "rasterImages": 63
+    "rasterImages": 73
    },
-   "pageCount": 172
+   "pageCount": 258
   },
   "hardcover": {
    "fonts": [
     {
-     "name": "AAAAAA+LiberationSerif-Bold",
+     "name": "AAAAAA+Cinzel500",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif-Italic",
+     "name": "AAAAAA+SourceSerif4-It",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif",
+     "name": "AAAAAA+SourceSerif4-Regular",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif-BoldItalic",
+     "name": "AAAAAA+SourceSans3-Regular",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+SourceSans3-Bold",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+SourceSans3-It",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+SourceSans3-Semibold",
+     "embedded": true
+    },
+    {
+     "name": "AAAAAA+SourceSerif4-Bold",
      "embedded": true
     }
    ],
    "geometry": {
-    "pages": 172,
+    "pages": 258,
     "sizes": [
      [
       594.0,
@@ -94,57 +116,48 @@
    },
    "ink": {
     "worstMarginIn": {
-     "gutterIn": 0.6633,
-     "outerIn": 0.49,
-     "topIn": 0.36,
-     "bottomIn": 0.3467
+     "gutterIn": 0.6533,
+     "outerIn": 0.58,
+     "topIn": 0.4633,
+     "bottomIn": 0.4633
     },
     "requiredGutterIn": 0.5,
     "blankPages": [
      2,
-     32,
-     46,
-     74,
-     94,
-     124,
-     132,
-     150,
-     152,
-     156,
-     158
+     13
     ]
    },
    "language": {
-    "extractedWords": 71499,
+    "extractedWords": 86950,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
-    "rasterImages": 63
+    "rasterImages": 73
    },
-   "pageCount": 172
+   "pageCount": 258
   },
   "largeprint": {
    "fonts": [
     {
-     "name": "AAAAAA+LiberationSerif-Bold",
+     "name": "AAAAAA+SourceSans3-Bold",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif-Italic",
+     "name": "AAAAAA+SourceSans3-Regular",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif-BoldItalic",
+     "name": "AAAAAA+SourceSans3-It",
      "embedded": true
     },
     {
-     "name": "AAAAAA+LiberationSerif",
+     "name": "AAAAAA+SourceSans3-Semibold",
      "embedded": true
     }
    ],
    "geometry": {
-    "pages": 272,
+    "pages": 498,
     "sizes": [
      [
       612.0,
@@ -154,34 +167,25 @@
    },
    "ink": {
     "worstMarginIn": {
-     "gutterIn": 0.5333,
-     "outerIn": 0.4867,
-     "topIn": 0.3167,
-     "bottomIn": 0.3467
+     "gutterIn": 0.6567,
+     "outerIn": 0.8367,
+     "topIn": 0.3767,
+     "bottomIn": 0.38
     },
-    "requiredGutterIn": 0.5,
+    "requiredGutterIn": 0.625,
     "blankPages": [
-     2,
-     6,
-     10,
-     18,
-     150,
-     204,
-     240,
-     260,
-     264,
-     272
+     498
     ]
    },
    "language": {
-    "extractedWords": 71624,
+    "extractedWords": 87432,
     "turkishHits": [],
     "typewriterQuotes": []
    },
    "images": {
-    "rasterImages": 63
+    "rasterImages": 73
    },
-   "pageCount": 272
+   "pageCount": 498
   }
  }
 }

@@ -12,13 +12,13 @@
     "family_counts": {
       "sowing": 20,
       "hunt-siege": 21,
-      "race": 24,
+      "race": 25,
       "territory": 20,
       "war-board": 25,
-      "chance": 22,
+      "chance": 21,
       "boardless": 22
     },
-    "cultures": 89,
+    "cultures": 91,
     "candidates": 154,
     "dropped": 7
   }

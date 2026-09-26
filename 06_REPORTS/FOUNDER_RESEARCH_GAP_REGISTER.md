@@ -76,8 +76,8 @@ kamusal alan derlemelerindedir ve ajan bunları kurucu beklemeden yazar.
 | The War Board | 21 | 14 | 2 | **5** | 7 | `████████····` 67% |
 | The Sowing Games | 14 | 10 | 0 | **4** | 4 | `████████····` 71% |
 | The Hunt and the Siege | 10 | 6 | 0 | **4** | 4 | `███████·····` 60% |
-| The Race Home | 18 | 13 | 2 | **3** | 5 | `████████····` 72% |
-| Chance and Nerve | 4 | 3 | 0 | **1** | 1 | `█████████···` 75% |
+| The Race Home | 19 | 14 | 2 | **3** | 5 | `████████····` 74% |
+| Chance and Nerve | 3 | 2 | 0 | **1** | 1 | `████████····` 67% |
 
 > **Ekim ailesi kitabın en büyük açığıdır ve tek bir sebebi vardır:**
 > on iki maddenin on ikisi de Murray · Bell · Zaslavsky · Russ ·
@@ -89,7 +89,7 @@ kamusal alan derlemelerindedir ve ajan bunları kurucu beklemeden yazar.
 
 ## 4 · KÜLTÜR VE BÖLGE AÇIĞI
 
-Kapsam **68 kültür** vaat ediyor; yazılan **27**. Kalan **21 kültürün**
+Kapsam **68 kültür** vaat ediyor; yazılan **27**. Kalan **24 kültürün**
 tamamı bu kayıttaki maddelerdedir — yani bu kayıt çözülmezse kitap
 kültür vaadini **68'de değil 27'de** kapatır.
 
@@ -188,13 +188,13 @@ compositeScore = unlockEase        (0–5 · açık cetvel, aşağıda)
 | 11 | **Shax** `shax` | The Line and the Territory | Somali | A | **18.4** | `BLOCKED` | `P1` |
 | 12 | **Tapatan** `tapatan` | The Line and the Territory | Tagalog | A | **18.4** | `BLOCKED` | `P2` |
 | 13 | **Adji-boto** `adji-boto` | The Sowing Games | Ndyuka Maroon | C | **17.4** | `SOURCE-PENDING` | `P2` |
-| 14 | **Daldøs** `daldos` | The Race Home | Danish | C | **17.4** | `SOURCE-PENDING` | `P2` |
-| 15 | **Sungka** `sungka` | The Sowing Games | Visayan | A | **17.4** | `SOURCE-PENDING` | `P2` |
+| 14 | **Sungka** `sungka` | The Sowing Games | Visayan | A | **17.4** | `SOURCE-PENDING` | `P2` |
+| 15 | **Daldøs** `daldos` | The Race Home | Danish | C | **17.3** | `SOURCE-PENDING` | `P2` |
 | 16 | **Len Choa** `len-choa` | The Hunt and the Siege | Thai | A | **17.0** | `BLOCKED` | `P1` |
 | 17 | **Zamma** `zamma` | The War Board | Amazigh | C | **16.7** | `SOURCE-PENDING` | `P2` |
-| 18 | **The Game of the Goose** `game-of-the-goose` | The Race Home | Italian | E | **16.4** | `SOURCE-PENDING` | `P1` |
-| 19 | **Nard** `nard` | The Race Home | Persian | C | **16.4** | `SOURCE-PENDING` | `P2` |
-| 20 | **Toguz Kumalak** `toguz-kumalak` | The Sowing Games | Kazakh | D | **16.4** | `BLOCKED` | `P1` |
+| 18 | **Toguz Kumalak** `toguz-kumalak` | The Sowing Games | Kazakh | D | **16.4** | `BLOCKED` | `P1` |
+| 19 | **The Game of the Goose** `game-of-the-goose` | The Race Home | Italian | E | **16.3** | `SOURCE-PENDING` | `P1` |
+| 20 | **Nard** `nard` | The Race Home | Persian | C | **16.3** | `SOURCE-PENDING` | `P2` |
 | 21 | **Halatafl** `halatafl` | The Hunt and the Siege | Icelandic | E | **16.0** | `BLOCKED` | `P3` |
 | 22 | **Makruk** `makruk` | The War Board | Thai | E | **15.7** | `BLOCKED` | `P1` |
 | 23 | **Surakarta** `surakarta` | The War Board | Javanese | D | **15.7** | `UNRESOLVED` | `P5` |
@@ -202,10 +202,10 @@ compositeScore = unlockEase        (0–5 · açık cetvel, aşağıda)
 | 25 | **Lagori** `lagori` | Games Without a Board | Kannada | E | **15.5** | `BLOCKED` | `P2` |
 | 26 | **Myinda** `myinda` | Games Without a Board | Ancient Greek | E | **15.5** | `BLOCKED` | `P1` |
 | 27 | **Twelve Men's Morris** `twelve-mens-morris` | The Line and the Territory | Medieval European | E | **15.4** | `BLOCKED` | `P1` |
-| 28 | **Kho Kho** `kho-kho` | Games Without a Board | Marathi | E | **14.5** | `BLOCKED` | `P2` |
-| 29 | **Luk Tsut K'i** `luk-tsut-kei` | The Line and the Territory | Cantonese | E | **14.4** | `BLOCKED` | `P2` |
-| 30 | **Terni Lapilli** `terni-lapilli` | The Line and the Territory | Roman | E | **14.4** | `BLOCKED` | `P6` |
-| 31 | **Mahjong** `mahjong` | Chance and Nerve | Han Chinese | C | **14.2** | `BLOCKED` | `P1` |
+| 28 | **Mahjong** `mahjong` | Chance and Nerve | Han Chinese | C | **14.7** | `BLOCKED` | `P1` |
+| 29 | **Kho Kho** `kho-kho` | Games Without a Board | Marathi | E | **14.5** | `BLOCKED` | `P2` |
+| 30 | **Luk Tsut K'i** `luk-tsut-kei` | The Line and the Territory | Cantonese | E | **14.4** | `BLOCKED` | `P2` |
+| 31 | **Terni Lapilli** `terni-lapilli` | The Line and the Territory | Roman | E | **14.4** | `BLOCKED` | `P6` |
 
 ---
 
@@ -1070,74 +1070,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 14 · Daldøs
-
-| | |
-|---|---|
-| **GAME ID** | `daldos` |
-| **TITLE** | Daldøs |
-| **ALTERNATE NAME(S)** | Daldøsa, Sáhkku (related) |
-| **CULTURE** | Danish |
-| **REGION** | Northern Europe · Jutland, Denmark · south-west Norway |
-| **FAMILY** | The Race Home |
-| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 17.4 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye (Parlett) engelli.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Michaelsen · Board Game Studies — HİÇ denenmedi
-- Parlett proje genelinde DENENDİ ve açılamadı
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Uzmanlık makaleleri — tek oyunu açan dar künyeler
-- Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)
-
-**WHAT WAS MISSING**
-
-Kural metni: tahta biçimi, dört yüzlü çubuk zar, taş hareketi, alma.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi
-2. Daldøs ile Sámi sáhkku arasındaki ilişkiyi TARTIŞAN ama KÖKEN İDDİASI YAPMAYAN bir kaynak (kayıt bu iddiayı açıkça yasaklıyor)
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — Board Game Studies makalesi PDF'i + Danimarka müze nesne kaydı.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/daldos/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `Michaelsen daldøs Board Game Studies PDF`
-- `"daldøs" OR "daldosa" game rules Denmark`
-- `sáhkku daldøs Nordic race game scholarship`
-
----
-
-### 15 · Sungka
+### 14 · Sungka
 
 | | |
 |---|---|
@@ -1201,6 +1134,73 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 - `Culin "Philippine Games" American Anthropologist 1900 archive.org`
 - `American Anthropologist volume 2 1900 full text archive`
 - `"sungka" Visayan Philippine mancala rules Culin`
+
+---
+
+### 15 · Daldøs
+
+| | |
+|---|---|
+| **GAME ID** | `daldos` |
+| **TITLE** | Daldøs |
+| **ALTERNATE NAME(S)** | Daldøsa, Sáhkku (related) |
+| **CULTURE** | Danish |
+| **REGION** | Northern Europe · Jutland, Denmark · south-west Norway |
+| **FAMILY** | The Race Home |
+| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
+| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 17.3 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye (Parlett) engelli.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Michaelsen · Board Game Studies — HİÇ denenmedi
+- Parlett proje genelinde DENENDİ ve açılamadı
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Uzmanlık makaleleri — tek oyunu açan dar künyeler
+- Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)
+
+**WHAT WAS MISSING**
+
+Kural metni: tahta biçimi, dört yüzlü çubuk zar, taş hareketi, alma.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi
+2. Daldøs ile Sámi sáhkku arasındaki ilişkiyi TARTIŞAN ama KÖKEN İDDİASI YAPMAYAN bir kaynak (kayıt bu iddiayı açıkça yasaklıyor)
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+```
+
+**IDEAL EVIDENCE** — Board Game Studies makalesi PDF'i + Danimarka müze nesne kaydı.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/daldos/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `Michaelsen daldøs Board Game Studies PDF`
+- `"daldøs" OR "daldosa" game rules Denmark`
+- `sáhkku daldøs Nordic race game scholarship`
 
 ---
 
@@ -1338,142 +1338,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 18 · The Game of the Goose
-
-| | |
-|---|---|
-| **GAME ID** | `game-of-the-goose` |
-| **TITLE** | The Game of the Goose |
-| **ALTERNATE NAME(S)** | Giuoco dell'Oca, Jeu de l'oie |
-| **CULTURE** | Italian |
-| **REGION** | Southern Europe · Italy |
-| **FAMILY** | The Race Home |
-| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
-| **SECONDARY BLOCKERS** | — |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik E · puan 16.4 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Her iki künye de telif altındadır; biri (Parlett) DENENDİ ve açılamadı, öteki (Seville 2019) hiç denenmedi.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Parlett DENENDİ ve açılamadı
-- Seville 2019 — HİÇ denenmedi
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)
-- Uzmanlık makaleleri — tek oyunu açan dar künyeler
-
-**WHAT WAS MISSING**
-
-Kanonik 63 haneli izin hane hane anlamı ve ceza kuralları.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR
-2. 63 hanenin kanonik listesi: kaz haneleri, köprü, han, kuyu, labirent, hapishane, ölüm ve her birinin cezası
-3. Fazla atışın geri sayılması kuralı
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — AUP açık erişim PDF'i ya da bir dönem oyun tahtasının müze künyesi + basılı kural metni.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/game-of-the-goose/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `Seville "Cultural Legacy of the Royal Game of the Goose" open access PDF`
-- `"game of the goose" 63 spaces rules historical`
-- `giuoco dell'oca regole storiche 63`
-
----
-
-### 19 · Nard
-
-| | |
-|---|---|
-| **GAME ID** | `nard` |
-| **TITLE** | Nard |
-| **ALTERNATE NAME(S)** | Nardshir, Takhteh nard |
-| **CULTURE** | Persian |
-| **REGION** | West Asia · Iran |
-| **FAMILY** | The Race Home |
-| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
-| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
-| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 16.4 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Birincil künye engelli (Murray 1952); ikinci künye bir Orta Farsça ANLATIDIR (Wizārišn ī Chatrang), kural metni değil, ve hiç denenmedi.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
-- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
-- Murray 1952 DENENDİ ve açılamadı
-- Wizārišn ī Chatrang ud Nihišn ī Nēw-Ardaxšīr — HİÇ denenmedi
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
-
-**WHAT WAS MISSING**
-
-Nard'ın DÖNEM kural metni: tahta, taş sayısı, zar, iz yönü, alma, bitiş.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma
-2. Wizārišn ī Chatrang'ın çevirisi — oyunun kozmolojik çerçevesi için (kültürel hikâye bölümüne girer)
-3. KARAR MALZEMESİ: nard, tabula ve tavla kitapta ÜÇ ayrı madde mi olmalı? Kayıt tekrar riskini işaretliyor
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
-```
-
-**IDEAL EVIDENCE** — Bir Fars/Arap oyun tarihi çalışması ki hem kuralı hem kozmolojik çerçeveyi versin.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/nard/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `"nard" Persian backgammon medieval rules text`
-- `Wizarisn i Chatrang translation nard chess Middle Persian`
-- `nardshir medieval Arabic backgammon rules scholarship`
-
----
-
-### 20 · Toguz Kumalak
+### 18 · Toguz Kumalak
 
 | | |
 |---|---|
@@ -1536,6 +1401,141 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 - `"toguz kumalak" OR "togyz kumalak" rules tuzdyk Kazakh`
 - `toguz korgool Kyrgyz Kazakh mancala historical rules`
+
+---
+
+### 19 · The Game of the Goose
+
+| | |
+|---|---|
+| **GAME ID** | `game-of-the-goose` |
+| **TITLE** | The Game of the Goose |
+| **ALTERNATE NAME(S)** | Giuoco dell'Oca, Jeu de l'oie |
+| **CULTURE** | Italian |
+| **REGION** | Southern Europe · Italy |
+| **FAMILY** | The Race Home |
+| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
+| **SECONDARY BLOCKERS** | — |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik E · puan 16.3 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Her iki künye de telif altındadır; biri (Parlett) DENENDİ ve açılamadı, öteki (Seville 2019) hiç denenmedi.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Parlett DENENDİ ve açılamadı
+- Seville 2019 — HİÇ denenmedi
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)
+- Uzmanlık makaleleri — tek oyunu açan dar künyeler
+
+**WHAT WAS MISSING**
+
+Kanonik 63 haneli izin hane hane anlamı ve ceza kuralları.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR
+2. 63 hanenin kanonik listesi: kaz haneleri, köprü, han, kuyu, labirent, hapishane, ölüm ve her birinin cezası
+3. Fazla atışın geri sayılması kuralı
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+```
+
+**IDEAL EVIDENCE** — AUP açık erişim PDF'i ya da bir dönem oyun tahtasının müze künyesi + basılı kural metni.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/game-of-the-goose/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `Seville "Cultural Legacy of the Royal Game of the Goose" open access PDF`
+- `"game of the goose" 63 spaces rules historical`
+- `giuoco dell'oca regole storiche 63`
+
+---
+
+### 20 · Nard
+
+| | |
+|---|---|
+| **GAME ID** | `nard` |
+| **TITLE** | Nard |
+| **ALTERNATE NAME(S)** | Nardshir, Takhteh nard |
+| **CULTURE** | Persian |
+| **REGION** | West Asia · Iran |
+| **FAMILY** | The Race Home |
+| **PRIMARY BLOCKER** | `P2` — SOURCE TEXT UNAVAILABLE |
+| **SECONDARY BLOCKERS** | `P1` SOURCE ACCESS BLOCKED |
+| **CURRENT STATUS** | `SOURCE-PENDING` · kısıt taraması: `open` · öncelik C · puan 16.3 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Birincil künye engelli (Murray 1952); ikinci künye bir Orta Farsça ANLATIDIR (Wizārišn ī Chatrang), kural metni değil, ve hiç denenmedi.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok
+- Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor
+- Murray 1952 DENENDİ ve açılamadı
+- Wizārišn ī Chatrang ud Nihišn ī Nēw-Ardaxšīr — HİÇ denenmedi
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)
+
+**WHAT WAS MISSING**
+
+Nard'ın DÖNEM kural metni: tahta, taş sayısı, zar, iz yönü, alma, bitiş.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma
+2. Wizārišn ī Chatrang'ın çevirisi — oyunun kozmolojik çerçevesi için (kültürel hikâye bölümüne girer)
+3. KARAR MALZEMESİ: nard, tabula ve tavla kitapta ÜÇ ayrı madde mi olmalı? Kayıt tekrar riskini işaretliyor
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] region  [ ] attribution  [ ] historical context
+```
+
+**IDEAL EVIDENCE** — Bir Fars/Arap oyun tarihi çalışması ki hem kuralı hem kozmolojik çerçeveyi versin.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/nard/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `"nard" Persian backgammon medieval rules text`
+- `Wizarisn i Chatrang translation nard chess Middle Persian`
+- `nardshir medieval Arabic backgammon rules scholarship`
 
 ---
 
@@ -2009,7 +2009,73 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 28 · Kho Kho
+### 28 · Mahjong
+
+| | |
+|---|---|
+| **GAME ID** | `mahjong` |
+| **TITLE** | Mahjong |
+| **ALTERNATE NAME(S)** | Majiang |
+| **CULTURE** | Han Chinese |
+| **REGION** | East Asia · China |
+| **FAMILY** | Chance and Nerve |
+| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
+| **SECONDARY BLOCKERS** | `P7` VARIANT CONFLICT |
+| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik C · puan 14.7 |
+
+**WHY THE AGENT CANNOT WRITE IT**
+
+Kaynak DENENDİ ve erişilemedi. Ayrıca puanlama sistemleri bölgeye göre TAMAMEN farklıdır: doğrulanmamış bir kaynaktan tek sistem seçmek, seçimin GEREKÇESİNİ de doğrulanamaz kılar.
+
+**WHAT HAS ALREADY BEEN CHECKED**
+
+- Parlett 1999 DENENDİ — telif altında, açık tam metin yok (2026-08-13)
+- Foster's Complete Hoyle 1897 tarandı — mahjong yok (Batch 4 avı)
+
+**WHAT SOURCE WAS ATTEMPTED**
+
+- Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)
+- Uzmanlık makaleleri — tek oyunu açan dar künyeler
+
+**WHAT WAS MISSING**
+
+Tek bir DETERMİNİSTİK ruleset ve onun künyesi.
+
+**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
+
+1. 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir)
+2. Ya da: kitabın basacağı ruleset için kurucu KARARI + o rulesetin künyesi
+3. Puanlamanın sadeleştirilebileceği bir temel biçim (§ K19 sayfa bütçesi: madde 650 kelimeye SIĞMIYOR ve dört sayfa isteyebilir)
+
+**MINIMUM ACCEPTABLE EVIDENCE**
+
+```
+RULE EVIDENCE
+  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
+SOURCE EVIDENCE
+  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
+CULTURAL EVIDENCE
+  [ ] culture identity  [ ] attribution
+```
+
+**IDEAL EVIDENCE** — 1920'lerin kamusal alandaki bir kural kitabı + hangi bölgesel sistemin basılacağına dair açık bir gerekçe.
+
+**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
+
+**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/mahjong/`
+
+**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
+
+**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
+bu adreslerin var olduğu İDDİA EDİLMEZ)
+
+- `mahjong 1920 rulebook Babcock public domain archive`
+- `"rules for mah-jongg" 1923 archive.org`
+- `Stanwick mahjong origins Playing-Card`
+
+---
+
+### 29 · Kho Kho
 
 | | |
 |---|---|
@@ -2074,7 +2140,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 29 · Luk Tsut K'i
+### 30 · Luk Tsut K'i
 
 | | |
 |---|---|
@@ -2141,7 +2207,7 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 ---
 
-### 30 · Terni Lapilli
+### 31 · Terni Lapilli
 
 | | |
 |---|---|
@@ -2207,72 +2273,6 @@ bu adreslerin var olduğu İDDİA EDİLMEZ)
 
 - `terni lapilli Roman three stone game archaeology reconstruction`
 - `Roman game boards graffiti three in a row scholarship`
-
----
-
-### 31 · Mahjong
-
-| | |
-|---|---|
-| **GAME ID** | `mahjong` |
-| **TITLE** | Mahjong |
-| **ALTERNATE NAME(S)** | Majiang |
-| **CULTURE** | Han Chinese |
-| **REGION** | East Asia · China |
-| **FAMILY** | Chance and Nerve |
-| **PRIMARY BLOCKER** | `P1` — SOURCE ACCESS BLOCKED |
-| **SECONDARY BLOCKERS** | `P7` VARIANT CONFLICT |
-| **CURRENT STATUS** | `BLOCKED` · kısıt taraması: `open` · öncelik C · puan 14.2 |
-
-**WHY THE AGENT CANNOT WRITE IT**
-
-Kaynak DENENDİ ve erişilemedi. Ayrıca puanlama sistemleri bölgeye göre TAMAMEN farklıdır: doğrulanmamış bir kaynaktan tek sistem seçmek, seçimin GEREKÇESİNİ de doğrulanamaz kılar.
-
-**WHAT HAS ALREADY BEEN CHECKED**
-
-- Parlett 1999 DENENDİ — telif altında, açık tam metin yok (2026-08-13)
-- Foster's Complete Hoyle 1897 tarandı — mahjong yok (Batch 4 avı)
-
-**WHAT SOURCE WAS ATTEMPTED**
-
-- Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)
-- Uzmanlık makaleleri — tek oyunu açan dar künyeler
-
-**WHAT WAS MISSING**
-
-Tek bir DETERMİNİSTİK ruleset ve onun künyesi.
-
-**RESEARCH REQUEST — EXACTLY WHAT THE FOUNDER MUST FIND**
-
-1. 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir)
-2. Ya da: kitabın basacağı ruleset için kurucu KARARI + o rulesetin künyesi
-3. Puanlamanın sadeleştirilebileceği bir temel biçim (§ K19 sayfa bütçesi: madde 650 kelimeye SIĞMIYOR ve dört sayfa isteyebilir)
-
-**MINIMUM ACCEPTABLE EVIDENCE**
-
-```
-RULE EVIDENCE
-  [ ] setup  [ ] player count  [ ] materials  [ ] board / topology  [ ] first move  [ ] legal moves  [ ] turn order  [ ] capture  [ ] objective  [ ] end condition  [ ] scoring  [ ] draw condition  [ ] variants
-SOURCE EVIDENCE
-  [ ] author  [ ] title  [ ] edition  [ ] publication year  [ ] exact page  [ ] stable locator
-CULTURAL EVIDENCE
-  [ ] culture identity  [ ] attribution
-```
-
-**IDEAL EVIDENCE** — 1920'lerin kamusal alandaki bir kural kitabı + hangi bölgesel sistemin basılacağına dair açık bir gerekçe.
-
-**EXPECTED FILE FORMAT** — PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ
-
-**EXPECTED SOURCE LOCATION** — `06_FOUNDER_DELIVERY/mahjong/`
-
-**HOW THE AGENT WILL USE THE DELIVERY** — 04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI
-
-**SEARCH PATTERNS** (bunlar birer STRATEJİDİR, kanıt değil —
-bu adreslerin var olduğu İDDİA EDİLMEZ)
-
-- `mahjong 1920 rulebook Babcock public domain archive`
-- `"rules for mah-jongg" 1923 archive.org`
-- `Stanwick mahjong origins Playing-Card`
 
 ---
 

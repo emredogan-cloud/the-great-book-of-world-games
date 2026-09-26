@@ -1,7 +1,8 @@
 # The Great Book of World Games
 
-**63 Games from 4,600 Years of Human Play — Rules, Boards and Stories
-from 45 Cultures, Ready to Play Tonight**
+**63 Games from 5,000 Years of Human Play — Rules, Boards and Stories from 42 Cultures, Ready to Play Tonight**
+
+> Canlı KDP kayıtlarında tescilli alt başlık hâlâ *63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight* biçimindedir. KDP basılı bir kitabın alt başlığını kilitler; ölçülen alt başlığı basmak yeni bir baskı ister (kurucu kararı).
 
 > Alt başlık `02_MANUSCRIPT/frontmatter.json § measured` içinden basılır ve
 > **ölçülen** değerdir. Kapsam modeli hâlâ 100 oyun/45 kültür hipotezini

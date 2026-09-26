@@ -1,76 +1,113 @@
 # -*- coding: utf-8 -*-
-"""ÖN MADDE VE AİLE AÇILIŞLARI — Faz 6 teslimatı.
+"""FRONT MATTER AND FAMILY OPENERS — 2026 recovery edition.
 
-EDITORIAL_ARCHITECTURE § 1 ön maddeyi 14 sayfa, aile açılışlarını 7×2 sayfa
-diye modeller. Faz 5 kapanışı ikisini de YAZILMAMIŞ olarak devretti.
+Hand-written text. Numbers are never typed here: «games», «cultures» and the
+rest are MEASURED by build_frontmatter.py from the manuscript and substituted
+at build time. {page:key} references are resolved by interior.py from the
+page map of the book being printed. A paragraph given as a dict carries one
+text per edition ("print" = paperback and hardcover; "largeprint";
+"kindle"): a sentence that is true of one edition must not be printed in
+another (audit WG-007).
+
+Corrections made in this revision, with the audit reference:
+  WG-008  the truncated sentence in On Sources is restored;
+  WG-009  the merels board and the alquerque board are no longer conflated;
+  WG-010/011  Ur is the oldest game with (reconstructed) rules, not the oldest
+          game; the Babylonian writer is a scribe;
+  WG-001  the full-size boards now exist, and every sentence about them says
+          exactly what is printed and what is online;
+  WG-002  the source claim is stated as it now is: page (or, for a modern
+          codified ruleset, section) for every game;
+  WG-030  family VI is redefined and renamed; Set-dilth moves to the race family;
+  WG-031/032/048  the family openers are proofed against their own entries;
+  F-E3    the Isle of Man record is dated 1695 and the cloister claims narrowed.
 """
 
 INTRO = {
  "id": "introduction",
  "title": "Why We Play",
  "paragraphs": [
-  "Go into almost any English cathedral that was once a monastery and look "
-  "down at the stone benches in the cloister. Somewhere along them, worn "
-  "shallow by centuries of weather and hands, you will find a diagram: three "
-  "squares inside one another, joined across the middle of each side. It is "
-  "a merels board. Monks cut it into the seat where they were meant to sit "
-  "in silence, and then they played on it. At Westminster Abbey the holes of "
-  "the smaller game are exceptionally deep, which tells you how much use they "
-  "got. In 1699 a church court on the Isle of Man punished two men for making "
-  "nine holes with their knives after evening prayers.",
+  "Go into one of the English cathedrals that was once a monastery — "
+  "Gloucester, say, or Westminster — and look down at the stone benches in the "
+  "cloister. Worn shallow by centuries of weather and hands, you may find a "
+  "diagram: three squares inside one another, joined across the middle of each "
+  "side. It is a merels board, the board of nine men's morris. Monks and the "
+  "boys they taught cut boards like it into the seats where they were meant to "
+  "sit in silence, and then they played on them. In 1695 the churchwardens of "
+  "Lezayre, on the Isle of Man, reported two men to the church court for "
+  "“making nine holes with their knives” on a Sunday after evening prayer.",
 
   "That is the first thing worth saying about games: people have always found "
-  "the time. The second is stranger. The board those monks cut is the same "
-  "board that Zuni players in New Mexico used for awithlaknannai, that Malay "
-  "players build their tiger games on, and that grew, somewhere in medieval "
-  "Spain, into the game we now call draughts. Nobody planned that. A shape "
-  "with twenty-five points and a rule about jumping turns out to be one of "
-  "the good ideas, and good ideas travel — or, just as often, get found again "
-  "by somebody who never heard of the first person to find them.",
+  "the time. The second is stranger. At Gloucester the same benches carry a "
+  "second board, a cross of thirty-three points on which a fox hunts geese. And "
+  "a third shape — a square of twenty-five points crossed by its diagonals, the "
+  "alquerque of medieval Spain — is the board that Zuni players stretched into "
+  "awithlaknannai and Malay players built their tiger game on, and it is "
+  "usually thought to be the parent of draughts. Nobody planned any of that. A "
+  "shape with a few points and a rule about jumping turns out to be one of the "
+  "good ideas, and good ideas travel — or, just as often, get found again by "
+  "somebody who never heard of the first person to find them.",
 
-  "This book is arranged around that fact. It is not organised by country. "
-  "A book organised by country teaches you geography: here is the India "
-  "chapter, here is the Japan chapter, and here, at the back, is a chapter "
-  "called Africa doing the work of fifty-four countries at once. Arranged "
-  "that way, the most interesting thing about games is invisible. So the "
-  "seven parts of this book are seven ideas about how a game can work, and "
-  "each part collects the games that share the idea, wherever they are from. "
-  "You will meet the sowing games first — a single mechanic that runs from "
-  "Ghana to Sri Lanka to the Caribbean — and you will meet them together, "
-  "which is the only way to see what they have in common and where they part.",
+  "This book is arranged around that fact. It is not organised by country. A "
+  "book organised by country teaches you geography: here is the India chapter, "
+  "here is the Japan chapter, and here, at the back, is a chapter called Africa "
+  "doing the work of fifty-four countries at once. Arranged that way, the most "
+  "interesting thing about games is invisible. So the seven parts of this book "
+  "are seven ideas about how a game can work, and each part collects the games "
+  "that share the idea, wherever they are from. You will meet the sowing games "
+  "first — a single mechanic that runs from Ghana to Sri Lanka — and you will "
+  "meet them together, which is the only way to see what they have in common "
+  "and where they part.",
 
-  "There are sixty-three games here, from forty-five cultures, and the oldest "
-  "of them is about four thousand six hundred years old. That last number is "
-  "not a flourish. It is the Royal Game of Ur, whose boards were buried in "
-  "the graves of the city of Ur around 2600 BC and whose rules survive because "
-  "a Babylonian scribe wrote them on a tablet almost two and a half thousand "
-  "years later. We know how to play it. We do not know how to play a great "
-  "many other games, and where that is the case this book says so on the page "
-  "rather than filling the gap quietly.",
+  "There are «games_word» games here, from «cultures_word» cultures. The oldest "
+  "is senet, whose boards were being made in Egypt around 3000 BC; its rules are "
+  "lost, and the entry says so. The oldest game whose rules have come down to "
+  "us in any form is the Royal Game of Ur: its boards were buried in the royal "
+  "graves of the city of Ur around 2600 BC, and a Babylonian scribe wrote down "
+  "part of its rules on a clay tablet in 177 BC. We can play it today in a "
+  "modern reconstruction built on that tablet. We do not know how to play a "
+  "great many other games, and where that is the case this book says so on the "
+  "page rather than filling the gap quietly.",
 
-  "Sixty-three is also not a round number, and that is deliberate. A game got "
-  "into this book only if a real source could be opened and a complete set of "
-  "rules read out of it: how the board is set up, who moves first, what a "
-  "legal move is, how you win, and how the game ends. Where a source turned "
-  "out to describe a board without describing the play — which happens more "
-  "often than you would think — the game was left out. Eight of the games "
-  "here are marked as reconstructed, which means the record is real but "
-  "incomplete and the book has closed a gap on the evidence available. Those "
-  "eight say so in their own text, in the place where you would need to know.",
+  "«games_word_cap» is not a round number, and that is deliberate. A game got "
+  "into this book only if a real source could be opened and its rules traced to "
+  "a page. Where a source turned out to describe a board without describing the "
+  "play — which happens more often than you would think — the game was left "
+  "out, unless the gap was small enough to close honestly. «recon_word_cap» of "
+  "the games here are marked as reconstructions: the record is genuine but "
+  "incomplete, and each of those entries says, in a box beside the rules, what "
+  "the sources give and what this book has supplied.",
 
-  "What you do with the book is play. Every game is a two-page spread so that "
-  "the book lies open on the table and nobody has to turn a page in the middle "
-  "of a turn. Every game lists what it needs in things you already own: "
-  "buttons, coins, dried beans, a sheet of paper, a pencil. Almost none of "
-  "them needs anything bought. The board templates at the back are drawn full "
-  "size for a photocopier, which is why the book is the shape it is.",
+  {"print": "What you do with the book is play. Every game begins on a left-hand "
+            "page, so that its board and its rules lie open together on the table; "
+            "the longer games carry on over a second pair of pages. Every game "
+            "lists what it needs in things you already own: buttons, coins, dried "
+            "beans, a sheet of paper, a pencil. Almost none of them needs anything "
+            "bought. At the back are full-size boards for «tpl_games_word» of the "
+            "games, drawn at playing size for the photocopier, and the free "
+            "companion pack online has printable boards for every game that needs "
+            "one.",
+   "largeprint": "What you do with the book is play. Every game begins on a new "
+                 "page and sets out its rules in the same order every time. Every "
+                 "game lists what it needs in things you already own: buttons, "
+                 "coins, dried beans, a sheet of paper, a pencil. Almost none of "
+                 "them needs anything bought. At the back are full-size boards for "
+                 "«tpl_games_word» of the games, drawn at playing size for the "
+                 "photocopier, and the free companion pack online has printable "
+                 "boards for every game that needs one.",
+   "kindle": "What you do with the book is play. Every game is a single chapter "
+             "and sets out its rules in the same order every time. Every game "
+             "lists what it needs in things you already own: buttons, coins, dried "
+             "beans, a sheet of paper, a pencil. Almost none of them needs anything "
+             "bought. The free companion pack online has full-size printable boards "
+             "for every game that needs one."},
 
   "One last thing. Play is the oldest evidence we have of people doing "
   "something for no reason but the doing of it. The oldest boards in this book "
-  "were made by people whose language we can barely read and whose gods we "
-  "know only by their statues, and what those boards tell us is that they sat "
-  "down opposite one another and argued about a rule. You are about to do the "
-  "same thing. That is the whole of it."
+  "were made by people whose language we can barely read and whose gods we know "
+  "only by their statues, and what those boards tell us is that they sat down "
+  "opposite one another and argued about a rule. You are about to do the same "
+  "thing. That is the whole of it."
  ]
 }
 
@@ -78,56 +115,90 @@ HOWTO = {
  "id": "how-to-use",
  "title": "How to Use This Book",
  "paragraphs": [
-  "Every game gets two facing pages and always in the same order, so that "
-  "after the second or third game you stop reading the layout and start "
-  "reading the game.",
+  {"print": "Every game is laid out the same way, so that after the second or "
+            "third game you stop reading the layout and start reading the game. "
+            "It begins on a left-hand page with the board and the rules facing "
+            "each other.",
+   "largeprint": "Every game is laid out the same way, so that after the second "
+                 "or third game you stop reading the layout and start reading the "
+                 "game.",
+   "kindle": "Every game is laid out the same way, so that after the second or "
+             "third game you stop reading the layout and start reading the game."}
  ],
  "sections": [
-  {"heading": "The strip at the top",
-   "text": "Players, time, age, materials, difficulty. The age is the age at "
-           "which a child can hold the whole game in their head, not the age "
-           "at which they can push a piece around; a six-year-old can play "
-           "Ashta Kashte properly and will lose Go badly. The time is for one "
-           "game between two people who know the rules."},
-  {"heading": "Materials and substitution",
+  {"heading": "Quick play",
+   "text": "The box at the top: how many play, how long a game takes, the age "
+           "from which a child can hold the whole game in their head, the "
+           "difficulty, what you need and what you are trying to do, then the "
+           "game in two sentences. The time is for one game between players who "
+           "know the rules."},
+  {"heading": "Difficulty",
+   "text": "A five-point scale of how much there is to learn before your first "
+           "game — not how deep the game goes. Go has few rules and scores low; "
+           "it will still take a lifetime. 1 of 5, very easy: one or two "
+           "rules. 2 of 5, easy: learnt in about five minutes. 3 of 5, "
+           "moderate: a full rule set with captures or special squares; play "
+           "a practice game. 4 of 5, demanding: many rules that interact; "
+           "allow a practice game or two. 5 of 5, expert: stages and "
+           "exceptions; expect several practice games."},
+  {"heading": "Background",
+   "text": "Where the game comes from and how we know about it. It is kept apart "
+           "from the rules, so you can skip it at the table and come back to it "
+           "afterwards."},
+  {"heading": "What you need",
    "text": "What the game is traditionally played with, and what you can use "
-           "instead. Buttons for pieces, coins for throwing sticks, dried "
-           "beans and lentils for two colours of stone, an egg box for a "
-           "mancala board. Nothing in this book requires a purchase. Where a "
-           "substitution changes the feel of the game, the text says so."},
-  {"heading": "The numbered rules",
-   "text": "Setup, then how a turn goes, then how pieces move and take, then "
-           "how you win and how the game ends. Each numbered line is one "
-           "action. They are written flat and dry on purpose: a rule you have "
-           "to read twice at the table is a broken rule."},
-  {"heading": "Three questions",
-   "text": "Every game answers the same three: what happens on a draw, what "
-           "happens if nobody can move, and what happens when somebody plays "
-           "an illegal move. These are the three arguments that actually "
-           "break out, and a book that leaves them to the table has not "
-           "finished its job. Where the source does not settle a question, "
-           "the book rules on it and says plainly that the ruling is ours."},
-  {"heading": "An example turn",
-   "text": "One real turn, played out. It is usually the turn that shows the "
-           "one rule people get wrong."},
-  {"heading": "Variants and your first game",
-   "text": "Variants are other recorded forms of the same game, not "
-           "inventions. Your first game is a reduced version to start with — "
-           "a smaller board, fewer pieces, a shorter goal. It is the "
-           "fastest way to teach the game to somebody who has not read the "
-           "page, and with children it is usually the right place to begin."},
-  {"heading": "Sources",
-   "text": "At the foot of the second page, in small type: the work, the "
-           "edition, and the pages the rules came from. Where a game is "
-           "marked reconstructed, the notice sits in the body of the entry "
-           "and not in a footnote, because it changes how you should read "
-           "everything above it."},
-  {"heading": "At the back",
-   "text": "Full-size board templates for the photocopier, a materials guide, "
-           "a glossary of the terms this book uses for mechanics, a "
-           "bibliography, three indexes — by culture, by number of players, "
-           "and by time and age — and one page listing the game origin "
-           "stories that are commonly repeated and are not true."}
+           "instead. Where a substitute changes the feel of the game, the entry "
+           "says so."},
+  {"heading": "Setup and the rules",
+   "text": "Setup, then what you do on your turn, then how pieces move, sow, "
+           "capture or score. Each numbered line is one action. They are written "
+           "flat and dry on purpose: a rule you have to read twice at the table is "
+           "a broken rule."},
+  {"heading": "Ending and winning, and special situations",
+   "text": "When the game ends and who has won, stated so that both players can "
+           "check it. Then the arguments that actually break out: what happens on "
+           "a draw, what happens when a player cannot move, and what happens when "
+           "somebody plays an illegal move. Where the sources do not settle a "
+           "point, the book makes a ruling, marks it with a dagger (†) and says "
+           "so under Sources — so that you know it is ours and can overrule it."},
+  {"heading": "A worked turn",
+   "text": "One real turn, played out from a stated position: what is on the "
+           "board, the move, and what the board looks like afterwards. Where a "
+           "picture helps, it is drawn."},
+  {"heading": "Your first game and the variants",
+   "text": "Your first game is a smaller or simpler version to start with, and "
+           "with children it is usually the right place to begin. Variants are "
+           "other recorded forms of the game; anything that is not a recorded "
+           "form is labelled a house rule."},
+  {"heading": "Reconstruction and sources",
+   "text": "Where the record of a game is incomplete, a box beside the rules says "
+           "what the sources give and what this book supplies. The Sources list "
+           "at the end of each entry names the works the rules were read from and "
+           "the pages; for a modern codified ruleset, such as a federation's "
+           "rulebook, it names the document and the section."},
+  {"heading": "The diagrams",
+   "text": "Black pieces are drawn filled and White pieces open; a ring inside a "
+           "piece marks a king, a general or a hunter. Arrows show moves, dashed "
+           "arrows show a route, and a cross marks a piece captured. Squares and "
+           "points on a grid are named by column letter and row number from the "
+           "first player's side (a1 is the bottom left corner). On sowing boards "
+           "each player counts their own pits from their own left."},
+  {"print": {"heading": "At the back",
+             "text": "Full-size boards for the photocopier and a list of what to "
+                     "gather for a games kit; a glossary of the terms the rules "
+                     "use; the sources; an index of every game under every name "
+                     "it goes by; indexes by culture, age and difficulty (players "
+                     "and playing time are in Tonight's Game at the front); a page "
+                     "of origin stories that are widely repeated and are not true; "
+                     "a note on the illustrations; and the address of the free "
+                     "companion pack."},
+   "kindle": {"heading": "At the back",
+              "text": "A glossary of the terms the rules use; the sources; an "
+                      "index of every game under every name it goes by; indexes "
+                      "by culture, age and difficulty; a page of origin stories "
+                      "that are widely repeated and are not true; a note on the "
+                      "illustrations; and the address of the free companion pack, "
+                      "which has full-size printable boards."}}
  ]
 }
 
@@ -136,122 +207,153 @@ FAMILIES_MAP = {
  "title": "The Seven Families",
  "paragraphs": [
   "Games are sorted here by what they do, not by where they come from. Seven "
-  "ideas cover almost everything people have played on a board or a floor. "
-  "The boundaries between them are not decorative: each family has a rule for "
-  "what belongs in it and a rule for what does not, and a few games sit close "
-  "to a border and are placed with an explanation.",
-  "The test that matters is mechanical. A sowing game and a race game can "
-  "look identical on the table — pieces going round a circuit — but in a race "
-  "one piece travels and in sowing a handful is distributed and no piece has "
-  "an identity at all. That difference changes every decision a player makes, "
-  "so it is the difference the book sorts on."
+  "ideas cover almost everything people have played on a board or a floor. The "
+  "boundaries between them are not decorative: each family has a rule for what "
+  "belongs in it and a rule for what does not, and a few games sit close to a "
+  "border and are placed with an explanation.",
+  "The test that matters is mechanical. A sowing game and a race game can look "
+  "identical on the table — pieces going round a circuit — but in a race one "
+  "piece travels and in sowing a handful is distributed and no piece has an "
+  "identity at all. That difference changes every decision a player makes, so "
+  "it is the difference the book sorts on."
  ],
  "table": [
   {"n": "I", "name": "The Sowing Games",
-   "idea": "A handful of seeds is distributed one to a hollow; where the last "
-           "seed lands decides what happens.",
+   "idea": "A handful of seeds is sown one to a pit; where the last seed lands "
+           "decides what happens.",
    "test": "The seeds belong to nobody while they are on the board."},
   {"n": "II", "name": "The Hunt and the Siege",
    "idea": "Two unequal sides with two different goals: few and strong against "
            "many and weak.",
    "test": "The two sides are not trying to do the same thing."},
   {"n": "III", "name": "The Race Home",
-   "idea": "Pieces travel a fixed track towards a goal, and a lot, throw or "
-           "cast decides how far.",
+   "idea": "Pieces travel a fixed track towards a goal, and a throw decides how "
+           "far.",
    "test": "One piece moves, and the distance is not chosen."},
   {"n": "IV", "name": "The Line and the Territory",
-   "idea": "You win by an arrangement: a row of three, an enclosed area, a "
-           "completed connection.",
-   "test": "Capture is a consequence of the arrangement, not the aim."},
+   "idea": "You win by an arrangement: a row of three, a wall round empty "
+           "ground, or a position that leaves your opponent no move.",
+   "test": "The shape on the board is the aim; capture, where there is any, "
+           "serves it."},
   {"n": "V", "name": "The War Board",
-   "idea": "Two symmetrical sides, the same goal, and capture is a move you "
-           "choose to make.",
+   "idea": "Two symmetrical sides, the same goal, and the game is won by "
+           "capturing or trapping.",
    "test": "Both players could win the same way."},
-  {"n": "VI", "name": "Chance and Nerve",
-   "idea": "A cast decides, and there is no track and no developing position.",
-   "test": "The decision is whether to risk it, not where to go."},
+  {"n": "VI", "name": "Chance and Scoring",
+   "idea": "A throw of bones or a hand of tiles decides, and a score is kept.",
+   "test": "Nothing travels along a track and there is no board position to "
+           "develop."},
   {"n": "VII", "name": "Games Without a Board",
    "idea": "Nothing is needed but hands, voices, string, stones, or a mark "
            "scratched on the ground.",
-   "test": "There is no board and no casting instrument."}
+   "test": "There is no board and no throwing instrument."}
  ],
- "closing": "One family is much smaller here than the others. Chance and Nerve "
-            "has three entries, because a great many games of pure chance are "
-            "gambling games and this book rewrites gambling as scoring "
-            "wherever it appears — and a gambling game with the betting taken "
-            "out is very often no game at all. Where that rewriting has "
-            "happened, the entry says so."
+ "closing":
+  "One family is much smaller than the others. Chance and Scoring has «chance_word» "
+  "entries, because most games of pure chance are gambling games, and this book "
+  "keeps the play and leaves out the stakes — and a gambling game with the "
+  "betting taken out is very often no game at all. Where stakes have been "
+  "removed, the entry says so."
 }
 
 SOURCES_NOTE = {
  "id": "on-sources",
  "title": "On Sources, and What This Book Does Not Know",
  "paragraphs": [
-  "Every game in this book carries a citation, and the citation names the "
-  "pages the rules were read from. That sounds like an ordinary thing for a "
-  "reference book to do. It is not: a great deal of what is published about "
-  "traditional games repeats a rule set that nobody has traced back to "
-  "anything, and the repetition is what makes it look reliable.",
+  "Every game in this book names the work its rules were read from, and the "
+  "pages. For the «codified_word» games whose rules today are a codified modern "
+  "set — international draughts, for instance, or the Japanese rules of shogi — "
+  "the citation names the rulebook and the section instead, because that is "
+  "where the rule now lives. That sounds like an ordinary thing for a reference "
+  "book to do. It is not: a great deal of what is published about traditional "
+  "games repeats a rule set that nobody has traced back to anything, and the "
+  "repetition is what makes it look reliable.",
   "So the test used here is narrow. A source counts if it was opened, if the "
   "page was read, and if the rules on that page are complete enough to play "
-  "from. Where a source turned out to name a game without describing it — "
-  "Murray on Tapatan, for instance, who gives a line and a citation and no "
-  "rules — the game is not in this book. Where a source gives a board and no "
-  "That is why the number of games here is sixty-three and not a hundred: "
-  "thirty-seven games were put back when the sources dissolved under inspection.",
-  "Eight games are marked reconstructed. It means the record is genuine but "
-  "has a hole in it, and the book has filled the hole with the best available "
-  "reasoning rather than leaving the game unplayable. The notice appears in "
-  "the entry itself and says which part is reconstructed. A book that "
+  "from — or, where they are not, if the gap is small enough to close honestly "
+  "and the closing is labelled. Where a source turned out to name a game "
+  "without describing it — Murray on Tapatan, for instance, who gives a line and "
+  "a citation and no rules — the game is not in this book. Where a source gives "
+  "a board and no rules for it, the game is not here either. That is why the "
+  "number of games here is «games_word» and not a hundred.",
+  "«recon_word_cap» games are marked as reconstructions. It means the record is "
+  "genuine but has a hole in it, and the book has filled the hole with the best "
+  "available reasoning rather than leaving the game unplayable. A box beside the "
+  "rules says what the sources give and what the book supplies, and names the "
+  "scholar whose reconstruction is followed where there is one. A book that "
   "reconstructs quietly is not a reference book.",
-  "Some of the games here also have a rule that no source supplies at all — "
-  "most often the draw. Traditional play does not always define one, because "
-  "traditional play has a room full of people who settle it. Where the book "
-  "supplies such a rule it says so in the same sentence, so that you can "
-  "overrule it. You are allowed to. Every game in here was changing while it "
-  "was being recorded, and it will change again on your table.",
-  "Finally, one page at the back is given over to origin stories that are "
-  "widely repeated and are not supported by anything: that hopscotch was "
-  "Roman military drill, that Chinese Checkers is Chinese, that kubb is a "
-  "Viking game. They are not there to be clever. They are there because a "
-  "reader who has been told one of them, and believed it, deserves to be told "
-  "where it came from."
+  "Some games here also need a rule that no source supplies at all — most often "
+  "the draw, or who moves first. Traditional play does not always define one, "
+  "because traditional play has a room full of people who settle it. Where this "
+  "book supplies such a rule it marks it with a dagger (†) and explains it "
+  "under Sources, so that you can overrule it. You are allowed to. Every game in "
+  "here was changing while it was being recorded, and it will change again on "
+  "your table.",
+  {"print": "Finally, one section at the back ({page:bm:invented}) is given over "
+            "to origin stories that are widely repeated and are not supported by "
+            "anything: that hopscotch was Roman military drill, that Chinese "
+            "checkers is Chinese, that kalah is an ancient African game. They are "
+            "not there to be clever. They are there because a reader who has been "
+            "told one of them, and believed it, deserves to be told where it came "
+            "from.",
+   "kindle": "Finally, one section at the back is given over to origin stories "
+             "that are widely repeated and are not supported by anything: that "
+             "hopscotch was Roman military drill, that Chinese checkers is "
+             "Chinese, that kalah is an ancient African game. They are not there "
+             "to be clever. They are there because a reader who has been told one "
+             "of them, and believed it, deserves to be told where it came from."}
+ ]
+}
+
+TONIGHT = {
+ "id": "tonight",
+ "title": "Tonight’s Game",
+ "paragraphs": [
+  {"print": "Find the row for the time you have and the column for the number of "
+            "players. Every game appears in every square its ranges touch, with "
+            "the page it starts on. For age and difficulty, see the indexes at the "
+            "back ({page:bm:index-culture}).",
+   "kindle": "Find the row for the time you have and the column for the number of "
+             "players. Every game appears in every square its ranges touch. For "
+             "age and difficulty, see the indexes at the back."}
  ]
 }
 
 FAMILY_OPENERS = [
  {"family": "sowing", "numeral": "I", "title": "The Sowing Games",
-  "standfirst": "A handful of seeds, a ring of hollows, and the whole game "
-                "decided by where the last one falls.",
+  "standfirst": "A handful of seeds, a ring of pits, and the whole game decided "
+                "by where the last one falls.",
   "paragraphs": [
    "This is the most widely spread single idea in the history of board games. "
-   "From the Akan towns of Ghana to the Tamil country, from Buganda to Sri "
-   "Lanka to the Philippines and across the Atlantic with the slave trade, "
-   "people dig a double row of holes, put counters in them, and play the same "
-   "underlying game. The counters are seeds, pebbles, cowries, dried beans, "
-   "goat droppings, anything small and identical. That last word matters: the "
-   "pieces are identical, and while they sit on the board they belong to "
-   "nobody.",
-   "That single feature is what makes sowing different from everything else "
-   "in this book. In a race game you move your piece. In a war game you move "
-   "your piece and take theirs. Here you lift the entire contents of one hole "
-   "and drop them one at a time into the holes that follow, and then you look "
-   "at where the last one landed, because the last seed decides everything: "
-   "whether you capture, whether you go again, whether you have just handed "
-   "your opponent a harvest.",
-   "Ten of the family are printed here. Oware is the Akan game, and it is the "
-   "one most people meet first. Bao la Kiswahili from the Swahili coast is the "
-   "hardest game in this book by some distance; it is played competitively, "
-   "the opening is studied, and it has a rule about a house that keeps its "
-   "seeds. Omweso is the royal game of Buganda, played on four rows rather "
-   "than two. Olinda Keliya and Pallanguzhi come from Sri Lanka and the Tamil "
-   "country, and both use a rule the African games do not: the sowing "
-   "continues, lap after lap, until it happens to end in an empty hole.",
-   "You do not need a board. An egg box with a bowl at each end is a mancala "
-   "board, and so are twelve holes scraped in earth, which is how most of "
-   "these games have always been played. If you are teaching a child, teach "
-   "Oware and teach it with real beans, because half of what makes the family "
-   "work is that counting the seeds out one at a time is a pleasure in itself."
+   "From the Akan towns of Ghana to the Tamil country, from Buganda to Sri Lanka "
+   "and the Malay peninsula, and across the Atlantic with the slave trade, people "
+   "dig rows of pits, put counters in them, and play variations on one "
+   "underlying game. The counters are seeds, pebbles, cowries, dried beans — "
+   "anything small and identical. That last word matters: the pieces are "
+   "identical, and while they sit on the board they belong to nobody.",
+   "That single feature is what makes sowing different from everything else in "
+   "this book. In a race game you move your piece. In a war game you move your "
+   "piece and take theirs. Here you lift the entire contents of one pit and drop "
+   "them one at a time into the pits that follow, and then you look at where the "
+   "last one landed, because the last seed decides everything: whether you "
+   "capture, whether you sow on, whether you have just handed your opponent a "
+   "harvest.",
+   "«fam_count_word_cap» of the family are printed here. Oware is the Akan game, "
+   "and it is the one most people meet first. Oware and Ayoayo, the two-row games "
+   "of West Africa, end a turn where the last seed falls. Elsewhere the sowing "
+   "relays: in Gebeta from Ethiopia, Congkak from the Malay world and Olinda "
+   "Keliya from Sri Lanka, a last seed in a loaded pit lifts that pit and sows "
+   "on, and the Tamil game lifts the pit after the last seed instead, until the "
+   "sowing runs into an empty pit. The four-row games of eastern and "
+   "southern Africa — Bao la Kiswahili from the Swahili coast, the royal Omweso "
+   "of Buganda, Hus and Mefuvha from the south — relay their sowing from pit to "
+   "pit and capture from both of the opponent's rows. Bao is the most demanding "
+   "game in this book, and the entry says why.",
+   "You do not need a board. An egg box with a bowl at each end is a sowing "
+   "board, and so is a row of pits scraped in earth, which is how most of these "
+   "games have always been played. If you are teaching a child, teach Oware and "
+   "teach it with real beans, because half of what makes the family work is that "
+   "counting the seeds out one at a time is a pleasure in itself."
   ]},
 
  {"family": "hunt-siege", "numeral": "II", "title": "The Hunt and the Siege",
@@ -259,178 +361,177 @@ FAMILY_OPENERS = [
                 "the other is many and weak.",
   "paragraphs": [
    "Nearly every game in this book is symmetrical: both players start with the "
-   "same pieces and want the same thing. This family is the exception, and it "
-   "is the reason the family exists. Here one player has a tiger, or a fox, or "
-   "a king, or two leopards, and the other has a herd — twenty-four men, "
-   "seventeen geese, sixteen besiegers. The strong side wins by eating. The "
-   "weak side wins by crowding, by walling the strong side in until it cannot "
-   "move at all.",
-   "The idea turns up everywhere and it does not seem to have travelled from "
-   "one place. Tablut was written down in 1732 by a Swedish botanist who went "
-   "north into Sápmi looking for plants; Fox and Geese was cut into the "
-   "benches of English cloisters; Rimau-rimau is played on cloth in the Malay "
-   "peninsula with the lines worked in red; Demala Diviyan Keliya is a Sri "
-   "Lankan board of leopards and cattle. What they share is not an ancestor. "
-   "It is a situation, and the situation is old enough and common enough that "
-   "people keep making a game of it.",
+   "same pieces and want the same thing. This family is the exception, and it is "
+   "the reason the family exists. Here one player has a tiger, or a fox, or a "
+   "king, or two leopards, and the other has a herd — twenty-four cattle, "
+   "seventeen geese, a ring of besiegers. The strong side wins by eating or by "
+   "escaping. The weak side wins by crowding, by walling the strong side in "
+   "until it cannot move at all.",
+   "The idea turns up everywhere and it does not seem to have travelled from one "
+   "place. Tablut was written down in 1732 by a Swedish botanist travelling in "
+   "Sápmi; fox-and-geese boards were cut into the cloister benches at Gloucester; "
+   "Rimau-rimau was recorded in the Malay peninsula; Diviyan Keliya, the "
+   "leopards-and-cattle game, is a Sri Lankan board with a triangle on every "
+   "side. What they share is not an ancestor. It is a situation, and the "
+   "situation is old enough and common enough that people keep making a game of "
+   "it.",
    "Asymmetric games have a particular problem and you should know it before "
    "you sit down: they are usually not balanced. In most of them one side is "
-   "easier to play well, and in several the herd wins if it plays a solid "
-   "wall and never gets greedy. The traditional answer is the right one. Play "
-   "two games and swap sides, and the winner is whoever did better with the "
-   "harder job. Several entries in this family say so on the page.",
+   "easier to play well. The traditional answer is the right one. Play two games "
+   "and swap sides, and the winner is whoever did better with the harder job. "
+   "Several entries in this family say so on the page.",
    "They are also the most legible games in the book for a child. There is a "
    "hunter and there are animals, the goal is obvious from the shape of the "
-   "board, and a six-year-old will understand the tiger's problem in one "
-   "move. Start with Fox and Geese, and let the child have the geese."
+   "board, and a six-year-old will understand the fox's problem in one move. "
+   "Start with Fox and Geese, and let the child have the geese."
   ]},
 
  {"family": "race", "numeral": "III", "title": "The Race Home",
-  "standfirst": "Cast, count, move. The oldest complete rules we possess "
-                "belong to this family.",
+  "standfirst": "Throw, count, move. The oldest game in this book belongs to "
+                "this family, and so do the oldest written rules.",
   "paragraphs": [
-   "The Royal Game of Ur was buried in the graves of a Sumerian city around "
-   "2600 BC, and we can play it because a Babylonian astronomer named "
-   "Itti-Marduk-balatu wrote the rules on a tablet in 177 BC, two and a half "
-   "thousand years after the boards were made. That tablet is why this family "
-   "opens the oldest window in the book. Race games are also the family that "
-   "changed least: cast something, count the number, move a piece towards "
-   "home. A player from Ur would need about a minute to learn Pachisi.",
-   "What differs is the casting instrument, and it is worth noticing because "
-   "it is the part of these games that dice replaced almost everywhere. Ur "
-   "used four-sided pyramids. Senet used flat sticks. Yut Nori uses four split "
-   "batons, and a throw of all four flat is worth more than any of the "
-   "numbers. Ashta Kashte uses four cowrie shells and counts the mouths that "
-   "land upward — and if none of them does, the throw is worth eight, the "
-   "biggest number in the game. Zohn Ahl uses marked staves thrown against a "
-   "stone. None of these is a die and all of them are.",
+   "Senet boards were being made in Egypt around 3000 BC, and the Royal Game of "
+   "Ur was buried in the royal graves of a Sumerian city around 2600 BC. We can "
+   "play Ur because a Babylonian scribe, Itti-Marduk-balāṭu, wrote part of its "
+   "rules on a tablet in 177 BC, and a modern scholar has pieced a game together "
+   "from it; senet's rules are lost, and what you play is a reconstruction. Race "
+   "games are also the family that changed least: throw something, count, move "
+   "a piece towards home. A player from Ur would need about a minute to learn "
+   "pachisi.",
+   "What differs is the thing you throw, and it is worth noticing because it is "
+   "the part of these games that dice replaced almost everywhere. Ur used "
+   "four-sided pyramids. Senet used flat sticks. Yut Nori uses four split "
+   "batons, and the best throw is the one in which all four land round side up. "
+   "Ashta Kashte uses four cowrie shells and counts the mouths that land upward "
+   "— and if none does, the throw is worth eight, the biggest number in the "
+   "game. Set-dilth uses three staves thrown on a flat stone at the centre of a "
+   "ring. None of these is a die and all of them are.",
    "The other difference is the track. Some are a single line you go up and "
-   "come back down, some are a spiral, some are a cross with four arms and a "
-   "centre, and some — Pachisi, Patolli — put two or four players on partly "
-   "shared roads so that the race becomes a fight. Where a track is shared, "
-   "landing on somebody sends them home, and the game stops being a race and "
-   "becomes an argument about position.",
-   "Thirteen games are printed here, which makes this the second largest family "
-   "in the book. If you want to see the whole idea at once, play Yut Nori and "
-   "then Ur on the same evening. They are four thousand years and five "
-   "thousand miles apart and they are recognisably the same game."
+   "come back down, some a spiral, some a ring, some a cross with four arms "
+   "and a centre — and some, like Pachisi and Patolli, put two or four players "
+   "on partly shared roads so that the race becomes a fight. Where a track is "
+   "shared, landing on somebody sends them back, and the game stops being only "
+   "a race.",
+   "«fam_count_word_cap» games are printed here, which makes this, with the War "
+   "Board, one of the two largest families in the book. If you want to see the "
+   "whole idea at once, play Yut Nori and then Ur on the same evening. They were "
+   "recorded two thousand years and more than four thousand miles apart, and "
+   "they are plainly the same kind of game."
   ]},
 
  {"family": "territory", "numeral": "IV", "title": "The Line and the Territory",
   "standfirst": "You do not win by taking pieces. You win by an arrangement — "
-                "three in a row, or a wall around empty ground.",
+                "three in a row, a wall round empty ground, or an opponent with "
+                "nowhere left to go.",
   "paragraphs": [
    "Put three counters in a line and you have the smallest complete game there "
-   "is. Put a hundred and eighty-one stones on a board of three hundred and "
-   "sixty-one crossings and you have Go, which is generally reckoned the "
-   "deepest. They are in the same family and the family is defined by what "
-   "wins: not the destruction of the other side, but a shape.",
-   "The small end of it is remarkably crowded. Achi in Ghana, Picaria among "
-   "the Tewa, Nerenchi in Sri Lanka, Pong Hau K'i in Canton, Nine Men's "
-   "Morris across medieval Europe — all of them are three-in-a-row games and "
-   "all of them are different, because the interesting question is never how "
-   "to make the line. It is what happens once both players have run out of "
-   "pieces to place. Some let you slide to any adjacent point; some let a "
-   "player down to three pieces jump anywhere at all; Morris lets a completed "
-   "line take an enemy piece off the board and so keeps the game moving.",
+   "is. Put stones on the crossings of a go board and you have a game generally "
+   "reckoned among the deepest ever devised. They are in the same family and the "
+   "family is defined by what wins: not the destruction of the other side, but "
+   "a shape.",
+   "The small end of it is remarkably crowded. Achi in Ghana, Picaria in the "
+   "Rio Grande pueblos, Nerenchi in Sri Lanka, Nine Men's Morris across medieval "
+   "Europe — all of them are three-in-a-row games and all of them are "
+   "different, because the interesting question is never how to make the line. "
+   "It is what happens once both players have run out of pieces to place. Some "
+   "let you slide to any neighbouring point; some let a player down to three "
+   "pieces jump anywhere at all; Morris lets a completed line take an enemy "
+   "piece off the board and so keeps the game moving. Pong Hau K'i and Mū "
+   "Tōrere belong here for a different reason: there is no line to make, and "
+   "you win by leaving your opponent with no move.",
    "The large end is Go, and this book prints it on nine lines rather than "
-   "nineteen. That is an editorial decision and the entry says so: nineteen "
-   "lines cannot be taught in two pages and nine can, and every rule is "
-   "identical on both. Nine-line Go is a real game with its own literature, "
-   "not a toy version.",
-   "Between the two ends sits Dara, a Nigerian game where you may not make a "
-   "line during the placing phase at all, and Gomoku, where five in a row wins "
-   "and the first player is so strong that the modern rules forbid him three "
-   "of his best openings. Both are worth attention for the same reason: they "
-   "show a game being repaired by its own players. A rule that forbids the "
-   "winning move is a rule somebody added after losing too often."
+   "nineteen. That is an editorial decision and the entry says so: nine lines "
+   "can be taught in two pages and every rule is the same on both. Nine-line go "
+   "is a real game with its own literature, not a toy version.",
+   "Between the two ends sits Dara, a Nigerian game in which rows made while "
+   "the pieces are being placed do not count, and Gomoku, where five in a row "
+   "wins and the first player is so strong that the tournament form, renju, "
+   "forbids them certain shapes. Both are worth attention for the same reason: "
+   "they show a game being repaired by its own players."
   ]},
 
  {"family": "war-board", "numeral": "V", "title": "The War Board",
-  "standfirst": "Two equal sides, one goal, and taking a piece is something "
-                "you choose to do.",
+  "standfirst": "Two equal sides, one goal, and the game is decided by what "
+                "you take or trap.",
   "paragraphs": [
-   "This is the largest family in the book and the one most readers will "
-   "recognise, because chess is in it — not the chess you know, but four of "
-   "its ancestors and cousins printed side by side: Chaturanga from India, "
-   "Shatranj from the Abbasid caliphate, Xiangqi from China with its river "
-   "and its palace, Janggi from Korea, Sittuyin from Burma where you set your "
-   "own pieces up however you like, and Shogi from Japan where a captured "
-   "piece changes sides and comes back.",
-   "Reading them together does something a single chess book cannot. The "
-   "pieces are the same pieces — a king, a counsellor, an elephant, a horse, "
-   "a chariot, foot soldiers — and every culture that received the game kept "
-   "the horse exactly as it was and rebuilt everything else. The horse's move "
-   "is the one thing that never changes from India to Japan. Whatever the "
-   "original game was, that move was the good part.",
-   "The other half of the family is the jumping games, and they descend from "
-   "the twenty-five-point board that opens this section: Alquerque, brought "
-   "into Spain with the Moors and written down at the court of Alfonso X in "
-   "1283. Play it and you are playing the parent of draughts. Then play "
-   "Fanorona from Madagascar, where you capture by moving towards a line of "
-   "enemies or away from them, and Turkish Dama, where pieces move forward "
-   "and sideways and never diagonally at all. The same board, three different "
-   "answers to the question of what a capture is.",
+   "This family includes chess — not the chess you know, but six of its "
+   "ancestors and cousins printed side by side: Chaturaji, the four-handed dice "
+   "game of medieval India; Shatranj, the chess of the Abbasid world; Xiangqi "
+   "from China with its river and its palace; Janggi from Korea; Sittuyin from "
+   "Burma, where you arrange your own back pieces before play; and Shogi from "
+   "Japan, where a captured piece changes sides and comes back.",
+   "Reading them together does something a single chess book cannot. The pieces "
+   "are recognisably the same pieces — a king, a counsellor, an elephant, a "
+   "horse, a chariot, foot soldiers — and every culture that received the game "
+   "kept some and rebuilt others. The horse is the one that survives almost "
+   "everywhere, though China and Korea let it be blocked and Japan sends it "
+   "forward only.",
+   "The other half of the family is the capturing games. Alquerque, written "
+   "down at the court of Alfonso X of Castile in 1283, is played on the "
+   "twenty-five-point board with diagonals, and it is usually taken to be the "
+   "parent of draughts. Fanorona from Madagascar stretches that board to "
+   "forty-five points and captures by moving towards a line of enemies or away "
+   "from it. Turkish Dama moves its pieces forward and sideways on a board of "
+   "sixty-four squares and never diagonally at all. Three boards, three "
+   "different answers to the question of what a capture is.",
    "One warning. Several of these games are long. Shogi and Xiangqi are "
    "hour-long games between people who know them, and neither is a good first "
-   "game for a child. Start the family with Alquerque or Hasami Shogi; both "
-   "teach the shape of a capturing game in ten minutes."
+   "game for a child. Start the family with Alquerque or Seega; both teach the "
+   "shape of a capturing game in ten minutes."
   ]},
 
- {"family": "chance", "numeral": "VI", "title": "Chance and Nerve",
-  "standfirst": "No track, no position, no plan. The only decision is whether "
-                "to take the risk.",
+ {"family": "chance", "numeral": "VI", "title": "Chance and Scoring",
+  "standfirst": "No track and no position to build. A throw or a hand decides, "
+                "and the score is kept.",
   "paragraphs": [
-   "This is the smallest family in the book, and the reason is worth stating "
-   "at the front. Games of pure chance are overwhelmingly gambling games, and "
-   "the interesting part of a gambling game is usually the stake rather than "
-   "the play. Take the money out and a great many of them stop being games at "
-   "all. This book rewrites betting as scoring wherever it appears, and where "
-   "that rewriting leaves nothing behind, the game is not printed.",
-   "Three survive the test. Astragaloi is the knucklebone game of the classical "
-   "world, played with the ankle bones of sheep, which fall on four sides of "
-   "unequal probability — the Greeks and Romans knew perfectly well which "
-   "throws were rare and named the best one after Venus. Set-dilth is a White "
-   "Mountain Apache stave game. Tien Gow is a Cantonese domino game with a "
-   "ranking of tiles that has to be learned before the game makes sense.",
+   "This is the smallest family in the book, and the reason is worth stating at "
+   "the front. Games of pure chance are overwhelmingly gambling games, and the "
+   "interesting part of a gambling game is usually the stake rather than the "
+   "play. Take the money out and a great many of them stop being games at all. "
+   "This book keeps the play and leaves the stakes out wherever it prints such "
+   "a game, and where that leaves nothing behind, the game is not printed.",
+   "Two survive the test. Astragaloi is the knucklebone game of the classical "
+   "world, played with the ankle bones of sheep and goats, which fall on four "
+   "sides of very unequal likelihood — the Greeks and Romans knew exactly which "
+   "throws were rare and named the best of them after Aphrodite. Tien Gow is a "
+   "Chinese domino game of tricks, played with a ranking of tiles that has to "
+   "be learned before the game makes sense and repays the learning.",
    "Chance games do something the rest of the book does not, and it is the "
-   "reason the family is here rather than cut. They are the only games in "
-   "which every player at the table is genuinely equal, whatever their age. A "
-   "seven-year-old cannot beat an adult at Xiangqi and can absolutely beat one "
-   "at Astragaloi, and knows it. That is not a small thing at a family table, "
-   "and it is why these games have outlived so many cleverer ones.",
-   "The nerve in the family name is not decoration either. In every one of "
-   "these games the real decision is whether to throw again, and the person "
-   "who always throws again loses in the long run to the person who knows "
-   "when to stop."
+   "reason the family is here rather than cut. At a throw of the bones every "
+   "player at the table is genuinely equal, whatever their age. A seven-year-old "
+   "cannot beat an adult at Xiangqi and can absolutely beat one at Astragaloi, "
+   "and knows it. That is not a small thing at a family table, and it is why "
+   "these games have outlived so many cleverer ones."
   ]},
 
  {"family": "boardless", "numeral": "VII", "title": "Games Without a Board",
   "standfirst": "Hands, voices, string, stones, and a line scratched on the "
                 "ground. Nothing to buy and nothing to lose.",
   "paragraphs": [
-   "The games in this part need no equipment at all, or need only what is "
-   "already lying about: a length of string, five pebbles, a horse chestnut, a "
-   "piece of chalk. They are the games children teach each other, which means "
-   "they are the games that have been collected the least carefully and "
-   "survive the best. Nobody had to preserve Jan-ken. It preserved itself, in "
-   "playgrounds, for centuries.",
-   "The family is built on an observation rather than a claim. Cat's Cradle is "
-   "played with a loop of string in Japan, in the Arctic, in the Pacific, in "
-   "West Africa and across Europe, and the figures are often recognisably the "
-   "same. It is tempting to explain that by diffusion. The honest position is "
-   "that a loop of string and ten fingers is a small enough system that people "
-   "keep arriving at the same figures independently, and where this book "
-   "cannot show a route it does not draw one.",
-   "Eight games are printed. Jan-ken is the hand game the world plays to "
-   "decide who goes first, and it is genuinely Japanese, recorded in that form "
-   "in 1895. Gonggi is the Korean five-stones game; Conkers is English and was "
-   "collected in the 1890s; Hopscotch is older than any of the stories told "
-   "about it and none of those stories is true. Mbube Mbube is Zulu, needs "
-   "six to twenty players and a blindfold, and is the only game in this book "
-   "that gets louder the better it goes.",
-   "These are also the games to reach for when the table is the wrong shape "
-   "for a table game — a car, a queue, a waiting room, a beach. Nothing here "
-   "has a piece that can be lost, because nothing here has a piece."
-  ]}
+   "The games in this part need no equipment at all, or only what is already "
+   "lying about: a length of string, five pebbles, a horse chestnut, a piece of "
+   "chalk, a shuttlecock. They are the games children teach each other, which "
+   "means they are the games that have been collected least carefully and "
+   "survive best. Jan-ken has been played in Japan since at least the middle of "
+   "the nineteenth century, and older hand games of the same kind for a century "
+   "before that, without anybody having to preserve it.",
+   "String figures are made almost everywhere people have string, from the "
+   "Arctic to Australia, but most are made by one player alone. Cat's cradle, in "
+   "which two players take the loop off each other's hands, is a narrower thing: "
+   "in 1906 it was known from China, Korea and Japan to the Philippines, Borneo "
+   "and Europe, and the anthropologist A. C. Haddon thought it had come west from "
+   "Asia, like the kite. Nobody has traced the route, and where this book cannot "
+   "show a route it does not draw one.",
+   "«fam_count_word_cap» games are printed. Jan-ken is the hand game much of "
+   "the world now plays to decide who goes first; Morra is its loud Italian "
+   "relative with a history back to Rome. Gonggi is the Korean five-stones game; "
+   "Conkers is English and was collected in the 1890s; Hopscotch comes with more "
+   "origin stories than evidence, and the entry keeps to the evidence. Mbube "
+   "Mbube, from South Africa, takes its name from the Zulu word for lion, needs a "
+   "ring of players and two blindfolds, and is the only game in this book played "
+   "by ear: the ring chants faster as the lion closes in.",
+   "These are also the games to reach for when the table is the wrong shape for "
+   "a table game — a car, a queue, a waiting room, a beach. Nothing here has a "
+   "piece that can be lost, because almost nothing here has a piece."
+  ]},
 ]

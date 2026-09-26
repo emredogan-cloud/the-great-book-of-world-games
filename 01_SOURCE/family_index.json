@@ -130,7 +130,7 @@
       "order": 3,
       "en": "The Race Home",
       "tr": "Eve dönüş yarışı",
-      "targetGames": 18,
+      "targetGames": 19,
       "candidateFloor": 16,
       "definition": "Taşların sabit bir iz üzerinde bir hedefe doğru ilerlediği, ilerleme miktarını bir çekiliş aletinin (zar · çubuk · deniz kabuğu · aşık kemiği) belirlediği oyunlar.",
       "inclusionRule": [
@@ -254,9 +254,9 @@
     {
       "id": "chance",
       "order": 6,
-      "en": "Chance and Nerve",
-      "tr": "Şans ve cesaret",
-      "targetGames": 4,
+      "en": "Chance and Scoring",
+      "tr": "Şans ve puan",
+      "targetGames": 3,
       "candidateFloor": 16,
       "definition": "Sonucun bir ÇEKİLİŞ ALETİYLE belirlendiği, izi ve gelişen tahta konumu olmayan oyunlar. Her turun kararı 'nereye gideyim' değil, 'riski alayım mı'dır.",
       "inclusionRule": [
@@ -373,5 +373,8 @@
   ],
   "$k28": [
     "K28 · 18 Ağustos 2026 — kurucu onayıyla aile hedefleri YENİDEN YAZILDI. Şans ailesi 15 → 4: on bir oyunun tamamı Parlett'e bağlıydı ve hiçbiri yeniden kurgulanamazdı (bir kart/zar oyununun kural seti mekanikten türetilemez). Boşalan on bir slot yedek havuzdan dolduruldu."
+  ],
+  "$a4": [
+    "A4 · 26 Eylül 2026 — kurtarma sürümü: set-dilth ailesinin kendi kuralıyla chance'ten race'e taşındı (iz + çekiliş + izin sonu); hedefler race 18 → 19, chance 4 → 3. Chance ailesinin adı kitaptaki başlıkla eşitlendi: 'Chance and Scoring'. Ayrıntı: scope_lock.json § amendments A4."
   ]
 }

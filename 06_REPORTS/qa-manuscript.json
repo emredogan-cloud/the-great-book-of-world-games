@@ -6,16 +6,6 @@
   "outOfScope": [],
   "scopeLocked": 100,
   "blocksUsed": [
-    "capture",
-    "chain",
-    "figures",
-    "legalMoves",
-    "movement",
-    "placement",
-    "scoring",
-    "stackingAndSending",
-    "stages",
-    "throwValues",
     "turnSequence"
   ],
   "blocksMeasured": [
@@ -37,8 +27,8 @@
     "unknown",
     "winCondition"
   ],
-  "withDiagrams": 55,
-  "withoutDiagrams": 8,
-  "reconstructed": 8,
+  "withDiagrams": 63,
+  "withoutDiagrams": 0,
+  "reconstructed": 12,
   "externalPlaytests": 0
 }

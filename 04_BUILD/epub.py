@@ -1,88 +1,53 @@
 #!/usr/bin/env python3
 """
-KINDLE EPUB ÜRETECİ — The Great Book of World Games
+KINDLE EPUB — The Great Book of World Games (GBK-02), 2026 recovery edition
 ================================================================================
-EPUB 3 (yeniden akan / reflowable) üretir.
+EPUB 3, reflowable. Built from the same read path as the print interior
+(`interior.entry()`), so a printed page and a Kindle chapter cannot say
+different things, and a non-string value can never be printed (WG-014).
 
-── NEDEN SABİT DÜZEN (FIXED-LAYOUT) DEĞİL ──────────────────────────────
-Bu kitabın basılı mimarisi bir ÇİFT SAYFA sözüdür: okur kitabı masaya açar
-ve tur ortasında sayfa çevirmez. Kindle'da bu sözü korumanın tek yolu sabit
-düzendir — ve sabit düzen bu kitap için YANLIŞ karardır:
+Why reflowable: the print book's promise is a spread you can lay open on a
+table. A scrolling screen has no spread to break, so each game is simply one
+continuous chapter; a fixed-layout file would shrink an 8.5 × 11 in page onto
+a phone and lock the reader's font and size settings.
 
-  · Sabit düzen 8,5 × 11 inçlik bir çift sayfayı telefon ekranına sıkıştırır;
-    10,5 punto gövde metni okunamaz hâle gelir ve okur yakınlaştırıp
-    kaydırmak zorunda kalır. Basılı sözü korumak için ekran deneyimi
-    feda edilmiş olur.
-  · Sabit düzen yazı tipi boyutunu, temayı ve satır aralığını kilitler;
-    Kindle okurunun erişilebilirlik ayarları çalışmaz.
-  · Amazon'un kendi yönlendirmesi sabit düzeni resim-metin bağı SIKI olan
-    türlere (çocuk kitabı, çizgi roman, yemek kitabı) önerir.
+Kindle-specific text: every paragraph that is true only of print is given a
+"kindle" variant in the manuscript (see frontmatter_text.py). Page numbers
+never appear; cross-references are links. The full-size boards are not
+reproduced (they are for photocopying): the text points to the free companion
+pack, which carries them.
 
-Asıl gerekçe şudur: **çift sayfa sözü bir BASKI kısıtına verilmiş bir
-cevaptır.** Kâğıtta bir maddeyi bölen şey yaprağın kendisidir. Kaydırılan
-bir ekranda o kısıt YOKTUR — madde tek ve kesintisiz akar, yani söz ihlal
-edilmez, KONUSUZ kalır. Bu yüzden Kindle sürümü yeniden akandır ve her oyun
-tek bir kesintisiz bölümdür.
+Diagrams are inline SVG (vector, sharp at any size). Plates are colour JPEGs
+from 07_ASSETS/plates_kindle/, sized to keep the file small — KDP charges a
+delivery fee per megabyte on the 70 % royalty plan.
 
-Diyagramlar **SVG olarak gömülür**: her ekran yoğunluğunda keskin kalırlar
-ve raster bir kopyanın onda biri yer tutarlar.
-
-⚠ KAPAK: Kindle bir kapak görseli ister ve o görsel kurucu sanatından
-üretilir. Sanat yokken EPUB kapak SAYFASI olmadan üretilir ve dosya
-"KAPAK BEKLİYOR" diye işaretlenir. Sahte bir kapak konmaz.
-
-Çıkış kodları:  0 = geçti   1 = kapı kırmızı   2 = bağımlılık yok
+Exit codes: 0 pass · 1 gate red · 2 dependency missing
 """
 
 from __future__ import annotations
 
 import argparse
+import datetime
 import hashlib
-import html
 import json
 import os
 import re
-
-import typo
+import shutil
+import subprocess
 import sys
 import zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
 
-# COMMON-AREA/isbn is three directories above this book's root.
-_cand_paths = [
-    os.path.join(os.path.dirname(os.path.dirname(DEFAULT_ROOT)), "COMMON-AREA", "isbn"),
-    "/home/emre/Downloads/MY-DİGİTAL-BOOK/COMMON-AREA/isbn",
-]
-for _p in _cand_paths:
+import typo  # noqa: E402
+
+for _p in (os.path.join(os.path.dirname(os.path.dirname(DEFAULT_ROOT)), "COMMON-AREA", "isbn"),
+           "/home/emre/Downloads/MY-DİGİTAL-BOOK/COMMON-AREA/isbn"):
     if os.path.isdir(_p) and _p not in sys.path:
         sys.path.insert(0, _p)
-
-try:
-    import registry as isbn_registry  # noqa: E402
-except ImportError:
-    class _FallbackRegistry:
-        IMPRINT_ASCII = "Valice Press"
-        @staticmethod
-        def identifier(epub_path: str) -> str:
-            return "urn:isbn:9786250047040"
-    isbn_registry = _FallbackRegistry()
-
-# ⚠ THE UUID NAMESPACE IS DEAD, AND THIS IS WHY IT IS STILL WRITTEN DOWN.
-#
-# Until 2026-09-19 the package identifier was
-#     UUID_NS + sha1(title + subtitle)[:12]
-# — deterministic, tidy, and not the book's identifier. 978-625-00-4704-0 was
-# embedded on 2026-09-09; this generator was re-run for the 63-game recovery
-# edition, minted the UUID again, and the ISBN left the file. ISBN-REGISTRY.md
-# went on recording it as APPROVED · EMBEDDED · D2D READY for ten days because
-# nothing measured the artefact, and EPUBCheck was not run again either.
-#
-# The identifier now comes from the registry, and a book the registry does not
-# name raises rather than falls back. Do not restore a fallback here: the
-# fallback IS the defect.
-UUID_NS_RETIRED = "urn:uuid:great-book-of-world-games-"
+import registry as isbn_registry  # noqa: E402  (raises if the EPUB is not registered)
 
 
 def load(p):
@@ -105,505 +70,469 @@ def sha256(p):
     return h.hexdigest()
 
 
-def E(s):
-    """XHTML kaçışı + tipografik kesme işareti (interior.py ile AYNI kural).
+_MD_I = re.compile(r"\*([^*\n]+)\*")
 
-    İki çıktı aynı kitaptır; birinde eğri birinde düz kesme işareti olması
-    aynı cümlenin iki farklı biçimde basılması demektir."""
-    return typo.xml_text(s)
+
+def E(s):
+    """XHTML escape + typographic quotes + *italic* → <em>."""
+    if not isinstance(s, str):
+        raise ValueError("non-string value in printed text: %r" % (s,))
+    if "{page:" in s:
+        raise ValueError("a page reference reached the Kindle text: %r" % s[:120])
+    return _MD_I.sub(r"<em>\1</em>", typo.xml_text(s))
 
 
 CSS = """@charset "utf-8";
 html{font-size:100%}
-body{font-family:Georgia,'Liberation Serif',serif;line-height:1.5;
-     margin:0 5%;text-align:left;hyphens:auto}
-h1{font-size:1.6em;line-height:1.2;margin:1.2em 0 .1em;page-break-before:always}
-h2{font-size:1.15em;margin:1.4em 0 .2em}
-h3{font-size:1em;margin:1.2em 0 .2em;text-transform:uppercase;
-   letter-spacing:.05em}
-p{margin:.5em 0;text-indent:0}
-.kicker{font-style:italic;font-size:.9em;color:#555;margin:.1em 0 .6em}
-.spec{font-size:.88em;border-top:1px solid #999;border-bottom:1px solid #999;
-      padding:.4em 0;margin:.6em 0}
-.notice{font-style:italic;border-left:3px solid #999;padding-left:.7em;
-        margin:.7em 0}
+body{font-family:serif;line-height:1.45;margin:0 4%;text-align:left}
+h1{font-size:1.55em;line-height:1.2;margin:1em 0 .15em;page-break-before:always}
+h2{font-size:1.05em;margin:1.3em 0 .25em;text-transform:uppercase;letter-spacing:.04em;font-family:sans-serif}
+h3{font-size:1em;margin:1em 0 .2em;font-family:sans-serif}
+p{margin:.45em 0;text-indent:0}
+.kicker{font-style:italic;font-size:.9em;margin:.1em 0 .8em}
+table.quick{border-collapse:collapse;width:100%;margin:.6em 0 1em;font-family:sans-serif;font-size:.9em}
+table.quick th{text-align:left;vertical-align:top;padding:.2em .6em .2em 0;white-space:nowrap}
+table.quick td{vertical-align:top;padding:.2em 0}
+table.quick{border-top:2px solid #000;border-bottom:1px solid #000}
+.brief{font-family:sans-serif;font-size:.95em;margin:.4em 0 1em}
+.box{border:1px solid #000;padding:.4em .7em;margin:.8em 0}
 ol{margin:.3em 0 .8em 1.4em;padding:0}
-ol li{margin:.2em 0}
-.sources{font-size:.8em;color:#444;margin-top:1em;border-top:1px solid #ccc;
-         padding-top:.5em}
+ol li{margin:.25em 0}
+.sources p{font-size:.85em;margin:.3em 0}
 figure{margin:1em 0;text-align:center;page-break-inside:avoid}
 figure svg{max-width:100%;height:auto}
+figcaption{font-style:italic;font-size:.85em;margin-top:.3em}
+.plate{text-align:center;margin:.6em 0;page-break-inside:avoid}
+.plate img{max-width:100%;height:auto}
+.platecap{font-size:.8em;text-align:left;margin:.2em 0 0 0;text-indent:0}
 .standfirst{font-style:italic;font-size:1.05em;margin:.3em 0 1em}
+table.list{border-collapse:collapse;width:100%;font-size:.88em;margin:.6em 0}
+table.list th,table.list td{text-align:left;vertical-align:top;padding:.25em .4em;border-bottom:1px solid #999}
 nav ol{list-style:none;margin-left:0}
 nav ol ol{margin-left:1.2em}
-.frontmatter h1{page-break-before:auto}
-.hero-plate{text-align:center;margin:1em 0;page-break-inside:avoid}
-.hero-plate img{max-width:100%;height:auto}
-.q{margin:.4em 0}
-.q b{font-style:normal}
+.front h1{page-break-before:auto}
+.idx p{margin:.15em 0}
 """
 
-
-def svg_inline(path: str, max_w="26em") -> str:
-    """SVG'yi olduğu gibi gömer. Raster YOK."""
-    with open(path, encoding="utf-8") as fh:
-        s = fh.read()
-    s = re.sub(r"<\?xml[^>]*\?>\s*", "", s)
-    s = s.replace("<svg ", '<svg style="max-width:%s" ' % max_w, 1)
-    return s
+DIFF = {1: "Very easy", 2: "Easy", 3: "Moderate", 4: "Demanding", 5: "Expert"}
 
 
-def xhtml(title, body, cls="") -> str:
-    return ('<?xml version="1.0" encoding="utf-8"?>\n'
-            '<!DOCTYPE html>\n'
-            '<html xmlns="http://www.w3.org/1999/xhtml" '
-            'xmlns:epub="http://www.idpf.org/2007/ops" lang="en" '
-            'xml:lang="en">\n<head><title>%s</title>'
-            '<meta charset="utf-8"/>'
-            '<link rel="stylesheet" type="text/css" href="../style.css"/>'
-            '</head>\n<body%s>\n%s\n</body></html>\n'
+def xhtml(title, body, cls=""):
+    return ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n'
+            '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" '
+            'lang="en" xml:lang="en">\n<head><title>%s</title><meta charset="utf-8"/>'
+            '<link rel="stylesheet" type="text/css" href="../style.css"/></head>\n'
+            '<body%s>\n%s\n</body></html>\n'
             % (E(title), ' class="%s"' % cls if cls else "", body))
 
 
-RULE_BLOCKS = (("Setup", "setup"), ("Placing", "placement"),
-               ("On your turn", "turnSequence"), ("Movement", "movement"),
-               ("Capture", "capture"), ("Legal moves", "legalMoves"),
-               ("Throw values", "throwValues"), ("Stages", "stages"),
-               ("The figures", "figures"), ("Scoring", "scoring"),
-               ("Stacking and sending", "stackingAndSending"),
-               ("The chain", "chain"))
-EDGE_LABEL = {"tie": "If it is a draw.", "stalemate": "If nobody can move.",
-              "illegalMove": "If somebody plays an illegal move."}
+def svg_inline(path, max_w="30em"):
+    with open(path, encoding="utf-8") as fh:
+        s = fh.read()
+    s = re.sub(r"<\?xml[^>]*\?>\s*", "", s)
+    return s.replace("<svg ", '<svg role="img" style="max-width:%s" ' % max_w, 1)
 
 
-def game_xhtml(g, ddir, plate_fn=None) -> str:
-    o = ['<h1 id="%s">%s</h1>' % (E(g["gameId"]), E(g["title"]))]
-    o.append('<p class="kicker">%s · %s · %s</p>'
-             % (E(g["culture"]), E(g["place"]), E(g["period"])))
-    if plate_fn:
-        o.append('<div class="hero-plate"><img src="../images/%s" alt="%s"/></div>'
-                 % (E(plate_fn), E(g["title"])))
-    o.append('<p class="spec">%s</p>' % " · ".join(
-        "<b>%s</b> %s" % (E(k.capitalize()), E(v))
-        for k, v in g["spec"].items()))
-    o.append("<p>%s</p>" % E(g["culturalStory"]))
-    o.append("<p><b>Materials.</b> %s</p>" % E(g["materialsAndSubstitution"]))
-    if g.get("reconstructionNotice"):
-        o.append('<p class="notice">%s</p>' % E(g["reconstructionNotice"]))
-    if g.get("safetyNote"):
-        o.append('<p class="notice"><b>Safety.</b> %s</p>' % E(g["safetyNote"]))
-    for did in g.get("diagrams", []):
+def game_doc(e, ddir, plate, plate_alt, captions, plate_cap=""):
+    import interior as I
+    o = ['<h1 id="top">%s</h1>' % E(e["title"]),
+         '<p class="kicker">%s · %s · %s</p>' % (E(e["culture"]), E(e["place"]), E(e["period"]))]
+    if plate:
+        cap = '<p class="platecap">%s</p>' % E(plate_cap) if plate_cap else ""
+        o.append('<div class="plate"><img src="../images/%s" alt="%s"/>%s</div>' % (plate, E(plate_alt), cap))
+    sp = e["spec"]
+    rows = [("Players", sp["players"]), ("Time", sp["time"]), ("Age", sp["age"]),
+            ("Difficulty", "%s (%d of 5)%s" % (DIFF[sp["difficulty"]], sp["difficulty"],
+                                                (" — " + sp["difficultyNote"]) if sp["difficultyNote"] else "")),
+            ("You need", sp["materials"]), ("Goal", e["objective"])]
+    o.append('<table class="quick">%s</table>'
+             % "".join("<tr><th>%s</th><td>%s</td></tr>" % (E(k), E(v)) for k, v in rows))
+    o.append('<p class="brief">%s</p>' % E(e["atAGlance"]))
+    o.append("<h2>Background</h2><p>%s</p>" % E(e["story"]))
+    o.append("<h2>What you need</h2><p>%s</p>" % E(e["materials"]))
+    if e["safety"]:
+        o.append('<p class="box"><b>Safety.</b> %s</p>' % E(e["safety"]))
+    if e["gamblingNote"]:
+        o.append('<p class="box"><b>Stakes.</b> %s</p>' % E(e["gamblingNote"]))
+    if e["reconstruction"]:
+        rc = e["reconstruction"]
+        o.append('<div class="box"><h3>Reconstruction</h3><p><b>What the sources give.</b> %s</p>'
+                 '<p><b>What this book supplies.</b> %s</p></div>' % (E(rc["sources"]), E(rc["book"])))
+    o.append("<h2>Setup</h2><ol>%s</ol>" % "".join("<li>%s</li>" % E(s) for s in e["setup"]))
+    worked = e["workedTurn"].get("diagram")
+    main = [d for d in e["diagrams"] if d != worked]
+
+    def fig(did):
         p = os.path.join(ddir, did + ".svg")
-        if os.path.exists(p):
-            o.append("<figure>%s</figure>" % svg_inline(p))
-    if g.get("firstMove"):
-        o.append("<p><b>The first move.</b> %s</p>" % E(g["firstMove"]))
-    for label, key in RULE_BLOCKS:
-        if not g.get(key):
-            continue
-        o.append("<h3>%s</h3><ol>%s</ol>"
-                 % (E(label), "".join("<li>%s</li>" % E(s) for s in g[key])))
-    for label, key in (("Winning", "winCondition"),
-                       ("Taking the king", "kingCapture"),
-                       ("How it ends", "endCondition")):
-        if g.get(key):
-            o.append("<p><b>%s.</b> %s</p>" % (E(label), E(g[key])))
-    o.append("<h3>Three questions</h3>")
-    for k, v in g["edgeCases"].items():
-        o.append('<p class="q"><b>%s</b> %s</p>'
-                 % (E(EDGE_LABEL.get(k, k + ".")), E(v)))
-    o.append("<p><b>An example turn.</b> %s</p>" % E(g["exampleTurn"]))
-    for v in g.get("variants", []):
-        o.append("<p><b>%s.</b> %s</p>" % (E(v["name"]), E(v["note"])))
-    o.append("<p><b>Your first game.</b> %s</p>" % E(g["firstGame"]))
-    if g.get("aMatchIsTwoGames"):
-        o.append("<p>%s</p>" % E(g["aMatchIsTwoGames"]))
-    o.append('<p class="sources"><b>Sources.</b> %s</p>'
-             % "  ".join(E(s) for s in g["sources"]))
+        if not os.path.exists(p):
+            raise FileNotFoundError(p)
+        cap = captions.get(did, "")
+        return "<figure>%s%s</figure>" % (svg_inline(p),
+                                          "<figcaption>%s</figcaption>" % E(cap) if cap else "")
+    if main:
+        o.append(fig(main[0]))
+    for b in e["rules"]:
+        o.append("<h2>%s</h2><ol>%s</ol>" % (E(b["head"]), "".join("<li>%s</li>" % E(s)
+                                                                    for s in b["steps"])))
+    for d in main[1:]:
+        o.append(fig(d))
+    o.append("<h2>Ending and winning</h2><p><b>The end.</b> %s</p><p><b>The winner.</b> %s</p>"
+             % (E(e["ending"]["end"]), E(e["ending"]["winner"])))
+    o.append("<h2>Special situations</h2>" + "".join(
+        "<p><b>%s.</b> %s</p>" % (E(x["q"].rstrip(".?")), E(x["a"])) for x in e["special"]))
+    wt = e["workedTurn"]
+    o.append("<h2>A worked turn</h2>")
+    if wt.get("start"):
+        o.append("<p><b>Start.</b> %s</p>" % E(wt["start"]))
+    if wt.get("steps"):
+        o.append("<ol>%s</ol>" % "".join("<li>%s</li>" % E(s) for s in wt["steps"]))
+    if wt.get("result"):
+        o.append("<p><b>Result.</b> %s</p>" % E(wt["result"]))
+    if wt.get("next"):
+        o.append("<p><b>Next.</b> %s</p>" % E(wt["next"]))
+    if worked:
+        o.append(fig(worked))
+    o.append("<h2>Your first game</h2><p>%s</p>" % E(e["firstGame"]))
+    if e["variants"]:
+        o.append("<h2>Variants</h2>" + "".join(
+            "<p><b>%s</b>%s. %s</p>" % (E(v["name"]), " (house rule)" if v["kind"] == "house rule" else "",
+                                        E(v["note"])) for v in e["variants"]))
+    src = "".join("<p>%s</p>" % E(I.source_line(s)) for s in e["sources"])
+    if e["rulings"]:
+        src += "<p><b>†</b> This book’s own rulings, where the sources are silent: %s</p>" % " ".join(
+            E(r) for r in e["rulings"])
+    o.append('<div class="sources"><h2>Sources</h2>%s</div>' % src)
     return "\n".join(o)
 
 
-def build(root: str) -> int:
+def build(root):
+    import interior as I
     cfg = load(os.path.join(root, "project_config.json"))
     mdir = cfg["language"]["commercialManuscriptDir"]
-    for f in ("book.json", "frontmatter.json"):
-        if not os.path.exists(os.path.join(root, mdir, f)):
-            print("  · %s yok — EPUB ATLANDI (CI'da beklenen)" % f)
-            return 0
+    if not os.path.exists(os.path.join(root, mdir, "book.json")):
+        print("  · manuscript not in this checkout — EPUB SKIPPED (expected in CI)")
+        return 0
     book = load(os.path.join(root, mdir, "book.json"))
     fm = load(os.path.join(root, mdir, "frontmatter.json"))
-    bmp = os.path.join(root, mdir, "backmatter_printed.json")
-    bm = load(bmp) if os.path.exists(bmp) else None
+    bm = load(os.path.join(root, mdir, "backmatter_book.json"))
+    entries = [I.entry(g) for g in book["games"]]
+    by_id = {e["gameId"]: e for e in entries}
+    titles = {e["gameId"]: I.plain(e["title"]) for e in entries}
+    captions = {}
+    for g, e in zip(book["games"], entries):
+        specs = g.get("diagramSpecs") or g.get("diagrams", [])
+        e["diagrams"] = [d["id"] if isinstance(d, dict) else d for d in specs]
+        for d in specs:
+            if isinstance(d, dict):
+                captions[d["id"]] = d.get("caption", "")
     ddir = os.path.join(root, "07_ASSETS", "diagrams")
-    games = {g["gameId"]: g for g in book["games"]}
-    tp, im, m = fm["titlePage"], fm["imprint"], fm["measured"]
+    pmap = load(os.path.join(root, "01_SOURCE", "plates.json"))["plates"]
+    tp, im = fm["titlePage"], fm["imprint"]
+    ed = "kindle"
+    files, spine, nav = [], [], []
+    images = {}
 
-    # ── KAPAK ──────────────────────────────────────────────────────────
-    # Kindle kapağı KDP formunda ayrıca yüklenir; ama EPUB'ın KENDİSİ de
-    # bir kapak taşımalıdır — dosya Kindle dışında bir okuyucuda açıldığında
-    # kapaksız kalmasın diye.
-    cover_img = None
-    cbp = os.path.join(root, "06_REPORTS", "cover-build.json")
-    if os.path.exists(cbp):
-        kc = (load(cbp).get("kindle") or {}).get("file")
-        if kc and os.path.exists(os.path.join(root, kc)):
-            cover_img = os.path.join(root, kc)
-
-    # ── HERO GÖRSELLERİ ────────────────────────────────────────────────
-    pdir = os.path.join(root, "07_ASSETS", "plates_print")
-    plate_docs = {}
-    if os.path.isdir(pdir):
-        order = [g["gameId"] for g in book["games"]]
-        for fn in sorted(os.listdir(pdir)):
-            m_re = re.match(r"GBK02_GAME_(\d{3})_.*_HERO\.(jpg|png)$", fn)
-            if m_re:
-                idx = int(m_re.group(1)) - 1
-                if 0 <= idx < len(order):
-                    plate_docs[order[idx]] = fn
-
-    files, spine, nav_items = [], [], []
-
-    def add(name, title, body, cls="", in_spine=True, in_nav=None):
+    def add(name, title, body, cls="", level=None, label=None):
         files.append(("OEBPS/text/%s" % name, xhtml(title, body, cls)))
-        if in_spine:
-            spine.append(name)
-        if in_nav:
-            nav_items.append((name, in_nav[0], in_nav[1]))
+        spine.append(name)
+        if level is not None:
+            nav.append((name, label or title, level))
 
-    # ── ön madde ──────────────────────────────────────────────────────
-    if cover_img:
-        add("cover.xhtml", "Cover",
-            '<div style="text-align:center;margin:0;padding:0">'
-            '<img src="../images/cover.jpg" alt="%s" '
-            'style="max-width:100%%;height:auto"/></div>' % E(tp["title"]),
-            "frontmatter", in_nav=("Cover", 0))
-    add("title.xhtml", tp["title"],
-        '<h1>%s</h1><p class="standfirst">%s</p><p>%s</p><p>%s</p>'
-        % (E(tp["title"]), E(tp["subtitle"]), E(tp["author"]),
-           E(tp["publisher"])), "frontmatter", in_nav=("Title page", 0))
-    imprint = ["<h1>Copyright</h1>", "<p>%s</p>" % E(im["copyright"]),
-               "<p>%s</p>" % E(im["publisher"]),
-               "<p>%s · Volume %s</p>" % (E(tp["series"]), E(tp["volume"])),
-               "<p>ISBN (Kindle electronic edition): 978-625-00-4704-0</p>"]
-    for ed in ("paperback", "hardcover"):
-        imprint.append("<p>ISBN (%s print edition): %s</p>"
-                       % (ed, E(im["isbn"][ed])))
-    if im["isbn"].get("largeprint"):
-        imprint.append("<p>ISBN (large print paperback): %s</p>"
-                       % E(im["isbn"]["largeprint"]))
-    imprint.append("<p>%s</p>" % E(im["rights"]))
-    if im.get("aiDisclosure"):
-        imprint.append("<p>%s</p>" % E(im["aiDisclosure"]))
-    if im.get("authorBio"):
-        imprint.append("<p><b>About the author.</b> %s</p>"
-                       % E(im["authorBio"]))
-    add("imprint.xhtml", "Copyright", "\n".join(imprint), "frontmatter",
-        in_nav=("Copyright", 0))
+    def link(gid):
+        return '<a href="game-%s.xhtml">%s</a>' % (gid, E(titles[gid]))
 
-    for sec in fm["sections"]:
-        b = ['<h1>%s</h1>' % E(sec["title"])]
-        for p in sec.get("paragraphs", []):
-            b.append("<p>%s</p>" % E(p))
-        for sub in sec.get("sections", []):
-            b.append("<h2>%s</h2><p>%s</p>" % (E(sub["heading"]),
-                                               E(sub["text"])))
-        for row in sec.get("table", []):
-            b.append("<h2>%s · %s</h2><p>%s <i>%s</i></p>"
-                     % (E(row["n"]), E(row["name"]), E(row["idea"]),
-                        E(row["test"])))
-        if sec.get("closing"):
-            b.append("<p>%s</p>" % E(sec["closing"]))
-        add("%s.xhtml" % sec["id"], sec["title"], "\n".join(b), "frontmatter",
-            in_nav=(sec["title"], 0))
-
-    # ── gövde ─────────────────────────────────────────────────────────
+    # cover
+    cover = os.path.join(root, "08_OUTPUT", "KINDLE", "GreatBookOfWorldGames_cover_kindle.jpg")
+    if not os.path.exists(cover):
+        raise FileNotFoundError("Kindle cover missing: %s (build the covers first)" % cover)
+    images["cover.jpg"] = cover
+    add("cover.xhtml", "Cover", '<div style="text-align:center"><img src="../images/cover.jpg" '
+        'alt="%s" style="max-width:100%%;height:auto"/></div>' % E(tp["title"]), "front", 0, "Cover")
+    add("title.xhtml", tp["title"], '<h1>%s</h1><p class="standfirst">%s</p><p>%s</p><p>%s</p>'
+        % (E(tp["title"]), E(tp["subtitle"]), E(tp["author"]), E(tp["publisher"])), "front", 0,
+        "Title page")
+    isbn_e = isbn_registry.require(os.path.join(root, "08_OUTPUT", "KINDLE", "GreatBookOfWorldGames.epub"))
+    isbn_e = "%s-%s-%s-%s-%s" % (isbn_e[:3], isbn_e[3:6], isbn_e[6:8], isbn_e[8:12], isbn_e[12]) \
+        if isbn_e.isdigit() and isbn_e.startswith("978625") else isbn_e
+    imp = ["<h1>Copyright</h1>", "<p>%s</p>" % E(im["copyright"]), "<p>%s</p>" % E(im["publisher"]),
+           "<p>%s · Volume %s</p>" % (E(tp["series"]), tp["volume"]),
+           "<p>%s</p>" % E(I.ed_text(im["edition"], ed))]
+    if isbn_e:
+        imp.append("<p>ISBN (electronic edition): %s</p>" % E(str(isbn_e)))
+    imp += ["<p>%s</p>" % E(I.ed_text(im["rights"], ed)), "<p>%s</p>" % E(I.ed_text(im["aiDisclosure"], ed))]
+    add("imprint.xhtml", "Copyright", "\n".join(imp), "front", 0, "Copyright")
+    for s in fm["sections"]:
+        b = ["<h1>%s</h1>" % E(s["title"])]
+        for para in s.get("paragraphs", []):
+            b.append("<p>%s</p>" % E(I.ed_text(para, ed)))
+        for sub in s.get("sections", []):
+            if isinstance(sub, dict) and "heading" not in sub:
+                sub = sub.get(ed) or sub.get("kindle") or sub.get("default")
+            b.append("<h2>%s</h2><p>%s</p>" % (E(sub["heading"]), E(I.ed_text(sub["text"], ed))))
+        for row in s.get("table") or []:
+            b.append("<h2>%s · %s</h2><p>%s <em>%s</em></p>" % (E(row["n"]), E(row["name"]),
+                                                                E(row["idea"]), E(row["test"])))
+        if s.get("closing"):
+            b.append("<p>%s</p>" % E(I.ed_text(s["closing"], ed)))
+        if s["id"] == "tonight":
+            b.append(tonight_table(entries, link))
+        add("%s.xhtml" % s["id"], s["title"], "\n".join(b), "front", 0, s["title"])
     openers = {o["family"]: o for o in fm["familyOpeners"]}
     for item in fm["contents"]:
         if item["kind"] == "family-opener":
             o = openers[item["family"]]
-            b = ['<h1>%s</h1>' % E(o["title"]),
-                 '<p class="kicker">Part %s</p>' % E(o["numeral"]),
+            fam = [by_id[c["gameId"]] for c in fm["contents"]
+                   if c["kind"] == "game" and c["family"] == item["family"]]
+            b = ['<p class="kicker">Part %s</p><h1>%s</h1>' % (E(o["numeral"]), E(o["title"])),
                  '<p class="standfirst">%s</p>' % E(o["standfirst"])]
-            for p in o["paragraphs"]:
-                b.append("<p>%s</p>" % E(p))
-            add("part-%s.xhtml" % o["family"], o["title"], "\n".join(b),
-                in_nav=(o["title"], 0))
+            b += ["<p>%s</p>" % E(I.ed_text(p, ed)) for p in o["paragraphs"]]
+            b.append("<h2>The family at a glance</h2><table class=\"list\"><tr><th>Game</th>"
+                     "<th>Players</th><th>Time</th><th>Age</th><th>Difficulty</th></tr>%s</table>"
+                     % "".join("<tr><td>%s<br/>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>"
+                               % (link(x["gameId"]), E(x["culture"]), E(x["spec"]["players"]),
+                                  E(x["spec"]["time"]), E(x["spec"]["age"]),
+                                  "%s (%d of 5)" % (DIFF[x["spec"]["difficulty"]], x["spec"]["difficulty"]))
+                               for x in fam))
+            add("part-%s.xhtml" % o["family"], o["title"], "\n".join(b), "", 0, "Part %s · %s" % (
+                o["numeral"], o["title"]))
+            continue
+        e = by_id[item["gameId"]]
+        rec = pmap[e["gameId"]]
+        fn = os.path.basename(rec["kindle"])
+        images[fn] = os.path.join(root, rec["kindle"])
+        add("game-%s.xhtml" % e["gameId"], e["title"],
+            game_doc(e, ddir, fn, rec.get("alt") or ("Illustration for " + titles[e["gameId"]]), captions,
+                     I.plate_caption(rec)),
+            "", 1, e["title"])
+    # back matter
+    if bm.get("glossary"):
+        g = ["<h1>Glossary</h1>"] + ["<p><b>%s</b> %s%s</p>" % (
+            E(t["term"]), E(t["definition"]),
+            (" (%s)" % ", ".join(link(x) for x in t["games"])) if t.get("games") else "")
+            for t in sorted(bm["glossary"], key=lambda x: x["term"].lower())]
+        add("glossary.xhtml", "Glossary", "\n".join(g), "front idx", 0, "Glossary")
+    if bm.get("bibliography"):
+        b = ["<h1>Sources</h1><p>%s</p>" % E(I.ed_text(bm["bibliographyIntro"], ed))]
+        for w in bm["bibliography"]:
+            b.append("<p>%s. %s</p>" % (E(w["citation"].rstrip(".")), ", ".join(
+                link(x) + ((" (%s)" % E(w["pages"][x])) if w.get("pages", {}).get(x) else "")
+                for x in w["games"])))
+        add("sources.xhtml", "Sources", "\n".join(b), "front idx", 0, "Sources")
+    rows = []
+    for name, gid, note in I.a_to_z(entries):
+        if titles[gid] == name:
+            rows.append("<p><b>%s</b></p>" % link(gid))
         else:
-            g = games[item["gameId"]]
-            add("game-%s.xhtml" % g["gameId"], g["title"],
-                game_xhtml(g, ddir, plate_docs.get(g["gameId"])), in_nav=(g["title"], 1))
-
-    # ── arka madde ────────────────────────────────────────────────────
-    if bm:
-        gl = ["<h1>Glossary</h1>"] + [
-            "<p><b>%s</b> %s</p>" % (E(t["term"]), E(t["definition"]))
-            for t in sorted(bm["glossary"], key=lambda x: x["term"])]
-        add("glossary.xhtml", "Glossary", "\n".join(gl), "frontmatter",
-            in_nav=("Glossary", 0))
-        bib = ["<h1>Sources</h1>"]
-        for b_ in sorted(bm["bibliography"], key=lambda x: x["title"]):
-            bib.append("<h2>%s · %s</h2>" % (E(b_["title"]), E(b_["culture"])))
-            for s in b_["sources"]:
-                bib.append("<p>%s</p>" % E(s))
-        add("sources.xhtml", "Sources", "\n".join(bib), "frontmatter",
-            in_nav=("Sources", 0))
-        inv = ["<h1>Invented Traditions</h1>"]
+            rows.append("<p>%s <em>see</em> %s</p>" % (E(name), link(gid)))
+    add("index-az.xhtml", "Index of Games and Other Names", "<h1>Index of Games and Other Names</h1>"
+        + "\n".join(rows), "front idx", 0, "Index of games and other names")
+    ix = ["<h1>Index by Culture, Age and Difficulty</h1>", "<h2>By culture</h2>"]
+    for cul in sorted({e["culture"] for e in entries}, key=lambda s: I.plain(s).lower()):
+        ix.append("<p><b>%s</b>: %s</p>" % (E(cul), ", ".join(
+            link(e["gameId"]) for e in sorted(entries, key=lambda x: I.plain(x["title"]).lower())
+            if e["culture"] == cul)))
+    ix.append("<h2>By age</h2>")
+    for _, lbl in I.AGE_BUCKETS:
+        gs = [e for e in entries if I.age_bucket(e["spec"]) == lbl]
+        if gs:
+            ix.append("<p><b>%s</b>: %s</p>" % (E(lbl), ", ".join(link(e["gameId"]) for e in gs)))
+    ix.append("<h2>By difficulty</h2>")
+    for k in range(1, 6):
+        gs = [e for e in entries if e["spec"]["difficulty"] == k]
+        if gs:
+            ix.append("<p><b>%s (%d of 5)</b>: %s</p>" % (DIFF[k], k, ", ".join(link(e["gameId"]) for e in gs)))
+    add("index-culture.xhtml", "Index by Culture, Age and Difficulty", "\n".join(ix), "front idx", 0,
+        "Index by culture, age and difficulty")
+    if bm.get("inventedTraditions"):
+        b = ["<h1>Invented Traditions</h1><p>%s</p>" % E(I.ed_text(bm["inventedIntro"], ed))]
         for t in bm["inventedTraditions"]:
-            inv.append("<h2>%s</h2><p><i>%s</i> %s</p>"
-                       % (E(t["claim"]), E(t["verdict"]), E(t["detail"])))
-        add("invented.xhtml", "Invented Traditions", "\n".join(inv),
-            "frontmatter", in_nav=("Invented Traditions", 0))
-        mg = ["<h1>Materials and Substitutions</h1>"]
-        for x in sorted(bm["materialsGuide"], key=lambda y: -y["count"]):
-            mg.append("<h2>%s</h2><p>%s</p>"
-                      % (E(x["substitute"]), E(", ".join(x["usedBy"]))))
-        add("materials.xhtml", "Materials and Substitutions", "\n".join(mg),
-            "frontmatter", in_nav=("Materials and Substitutions", 0))
-        note = ("<h1>Board Templates</h1><p>The print editions of this book "
-                "carry full-size board templates for photocopying. In this "
-                "digital edition the board for each game is drawn beside its "
-                "rules, and scales to any screen; draw the board on paper "
-                "from the diagram.</p>")
-        add("templates.xhtml", "Board Templates", note, "frontmatter",
-            in_nav=("Board Templates", 0))
-        comp = (cfg or {}).get("companion") or {}
-        if comp and comp.get("url"):
-            heading = comp.get("heading", "Boards, cards and score sheets — free to print")
-            cb = ['<h1>%s</h1>' % E(heading)]
-            if comp.get("standfirst"):
-                cb.append('<p class="standfirst">%s</p>' % E(comp["standfirst"]))
-            for it in comp.get("items", []):
-                cb.append('<p><b>%s.</b> %s</p>' % (E(it["name"]), E(it.get("detail", ""))))
-            cb.append('<p><b><a href="https://%s">%s</a></b></p>' % (E(comp["url"]), E(comp["url"])))
-            cb.append('<p>%s</p>' % E("Free, and free of conditions: nothing to sign up for, no email asked, no account needed. Print what you want and play."))
-            add("companion.xhtml", heading, "\n".join(cb), "frontmatter",
-                in_nav=(heading, 0))
+            b.append("<h2>%s</h2><p><em>%s</em> %s</p>" % (E(t["claim"]), E(t["verdict"]), E(t["detail"])))
+        add("invented.xhtml", "Invented Traditions", "\n".join(b), "front", 0, "Invented traditions")
+    if bm.get("credits"):
+        b = ["<h1>The Illustrations</h1>"] + ["<p>%s</p>" % E(I.ed_text(p, ed))
+                                              for p in bm["credits"]["paragraphs"]]
+        b.append('<table class="list"><tr><th>Game</th><th>Illustration</th></tr>%s</table>' % "".join(
+            "<tr><td>%s</td><td>%s</td></tr>" % (E(r["game"]), E(r["credit"])) for r in bm["credits"]["plates"]))
+        add("illustrations.xhtml", "The Illustrations", "\n".join(b), "front", 0, "The illustrations")
+    if bm.get("aboutAuthor"):
+        add("author.xhtml", "About the Author", "<h1>About the Author</h1>" + "".join(
+            "<p>%s</p>" % E(I.ed_text(p, ed)) for p in bm["aboutAuthor"]), "front", 0, "About the author")
+    comp = I.companion_block(root, cfg) or {}
+    if comp.get("url"):
+        b = ["<h1>%s</h1>" % E(comp["heading"]), '<p class="standfirst">%s</p>' % E(I.ed_text(comp["standfirst"], ed))]
+        b += ["<p><b>%s.</b> %s</p>" % (E(it["name"]), E(it.get("detail", ""))) for it in comp["items"]]
+        b.append('<p><b><a href="https://%s">%s</a></b></p>' % (E(comp["url"]), E(comp["url"])))
+        b.append("<p>%s</p>" % E(I.ed_text(comp.get("note", "Free, and free of conditions: nothing to "
+                                              "sign up for, no email asked, no account needed."), ed)))
+        add("companion.xhtml", comp["heading"], "\n".join(b), "front", 0, "The free companion")
+    return write_epub(root, cfg, tp, files, spine, nav, images, entries)
 
-    # ── nav ───────────────────────────────────────────────────────────
-    # İki seviyeli içindekiler. `<ol>` bir `<li>`nin İÇİNDE açılmak
-    # zorundadır; ilk sürüm onu kardeş olarak açıyordu ve nav.xhtml
-    # bozuk XML çıkıyordu — EPUB okuyucuları bunu reddeder.
-    nav = ['<nav epub:type="toc" id="toc"><h1>Contents</h1><ol>']
-    i = 0
-    while i < len(nav_items):
-        name, label, lvl = nav_items[i]
-        nav.append('<li><a href="text/%s">%s</a>' % (name, E(label)))
-        kids = []
-        j = i + 1
-        while j < len(nav_items) and nav_items[j][2] > lvl:
-            kids.append(nav_items[j])
-            j += 1
-        if kids:
-            nav.append("<ol>")
-            for kn, kl, _ in kids:
-                nav.append('<li><a href="text/%s">%s</a></li>' % (kn, E(kl)))
-            nav.append("</ol>")
-        nav.append("</li>")
-        i = j
-    nav.append("</ol></nav>")
-    nav_doc = ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n'
-               '<html xmlns="http://www.w3.org/1999/xhtml" '
-               'xmlns:epub="http://www.idpf.org/2007/ops" lang="en" '
-               'xml:lang="en"><head><title>Contents</title>'
-               '<meta charset="utf-8"/>'
-               '<link rel="stylesheet" type="text/css" href="style.css"/>'
-               '</head><body>%s</body></html>\n' % "".join(nav))
 
-    # ── OPF ───────────────────────────────────────────────────────────
+def tonight_table(entries, link):
+    import interior as I
+    grid = {}
+    for e in entries:
+        for pb in I.player_buckets(e["spec"]):
+            for tb in I.time_bucket_keys(e["spec"]):
+                grid.setdefault((tb, pb), []).append(e)
+    rows = []
+    for _, tl in I.TIME_BUCKETS:
+        cells = []
+        for pk, _ in I.PLAYER_BUCKETS:
+            gs = sorted(grid.get((tl, pk), []), key=lambda x: I.plain(x["title"]).lower())
+            cells.append(", ".join(link(e["gameId"]) for e in gs) or "—")
+        rows.append("<tr><th>%s</th>%s</tr>" % (E(tl), "".join("<td>%s</td>" % c for c in cells)))
+    return ('<table class="list"><tr><th></th><th>Two players</th><th>Three or four</th>'
+            '<th>Five or more</th></tr>%s</table>' % "".join(rows))
+
+
+def write_epub(root, cfg, tp, files, spine, nav, images, entries):
     out_dir = os.path.join(root, "08_OUTPUT", "KINDLE")
     path = os.path.join(out_dir, "GreatBookOfWorldGames.epub")
-    uid = isbn_registry.identifier(path)          # raises if unregistered
-
-    # Which documents actually carry an inline <svg>? Measured from the bodies
-    # about to be written, never from a list someone typed. EPUBCheck raises
-    # OPF-014 once per undeclared document, and this book draws 54 board
-    # diagrams as inline vectors — 54 of the 55 errors on the shipped flagship
-    # EPUB were this single omission repeated.
+    uid = isbn_registry.identifier(path)
     svg_docs = {name.split("/")[-1] for name, data in files if "<svg" in data}
-
-    manifest = ['<item id="nav" href="nav.xhtml" '
-                'media-type="application/xhtml+xml" properties="nav"/>',
+    manifest = ['<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>',
                 '<item id="css" href="style.css" media-type="text/css"/>']
-    if cover_img:
-        manifest.append('<item id="cover-image" href="images/cover.jpg" '
-                        'media-type="image/jpeg" properties="cover-image"/>')
-    for idx, (gid, fn) in enumerate(sorted(plate_docs.items())):
-        manifest.append('<item id="plate-%d" href="images/%s" media-type="image/jpeg"/>'
-                        % (idx, fn))
+    for i, fn in enumerate(sorted(images)):
+        props = ' properties="cover-image"' if fn == "cover.jpg" else ""
+        manifest.append('<item id="img%d" href="images/%s" media-type="image/jpeg"%s/>' % (i, fn, props))
     for i, n in enumerate(spine):
         props = ' properties="svg"' if n in svg_docs else ""
-        manifest.append('<item id="s%d" href="text/%s" '
-                        'media-type="application/xhtml+xml"%s/>' % (i, n, props))
-    opf = ('<?xml version="1.0" encoding="utf-8"?>\n'
-           '<package xmlns="http://www.idpf.org/2007/opf" version="3.0" '
-           'unique-identifier="bookid" xml:lang="en">\n'
-           '<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
+        manifest.append('<item id="s%d" href="text/%s" media-type="application/xhtml+xml"%s/>' % (i, n, props))
+    # nav: two levels
+    navh = ['<nav epub:type="toc" id="toc"><h1>Contents</h1><ol>']
+    i = 0
+    while i < len(nav):
+        name, label, lvl = nav[i]
+        navh.append('<li><a href="text/%s">%s</a>' % (name, E(label)))
+        j = i + 1
+        kids = []
+        while j < len(nav) and nav[j][2] > lvl:
+            kids.append(nav[j])
+            j += 1
+        if kids:
+            navh.append("<ol>" + "".join('<li><a href="text/%s">%s</a></li>' % (k[0], E(k[1])) for k in kids) + "</ol>")
+        navh.append("</li>")
+        i = j
+    navh.append('</ol></nav><nav epub:type="landmarks" hidden=""><ol>'
+                '<li><a epub:type="cover" href="text/cover.xhtml">Cover</a></li>'
+                '<li><a epub:type="toc" href="nav.xhtml">Contents</a></li>'
+                '<li><a epub:type="bodymatter" href="text/introduction.xhtml">Start</a></li></ol></nav>')
+    nav_doc = ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n<html xmlns="http://www.w3.org/1999/xhtml" '
+               'xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en"><head><title>Contents</title>'
+               '<meta charset="utf-8"/><link rel="stylesheet" type="text/css" href="style.css"/></head><body>%s'
+               '</body></html>\n' % "".join(navh))
+    modified = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    # the navigation document is also the book's inline table of contents (Kindle asks for one):
+    # it is read after the copyright page, so the "Contents" landmark points at a spine item
+    itemrefs = ['<itemref idref="s%d"/>' % i for i in range(len(spine))]
+    itemrefs.insert(spine.index("imprint.xhtml") + 1, '<itemref idref="nav"/>')
+    desc = cfg["metadata"].get("descriptionShort") or tp["subtitle"]
+    opf = ('<?xml version="1.0" encoding="utf-8"?>\n<package xmlns="http://www.idpf.org/2007/opf" version="3.0" '
+           'unique-identifier="bookid" xml:lang="en">\n<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
            '<dc:identifier id="bookid">%s</dc:identifier>\n'
-           # main + subtitle as separate refined titles. EPUB metadata carries
-           # the ASCII form the registry fixes, because a retailer's importer
-           # is not required to be UTF-8 clean and one of them proved it.
-           '<dc:title id="title-main">%s</dc:title>\n'
-           '<meta refines="#title-main" property="title-type">main</meta>\n'
-           '<dc:title id="title-main-sub">%s</dc:title>\n'
-           '<meta refines="#title-main-sub" property="title-type">subtitle</meta>\n'
-           '<dc:creator>%s</dc:creator>\n'
-           '<dc:publisher>%s</dc:publisher>\n'
-           '<dc:language>en</dc:language>\n'
-           '<dc:description>%s</dc:description>\n'
-           '<meta property="dcterms:modified">2026-08-20T00:00:00Z</meta>\n'
-           '<meta property="schema:accessMode">textual</meta>\n'
-           '<meta property="schema:accessMode">visual</meta>\n'
+           '<dc:title id="t-main">%s</dc:title>\n<meta refines="#t-main" property="title-type">main</meta>\n'
+           '<dc:title id="t-sub">%s</dc:title>\n<meta refines="#t-sub" property="title-type">subtitle</meta>\n'
+           '<dc:creator>%s</dc:creator>\n<dc:publisher>%s</dc:publisher>\n<dc:language>en</dc:language>\n'
+           '<dc:description>%s</dc:description>\n<meta property="dcterms:modified">%s</meta>\n'
+           '<meta property="schema:accessMode">textual</meta>\n<meta property="schema:accessMode">visual</meta>\n'
+           '<meta property="schema:accessModeSufficient">textual,visual</meta>\n'
            '<meta property="schema:accessibilityFeature">structuralNavigation</meta>\n'
-           # EPUB 3 kapağı manifest'te properties="cover-image" ile işaretlenir;
-           # bu ESKİ EPUB 2 satırı ise KDP'nin dönüştürücüsünün hâlâ okuduğu
-           # satırdır. İkisini birden yazmak standart pratiktir.
-           '%s'
-           '</metadata>\n<manifest>\n%s\n</manifest>\n<spine>\n%s\n</spine>\n'
+           '<meta property="schema:accessibilityFeature">alternativeText</meta>\n'
+           '<meta property="schema:accessibilityFeature">tableOfContents</meta>\n'
+           '<meta property="schema:accessibilityHazard">none</meta>\n'
+           '<meta property="schema:accessibilitySummary">Reflowable text with a navigable table of contents; '
+           'every illustration has a text description; board diagrams are vector drawings whose content is '
+           'also given in the text of the rules.</meta>\n'
+           '<meta name="cover" content="img%d"/>\n</metadata>\n<manifest>\n%s\n</manifest>\n<spine>\n%s\n</spine>\n'
            '</package>\n'
-           % (uid, E(tp["title"]), E(tp["subtitle"]), E(tp["author"]),
-              E(isbn_registry.IMPRINT_ASCII), E(tp["subtitle"]),
-              ('<meta name="cover" content="cover-image"/>\n'
-               if cover_img else ""),
-              "\n".join(manifest),
-              "\n".join('<itemref idref="s%d"/>' % i
-                        for i in range(len(spine)))))
-
+           % (uid, E(tp["title"]), E(tp["subtitle"]), E(tp["author"]), E(isbn_registry.IMPRINT_ASCII), E(desc),
+              modified, sorted(images).index("cover.jpg"), "\n".join(manifest),
+              "\n".join(itemrefs)))
     os.makedirs(out_dir, exist_ok=True)
     with zipfile.ZipFile(path, "w") as z:
-        z.writestr(zipfile.ZipInfo("mimetype"), "application/epub+zip",
-                   compress_type=zipfile.ZIP_STORED)
+        z.writestr(zipfile.ZipInfo("mimetype"), "application/epub+zip", compress_type=zipfile.ZIP_STORED)
         z.writestr("META-INF/container.xml",
-                   '<?xml version="1.0" encoding="utf-8"?>\n'
-                   '<container version="1.0" '
-                   'xmlns="urn:oasis:names:tc:opendocument:xmlns:container">'
-                   '<rootfiles><rootfile full-path="OEBPS/content.opf" '
-                   'media-type="application/oebps-package+xml"/></rootfiles>'
-                   '</container>\n', zipfile.ZIP_DEFLATED)
+                   '<?xml version="1.0" encoding="utf-8"?>\n<container version="1.0" '
+                   'xmlns="urn:oasis:names:tc:opendocument:xmlns:container"><rootfiles>'
+                   '<rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/>'
+                   '</rootfiles></container>\n', zipfile.ZIP_DEFLATED)
         z.writestr("OEBPS/content.opf", opf, zipfile.ZIP_DEFLATED)
         z.writestr("OEBPS/nav.xhtml", nav_doc, zipfile.ZIP_DEFLATED)
         z.writestr("OEBPS/style.css", CSS, zipfile.ZIP_DEFLATED)
         for name, data in files:
             z.writestr(name, data, zipfile.ZIP_DEFLATED)
-        if cover_img:
-            with open(cover_img, "rb") as fh:
-                z.writestr("OEBPS/images/cover.jpg", fh.read(),
-                           zipfile.ZIP_DEFLATED)
-        for gid, fn in plate_docs.items():
-            src_p = os.path.join(pdir, fn)
-            if os.path.exists(src_p):
-                with open(src_p, "rb") as fh:
-                    z.writestr("OEBPS/images/%s" % fn, fh.read(),
-                               zipfile.ZIP_DEFLATED)
-
-    cover_raw = os.path.join(root, "07_ASSETS", "raw", "cover")
-    have_cover = bool(os.path.isdir(cover_raw) and
-                      [f for f in os.listdir(cover_raw)
-                       if not f.startswith(".")])
-    rep = {
-        "format": "EPUB 3, reflowable",
-        "file": os.path.relpath(path, root),
-        "sha256": sha256(path), "bytes": os.path.getsize(path),
-        "documents": len(files), "spineItems": len(spine),
-        "games": len(book["games"]),
-        "heroPlatesEmbedded": len(plate_docs),
-        "diagramsEmbedded": sum(len(g.get("diagrams") or [])
-                                for g in book["games"]),
-        "diagramFormat": "inline SVG (vector, no raster)",
-        "coverImage": (os.path.relpath(cover_img, root) if cover_img else None),
-        "coverStatus": ("READY" if cover_img or have_cover
-                        else "BLOCKED — kurucu kapak sanatı yok; sahte kapak "
-                             "KONMADI"),
-        "fixedLayout": False,
-        "fixedLayoutRationale":
-            "Çift sayfa mimarisi bir BASKI kısıtına verilmiş cevaptır. "
-            "Kaydırılan bir ekranda o kısıt yoktur; madde kesintisiz akar. "
-            "Sabit düzen ise gövde metnini telefonda okunamaz kılar ve "
-            "okurun erişilebilirlik ayarlarını kilitler.",
-        "measured": m,
-    }
+        for fn, src in sorted(images.items()):
+            with open(src, "rb") as fh:
+                data = fh.read()
+            if fn == "cover.jpg":
+                # the marketplace cover is uploaded to KDP separately; the copy inside the book only
+                # has to fill a reading screen, and KDP charges Kindle delivery by the megabyte
+                import io
+                from PIL import Image
+                im = Image.open(io.BytesIO(data)).convert("RGB")
+                if im.height > 1600:
+                    im = im.resize((round(im.width * 1600 / im.height), 1600), Image.LANCZOS)
+                buf = io.BytesIO()
+                im.save(buf, "JPEG", quality=85, optimize=True, progressive=True)
+                data = buf.getvalue()
+            z.writestr("OEBPS/images/%s" % fn, data, zipfile.ZIP_DEFLATED)
+    rep = {"format": "EPUB 3, reflowable", "file": os.path.relpath(path, root), "sha256": sha256(path),
+           "bytes": os.path.getsize(path), "documents": len(files), "spineItems": len(spine),
+           "games": len(entries), "platesEmbedded": len(images) - 1,
+           "diagramsEmbedded": sum(len(e["diagrams"]) for e in entries),
+           "identifier": uid, "modified": modified, "fixedLayout": False,
+           "manuscriptSha256": sha256(os.path.join(root, "02_MANUSCRIPT", "book.json"))}
     dump(os.path.join(root, "06_REPORTS", "epub.json"), rep)
-
-    print("  ✓ EPUB 3 (reflowable) · %d belge · %d oyun · %d diyagram (SVG)"
-          % (len(files), len(book["games"]), rep["diagramsEmbedded"]))
-    print("    %s · %.1f KB" % (rep["file"], rep["bytes"] / 1024.0))
-    if not have_cover:
-        print("    ⛔ KAPAK YOK — Kindle bir kapak görseli ister. Sahte kapak "
-              "konmadı; kurucu sanatı bekleniyor.")
+    print("  ✓ EPUB 3 · %d documents · %d games · %d diagrams · %d plates · %.1f MB"
+          % (len(files), len(entries), rep["diagramsEmbedded"], rep["platesEmbedded"], rep["bytes"] / 1e6))
     return 0
 
 
-
-def manuscript_absent(root: str) -> bool:
-    """Ticari manuscript depoda YOKTUR (karar K12).
-
-    CI taze bir klonda koşar ve orada `02_MANUSCRIPT/book.json` bulunmaz.
-    Bu bir kusur DEĞİLDİR ve kapı orada BOŞ KOŞAR. Bir kapının CI'da
-    kırmızı yanması, kusuru olduğu için olmalıdır; verinin orada olmaması
-    için değil."""
-    return not os.path.exists(os.path.join(root, "02_MANUSCRIPT", "book.json"))
-
-
-def run_check(root: str) -> int:
+def run_check(root):
     p = os.path.join(root, "06_REPORTS", "epub.json")
+    if not os.path.exists(os.path.join(root, "02_MANUSCRIPT", "book.json")):
+        print("  · manuscript not in this checkout — EPUB check SKIPPED (expected in CI)")
+        return 0
     if not os.path.exists(p):
-        print("  · EPUB üretilmemiş — ATLANDI")
-        return 0
-    if manuscript_absent(root):
-        print("  · ticari manuscript bu depoda yok — EPUB denetimi ATLANDI "
-              "(CI'da beklenen)")
-        return 0
+        print("  ✗ EPUB not built")
+        return 1
     r = load(p)
     f = os.path.join(root, r["file"])
-    if not os.path.exists(f):
-        print("  ✗ EPUB dosyası yok: %s" % r["file"])
+    if not os.path.exists(f) or sha256(f) != r["sha256"]:
+        print("  ✗ EPUB missing or changed since its report")
         return 1
-    if sha256(f) != r["sha256"]:
-        print("  ✗ EPUB sağlama toplamı tutmuyor")
+    if r.get("manuscriptSha256") != sha256(os.path.join(root, "02_MANUSCRIPT", "book.json")):
+        print("  ✗ EPUB built from an older manuscript — rebuild")
         return 1
     with zipfile.ZipFile(f) as z:
-        names = z.namelist()
-        if names[0] != "mimetype":
-            print("  ✗ EPUB: 'mimetype' ilk giriş DEĞİL — okuyucular reddeder")
+        if z.namelist()[0] != "mimetype" or z.getinfo("mimetype").compress_type != zipfile.ZIP_STORED:
+            print("  ✗ mimetype entry wrong")
             return 1
-        if z.getinfo("mimetype").compress_type != zipfile.ZIP_STORED:
-            print("  ✗ EPUB: 'mimetype' SIKIŞTIRILMIŞ — sıkıştırılmamalı")
-            return 1
-        bad = z.testzip()
-        if bad:
-            print("  ✗ EPUB bozuk: %s" % bad)
-            return 1
-        # ⚠ XHTML İYİ BİÇİMLİ OLMAK ZORUNDA. EPUB HTML değil XML'dir;
-        # tek bir eşleşmeyen etiket dosyayı okuyucuda açılmaz yapar.
-        # nav.xhtml ilk sürümde tam olarak böyle bozuktu.
         import xml.etree.ElementTree as ET
-        ill = []
-        for n in names:
+        for n in z.namelist():
             if n.endswith((".xhtml", ".opf", ".xml")):
-                try:
-                    ET.fromstring(z.read(n))
-                except ET.ParseError as exc:
-                    ill.append("%s: %s" % (n, exc))
-        if ill:
-            for x in ill[:6]:
-                print("  ✗ bozuk XML — %s" % x)
+                data = z.read(n).decode("utf-8")
+                ET.fromstring(data.encode("utf-8"))
+                for bad in (">True<", ">False<", ">None<", "{page:", "000</"):
+                    if bad in data:
+                        print("  ✗ %s contains %r" % (n, bad))
+                        return 1
+    ep = shutil.which("epubcheck") or "/usr/local/bin/epubcheck"
+    if os.path.exists(ep):
+        res = subprocess.run([ep, f], capture_output=True, text=True)
+        out = (res.stdout or "") + (res.stderr or "")
+        if res.returncode != 0 or re.search(r"(\d+) (errors|fatal)", out) and not re.search(
+                r"No errors or warnings detected", out):
+            print("  ✗ EPUBCheck failed:\n%s" % out[-3000:])
             return 1
-    import shutil
-    import subprocess
-    ep_bin = shutil.which("epubcheck") or ("/usr/local/bin/epubcheck" if os.path.exists("/usr/local/bin/epubcheck") else None)
-    if ep_bin:
-        res = subprocess.run([ep_bin, f], capture_output=True, text=True)
-        if res.returncode != 0:
-            print("  ✗ EPUBCheck başarısız:\n%s" % (res.stderr or res.stdout))
-            return 1
-        print("  ✓ EPUBCheck geçti (0 hata / 0 uyarı)")
-    print("  ✓ EPUB geçerli · %d belge · %s"
-          % (r["documents"], r["coverStatus"].split("—")[0].strip()))
+        print("  ✓ EPUBCheck: no errors or warnings")
+    print("  ✓ EPUB valid · %d documents · %.1f MB" % (r["documents"], r["bytes"] / 1e6))
     return 0
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", default=DEFAULT_ROOT)
     ap.add_argument("--check", action="store_true")
     args = ap.parse_args()

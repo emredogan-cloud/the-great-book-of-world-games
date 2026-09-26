@@ -1,0 +1,4014 @@
+{
+ "diagrams": [
+  {
+   "id": "tablut-setup",
+   "widthMm": 85.0,
+   "heightMm": 99.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 81,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 9,
+    "black": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tablut-setup.svg",
+   "gameId": "tablut",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "tablut-worked",
+   "widthMm": 177.0,
+   "heightMm": 104.59,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 162,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 17,
+    "black": 32
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tablut-worked.svg",
+   "gameId": "tablut",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "tablut-capture",
+   "widthMm": 177.0,
+   "heightMm": 197.19,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 324,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 6,
+    "black": 7
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tablut-capture.svg",
+   "gameId": "tablut",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "yut-setup",
+   "widthMm": 81.49,
+   "heightMm": 80.0,
+   "refitToContent": true,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 29,
+   "pieces": {},
+   "minTextPt": 8,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/yut-setup.svg",
+   "gameId": "yut-nori",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "yut-worked",
+   "widthMm": 80.71,
+   "heightMm": 88.75,
+   "refitToContent": true,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 29,
+   "pieces": {
+    "white": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/yut-worked.svg",
+   "gameId": "yut-nori",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "fanorona-setup",
+   "widthMm": 128.1,
+   "heightMm": 80.85,
+   "refitToContent": false,
+   "points": 45,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 22,
+    "black": 22
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/fanorona-setup.svg",
+   "gameId": "fanorona",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "fanorona-captures",
+   "widthMm": 176.26,
+   "heightMm": 62.69,
+   "refitToContent": false,
+   "points": 90,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 44,
+    "black": 42
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/fanorona-captures.svg",
+   "gameId": "fanorona",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "fanorona-worked",
+   "widthMm": 176.26,
+   "heightMm": 62.69,
+   "refitToContent": false,
+   "points": 90,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 38,
+    "black": 33
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/fanorona-worked.svg",
+   "gameId": "fanorona",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "ponghauki-setup",
+   "widthMm": 53.2,
+   "heightMm": 61.95,
+   "refitToContent": false,
+   "points": 5,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 2,
+    "white": 2
+   },
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ponghauki-setup.svg",
+   "gameId": "pong-hau-ki",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "ponghauki-worked",
+   "widthMm": 53.2,
+   "heightMm": 61.95,
+   "refitToContent": false,
+   "points": 5,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 2,
+    "black": 2
+   },
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ponghauki-worked.svg",
+   "gameId": "pong-hau-ki",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "gonggi-worked",
+   "widthMm": 85.0,
+   "heightMm": 34.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/gonggi-worked.svg",
+   "gameId": "gonggi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "olinda-setup",
+   "widthMm": 85.0,
+   "heightMm": 31.63,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 14,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/olinda-setup.svg",
+   "gameId": "olinda-keliya",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "olinda-worked",
+   "widthMm": 177.0,
+   "heightMm": 45.59,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 28,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/olinda-worked.svg",
+   "gameId": "olinda-keliya",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "nerenchi-setup",
+   "widthMm": 82.2,
+   "heightMm": 82.2,
+   "refitToContent": false,
+   "points": 24,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/nerenchi-setup.svg",
+   "gameId": "nerenchi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "nerenchi-worked",
+   "widthMm": 171.4,
+   "heightMm": 96.55,
+   "refitToContent": false,
+   "points": 48,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 22,
+    "white": 21
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/nerenchi-worked.svg",
+   "gameId": "nerenchi",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "diviyan-setup",
+   "widthMm": 81.23,
+   "heightMm": 89.98,
+   "refitToContent": false,
+   "points": 49,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/diviyan-setup.svg",
+   "gameId": "demala-diviyan-keliya",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "diviyan-worked",
+   "widthMm": 169.54,
+   "heightMm": 95.62,
+   "refitToContent": false,
+   "points": 98,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 4,
+    "white": 3
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/diviyan-worked.svg",
+   "gameId": "demala-diviyan-keliya",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "awith-setup",
+   "widthMm": 161.63,
+   "heightMm": 30.38,
+   "refitToContent": false,
+   "points": 47,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 23,
+    "black": 23
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/awith-setup.svg",
+   "gameId": "awithlaknannai",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "awith-worked",
+   "widthMm": 161.63,
+   "heightMm": 30.38,
+   "refitToContent": false,
+   "points": 47,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 23,
+    "black": 23
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/awith-worked.svg",
+   "gameId": "awithlaknannai",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "picaria-setup",
+   "widthMm": 65.86,
+   "heightMm": 65.86,
+   "refitToContent": false,
+   "points": 9,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/picaria-setup.svg",
+   "gameId": "picaria",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "picaria-worked",
+   "widthMm": 65.86,
+   "heightMm": 79.86,
+   "refitToContent": false,
+   "points": 9,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 3,
+    "white": 3
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/picaria-worked.svg",
+   "gameId": "picaria",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "zohn-setup",
+   "widthMm": 80.0,
+   "heightMm": 87.88,
+   "refitToContent": true,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 40,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/zohn-setup.svg",
+   "gameId": "zohn-ahl",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "zohn-worked",
+   "widthMm": 80.0,
+   "heightMm": 95.26,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 40,
+   "pieces": {
+    "white": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/zohn-worked.svg",
+   "gameId": "zohn-ahl",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "seega-setup",
+   "widthMm": 78.82,
+   "heightMm": 92.82,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 25,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 2,
+    "black": 2
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/seega-setup.svg",
+   "gameId": "seega",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "seega-worked",
+   "widthMm": 78.82,
+   "heightMm": 92.82,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 25,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 12,
+    "white": 12
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/seega-worked.svg",
+   "gameId": "seega",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "tab-setup",
+   "widthMm": 85.0,
+   "heightMm": 51.43,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 36,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 9,
+    "black": 9
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tab-setup.svg",
+   "gameId": "tab",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "tab-worked",
+   "widthMm": 85.0,
+   "heightMm": 51.43,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 36,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 9,
+    "black": 9
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tab-worked.svg",
+   "gameId": "tab",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "nmm-setup",
+   "widthMm": 82.2,
+   "heightMm": 82.2,
+   "refitToContent": false,
+   "points": 24,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/nmm-setup.svg",
+   "gameId": "nine-mens-morris",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "nmm-worked",
+   "widthMm": 82.2,
+   "heightMm": 96.2,
+   "refitToContent": false,
+   "points": 24,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 6,
+    "black": 6
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/nmm-worked.svg",
+   "gameId": "nine-mens-morris",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "foxgeese-setup",
+   "widthMm": 82.2,
+   "heightMm": 90.95,
+   "refitToContent": false,
+   "points": 33,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 1,
+    "white": 17
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/foxgeese-setup.svg",
+   "gameId": "fox-and-geese",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "foxgeese-worked",
+   "widthMm": 171.4,
+   "heightMm": 96.55,
+   "refitToContent": false,
+   "points": 66,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 2,
+    "white": 33
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/foxgeese-worked.svg",
+   "gameId": "fox-and-geese",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "hopscotch-worked",
+   "widthMm": 40.0,
+   "heightMm": 73.15,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/hopscotch-worked.svg",
+   "gameId": "hopscotch",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "totolospi-setup",
+   "widthMm": 85.0,
+   "heightMm": 44.45,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 1,
+    "black": 1
+   },
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/totolospi-setup.svg",
+   "gameId": "totolospi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "totolospi-worked",
+   "widthMm": 85.0,
+   "heightMm": 44.45,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 1,
+    "black": 1
+   },
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/totolospi-worked.svg",
+   "gameId": "totolospi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "setdilth-setup",
+   "widthMm": 80.0,
+   "heightMm": 80.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 40,
+   "pieces": {},
+   "minTextPt": 8,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/setdilth-setup.svg",
+   "gameId": "set-dilth",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "setdilth-worked",
+   "widthMm": 80.0,
+   "heightMm": 94.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 40,
+   "pieces": {
+    "white": 1,
+    "black": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/setdilth-worked.svg",
+   "gameId": "set-dilth",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "janken-signs",
+   "widthMm": 83.2,
+   "heightMm": 79.64,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/janken-signs.svg",
+   "gameId": "jan-ken",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "janken-worked",
+   "widthMm": 85.0,
+   "heightMm": 34.49,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/janken-worked.svg",
+   "gameId": "jan-ken",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "conkers-worked",
+   "widthMm": 72.0,
+   "heightMm": 50.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/conkers-worked.svg",
+   "gameId": "conkers",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "cradle-figures",
+   "widthMm": 177.0,
+   "heightMm": 65.06,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 99.0,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/cradle-figures.svg",
+   "gameId": "cats-cradle",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "cradle-worked",
+   "widthMm": 85.0,
+   "heightMm": 28.59,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 99.0,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/cradle-worked.svg",
+   "gameId": "cats-cradle",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "shogi-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 81,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 20,
+    "white": 20
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/shogi-setup.svg",
+   "gameId": "shogi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "shogi-worked",
+   "widthMm": 85.0,
+   "heightMm": 99.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 81,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 20,
+    "white": 19
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/shogi-worked.svg",
+   "gameId": "shogi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "pachisi-setup",
+   "widthMm": 177.0,
+   "heightMm": 185.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 96,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/pachisi-setup.svg",
+   "gameId": "pachisi",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "pachisi-worked",
+   "widthMm": 177.0,
+   "heightMm": 185.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 96,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 2,
+    "black": 1
+   },
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/pachisi-worked.svg",
+   "gameId": "pachisi",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "xiangqi-setup",
+   "widthMm": 84.63,
+   "heightMm": 102.4,
+   "refitToContent": false,
+   "points": 90,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "red": 16,
+    "black": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/xiangqi-setup.svg",
+   "gameId": "xiangqi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "xiangqi-worked",
+   "widthMm": 84.63,
+   "heightMm": 107.65,
+   "refitToContent": false,
+   "points": 90,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "red": 16,
+    "black": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/xiangqi-worked.svg",
+   "gameId": "xiangqi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "sittuyin-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "red": 16,
+    "black": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/sittuyin-setup.svg",
+   "gameId": "sittuyin",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "sittuyin-worked",
+   "widthMm": 85.0,
+   "heightMm": 99.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "red": 16,
+    "black": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/sittuyin-worked.svg",
+   "gameId": "sittuyin",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "shatranj-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "red": 16,
+    "black": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/shatranj-setup.svg",
+   "gameId": "shatranj",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "shatranj-worked",
+   "widthMm": 85.0,
+   "heightMm": 99.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "red": 16,
+    "black": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/shatranj-worked.svg",
+   "gameId": "shatranj",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "chaturaji-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "green": 8,
+    "red": 8,
+    "black": 8,
+    "yellow": 8
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/chaturaji-setup.svg",
+   "gameId": "chaturanga",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "chaturaji-worked",
+   "widthMm": 85.0,
+   "heightMm": 104.24,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "green": 8,
+    "red": 8,
+    "black": 8,
+    "yellow": 8
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/chaturaji-worked.svg",
+   "gameId": "chaturanga",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "hnefatafl-setup",
+   "widthMm": 85.0,
+   "heightMm": 104.24,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 121,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 13,
+    "black": 24
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/hnefatafl-setup.svg",
+   "gameId": "hnefatafl",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "hnefatafl-worked",
+   "widthMm": 177.0,
+   "heightMm": 104.59,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 242,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 26,
+    "black": 47
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/hnefatafl-worked.svg",
+   "gameId": "hnefatafl",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "patolli-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 52,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/patolli-setup.svg",
+   "gameId": "patolli",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "patolli-worked",
+   "widthMm": 85.0,
+   "heightMm": 99.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 52,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 1,
+    "black": 1
+   },
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/patolli-worked.svg",
+   "gameId": "patolli",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "tiengow-set",
+   "widthMm": 168.51,
+   "heightMm": 63.81,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tiengow-set.svg",
+   "gameId": "tien-gow",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "tiengow-worked",
+   "widthMm": 83.0,
+   "heightMm": 24.06,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tiengow-worked.svg",
+   "gameId": "tien-gow",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "jianzi-worked",
+   "widthMm": 60.0,
+   "heightMm": 58.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/jianzi-worked.svg",
+   "gameId": "jianzi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "gomoku-worked",
+   "widthMm": 84.94,
+   "heightMm": 104.19,
+   "refitToContent": false,
+   "points": 225,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 7,
+    "white": 6
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/gomoku-worked.svg",
+   "gameId": "gomoku",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "ur-setup",
+   "widthMm": 85.0,
+   "heightMm": 48.62,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 20,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ur-setup.svg",
+   "gameId": "royal-game-of-ur",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "ur-worked",
+   "widthMm": 85.0,
+   "heightMm": 53.87,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 20,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 1,
+    "black": 1
+   },
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ur-worked.svg",
+   "gameId": "royal-game-of-ur",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "bao-setup",
+   "widthMm": 85.0,
+   "heightMm": 55.48,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 32,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/bao-setup.svg",
+   "gameId": "bao-la-kiswahili",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "bao-worked",
+   "widthMm": 177.0,
+   "heightMm": 69.59,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 64,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/bao-worked.svg",
+   "gameId": "bao-la-kiswahili",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "sugoroku-setup",
+   "widthMm": 158.4,
+   "heightMm": 83.15,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 55,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/sugoroku-setup.svg",
+   "gameId": "sugoroku",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "sugoroku-worked",
+   "widthMm": 158.4,
+   "heightMm": 88.4,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 55,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/sugoroku-worked.svg",
+   "gameId": "sugoroku",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "mbube-worked",
+   "widthMm": 60.0,
+   "heightMm": 70.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 11,
+    "black": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/mbube-worked.svg",
+   "gameId": "mbube-mbube",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "achi-setup",
+   "widthMm": 82.2,
+   "heightMm": 82.2,
+   "refitToContent": false,
+   "points": 16,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/achi-setup.svg",
+   "gameId": "achi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "achi-worked",
+   "widthMm": 82.2,
+   "heightMm": 96.2,
+   "refitToContent": false,
+   "points": 16,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 5,
+    "white": 5
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/achi-worked.svg",
+   "gameId": "achi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "polis-worked",
+   "widthMm": 85.0,
+   "heightMm": 99.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 10,
+    "white": 10
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/polis-worked.svg",
+   "gameId": "polis",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "astragaloi-faces",
+   "widthMm": 175.0,
+   "heightMm": 33.07,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/astragaloi-faces.svg",
+   "gameId": "astragaloi",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "astragaloi-worked",
+   "widthMm": 85.0,
+   "heightMm": 33.68,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/astragaloi-worked.svg",
+   "gameId": "astragaloi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "senet-setup",
+   "widthMm": 144.4,
+   "heightMm": 55.15,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 30,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 5,
+    "black": 5
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/senet-setup.svg",
+   "gameId": "senet",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "senet-worked",
+   "widthMm": 144.4,
+   "heightMm": 60.4,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 30,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 5,
+    "black": 5
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/senet-worked.svg",
+   "gameId": "senet",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "janggi-setup",
+   "widthMm": 84.63,
+   "heightMm": 102.4,
+   "refitToContent": false,
+   "points": 90,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "blue": 16,
+    "red": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/janggi-setup.svg",
+   "gameId": "janggi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "janggi-worked",
+   "widthMm": 84.63,
+   "heightMm": 107.65,
+   "refitToContent": false,
+   "points": 90,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "blue": 16,
+    "red": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/janggi-worked.svg",
+   "gameId": "janggi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "oware-setup",
+   "widthMm": 85.0,
+   "heightMm": 39.48,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 12,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/oware-setup.svg",
+   "gameId": "oware",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "oware-worked",
+   "widthMm": 177.0,
+   "heightMm": 47.86,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 24,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/oware-worked.svg",
+   "gameId": "oware",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "pallanguzhi-setup",
+   "widthMm": 85.0,
+   "heightMm": 37.23,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 14,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/pallanguzhi-setup.svg",
+   "gameId": "pallanguzhi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "pallanguzhi-worked",
+   "widthMm": 177.0,
+   "heightMm": 45.59,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 28,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/pallanguzhi-worked.svg",
+   "gameId": "pallanguzhi",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "dara-setup",
+   "widthMm": 85.0,
+   "heightMm": 72.3,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 30,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/dara-setup.svg",
+   "gameId": "dara",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "dara-worked",
+   "widthMm": 85.0,
+   "heightMm": 91.55,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 30,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 9,
+    "white": 9
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/dara-worked.svg",
+   "gameId": "dara",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "mutorere-setup",
+   "widthMm": 65.2,
+   "heightMm": 73.95,
+   "refitToContent": false,
+   "points": 9,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 4,
+    "black": 4
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/mutorere-setup.svg",
+   "gameId": "mu-torere",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "mutorere-worked",
+   "widthMm": 65.2,
+   "heightMm": 79.2,
+   "refitToContent": false,
+   "points": 9,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 4,
+    "black": 4
+   },
+   "minTextPt": 8.5,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/mutorere-worked.svg",
+   "gameId": "mu-torere",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "catch-the-hare-setup",
+   "widthMm": 72.1,
+   "heightMm": 80.85,
+   "refitToContent": false,
+   "points": 25,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 12,
+    "white": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/catch-the-hare-setup.svg",
+   "gameId": "catch-the-hare",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "catch-the-hare-worked",
+   "widthMm": 150.2,
+   "heightMm": 85.95,
+   "refitToContent": false,
+   "points": 50,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 23,
+    "white": 2
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/catch-the-hare-worked.svg",
+   "gameId": "catch-the-hare",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "hasami-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 81,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 9,
+    "white": 9
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/hasami-setup.svg",
+   "gameId": "hasami-shogi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "hasami-worked",
+   "widthMm": 85.0,
+   "heightMm": 99.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 81,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 9,
+    "white": 7
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/hasami-worked.svg",
+   "gameId": "hasami-shogi",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "merafib-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 49,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/merafib-setup.svg",
+   "gameId": "li-b-el-merafib",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "merafib-worked",
+   "widthMm": 85.0,
+   "heightMm": 99.0,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 49,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/merafib-worked.svg",
+   "gameId": "li-b-el-merafib",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "omweso-setup",
+   "widthMm": 85.0,
+   "heightMm": 55.48,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 32,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/omweso-setup.svg",
+   "gameId": "omweso",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "omweso-worked",
+   "widthMm": 177.0,
+   "heightMm": 69.59,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 64,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/omweso-worked.svg",
+   "gameId": "omweso",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "tdama-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 16,
+    "black": 16
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tdama-setup.svg",
+   "gameId": "turkish-dama",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "tdama-worked",
+   "widthMm": 85.0,
+   "heightMm": 114.74,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 64,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 10,
+    "white": 7
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/tdama-worked.svg",
+   "gameId": "turkish-dama",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "dames-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 100,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 20,
+    "black": 20
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/dames-setup.svg",
+   "gameId": "jeu-de-dames",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "dames-worked",
+   "widthMm": 85.0,
+   "heightMm": 114.74,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 100,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 12,
+    "white": 10
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/dames-worked.svg",
+   "gameId": "jeu-de-dames",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "puluc-setup",
+   "widthMm": 88.0,
+   "heightMm": 16.61,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 10,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/puluc-setup.svg",
+   "gameId": "bul",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "puluc-worked",
+   "widthMm": 88.0,
+   "heightMm": 31.97,
+   "refitToContent": true,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 10,
+   "pieces": {
+    "white": 1,
+    "black": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/puluc-worked.svg",
+   "gameId": "bul",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "alquerque-setup",
+   "widthMm": 72.1,
+   "heightMm": 80.85,
+   "refitToContent": false,
+   "points": 25,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 12,
+    "black": 12
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/alquerque-setup.svg",
+   "gameId": "alquerque",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "alquerque-worked",
+   "widthMm": 174.02,
+   "heightMm": 71.6,
+   "refitToContent": false,
+   "points": 75,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 35,
+    "black": 36
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/alquerque-worked.svg",
+   "gameId": "alquerque",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "ashta-setup",
+   "widthMm": 85.0,
+   "heightMm": 93.75,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 49,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ashta-setup.svg",
+   "gameId": "ashta-kashte",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "ashta-worked",
+   "widthMm": 85.0,
+   "heightMm": 104.24,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 49,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 1,
+    "black": 1
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ashta-worked.svg",
+   "gameId": "ashta-kashte",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "rimau-setup",
+   "widthMm": 82.2,
+   "heightMm": 159.53,
+   "refitToContent": false,
+   "points": 37,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 1,
+    "white": 9
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/rimau-setup.svg",
+   "gameId": "rimau-rimau",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "rimau-worked",
+   "widthMm": 171.4,
+   "heightMm": 165.62,
+   "refitToContent": false,
+   "points": 74,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 2,
+    "white": 13
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/rimau-worked.svg",
+   "gameId": "rimau-rimau",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "go-liberties",
+   "widthMm": 84.63,
+   "heightMm": 93.38,
+   "refitToContent": false,
+   "points": 81,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 1,
+    "black": 3
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/go-liberties.svg",
+   "gameId": "go",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "go-worked",
+   "widthMm": 84.63,
+   "heightMm": 109.13,
+   "refitToContent": false,
+   "points": 81,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "black": 7,
+    "white": 4
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/go-worked.svg",
+   "gameId": "go",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "congkak-setup",
+   "widthMm": 85.0,
+   "heightMm": 37.23,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 14,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/congkak-setup.svg",
+   "gameId": "congklak",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "congkak-worked",
+   "widthMm": 177.0,
+   "heightMm": 45.59,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 28,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/congkak-worked.svg",
+   "gameId": "congklak",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "ayoayo-setup",
+   "widthMm": 85.0,
+   "heightMm": 39.48,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 12,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ayoayo-setup.svg",
+   "gameId": "ayoayo",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "ayoayo-worked",
+   "widthMm": 177.0,
+   "heightMm": 47.86,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 24,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ayoayo-worked.svg",
+   "gameId": "ayoayo",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "gebeta-setup",
+   "widthMm": 85.0,
+   "heightMm": 48.42,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 12,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/gebeta-setup.svg",
+   "gameId": "gebeta",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "gebeta-worked",
+   "widthMm": 177.0,
+   "heightMm": 56.85,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 24,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/gebeta-worked.svg",
+   "gameId": "gebeta",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "hus-setup",
+   "widthMm": 85.0,
+   "heightMm": 41.13,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 48,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/hus-setup.svg",
+   "gameId": "hus",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "hus-worked",
+   "widthMm": 177.0,
+   "heightMm": 55.15,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 96,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/hus-worked.svg",
+   "gameId": "hus",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "mefuvha-setup",
+   "widthMm": 85.0,
+   "heightMm": 69.82,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 24,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.9,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/mefuvha-setup.svg",
+   "gameId": "mefuvha",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "mefuvha-worked",
+   "widthMm": 177.0,
+   "heightMm": 84.02,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 48,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/mefuvha-worked.svg",
+   "gameId": "mefuvha",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "ludus-setup",
+   "widthMm": 172.4,
+   "heightMm": 55.15,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 36,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ludus-setup.svg",
+   "gameId": "ludus-duodecim-scriptorum",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "ludus-worked",
+   "widthMm": 172.4,
+   "heightMm": 55.15,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 36,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {
+    "white": 2,
+    "black": 3
+   },
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/ludus-worked.svg",
+   "gameId": "ludus-duodecim-scriptorum",
+   "targetWidthMm": 177.0,
+   "errors": []
+  },
+  {
+   "id": "morra-fingers",
+   "widthMm": 86.31,
+   "heightMm": 27.43,
+   "refitToContent": true,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/morra-fingers.svg",
+   "gameId": "morra",
+   "targetWidthMm": 85.0,
+   "errors": []
+  },
+  {
+   "id": "morra-worked",
+   "widthMm": 52.0,
+   "heightMm": 38.39,
+   "refitToContent": false,
+   "points": 0,
+   "squares": 0,
+   "pits": 0,
+   "stations": 0,
+   "pieces": {},
+   "minTextPt": 8.0,
+   "minStrokePt": 0.75,
+   "missingRefs": [],
+   "keyClashes": [],
+   "file": "07_ASSETS/diagrams/morra-worked.svg",
+   "gameId": "morra",
+   "targetWidthMm": 85.0,
+   "errors": []
+  }
+ ],
+ "diagramsLargePrint": [
+  {
+   "id": "tablut-setup",
+   "widthMm": 137.64,
+   "heightMm": 162.13,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "tablut-worked",
+   "widthMm": 177.0,
+   "heightMm": 120.19,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "tablut-capture",
+   "widthMm": 125.0,
+   "heightMm": 198.87,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "yut-setup",
+   "widthMm": 159.49,
+   "heightMm": 156.09,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "yut-worked",
+   "widthMm": 157.71,
+   "heightMm": 170.08,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "fanorona-setup",
+   "widthMm": 130.92,
+   "heightMm": 109.91,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "fanorona-captures",
+   "widthMm": 176.31,
+   "heightMm": 92.33,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "fanorona-worked",
+   "widthMm": 176.31,
+   "heightMm": 84.84,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "ponghauki-setup",
+   "widthMm": 53.2,
+   "heightMm": 77.69,
+   "minTextPt": 17.0
+  },
+  {
+   "id": "ponghauki-worked",
+   "widthMm": 53.2,
+   "heightMm": 88.19,
+   "minTextPt": 17.0
+  },
+  {
+   "id": "gonggi-worked",
+   "widthMm": 170.0,
+   "heightMm": 68.0,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "olinda-setup",
+   "widthMm": 146.5,
+   "heightMm": 51.84,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "olinda-worked",
+   "widthMm": 177.0,
+   "heightMm": 61.58,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "nerenchi-setup",
+   "widthMm": 166.44,
+   "heightMm": 166.44,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "nerenchi-worked",
+   "widthMm": 171.4,
+   "heightMm": 124.88,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "diviyan-setup",
+   "widthMm": 166.44,
+   "heightMm": 180.44,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "diviyan-worked",
+   "widthMm": 169.06,
+   "heightMm": 123.71,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "awith-setup",
+   "widthMm": 164.45,
+   "heightMm": 38.45,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "awith-worked",
+   "widthMm": 164.45,
+   "heightMm": 48.94,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "picaria-setup",
+   "widthMm": 68.68,
+   "heightMm": 68.68,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "picaria-worked",
+   "widthMm": 68.68,
+   "heightMm": 114.16,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "zohn-setup",
+   "widthMm": 150.4,
+   "heightMm": 173.11,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "zohn-worked",
+   "widthMm": 150.4,
+   "heightMm": 180.92,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "seega-setup",
+   "widthMm": 81.64,
+   "heightMm": 116.63,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "seega-worked",
+   "widthMm": 81.64,
+   "heightMm": 127.12,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "tab-setup",
+   "widthMm": 137.64,
+   "heightMm": 92.13,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "tab-worked",
+   "widthMm": 137.64,
+   "heightMm": 81.64,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "nmm-setup",
+   "widthMm": 166.44,
+   "heightMm": 166.44,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "nmm-worked",
+   "widthMm": 166.44,
+   "heightMm": 190.93,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "foxgeese-setup",
+   "widthMm": 166.44,
+   "heightMm": 180.44,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "foxgeese-worked",
+   "widthMm": 171.4,
+   "heightMm": 124.88,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "hopscotch-worked",
+   "widthMm": 40.0,
+   "heightMm": 78.4,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "totolospi-setup",
+   "widthMm": 170.0,
+   "heightMm": 85.4,
+   "minTextPt": 17.0
+  },
+  {
+   "id": "totolospi-worked",
+   "widthMm": 170.0,
+   "heightMm": 85.4,
+   "minTextPt": 17.0
+  },
+  {
+   "id": "setdilth-setup",
+   "widthMm": 150.9,
+   "heightMm": 150.9,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "setdilth-worked",
+   "widthMm": 150.9,
+   "heightMm": 175.39,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "janken-signs",
+   "widthMm": 88.73,
+   "heightMm": 95.83,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "janken-worked",
+   "widthMm": 104.0,
+   "heightMm": 43.64,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "conkers-worked",
+   "widthMm": 144.0,
+   "heightMm": 99.99,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "cradle-figures",
+   "widthMm": 177.0,
+   "heightMm": 76.49,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "cradle-worked",
+   "widthMm": 170.0,
+   "heightMm": 56.98,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "shogi-setup",
+   "widthMm": 137.64,
+   "heightMm": 151.64,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "shogi-worked",
+   "widthMm": 137.64,
+   "heightMm": 162.13,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "pachisi-setup",
+   "widthMm": 177.0,
+   "heightMm": 191.0,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "pachisi-worked",
+   "widthMm": 173.0,
+   "heightMm": 197.49,
+   "minTextPt": 17.0
+  },
+  {
+   "id": "xiangqi-setup",
+   "widthMm": 130.92,
+   "heightMm": 158.92,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "xiangqi-worked",
+   "widthMm": 130.92,
+   "heightMm": 169.41,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "sittuyin-setup",
+   "widthMm": 123.64,
+   "heightMm": 137.64,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "sittuyin-worked",
+   "widthMm": 123.64,
+   "heightMm": 148.13,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "shatranj-setup",
+   "widthMm": 123.64,
+   "heightMm": 137.64,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "shatranj-worked",
+   "widthMm": 123.64,
+   "heightMm": 148.13,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "chaturaji-setup",
+   "widthMm": 123.64,
+   "heightMm": 148.13,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "chaturaji-worked",
+   "widthMm": 123.64,
+   "heightMm": 158.63,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "hnefatafl-setup",
+   "widthMm": 165.64,
+   "heightMm": 190.13,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "hnefatafl-worked",
+   "widthMm": 177.0,
+   "heightMm": 130.68,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "patolli-setup",
+   "widthMm": 170.0,
+   "heightMm": 184.0,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "patolli-worked",
+   "widthMm": 170.0,
+   "heightMm": 184.0,
+   "minTextPt": 17.0
+  },
+  {
+   "id": "tiengow-set",
+   "widthMm": 174.64,
+   "heightMm": 165.25,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "tiengow-worked",
+   "widthMm": 132.89,
+   "heightMm": 35.19,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "jianzi-worked",
+   "widthMm": 120.48,
+   "heightMm": 116.0,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "gomoku-worked",
+   "widthMm": 161.75,
+   "heightMm": 196.73,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "ur-setup",
+   "widthMm": 116.4,
+   "heightMm": 81.39,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "ur-worked",
+   "widthMm": 116.4,
+   "heightMm": 81.39,
+   "minTextPt": 17.0
+  },
+  {
+   "id": "bao-setup",
+   "widthMm": 124.0,
+   "heightMm": 81.84,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "bao-worked",
+   "widthMm": 177.0,
+   "heightMm": 85.58,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "sugoroku-setup",
+   "widthMm": 158.4,
+   "heightMm": 98.89,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "sugoroku-worked",
+   "widthMm": 158.4,
+   "heightMm": 109.39,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "mbube-worked",
+   "widthMm": 120.0,
+   "heightMm": 137.99,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "achi-setup",
+   "widthMm": 166.44,
+   "heightMm": 166.44,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "achi-worked",
+   "widthMm": 166.44,
+   "heightMm": 190.93,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "polis-worked",
+   "widthMm": 123.64,
+   "heightMm": 148.13,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "astragaloi-faces",
+   "widthMm": 175.0,
+   "heightMm": 67.22,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "astragaloi-worked",
+   "widthMm": 104.43,
+   "heightMm": 48.35,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "senet-setup",
+   "widthMm": 144.4,
+   "heightMm": 70.89,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "senet-worked",
+   "widthMm": 144.4,
+   "heightMm": 81.39,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "janggi-setup",
+   "widthMm": 130.92,
+   "heightMm": 158.92,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "janggi-worked",
+   "widthMm": 130.92,
+   "heightMm": 190.41,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "oware-setup",
+   "widthMm": 131.5,
+   "heightMm": 62.23,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "oware-worked",
+   "widthMm": 177.0,
+   "heightMm": 63.85,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "pallanguzhi-setup",
+   "widthMm": 146.5,
+   "heightMm": 62.23,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "pallanguzhi-worked",
+   "widthMm": 177.0,
+   "heightMm": 61.58,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "dara-setup",
+   "widthMm": 95.64,
+   "heightMm": 81.64,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "dara-worked",
+   "widthMm": 95.64,
+   "heightMm": 137.62,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "mutorere-setup",
+   "widthMm": 65.2,
+   "heightMm": 79.2,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "mutorere-worked",
+   "widthMm": 65.2,
+   "heightMm": 110.68,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "catch-the-hare-setup",
+   "widthMm": 74.92,
+   "heightMm": 99.41,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "catch-the-hare-worked",
+   "widthMm": 155.85,
+   "heightMm": 117.11,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "hasami-setup",
+   "widthMm": 137.64,
+   "heightMm": 151.64,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "hasami-worked",
+   "widthMm": 137.64,
+   "heightMm": 162.13,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "merafib-setup",
+   "widthMm": 102.4,
+   "heightMm": 116.4,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "merafib-worked",
+   "widthMm": 102.4,
+   "heightMm": 137.39,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "omweso-setup",
+   "widthMm": 124.0,
+   "heightMm": 81.84,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "omweso-worked",
+   "widthMm": 177.0,
+   "heightMm": 85.58,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "tdama-setup",
+   "widthMm": 123.64,
+   "heightMm": 137.64,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "tdama-worked",
+   "widthMm": 123.64,
+   "heightMm": 179.62,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "dames-setup",
+   "widthMm": 151.64,
+   "heightMm": 165.64,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "dames-worked",
+   "widthMm": 142.0,
+   "heightMm": 197.98,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "puluc-setup",
+   "widthMm": 166.66,
+   "heightMm": 23.88,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "puluc-worked",
+   "widthMm": 166.66,
+   "heightMm": 44.5,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "alquerque-setup",
+   "widthMm": 74.92,
+   "heightMm": 88.92,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "alquerque-worked",
+   "widthMm": 174.3,
+   "heightMm": 103.78,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "ashta-setup",
+   "widthMm": 102.4,
+   "heightMm": 116.4,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "ashta-worked",
+   "widthMm": 102.4,
+   "heightMm": 158.38,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "rimau-setup",
+   "widthMm": 99.2,
+   "heightMm": 195.95,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "rimau-worked",
+   "widthMm": 171.4,
+   "heightMm": 191.14,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "go-liberties",
+   "widthMm": 130.92,
+   "heightMm": 144.92,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "go-worked",
+   "widthMm": 130.92,
+   "heightMm": 176.41,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "congkak-setup",
+   "widthMm": 146.5,
+   "heightMm": 62.23,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "congkak-worked",
+   "widthMm": 177.0,
+   "heightMm": 61.58,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "ayoayo-setup",
+   "widthMm": 131.5,
+   "heightMm": 62.23,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "ayoayo-worked",
+   "widthMm": 177.0,
+   "heightMm": 63.85,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "gebeta-setup",
+   "widthMm": 94.0,
+   "heightMm": 62.23,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "gebeta-worked",
+   "widthMm": 177.0,
+   "heightMm": 72.84,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "hus-setup",
+   "widthMm": 170.0,
+   "heightMm": 76.88,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "hus-worked",
+   "widthMm": 177.0,
+   "heightMm": 71.14,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "mefuvha-setup",
+   "widthMm": 94.0,
+   "heightMm": 81.84,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "mefuvha-worked",
+   "widthMm": 177.0,
+   "heightMm": 100.01,
+   "minTextPt": 13.6
+  },
+  {
+   "id": "ludus-setup",
+   "widthMm": 172.4,
+   "heightMm": 61.97,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "ludus-worked",
+   "widthMm": 172.4,
+   "heightMm": 70.89,
+   "minTextPt": 12.0
+  },
+  {
+   "id": "morra-fingers",
+   "widthMm": 156.0,
+   "heightMm": 36.02,
+   "minTextPt": 16.0
+  },
+  {
+   "id": "morra-worked",
+   "widthMm": 54.8,
+   "heightMm": 47.54,
+   "minTextPt": 16.0
+  }
+ ],
+ "templates": [
+  {
+   "id": "tpl-go-9",
+   "widthMm": 177.0,
+   "heightMm": 167.8,
+   "parts": [
+    {
+     "id": "tpl-go-9",
+     "widthMm": 167.77,
+     "heightMm": 167.77,
+     "refitToContent": false,
+     "points": 81,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-go-9.svg"
+  },
+  {
+   "id": "tpl-hnefatafl",
+   "widthMm": 177.0,
+   "heightMm": 174.2,
+   "parts": [
+    {
+     "id": "hnefatafl-setup",
+     "widthMm": 174.25,
+     "heightMm": 174.25,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 121,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-hnefatafl.svg"
+  },
+  {
+   "id": "tpl-9x9",
+   "widthMm": 177.0,
+   "heightMm": 175.7,
+   "parts": [
+    {
+     "id": "tablut-setup",
+     "widthMm": 175.75,
+     "heightMm": 175.75,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 81,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-9x9.svg"
+  },
+  {
+   "id": "tpl-xiangqi",
+   "widthMm": 177.0,
+   "heightMm": 171.7,
+   "parts": [
+    {
+     "id": "xiangqi-setup",
+     "widthMm": 154.69,
+     "heightMm": 171.69,
+     "refitToContent": false,
+     "points": 90,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-xiangqi.svg"
+  },
+  {
+   "id": "tpl-pachisi",
+   "widthMm": 177.0,
+   "heightMm": 175.4,
+   "parts": [
+    {
+     "id": "pachisi-setup",
+     "widthMm": 175.4,
+     "heightMm": 175.4,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 96,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-pachisi.svg"
+  },
+  {
+   "id": "tpl-fox-geese",
+   "widthMm": 177.0,
+   "heightMm": 164.0,
+   "parts": [
+    {
+     "id": "foxgeese-setup",
+     "widthMm": 164.05,
+     "heightMm": 164.05,
+     "refitToContent": false,
+     "points": 33,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-fox-geese.svg"
+  },
+  {
+   "id": "tpl-morris",
+   "widthMm": 177.0,
+   "heightMm": 164.0,
+   "parts": [
+    {
+     "id": "nmm-setup",
+     "widthMm": 164.05,
+     "heightMm": 164.05,
+     "refitToContent": false,
+     "points": 24,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-morris.svg"
+  },
+  {
+   "id": "tpl-diviyan",
+   "widthMm": 177.0,
+   "heightMm": 164.0,
+   "parts": [
+    {
+     "id": "diviyan-setup",
+     "widthMm": 164.05,
+     "heightMm": 164.05,
+     "refitToContent": false,
+     "points": 49,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-diviyan.svg"
+  },
+  {
+   "id": "tpl-fanorona-awith",
+   "widthMm": 177.0,
+   "heightMm": 146.2,
+   "parts": [
+    {
+     "id": "fanorona-setup",
+     "widthMm": 163.41,
+     "heightMm": 91.41,
+     "refitToContent": false,
+     "points": 45,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    },
+    {
+     "id": "awith-setup",
+     "widthMm": 176.7,
+     "heightMm": 33.56,
+     "refitToContent": false,
+     "points": 47,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-fanorona-awith.svg"
+  },
+  {
+   "id": "tpl-ur-senet",
+   "widthMm": 177.0,
+   "heightMm": 144.0,
+   "parts": [
+    {
+     "id": "ur-setup",
+     "widthMm": 172.4,
+     "heightMm": 67.4,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 20,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    },
+    {
+     "id": "senet-setup",
+     "widthMm": 174.4,
+     "heightMm": 55.4,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 30,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-ur-senet.svg"
+  },
+  {
+   "id": "tpl-alquerque-achi",
+   "widthMm": 177.0,
+   "heightMm": 187.4,
+   "parts": [
+    {
+     "id": "catch-the-hare-setup",
+     "widthMm": 96.13,
+     "heightMm": 96.13,
+     "refitToContent": false,
+     "points": 25,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    },
+    {
+     "id": "achi-setup",
+     "widthMm": 70.05,
+     "heightMm": 70.05,
+     "refitToContent": false,
+     "points": 16,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-alquerque-achi.svg"
+  },
+  {
+   "id": "tpl-dara-mutorere",
+   "widthMm": 177.0,
+   "heightMm": 194.7,
+   "parts": [
+    {
+     "id": "dara-setup",
+     "widthMm": 123.25,
+     "heightMm": 104.25,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 30,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 9.2,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    },
+    {
+     "id": "mutorere-setup",
+     "widthMm": 69.2,
+     "heightMm": 69.2,
+     "refitToContent": false,
+     "points": 9,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-dara-mutorere.svg"
+  },
+  {
+   "id": "tpl-yut",
+   "widthMm": 177.0,
+   "heightMm": 176.9,
+   "parts": [
+    {
+     "id": "yut-setup",
+     "widthMm": 176.95,
+     "heightMm": 176.95,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 0,
+     "pits": 0,
+     "stations": 29,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-yut.svg"
+  },
+  {
+   "id": "tpl-ashta",
+   "widthMm": 177.0,
+   "heightMm": 158.4,
+   "parts": [
+    {
+     "id": "ashta-setup",
+     "widthMm": 158.4,
+     "heightMm": 158.4,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 49,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates/tpl-ashta.svg"
+  }
+ ],
+ "templatesLargePrint": [
+  {
+   "id": "tpl-go-9",
+   "widthMm": 177.0,
+   "heightMm": 168.8,
+   "parts": [
+    {
+     "id": "tpl-go-9",
+     "widthMm": 168.75,
+     "heightMm": 168.75,
+     "refitToContent": false,
+     "points": 81,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-go-9.svg"
+  },
+  {
+   "id": "tpl-hnefatafl",
+   "widthMm": 177.0,
+   "heightMm": 175.2,
+   "parts": [
+    {
+     "id": "hnefatafl-setup",
+     "widthMm": 175.23,
+     "heightMm": 175.23,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 121,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-hnefatafl.svg"
+  },
+  {
+   "id": "tpl-9x9",
+   "widthMm": 177.0,
+   "heightMm": 176.7,
+   "parts": [
+    {
+     "id": "tablut-setup",
+     "widthMm": 176.73,
+     "heightMm": 176.73,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 81,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-9x9.svg"
+  },
+  {
+   "id": "tpl-xiangqi",
+   "widthMm": 177.0,
+   "heightMm": 172.7,
+   "parts": [
+    {
+     "id": "xiangqi-setup",
+     "widthMm": 155.67,
+     "heightMm": 172.67,
+     "refitToContent": false,
+     "points": 90,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-xiangqi.svg"
+  },
+  {
+   "id": "tpl-pachisi",
+   "widthMm": 177.0,
+   "heightMm": 175.4,
+   "parts": [
+    {
+     "id": "pachisi-setup",
+     "widthMm": 175.4,
+     "heightMm": 175.4,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 96,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-pachisi.svg"
+  },
+  {
+   "id": "tpl-fox-geese",
+   "widthMm": 177.0,
+   "heightMm": 165.0,
+   "parts": [
+    {
+     "id": "foxgeese-setup",
+     "widthMm": 165.03,
+     "heightMm": 165.03,
+     "refitToContent": false,
+     "points": 33,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-fox-geese.svg"
+  },
+  {
+   "id": "tpl-morris",
+   "widthMm": 177.0,
+   "heightMm": 165.0,
+   "parts": [
+    {
+     "id": "nmm-setup",
+     "widthMm": 165.03,
+     "heightMm": 165.03,
+     "refitToContent": false,
+     "points": 24,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-morris.svg"
+  },
+  {
+   "id": "tpl-diviyan",
+   "widthMm": 177.0,
+   "heightMm": 165.0,
+   "parts": [
+    {
+     "id": "diviyan-setup",
+     "widthMm": 165.03,
+     "heightMm": 165.03,
+     "refitToContent": false,
+     "points": 49,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-diviyan.svg"
+  },
+  {
+   "id": "tpl-fanorona-awith",
+   "widthMm": 177.0,
+   "heightMm": 152.1,
+   "parts": [
+    {
+     "id": "fanorona-setup",
+     "widthMm": 164.39,
+     "heightMm": 92.39,
+     "refitToContent": false,
+     "points": 45,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    },
+    {
+     "id": "awith-setup",
+     "widthMm": 176.7,
+     "heightMm": 34.43,
+     "refitToContent": false,
+     "points": 47,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-fanorona-awith.svg"
+  },
+  {
+   "id": "tpl-ur-senet",
+   "widthMm": 177.0,
+   "heightMm": 148.1,
+   "parts": [
+    {
+     "id": "ur-setup",
+     "widthMm": 172.4,
+     "heightMm": 67.4,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 20,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    },
+    {
+     "id": "senet-setup",
+     "widthMm": 174.4,
+     "heightMm": 55.4,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 30,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-ur-senet.svg"
+  },
+  {
+   "id": "tpl-alquerque-achi",
+   "widthMm": 177.0,
+   "heightMm": 193.4,
+   "parts": [
+    {
+     "id": "catch-the-hare-setup",
+     "widthMm": 97.11,
+     "heightMm": 97.11,
+     "refitToContent": false,
+     "points": 25,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    },
+    {
+     "id": "achi-setup",
+     "widthMm": 71.03,
+     "heightMm": 71.03,
+     "refitToContent": false,
+     "points": 16,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-alquerque-achi.svg"
+  },
+  {
+   "id": "tpl-dara-mutorere",
+   "widthMm": 177.0,
+   "heightMm": 199.7,
+   "parts": [
+    {
+     "id": "dara-setup",
+     "widthMm": 124.23,
+     "heightMm": 105.23,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 30,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 12.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    },
+    {
+     "id": "mutorere-setup",
+     "widthMm": 69.2,
+     "heightMm": 69.2,
+     "refitToContent": false,
+     "points": 9,
+     "squares": 0,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-dara-mutorere.svg"
+  },
+  {
+   "id": "tpl-yut",
+   "widthMm": 177.0,
+   "heightMm": 176.9,
+   "parts": [
+    {
+     "id": "yut-setup",
+     "widthMm": 176.95,
+     "heightMm": 176.95,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 0,
+     "pits": 0,
+     "stations": 29,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.9,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-yut.svg"
+  },
+  {
+   "id": "tpl-ashta",
+   "widthMm": 177.0,
+   "heightMm": 158.4,
+   "parts": [
+    {
+     "id": "ashta-setup",
+     "widthMm": 158.4,
+     "heightMm": 158.4,
+     "refitToContent": false,
+     "points": 0,
+     "squares": 49,
+     "pits": 0,
+     "stations": 0,
+     "pieces": {},
+     "minTextPt": 99.0,
+     "minStrokePt": 0.75,
+     "missingRefs": [],
+     "keyClashes": []
+    }
+   ],
+   "file": "07_ASSETS/templates_lp/tpl-ashta.svg"
+  }
+ ],
+ "errors": []
+}

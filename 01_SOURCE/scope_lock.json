@@ -15,14 +15,14 @@
  "familyTargets": {
   "sowing": 14,
   "hunt-siege": 10,
-  "race": 18,
+  "race": 19,
   "territory": 17,
   "war-board": 21,
-  "chance": 4,
+  "chance": 3,
   "boardless": 16
  },
  "count": 100,
- "cultures": 68,
+ "cultures": 69,
  "integrity": {
   "sha256": "a3ef7b48753bcc644efc0fdd23c5a0124a57185cecd9f563b2cca9a3457c5ea8",
   "algorithm": "sha256(sorted gameIds joined by \\n)"
@@ -363,6 +363,206 @@
     "lockedCultures": 68,
     "entries": 100
    }
+  },
+  {
+   "id": "A4",
+   "date": "2026-09-26",
+   "phase": "recovery-2026-09",
+   "decision": "GBK-02 recovery plan (editorial audit 2026-09)",
+   "reason": "KÜLTÜR TAKSONOMİSİ, ADLAR VE BİR AİLE YERLEŞİMİ KAYNAKLA DÜZELTİLDİ. Denetim, kültür etiketlerinin tek bir kurala bağlı olmadığını buldu (aynı topluluk için 'Han Chinese' ve 'Cantonese'; bir oyun için 'Medieval European', ötekisi için 'English'). Kural artık tektir: etiket, basılı kuralların kaydettiği uygulamanın sahibi olan halk ya da tarihsel toplumdur. 18 oyunun kültür etiketi bu kurala göre düzeltildi. Dört oyunun başlığı kaynağın adıyla eşitlendi (Puluc, Chaturaji, Congkak, Diviyan Keliya — sonuncusunda eski başlık Parker'da BAŞKA bir oyunun adıdır). Set-dilth, ailelerin kendi kuralıyla chance'ten race'e taşındı: çubuk atışı kırk taşlık bir halkada işaretçi yürütür (iz + çekiliş + izin sonu); chance'in (b) şartı onu dışlar. Oyun listesi DEĞİŞMEDİ; kilit özeti aynıdır. Seega ve Tab 'Modern Egyptian' etiketini alır: kaynakları Lane'in *Manners and Customs of the Modern Egyptians* (1836) kaydıdır ve etiket Senet'in 'Ancient Egyptian' etiketiyle iç içe geçmez. Dört oyunun oynanabilirlik durumu 'reconstructed' oldu (Awithlaknannai, Picaria, Sugoroku, Astragaloi): basılı maddeleri kaynağın vermediği kuralları † ile kitabın hükmü olarak işaretler ve bir yeniden kurma notu taşır; envanter bunu 'rules-complete' olarak gösteriyordu (kaynak güveni de 'reconstructed' yapıldı) ve qa_manuscript'in iki yönlü beyan denetimi uyuşmazlığı yakaladı.",
+   "changed": [
+    {
+     "gameId": "achi",
+     "field": "culture",
+     "from": "Akan",
+     "to": "Gold Coast"
+    },
+    {
+     "gameId": "alquerque",
+     "field": "culture",
+     "from": "Andalusi Arab",
+     "to": "Castilian"
+    },
+    {
+     "gameId": "bul",
+     "field": "name",
+     "from": "Bul",
+     "to": "Puluc"
+    },
+    {
+     "gameId": "bul",
+     "field": "culture",
+     "from": "Kekchi Maya",
+     "to": "Q'eqchi' Maya"
+    },
+    {
+     "gameId": "chaturanga",
+     "field": "name",
+     "from": "Chaturanga",
+     "to": "Chaturaji"
+    },
+    {
+     "gameId": "chaturanga",
+     "field": "culture",
+     "from": "Ancient Indian",
+     "to": "Bengali"
+    },
+    {
+     "gameId": "congklak",
+     "field": "name",
+     "from": "Congklak",
+     "to": "Congkak"
+    },
+    {
+     "gameId": "demala-diviyan-keliya",
+     "field": "name",
+     "from": "Demala Diviyan Keliya",
+     "to": "Diviyan Keliya"
+    },
+    {
+     "gameId": "go",
+     "field": "culture",
+     "from": "Han Chinese",
+     "to": "Chinese"
+    },
+    {
+     "gameId": "jianzi",
+     "field": "culture",
+     "from": "Han Chinese",
+     "to": "Chinese"
+    },
+    {
+     "gameId": "li-b-el-merafib",
+     "field": "culture",
+     "from": "Sudanese Arab",
+     "to": "Baggara"
+    },
+    {
+     "gameId": "nine-mens-morris",
+     "field": "culture",
+     "from": "Medieval European",
+     "to": "English"
+    },
+    {
+     "gameId": "pachisi",
+     "field": "culture",
+     "from": "Hindustani",
+     "to": "Deccani"
+    },
+    {
+     "gameId": "patolli",
+     "field": "culture",
+     "from": "Nahua (Aztec)",
+     "to": "Nahua"
+    },
+    {
+     "gameId": "picaria",
+     "field": "culture",
+     "from": "Tewa Pueblo",
+     "to": "Tewa"
+    },
+    {
+     "gameId": "pong-hau-ki",
+     "field": "culture",
+     "from": "Cantonese",
+     "to": "Chinese"
+    },
+    {
+     "gameId": "royal-game-of-ur",
+     "field": "culture",
+     "from": "Sumerian",
+     "to": "Mesopotamian"
+    },
+    {
+     "gameId": "seega",
+     "field": "culture",
+     "from": "Egyptian Arab",
+     "to": "Modern Egyptian"
+    },
+    {
+     "gameId": "set-dilth",
+     "field": "family",
+     "from": "chance",
+     "to": "race"
+    },
+    {
+     "gameId": "shatranj",
+     "field": "culture",
+     "from": "Abbasid Arab",
+     "to": "Abbasid"
+    },
+    {
+     "gameId": "tab",
+     "field": "culture",
+     "from": "Egyptian Arab",
+     "to": "Modern Egyptian"
+    },
+    {
+     "gameId": "tien-gow",
+     "field": "culture",
+     "from": "Cantonese",
+     "to": "Chinese"
+    },
+    {
+     "gameId": "xiangqi",
+     "field": "culture",
+     "from": "Han Chinese",
+     "to": "Chinese"
+    },
+    {
+     "gameId": "awithlaknannai",
+     "field": "playabilityStatus",
+     "from": "rules-complete",
+     "to": "reconstructed"
+    },
+    {
+     "gameId": "picaria",
+     "field": "playabilityStatus",
+     "from": "rules-complete",
+     "to": "reconstructed"
+    },
+    {
+     "gameId": "sugoroku",
+     "field": "playabilityStatus",
+     "from": "rules-complete",
+     "to": "reconstructed"
+    },
+    {
+     "gameId": "astragaloi",
+     "field": "playabilityStatus",
+     "from": "rules-complete",
+     "to": "reconstructed"
+    },
+    {
+     "gameId": "awithlaknannai",
+     "field": "sourceConfidence",
+     "from": "high",
+     "to": "reconstructed"
+    },
+    {
+     "gameId": "picaria",
+     "field": "sourceConfidence",
+     "from": "high",
+     "to": "reconstructed"
+    },
+    {
+     "gameId": "sugoroku",
+     "field": "sourceConfidence",
+     "from": "medium",
+     "to": "reconstructed"
+    },
+    {
+     "gameId": "astragaloi",
+     "field": "sourceConfidence",
+     "from": "high",
+     "to": "reconstructed"
+    }
+   ],
+   "removed": "YOK — kilitli listeden hiçbir oyun çıkmadı.",
+   "added": "YOK — kilitli listeye hiçbir oyun girmedi.",
+   "familyBalanceEffect": "chance 4 → 3, race 18 → 19 (set-dilth); aile hedefleri family_index.json'da aynı şerhle güncellendi. Basılı 63 oyunluk sürümde: race 14, war-board 14, sowing 10, territory 9, boardless 8, hunt-siege 6, chance 2.",
+   "cultureBalanceEffect": "Kilitli 100 oyunda ayrı kültür sayısı 68 → 69 (bazı etiketler birleşti — Han Chinese/Cantonese → Chinese; bazıları kaynağa göre daraldı — Ancient Indian → Bengali, Hindustani → Deccani, Sudanese Arab → Baggara). Basılı 63 oyunda ayrı kültür sayısı 45 → 42; alt başlıktaki '45 Cultures' artık doğru değildir — kurucu kararı (yeni baskı / alt başlık) raporda BLOKAJ olarak kayıtlıdır.",
+   "foundBy": "GBK-02 editorial audit (06_REPORTS/editorial) · recovery 2026-09"
   }
  ],
  "entries": [
@@ -393,7 +593,7 @@
   },
   {
    "gameId": "congklak",
-   "name": "Congklak",
+   "name": "Congkak",
    "family": "sowing",
    "culture": "Malay",
    "region": "Southeast Asia",
@@ -901,7 +1101,7 @@
   },
   {
    "gameId": "demala-diviyan-keliya",
-   "name": "Demala Diviyan Keliya",
+   "name": "Diviyan Keliya",
    "family": "hunt-siege",
    "culture": "Sinhalese",
    "region": "South Asia",
@@ -974,7 +1174,7 @@
    "gameId": "royal-game-of-ur",
    "name": "The Royal Game of Ur",
    "family": "race",
-   "culture": "Sumerian",
+   "culture": "Mesopotamian",
    "region": "Mesopotamia",
    "playabilityStatus": "reconstructed",
    "restrictionStatus": "open",
@@ -999,7 +1199,7 @@
    "gameId": "pachisi",
    "name": "Pachisi",
    "family": "race",
-   "culture": "Hindustani",
+   "culture": "Deccani",
    "region": "South Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1047,9 +1247,9 @@
   },
   {
    "gameId": "bul",
-   "name": "Bul",
+   "name": "Puluc",
    "family": "race",
-   "culture": "Kekchi Maya",
+   "culture": "Q'eqchi' Maya",
    "region": "Mesoamerica",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "attributed",
@@ -1121,7 +1321,7 @@
    "gameId": "li-b-el-merafib",
    "name": "Li'b el-Merafib",
    "family": "race",
-   "culture": "Sudanese Arab",
+   "culture": "Baggara",
    "region": "North-East Africa",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1242,7 +1442,7 @@
    "gameId": "tab",
    "name": "Tab",
    "family": "race",
-   "culture": "Egyptian Arab",
+   "culture": "Modern Egyptian",
    "region": "North Africa · West Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1267,7 +1467,7 @@
    "gameId": "patolli",
    "name": "Patolli",
    "family": "race",
-   "culture": "Nahua (Aztec)",
+   "culture": "Nahua",
    "region": "Mesoamerica",
    "playabilityStatus": "reconstructed",
    "restrictionStatus": "attributed",
@@ -1294,7 +1494,7 @@
    "family": "race",
    "culture": "Japanese",
    "region": "East Asia",
-   "playabilityStatus": "rules-complete",
+   "playabilityStatus": "reconstructed",
    "restrictionStatus": "open",
    "researchStatus": "candidate",
    "countryOrArea": "Japan",
@@ -1304,13 +1504,13 @@
     "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
     "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
    ],
-   "sourceConfidence": "medium",
+   "sourceConfidence": "reconstructed",
    "sourceVerification": "bibliographic",
    "ruleCompleteness": "complete",
    "eligibility": "eligible",
    "selectionScore": 3.88,
    "playersMax": 2,
-   "reconstructed": false
+   "reconstructed": true
   },
   {
    "gameId": "mu-torere",
@@ -1340,7 +1540,7 @@
    "gameId": "go",
    "name": "Go",
    "family": "territory",
-   "culture": "Han Chinese",
+   "culture": "Chinese",
    "region": "East Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1367,7 +1567,7 @@
    "gameId": "nine-mens-morris",
    "name": "Nine Men's Morris",
    "family": "territory",
-   "culture": "Medieval European",
+   "culture": "English",
    "region": "Europe",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1392,7 +1592,7 @@
    "gameId": "pong-hau-ki",
    "name": "Pong Hau K'i",
    "family": "territory",
-   "culture": "Cantonese",
+   "culture": "Chinese",
    "region": "East Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1440,9 +1640,9 @@
    "gameId": "picaria",
    "name": "Picaria",
    "family": "territory",
-   "culture": "Tewa Pueblo",
+   "culture": "Tewa",
    "region": "North America",
-   "playabilityStatus": "rules-complete",
+   "playabilityStatus": "reconstructed",
    "restrictionStatus": "attributed",
    "researchStatus": "candidate",
    "countryOrArea": "New Mexico",
@@ -1452,13 +1652,13 @@
     "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
     "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
    ],
-   "sourceConfidence": "high",
+   "sourceConfidence": "reconstructed",
    "sourceVerification": "bibliographic",
    "ruleCompleteness": "complete",
    "eligibility": "eligible",
    "selectionScore": 4.22,
    "playersMax": 2,
-   "reconstructed": false
+   "reconstructed": true
   },
   {
    "gameId": "dara",
@@ -1707,7 +1907,7 @@
    "family": "war-board",
    "culture": "Zuni",
    "region": "North America",
-   "playabilityStatus": "rules-complete",
+   "playabilityStatus": "reconstructed",
    "restrictionStatus": "attributed",
    "researchStatus": "candidate",
    "countryOrArea": "New Mexico",
@@ -1717,13 +1917,13 @@
     "Culin, Stewart, Games of the North American Indians, 24th Annual Report of the Bureau of American Ethnology (Washington, 1907)",
     "Bell, R. C., Board and Table Games from Many Civilizations (Oxford: Oxford University Press, 1960–69)"
    ],
-   "sourceConfidence": "high",
+   "sourceConfidence": "reconstructed",
    "sourceVerification": "bibliographic",
    "ruleCompleteness": "complete",
    "eligibility": "eligible",
    "selectionScore": 4.84,
    "playersMax": 2,
-   "reconstructed": false
+   "reconstructed": true
   },
   {
    "gameId": "konane",
@@ -1753,7 +1953,7 @@
    "gameId": "alquerque",
    "name": "Alquerque",
    "family": "war-board",
-   "culture": "Andalusi Arab",
+   "culture": "Castilian",
    "region": "Iberia · North Africa",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1778,7 +1978,7 @@
    "gameId": "xiangqi",
    "name": "Xiangqi",
    "family": "war-board",
-   "culture": "Han Chinese",
+   "culture": "Chinese",
    "region": "East Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1802,7 +2002,7 @@
    "gameId": "shatranj",
    "name": "Shatranj",
    "family": "war-board",
-   "culture": "Abbasid Arab",
+   "culture": "Abbasid",
    "region": "West Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1827,7 +2027,7 @@
    "gameId": "seega",
    "name": "Seega",
    "family": "war-board",
-   "culture": "Egyptian Arab",
+   "culture": "Modern Egyptian",
    "region": "North Africa",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -1922,9 +2122,9 @@
   },
   {
    "gameId": "chaturanga",
-   "name": "Chaturanga",
+   "name": "Chaturaji",
    "family": "war-board",
-   "culture": "Ancient Indian",
+   "culture": "Bengali",
    "region": "South Asia",
    "playabilityStatus": "reconstructed",
    "restrictionStatus": "open",
@@ -2069,7 +2269,7 @@
    "family": "chance",
    "culture": "Ancient Greek",
    "region": "Mediterranean",
-   "playabilityStatus": "rules-complete",
+   "playabilityStatus": "reconstructed",
    "restrictionStatus": "attributed",
    "researchStatus": "candidate",
    "countryOrArea": "Greece",
@@ -2080,19 +2280,19 @@
     "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
     "British Museum — Greek astragaloi and vase paintings of knucklebone play"
    ],
-   "sourceConfidence": "high",
+   "sourceConfidence": "reconstructed",
    "sourceVerification": "bibliographic",
    "ruleCompleteness": "complete",
    "eligibility": "eligible",
    "selectionScore": 4.26,
    "playersMax": 6,
-   "reconstructed": false
+   "reconstructed": true
   },
   {
    "gameId": "tien-gow",
    "name": "Tien Gow",
    "family": "chance",
-   "culture": "Cantonese",
+   "culture": "Chinese",
    "region": "East Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -2115,7 +2315,7 @@
   {
    "gameId": "set-dilth",
    "name": "Set-dilth",
-   "family": "chance",
+   "family": "race",
    "culture": "White Mountain Apache",
    "region": "North America",
    "playabilityStatus": "rules-complete",
@@ -2211,7 +2411,7 @@
    "gameId": "jianzi",
    "name": "Jianzi",
    "family": "boardless",
-   "culture": "Han Chinese",
+   "culture": "Chinese",
    "region": "East Asia",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",
@@ -2518,7 +2718,7 @@
    "gameId": "achi",
    "name": "Achi",
    "family": "territory",
-   "culture": "Akan",
+   "culture": "Gold Coast",
    "region": "West Africa",
    "playabilityStatus": "rules-complete",
    "restrictionStatus": "open",

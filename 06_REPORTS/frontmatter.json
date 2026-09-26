@@ -1,83 +1,146 @@
 {
- "$comment": "PUBLIC KATMAN — yapısal özet. Metin YOKTUR (K12).",
- "generatedAtPhase": "phase6",
+ "$comment": "PUBLIC LAYER — structural summary only; no prose (K12).",
+ "generatedAtPhase": "recovery-2026-09",
  "measured": {
   "games": 63,
-  "cultures": 45,
+  "cultures": 42,
+  "cultureLabels": [
+   "Abbasid",
+   "Akan",
+   "Amhara",
+   "Ancient Egyptian",
+   "Ancient Greek",
+   "Baggara",
+   "Bengali",
+   "Burmese",
+   "Castilian",
+   "Chinese",
+   "Dakarkari",
+   "Deccani",
+   "English",
+   "French",
+   "Ganda",
+   "Gold Coast",
+   "Hopi",
+   "Italian",
+   "Japanese",
+   "Kiowa",
+   "Korean",
+   "Malagasy",
+   "Malay",
+   "Mesopotamian",
+   "Modern Egyptian",
+   "Māori",
+   "Nahua",
+   "Nama",
+   "Norse",
+   "Q'eqchi' Maya",
+   "Roman",
+   "Sinhalese",
+   "Swahili",
+   "Sámi",
+   "Tamil",
+   "Tewa",
+   "Turkish",
+   "Venda",
+   "White Mountain Apache",
+   "Yoruba",
+   "Zulu",
+   "Zuni"
+  ],
   "families": 7,
-  "reconstructed": 8,
-  "oldestGameBCE": 2600,
-  "oldestGameAgeYears": 4600,
+  "reconstructed": 12,
+  "codifiedRulesets": 13,
+  "templateGames": [
+   "achi",
+   "alquerque",
+   "ashta-kashte",
+   "awithlaknannai",
+   "catch-the-hare",
+   "dara",
+   "demala-diviyan-keliya",
+   "fanorona",
+   "fox-and-geese",
+   "go",
+   "hasami-shogi",
+   "hnefatafl",
+   "janggi",
+   "mu-torere",
+   "nine-mens-morris",
+   "pachisi",
+   "royal-game-of-ur",
+   "senet",
+   "shogi",
+   "tablut",
+   "xiangqi",
+   "yut-nori"
+  ],
+  "oldestGameBCE": 3100,
+  "oldestGameAgeYears": 5000,
   "publicationYear": 2026,
-  "subtitleMeasured": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
-  "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
-  "frontMatterWords": 2027,
-  "familyOpenerWords": 2422
+  "subtitleMeasured": "63 Games from 5,000 Years of Human Play — Rules, Boards and Stories from 42 Cultures, Ready to Play Tonight",
+  "aiPlates": 52,
+  "publicDomainPlates": 9,
+  "frontMatterWords": 2808,
+  "familyOpenerWords": 2453
  },
  "sectionIds": [
   "introduction",
   "how-to-use",
   "seven-families",
-  "on-sources"
+  "on-sources",
+  "tonight"
  ],
  "familyOpeners": [
   {
    "family": "sowing",
    "numeral": "I",
    "gameCount": 10,
-   "targetGames": 14,
    "cultures": 10,
-   "words": 394
+   "words": 433
   },
   {
    "family": "hunt-siege",
    "numeral": "II",
    "gameCount": 6,
-   "targetGames": 10,
    "cultures": 6,
-   "words": 350
+   "words": 329
   },
   {
    "family": "race",
    "numeral": "III",
-   "gameCount": 13,
-   "targetGames": 18,
-   "cultures": 13,
-   "words": 362
+   "gameCount": 14,
+   "cultures": 14,
+   "words": 391
   },
   {
    "family": "territory",
    "numeral": "IV",
    "gameCount": 9,
-   "targetGames": 17,
-   "cultures": 9,
-   "words": 352
+   "cultures": 8,
+   "words": 357
   },
   {
    "family": "war-board",
    "numeral": "V",
    "gameCount": 14,
-   "targetGames": 21,
    "cultures": 13,
-   "words": 339
+   "words": 318
   },
   {
    "family": "chance",
    "numeral": "VI",
-   "gameCount": 3,
-   "targetGames": 4,
-   "cultures": 3,
-   "words": 305
+   "gameCount": 2,
+   "cultures": 2,
+   "words": 268
   },
   {
    "family": "boardless",
    "numeral": "VII",
    "gameCount": 8,
-   "targetGames": 16,
    "cultures": 6,
-   "words": 320
+   "words": 357
   }
  ],
- "contentsLength": 70,
- "authorBioPresent": true
+ "contentsLength": 70
 }

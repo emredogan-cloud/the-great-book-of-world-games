@@ -25,6 +25,13 @@
 01_SOURCE/book.json
 01_SOURCE/book-*.json
 01_SOURCE/edits.json
+# GBK-02 recovery (2026-09-26): the back matter's prose — glossary definitions, the board pages'
+# instructions, the games kit, credits — is book text. The repository's own leak scanner
+# (validate_structure.scan_for_leak) measures this file as rule prose (7 signatures, density
+# 0.12). The scan did not read .py files until this recovery (it does now, and goes red if this
+# file is ever tracked). It stays private like the manuscript; everything that imports it also
+# needs the manuscript, which CI never has.
+04_BUILD/backmatter_text.py
 
 # ② ÖZEL EDİTORYAL VE ARAŞTIRMA MALZEMESİ ─────────────────────────────────
 00_CONTEXT/private/
@@ -47,6 +54,20 @@
 07_ASSETS/plates/*
 07_ASSETS/plates_print/*
 07_ASSETS/diagrams/**/*
+# GBK-02 recovery (2026-09-26): the same rule for the new generated and binary sets —
+# large-print diagrams, full-size boards, companion boards (boards.py / companion_pack.py),
+# Kindle plates, and the public-domain figure scans. Their README provenance notes stay in git.
+07_ASSETS/diagrams_lp/**/*
+07_ASSETS/templates/**/*
+07_ASSETS/templates_lp/**/*
+07_ASSETS/companion_boards/**/*
+07_ASSETS/plates_kindle/*
+07_ASSETS/figures/**/*
+!07_ASSETS/figures/*/
+!07_ASSETS/plates/pd/
+07_ASSETS/plates/pd/*
+!07_ASSETS/plates/drawn/
+07_ASSETS/plates/drawn/*
 !07_ASSETS/**/.gitkeep
 !07_ASSETS/**/README.md
 

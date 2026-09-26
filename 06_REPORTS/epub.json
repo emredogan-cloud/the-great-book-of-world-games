@@ -1,29 +1,15 @@
 {
  "format": "EPUB 3, reflowable",
  "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub",
- "sha256": "696d4b9a5eca4bc88032049fff168ffe166c7409c52ff607d1f3e58e97d079cc",
- "bytes": 15960616,
- "documents": 83,
- "spineItems": 83,
+ "sha256": "a560f65f1c8851d73ad4c87f960fe1b98a140cb4f312adb1b72a950cde97a9ea",
+ "bytes": 9054872,
+ "documents": 86,
+ "spineItems": 86,
  "games": 63,
- "heroPlatesEmbedded": 63,
- "diagramsEmbedded": 59,
- "diagramFormat": "inline SVG (vector, no raster)",
- "coverImage": "08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg",
- "coverStatus": "READY",
+ "platesEmbedded": 63,
+ "diagramsEmbedded": 121,
+ "identifier": "urn:isbn:9786250047040",
+ "modified": "2026-09-26T11:21:23Z",
  "fixedLayout": false,
- "fixedLayoutRationale": "Çift sayfa mimarisi bir BASKI kısıtına verilmiş cevaptır. Kaydırılan bir ekranda o kısıt yoktur; madde kesintisiz akar. Sabit düzen ise gövde metnini telefonda okunamaz kılar ve okurun erişilebilirlik ayarlarını kilitler.",
- "measured": {
-  "games": 63,
-  "cultures": 45,
-  "families": 7,
-  "reconstructed": 8,
-  "oldestGameBCE": 2600,
-  "oldestGameAgeYears": 4600,
-  "publicationYear": 2026,
-  "subtitleMeasured": "63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight",
-  "subtitleHypothesis": "100 Games from 5,000 Years of Human Play — Rules, Boards, and Stories from 45 Cultures, Ready to Play Tonight",
-  "frontMatterWords": 2027,
-  "familyOpenerWords": 2422
- }
+ "manuscriptSha256": "a639870c1e27e51ede194ad15d039f045da247863023e97976157fe0dc03a97b"
 }

@@ -172,7 +172,12 @@ LEAK_PILOT_MARKERS = [
     r"SADECE TEST\b",
 ]
 
-LEAK_SCAN_EXT = (".md", ".json", ".txt", ".html")
+# ⚠ GBK-02 (2026-09-26): `.py` EKLENDİ. Kitap metni Python modüllerinde de durur
+# (frontmatter_text.py, backmatter_text.py). backmatter_text.py kural prozası olarak
+# ÖLÇÜLDÜ (7 imza · yoğunluk 0.12) ama tarama .py okumadığı için tek bir `git add`
+# onu public depoya sokacaktı. Genişletme ölçülerek yapıldı: takip edilen hiçbir .py
+# dosyası eşiği geçmiyor, yani kapı yanlış alarm vermeden görüşünü genişletiyor.
+LEAK_SCAN_EXT = (".md", ".json", ".txt", ".html", ".py")
 # Muafiyet = yalnızca bu dosyalar kural dilini ÖRNEK olarak taşıyabilir.
 #
 # ⚠ HER MUAFİYET selftest § ④ TARAFINDAN İKİ KEZ DENETLENİR:

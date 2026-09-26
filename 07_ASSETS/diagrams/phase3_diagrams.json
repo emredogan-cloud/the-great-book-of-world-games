@@ -120,7 +120,7 @@
     "aspect": 1.0
    },
    "panels": 1,
-   "reconstructed": false,
+   "reconstructed": true,
    "greyLevels": [
     0,
     100
@@ -710,7 +710,7 @@
     "aspect": 0.18
    },
    "panels": 1,
-   "reconstructed": false,
+   "reconstructed": true,
    "caption": "After Culin's Figure 1111, a stone slab 33 inches long from Zuni (Brooklyn Institute Museum 5049). Culin places the game among European introductions and the entry says so. One point at the centre is left empty; every move begins there.",
    "greyLevels": [
     0,

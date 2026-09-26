@@ -3,10 +3,12 @@
   "slug": "the-great-book-of-world-games",
   "canon": {
     "games": 63,
-    "cultures": 45,
-    "years": 4600,
-    "brand": "VALICE PRESS"
+    "cultures": 42,
+    "years": 5000,
+    "brand": "VALICE PRESS",
+    "subtitle": "63 Games from 5,000 Years of Human Play — Rules, Boards and Stories from 42 Cultures, Ready to Play Tonight"
   },
+  "geometrySource": "per format (see formats.*.geometrySource)",
   "formats": {
     "KINDLE": {
       "file": "08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg",
@@ -14,7 +16,7 @@
         1600,
         2560
       ],
-      "bytes": 2356492,
+      "bytes": 2360162,
       "suppliedPx": [
         992,
         1586
@@ -30,32 +32,34 @@
     "PAPERBACK": {
       "file": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf",
       "jpg": "08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.jpg",
-      "pages": 172,
+      "pages": 258,
       "trimIn": [
         8.5,
         11.0
       ],
       "wrapIn": [
-        17.6373,
+        17.831,
         11.25
       ],
       "wrapPx": [
-        5291,
+        5349,
         3375
       ],
-      "spineIn": 0.3873,
-      "spinePx": 116,
+      "spineIn": 0.581,
+      "spinePx": 174,
+      "geometrySource": "KDP paperback formula (pages × 0.002252 in; bleed + back + spine + front + bleed)",
+      "geometryProvisional": false,
       "spine": {
         "groundFrom": "comp spine band, per-row percentile — lettering removed",
-        "trueSpineIn": 0.3873,
-        "spineSafeIn": 0.2633,
+        "trueSpineIn": 0.581,
+        "spineSafeIn": 0.457,
         "textSet": true,
         "title": "THE GREAT BOOK OF WORLD GAMES",
         "author": "EMRE DOĞAN",
         "reads": "top-to-bottom",
         "endSafeIn": 0.55,
-        "titlePt": 18.2,
-        "authorPt": 10.3
+        "titlePt": 25.2,
+        "authorPt": 17.8
       },
       "backCrop": {
         "fit": "height-first; excess width cropped off the SPINE side only",
@@ -117,37 +121,39 @@
           "verdict": "covers drawn content — lettering or a rule is lost here"
         }
       },
-      "bytes": 7320216
+      "bytes": 7204841
     },
     "HARDCOVER": {
       "file": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf",
       "jpg": "08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.jpg",
-      "pages": 172,
+      "pages": 258,
       "trimIn": [
         8.25,
         11.0
       ],
       "wrapIn": [
-        18.683,
+        18.845,
         12.417
       ],
       "wrapPx": [
-        5605,
+        5654,
         3725
       ],
-      "spineIn": 0.608,
-      "spinePx": 182,
+      "spineIn": 0.77,
+      "spinePx": 231,
+      "geometrySource": "KDP Print Cover Calculator reading for 258 pages",
+      "geometryProvisional": false,
       "spine": {
         "groundFrom": "comp spine band, per-row percentile — lettering removed",
-        "trueSpineIn": 0.608,
-        "spineSafeIn": 0.484,
+        "trueSpineIn": 0.77,
+        "spineSafeIn": 0.646,
         "textSet": true,
         "title": "THE GREAT BOOK OF WORLD GAMES",
         "author": "EMRE DOĞAN",
         "reads": "top-to-bottom",
         "endSafeIn": 0.716,
         "titlePt": 27.4,
-        "authorPt": 19.0
+        "authorPt": 25.9
       },
       "backCrop": {
         "fit": "height-first; excess width cropped off the SPINE side only",
@@ -209,37 +215,39 @@
           "verdict": "covers drawn content — lettering or a rule is lost here"
         }
       },
-      "bytes": 7971700
+      "bytes": 7824520
     },
     "LARGEPRINT": {
       "file": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.pdf",
       "jpg": "08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.jpg",
-      "pages": 272,
+      "pages": 498,
       "trimIn": [
         8.5,
         11.0
       ],
       "wrapIn": [
-        17.8625,
+        18.371,
         11.25
       ],
       "wrapPx": [
-        5359,
+        5511,
         3375
       ],
-      "spineIn": 0.6125,
-      "spinePx": 184,
+      "spineIn": 1.121,
+      "spinePx": 336,
+      "geometrySource": "KDP paperback formula (pages × 0.002252 in; bleed + back + spine + front + bleed)",
+      "geometryProvisional": false,
       "spine": {
         "groundFrom": "comp spine band, per-row percentile — lettering removed",
-        "trueSpineIn": 0.6125,
-        "spineSafeIn": 0.4885,
+        "trueSpineIn": 1.121,
+        "spineSafeIn": 0.997,
         "textSet": true,
         "title": "THE GREAT BOOK OF WORLD GAMES",
         "author": "EMRE DOĞAN",
         "reads": "top-to-bottom",
         "endSafeIn": 0.55,
         "titlePt": 25.2,
-        "authorPt": 19.2
+        "authorPt": 26.6
       },
       "backCrop": {
         "fit": "height-first; excess width cropped off the SPINE side only",
@@ -301,7 +309,7 @@
           "verdict": "covers drawn content — lettering or a rule is lost here"
         }
       },
-      "bytes": 7343756
+      "bytes": 7225176
     }
   }
 }

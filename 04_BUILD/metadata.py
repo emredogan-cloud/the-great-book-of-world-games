@@ -59,59 +59,76 @@ def dump(p, d):
         fh.write("\n")
 
 
-def description(m, pages) -> str:
-    return (
-"A reference book you play from.\n"
-"\n"
-"The Great Book of World Games sets out %d traditional games from %d "
-"cultures, from the royal graves of Ur to a Zulu playground, and it sets "
-"them out so you can play them tonight. Each game gets two facing pages: the "
-"book lies open on the table and nobody has to turn a page in the middle of "
-"a turn.\n"
-"\n"
-"WHAT IS INSIDE EACH ENTRY\n"
-"· Players, time, age, materials and difficulty at a glance\n"
-"· What to use instead of what — buttons, coins, dried beans, an egg box\n"
-"· Numbered rules, one action to a line\n"
-"· A board diagram drawn to scale\n"
-"· The three questions every table argues about: what happens on a draw, "
-"what happens if nobody can move, and what happens when somebody plays an "
-"illegal move\n"
-"· A shorter version to start with\n"
-"· The work and the pages the rules were read from\n"
-"\n"
-"SORTED BY HOW THEY WORK, NOT BY WHERE THEY ARE FROM\n"
-"Most collections file games by country. This one files them by mechanism, "
-"in seven families — sowing, hunt and siege, race home, line and territory, "
-"the war board, chance and nerve, and games without a board. Put that way, "
-"the mancala games of Ghana, Sri Lanka and Buganda sit together and you can "
-"see what they share and where they part; the ancestors of chess sit "
-"together and you can watch six cultures solve the same problem six ways.\n"
-"\n"
-"HONEST ABOUT WHAT IS KNOWN\n"
-"Every rule set names its source. Where a historical record is incomplete, "
-"the entry says so and shows what has been reconstructed and on what basis. "
-"Where no source settles a question — most often the draw — the book makes a "
-"ruling and tells you it is the book's ruling, so you can overrule it. One "
-"page at the back is given to game origin stories that are widely repeated "
-"and are not true.\n"
-"\n"
-"AT THE BACK\n"
-"Full-size board templates you can photocopy. A materials guide. A glossary "
-"of the terms used for mechanics. Sources for every game. Three indexes — by "
-"culture, by number of players, and by time and age.\n"
-"\n"
-"%d pages. Almost nothing in it has to be bought."
-        % (m["games"], m["cultures"], pages))
+WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+         "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
+         "nineteen"]
+TENS = {20: "twenty", 30: "thirty", 40: "forty", 50: "fifty", 60: "sixty", 70: "seventy"}
+
+
+def word(n):
+    return WORDS[n] if n < 20 else TENS[n - n % 10] + ("" if n % 10 == 0 else "-" + WORDS[n % 10])
+
+
+def description(m, pages, tpl_games, lp_pages=None, hc_pages=None, trims=None) -> str:
+    """Every claim here is true of the build it is generated from: counts are
+    measured; the spread, template and source sentences say exactly what the
+    book now does (audit WG-001, WG-002, WG-006)."""
+    lines = [
+        "A reference book you play from.",
+        "",
+        "The Great Book of World Games sets out %s traditional games from %s cultures, from the "
+        "royal graves of Ur to a Zulu playground, so that you can play them tonight."
+        % (word(m["games"]), word(m["cultures"])),
+        "",
+        "EVERY ENTRY GIVES YOU",
+        "· A quick-play box: players, time, age, difficulty, what you need and the goal",
+        "· Where the game comes from, and how we know",
+        "· What to use instead of what — buttons, coins, dried beans, an egg box",
+        "· Numbered rules, one action to a line, with a board diagram drawn from the rules",
+        "· The disputes every table has — a draw, a blocked player, an illegal move — settled",
+        "· A worked turn, played out from a stated position",
+        "· A simpler first game, and variants: the recorded ones, and house rules marked as such",
+        "· The sources: the work and the pages the rules were read from",
+        "",
+        "SORTED BY HOW THEY WORK, NOT BY WHERE THEY ARE FROM",
+        "Seven families — the sowing games, the hunt and the siege, the race home, the line and "
+        "the territory, the war board, chance and scoring, and games without a board. Put that "
+        "way, the mancala games of Ghana, Sri Lanka and Buganda sit together, and six cultures "
+        "solve the problem of chess six different ways.",
+        "",
+        "HONEST ABOUT WHAT IS KNOWN",
+        "Where a game's record is incomplete — senet, the Royal Game of Ur, the Roman game of "
+        "twelve lines — the entry says what the sources give and what has been reconstructed, and "
+        "whose reconstruction it follows. Where no source settles a question, the book makes a "
+        "ruling and marks it as its own, so you can overrule it. A section at the back lists game "
+        "origin stories that are widely repeated and are not true.",
+        "",
+        "AT THE BACK",
+        "Full-size boards for %s of the games, drawn at playing size for the photocopier (print "
+        "editions). A list of what to gather for a games kit. A glossary, the sources by work, an "
+        "index of every game under every name it goes by, and indexes by culture, age and "
+        "difficulty. A free companion pack online adds printable boards for the other games, a "
+        "card for every game and score sheets." % word(tpl_games),
+        "",
+    ]
+    size = lambda t: "%s × %s in" % ("%g" % t["w"], "%g" % t["h"])   # noqa: E731
+    trims = trims or {}
+    if pages:
+        lines.append("Paperback: %d pages, %s." % (pages, size(trims.get("paperback", {"w": 8.5, "h": 11}))))
+    if hc_pages:
+        lines.append("Hardcover: %d pages, %s." % (hc_pages, size(trims.get("hardcover", {"w": 8.25, "h": 11}))))
+    if lp_pages:
+        lines.append("Large print edition: %d pages, set in 16-point type." % lp_pages)
+    return "\n".join(lines)
 
 
 KEYWORDS = [
-    "traditional board games book",
-    "world games rules and history",
-    "family games for adults and kids",
-    "mancala backgammon go rules",
-    "history of board games reference",
+    "traditional board games rules book",
     "games from around the world",
+    "mancala oware rules",
+    "royal game of ur senet rules",
+    "go xiangqi shogi rules",
+    "family board games history",
     "classroom games activity book",
 ]
 
@@ -126,17 +143,23 @@ def build(root: str, gate: str) -> tuple[dict, list, list]:
     m = fm["measured"]
 
     pages = {}
-    for ed in ("paperback", "hardcover"):
+    for ed in ("paperback", "hardcover", "largeprint"):
         p = os.path.join(root, "06_REPORTS", "interior-%s.json" % ed)
         if os.path.exists(p):
             pages[ed] = load(p)["pageCount"]
+    tpl_games = len(m.get("templateGames") or [])
 
     isbn = cfg["founder"]["isbn"]
     bio = cfg["founder"].get("authorBio")
     ai = cfg["founder"]["aiDisclosure"]
     errs, founder_actions = [], []
 
-    desc = description(m, pages.get("paperback", 0))
+    prod = cfg.get("production", {})
+    desc = description(m, pages.get("paperback", 0), tpl_games, pages.get("largeprint"),
+                       pages.get("hardcover"),
+                       {"paperback": prod.get("trimPaperback", {"w": 8.5, "h": 11}),
+                        "hardcover": prod.get("trimHardcover", {"w": 8.25, "h": 11})})
+    registered = cfg["metadata"].get("subtitleRegisteredOnKdp")
     title = cfg["project"]["title"]
     subtitle = m["subtitleMeasured"]
 
@@ -163,6 +186,19 @@ def build(root: str, gate: str) -> tuple[dict, list, list]:
     if str(m["cultures"]) not in subtitle:
         errs.append("alt başlıkta ölçülen kültür sayısı (%d) GEÇMİYOR"
                     % m["cultures"])
+
+    if registered and registered != m["subtitleMeasured"]:
+        founder_actions.append({
+            "id": "SUBTITLE-NEW-EDITION", "field": "metadata.subtitleRegisteredOnKdp", "blocking": True,
+            "note": "The verified subtitle (%s) differs from the one registered on the live KDP print "
+                    "records (%s). KDP locks a paperback/hardcover title and subtitle 72 hours after "
+                    "publication; the corrected files need a NEW EDITION with a new ISBN (or KDP "
+                    "support). Decide before uploading the print files." % (m["subtitleMeasured"], registered)})
+    founder_actions.append({
+        "id": "AI-QUESTIONNAIRE", "field": "founder.aiDisclosure", "blocking": True,
+        "note": "Under KDP's definitions the text of this book is AI-GENERATED (created by AI tools, "
+                "then edited), not AI-assisted; most plates and the cover are AI-generated images. "
+                "Re-answer the KDP AI content questions for every edition when uploading."})
 
     # ── authorBio: SEVİYEYE DUYARLI KAPI ────────────────────────────────
     if not bio:
@@ -211,7 +247,7 @@ def build(root: str, gate: str) -> tuple[dict, list, list]:
             "author": cfg["founder"]["author"],
             "contributors": [],
             "publisher": cfg["founder"]["publisher"],
-            "edition": "First edition",
+            "edition": "Revised edition",
         },
         "description": {"text": desc, "chars": len(desc),
                         "limit": KDP_LIMITS["description"],
@@ -251,15 +287,13 @@ def build(root: str, gate: str) -> tuple[dict, list, list]:
                  "hardcover": isbn.get("hardcover") or "PENDING — KDP-PROVIDED ISBN",
                  "$note": "Sahte ISBN YASAKTIR (§ 15)."},
         "aiProductionFacts": {
-            "$note": "KDP'nin AI beyanı için OLGULAR. Seçimi kurucu yapar.",
-            "text": "Text was drafted with AI assistance and edited by the "
-                    "author; every rule set is traced to a named printed "
-                    "source at page level.",
-            "images": "Cover and A+ artwork are generated externally by the "
-                      "author; interior diagrams are drawn deterministically "
-                      "by the project's own code from data, not generated.",
-            "translation": "None. The commercial text is written directly in "
-                           "English.",
+            "$note": "Facts for KDP's AI content questions (KDP Help G200672390: AI-generated = "
+                     "created by an AI tool, even if substantially edited afterwards).",
+            "text": ai["text"]["detail"],
+            "textClassification": ai["text"]["state"],
+            "images": ai["images"]["detail"],
+            "imagesClassification": ai["images"]["state"],
+            "translation": "None. The text is written in English.",
             "founderConfirmed": bool(ai.get("founderConfirmed")),
         },
         "pricing": {

@@ -1,0 +1,32 @@
+{
+ "status": "pass",
+ "errors": [],
+ "facts": {
+  "paperback": {
+   "pages": 258,
+   "minTextPt": 8.0,
+   "blankPages": [
+    2,
+    13
+   ],
+   "imagesPlaced": 71
+  },
+  "hardcover": {
+   "pages": 258,
+   "minTextPt": 8.0,
+   "blankPages": [
+    2,
+    13
+   ],
+   "imagesPlaced": 71
+  },
+  "largeprint": {
+   "pages": 498,
+   "minTextPt": 12.0,
+   "blankPages": [
+    498
+   ],
+   "imagesPlaced": 71
+  }
+ }
+}

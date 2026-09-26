@@ -1,6 +1,6 @@
 {
   "status": "pass",
-  "checks": 27,
+  "checks": 28,
   "errors": [],
   "warnings": [],
   "facts": {
@@ -8,20 +8,19 @@
     "familyCounts": {
       "sowing": 14,
       "hunt-siege": 10,
-      "race": 18,
+      "race": 19,
       "territory": 17,
       "war-board": 21,
-      "chance": 4,
+      "chance": 3,
       "boardless": 16
     },
     "restrictedTotal": 9,
-    "locked_cultures": 68,
+    "locked_cultures": 69,
     "modelDivergence": {
       "modelOnly": [
         "durak",
         "fivestones",
         "hanafuda-koi-koi",
-        "karnoffel",
         "marbles",
         "puluc",
         "quoits",
@@ -34,7 +33,6 @@
         "kho-kho",
         "lagori",
         "mahjong",
-        "set-dilth",
         "tien-gow"
       ],
       "explainedByAmendments": [

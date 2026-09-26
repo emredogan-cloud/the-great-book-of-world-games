@@ -1,3 +1,5 @@
+> **SUPERSEDED — 2 September 2026.** The one-liner recorded below is no longer the author bio. The Founder supplied the canonical bio verbatim on 2026-09-02 and recorded the one-liner as invented (`project_config.json` → `founder.authorBio`, `authorBio$why`). The GBK-02 recovery (26 September 2026) removed it from the back cover; the interior prints the canonical bio in full.
+
 # YAZAR BİYOGRAFİSİ — KÜNYE
 
 > **The Great Book of World Games** · Faz 6 · 20 Ağustos 2026

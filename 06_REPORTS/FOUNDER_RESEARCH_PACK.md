@@ -96,7 +96,7 @@ Aşağıdaki oyunların GEÇTİĞİ sayfaların taraması ya da fotoğrafı. Mur
 | `tapatan` | The Line and the Territory | Tagalog | A | 18.4 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — tapatan bölümü, sayfa numarasıyla |
 | `sungka` | The Sowing Games | Visayan | A | 17.4 | Culin, Stewart, 'Philippine Games', American Anthropologist 2:4 (1900) — sungka bölümü, SAYFA NUMARASIYLA (proje bu makalenin sayfa aralığını henüz… |
 | `zamma` | The War Board | Amazigh | C | 16.7 | Murray 1952 ya da Béart 1955'te zamma/sig maddesi |
-| `nard` | The Race Home | Persian | C | 16.4 | Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma |
+| `nard` | The Race Home | Persian | C | 16.3 | Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma |
 | `halatafl` | The Hunt and the Siege | Icelandic | E | 16.0 | Halatafl'ın KURALINI veren bir kaynak — tahta, taş sayıları, hareket, alma |
 | `twelve-mens-morris` | The Line and the Territory | Medieval European | E | 15.4 | Murray 1952 ya da Bell'de twelve men's morris maddesi — KÖŞEGENLİ tahta ve 12'şer taş |
 | `luk-tsut-kei` | The Line and the Territory | Cantonese | E | 14.4 | Murray 1952'de luk tsut k'i maddesi |
@@ -160,11 +160,11 @@ var olduğu iddia edilmez*
 |---|---|---|:---:|---:|---|
 | `bagh-chal` | The Hunt and the Siege | Nepali | A | 20.0 | Bell ya da Parlett'te bagh-chal maddesi |
 | `petanque` | Games Without a Board | Provençal | A | 18.5 | FIPJP resmî kural kitabı — SÜRÜM, yürürlük tarihi ve madde numaraları |
-| `daldos` | The Race Home | Danish | C | 17.4 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
-| `game-of-the-goose` | The Race Home | Italian | E | 16.4 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
+| `daldos` | The Race Home | Danish | C | 17.3 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
+| `game-of-the-goose` | The Race Home | Italian | E | 16.3 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
 | `makruk` | The War Board | Thai | E | 15.7 | Murray, A History of Chess (1913) — Siyam satrancı bölümü (HathiTrust ya da Google Books TAM GÖRÜNÜM; eser kamusal alandadır) |
 | `surakarta` | The War Board | Javanese | D | 15.7 | Surakarta'nın Java'daki geleneksel varlığını gösteren bir DÖNEM kaydı (20. yy öncesi ya da erken 20. yy saha kaydı) |
-| `mahjong` | Chance and Nerve | Han Chinese | C | 14.2 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
+| `mahjong` | Chance and Nerve | Han Chinese | C | 14.7 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
 var olduğu iddia edilmez*
@@ -345,9 +345,9 @@ Aşağıdaki her künye TEK bir oyunu açar:
 | oyun | aile | kültür | sınıf | puan | ne çıkarılacak |
 |---|---|---|:---:|---:|---|
 | `adji-boto` | The Sowing Games | Ndyuka Maroon | C | 17.4 | Herskovits, Melville J., 'Wari in the New World', Journal of the Royal Anthropological Institute 62 (1932) — makalenin tamamı |
-| `daldos` | The Race Home | Danish | C | 17.4 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
-| `game-of-the-goose` | The Race Home | Italian | E | 16.4 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
-| `mahjong` | Chance and Nerve | Han Chinese | C | 14.2 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
+| `daldos` | The Race Home | Danish | C | 17.3 | Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi |
+| `game-of-the-goose` | The Race Home | Italian | E | 16.3 | Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR |
+| `mahjong` | Chance and Nerve | Han Chinese | C | 14.7 | 1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir) |
 
 **ARAMA KALIPLARI** — *bunlar strateji önerisidir; bu adreslerin
 var olduğu iddia edilmez*

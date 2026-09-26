@@ -720,6 +720,10 @@ def part6_phase2_gates(rep, tmp: str) -> None:
             r = vs.scan_for_leak(fh.read())
         rep.check(r["markers"] < vs.LEAK_MIN_HITS and r["leak"],
                   "ETİKETSİZ proza — Faz 1 hattı kaçırırdı, Faz 2 hattı YAKALAR")
+    # GBK-02 (2026-09-26): kitap metni Python modüllerinde de durur (backmatter_text.py
+    # kural prozası olarak ölçüldü); tarama .py okumazsa tek bir `git add` onu sızdırır.
+    rep.check(".py" in vs.LEAK_SCAN_EXT,
+              "sızıntı taraması .py dosyalarını da okur (backmatter_text.py dersi)")
 
     # ── ② DİL AYRIMI ───────────────────────────────────────────────────────
     print("  ▸ dil ayrımı")
@@ -1835,6 +1839,65 @@ def part12_ci_contract(rep: Report, tmp: str) -> None:
 
 
 # ---------------------------------------------------------------------------
+def part14_printed_diagram_budget(rep: Report, tmp: str) -> None:
+    """⑭ BASILAN DİYAGRAM KAPISI (qa_diagram_budget.py) GERÇEKTEN ISIRIR.
+
+    Gerçek kitap bu kapıda kırmızıdır (K19 kurucu kararı bekliyor), yani
+    "temiz veri geçer" gerçek veriyle kanıtlanamaz. Kurgu bir kökte iki
+    yön birden sınanır: temiz küme GEÇER, her kusur tek tek YAKALANIR.
+    """
+    print("\n⑭ basılan diyagram kapısı (K19 · v2)")
+    root = os.path.join(tmp, "k19")
+    os.makedirs(os.path.join(root, "02_MANUSCRIPT"))
+    os.makedirs(os.path.join(root, "06_REPORTS"))
+
+    def build(games, measured, overrides=None):
+        write_json(os.path.join(root, "project_config.json"),
+                   {"diagram": {"maxDiagramMmPerGame": 150,
+                                "diagramBudgetOverrides": overrides or {}}})
+        write_json(os.path.join(root, "02_MANUSCRIPT", "book.json"), {"games": games})
+        write_json(os.path.join(root, "06_REPORTS", "boards.json"), {"diagrams": measured})
+
+    def game(gid, *ids, caption="A board."):
+        return {"gameId": gid, "diagramSpecs": [{"id": i, "caption": caption} for i in ids]}
+
+    def m(i, h, errors=None):
+        return {"id": i, "heightMm": h, "errors": errors or []}
+
+    clean_g = [game("a", "a-setup", "a-worked"), game("b", "b-setup")]
+    clean_m = [m("a-setup", 70), m("a-worked", 70), m("b-setup", 140)]
+    build(clean_g, clean_m)
+    code, out = run_gate("qa_diagram_budget.py", root)
+    rep.check(code == 0, "TEMİZ basılan diyagram kümesi geçer", out)
+
+    cases = [
+        ("oyun toplamı 150 mm'yi AŞARSA YAKALANIR (tek tek küçük olsa da)",
+         clean_g, [m("a-setup", 80), m("a-worked", 80), m("b-setup", 140)], None),
+        ("render edilmemiş diyagram YAKALANIR",
+         clean_g, clean_m[:2], None),
+        ("ölçümde tanımı olmayan (bayat) diyagram YAKALANIR",
+         clean_g, clean_m + [m("c-setup", 20)], None),
+        ("sayım doğrulaması düşen diyagram YAKALANIR",
+         clean_g, [m("a-setup", 70, ["black: drawn 7, expected 8"])] + clean_m[1:], None),
+        ("altyazısız diyagram YAKALANIR",
+         [game("a", "a-setup", "a-worked", caption=" "), game("b", "b-setup")], clean_m, None),
+    ]
+    for label, g, meas, ov in cases:
+        build(g, meas, ov)
+        code, out = run_gate("qa_diagram_budget.py", root)
+        rep.check(code != 0, label, out)
+
+    build(clean_g, [m("a-setup", 150), m("a-worked", 150), m("b-setup", 140)],
+          {"a": {"maxMm": 340, "decision": "K24"}})
+    code, out = run_gate("qa_diagram_budget.py", root)
+    rep.check(code == 0, "kimlik eşlemeli istisna (K24 biçimi) YALNIZCA kendi oyununda uygulanır", out)
+    build(clean_g, [m("a-setup", 70), m("a-worked", 70), m("b-setup", 200)],
+          {"a": {"maxMm": 340, "decision": "K24"}})
+    code, out = run_gate("qa_diagram_budget.py", root)
+    rep.check(code != 0, "istisna BAŞKA oyuna yayılmaz", out)
+
+
+# ---------------------------------------------------------------------------
 def part13_gutter_tiers(rep: Report, tmp: str) -> None:
     """⑬ GUTTER (İÇ MARJ) KADEMESİ SAYFA SAYISINDAN TÜRETİLİR.
 
@@ -1887,6 +1950,30 @@ def part13_gutter_tiers(rep: Report, tmp: str) -> None:
               "denetler")
 
 
+def part15_diagram_keys(rep: Report, tmp: str) -> None:
+    """⑮ DİYAGRAM ANAHTARI — iki farklı anlam aynı simgeyle çizilemez.
+
+    GBK-02 (2026-09-26): yedi anahtar "move" ile "capturing move"u AYNI okla
+    çiziyordu ve beş anahtarda halka işareti Beyaz taşın ince dairesiydi.
+    boards.py artık anahtardaki çakışmayı doğrulama hatası sayar; burada o
+    denetimin ısırdığı ve düzeltmenin yerinde durduğu kanıtlanır.
+    """
+    print("\n⑮ diyagram anahtarı (aynı simge · iki anlam)")
+    sys.path.insert(0, os.path.join(ROOT, "04_BUILD"))
+    import boards  # noqa: E402
+    same = boards.key_clashes([(boards.arrow_drawer("move"), "move"),
+                               (boards.arrow_drawer("move"), "capturing move")])
+    rep.check(same == [["move", "capturing move"]],
+              "aynı simge iki etikette → çakışma YAKALANIR", str(same))
+    rep.check(not boards.key_clashes([(boards.arrow_drawer("move"), "move"),
+                                      (boards.arrow_drawer("capture"), "capturing move")]),
+              "hamle ve alma okları anahtarda AYRI çizilir (yanlış alarm yok)")
+    sc = boards.Scene(20.0, 20.0)
+    boards.mark_drawer("ring")(sc, 10.0, 10.0, 2.0)
+    rep.check(any(op[0] == "circle" and op[5] >= 1.2 for op in sc.ops),
+              "halka işaretinin anahtar örneği tahtadaki gibi KALIN (Beyaz taşın ince dairesi değil)")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1912,6 +1999,8 @@ def main() -> int:
         part11_typography(rep, tmp)
         part12_ci_contract(rep, tmp)
         part13_gutter_tiers(rep, tmp)
+        part14_printed_diagram_budget(rep, tmp)
+        part15_diagram_keys(rep, tmp)
 
     print("\n" + "=" * 74)
     if rep.failed:

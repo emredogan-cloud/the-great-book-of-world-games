@@ -30,7 +30,7 @@
 | Kilitli oyun | **0** | 100 |
 | Yazılmış oyun | **63** | 100 |
 | Oynanabilirlik testi geçen | **0** | 100 |
-| Kültür | **89** | ≥45 |
+| Kültür | **91** | ≥45 |
 | Aile | **7** | 7 |
 | Kısıt taraması | **161/161** | 161/161 |
 | Modellenen sayfa | **250** | 256 |

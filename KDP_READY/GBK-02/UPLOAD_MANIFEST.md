@@ -1,105 +1,91 @@
-# KDP Upload Manifest & Production Certification
-## The Great Book of World Games (GBK-02)
+# GBK-02 · The Great Book of World Games — KDP upload package
 
-**Publisher:** Valice Press  
-**Author:** Emre Doğan  
-**Title:** The Great Book of World Games  
-**Subtitle:** 63 Games from 4,600 Years of Human Play — Rules, Boards, and Stories from 45 Cultures  
-**Production Date:** September 23, 2026  
-**Canonical Status:** Frozen 63-Game / 45-Culture Multi-Format Production Canon  
-**Gate Validation Status:** ALL 14 QA GATES PASSED (100% Green, Phase 1 Certified)
+**Status: NOT READY — BLOCKED BY SPECIFIC RELEASE GATES.** Do not upload until the gates in the final report (`06_REPORTS/editorial/GBK-02_FINAL_RECOVERY_AND_KDP_READINESS_REPORT.md`, §24) are cleared: external playtesting, the subtitle/new-edition decision, the AI-content declaration, the companion deployment, the K19 diagram-budget decision, and a physical proof.
 
----
+Packaged 2026-09-26 12:08 UTC from the recovery build. Every file here is **FINAL**; nothing old or superseded is in this folder. The previous package is archived at `09_ARCHIVE/kdp-ready-superseded-20260926-150827/`, and stale builds from `08_OUTPUT/` at `09_ARCHIVE/output-superseded-20260926-150827/`.
 
-## 1. Upload Package Files & Checksums
+## Book
 
-| Edition | File | Format | Page / Dim | File Size | SHA-256 Checksum |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Kindle** | `KINDLE/GreatBookOfWorldGames.epub` | EPUB 3 (Reflowable) | 83 XHTML Docs | 15,960,616 B | `696d4b9a5eca4bc88032049fff168ffe166c7409c52ff607d1f3e58e97d079cc` |
-| **Kindle** | `KINDLE/GreatBookOfWorldGames_cover_kindle.jpg` | JPEG (RGB) | 1600 × 2560 px | 2,356,492 B | `0acc1a51f61b4c2e845c247a48839a774e6478cfec35dda932acfaa31a4ed3f6` |
-| **Paperback** | `PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf` | PDF/X Compliant | 172 pp (8.5 × 11 in) | 16,945,890 B | `e36732801c5715af5549482142ce4342df12645189c33e0eed2bffc450e48d7f` |
-| **Paperback** | `PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf` | PDF Wrap | 17.6373 × 11.25 in | 7,320,216 B | `f10249b333424b0628a4f68b412daa64cd40533983ed1ae762799c7a90cdb153` |
-| **Hardcover** | `HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf` | PDF/X Compliant | 172 pp (8.25 × 11 in) | 16,946,214 B | `1bc0eafe9b18a646dab6aba77229d7ba262b8c53a99ebc6e7778d60e077cad81` |
-| **Hardcover** | `HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf` | PDF Case Wrap | 18.6830 × 12.417 in | 7,971,700 B | `e89da7354f732f05af8063d45cd08eaafc8d5ebc0ae5f3fd088a5fb253e2b500` |
-| **Large Print** | `LARGE_PRINT/GreatBookOfWorldGames_interior_largeprint.pdf` | PDF/X Compliant | 272 pp (8.5 × 11 in) | 17,035,124 B | `23e4173710d9956c50f1d4fe0139e1bfc56aab71a7d76e48a04ef74248568d69` |
-| **Large Print** | `LARGE_PRINT/GreatBookOfWorldGames_cover_largeprint.pdf` | PDF Wrap | 17.8625 × 11.25 in | 7,343,756 B | `5cba6771bb64d29fcd39a3f00ebcab5b6df160fadbd3edb4b894cc576d0344ed` |
+- Title: The Great Book of World Games
+- Subtitle (printed in this build): 63 Games from 5,000 Years of Human Play — Rules, Boards and Stories from 42 Cultures, Ready to Play Tonight
+- Subtitle on the live KDP print records: 63 Games from 4,600 Years of Human Play — Rules, Boards and Stories from 45 Cultures, Ready to Play Tonight — **differs** (new edition decision)
+- Author: Emre Doğan · Publisher: Valice Press
+- 63 games · 42 cultures · 7 families · 12 reconstructed
 
----
+## Upload map
 
-## 2. Edition Specifications & KDP Settings
+| Edition | Interior / book file | Cover | Notes |
+|---|---|---|---|
+| Paperback | `PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf` (258 pp · 8.5 × 11 in) | `PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf` (258 pp · spine 0.581 in · 17.831 × 11.25 in) | B&W, white paper, no bleed |
+| Hardcover | `HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf` (258 pp · 8.25 × 11 in) | `HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf` (258 pp · spine 0.770 in · 18.845 × 12.417 in) | B&W, white paper, no bleed |
+| Large print | `LARGE_PRINT/GreatBookOfWorldGames_interior_largeprint.pdf` (498 pp · 8.5 × 11 in) | `LARGE_PRINT/GreatBookOfWorldGames_cover_largeprint.pdf` (498 pp · spine 1.121 in · 18.371 × 11.25 in) | B&W, white paper, no bleed |
+| Kindle | `KINDLE/GreatBookOfWorldGames.epub` | `KINDLE/GreatBookOfWorldGames_cover_kindle.jpg` (1600 × 2560) | reflowable EPUB 3 |
 
-### Kindle eBook
-- **Registered ISBN:** `978-625-00-4704-0`
-- **Format:** EPUB 3 Reflowable, UTF-8, XHTML5
-- **EPUBCheck Validation:** 0 errors, 0 warnings (EPUBCheck 5.1.0)
-- **Hero Plates:** 63 full-color raster plates embedded in `images/` and referenced across all game chapters
-- **Board Diagrams:** 54 vector diagrams declared in OPF manifest with `properties="svg"`
-- **Special Content:** Companion pack download page (`companion.xhtml`), printed AI disclosure in copyright section
-- **Kindle Cover Image:** 1600 × 2560 px, 300 DPI, RGB, lossless quality
+Book details to paste: `METADATA/kdp_metadata.json`, step by step in `METADATA/KDP_UPLOAD_HANDBOOK.md`. A+ content: `APLUS/`.
 
-### Paperback (Standard Print Edition)
-- **Assigned ISBN:** `9798194063468`
-- **Interior Trim:** 8.5 × 11.0 in (215.9 × 279.4 mm)
-- **Interior Page Count:** Exactly 172 pages
-- **Color Model:** Black & white interior on standard white paper
-- **Bleed Settings:** No bleed for interior (all margins > 0.500 in inner/gutter, > 0.250 in outer/top/bottom)
-- **Cover Spread Dimensions:** 17.6373 × 11.2500 in (includes 0.125 in outer bleeds)
-- **Spine Width:** 0.3873 in (172 pages × 0.002252 in/page)
-- **Barcode Plate:** Vector drawn `#F6F3EC` rectangular plate with hairline `#B08F4E` frame; verified luminance `minLum=241.7 > 240.0` (zero rejection risk)
-- **Spread Architecture:** 100% two-page facing spreads (every game opens verso on an even page, closes recto on an odd page). Zero 4-page overflows. Zero unintended blank pages.
+## Provenance
 
-### Hardcover (Case Laminate Edition)
-- **Assigned ISBN:** `9798194081950`
-- **Interior Trim:** 8.25 × 11.0 in (209.55 × 279.4 mm)
-- **Interior Page Count:** Exactly 172 pages
-- **Color Model:** Black & white interior on standard white paper
-- **Cover Spread Dimensions:** 18.6830 × 12.4170 in (accommodates case wrap and 0.6080 in spine)
-- **Spine Width:** 0.6080 in
-- **Barcode Plate:** Vector drawn `#F6F3EC` plate with hairline frame; verified luminance `minLum=241.7` (zero rejection risk)
-- **Spread Architecture:** Identical 172-page 2-page spread architecture matching Paperback edition
+| File | Source | Built by | Built (UTC) | Pages / size | Validation |
+|---|---|---|---|---|---|
+| `PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf` | `08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf` | `04_BUILD/interior.py` | 2026-09-26 11:20 | 258 pp · 8.5 × 11 in | KDP pre-flight 30 checks, 0 failed; qa_output green; manuscript a639870c1e27 |
+| `PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf` | `08_OUTPUT/PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf` | `04_BUILD/build_gbk02_covers.py` | 2026-09-26 11:21 | 258 pp · spine 0.581 in · 17.831 × 11.25 in | covers.py --check green; geometry: KDP paperback formula (pages × 0.002252 in; bleed + back + spine + front + bleed) |
+| `HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf` | `08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf` | `04_BUILD/interior.py` | 2026-09-26 11:20 | 258 pp · 8.25 × 11 in | KDP pre-flight 30 checks, 0 failed; qa_output green; manuscript a639870c1e27 |
+| `HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf` | `08_OUTPUT/HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf` | `04_BUILD/build_gbk02_covers.py` | 2026-09-26 11:21 | 258 pp · spine 0.770 in · 18.845 × 12.417 in | covers.py --check green; geometry: KDP Print Cover Calculator reading for 258 pages |
+| `LARGE_PRINT/GreatBookOfWorldGames_interior_largeprint.pdf` | `08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_interior_largeprint.pdf` | `04_BUILD/interior.py` | 2026-09-26 11:20 | 498 pp · 8.5 × 11 in | KDP pre-flight 30 checks, 0 failed; qa_output green; manuscript a639870c1e27 |
+| `LARGE_PRINT/GreatBookOfWorldGames_cover_largeprint.pdf` | `08_OUTPUT/LARGEPRINT/GreatBookOfWorldGames_cover_largeprint.pdf` | `04_BUILD/build_gbk02_covers.py` | 2026-09-26 11:21 | 498 pp · spine 1.121 in · 18.371 × 11.25 in | covers.py --check green; geometry: KDP paperback formula (pages × 0.002252 in; bleed + back + spine + front + bleed) |
+| `KINDLE/GreatBookOfWorldGames.epub` | `08_OUTPUT/KINDLE/GreatBookOfWorldGames.epub` | `04_BUILD/epub.py` | 2026-09-26 11:21 | EPUB 3 · 86 documents | EPUBCheck 0 fatals / 0 errors / 0 warnings |
+| `KINDLE/GreatBookOfWorldGames_cover_kindle.jpg` | `08_OUTPUT/KINDLE/GreatBookOfWorldGames_cover_kindle.jpg` | `04_BUILD/build_gbk02_covers.py` | 2026-09-26 11:21 | 1600 × 2560 px | 1600 × 2560 px, 1:1.6 |
+| `METADATA/kdp_metadata.json` | `06_REPORTS/tracked/metadata.json` | `04_BUILD/metadata.py` | 2026-09-26 11:21 | 9329 bytes | metadata.py: consistent; 3 Founder actions |
+| `METADATA/KDP_UPLOAD_HANDBOOK.md` | `08_OUTPUT/KDP_UPLOAD_HANDBOOK.md` | `04_BUILD/handoff.py` | 2026-09-26 12:08 | 25620 bytes | handoff.py --check green |
+| `METADATA/KDP_PREVIEWER_CHECKLIST.md` | `08_OUTPUT/KDP_PREVIEWER_CHECKLIST.md` | `04_BUILD/handoff.py` | 2026-09-26 12:08 | 5867 bytes | handoff.py --check green |
+| `METADATA/KDP_AI_DISCLOSURE_NOTES.md` | `08_OUTPUT/KDP_AI_DISCLOSURE_NOTES.md` | `04_BUILD/handoff.py` | 2026-09-26 12:08 | 5489 bytes | handoff.py --check green |
+| `APLUS/aplus-01-hero-world-of-games.png` | `08_OUTPUT/APLUS/aplus-01-hero-world-of-games.png` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 964255 bytes | aplus.py --check READY (module 05 without art) |
+| `APLUS/aplus-02-cultural-diversity.png` | `08_OUTPUT/APLUS/aplus-02-cultural-diversity.png` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 1015028 bytes | aplus.py --check READY (module 05 without art) |
+| `APLUS/aplus-03-how-the-book-works.png` | `08_OUTPUT/APLUS/aplus-03-how-the-book-works.png` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 173536 bytes | aplus.py --check READY (module 05 without art) |
+| `APLUS/aplus-04-types-of-games-a.png` | `08_OUTPUT/APLUS/aplus-04-types-of-games-a.png` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 78282 bytes | aplus.py --check READY (module 05 without art) |
+| `APLUS/aplus-04-types-of-games-b.png` | `08_OUTPUT/APLUS/aplus-04-types-of-games-b.png` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 76887 bytes | aplus.py --check READY (module 05 without art) |
+| `APLUS/aplus-04-types-of-games-c.png` | `08_OUTPUT/APLUS/aplus-04-types-of-games-c.png` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 88823 bytes | aplus.py --check READY (module 05 without art) |
+| `APLUS/aplus-04-types-of-games-d.png` | `08_OUTPUT/APLUS/aplus-04-types-of-games-d.png` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 70591 bytes | aplus.py --check READY (module 05 without art) |
+| `APLUS/aplus-06-complete-collection.png` | `08_OUTPUT/APLUS/aplus-06-complete-collection.png` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 842573 bytes | aplus.py --check READY (module 05 without art) |
+| `APLUS/aplus_content.json` | `08_OUTPUT/APLUS/aplus_content.json` | `04_BUILD/aplus.py` | 2026-09-26 11:21 | 11188 bytes | aplus.py --check READY (module 05 without art) |
 
-### Large Print (Accessible Edition)
-- **Assigned ISBN:** `9798171397371`
-- **Interior Trim:** 8.5 × 11.0 in (215.9 × 279.4 mm)
-- **Interior Page Count:** Exactly 272 pages
-- **Typography:** 16 pt body text (minimum 1.25× leading) adhering to American Council of the Blind (ACB) large-print standards
-- **Cover Spread Dimensions:** 17.8625 × 11.2500 in
-- **Spine Width:** 0.6125 in (272 pages × 0.002252 in/page)
-- **Barcode Plate:** Vector drawn `#F6F3EC` plate; verified luminance `minLum=241.7`
-- **Back Cover Copy:** Specially tailored for Large Print edition (focuses on accessibility, high legibility, and oversized diagrams; removes the 2-page spread claim)
+## SHA-256 checksums
 
----
+The same list is in `SHA256SUMS` (verify with `sha256sum -c SHA256SUMS` in this folder). It is repeated here because the repository tracks this manifest but not the binary files or `SHA256SUMS`.
 
-## 3. Comprehensive Editorial & Production Audit Resolutions
+```
+9f0aa934021de6a4ab75cf5e3b4a58f8486bc9d9b02e83d5224730034125375f  PAPERBACK/GreatBookOfWorldGames_interior_paperback.pdf
+f5f1a1fd61cccc9917ae280ad5db93d3a2137f84ff3b7d3551d5b6eb055c2815  PAPERBACK/GreatBookOfWorldGames_cover_paperback.pdf
+54bc5448aa2ccb87aab1563ac8bc22ce1f08f77cff4d332f305084efd494041d  HARDCOVER/GreatBookOfWorldGames_interior_hardcover.pdf
+a4ede697b14a6b18c5e37393eeb443966c3f168cad1fb647c346e80dc04a693a  HARDCOVER/GreatBookOfWorldGames_cover_hardcover.pdf
+1ba05c6653e7c2597ba2ffb9250812dd73a83a066aafd24d25308a2cb4aef415  LARGE_PRINT/GreatBookOfWorldGames_interior_largeprint.pdf
+dd14b1645a094a1af870d6cef72a277aeeb5720681e5f2c68f3d8a523647a24d  LARGE_PRINT/GreatBookOfWorldGames_cover_largeprint.pdf
+a560f65f1c8851d73ad4c87f960fe1b98a140cb4f312adb1b72a950cde97a9ea  KINDLE/GreatBookOfWorldGames.epub
+b4d6ceb0f2236cb107f9eb6dd19b4735ecea9d4c1cb9ef15a079aeae98ea9594  KINDLE/GreatBookOfWorldGames_cover_kindle.jpg
+22c9306882bb3650e42e45417023f217c528aeed38457ba40acdc388ddafa023  METADATA/kdp_metadata.json
+f6dd53db58887c7610965d10552c66a2dc2bf3187896769fb6b3ee79ecd80945  METADATA/KDP_UPLOAD_HANDBOOK.md
+ed677c1d44c58ac7e2ff587ad731f310d2fc8dc66a060814a9c7f67d2db06ad4  METADATA/KDP_PREVIEWER_CHECKLIST.md
+c7e1f3c26fe7390f04e5b729214e6efa61ec8cc94644be6c89032972c8a45a2b  METADATA/KDP_AI_DISCLOSURE_NOTES.md
+3d2758389d5ac20b61175728fd364f34c27b1b652867cd8a8c8c3ca75ca8a48d  APLUS/aplus-01-hero-world-of-games.png
+0bb445e8fae2d1ea3c824006ee235faa2784818990a72a6c3fedb9848d0dc1cc  APLUS/aplus-02-cultural-diversity.png
+2dfae992a8671cf3a1bf54e1d86f3edafd86db1a361cb7121b9b563f989235eb  APLUS/aplus-03-how-the-book-works.png
+f0ec090b6d600abe260362ad110089eda41b45a61ba68a28e37ddf09cb0be36a  APLUS/aplus-04-types-of-games-a.png
+a4f746ffb3bfd89c8ef795352731e6777569b5db715db12e91a92cdb47e40f7b  APLUS/aplus-04-types-of-games-b.png
+8cac2c487e3920a00a14e7889b257d4273bd1c9f5c0a367638cabbec838f8a0d  APLUS/aplus-04-types-of-games-c.png
+01f4b97e6ef2418fcd8d6433d0eb9a2805f10548fd0830ab98b04870f9673b08  APLUS/aplus-04-types-of-games-d.png
+c89a0373e94fe9f8bce255f3bee5ced51f24b99590922b5fc8cd1313e61c9ed4  APLUS/aplus-06-complete-collection.png
+d5152e0e03442a12346390a6c00f280eee9be32397171eb683f9ae50acb75094  APLUS/aplus_content.json
+```
 
-| Issue Category | Audit Finding | Production Resolution |
-| :--- | :--- | :--- |
-| **Canon Synchronization** | 56 vs 63 games, 39 vs 45 cultures conflict | Frozen canonical Recovery Edition at **63 games and 45 cultures**. All metadata, front matter, back matter, indexes, and cover wraps synchronized. |
-| **Two-Page Spread Overflows** | Tablut, Patolli, Senet, Seega, Shogi spilling to 4 pages | Precision editorial tightening and typography calibration eliminated all overflows. Every game resides on facing 2-page spreads. |
-| **Front Matter Rhythm** | `pad_to_recto()` created artificial blank pages | Rewrote front matter sequencing in `interior.py`. Front matter now flows seamlessly without unintended blank pages. |
-| **Family Opener Counts** | Sowing (5→10), Race (12→13), Boardless (7→8) counts outdated | Updated family introductions in `frontmatter_text.py` and regenerated front matter data to exact canonical counts. |
-| **Culture Repertoire** | Malay culture missing from index; Ayoayo and E-Sugoroku naming drift | Canonical values updated in source shards (`01_SOURCE/games/`), indexes rebuilt. Exactly 45 unique culture buckets verified. |
-| **Code Leaks** | Setup rule for Ludus Duodecim Scriptorum quoted literal `'firstGame'` | Cleaned rule 3 to natural English: `"see 'Your First Game' below..."`. |
-| **Historical & Sensitive Terminology** | Hus description contained uncontextualized colonial term `"Hottentot"` | Contextualized respectfully as `"Nama (recorded under the colonial designation 'Hottentot')"`. Normalized `4x16` multiplication symbols to Unicode `×`. |
-| **Editorial Attributions** | Royal Game of Ur had defensive prose; Tien Gow had citation paradox | Attributed Ur rules directly to British Museum curator Irving Finkel. Sourced Tien Gow clearly to Stewart Culin (1895). |
-| **Rule & Diagram Consistency** | Pachisi capture rule conflicted with board diagram legend | Updated Pachisi rule 2 to `"The twelve forts are safe from capture..."`, perfectly matching diagram legend. |
-| **Spelling Consistency** | Seega used American spelling `realize` in British English text | Changed to British English `realise`. |
-| **EPUB ISBN & Visual Plates** | Shipped EPUB lacked registered ISBN and 63 hero plates | Embedded `urn:isbn:9786250047040`, added AI disclosure, embedded all 63 full-color hero plates, and included companion download page. |
-| **Cover Barcode Scannability** | Textured dark cover under barcode risked KDP rejection | Created vector-drawn `#F6F3EC` plate with `#B08F4E` hairline rule in `covers.py`. Verified luminance 241.7 across all covers. |
-| **Quality Gates** | Preflight and selftest test suites failing | Updated `validate_structure.py`, `05_TESTS/selftest.py`, and `05_TESTS/package_selftest.py`. **42/42 selftest gates pass; all 14 QA gates green.** |
+## Release notes — recovery edition (2026-09-26) against the edition on sale
 
----
+- All 63 entries rewritten from page-verified sources: numbered rules, draw / blocked / illegal-move answers, a worked turn for every game, editorial rulings marked †, reconstructions boxed.
+- The 21 games the 2026-09-25 audit found unplayable as printed now carry the missing rules (Bao, Hus, Diviyan Keliya, Ludus Duodecim Scriptorum, Pachisi, Patolli, Awithlaknannai, Cat's Cradle and others).
+- Culture labels by one rule: 42 cultures (was printed as 45). Oldest game senet, c. 3100 BC (was 4,600 years).
+- 121 diagrams and 14 full-size boards redrawn from the rules and checked by count; large-print versions.
+- New two-column typography; A–Z index of games and other names; index by culture, age and difficulty; hand-written glossary; bibliography by work; games-kit table; invented-traditions page.
+- Plates: the duplicate Jan-ken plate replaced; object-focused images for the named Indigenous cultures; the AI disclosure printed and counted (52 of 63 plates).
+- Companion pack rebuilt (52 boards, 63 cards); the printed companion page quotes its real counts.
+- Covers: the Founder's artwork with corrected counts; the invented author line removed from the back cover.
+- Page counts: paperback and hardcover 258, large print 498.
 
-## 4. Verification Gate Summary
-
-- **`04_BUILD/validate_structure.py`:** 84/84 tests passed.
-- **`04_BUILD/qa_index.py`:** 31/31 tests passed. Exactly 45 culture buckets.
-- **`04_BUILD/qa_lineedit.py`:** 12/12 tests passed (British spelling, typography, style rules, terminology).
-- **`04_BUILD/interior.py --check`:** Clean interior verified. All spreads start on verso.
-- **`04_BUILD/covers.py --check`:** Clean cover geometry verified. Barcode plate luminance passed.
-- **`04_BUILD/epub.py --check`:** EPUBCheck 5.1.0 passed (0 errors, 0 warnings). 83 documents valid.
-- **`04_BUILD/kdp_preflight.py`:** 30/30 preflight checks passed. Margins, bleed, and fonts compliant.
-- **`04_BUILD/handoff.py --check`:** Clean handoff verified. 0 blocking actions.
-- **`05_TESTS/selftest.py`:** 229/229 checks passed.
-- **`05_TESTS/package_selftest.py`:** 42/42 intentional defect detections passed.
-- **`./04_BUILD/qa_all.sh`:** 100% green exit code 0.

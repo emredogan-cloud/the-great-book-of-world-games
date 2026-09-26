@@ -27,6 +27,8 @@ Denetimler:
   ⑤ baskı eşiği   — çizgi ≥ minStrokePt, glif ≥ minGlyphPt
   ⑥ mürekkep      — yalnız izinli gri seviyeleri (renk YASAK)
   ⑦ yetim dosya   — tanımlayıcısı olmayan SVG yok
+  ⑧ glif          — çizilen her karakter baskı fontunda var
+  ⑨ metin üstünde — hiçbir metin başka bir metnin üstüne basılmamış
 
 Çıkış kodları:  0 = geçti   1 = kapı kırmızı   2 = bağımlılık yok
 """
@@ -117,11 +119,32 @@ def run(root: str, args) -> int:
     ddir = os.path.join(root, "07_ASSETS", "diagrams")
 
     declared = {}
-    for fn in sorted(os.listdir(ddir)):
-        if fn.endswith(".json") and fn != "diagram_language.json":
-            for d in load(os.path.join(ddir, fn)).get("diagrams", []):
-                declared[d["diagramId"]] = d
+    bp = os.path.join(root, "02_MANUSCRIPT", "book.json")
+    specs = []
+    if os.path.exists(bp):
+        specs = [d for g in load(bp).get("games", []) for d in (g.get("diagramSpecs") or [])]
+    if specs:
+        # Since the 2026 recovery the printed diagrams are declared in the manuscript itself
+        # (diagramSpecs, drawn by boards.py into this folder); the phase*_diagrams.json
+        # descriptors describe the retired renderer. Both directions are still enforced below:
+        # no SVG without a declaration, no declaration without its SVG.
+        for d in specs:
+            declared[d["id"]] = d
+    else:
+        for fn in sorted(os.listdir(ddir)):
+            if fn.endswith(".json") and fn != "diagram_language.json":
+                for d in load(os.path.join(ddir, fn)).get("diagrams", []):
+                    declared[d["diagramId"]] = d
 
+    # Every SVG that prints is checked: the paperback/hardcover diagrams, the large-print
+    # diagrams (drawn with 1.5× labels — where a chart once overflowed onto p. 385) and both
+    # sets of full-size templates. Keys are "folder/id".
+    folders = [("diagrams", set(declared))]
+    if specs:
+        folders.append(("diagrams_lp", set(declared)))
+        bmp = os.path.join(root, "02_MANUSCRIPT", "backmatter_book.json")
+        tpl = {t["id"] for t in load(bmp).get("templates", [])} if os.path.exists(bmp) else set()
+        folders += [("templates", tpl), ("templates_lp", tpl)]
     svgs = sorted(f for f in os.listdir(ddir) if f.endswith(".svg"))
     if not svgs:
         # Render edilmiş SVG'ler ÜRETİLİR ve depoda durmazlar (.gitignore).
@@ -130,20 +153,43 @@ def run(root: str, args) -> int:
               "(önce 04_BUILD/render_diagrams.py)")
         return 0
     rep = Report()
+    files = []
+    for folder, ids in folders:
+        fdir = os.path.join(root, "07_ASSETS", folder)
+        have = sorted(f for f in os.listdir(fdir) if f.endswith(".svg")) if os.path.isdir(fdir) else []
+        files += [(folder, fn) for fn in have]
     print("=" * 74)
-    print("  GÖRSEL KAPI · RENDER EDİLMİŞ SVG (%d dosya)" % len(svgs))
+    print("  GÖRSEL KAPI · RENDER EDİLMİŞ SVG (%d dosya · %s)"
+          % (len(files), " · ".join(f for f, _ in folders)))
     print("=" * 74)
 
     # ① sözlük
     print("\n── ① sözlük ──")
     unknown = []
     parsed = {}
-    for fn in svgs:
+    for folder, fn in files:
         try:
-            parsed[fn[:-4]] = sv.parse(os.path.join(ddir, fn))
+            parsed["%s/%s" % (folder, fn[:-4])] = sv.parse(os.path.join(root, "07_ASSETS", folder, fn))
         except sv.UnknownElement as e:
             unknown.append(str(e))
     rep.check(not unknown, "her SVG elemanı bilinen sözlükte" + brief(unknown))
+    declared = {"%s/%s" % (folder, i) for folder, ids in folders for i in ids}
+
+    # the fonts the diagrams are PRINTED in (svg_vector maps family → the book's fonts)
+    try:
+        sys.path.insert(0, HERE)
+        import interior as _I
+        _I.register_fonts()
+        font_files = {k: os.path.join(_I.FONT_DIR, v) for k, v in _I.FONT_FILES.items()}
+
+        def print_font(o):
+            return sv._font_for(o.get("family"), o.get("weight"), o.get("style"), sv.DEFAULT_FONTS)
+    except Exception as exc:  # noqa: BLE001 — no fonts, no honest measurement
+        print("  ⚠ baskı fontları yüklenemedi (%s) — ölçüm Times-Roman ile" % exc)
+        font_files = {}
+
+        def print_font(o):
+            return "Times-Roman"
 
     # ② dil — ÇİZİLMİŞ metin ticari dilde olmak zorundadır
     print("\n── ② dil: çizilmiş metin ticari dilde (EN) ──")
@@ -164,7 +210,7 @@ def run(root: str, args) -> int:
         W, H = d["widthPx"], d["heightPx"]
         for o in d["ops"]:
             if o["op"] == "text":
-                wpx = stringWidth(o["text"], "Times-Roman",
+                wpx = stringWidth(o["text"], print_font(o),
                                   o["size"] * 72.0 / 96.0) * 96.0 / 72.0
                 right = {"start": o["x"] + wpx,
                          "middle": o["x"] + wpx / 2.0,
@@ -244,31 +290,68 @@ def run(root: str, args) -> int:
     # BASILABİLİR olduğunu göstermez.
     print("\n── ⑧ baskı fontunda glif ──")
     missing_glyphs = []
-    fdir = "/usr/share/fonts/truetype/liberation"
-    fpath = os.path.join(fdir, "LiberationSerif-Regular.ttf")
-    if os.path.exists(fpath):
-        try:
-            from PIL import ImageFont
-            fnt = ImageFont.truetype(fpath, 40)
-            seen = set()
-            for did, d in parsed.items():
-                for o in d["ops"]:
-                    if o["op"] != "text":
+    try:
+        from PIL import ImageFont
+        fonts_open, seen = {}, set()
+        for did, d in parsed.items():
+            for o in d["ops"]:
+                if o["op"] != "text":
+                    continue
+                name = print_font(o)
+                path = font_files.get(name)
+                if not path:
+                    continue
+                if name not in fonts_open:
+                    fonts_open[name] = ImageFont.truetype(path, 40)
+                for ch in o["text"]:
+                    if (name, ch) in seen or ch.isspace():
                         continue
-                    for ch in o["text"]:
-                        if ch in seen or ch.isspace():
-                            continue
-                        seen.add(ch)
-                        if fnt.getmask(ch).getbbox() is None:
-                            missing_glyphs.append("%s → %r (U+%04X)"
-                                                  % (did, ch, ord(ch)))
-        except ImportError:
-            print("  ⚠ Pillow yok — glif denetimi ATLANDI")
-    else:
-        print("  ⚠ baskı fontu bulunamadı — glif denetimi ATLANDI")
+                    seen.add((name, ch))
+                    if fonts_open[name].getmask(ch).getbbox() is None:
+                        missing_glyphs.append("%s → %r (U+%04X) · %s" % (did, ch, ord(ch), name))
+        if not font_files:
+            print("  ⚠ baskı fontu bulunamadı — glif denetimi ATLANDI")
+    except ImportError:
+        print("  ⚠ Pillow yok — glif denetimi ATLANDI")
     rep.check(not missing_glyphs,
               "çizilen her karakter baskı fontunda var"
               + brief(sorted(set(missing_glyphs))))
+
+    # ⑨ METİN METNİN ÜSTÜNE BASILMAMIŞ
+    #
+    # GBK-02 (2026-09-26): büyük baskı etiketleri iki kat boyutta çizer; sabit yerleşimli
+    # çizimlerde kelimeler birbirinin üstüne bindi ('1 Heaven2 Earth…' Tien Gow'da, Conkers'ta)
+    # ve Alquerque'de bir 'next' etiketi sütun harfinin üstüne basıldı. ③ yalnızca tuvalin
+    # KENARINA bakıyordu; iki metnin çakışmasını hiçbir denetim görmüyordu.
+    # Kutu glife duyarlıdır (Source Sans 3 büyük harf yüksekliği 0,66 em): büyük harf, rakam
+    # ya da yükselen harf varsa 0,72 em, yoksa x-yüksekliği 0,49 em; alt uzantı yalnız
+    # g j p q y ve parantezde 0,23 em. İki kutu HER İKİ yönde 0,15 mm'den fazla kesişirse
+    # metin metnin üstündedir — birbirine değen iki etiket bu denetimi geçer.
+    print("\n── ⑨ metin metnin üstünde değil ──")
+    tall = re.compile(r"[A-Z0-9bdfhklt'\"()/\[\]{}!?&%$#@|’‘“”]")
+    desc = re.compile(r"[gjpqy(),;\[\]{}|Q]")
+
+    def tbox(o):
+        em = o["size"]
+        wpx = stringWidth(o["text"], print_font(o), em * 72.0 / 96.0) * 96.0 / 72.0
+        x0 = {"start": o["x"], "middle": o["x"] - wpx / 2.0, "end": o["x"] - wpx}[o["anchor"]]
+        top = (0.72 if tall.search(o["text"]) else 0.49) * em
+        bot = (0.23 if desc.search(o["text"]) else 0.01) * em
+        return x0, o["y"] - top, x0 + wpx, o["y"] + bot
+
+    near = 0.15 * sv.PX_PER_MM
+    on_text = []
+    for did, d in parsed.items():
+        T = [o for o in d["ops"] if o["op"] == "text" and o["text"].strip()]
+        B = [tbox(o) for o in T]
+        for i in range(len(T)):
+            for j in range(i + 1, len(T)):
+                a, b = B[i], B[j]
+                if (min(a[2], b[2]) - max(a[0], b[0]) > near
+                        and min(a[3], b[3]) - max(a[1], b[1]) > near):
+                    on_text.append("%s → %r × %r" % (did, T[i]["text"][:20], T[j]["text"][:20]))
+    rep.check(not on_text,
+              "hiçbir metin başka bir metnin üstüne basılmamış" + brief(on_text))
 
     # ⑦ yetim dosya
     print("\n── ⑦ yetim dosya ──")
@@ -278,7 +361,7 @@ def run(root: str, args) -> int:
     missing = sorted(set(declared) - set(parsed))
     rep.check(not missing, "her tanımlayıcı render edilmiş" + brief(missing))
 
-    rep.facts["svgFiles"] = len(svgs)
+    rep.facts["svgFiles"] = len(files)
     rep.facts["declared"] = len(declared)
 
     print("\n" + "=" * 74)
@@ -287,7 +370,7 @@ def run(root: str, args) -> int:
         for f in rep.fail:
             print("     · %s" % f)
     else:
-        print("  ✅ %d denetim yeşil · %d SVG basıma hazır" % (rep.n, len(svgs)))
+        print("  ✅ %d denetim yeşil · %d SVG basıma hazır" % (rep.n, len(files)))
     print("=" * 74)
 
     if args.json:

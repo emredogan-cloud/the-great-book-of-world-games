@@ -24,7 +24,7 @@
     "Denetleyen: 04_BUILD/validate_research.py"
   ],
   "version": "1.0",
-  "phase": "phase6",
+  "phase": "phase6 + gbk02-recovery-2026-09-26",
   "scope": "pilot-12 + phase3-calibration-8 + phase4-batch-1 + phase4-batch-2 + phase5-amendment-K23 + phase5-source-investigation + phase5-batch-1 + phase5-batch2-investigation + phase5-batch-2 + phase5-batch-3 + phase5-batch7-founder-delivery",
   "records": [
     {
@@ -190,13 +190,14 @@
     {
       "gameId": "royal-game-of-ur",
       "sourceRef": "Finkel, Irving L., 'On the Rules for the Royal Game of Ur', in I. L. Finkel (ed.), Ancient Board Games in Perspective (London: British Museum Press, 2007), pp. 16–32",
-      "edition": "2007",
-      "locator": "—",
-      "supportingPassage": "",
-      "supportedClaim": "DOĞRULANAMADI: eser telif altındadır. Oyunun kural yeniden kurgulaması MÖ 177 tarihli çivi yazısı tablet (BM 33333b) okumasına dayanır ve bu okuma yalnızca Finkel'in metnindedir. British Museum çevrimiçi nesne kaydına erişim de reddedildi (HTTP 403). Rozet karelerin işlevi — yeniden atış mı, güvenli kare mi — bu yüzden AÇIK bir sorudur ve kayıtta öyle durur.",
-      "verifiedOn": "2026-08-13",
-      "accessMethod": "telif altında; britishmuseum.org — HTTP 403",
-      "status": "blocked"
+      "edition": "2007 — yayıncının dizgi PDF'i (British Museum Press)",
+      "locator": "ss. 16–17 (tablet BM 33333B, MÖ 177–176); s. 23 (rozet karesi: yakalanmazlık); s. 27 (rota için kanıt yok; önerilen kurallar 6–8)",
+      "supportingPassage": "In Babylon, on 3 November, 177–176 bc, the Babylonian scribe Itti-Marduk-balatu completed the careful writing of a most unusual cuneiform tablet that included a grid on one side and two columns of closely-written text on the other […]. Rosette Square: immunity from capture […]. It may be proposed that the route is that represented in Fig. 3.5, although it must be clearly stated that there is no evidence on the point. […] 7 Pieces on a rosette square are safe from being knocked off. […] 8 Exact throws are needed to move the pieces off the end.",
+      "supportedClaim": "Kural tableti MÖ 177–176 tarihlidir (BM 33333B); rozet karesi yakalanmaya karşı korur; rakip taşa konmak onu başa gönderir, çıkış için tam atış gerekir — bunlar Finkel'in ÖNERİLERİDİR; rota için kanıt YOKTUR. Maddede rota, geri gönderme ve tam çıkış bu yüzden † ile işaretlidir.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "PDF — csclub.uwaterloo.ca/~pbarfuss/On_the_Rules_for_the_Royal_Game_of_Ur.pdf (üçüncü tarafın barındırdığı yayıncı dizgisi; eser telif altındadır, kayıt yalnızca doğrulama için kısa alıntı taşır)",
+      "status": "verified",
+      "note": "2026-08-13'te 'blocked' idi (telif; britishmuseum.org HTTP 403). Metin 2026-09-26'da yukarıdaki kopyadan okundu; sayfa numaraları dizginin kendi sayfa altlıklarından alındı."
     },
     {
       "gameId": "mahjong",
@@ -211,14 +212,15 @@
     },
     {
       "gameId": "astragaloi",
-      "sourceRef": "Pollux, Julius, Onomasticon, Book IX",
-      "edition": "—",
-      "locator": "—",
-      "supportingPassage": "",
-      "supportedClaim": "DOĞRULANAMADI: eserin denetlenebilir bir modern edisyonuna (Bethe, Leipzig 1900–1937) açık erişimli tam metin üzerinden ulaşılamadı; Yunanca metin ve satır numarası olmadan bir locator verilemez. Aşık kemiği puan değerlerinin (Venüs, köpek) kaynaklar arasında değiştiği Faz 1'de zaten kayıtlıdır ve bu doğrulama o belirsizliği kapatamamıştır.",
-      "verifiedOn": "2026-08-13",
-      "accessMethod": "açık erişimli denetlenebilir edisyon bulunamadı",
-      "status": "blocked"
+      "sourceRef": "Pollux, Julius, Onomasticon, ed. Erich Bethe, Pollucis Onomasticon, vol. II (Leipzig: Teubner, 1931)",
+      "edition": "Bethe II (1931), Toronto Üniversitesi nüshası — archive.org pollucisonomasti02polluoft",
+      "locator": "IX 95, s. 174; IX 100, s. 175; IX 117, s. 179 (s. 175 = yaprak 187, sayfa haritasıyla doğrulandı)",
+      "supportingPassage": "[IX 95] ἔπαιζον τὴν πλειστοβολίνδα καλουμένην παιδιάν· ὁ δ᾽ ὑπερβαλλόμενος τῷ πλήθει τῶν μονάδων ἔμελλεν ἀναιρήσεσθαι τὸ ἐπιδιακείμενον ἀργύριον. […] [IX 100] καὶ τὸ μὲν μονάδα δηλοῦν καλεῖται κύων […] δυὰς δὲ καὶ πεντὰς ἐν ἀστραγάλοις, ὥσπερ ἐν κύβοις, οὐκ ἔστιν. […] εἰ τετταράκοντα συνήθροιζεν ἀστραγάλων βολή, τὸν ἀριθμὸν τοῦτον Εὐριπίδην ὠνόμαζον. […] [IX 117] ἡ δὲ πλειστοβολίνδα, οὐ μόνον ἡ διὰ τῶν κύβων ἀλλὰ καὶ ἡ διὰ τῶν ἀστραγάλων, ἐπὶ τῷ πλεῖστον ἀριθμὸν βαλεῖν.",
+      "supportedClaim": "Pleistobolinda: en yüksek toplamı atan kazanır ve ortadaki parayı alır; zarla OLDUĞU KADAR aşık kemiğiyle de oynanır. Aşıkta 1'i gösteren yüze 'köpek' denir; aşıkta, zardaki gibi 2 ve 5 yoktur; 40 eden atışın adı 'Euripides'tir. Dört kemik, turlar, puanla sayım, 30 hedefi ve eşitlik kuralları kitabın † hükümleridir.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin + sayfa görüntüleri — kamusal alan",
+      "status": "verified",
+      "note": "2026-08-13'te 'blocked' idi (denetlenebilir edisyon bulunamadı). Bethe'nin Teubner edisyonu archive.org'da bulundu. Yunanca metin OCR'dan alındı; aksan ve harf hataları düzeltildi, satır işaretleri atıldı."
     },
     {
       "gameId": "mbube-mbube",
@@ -575,16 +577,16 @@
     },
     {
       "gameId": "tien-gow",
-      "sourceRef": "Culin, Stewart, Chinese Games with Dice and Dominoes (Washington, 1895)",
-      "edition": "archive.org chinesegameswith01culi",
-      "locator": "ARANDI — 'tien kow' başlığı bulunamadı",
-      "supportingPassage": "",
-      "supportedClaim": "YOK. Culin 1895 Korean Games § LXXXI 'Kol-hpai' KORE dominolarıdır; Çin dominoları karşılaştırma notudur. Ayrı basılan Chinese Games with Dice and Dominoes indirildi ve tien-gow başlığı bulunamadı.",
-      "verifiedOn": null,
+      "sourceRef": "Culin, Stewart, 'Chinese Games with Dice and Dominoes', Report of the United States National Museum for 1893 (Washington: Government Printing Office, 1895), pp. 489–537",
+      "edition": "archive.org chinesegameswith01culi — kamusal alan",
+      "locator": "'Tá t'in kau', ss. 514–515; takımlar ve sıraları ss. 510–511, lv. 5",
+      "supportingPassage": "The 11 pieces that are duplicated are paired with their doubles, and form a series or suite, to which they give the name of man, 'civil,' while the remaining 10 pieces are paired with each other, in accordance with the sum of their spots, and form a suite called mo, 'military.' […] Tá t'in kau, 'to play heavens and nines,' […] is the best and most highly developed of the Chinese games with dominoes. It is played by 4 persons with 1 set of dominoes. The 32 pieces are arranged face down in a stack 4 high to form 8 piles of 4 pieces each. One of the players throws 2 dice, and counts around to determine who shall be the first player. […] The first player leads by placing 1, 2, 3, or 4 pieces face up on the table. […] The other players follow from right to left, by playing as many pieces as are led, putting them on top of those on the table if they are higher, or beneath if they are lower than those already played. They are not required to follow suit. The winner leads again, and the game is continued until all the dominoes have been played.",
+      "supportedClaim": "Dört oyuncu; 32 taşlık tek takım, 4 katlı 8 yığın; iki zar atılıp sayılarak ilk oyuncu belirlenir; sivil (man, 11 çift) ve askerî (mo, 10 taş) diziler ve sıraları; ilk oyuncu 1–4 taş açar; tek, çift ve karşılık gelen çiftlerin birleşimi; diğerleri aynı sayıda taş oynar, yüksekse üste, değilse alta koyar; renge uyma zorunlu değildir; eli alan yeniden açar. Maddenin puanlaması ve oyun sayısı kitabın † hükümleridir.",
+      "verifiedOn": "2026-09-26",
       "attemptedOn": "2026-08-14",
-      "accessMethod": "archive.org tam metin × 2 eser",
-      "status": "pending",
-      "note": "KİMLİK TUZAĞI riski: Kanton oyununu Kore bölümünden yazmak Totolospi hatasıdır."
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "KİMLİK TUZAĞI riski: Kanton oyununu Kore bölümünden yazmak Totolospi hatasıdır. — 2026-08-14 araması 'tien kow' başlığını bulamamıştı: Culin oyunu Kantonca adıyla, 'Tá t'in kau' başlığı altında verir. Sayfa 2026-09-26'da okundu. OCR hataları düzeltildi; başka değişiklik yok."
     },
     {
       "gameId": "patolli",
@@ -951,6 +953,170 @@
       "supportedClaim": "3x12 board, fifteen men per player, three dice, explicit backgammon-family classification by Murray himself, the Timgad/Ostia archaeological boards, and the Claudius/Suetonius anecdote. Exact move/bear-off procedure is explicitly NOT supported by this or any source Murray cites — recorded as reconstructed in the manuscript entry, not claimed as attested.",
       "verifiedOn": "2026-09-15",
       "accessMethod": "06_FOUNDER_DELIVERY/619290767-A-History-of-Board-games-Other-Than-Chess.pdf (Internet Archive scan, already present in this repository) — read directly with pdftotext -raw/-layout; plain pdftotext without flags garbles this file's text layer, which is why it was previously logged BLOCKED",
+      "status": "verified"
+    },
+    {
+      "gameId": "jianzi",
+      "sourceRef": "Hutson, James, Chinese Life in the Tibetan Foothills (Shanghai: Far Eastern Geographical Establishment, 1921)",
+      "edition": "Cornell University Library nüshası — archive.org cu31924023502804 (no known US copyright restrictions)",
+      "locator": "s. 47",
+      "supportingPassage": "The shuttle-cock in the game t'i chien-tzu is a brass cash with a few feathers attached; it is kept in the air by using the side of the foot for a battledore. Experts turn round once after each kick.",
+      "supportedClaim": "Han Çinlisi biçimi: t'i chien-tzu; top, birkaç tüy takılmış pirinç bir sikkedir ve ayağın yan yüzüyle havada tutulur. Maddenin malzeme tarifi ve temel vuruş kuralı buna dayanır. Sayma oyunu ve çember oyununun puan ve eleme kuralları kitabın † hükümleridir.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified"
+    },
+    {
+      "gameId": "jianzi",
+      "sourceRef": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
+      "edition": "Cornell nüshası — archive.org cu31924023272424",
+      "locator": "§ XXXIII 'Tjye-ki tcha-ki — Shuttlecock Kicking', s. 43, şek. 66 (Kanton biçimi)",
+      "supportingPassage": "The Chinese laborers in the United States, who come from Kwangtung, […] played, however, a kind of shuttlecock with their feet, similar to Tjye-ki. Their shuttlecock, called Kai mò in, 'Chicken-feather swallow,' […] consists of several pieces of snake-skin, about one inch and a half in diameter, weighted with a Chinese 'cash' or coin, with several feathers stuck in the top. Playing the game is called T'ek in, 'Kicking the shuttlecock.'",
+      "supportedClaim": "Kanton (Han Çinlisi) biçimi: sikkeyle ağırlaştırılmış tüylü top, ayakla oynanır; oyunun adı T'ek in. 2026-08-14 kaydının 'Culin yalnızca Kore ve Japon biçimlerini veriyor' tespiti ss. 39–41 için geçerliydi; s. 43 Çin biçimini verir.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "OCR hataları düzeltildi; başka değişiklik yok."
+    },
+    {
+      "gameId": "gomoku",
+      "sourceRef": "Bell, R. C., Board and Table Games from Many Civilizations, 2nd ed. (London: Oxford University Press, 1969)",
+      "edition": "1969 (2. baskı), Seattle Public Library nüshası — archive.org boardtablegamesf0000rcbe",
+      "locator": "'Five-in-a-row games: Go-moku', s. 96, şek. 83",
+      "supportingPassage": "This Japanese game is played chiefly by children, women and Occidental visitors. It is a poor relation of the intellectual I-go […]. Go-moku is played on the I-go board of 18 × 18 squares and each player has 100 counters of his own colour. They are placed one at a time in alternate turns of play on the points of the board. The object of the game is to form a contiguous line of five pieces on a row, column, or diagonally; this formation winning the game. If all the counters are used up before a five is formed the game may be drawn.",
+      "supportedClaim": "Japon oyunu; go tahtasının noktalarına sırayla birer taş konur; satır, sütun ya da çaprazda beşli kazanır; taşlar biter ve beşli yoksa oyun berabere sayılabilir.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin",
+      "status": "verified"
+    },
+    {
+      "gameId": "gomoku",
+      "sourceRef": "Allis, L. V., H. J. van den Herik and M. P. H. Huntjens, 'Go-Moku Solved by New Search Techniques', in Games: Planning and Learning, AAAI Technical Report FS-93-02 (Menlo Park: AAAI Press, 1993)",
+      "edition": "AAAI FS-93-02, makale 001 — cdn.aaai.org/Symposia/Fall/1993/FS-93-02/FS93-02-001.pdf",
+      "locator": "§ 1–2 (kurallar ve beş varyant); § 7 (çözüm)",
+      "supportingPassage": "Two players, Black and White, move in turn by placing a stone of their own color on an empty intersection, henceforth called a square. Black starts the game. The player who first makes a line of five consecutive stones of his color (horizontally, vertically or diagonally) wins the game. The stones once placed on the board during the game never move again nor can they be captured. If the board is completely filled, and no one has five-in-a-row, the game is drawn. […] In the early days the game was played on a 19×19 board, since Go boards have that size. […] Black plays his first move usually at the center square […]. We illustrate our search techniques with the non-restricted variant of Go-Moku: an overline is allowed and sufficient to win, for either player.",
+      "supportedClaim": "15 × 15 tahta (yatay çizgiler 1–15); Siyah başlar, ilk taş genellikle merkeze; taşlar hiç hareket etmez ve alınmaz; yatay, dikey ya da çapraz beşli kazanır; tahta dolar ve beşli yoksa beraberlik; eski 19 × 19 biçimi; altılı ve daha uzun dizinin de kazandığı kısıtsız biçim.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "AAAI açık erişim PDF",
+      "status": "verified",
+      "note": "OCR hataları düzeltildi; başka değişiklik yok."
+    },
+    {
+      "gameId": "bao-la-kiswahili",
+      "sourceRef": "Donkers, H. H. L. M., Nosce Hostem: Searching with Opponent Models (PhD thesis, Universiteit Maastricht, 2003)",
+      "edition": "2003 tez PDF'i (yazarın cs.unimaas.nl sayfası, Wayback 2004-04-10 kopyası)",
+      "locator": "Ek C 'Zanzibar Bao Rules for the Computer', ss. 163–168 (tahta s. 163; kural 1.9, 2.1–2.2 s. 165; 2.3–2.4 s. 166; 3.1–3.3 s. 167)",
+      "supportingPassage": "These rules are based on De Voogt's (1995) thesis. […] It is played by two persons on a board with four rows of eight pits or holes […]. The fifth pit from the left (in perspective of the player) on each front row is shaped differently and is called the nyumba or house. […] Bao is played with 64 equal counters (seeds, stones, or kete). […] rule 1.9: Stages. There are two stages in bao: namua and mtaji. […] rule 2.1: […] there are six stones in South's nyumba and two stones in the hole to the right of the nyumba and again two stones in the next hole to the right. […] Each player has 22 stones in store. The first player is South. […] 2.3b: If a player can capture, he must do so. rule 2.4: Takasa in namua stage. If a player cannot capture, he must takasa. […] rule 3.3: […] If both rows of a player only contain holes with zero or one stones, this player loses the game.",
+      "supportedClaim": "Dört sıra × sekiz çukur; nyumba (ön sırada soldan beşinci çukur), kichwa ve kimbi adları; 64 taş; iki aşama (namua ve mtaji); başlangıç (nyumba'da 6, sağındaki iki çukurda 2'şer taş) ve elde 22 taş; South başlar; yakalama zorunludur; yakalama yoksa takasa; mtaji'de iki sırasında da yalnızca 0 ya da 1 taşlı çukur kalan oyuncu kaybeder.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "açık erişimli tez PDF'i (yazarın kendi dağıtımı, web.archive.org üzerinden)",
+      "status": "verified",
+      "note": "de Voogt 1997 kaydı 'blocked' olarak kalır: o eser hâlâ açık değildir. Donkers kuralları de Voogt'un 1995 tezinden aldığını açıkça yazar; de Voogt 1995 ilk elden görülmedi ve maddede de öyle yazılıdır."
+    },
+    {
+      "gameId": "sugoroku",
+      "sourceRef": "Culin, Stewart, 'Chinese Games with Dice and Dominoes', Report of the United States National Museum for 1893 (Washington: Government Printing Office, 1895), pp. 489–537",
+      "edition": "archive.org chinesegameswith01culi — kamusal alan",
+      "locator": "'Sugoroku', ss. 502–504, şek. 11",
+      "supportingPassage": "The name of sugoroku is applied at the present day in Japan to various games played upon boards or diagrams, in which the moves are made by throwing dice. Of these there are many kinds, among which the most popular is called dō chū, or 'traveling' sugoroku. It is played upon a large sheet of paper, on which are represented the various stopping places upon a journey; as, for example, the 53 post stations between Tokio and Kiyoto […]. Such games are much played by the Japanese at the season of the New Year, when new ones are usually published.",
+      "supportedClaim": "Sugoroku adı Japonya'da zarla oynanan birçok tahta ya da şema oyununa verilir; en yaygını 'yolculuk' (dō chū) sugorokusudur: büyük bir kâğıtta bir yolculuğun durakları, örneğin Tokyo–Kyoto arasındaki 53 posta istasyonu; Yeni Yıl'da oynanır ve yenileri o zaman basılır. Maddenin kendi tahtası (Tōkaidō istasyonları, dört resimli kare, tam çıkış) kitabın † tasarımıdır.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "OCR hataları düzeltildi; başka değişiklik yok."
+    },
+    {
+      "gameId": "sugoroku",
+      "sourceRef": "Culin, Stewart, 'Chess and Playing-Cards', Report of the United States National Museum for 1896 (Washington: Government Printing Office, 1898)",
+      "edition": "archive.org chessplayingcard00culi — kamusal alan",
+      "locator": "kat. no. 28 'Sugoroku', s. 841",
+      "supportingPassage": "A common game with Japanese children, usually played at the New Year. The diagram or board, which is printed in colors, is divided into a number of divisions distinguished by pictures. One of the most popular forms is called dō chū, or 'traveling' sugoroku, and is played upon a large sheet of paper on which are represented the various stopping places on a journey. The moves are made according to the throws with one or more dice, or with a teetotum (Japanese koma). […] New games are published in Japan at each recurring New Year.",
+      "supportedClaim": "Renkli basılmış, resimli bölmelere ayrılmış tahta; yolculuk biçimi; bir ya da daha çok zar veya topaç (koma) ile ilerleme; Yeni Yıl oyunu ve her Yeni Yıl basılan yeni oyunlar.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "OCR hataları düzeltildi; başka değişiklik yok."
+    },
+    {
+      "gameId": "mbube-mbube",
+      "sourceRef": "Mosley, Jenny, Pocket Playground Games from around the World, vol. 1, Africa & Asia (Trowbridge: Positive Press, 2015)",
+      "edition": "2015 — yayıncının yayımladığı PDF",
+      "locator": "'South Africa — Mbube, Mbube', s. 29",
+      "supportingPassage": "'Mbube' (mboo-bay) is a Zulu word for lion. […] Number of players: 12 or more. What you need: 2 blindfolds. […] The lion and buck wear blindfolds and stand on opposite sides of the circle. […] They chant slowly when the lion and buck are on opposite sides of the circle, but the chanting gets faster and faster as the lion gets nearer the buck.",
+      "supportedClaim": "Güney Afrika; mbube Zuluca 'aslan'; 12 ya da daha çok oyuncu, 2 göz bağı; çember; aslan ve impala gözleri bağlı, karşılıklı durur; tezahürat aslan yaklaştıkça hızlanır, impala uzaklaşınca yavaşlar; belirli bir süre, sonra oyuncular değişir.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "yayıncı PDF'i — eser telif altındadır; kayıt yalnızca kısa alıntı taşır",
+      "status": "verified",
+      "note": "TEK KAYNAK. 'İkinci bağımsız kaynak gerekiyor' kaydı hâlâ açıktır: bu kayıt ilk kaynağı sayfa düzeyinde doğrular, ikinci kaynağın yerini tutmaz. Zaslavsky 1973 kaydı 'blocked' olarak kalır."
+    },
+    {
+      "gameId": "achi",
+      "sourceRef": "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+      "edition": "1952 — archive.org historyofboardga0000murr_p4b9",
+      "locator": "§ 3.4 'Five (or six) men's morris', s. 42; § 3.4.4 'Gold Coast: Achi or Ati', s. 43",
+      "supportingPassage": "FIVE (OR SIX) MEN'S MORRIS. Played on board E. Two players, each with five (or six) men in hand. The men are entered, one at a time, in alternate turns of play, each player endeavouring to form a row along one of the marked lines of the board. Every time a player succeeds in making a row, he takes one of his opponent's men, choosing any man that he likes, and removes it from the board. When all the men are entered, the game proceeds by alternate moves in which a man can be moved one step along any line through the point on which it stands to a neighbouring empty point. The player whose men are reduced to two, loses. […] Today it only survives in West Africa, where, in addition to the normal method of capture, a player who secures two men on any line connecting corresponding points on both squares takes one of his opponent's men. […] 3.4.4. Gold Coast: Achi or Ati; Nigeria (Yoruba tribe): Akidada […]. On the second occasion he learnt the rules of the game as given above.",
+      "supportedClaim": "Sırayla yerleştirme; sıra kuran oyuncu rakibin dilediği taşını alır; tüm taşlar girince çizgi boyunca komşu boş noktaya tek adım; taşı ikiye düşen kaybeder; Batı Afrika'ya özgü ek yakalama (iki kareyi birleştiren çizginin iki ucunu tutmak); Achi/Ati adıyla Gold Coast'ta altışar çubukla oynandığı ve kuralların 'yukarıdaki gibi' öğrenildiği.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin",
+      "status": "verified",
+      "note": "OCR hataları düzeltildi; başka değişiklik yok."
+    },
+    {
+      "gameId": "polis",
+      "sourceRef": "Pollux, Julius, Onomasticon, ed. Erich Bethe, Pollucis Onomasticon, vol. II (Leipzig: Teubner, 1931)",
+      "edition": "Bethe II (1931), Toronto Üniversitesi nüshası — archive.org pollucisonomasti02polluoft",
+      "locator": "IX 98, s. 175 (yaprak 187, sayfa haritasıyla doğrulandı)",
+      "supportingPassage": "ἡ δὲ διὰ πολλῶν ψήφων παιδιὰ πλινθίον ἐστί, χώρας ἐν γραμμαῖς ἔχον διακειμένας· καὶ τὸ μὲν πλινθίον καλεῖται πόλις, τῶν δὲ ψήφων ἑκάστη κύων· διῃρημένων δὲ εἰς δύο τῶν ψήφων κατὰ τὰς χρόας, ἡ τέχνη τῆς παιδιᾶς ἐστὶ περιλήψει δύο ψήφων ὁμοχρόων τὴν ἑτερόχρων ἀνελεῖν […] καὶ κύνα καὶ πόλιν, ἣν παίζουσιν.",
+      "supportedClaim": "Çok taşlı oyun: çizgiler arasında boşluklar bulunan tahta, adı 'polis' (şehir); her taş 'kyōn' (köpek); taşlar iki renge ayrılır; oyunun ustalığı, karşı renkten bir taşı aynı renkten iki taşın arasına alarak kaldırmaktır; Kratinos alıntısı ('köpeği ve şehri, oynadıkları'). Tahta boyutu, taş sayısı ve diğer tüm kurallar kaynakta YOKTUR.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin + sayfa görüntüleri — kamusal alan",
+      "status": "verified",
+      "note": "Yunanca metin OCR'dan alındı; aksan ve harf hataları düzeltildi, satır işaretleri atıldı."
+    },
+    {
+      "gameId": "polis",
+      "sourceRef": "Bell, R. C., Board and Table Games from Many Civilizations, 2nd ed. (London: Oxford University Press, 1969)",
+      "edition": "1969 (2. baskı), Seattle Public Library nüshası — archive.org boardtablegamesf0000rcbe",
+      "locator": "'Ludus Latrunculorum', ss. 84–87 (önerilen kurallar ss. 86–87)",
+      "supportingPassage": "In a Richborough find there was a board of 8 × 8 squares with eighteen flat discs […]. Many other boards have been found in Roman sites in Britain. They are usually marked with 7 × 8, 8 × 8, or 9 × 10 squares. […] Suggested Rules for Ludus Latrunculorum 1. Using an 8 × 7 board each player has 16 pieces. They are placed two at a time by alternate turns of play anywhere on the board. During this first phase no captures are made. […] 3. A capture is made by trapping an enemy piece between two of one's own pieces on rank or file. […] 6. A piece may move between two enemy pieces without being captured. 7. The game continues until one player has lost all his pieces, or a blockade has developed which neither player can break. The player with most pieces left on the board then wins.",
+      "supportedClaim": "Bell'in önerdiği kurallar: 16'şar taş, ikişer ikişer yerleştirme, bu evrede yakalama yok; sıra ya da sütunda iki taş arasına alarak yakalama; iki düşman arasına güvenli giriş; tüm taşların kaybı ya da kilitlenmeyle bitiş, çok taşı kalan kazanır. Bell'in önerdiği tahta 8 × 7'dir; 8 × 8 Richborough buluntusunun boyutudur.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin",
+      "status": "verified",
+      "note": "Bu doğrulamada maddenin 'tahta boyutu Bell'in önerdiği kurallardan' ifadesi YANLIŞ bulundu (Bell 8 × 7 der) ve 2026-09-26'da düzeltildi: 8 × 8, Bell'in bildirdiği Richborough tahtasının boyutu olarak gösterilir."
+    },
+    {
+      "gameId": "senet",
+      "sourceRef": "Piccione, Peter A., 'In Search of the Meaning of Senet', Archaeology 33, no. 4 (July/August 1980), pp. 55–58",
+      "edition": "yazarın kendi PDF'i (makale metni; derginin sayfa ayrımını vermez)",
+      "locator": "ss. 55–58 (makalenin tamamı)",
+      "supportingPassage": "Called senet or 'passing,' the game was based on the movement of draughtsmen across a board consisting of 30 squares arranged into three parallel rows of ten squares each. […] The 'House of Repeating Life' - square 15 at the middle of the board […]; senet players falling on this square drew an extra turn. A pitfall, square 16 was called the 'House of Netting' and meant a loss of turn. […] In contrast, the 'House of Rejuvenation,' square 26, brought a free turn and was always desirable. […] Square 27 depicted the 'Waters of Chaos' […]; square 27 was the ultimate senet pitfall.",
+      "supportedClaim": "Üç sıra onar kare, 30 kare; 15 ek atış, 16 sıra kaybı, 26 ek atış, 27 taşın kaybı. Çubukların sayımı, kimin başladığı, geçme ve çarpma kuralları kitabın † hükümleridir.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "yazarın ders sitesinde yayımladığı PDF — eser telif altındadır; kayıt yalnızca kısa alıntı taşır",
+      "status": "verified"
+    },
+    {
+      "gameId": "morra",
+      "sourceRef": "Culin, Stewart, Korean Games, with Notes on the Corresponding Games of China and Japan (Philadelphia: University of Pennsylvania, 1895)",
+      "edition": "Cornell nüshası — archive.org cu31924023272424",
+      "locator": "'Hand-clapping' bölümü, Satsuma Ken, s. 46, şek. 67",
+      "supportingPassage": "Another popular game of Ken is Satsuma Ken (Fig. 67). The players extend the fingers of one or both hands simultaneously, and at the same time endeavor to guess the number put out by the others, crying the number aloud. They use Chinese words in this game […]. This game is the same as the common Chinese game of guessing the fingers […], and its Chinese origin in Japan is confirmed by its other common Japanese name of Tojin Ken, or 'Chinese Ken.'",
+      "supportedClaim": "Parmak tahmini oyununun Japonya'daki biçimi (Satsuma ken / Tōjin ken): oyuncular aynı anda parmak açar ve toplamı yüksek sesle tahmin eder; sayılar Çince söylenir; oyun Çin'in parmak tahmini oyunuyla aynıdır. Maddedeki karşılaştırma notu buna dayanır; kuralların kendisi Treccani kaydına.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "archive.org tam metin — kamusal alan",
+      "status": "verified",
+      "note": "OCR hataları düzeltildi; başka değişiklik yok."
+    },
+    {
+      "gameId": "morra",
+      "sourceRef": "Vocabolario Treccani (Roma: Istituto della Enciclopedia Italiana), online edition",
+      "edition": "çevrim içi sözlük — https://www.treccani.it/vocabolario/morra/",
+      "locator": "s.v. 'mòrra'",
+      "supportingPassage": "mòrra (o mòra) s. f. [etimo incerto]. – Antichissimo gioco popolare italiano […], proibito dalla legge in quanto gioco d'azzardo, in cui due persone abbassano contemporaneamente il pugno destro distendendo velocemente uno o più dita, o anche nessuno, e cercando, nel medesimo tempo, di prevedere, enunciandolo a voce alta, il numero complessivo delle dita distese da entrambi i giocatori (l'espressione «morra!» oppure «tutta!» indica il dieci): si segna un punto a favore di chi ha indovinato, e vince chi per primo raggiunge i punti stabiliti.",
+      "supportedClaim": "Adın kökeni belirsiz; çok eski bir İtalyan halk oyunu, kumar sayıldığı için yasayla yasak; iki oyuncu sağ yumruğu aynı anda indirir, sıfırdan beşe parmak açar ve iki elin toplamını yüksek sesle tahmin eder; 'morra!' ya da 'tutta!' ona demektir; doğru tahmin bir puan alır; belirlenen puana ilk ulaşan kazanır. İkisinin birden ya da hiçbirinin bilemediği durum ve geç söylenen tahmin kitabın † hükümleridir.",
+      "verifiedOn": "2026-09-26",
+      "accessMethod": "treccani.it çevrim içi — sayfa 2026-09-26'da açıldı ve kaydedildi",
       "status": "verified"
     }
   ]

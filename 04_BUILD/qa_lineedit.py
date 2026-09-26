@@ -53,7 +53,8 @@ SPELLING = [
     (r"\btowards?\b", None, "OK"),
 ]
 SPELLING_ALLOW = {"size", "sizes", "sized", "prize", "prizes", "seize",
-                  "seizes", "capsize", "maize", "bronze", "dozen"}
+                  "seizes", "capsize", "maize", "bronze", "dozen",
+                  "belize"}                 # proper noun (the country), not an -ize verb
 
 FORBIDDEN_PATTERNS = [
     (r"not only\b.{0,60}\bbut also\b", "STYLE § 4 — 'not only … but also'"),
@@ -166,15 +167,24 @@ def run(root: str, args) -> int:
     for g in games:
         for k, v in texts(g):
             corpus.append((g["gameId"], k, v))
+    def variants(x):
+        # edition-aware front matter: {"print": …, "largeprint": …, "kindle": …} — every
+        # edition's wording is proofread, not only one of them
+        if isinstance(x, dict) and not ({"heading", "text"} & set(x)):
+            return [(":" + k, v) for k, v in x.items() if not k.startswith("$") and v]
+        return [("", x)]
+
     if fm:
         for sec in fm["sections"]:
             for i, p in enumerate(sec.get("paragraphs", [])):
-                corpus.append(("front:" + sec["id"], "p%d" % (i + 1), p))
+                for sfx, v in variants(p):
+                    corpus.append(("front:" + sec["id"], "p%d%s" % (i + 1, sfx), v))
             for i, sub in enumerate(sec.get("sections", [])):
-                corpus.append(("front:" + sec["id"], "h%d" % (i + 1),
-                               sub["heading"]))
-                corpus.append(("front:" + sec["id"], "t%d" % (i + 1),
-                               sub["text"]))
+                for sfx, v in variants(sub):
+                    corpus.append(("front:" + sec["id"], "h%d%s" % (i + 1, sfx),
+                                   v["heading"]))
+                    corpus.append(("front:" + sec["id"], "t%d%s" % (i + 1, sfx),
+                                   v["text"]))
             for i, row in enumerate(sec.get("table", [])):
                 corpus.append(("front:" + sec["id"], "row%d" % (i + 1),
                                row["idea"] + " " + row["test"]))
@@ -274,8 +284,10 @@ def run(root: str, args) -> int:
     # ortaya çıkar. Bu yüzden tekrar taraması yalnızca anlatıyı ölçer.
     # `firstGame` bir RUBRİK alanıdır ("Play the first game with…") ve
     # kalıbı KASITLIDIR: okur onu her maddede aynı yerde arar.
-    NARRATIVE = ("culturalStory", "exampleTurn", "variants",
-                 "aMatchIsTwoGames")
+    # GBK-02 v2 (2026-09-26): `exampleTurn` is no longer a narrative paragraph but the numbered
+    # worked turn (start · steps · result), written by the rule engines in the controlled
+    # vocabulary — the same action must be said the same way, which is the rule-text case above.
+    NARRATIVE = ("culturalStory", "variants", "aMatchIsTwoGames")
     openers = collections.Counter()
     phrases = collections.Counter()
     where = collections.defaultdict(set)
@@ -385,8 +397,12 @@ def run(root: str, args) -> int:
     dia = []
     for g in games:
         blob = " ".join(v for _, v in texts(g)).lower()
+        # v2: the diagrams that print are declared in the entry itself (diagramSpecs, drawn by
+        # boards.py); the v1 descriptor files describe the retired renderer
+        local = {d["id"]: dict(d, diagramId=d["id"], gameId=g["gameId"])
+                 for d in (g.get("diagramSpecs") or [])}
         for did in g.get("diagrams", []):
-            d = declared.get(did)
+            d = local.get(did) or declared.get(did)
             if not d:
                 dia.append("%s → %r tanımlayıcısı YOK" % (g["gameId"], did))
                 continue

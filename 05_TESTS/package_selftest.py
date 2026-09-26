@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -265,15 +266,22 @@ def main() -> int:
     # ZORUNDADIR, kırılgan bir eşik değildir.
     print("\n── gutter emniyeti — KDP Previewer sayfa 159 regresyonu ──")
 
+    # GBK-02 kurtarması (2026-09-26): v2 geometrisi ciltsizde artan trim
+    # genişliğini iç marja ekler (0,70 in), yani YALNIZCA emniyet sabitini
+    # -0,01'e çekmek artık hiçbir açık ÜRETMEZ ve test boşa enjekte ediyordu
+    # (kapı "kör" görünüyordu). Kusur şimdi geometrinin kendisinde üretilir:
+    # iç marj = KDP asgarisi − 0,01 in, pay paylaşımı kapalı. Beklenti
+    # DEĞİŞMEDİ: KIRMIZI.
     def gutter_deficit(w):
         ip = os.path.join(w, "04_BUILD", "interior.py")
         src = open(ip, encoding="utf-8").read()
-        old = "GUTTER_SAFETY_IN = 0.05"
-        if old not in src:
-            raise RuntimeError("GUTTER_SAFETY_IN sabiti bulunamadı — "
-                               "kaynak değişmiş, testi güncelle")
-        open(ip, "w", encoding="utf-8").write(src.replace(old,
-            "GUTTER_SAFETY_IN = -0.01"))
+        swaps = [("        gut = bare + GUTTER_SAFETY_IN\n", "        gut = bare - 0.01\n"),
+                 ("        gut = gut + max(0.0, spare - 0.825)\n", "        gut = gut + 0.0\n")]
+        for old, new in swaps:
+            if old not in src:
+                raise RuntimeError("iç marj geometrisi bulunamadı — kaynak değişmiş, testi güncelle")
+            src = src.replace(old, new)
+        open(ip, "w", encoding="utf-8").write(src)
         r = subprocess.run([PY, "04_BUILD/interior.py", "--edition",
                             "paperback", "--root", w],
                            cwd=w, capture_output=True, text=True)
@@ -378,6 +386,18 @@ def main() -> int:
 
     s.case("tuvalden taşan efsane yakalanır", QV, long_label)
 
+    def overprint(w):
+        # GBK-02 (2026-09-26): a word printed over another word — large-print Tien Gow
+        # ('1 Heaven2 Earth…'), Alquerque's 'next' on the column letter. ⑨ must see it.
+        d = os.path.join(w, "07_ASSETS", "diagrams")
+        p = os.path.join(d, sorted(f for f in os.listdir(d) if f.endswith(".svg"))[0])
+        svg = open(p, encoding="utf-8").read()
+        m = re.search(r"<text\b[^>]*>[^<]*</text>", svg)
+        dup = re.sub(r">[^<]*</text>$", ">OVERPRINT</text>", m.group(0))
+        open(p, "w", encoding="utf-8").write(svg[:m.end()] + dup + svg[m.end():])
+
+    s.case("metnin üstüne basılmış metin yakalanır", QV, overprint)
+
     def orphan_svg(w):
         d = os.path.join(w, "07_ASSETS", "diagrams")
         src = [f for f in os.listdir(d) if f.endswith(".svg")][0]
@@ -424,15 +444,17 @@ def main() -> int:
     s.case("STYLE § 4 yasak kalıbı yakalanır", QL, forbidden)
 
     def legend_drift(w):
-        p = first_svg_json(w)
+        # GBK-02 (2026-09-26): the printed diagrams are declared in the manuscript (diagramSpecs,
+        # drawn by boards.py) and the line editor's ⑨ reads the key from there. The injection used
+        # to edit a retired v1 descriptor that no printed diagram uses any more, so ⑨ rightly
+        # ignored it; the drift now goes where a real one would, into a printed key.
+        p = os.path.join(w, "02_MANUSCRIPT", "book.json")
         d = rd(p)
-        gid = d["diagrams"][0]["gameId"]
-        d["diagrams"][0]["legend"] = [
-            {"glyph": "dark", "label": "the flamingo that guards the border"}]
+        g = next(g for g in d["games"] if g.get("diagramSpecs"))
+        g["diagramSpecs"][0]["legend"] = [
+            {"side": "black", "label": "the flamingo that guards the border"}]
         wr(p, d)
-        subprocess.run([PY, "04_BUILD/render_diagrams.py"], cwd=w,
-                       capture_output=True)
-        return gid
+        return g["gameId"]
 
     s.case("kuralda geçmeyen efsane terimi yakalanır", QL, legend_drift)
 

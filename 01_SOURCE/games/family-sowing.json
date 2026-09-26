@@ -13,8 +13,10 @@
       "gameId": "oware",
       "name": "Oware",
       "altNames": [
-        "Awale",
         "Wari",
+        "Awari",
+        "Awalé",
+        "Awale",
         "Ayò",
         "Awélé"
       ],
@@ -107,7 +109,8 @@
       "gameId": "bao-la-kiswahili",
       "name": "Bao la Kiswahili",
       "altNames": [
-        "Bao"
+        "Bao",
+        "Zanzibar bao"
       ],
       "culture": "Swahili",
       "region": "East Africa",
@@ -371,9 +374,11 @@
     },
     {
       "gameId": "congklak",
-      "name": "Congklak",
+      "name": "Congkak",
       "altNames": [
-        "Congkak",
+        "Congklak",
+        "Jongkak",
+        "Chongkak",
         "Dakon"
       ],
       "culture": "Malay",
@@ -541,6 +546,8 @@
       "gameId": "pallanguzhi",
       "name": "Pallanguzhi",
       "altNames": [
+        "Pallanguli",
+        "Pallankuli",
         "Pallankuzhi"
       ],
       "culture": "Tamil",
@@ -704,6 +711,7 @@
       "name": "Gebeta",
       "altNames": [
         "Gabata",
+        "Ügg",
         "Gebet'a"
       ],
       "culture": "Amhara",
@@ -790,6 +798,8 @@
       "gameId": "hus",
       "name": "Hus",
       "altNames": [
+        "Otjitoto",
+        "Huts",
         "ǁHus",
         "Ohus"
       ],
@@ -1026,6 +1036,7 @@
       "gameId": "mefuvha",
       "name": "Mefuvha",
       "altNames": [
+        "Mefuhva",
         "Muravharavha"
       ],
       "culture": "Venda",
@@ -1104,7 +1115,8 @@
       "gameId": "ayoayo",
       "name": "Ayoayo",
       "altNames": [
-        "Ayo"
+        "Ayo",
+        "Shayo"
       ],
       "culture": "Yoruba",
       "region": "West Africa",
@@ -1264,6 +1276,8 @@
       "gameId": "olinda-keliya",
       "name": "Olinda Keliya",
       "altNames": [
+        "Puhulmutu",
+        "The olinda game",
         "Olinda"
       ],
       "culture": "Sinhalese",

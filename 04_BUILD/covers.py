@@ -1065,7 +1065,76 @@ def run(root: str, args) -> int:
     return 1 if errs else 0
 
 
+def check_canonical(root: str) -> int | None:
+    """The covers that SHIP: 06_REPORTS/cover-build-canonical.json (build_gbk02_covers.py,
+    the Founder-approved artwork). This pipeline's own record (cover-build.json) describes the
+    retired AI-artwork covers; checking it would pass or fail on files that are not uploaded.
+
+    Checked for each print wrap: built for the page count the interior has now; the PDF is the
+    size the record says; the spine follows KDP's paperback formula (paperback, large print);
+    and a hardcover geometry that was DERIVED rather than read from KDP's calculator is red
+    until the calculator is re-read — a derived number is not a KDP reading.
+    Returns None when there is no canonical record (legacy check runs instead)."""
+    p = os.path.join(root, "06_REPORTS", "cover-build-canonical.json")
+    if not os.path.exists(p):
+        return None
+    rec = load(p)
+    errs, ok = [], []
+    try:
+        import fitz
+    except ImportError:
+        fitz = None
+    for fmt, ed in (("PAPERBACK", "paperback"), ("HARDCOVER", "hardcover"),
+                    ("LARGEPRINT", "largeprint")):
+        f = rec.get("formats", {}).get(fmt)
+        ip = os.path.join(root, "06_REPORTS", "interior-%s.json" % ed)
+        if not f:
+            errs.append("%s: canonical cover missing" % ed)
+            continue
+        pages = load(ip)["pageCount"] if os.path.exists(ip) else None
+        if pages != f["pages"]:
+            errs.append("%s: cover built for %s pages, interior has %s — rebuild the cover"
+                        % (ed, f["pages"], pages))
+        pdf = os.path.join(root, f["file"])
+        if not os.path.exists(pdf):
+            errs.append("%s: cover PDF missing (%s)" % (ed, f["file"]))
+        elif fitz:
+            r = fitz.open(pdf)[0].rect
+            w, h = r.width / 72.0, r.height / 72.0
+            if abs(w - f["wrapIn"][0]) > 0.002 or abs(h - f["wrapIn"][1]) > 0.002:
+                errs.append("%s: PDF is %.3f × %.3f in, record says %.3f × %.3f in"
+                            % (ed, w, h, f["wrapIn"][0], f["wrapIn"][1]))
+        if ed != "hardcover":
+            want = round(f["pages"] * SPINE_PER_PAGE_IN[ed], 3)
+            if abs(f["spineIn"] - want) > 0.0015:
+                errs.append("%s: spine %.3f in, KDP formula gives %.3f in" % (ed, f["spineIn"], want))
+        if f.get("geometryProvisional"):
+            errs.append("%s: cover geometry DERIVED, not read from KDP's calculator (%s) — "
+                        "KURUCU EYLEMİ: re-read the calculator for %d pages"
+                        % (ed, f.get("geometrySource", "?"), f["pages"]))
+        ok.append("%s %d s. → sırt %.3f in" % (ed, f["pages"], f["spineIn"]))
+    k = rec.get("formats", {}).get("KINDLE")
+    if not k or not os.path.exists(os.path.join(root, k["file"])):
+        errs.append("kindle: canonical cover missing")
+    for e in errs:
+        print("  ✗ %s" % e)
+    if errs:
+        return 1
+    print("  ✓ kanonik kapaklar iç blokla senkron (%s)" % " · ".join(ok))
+    return 0
+
+
 def run_check(root: str) -> int:
+    # both: the covers that ship (canonical record) AND the geometry record, whose page count and
+    # interior checksum go stale the moment the interior changes
+    canon = check_canonical(root)
+    geo = check_geometry(root)
+    if canon is None:
+        return geo
+    return 1 if (canon or geo) else 0
+
+
+def check_geometry(root: str) -> int:
     p = os.path.join(root, "06_REPORTS", "cover-geometry.json")
     if not os.path.exists(p):
         print("  · kapak geometrisi üretilmemiş — ATLANDI")

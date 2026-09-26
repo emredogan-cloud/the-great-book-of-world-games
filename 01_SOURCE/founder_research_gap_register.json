@@ -58,8 +58,8 @@
       "deficit": 4
     },
     "race": {
-      "target": 18,
-      "written": 13,
+      "target": 19,
+      "written": 14,
       "writable": 2,
       "blocked": 3,
       "deficit": 5
@@ -79,8 +79,8 @@
       "deficit": 7
     },
     "chance": {
-      "target": 4,
-      "written": 3,
+      "target": 3,
+      "written": 2,
       "writable": 0,
       "blocked": 1,
       "deficit": 1
@@ -95,9 +95,11 @@
   },
   "culturesLostIfUnresolved": [
     "Amazigh",
+    "Cantonese",
     "Danish",
     "Ga",
     "German",
+    "Han Chinese",
     "Hawaiian",
     "Icelandic",
     "Javanese",
@@ -105,6 +107,7 @@
     "Kazakh",
     "Luhya",
     "Marathi",
+    "Medieval European",
     "Ndyuka Maroon",
     "Nepali",
     "Persian",
@@ -1534,104 +1537,6 @@
       "unresolvedQuestions": []
     },
     {
-      "gameId": "daldos",
-      "title": "Daldøs",
-      "altNames": [
-        "Daldøsa",
-        "Sáhkku (related)"
-      ],
-      "culture": "Danish",
-      "region": "Northern Europe",
-      "countryOrArea": "Jutland, Denmark · south-west Norway",
-      "period": "surviving boards from the 18th–19th century; play continued into living memory",
-      "family": "race",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye (Parlett) engelli.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Michaelsen · Board Game Studies — HİÇ denenmedi",
-        "Parlett proje genelinde DENENDİ ve açılamadı"
-      ],
-      "sourcesAttempted": [
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
-      ],
-      "whatWasMissing": "Kural metni: tahta biçimi, dört yüzlü çubuk zar, taş hareketi, alma.",
-      "founderMustFind": [
-        "Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi",
-        "Daldøs ile Sámi sáhkku arasındaki ilişkiyi TARTIŞAN ama KÖKEN İDDİASI YAPMAYAN bir kaynak (kayıt bu iddiayı açıkça yasaklıyor)"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Board Game Studies makalesi PDF'i + Danimarka müze nesne kaydı.",
-      "searchPatterns": [
-        "Michaelsen daldøs Board Game Studies PDF",
-        "\"daldøs\" OR \"daldosa\" game rules Denmark",
-        "sáhkku daldøs Nordic race game scholarship"
-      ],
-      "works": [
-        "specialist-articles",
-        "parlett-1999"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/daldos/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 1.4,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 3,
-      "compositeScore": 17.4,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Michaelsen, Peter, studies on daldøs and related Nordic race games, in Board Game Studies",
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
-      ],
-      "unresolvedQuestions": [
-        "Daldøs ile Sámi sáhkku arasındaki ilişki tartışmalıdır; kitap köken iddiası yapmamalı."
-      ]
-    },
-    {
       "gameId": "sungka",
       "title": "Sungka",
       "altNames": [
@@ -1726,6 +1631,104 @@
       ],
       "unresolvedQuestions": [
         "Congklak ile mekanik farkı kitapta bir varyant kutusuna mı sığar, ayrı madde mi olmalı?"
+      ]
+    },
+    {
+      "gameId": "daldos",
+      "title": "Daldøs",
+      "altNames": [
+        "Daldøsa",
+        "Sáhkku (related)"
+      ],
+      "culture": "Danish",
+      "region": "Northern Europe",
+      "countryOrArea": "Jutland, Denmark · south-west Norway",
+      "period": "surviving boards from the 18th–19th century; play continued into living memory",
+      "family": "race",
+      "restrictionStatus": "open",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Birincil künye bir dergi çalışmasıdır ve HİÇ DENENMEDİ; ikinci künye (Parlett) engelli.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Michaelsen · Board Game Studies — HİÇ denenmedi",
+        "Parlett proje genelinde DENENDİ ve açılamadı"
+      ],
+      "sourcesAttempted": [
+        "Uzmanlık makaleleri — tek oyunu açan dar künyeler",
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "whatWasMissing": "Kural metni: tahta biçimi, dört yüzlü çubuk zar, taş hareketi, alma.",
+      "founderMustFind": [
+        "Michaelsen, Peter — daldøs ve ilgili kuzey yarış oyunları üzerine Board Game Studies makalesi",
+        "Daldøs ile Sámi sáhkku arasındaki ilişkiyi TARTIŞAN ama KÖKEN İDDİASI YAPMAYAN bir kaynak (kayıt bu iddiayı açıkça yasaklıyor)"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Board Game Studies makalesi PDF'i + Danimarka müze nesne kaydı.",
+      "searchPatterns": [
+        "Michaelsen daldøs Board Game Studies PDF",
+        "\"daldøs\" OR \"daldosa\" game rules Denmark",
+        "sáhkku daldøs Nordic race game scholarship"
+      ],
+      "works": [
+        "specialist-articles",
+        "parlett-1999"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/daldos/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 1.3,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 5,
+      "pageEconomy": 3,
+      "compositeScore": 17.3,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Michaelsen, Peter, studies on daldøs and related Nordic race games, in Board Game Studies",
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)"
+      ],
+      "unresolvedQuestions": [
+        "Daldøs ile Sámi sáhkku arasındaki ilişki tartışmalıdır; kitap köken iddiası yapmamalı."
       ]
     },
     {
@@ -1928,199 +1931,6 @@
       ]
     },
     {
-      "gameId": "game-of-the-goose",
-      "title": "The Game of the Goose",
-      "altNames": [
-        "Giuoco dell'Oca",
-        "Jeu de l'oie"
-      ],
-      "culture": "Italian",
-      "region": "Southern Europe",
-      "countryOrArea": "Italy",
-      "period": "first recorded in the late 16th century; printed across Europe thereafter",
-      "family": "race",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Her iki künye de telif altındadır; biri (Parlett) DENENDİ ve açılamadı, öteki (Seville 2019) hiç denenmedi.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Parlett DENENDİ ve açılamadı",
-        "Seville 2019 — HİÇ denenmedi"
-      ],
-      "sourcesAttempted": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler"
-      ],
-      "whatWasMissing": "Kanonik 63 haneli izin hane hane anlamı ve ceza kuralları.",
-      "founderMustFind": [
-        "Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR",
-        "63 hanenin kanonik listesi: kaz haneleri, köprü, han, kuyu, labirent, hapishane, ölüm ve her birinin cezası",
-        "Fazla atışın geri sayılması kuralı"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "AUP açık erişim PDF'i ya da bir dönem oyun tahtasının müze künyesi + basılı kural metni.",
-      "searchPatterns": [
-        "Seville \"Cultural Legacy of the Royal Game of the Goose\" open access PDF",
-        "\"game of the goose\" 63 spaces rules historical",
-        "giuoco dell'oca regole storiche 63"
-      ],
-      "works": [
-        "parlett-1999",
-        "specialist-articles"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/game-of-the-goose/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 1.4,
-      "culturalValue": 4,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 5,
-      "compositeScore": 16.4,
-      "priorityClass": "E",
-      "priorityReason": "yararlı ama kritik değil",
-      "sourceRefs": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-        "Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019)"
-      ],
-      "unresolvedQuestions": [
-        "Oyunda karar yoktur — saf şanstır. Kitaba girmesi 'oyun kalitesi' ölçütünü düşürür; gerekçesi tarihsel önemidir ve bu açıkça yazılmalıdır."
-      ]
-    },
-    {
-      "gameId": "nard",
-      "title": "Nard",
-      "altNames": [
-        "Nardshir",
-        "Takhteh nard"
-      ],
-      "culture": "Persian",
-      "region": "West Asia",
-      "countryOrArea": "Iran",
-      "period": "described in Middle Persian and early Arabic texts from about the 6th century CE",
-      "family": "race",
-      "restrictionStatus": "open",
-      "status": "SOURCE-PENDING",
-      "primaryBlocker": "P2",
-      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
-      "secondaryBlockers": [
-        {
-          "code": "P1",
-          "name": "SOURCE ACCESS BLOCKED"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Birincil künye engelli (Murray 1952); ikinci künye bir Orta Farsça ANLATIDIR (Wizārišn ī Chatrang), kural metni değil, ve hiç denenmedi.",
-      "alreadyChecked": [
-        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
-        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
-        "Murray 1952 DENENDİ ve açılamadı",
-        "Wizārišn ī Chatrang ud Nihišn ī Nēw-Ardaxšīr — HİÇ denenmedi"
-      ],
-      "sourcesAttempted": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
-      ],
-      "whatWasMissing": "Nard'ın DÖNEM kural metni: tahta, taş sayısı, zar, iz yönü, alma, bitiş.",
-      "founderMustFind": [
-        "Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma",
-        "Wizārišn ī Chatrang'ın çevirisi — oyunun kozmolojik çerçevesi için (kültürel hikâye bölümüne girer)",
-        "KARAR MALZEMESİ: nard, tabula ve tavla kitapta ÜÇ ayrı madde mi olmalı? Kayıt tekrar riskini işaretliyor"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "region",
-          "attribution",
-          "historical context"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "Bir Fars/Arap oyun tarihi çalışması ki hem kuralı hem kozmolojik çerçeveyi versin.",
-      "searchPatterns": [
-        "\"nard\" Persian backgammon medieval rules text",
-        "Wizarisn i Chatrang translation nard chess Middle Persian",
-        "nardshir medieval Arabic backgammon rules scholarship"
-      ],
-      "works": [
-        "murray-1952"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/nard/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 3,
-      "familyDeficitScore": 1.4,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 3,
-      "pageEconomy": 4,
-      "compositeScore": 16.4,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
-        "Wizarisn i Chatrang ud Nihisn i New-Ardaxsir (Middle Persian text on chess and nard)"
-      ],
-      "unresolvedQuestions": [
-        "Tabula ve Tavla ile üçlü tekrar riski; kitap bu izin tarihini TEK maddede anlatıp varyantları kutuya alabilir."
-      ]
-    },
-    {
       "gameId": "toguz-kumalak",
       "title": "Toguz Kumalak",
       "altNames": [
@@ -2217,6 +2027,199 @@
       ],
       "unresolvedQuestions": [
         "Modern spor kurallarıyla 19. yüzyıl derlemeleri arasındaki fark ölçülmedi; kitap hangisini basacak?"
+      ]
+    },
+    {
+      "gameId": "game-of-the-goose",
+      "title": "The Game of the Goose",
+      "altNames": [
+        "Giuoco dell'Oca",
+        "Jeu de l'oie"
+      ],
+      "culture": "Italian",
+      "region": "Southern Europe",
+      "countryOrArea": "Italy",
+      "period": "first recorded in the late 16th century; printed across Europe thereafter",
+      "family": "race",
+      "restrictionStatus": "open",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P1",
+      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
+      "secondaryBlockers": [],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Her iki künye de telif altındadır; biri (Parlett) DENENDİ ve açılamadı, öteki (Seville 2019) hiç denenmedi.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Parlett DENENDİ ve açılamadı",
+        "Seville 2019 — HİÇ denenmedi"
+      ],
+      "sourcesAttempted": [
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+        "Uzmanlık makaleleri — tek oyunu açan dar künyeler"
+      ],
+      "whatWasMissing": "Kanonik 63 haneli izin hane hane anlamı ve ceza kuralları.",
+      "founderMustFind": [
+        "Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019) — AUP başlıklarının bir bölümü AÇIK ERİŞİMLİDİR",
+        "63 hanenin kanonik listesi: kaz haneleri, köprü, han, kuyu, labirent, hapishane, ölüm ve her birinin cezası",
+        "Fazla atışın geri sayılması kuralı"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "AUP açık erişim PDF'i ya da bir dönem oyun tahtasının müze künyesi + basılı kural metni.",
+      "searchPatterns": [
+        "Seville \"Cultural Legacy of the Royal Game of the Goose\" open access PDF",
+        "\"game of the goose\" 63 spaces rules historical",
+        "giuoco dell'oca regole storiche 63"
+      ],
+      "works": [
+        "parlett-1999",
+        "specialist-articles"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/game-of-the-goose/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 1.3,
+      "culturalValue": 4,
+      "mechanicalUniqueness": 3,
+      "pageEconomy": 5,
+      "compositeScore": 16.3,
+      "priorityClass": "E",
+      "priorityReason": "yararlı ama kritik değil",
+      "sourceRefs": [
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+        "Seville, Adrian, The Cultural Legacy of the Royal Game of the Goose (Amsterdam University Press, 2019)"
+      ],
+      "unresolvedQuestions": [
+        "Oyunda karar yoktur — saf şanstır. Kitaba girmesi 'oyun kalitesi' ölçütünü düşürür; gerekçesi tarihsel önemidir ve bu açıkça yazılmalıdır."
+      ]
+    },
+    {
+      "gameId": "nard",
+      "title": "Nard",
+      "altNames": [
+        "Nardshir",
+        "Takhteh nard"
+      ],
+      "culture": "Persian",
+      "region": "West Asia",
+      "countryOrArea": "Iran",
+      "period": "described in Middle Persian and early Arabic texts from about the 6th century CE",
+      "family": "race",
+      "restrictionStatus": "open",
+      "status": "SOURCE-PENDING",
+      "primaryBlocker": "P2",
+      "primaryBlockerName": "SOURCE TEXT UNAVAILABLE",
+      "secondaryBlockers": [
+        {
+          "code": "P1",
+          "name": "SOURCE ACCESS BLOCKED"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Birincil künye engelli (Murray 1952); ikinci künye bir Orta Farsça ANLATIDIR (Wizārišn ī Chatrang), kural metni değil, ve hiç denenmedi.",
+      "alreadyChecked": [
+        "Faz 5 · Batch 6: elde bulunan on kamusal alan derlemesine karşı tek tek tarandı — isabet yok",
+        "Künye seviyesindeki kayıt Faz 1'de kuruldu ve korunuyor",
+        "Murray 1952 DENENDİ ve açılamadı",
+        "Wizārišn ī Chatrang ud Nihišn ī Nēw-Ardaxšīr — HİÇ denenmedi"
+      ],
+      "sourcesAttempted": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)"
+      ],
+      "whatWasMissing": "Nard'ın DÖNEM kural metni: tahta, taş sayısı, zar, iz yönü, alma, bitiş.",
+      "founderMustFind": [
+        "Nard'ın ORTAÇAĞ kural metni — Arapça/Farsça bir dönem kaydı ya da onu aktaran akademik bir çalışma",
+        "Wizārišn ī Chatrang'ın çevirisi — oyunun kozmolojik çerçevesi için (kültürel hikâye bölümüne girer)",
+        "KARAR MALZEMESİ: nard, tabula ve tavla kitapta ÜÇ ayrı madde mi olmalı? Kayıt tekrar riskini işaretliyor"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "region",
+          "attribution",
+          "historical context"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "Bir Fars/Arap oyun tarihi çalışması ki hem kuralı hem kozmolojik çerçeveyi versin.",
+      "searchPatterns": [
+        "\"nard\" Persian backgammon medieval rules text",
+        "Wizarisn i Chatrang translation nard chess Middle Persian",
+        "nardshir medieval Arabic backgammon rules scholarship"
+      ],
+      "works": [
+        "murray-1952"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/nard/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 3,
+      "familyDeficitScore": 1.3,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 3,
+      "pageEconomy": 4,
+      "compositeScore": 16.3,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Murray, H. J. R., A History of Board-Games Other Than Chess (Oxford: Clarendon Press, 1952)",
+        "Wizarisn i Chatrang ud Nihisn i New-Ardaxsir (Middle Persian text on chess and nard)"
+      ],
+      "unresolvedQuestions": [
+        "Tabula ve Tavla ile üçlü tekrar riski; kitap bu izin tarihini TEK maddede anlatıp varyantları kutuya alabilir."
       ]
     },
     {
@@ -2905,6 +2908,102 @@
       ]
     },
     {
+      "gameId": "mahjong",
+      "title": "Mahjong",
+      "altNames": [
+        "Majiang"
+      ],
+      "culture": "Han Chinese",
+      "region": "East Asia",
+      "countryOrArea": "China",
+      "period": "in its recognisable form from the mid-19th century",
+      "family": "chance",
+      "restrictionStatus": "open",
+      "status": "BLOCKED",
+      "primaryBlocker": "P1",
+      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
+      "secondaryBlockers": [
+        {
+          "code": "P7",
+          "name": "VARIANT CONFLICT"
+        }
+      ],
+      "currentStatusNote": "rules-complete",
+      "whyAgentCannotWrite": "Kaynak DENENDİ ve erişilemedi. Ayrıca puanlama sistemleri bölgeye göre TAMAMEN farklıdır: doğrulanmamış bir kaynaktan tek sistem seçmek, seçimin GEREKÇESİNİ de doğrulanamaz kılar.",
+      "alreadyChecked": [
+        "Parlett 1999 DENENDİ — telif altında, açık tam metin yok (2026-08-13)",
+        "Foster's Complete Hoyle 1897 tarandı — mahjong yok (Batch 4 avı)"
+      ],
+      "sourcesAttempted": [
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+        "Uzmanlık makaleleri — tek oyunu açan dar künyeler"
+      ],
+      "whatWasMissing": "Tek bir DETERMİNİSTİK ruleset ve onun künyesi.",
+      "founderMustFind": [
+        "1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir)",
+        "Ya da: kitabın basacağı ruleset için kurucu KARARI + o rulesetin künyesi",
+        "Puanlamanın sadeleştirilebileceği bir temel biçim (§ K19 sayfa bütçesi: madde 650 kelimeye SIĞMIYOR ve dört sayfa isteyebilir)"
+      ],
+      "minimumEvidence": {
+        "rule": [
+          "setup",
+          "player count",
+          "materials",
+          "board / topology",
+          "first move",
+          "legal moves",
+          "turn order",
+          "capture",
+          "objective",
+          "end condition",
+          "scoring",
+          "draw condition",
+          "variants"
+        ],
+        "source": [
+          "author",
+          "title",
+          "edition",
+          "publication year",
+          "exact page",
+          "stable locator"
+        ],
+        "cultural": [
+          "culture identity",
+          "attribution"
+        ],
+        "reconstruction": []
+      },
+      "idealEvidence": "1920'lerin kamusal alandaki bir kural kitabı + hangi bölgesel sistemin basılacağına dair açık bir gerekçe.",
+      "searchPatterns": [
+        "mahjong 1920 rulebook Babcock public domain archive",
+        "\"rules for mah-jongg\" 1923 archive.org",
+        "Stanwick mahjong origins Playing-Card"
+      ],
+      "works": [
+        "parlett-1999",
+        "specialist-articles"
+      ],
+      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
+      "expectedSourceLocation": "06_FOUNDER_DELIVERY/mahjong/",
+      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
+      "unlockEase": 2,
+      "familyDeficitScore": 1.7,
+      "culturalValue": 5,
+      "mechanicalUniqueness": 5,
+      "pageEconomy": 1,
+      "compositeScore": 14.7,
+      "priorityClass": "C",
+      "priorityReason": "kaybedilen bir kültürü geri getirir",
+      "sourceRefs": [
+        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
+        "Stanwick, Michael, studies on the origins of mahjong, in The Playing-Card (IPCS)"
+      ],
+      "unresolvedQuestions": [
+        "Puanlama sistemleri bölgeye göre tamamen farklıdır ve 650 kelimeye SIĞMAZ. Kitap ya maddeyi almamalı ya da iki sayfa yerine dört sayfa ayırmalıdır — bu bir sayfa bütçesi kararıdır."
+      ]
+    },
+    {
       "gameId": "kho-kho",
       "title": "Kho Kho",
       "altNames": [
@@ -3193,102 +3292,6 @@
       ],
       "unresolvedQuestions": [
         "Modern 'XOX' ile ilişkisi kesin değildir; kitap köken iddiası yapmamalı."
-      ]
-    },
-    {
-      "gameId": "mahjong",
-      "title": "Mahjong",
-      "altNames": [
-        "Majiang"
-      ],
-      "culture": "Han Chinese",
-      "region": "East Asia",
-      "countryOrArea": "China",
-      "period": "in its recognisable form from the mid-19th century",
-      "family": "chance",
-      "restrictionStatus": "open",
-      "status": "BLOCKED",
-      "primaryBlocker": "P1",
-      "primaryBlockerName": "SOURCE ACCESS BLOCKED",
-      "secondaryBlockers": [
-        {
-          "code": "P7",
-          "name": "VARIANT CONFLICT"
-        }
-      ],
-      "currentStatusNote": "rules-complete",
-      "whyAgentCannotWrite": "Kaynak DENENDİ ve erişilemedi. Ayrıca puanlama sistemleri bölgeye göre TAMAMEN farklıdır: doğrulanmamış bir kaynaktan tek sistem seçmek, seçimin GEREKÇESİNİ de doğrulanamaz kılar.",
-      "alreadyChecked": [
-        "Parlett 1999 DENENDİ — telif altında, açık tam metin yok (2026-08-13)",
-        "Foster's Complete Hoyle 1897 tarandı — mahjong yok (Batch 4 avı)"
-      ],
-      "sourcesAttempted": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-        "Uzmanlık makaleleri — tek oyunu açan dar künyeler"
-      ],
-      "whatWasMissing": "Tek bir DETERMİNİSTİK ruleset ve onun künyesi.",
-      "founderMustFind": [
-        "1920'lerin BİRİNCİ ELDEN bir kural kitabı (Babcock 1920 ve çağdaşları — ABD'de kamusal alanda olabilir)",
-        "Ya da: kitabın basacağı ruleset için kurucu KARARI + o rulesetin künyesi",
-        "Puanlamanın sadeleştirilebileceği bir temel biçim (§ K19 sayfa bütçesi: madde 650 kelimeye SIĞMIYOR ve dört sayfa isteyebilir)"
-      ],
-      "minimumEvidence": {
-        "rule": [
-          "setup",
-          "player count",
-          "materials",
-          "board / topology",
-          "first move",
-          "legal moves",
-          "turn order",
-          "capture",
-          "objective",
-          "end condition",
-          "scoring",
-          "draw condition",
-          "variants"
-        ],
-        "source": [
-          "author",
-          "title",
-          "edition",
-          "publication year",
-          "exact page",
-          "stable locator"
-        ],
-        "cultural": [
-          "culture identity",
-          "attribution"
-        ],
-        "reconstruction": []
-      },
-      "idealEvidence": "1920'lerin kamusal alandaki bir kural kitabı + hangi bölgesel sistemin basılacağına dair açık bir gerekçe.",
-      "searchPatterns": [
-        "mahjong 1920 rulebook Babcock public domain archive",
-        "\"rules for mah-jongg\" 1923 archive.org",
-        "Stanwick mahjong origins Playing-Card"
-      ],
-      "works": [
-        "parlett-1999",
-        "specialist-articles"
-      ],
-      "expectedFileFormat": "PDF · tarama · kararlı URL · künye notu (.md ya da .txt) — JSON'a çevirmek GEREKMEZ",
-      "expectedSourceLocation": "06_FOUNDER_DELIVERY/mahjong/",
-      "howAgentWillUseIt": "04_BUILD/founder_delivery_ingest.py alır → hash'ler → kanıt listesini denetler → source_verification kaydı açar → engeli çözer → üretim kuyruğuna alır → yazar → diyagram → QA → CI",
-      "unlockEase": 2,
-      "familyDeficitScore": 1.2,
-      "culturalValue": 5,
-      "mechanicalUniqueness": 5,
-      "pageEconomy": 1,
-      "compositeScore": 14.2,
-      "priorityClass": "C",
-      "priorityReason": "kaybedilen bir kültürü geri getirir",
-      "sourceRefs": [
-        "Parlett, David, The Oxford History of Board Games (Oxford: Oxford University Press, 1999)",
-        "Stanwick, Michael, studies on the origins of mahjong, in The Playing-Card (IPCS)"
-      ],
-      "unresolvedQuestions": [
-        "Puanlama sistemleri bölgeye göre tamamen farklıdır ve 650 kelimeye SIĞMAZ. Kitap ya maddeyi almamalı ya da iki sayfa yerine dört sayfa ayırmalıdır — bu bir sayfa bütçesi kararıdır."
       ]
     }
   ]

@@ -14,30 +14,29 @@
   "eligible": 120,
   "proposed": 100,
   "proposedCultures": [
-    "Abbasid Arab",
+    "Abbasid",
     "Akan",
     "Amazigh",
     "Amhara",
     "Ancient Egyptian",
     "Ancient Greek",
-    "Ancient Indian",
-    "Andalusi Arab",
+    "Baggara",
     "Bengali",
     "Burmese",
     "Byzantine",
     "Cantonese",
     "Castilian",
+    "Chinese",
     "Dakarkari",
     "Danish",
-    "Egyptian Arab",
+    "Deccani",
     "English",
     "French",
     "Ga",
     "Ganda",
     "German",
-    "Han Chinese",
+    "Gold Coast",
     "Hawaiian",
-    "Hindustani",
     "Hopi",
     "Icelandic",
     "Italian",
@@ -51,9 +50,11 @@
     "Malagasy",
     "Malay",
     "Medieval European",
+    "Mesopotamian",
+    "Modern Egyptian",
     "Mongolian",
     "Māori",
-    "Nahua (Aztec)",
+    "Nahua",
     "Nama",
     "Ndyuka Maroon",
     "Nepali",
@@ -61,22 +62,22 @@
     "Persian",
     "Provençal",
     "Punjabi",
+    "Q'eqchi' Maya",
     "Roman",
     "Russian",
     "Sinhalese",
     "Somali",
     "Sotho",
-    "Sudanese Arab",
-    "Sumerian",
     "Swahili",
     "Sámi",
     "Tagalog",
     "Tamil",
-    "Tewa Pueblo",
+    "Tewa",
     "Thai",
     "Turkish",
     "Venda",
     "Visayan",
+    "White Mountain Apache",
     "Wolof",
     "Yoruba",
     "Zulu",
@@ -96,10 +97,10 @@
       "cultures": 10
     },
     "race": {
-      "target": 18,
-      "eligible": 19,
-      "selected": 18,
-      "cultures": 17
+      "target": 19,
+      "eligible": 20,
+      "selected": 19,
+      "cultures": 19
     },
     "territory": {
       "target": 17,
@@ -114,10 +115,10 @@
       "cultures": 20
     },
     "chance": {
-      "target": 4,
-      "eligible": 19,
-      "selected": 4,
-      "cultures": 4
+      "target": 3,
+      "eligible": 18,
+      "selected": 3,
+      "cultures": 3
     },
     "boardless": {
       "target": 16,
@@ -144,7 +145,7 @@
     {
       "gameId": "jianzi",
       "family": "boardless",
-      "culture": "Han Chinese",
+      "culture": "Chinese",
       "score": 4.5
     },
     {
@@ -244,12 +245,6 @@
       "score": 4.36
     },
     {
-      "gameId": "karnoffel",
-      "family": "chance",
-      "culture": "German",
-      "score": 4.36
-    },
-    {
       "gameId": "bagh-chal",
       "family": "hunt-siege",
       "culture": "Nepali",
@@ -318,13 +313,13 @@
     {
       "gameId": "royal-game-of-ur",
       "family": "race",
-      "culture": "Sumerian",
+      "culture": "Mesopotamian",
       "score": 4.9
     },
     {
       "gameId": "pachisi",
       "family": "race",
-      "culture": "Hindustani",
+      "culture": "Deccani",
       "score": 4.78
     },
     {
@@ -336,7 +331,7 @@
     {
       "gameId": "bul",
       "family": "race",
-      "culture": "Kekchi Maya",
+      "culture": "Q'eqchi' Maya",
       "score": 4.56
     },
     {
@@ -354,7 +349,7 @@
     {
       "gameId": "li-b-el-merafib",
       "family": "race",
-      "culture": "Sudanese Arab",
+      "culture": "Baggara",
       "score": 4.4
     },
     {
@@ -384,14 +379,20 @@
     {
       "gameId": "tab",
       "family": "race",
-      "culture": "Egyptian Arab",
+      "culture": "Modern Egyptian",
       "score": 4.18
     },
     {
       "gameId": "patolli",
       "family": "race",
-      "culture": "Nahua (Aztec)",
+      "culture": "Nahua",
       "score": 3.98
+    },
+    {
+      "gameId": "set-dilth",
+      "family": "race",
+      "culture": "White Mountain Apache",
+      "score": 3.94
     },
     {
       "gameId": "puluc",
@@ -510,19 +511,19 @@
     {
       "gameId": "go",
       "family": "territory",
-      "culture": "Han Chinese",
+      "culture": "Chinese",
       "score": 4.8
     },
     {
       "gameId": "nine-mens-morris",
       "family": "territory",
-      "culture": "Medieval European",
+      "culture": "English",
       "score": 4.78
     },
     {
       "gameId": "pong-hau-ki",
       "family": "territory",
-      "culture": "Cantonese",
+      "culture": "Chinese",
       "score": 4.44
     },
     {
@@ -534,7 +535,7 @@
     {
       "gameId": "picaria",
       "family": "territory",
-      "culture": "Tewa Pueblo",
+      "culture": "Tewa",
       "score": 4.22
     },
     {
@@ -600,7 +601,7 @@
     {
       "gameId": "achi",
       "family": "territory",
-      "culture": "Akan",
+      "culture": "Gold Coast",
       "score": 3.32
     },
     {
@@ -630,25 +631,25 @@
     {
       "gameId": "alquerque",
       "family": "war-board",
-      "culture": "Andalusi Arab",
+      "culture": "Castilian",
       "score": 4.78
     },
     {
       "gameId": "xiangqi",
       "family": "war-board",
-      "culture": "Han Chinese",
+      "culture": "Chinese",
       "score": 4.7
     },
     {
       "gameId": "shatranj",
       "family": "war-board",
-      "culture": "Abbasid Arab",
+      "culture": "Abbasid",
       "score": 4.68
     },
     {
       "gameId": "seega",
       "family": "war-board",
-      "culture": "Egyptian Arab",
+      "culture": "Modern Egyptian",
       "score": 4.6
     },
     {
@@ -672,7 +673,7 @@
     {
       "gameId": "chaturanga",
       "family": "war-board",
-      "culture": "Ancient Indian",
+      "culture": "Bengali",
       "score": 4.26
     },
     {
@@ -739,6 +740,7 @@
     "cuarenta",
     "dreidel",
     "ephedrismos",
+    "karnoffel",
     "kho-kho",
     "lagori",
     "mahjong",
@@ -746,7 +748,6 @@
     "passe-dix",
     "renju",
     "schafkopf",
-    "set-dilth",
     "tali",
     "tarocchini",
     "tien-gow",

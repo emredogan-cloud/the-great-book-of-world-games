@@ -16,7 +16,7 @@
 | Kilitli oyun | **0** | 100 | `····················` |
 | Yazılmış oyun | **63** | 100 | `█████████████·······` |
 | Oynanabilirlik testi geçen | **0** | 100 | `····················` |
-| Kültür | **89** | ≥45 | `████████████████████` |
+| Kültür | **91** | ≥45 | `████████████████████` |
 | Bölge | **33** | — | |
 | Aile | **7** | 7 | |
 | Kısıt taraması | **161/161** | 161/161 | `████████████████████` |
@@ -26,8 +26,8 @@
 
 | Oynanabilirlik durumu | Sayı | | Kısıt durumu | Sayı |
 |---|---:|---|---|---:|
-| `rules-complete` | 109 | | `open` | 117 |
-| `reconstructed` | 11 | | `attributed` | 35 |
+| `rules-complete` | 105 | | `open` | 117 |
+| `reconstructed` | 15 | | `attributed` | 35 |
 | `unresolved` | 32 | | `restricted` | 6 |
 | `not-production-ready` | 0 | | `excluded` | 3 |
 | `excluded` | 9 | | — | — |
@@ -61,8 +61,8 @@
 
 | Sürüm | Sayfa | Trim | Sırt |
 |---|---:|---|---:|
-| paperback | **172** | 8.5 × 11 in | 0.3873 in |
-| hardcover | **172** | 8.25 × 11 in | 0.6080 in |
+| paperback | **258** | 8.5 × 11 in | 0.5810 in |
+| hardcover | **258** | 8.25 × 11 in | 0.7700 in |
 | kindle | — | — | — |
 
 | | |
@@ -76,9 +76,9 @@
 |---|---:|---:|---:|---|
 | The Sowing Games | **20** | 16 | 14 | `████████████` |
 | The Hunt and the Siege | **21** | 16 | 10 | `████████████` |
-| The Race Home | **24** | 16 | 18 | `████████████` |
+| The Race Home | **25** | 16 | 19 | `████████████` |
 | The Line and the Territory | **20** | 16 | 17 | `████████████` |
 | The War Board | **25** | 16 | 21 | `████████████` |
-| Chance and Nerve | **22** | 16 | 4 | `████████████` |
+| Chance and Scoring | **21** | 16 | 3 | `████████████` |
 | Games Without a Board | **22** | 16 | 16 | `████████████` |
 
